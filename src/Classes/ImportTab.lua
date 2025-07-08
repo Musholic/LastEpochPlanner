@@ -475,24 +475,37 @@ function ImportTabClass:DownloadCharacterList()
     self.charImportMode = "DOWNLOADCHARLIST"
     self.charImportStatus = "Retrieving character list..."
 
-    local localSaveFolder = os.getenv('UserProfile') .. "\\AppData\\LocalLow\\Eleventh Hour Games\\Last Epoch\\Saves\\"
+    local saveFolderSuffix = "\\AppData\\LocalLow\\Eleventh Hour Games\\Last Epoch\\Saves\\"
+    local localSaveFolders = {}
+    if os.getenv("UserProfile") then
+        -- For Windows
+        t_insert(localSaveFolders, os.getenv('UserProfile') .. saveFolderSuffix)
+    end
+    if os.getenv("USER") then
+        -- For Linux
+        t_insert(localSaveFolders, "/home/" .. os.getenv("USER")
+            .. "/.local/share/Steam/steamapps/compatdata/899770/pfx/drive_c/users/steamuser/"
+            .. saveFolderSuffix)
+    end
     local saves = {}
-    local handle = NewFileSearch(localSaveFolder .. "1CHARACTERSLOT_BETA_*")
-    while handle do
-        local fileName = handle:GetFileName()
+    for _, localSaveFolder in ipairs(localSaveFolders) do
+        local handle = NewFileSearch(localSaveFolder .. "1CHARACTERSLOT_BETA_*")
+        while handle do
+            local fileName = handle:GetFileName()
 
-        if fileName:sub(-4) ~= ".bak" then
-            table.insert(saves, fileName)
-        end
+            if fileName:sub(-4) ~= ".bak" then
+                table.insert(saves, localSaveFolder .. "\\" .. fileName)
+            end
 
-        if not handle:NextFile() then
-            break
+            if not handle:NextFile() then
+                break
+            end
         end
     end
 
     local charList = {}
     for _, save in ipairs(saves) do
-        local saveFile = io.open(localSaveFolder .. "\\" .. save, "r")
+        local saveFile = io.open(save, "r")
         local saveFileContent = saveFile:read("*a")
         saveFile:close()
         local char = self:ReadJsonSaveData(saveFileContent:sub(6))
