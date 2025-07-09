@@ -664,6 +664,13 @@ function buildMode:ReadLeToolsSave(saveContent)
 		["waist"] = 7,
 		["relic"] = 12
 	}
+
+	for i = 1, 7 do
+		slotMap["Blessing " .. i] = 32 + i
+	end
+	for i = 1, 3 do
+		slotMap["Blessing " .. (7 + i)] = 42 + i
+	end
 	function processItemData(slotName, itemData)
 		local item = {
 			["inventoryId"] = slotMap[slotName]
@@ -690,18 +697,20 @@ function buildMode:ReadLeToolsSave(saveContent)
 		item["prefixes"] = {}
 		item["suffixes"] = {}
 
-		for _, affixData in ipairs(itemData["affixes"]) do
-			local affixId = data.LETools_affixes[affixData.id]
-			if affixId then
-				local affixTier = affixData.tier - 1
-				local modId = affixId .. "_" .. affixTier
-				local modData = data.itemMods.Item[modId]
-				local range = (affixData.r or main.defaultItemAffixQuality)
+		if itemData["affixes"] then
+			for _, affixData in ipairs(itemData["affixes"]) do
+				local affixId = data.LETools_affixes[affixData.id]
+				if affixId then
+					local affixTier = affixData.tier - 1
+					local modId = affixId .. "_" .. affixTier
+					local modData = data.itemMods.Item[modId]
+					local range = (affixData.r or main.defaultItemAffixQuality)
 
-				if modData.type == "Prefix" then
-					table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
-				else
-					table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
+					if modData.type == "Prefix" then
+						table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
+					else
+						table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
+					end
 				end
 			end
 		end
@@ -775,6 +784,15 @@ function buildMode:ReadLeToolsSave(saveContent)
 		local item = processItemData("idol", itemData)
 		if item then
 			table.insert(char["items"], item)
+		end
+	end
+	for i = 1,10 do
+		local blessingData = saveContent["blessings"][i]
+		if blessingData then
+			local item = processItemData("Blessing " .. i, blessingData)
+			if item then
+				table.insert(char["items"], item)
+			end
 		end
 	end
 	return char
