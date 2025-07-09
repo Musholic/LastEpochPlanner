@@ -7744,7 +7744,6 @@ c["-10% Spirit Movespeed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",ty
 c["-10% Stack Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=-10}}," Stack  "}
 c["-10% Thrown Blades Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=-10}}," Thrown Blades  "}
 c["-10% Void Damage Taken"]={{[1]={flags=0,keywordFlags=0,name="VoidDamageTaken",type="BASE",value=-10}},nil}
-c["-10% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="ElementalResist",type="BASE",value=-10},[2]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=-10},[3]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=-10},[4]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=-10},[5]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=-10}},nil}
 c["-100% Current Health Drain"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=-100}}," Current  Drain "}
 c["-100% Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=-100}},nil}
 c["-100% Mana From Burst"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=-100}},"  From Burst "}
@@ -9348,7 +9347,6 @@ c["15% increased Minion Health"]={{[1]={flags=0,keywordFlags=0,name="MinionModif
 c["15% increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=15}},nil}
 c["15% increased Spell Damage"]={{[1]={flags=256,keywordFlags=0,name="Damage",type="INC",value=15}},nil}
 c["15% increased Throwing Damage"]={{[1]={flags=8389632,keywordFlags=0,name="Damage",type="INC",value=15}},nil}
-c["15% less Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="MORE",value=-15}},nil}
 c["15% less Cold Damage Taken on Block"]={{[1]={flags=0,keywordFlags=0,name="ColdDamageTaken",type="MORE",value=-15}},"  on Block "}
 c["15% less Damage Taken per Active Shadow (1 in 6 chance)"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="MORE",value=-15}},"  per Active Shadow (1 in 6 chance) "}
 c["15% less Damage over Time taken while you have Haste"]={{[1]={[1]={skillId="Ailment_Haste",type="SkillId"},flags=0,keywordFlags=0,name="DamageTakenOverTime",type="MORE",value=-15}},"  while you have  "}
@@ -11114,7 +11112,6 @@ c["35% less Void Damage Taken on Block"]={{[1]={flags=0,keywordFlags=0,name="Voi
 c["35% more Physical Ailment Damage to Moving Enemies"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=35}}," Physical Ailment  to Moving Enemies "}
 c["35% of Damage Dealt to Mana Before Health"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=35}},"  Dealt to Mana Before Health "}
 c["35% of Damage Reflected"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=35}},"  Reflected "}
-c["35% reduced Mana Regen"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="INC",value=-35}},"  Regen "}
 c["35.5% Chance to Chill Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=35.5}}," Chance  Attackers "}
 c["35.5% Chance to Shock Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=35.5}}," Chance  Attackers "}
 c["35.5% Chance to Slow Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=35.5}}," Chance  Attackers "}
@@ -11962,6 +11959,7 @@ c["5% less Damage Taken While Moving"]={{[1]={[1]={type="Condition",var="Moving"
 c["5% less Elemental Damage Taken"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageTaken",type="MORE",value=-5}},nil}
 c["5% less Fire Damage Taken on Block"]={{[1]={flags=0,keywordFlags=0,name="FireDamageTaken",type="MORE",value=-5}},"  on Block "}
 c["5% less Melee Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="MORE",value=-5}},nil}
+c["5% more Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="MORE",value=5}},nil}
 c["5% more Melee Damage per stack of Doom"]={{[1]={[1]={skillId="Ailment_Doom",type="SkillId"},flags=512,keywordFlags=0,name="Damage",type="MORE",value=5}},"  per stack of  "}
 c["5% more damage per curse on the target"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=5}},"  per curse on the target "}
 c["5% of Current Health Drained per Second for 4 seconds when you use a Potion"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=5}}," Current  Drained per Second  when you use a Potion "}
@@ -12363,7 +12361,6 @@ c["6% of Minion Current Health Drained per Second"]={{[1]={flags=0,keywordFlags=
 c["6% of Minion Damage Reflected"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Damage",type="BASE",value=6}}}},"   Reflected "}
 c["6% of Void Damage Leeched as Health on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="VoidDamage",type="BASE",value=6}},"  Leeched as Health  "}
 c["6% reduced Damage Taken on Block"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="INC",value=-6}},"  on Block "}
-c["6% reduced Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=-6}},nil}
 c["6.5% Chance to cast Void Rift on Kill"]={{}," Chance to cast Void Rift  "}
 c["6.5% Chance to not consume Silver Shrouds when hit"]={{}," Chance to not consume s when hit "}
 c["6.5% Fire Penetration while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="FirePenetration",type="BASE",value=6.5}},nil}

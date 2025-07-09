@@ -6399,7 +6399,7 @@
     "implicits": [
       "{rounding:Integer}(1-12)% increased Health",
       "{rounding:Integer}(1-12)% increased Mana",
-      "(4-8)% reduced Movement Speed"
+      "(-4-8)% increased Movement Speed"
     ]
   },
   "Amber Amulet": {

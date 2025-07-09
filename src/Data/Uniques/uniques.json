@@ -7750,9 +7750,9 @@
     },
     "mods": [
       "{rounding:Integer}+(1-2) to All Skills",
-      "{rounding:Integer}(20-50)% reduced Mana Regen",
-      "{rounding:Integer}(10-20)% less Armor",
-      "-(5-15)% to All Resistances",
+      "{rounding:Integer}(-20-50)% increased Mana Regen",
+      "{rounding:Integer}(-10-20)% more Armor",
+      "+(-5-15)% to All Resistances",
       "(10-20)% of Current Health and Ward lost when you use Evade",
       "{rounding:Tenth}(1.2-4) Seconds of Frenzy after you use Evade"
     ],
