@@ -652,7 +652,9 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
         end
     end
     for _, itemData in pairs(saveContent["savedItems"]) do
-        if itemData["containerID"] <= 12 or itemData["containerID"] == 29 then
+        if itemData["containerID"] <= 12 or
+                itemData["containerID"] >= 29 and itemData["containerID"] <= 36 or
+                itemData["containerID"] >= 40 and  itemData["containerID"] <= 43  then
             local item = {
                 ["inventoryId"] = itemData["containerID"],
             }
@@ -814,6 +816,13 @@ local slotMap = { [4] = "Weapon 1", [5] = "Weapon 2", [2] = "Helmet", [3] = "Bod
 
 for i = 1, 20 do
     slotMap["Idol " .. i] = "Idol " .. i
+end
+
+for i = 1, 7 do
+    slotMap[32 + i] = "Blessing " .. i
+end
+for i = 1, 3 do
+    slotMap[42 + i] = "Blessing " .. (7 + i)
 end
 
 

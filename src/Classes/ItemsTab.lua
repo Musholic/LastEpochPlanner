@@ -29,6 +29,10 @@ for i = 1, 20 do
 	table.insert(baseSlots, "Idol " .. i)
 end
 
+for i = 1, 10 do
+	table.insert(baseSlots, "Blessing " .. i)
+end
+
 local influenceInfo = itemLib.influenceInfo
 
 local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Control", function(self, build)
@@ -751,7 +755,7 @@ function ItemsTabClass:Draw(viewPort, inputEvents)
 	self.controls.scrollBarV.x = viewPort.x + viewPort.width - 18
 	self.controls.scrollBarV.y = viewPort.y
 	do
-		local maxY = select(2, self.lastSlot:GetPos()) + 24
+		local maxY = select(2, self.controls.idolPositionsLabel:GetPos()) + 24
 		local maxX = self.anchorDisplayItem:GetPos() + 462
 		if self.displayItem then
 			local x, y = self.controls.displayItemTooltipAnchor:GetPos()
@@ -2615,7 +2619,8 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 	self:UpdateSockets()
 	-- Build sorted list of slots to compare with
 	local compareSlots = { }
-	if base.type:find("Idol") then
+	if base.type:find("Idol") or base.type:find("Blessing") then
+		-- Idols and blessings slots should not be compared between each other (too many slots)
         if slot then
             t_insert(compareSlots, slot)
         end
