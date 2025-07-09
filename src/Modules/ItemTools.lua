@@ -66,7 +66,7 @@ function itemLib.applyRange(line, range, valueScalar, rounding)
                 end
                 return (numVal < 0 and "" or plus) .. tostring(numVal)
             end)
-               :gsub("%-(%d+%%) (%a+)", antonymFunc)
+               :gsub("%-(%d+%.?%d*%%) (%a+)", antonymFunc)
 
     return line
 end
