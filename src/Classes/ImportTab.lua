@@ -681,25 +681,47 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
                     end
                     local rarity = itemData["data"][6]
                     item["explicitMods"] = {}
+                    item["prefixes"] = {}
+                    item["suffixes"] = {}
                     if rarity == 7 or rarity == 9 then
                         item["rarity"] = "UNIQUE"
-                        local uniqueID = itemData["data"][12]
+                        local uniqueIDIndex = 8 + 3 -- 3 is the maximum amount of implicits
+                        local uniqueID = itemData["data"][uniqueIDIndex] * 256 + itemData["data"][uniqueIDIndex + 1]
                         local uniqueBase = self.build.data.uniques[uniqueID]
                         item["name"] = uniqueBase.name
                         for i, modLine in ipairs(uniqueBase.mods) do
-                            local range = itemData["data"][12 + i ]
-                            table.insert(item.explicitMods, "{range: " .. range .. "}".. modLine)
+                            if itemLib.hasRange(modLine) then
+                                local rollId = uniqueBase.rollIds[i]
+                                local range = itemData["data"][uniqueIDIndex + 2 +  rollId]
+                                -- TODO: avoid using crafted
+                                table.insert(item.explicitMods, "{crafted}{range: " .. range .. "}".. modLine)
+                                else
+                                table.insert(item.explicitMods, "{crafted}".. modLine)
+                            end
                         end
                         if rarity == 9 then
-                            local nbMods = itemData["data"][13 + #uniqueBase.mods]
-                            -- TODO
+                            local nbAffixesIndex = uniqueIDIndex + 2 + 8 -- 8 is the maximum amount of unique mods
+                            local nbMods = itemData["data"][nbAffixesIndex]
+                            for i = 0, nbMods - 1 do
+                                local dataId = nbAffixesIndex + 1 + 3 * i
+                                local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 4) * 256
+                                local affixTier = math.floor(itemData["data"][dataId] / 16)
+                                local modId = affixId .. "_" .. affixTier
+                                local modData = data.itemMods.Item[modId]
+                                local range = itemData["data"][dataId + 1]
+                                if modData then
+                                    if modData.type == "Prefix" then
+                                        table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
+                                    else
+                                        table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
+                                    end
+                                end
+                            end
                         end
                     else
                         item["name"] = itemBaseName
                         item["rarity"] = "RARE"
-                        item["prefixes"] = {}
-                        item["suffixes"] = {}
-                        for i = 0, 3 do
+                        for i = 0, 4 do
                             local dataId = 14 + i * 3
                             if #itemData["data"] > dataId then
                                 local affixId = itemData["data"][dataId] + (itemData["data"][dataId - 1] % 4) * 256
