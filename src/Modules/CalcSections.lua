@@ -370,11 +370,7 @@ return {
 } },
 { 1, "Ward", 2, colorCodes.WARD, {{ defaultCollapsed = false, label = "Ward", data = {
 	extra = "{0:output:Ward}",
-	{ label = "Base from Armours", { format = "{0:output:Gear:Ward}", { breakdown = "Ward", gearOnly = true }, }, },
-	{ label = "Global Base", { format = "{0:mod:1}", { modName = "Ward", modType = "BASE" }, }, },
-	{ label = "Inc. from Tree", { format = "{0:mod:1}%", { modName = "Ward", modType = "INC", modSource = "Tree" }, }, },
-	{ label = "Total Increased", { format = "{0:mod:1}%", { modName = { "Ward", "Defences" }, modType = "INC" }, }, },
-	{ label = "Total More", { format = "{0:mod:1}%", { modName = { "Ward", "Defences" }, modType = "MORE" }, }, },
+	{ label = "Ward Retention", { format = "{0:output:WardRetention}%", { modName = "WardRetention" } }, },
 	{ label = "Total", { format = "{0:output:Ward}", { breakdown = "Ward" }, }, },
 } }
 } },
@@ -416,6 +412,7 @@ return {
 	{ label = "Life on Block", haveOutput = "LifeOnBlock", { format = "{0:output:LifeOnBlock}", { modName = "LifeOnBlock" }, }, },
 	{ label = "Mana on Block", haveOutput = "ManaOnBlock", { format = "{0:output:ManaOnBlock}", { modName = "ManaOnBlock" }, }, },
 } }, { defaultCollapsed = false, label = "Dodge", data = {
+	{ label = "Dodge Rating", { format = "{0:output:Evasion}", { modName = "Evasion" }, }, },
 	{ label = "Dodge Chance", { format = "{0:output:AttackDodgeChance}% (+{0:output:AttackDodgeChanceOverCap}%)",
 		{ breakdown = "AttackDodgeChance" },
 		{ modName = "AttackDodgeChance" },
