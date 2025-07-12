@@ -267,6 +267,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 		{ stat = "ManaLeechGainPerHit", label = "Mana Leech/Gain per Hit", fmt = ".1f", color = colorCodes.MANA, compPercent = true },
 		{ },
 		{ stat = "Ward", label = "Ward", fmt = "d", color = colorCodes.WARD, compPercent = true },
+		{ stat = "WardRetention", label = "Ward Retention", fmt = "d%%", color = colorCodes.WARD},
 		{ },
 		{ stat = "TotalDegen", label = "Total Degen", fmt = ".1f", lowerIsBetter = true },
 		{ stat = "TotalNetRegen", label = "Total Net Recovery", fmt = "+.1f" },

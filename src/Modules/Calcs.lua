@@ -510,89 +510,8 @@ function calcs.buildOutput(build, mode)
 		local buffList = { }
 		local combatList = { }
 		local curseList = { }
-		if output.PowerCharges > 0 then
-			t_insert(combatList, s_format("%d Power Charges", output.PowerCharges))
-		end
-		if output.AbsorptionCharges > 0 then
-			t_insert(combatList, s_format("%d Absorption Charges", output.AbsorptionCharges))
-		end
-		if output.FrenzyCharges > 0 then
-			t_insert(combatList, s_format("%d Frenzy Charges", output.FrenzyCharges))
-		end
-		if output.AfflictionCharges > 0 then
-			t_insert(combatList, s_format("%d Affliction Charges", output.AfflictionCharges))
-		end
-		if output.EnduranceCharges > 0 then
-			t_insert(combatList, s_format("%d Endurance Charges", output.EnduranceCharges))
-		end
-		if output.BrutalCharges > 0 then
-			t_insert(combatList, s_format("%d Brutal Charges", output.BrutalCharges))
-		end
-		if output.SiphoningCharges > 0 then
-			t_insert(combatList, s_format("%d Siphoning Charges", output.SiphoningCharges))
-		end
-		if output.ChallengerCharges > 0 then
-			t_insert(combatList, s_format("%d Challenger Charges", output.ChallengerCharges))
-		end
-		if output.BlitzCharges > 0 then
-			t_insert(combatList, s_format("%d Blitz Charges", output.BlitzCharges))
-		end
-		if build.calcsTab.mainEnv.multipliersUsed["InspirationCharge"] then
-			t_insert(combatList, s_format("%d Inspiration Charges", output.InspirationCharges))
-		end
-		if output.GhostShrouds > 0 then
-			t_insert(combatList, s_format("%d Ghost Shrouds", output.GhostShrouds))
-		end
-		if output.CrabBarriers > 0 then
-			t_insert(combatList, s_format("%d Crab Barriers", output.CrabBarriers))
-		end
-		if build.calcsTab.mainEnv.multipliersUsed["BloodCharge"] then
-			t_insert(combatList, s_format("%d Blood Charges", output.BloodCharges))
-		end
-		if build.calcsTab.mainEnv.multipliersUsed["SpiritCharge"] then
-			t_insert(combatList, s_format("%d Spirit Charges", output.SpiritCharges))
-		end
-		if env.player.mainSkill.baseSkillModList:Flag(nil, "Cruelty") then
-			t_insert(combatList, "Cruelty")
-		end
-		if env.modDB:Flag(nil, "Fortify") then
-			t_insert(combatList, "Fortify")
-		end
-		if env.modDB:Flag(nil, "Onslaught") then
-			t_insert(combatList, "Onslaught")
-		end
-		if env.modDB:Flag(nil, "UnholyMight") then
-			t_insert(combatList, "Unholy Might")
-		end
-		if env.modDB:Flag(nil, "Tailwind") then
-			t_insert(combatList, "Tailwind")
-		end
-		if env.modDB:Flag(nil, "Adrenaline") then
-			t_insert(combatList, "Adrenaline")
-		end
-		if env.modDB:Flag(nil, "AlchemistsGenius") then
-			t_insert(combatList, "Alchemist's Genius")
-		end
-		if env.modDB:Flag(nil, "HerEmbrace") then
-			t_insert(combatList, "Her Embrace")
-		end
-		if env.modDB:Flag(nil, "LesserMassiveShrine") then
-			t_insert(combatList, "Lesser Massive Shrine")
-		end
-		if env.modDB:Flag(nil, "LesserBrutalShrine") then
-			t_insert(combatList, "Lesser Brutal Shrine")
-		end
-		if env.modDB:Flag(nil, "DiamondShrine") then
-			t_insert(combatList, "Diamond Shrine")
-		end
-		if env.modDB:Flag(nil, "MassiveShrine") then
-			t_insert(combatList, "Massive Shrine")
-		end
 		for name in pairs(env.buffs) do
 			t_insert(buffList, name)
-		end
-		if env.modDB:Flag(nil, "Elusive") then
-			t_insert(combatList, "Elusive")
 		end
 		table.sort(buffList)
 		env.player.breakdown.SkillBuffs = { modList = { } }
@@ -647,33 +566,6 @@ function calcs.buildOutput(build, mode)
 		if env.minion then
 			local buffList = { }
 			local combatList = { }
-			if output.Minion.PowerCharges > 0 then
-				t_insert(combatList, s_format("%d Power Charges", output.Minion.PowerCharges))
-			end
-			if output.Minion.FrenzyCharges > 0 then
-				t_insert(combatList, s_format("%d Frenzy Charges", output.Minion.FrenzyCharges))
-			end
-			if output.Minion.EnduranceCharges > 0 then
-				t_insert(combatList, s_format("%d Endurance Charges", output.Minion.EnduranceCharges))
-			end
-			if env.minion.modDB:Flag(nil, "Fortify") then
-				t_insert(combatList, "Fortify")
-			end
-			if env.minion.modDB:Flag(nil, "Onslaught") then
-				t_insert(combatList, "Onslaught")
-			end
-			if env.minion.modDB:Flag(nil, "UnholyMight") then
-				t_insert(combatList, "Unholy Might")
-			end
-			if env.minion.modDB:Flag(nil, "Tailwind") then
-				t_insert(combatList, "Tailwind")
-			end
-			if env.minion.modDB:Flag(nil, "DiamondShrine") then
-				t_insert(combatList, "Diamond Shrine")
-			end
-			if env.minion.modDB:Flag(nil, "MassiveShrine") then
-				t_insert(combatList, "Massive Shrine")
-			end
 			for name in pairs(env.minionBuffs) do
 				t_insert(buffList, name)
 			end
