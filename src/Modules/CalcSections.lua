@@ -378,9 +378,9 @@ return {
 { 1, "Resist", 3, colorCodes.DEFENCE, {{ defaultCollapsed = false, label = "Resists", data = generateTableByValues({},
 
 		DamageTypes, function (i,damageType)
-			return { label = DamageTypesColored[i] .. " Resist", { format = "{0:output:" .. damageType .. "Resist}% (+{0:output:FireResistOverCap}%)",
-												   { breakdown = "FireResist" },
-												   { modName = { "FireResistMax", "FireResist" }, } } }
+			return { label = DamageTypesColored[i] .. " Resist", { format = "{0:output:" .. damageType .. "Resist}% (+{0:output:" .. damageType .. "ResistOverCap}%)",
+												   { breakdown = damageType .. "Resist" },
+												   { modName = { damageType .. "ResistMax", damageType .. "Resist" }, } } }
 		end),
 }
 } },
