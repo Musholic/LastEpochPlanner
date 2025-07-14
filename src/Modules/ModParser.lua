@@ -59,7 +59,7 @@ local modNameList = {
 	["maximum health"] = "Life",
 	["mana"] = "Mana",
 	["maximum mana"] = "Mana",
-	["mana regeneration"] = "ManaRegen",
+	["mana regen"] = "ManaRegen",
 	["mana cost"] = "ManaCost",
 	-- Primary defences
 	["armour"] = "Armour",
@@ -67,9 +67,9 @@ local modNameList = {
 	["dodge rating"] = "Evasion",
 	["ward"] = "Ward",
 	-- Resistances
-	["elemental resistance"] = "ElementalResist",
-	["elemental resistances"] = "ElementalResist",
-	["all resistances"] = { "ElementalResist", "PhysicalResist", "PoisonResist", "NecroticResist", "VoidResist" },
+	["elemental resistance"] = { "FireResist", "LightningResist", "ColdResist" },
+	["elemental resistances"] = { "FireResist", "LightningResist", "ColdResist" },
+	["all resistances"] = { "FireResist", "LightningResist", "ColdResist", "PhysicalResist", "PoisonResist", "NecroticResist", "VoidResist" },
 	-- Damage taken
 	["damage taken"] = "DamageTaken",
 	["damage over time taken"] = "DamageTakenOverTime",
@@ -265,6 +265,7 @@ local specialQuickFixModList = {
 	["^([%+%-]?[%d%.]+%%) Cast Speed"] = "%1 increased Cast Speed",
 	["^([%+%-]?[%d%.]+%%) Cooldown Recovery Speed"] = "%1 increased Cooldown Recovery Speed",
 	["^([%+%-]?[%d%.]+%%) Duration"] = "%1 increased Duration",
+	["^([%+%-]?[%d%.]+%%) Movespeed"] = "%1 increased Movespeed",
 }
 
 for _, damageType in ipairs(DamageTypes) do

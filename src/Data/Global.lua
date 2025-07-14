@@ -97,36 +97,36 @@ function hexToRGB(hex)
 end
 
 DamageTypes = {
-	"Physical",
+	"Fire",
 	"Lightning",
 	"Cold",
-	"Fire",
-	"Void",
+	"Physical",
+	"Poison",
 	"Necrotic",
-	"Poison"
+	"Void"
 }
 
 Attributes = {"Str","Dex","Int","Att","Vit"}
 LongAttributes = {"Strength","Dexterity","Intelligence","Attunement","Vitality"}
 
 DamageTypesColored = {
-	colorCodes.PHYSICAL.."Physical",
+	colorCodes.FIRE.."Fire",
 	colorCodes.LIGHTNING .. "Lightning",
 	colorCodes.COLD .. "Cold",
-	colorCodes.FIRE.."Fire",
-	colorCodes.VOID.."Void",
+	colorCodes.PHYSICAL.."Physical",
+	colorCodes.POISON.."Poison",
 	colorCodes.NECROTIC.."Necrotic",
-	colorCodes.POISON.."Poison"
+	colorCodes.VOID.."Void"
 }
 
 DamageTypeColors = {
-	colorCodes.PHYSICAL,
+	colorCodes.FIRE,
 	colorCodes.LIGHTNING,
 	colorCodes.COLD,
-	colorCodes.FIRE,
-	colorCodes.VOID,
+	colorCodes.PHYSICAL,
+	colorCodes.POISON,
 	colorCodes.NECROTIC,
-	colorCodes.POISON
+	colorCodes.VOID
 }
 
 DamageSourceTypes = { "Spell", "Melee", "Throwing", "Bow", "Dot"}
