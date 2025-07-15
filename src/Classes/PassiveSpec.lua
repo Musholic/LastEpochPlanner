@@ -696,7 +696,15 @@ function PassiveSpecClass:BuildAllDependsAndPaths()
 			local newNode = self.tree.nodes[id]
 			if self.hashOverrides[id] then
 				newNode = copyTable(newNode, true)
-				newNode.stats = self.hashOverrides[id]
+				newNode.stats = {}
+				newNode.notScalingStats = {}
+				for _, line in ipairs(self.hashOverrides[id]) do
+					if line:match("^%{NotScaling%}") then
+						t_insert(newNode.notScalingStats, line:sub(13))
+					else
+						t_insert(newNode.stats, line)
+					end
+				end
 			end
 			self:ReplaceNode(node,newNode)
 		end
@@ -822,12 +830,13 @@ end
 
 function PassiveSpecClass:ReplaceNode(old, newNode)
 	-- Edited nodes can share a name
-	if old.stats == newNode.stats then
+	if old.stats == newNode.stats and old.notScalingStats == newNode.notScalingStats then
 		return 1
 	end
 	old.dn = newNode.dn
 	old.sd = newNode.sd
 	old.stats = newNode.stats
+	old.notScalingStats = newNode.notScalingStats
 	old.mods = newNode.mods
 	old.modKey = newNode.modKey
 	old.modList = new("ModList")
