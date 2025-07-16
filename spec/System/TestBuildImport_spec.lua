@@ -21,7 +21,7 @@ expose("BuildImport #buildImport", function()
         runCallback("OnFrame")
 
         assert.are.equals("Fireball", build.calcsTab.mainEnv.player.mainSkill.skillCfg.skillName)
-        assert.are.equals(5483, round(build.calcsTab.mainOutput.FullDPS))
+        assert.are.equals(8067, round(build.calcsTab.mainOutput.FullDPS))
     end)
 
     it("build import from LETools, minionDps calculation", function()
