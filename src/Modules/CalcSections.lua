@@ -334,14 +334,13 @@ return {
 } },
 -- primary defenses
 { 1, "Life", 2, colorCodes.LIFE, {{ defaultCollapsed = false, label = "Health", data = {
-	extra = "{0:output:LifeUnreserved}/{0:output:Life}",
+	extra = "{0:output:Life}",
 	{ label = "Base from Gear", { format = "{0:mod:1}", { modName = "Life", modType = "BASE", modSource = "Item" }, }, },
 	{ label = "Inc. from Tree", { format = "{0:mod:1}%", { modName = "Life", modType = "INC", modSource = "Tree" }, }, },
 	{ label = "Total Base", { format = "{0:mod:1}", { modName = "Life", modType = "BASE" }, }, },
 	{ label = "Total Increased", { format = "{0:mod:1}%", { modName = "Life", modType = "INC", }, }, },
 	{ label = "Total More", { format = "{0:mod:1}%", { modName = "Life", modType = "MORE", }, }, },
 	{ label = "Total", { format = "{0:output:Life}", { breakdown = "Life" }, }, },
-	{ label = "Total Recoverable", haveOutput = "CappingLife", { format = "{0:output:LifeRecoverable}", { breakdown = "LifeUnreserved" }, }, },
 	{ label = "Recovery", { format = "{1:output:LifeRegenRecovery} ({1:output:LifeRegenPercent}%)",
 		{ breakdown = "LifeRegenRecovery" },
 		{ label = "Sources", modName = { "LifeRegen", "LifeRegenPercent", "LifeDegen", "LifeDegenPercent", "LifeRecovery" }, modType = "BASE" },
@@ -352,7 +351,7 @@ return {
 } }
 } },
 { 1, "Mana", 2, colorCodes.MANA, {{ defaultCollapsed = false, label = "Mana", data = {
-	extra = "{0:output:ManaUnreserved}/{0:output:Mana}",
+	extra = "{0:output:Mana}",
 	notFlag = "minionSkill",
 	{ label = "Base from Gear", { format = "{0:mod:1}", { modName = "Mana", modType = "BASE", modSource = "Item" }, }, },
 	{ label = "Inc. from Tree", { format = "{0:mod:1}%", { modName = "Mana", modType = "INC", modSource = "Tree" }, }, },
