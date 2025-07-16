@@ -710,7 +710,7 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
                                 local affixTier = math.floor(itemData["data"][dataId] / 16)
                                 local modId = affixId .. "_" .. affixTier
                                 local modData = data.itemMods.Item[modId]
-                                local range = itemData["data"][dataId + 1]
+                                local range = itemData["data"][dataId + 2]
                                 if modData then
                                     if modData.type == "Prefix" then
                                         table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
