@@ -490,7 +490,7 @@ local function parseMod(line, order)
 
 	if modForm == "BASE_MORE" and modName ~= nil then
 		local modNameStr = type(modName) == "table" and modName[1] or modName
-		if modNameStr:match("Damage$")then
+		if modNameStr:match("Damage$") or modName == "Duration" then
 			modType = "MORE"
 		else
 			modType = "BASE"
