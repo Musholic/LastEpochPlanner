@@ -128,6 +128,8 @@ local modNameList = {
 	-- Misc modifiers
 	["movespeed"] = "MovementSpeed",
 	["movement speed"] = "MovementSpeed",
+	-- TODO: capitalize d1 and d2
+	["(%w+) and (%w+) resistance"] = function(d1, d2) return { d1:capitalize() .. "Resist", d2:capitalize() .. "Resist" } end
 }
 
 for i,stat in ipairs(LongAttributes) do
@@ -414,7 +416,7 @@ local function parseMod(line, order)
 	end
 
 	-- Scan for modifier name and skill name
-	local modName
+	local modName, nameCap
 	if order == 2 and not skillTag then
 		skillTag, line = scan(line, skillNameList)
 	end
@@ -425,7 +427,10 @@ local function parseMod(line, order)
 		end
 		modName, line = scan(line, modNameList, true)
 	else
-		modName, line = scan(line, modNameList, true)
+		modName, line, nameCap = scan(line, modNameList)
+		if type(modName) == "function" then
+			modName = modName(unpack(nameCap))
+		end
 	end
 	if order == 1 and not skillTag then
 		skillTag, line = scan(line, skillNameList)
@@ -485,7 +490,7 @@ local function parseMod(line, order)
 
 	if modForm == "BASE_MORE" and modName ~= nil then
 		local modNameStr = type(modName) == "table" and modName[1] or modName
-		if modNameStr:match("Damage$") then
+		if modNameStr:match("Damage$")then
 			modType = "MORE"
 		else
 			modType = "BASE"

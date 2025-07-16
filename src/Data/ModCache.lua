@@ -5398,8 +5398,8 @@ c["+35% Storm Bolt Retaliation Chance"]={{}," Storm Bolt Retaliation Chance "}
 c["+35% Void Penetration with Doom"]={{[1]={[1]={skillId="Ailment_Doom",type="SkillId"},flags=0,keywordFlags=0,name="VoidPenetration",type="BASE",value=35}},"  with  "}
 c["+35% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=35}},nil}
 c["+35% Zombie Explosion Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=35}}," Zombie Explosion  "}
-c["+35% fire and necrotic resistance"]={{[1]={flags=0,keywordFlags=8,name="NecroticResist",type="BASE",value=35}},"  and  "}
-c["+35% physical and fire resistance"]={{[1]={flags=0,keywordFlags=1,name="FireResist",type="BASE",value=35}},"  and  "}
+c["+35% fire and necrotic resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=35},[2]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=35}},nil}
+c["+35% physical and fire resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=35},[2]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=35}},nil}
 c["+35.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}},"  on   "}
 c["+35.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}},nil}
 c["+35.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}},nil}
