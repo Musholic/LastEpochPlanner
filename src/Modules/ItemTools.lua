@@ -46,6 +46,10 @@ function itemLib.applyRange(line, range, valueScalar, rounding)
     elseif rounding == "Thousandth" then
         precision = 1000
     end
+    -- If there is a percent, we need to divide the precision by 100
+    if line:find("%%") then
+        precision = precision / 100
+    end
 
     -- range is actually given as a roll (TODO:rename)
     range = range / 255.0
@@ -67,7 +71,6 @@ function itemLib.applyRange(line, range, valueScalar, rounding)
                 return (numVal < 0 and "" or plus) .. tostring(numVal)
             end)
                :gsub("%-(%d+%.?%d*%%) (%a+)", antonymFunc)
-
     return line
 end
 
