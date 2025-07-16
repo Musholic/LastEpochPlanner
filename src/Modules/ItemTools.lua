@@ -47,7 +47,7 @@ function itemLib.applyRange(line, range, valueScalar, rounding)
         precision = 1000
     end
     -- If there is a percent, we need to divide the precision by 100
-    if line:find("%%") then
+    if line:find("%%") and precision >= 100 then
         precision = precision / 100
     end
 
