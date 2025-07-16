@@ -135,6 +135,7 @@ for i,stat in ipairs(LongAttributes) do
 end
 
 for skillId, skill in pairs(data.skills) do
+	modNameList["chance to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
 	modNameList["to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
 	modNameList[skill.name:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
 	if skill.altName then

@@ -1773,7 +1773,7 @@ c["+1% Zombie Area per Int"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",t
 c["+1% chance to gain Frenzy for 3 seconds when you Echo an ability"]={{[1]={flags=0,keywordFlags=0,name="Condition:Frenzy",type="FLAG",value=true}},"  when you Echo an ability "}
 c["+1% increased Cast Speed per 2 Intelligence"]={{[1]={[1]={div=2,stat="Int",type="PerStat"},flags=256,keywordFlags=0,name="Speed",type="INC",value=1}},nil}
 c["+1.5% Base Crit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=1.5}},nil}
-c["+1.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=1.5}}," Chance   "}
+c["+1.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=1.5}},nil}
 c["+1.5% Chance to apply Frostbite on Cold Hit"]={{}," Chance to apply   "}
 c["+1.5% Chance to forge a weapon when hit"]={{}," Chance to forge a weapon when  "}
 c["+1.5% Critical Strike Avoidance"]={{}," Critical Strike Aance "}
@@ -2094,7 +2094,7 @@ c["+10% Wind Tempest Damage "]={{[1]={flags=0,keywordFlags=0,name="Damage",type=
 c["+10% Wolves And Bear Critical Multiplier"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=10}}," Wolves And Bear  "}
 c["+10% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=10},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=10},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=10},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=10},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=10},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=10}},nil}
 c["+10% to Minion All Resistances"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=10}}},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=10}}},[3]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=10}}},[4]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=10}}},[5]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=10}}},[6]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=10}}},[7]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=10}}}},nil}
-c["+10.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=10.5}}," Chance   "}
+c["+10.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=10.5}},nil}
 c["+10.5% Chance to cast Fire Aura on Crit (1 second cooldown)"]={{}," Chance to cast  Aura on Crit (1 second cooldown) "}
 c["+10.5% Chance to cast Fire Aura on Kill with Fire Skills (1 second cooldown)"]={{}," Chance to cast  Aura   (1 second cooldown) "}
 c["+10.5% Chance to gain Haste when you kill an enemy with a spell"]={{}," Chance to gain   with a  "}
@@ -2243,7 +2243,7 @@ c["+100% Stats on this item are doubled for 3 seconds after hitting a boss or ra
 c["+100% Stats on your gloves also apply to your minions"]={{}," Stats on your gloves also apply to your s "}
 c["+100% Stun Immunity for 4 seconds when you use a Potion"]={{}," Stun Immunity  when you use a Potion "}
 c["+100% Temporary Minion Immunity for Infernal Shade"]={{}," Temporary  Immunity for  "}
-c["+100% Third Strike Chance to Slow"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=100}}," Third Strike Chance  "}
+c["+100% Third Strike Chance to Slow"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=100}}," Third Strike  "}
 c["+100% Three Rune Invocations always cast Grand Nova Prism instead"]={{}," Three Rune Invocations always cast Grand Nova Prism instead "}
 c["+100% Time Rot Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_TimeRot",type="BASE",value=100}},nil}
 c["+100% Void Shred Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_VoidResistanceShred",type="BASE",value=100}},nil}
@@ -2342,7 +2342,7 @@ c["+11% Necrotic Penetration"]={{[1]={flags=0,keywordFlags=0,name="NecroticPenet
 c["+11% Parry Chance"]={{}," "}
 c["+11% Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=11}},nil}
 c["+11% Putrid Wraith Chance"]={{}," Putrid Wraith Chance "}
-c["+11.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=11.5}}," Chance  on   "}
+c["+11.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=11.5}},"  on   "}
 c["+11.5% Chance to create a Void Rift when you hit an enemy (2 second cooldown)"]={{}," Chance to create a  Rift when you  an enemy (2 second cooldown) "}
 c["+11.5% Chance to inflict Time Rot on Hit"]={{}," Chance to inflict   "}
 c["+11.5% Cold Penetration"]={{[1]={flags=0,keywordFlags=0,name="ColdPenetration",type="BASE",value=11.5}},nil}
@@ -2518,9 +2518,9 @@ c["+12% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",v
 c["+12% Ward Retention with a Sceptre"]={{[1]={[1]={type="Condition",var="UsingSceptre"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=12}},"  Retention  "}
 c["+12% Width"]={{}," Width "}
 c["+12% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=12},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=12},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=12},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=12},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=12},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=12},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=12}},nil}
-c["+12.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=12.5}}," Chance   "}
-c["+12.5% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=12.5}}," Chance   "}
-c["+12.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=12.5}}," Chance   "}
+c["+12.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=12.5}},nil}
+c["+12.5% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=12.5}},nil}
+c["+12.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=12.5}},nil}
 c["+12.5% Chance to gain Haste when you kill an enemy with a spell"]={{}," Chance to gain   with a  "}
 c["+12.5% Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=12.5}},nil}
 c["+12.5% Endurance"]={{}," Endurance "}
@@ -2632,7 +2632,7 @@ c["+13% Poison Chance"]={{}," "}
 c["+13% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=13}},nil}
 c["+13% Spirit Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=13}}," Spirit  "}
 c["+13% Target Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=13}}," Target  "}
-c["+13.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=13.5}}," Chance   "}
+c["+13.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=13.5}},nil}
 c["+13.5% Chance to apply Frailty on Hit"]={{}," Chance to apply   "}
 c["+13.5% Chance to cast Fire Aura on Kill with Fire Skills (1 second cooldown)"]={{}," Chance to cast  Aura   (1 second cooldown) "}
 c["+13.5% Chance to forge a weapon when hit"]={{}," Chance to forge a weapon when  "}
@@ -2677,7 +2677,7 @@ c["+135% Melee Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=512,name
 c["+136 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=136}},nil}
 c["+136 Armor per Rah Rune"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=136}},"  per Rah Rune "}
 c["+137 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=137}},nil}
-c["+137.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=137.5}}," Chance   "}
+c["+137.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=137.5}},nil}
 c["+138 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=138}},nil}
 c["+138 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=138}},"  while using Evade "}
 c["+14 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=14}},nil}
@@ -2731,12 +2731,12 @@ c["+14% Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist
 c["+14% Poison Penetration"]={{[1]={flags=0,keywordFlags=0,name="PoisonPenetration",type="BASE",value=14}},nil}
 c["+14% Range"]={{}," Range "}
 c["+14% Void Penetration"]={{[1]={flags=0,keywordFlags=0,name="VoidPenetration",type="BASE",value=14}},nil}
-c["+14.5% Chance to Blind on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=14.5}}," Chance   "}
-c["+14.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=14.5}}," Chance   "}
-c["+14.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=14.5}}," Chance   "}
-c["+14.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=14.5}}," Chance   "}
-c["+14.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=14.5}}," Chance   "}
-c["+14.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=14.5}}," Chance   "}
+c["+14.5% Chance to Blind on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=14.5}},nil}
+c["+14.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=14.5}},nil}
+c["+14.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=14.5}},nil}
+c["+14.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=14.5}},nil}
+c["+14.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=14.5}},nil}
+c["+14.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=14.5}},nil}
 c["+14.5% Chance to cast Lightning Blast When Hit while you have Lightning Aegis"]={{}," Chance to cast  When  while you have  Aegis "}
 c["+14.5% Chance to gain Haste when you kill an enemy with a spell"]={{}," Chance to gain   with a  "}
 c["+14.5% Chance to inflict Bleed on Hit"]={{}," Chance to inflict   "}
@@ -3019,8 +3019,8 @@ c["+15% Warrior Maximum Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type=
 c["+15% Wave Range"]={{}," Wave Range "}
 c["+15% Width"]={{}," Width "}
 c["+15.5% Block Chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=15.5}},nil}
-c["+15.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=15.5}}," Chance  on   "}
-c["+15.5% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=15.5}}," Chance  on   "}
+c["+15.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=15.5}},"  on   "}
+c["+15.5% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=15.5}},"  on   "}
 c["+15.5% Chance to cast Fire Aura on Crit (1 second cooldown)"]={{}," Chance to cast  Aura on Crit (1 second cooldown) "}
 c["+15.5% Chance to inflict Time Rot on Void Hit"]={{}," Chance to inflict   "}
 c["+15.5% Cold Penetration with Cold Invocations"]={{[1]={flags=0,keywordFlags=4,name="ColdPenetration",type="BASE",value=15.5}},"  with  Invocations "}
@@ -3060,9 +3060,9 @@ c["+155.5% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+156 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=156}},nil}
 c["+156 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=156}},nil}
 c["+156% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
-c["+157.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=157.5}}," Chance  on   "}
-c["+157.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=157.5}}," Chance   "}
-c["+157.5% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=157.5}}," Chance  on   "}
+c["+157.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=157.5}},"  on   "}
+c["+157.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=157.5}},nil}
+c["+157.5% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=157.5}},"  on   "}
 c["+16 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=16}},nil}
 c["+16 Bow Fire Damage"]={{[1]={flags=0,keywordFlags=2048,name="FireDamage",type="BASE",value=16}},nil}
 c["+16 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=16}},nil}
@@ -3189,9 +3189,9 @@ c["+17% Runeword Buff Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",t
 c["+17% Speed and Range"]={{}," Speed and Range "}
 c["+17% Void Spell Mana Efficiency"]={{[1]={flags=0,keywordFlags=272,name="Mana",type="BASE",value=17}},"    Efficiency "}
 c["+17.5% Block Chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=17.5}},nil}
-c["+17.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=17.5}}," Chance   "}
-c["+17.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=17.5}}," Chance   "}
-c["+17.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=17.5}}," Chance   "}
+c["+17.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=17.5}},nil}
+c["+17.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=17.5}},nil}
+c["+17.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=17.5}},nil}
 c["+17.5% Chance to apply Frailty on Hit"]={{}," Chance to apply   "}
 c["+17.5% Chance to cast Harvest at 3 nearby enemies when you use Reap"]={{}," Chance to cast  at 3 nearby enemies when you use Reap "}
 c["+17.5% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{}," Chance to cast   with  attacks (up to 10 times per 2 seconds) "}
@@ -3212,7 +3212,7 @@ c["+173 Stun Avoidance"]={{}," Stun Aance "}
 c["+175 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=175}},nil}
 c["+175 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=175}},"  Decay Threshold "}
 c["+175% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
-c["+175.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=175.5}}," Chance   "}
+c["+175.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=175.5}},nil}
 c["+176 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=176}},nil}
 c["+176 Endurance Threshold"]={{}," Endurance Threshold "}
 c["+176 Minion Health Regen"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=176}}}},nil}
@@ -3277,14 +3277,14 @@ c["+18% Recurve Chance with Heartseeker"]={{}," with  "}
 c["+18% Stun Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="BASE",value=18}},nil}
 c["+18% Void Eruption Damage"]={{[1]={flags=0,keywordFlags=16,name="Damage",type="MORE",value=18}},"  Eruption  "}
 c["+18% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=18}},nil}
-c["+18.5% Chance to Blind on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=18.5}}," Chance   "}
-c["+18.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=18.5}}," Chance   "}
-c["+18.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=18.5}}," Chance   "}
-c["+18.5% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=18.5}}," Chance   "}
-c["+18.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=18.5}}," Chance   "}
-c["+18.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=18.5}}," Chance   "}
-c["+18.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=18.5}}," Chance   "}
-c["+18.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=18.5}}," Chance   "}
+c["+18.5% Chance to Blind on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=18.5}},nil}
+c["+18.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=18.5}},nil}
+c["+18.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=18.5}},nil}
+c["+18.5% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=18.5}},nil}
+c["+18.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=18.5}},nil}
+c["+18.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=18.5}},nil}
+c["+18.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=18.5}},nil}
+c["+18.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=18.5}},nil}
 c["+18.5% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{}," Chance to cast   with  attacks (up to 10 times per 2 seconds) "}
 c["+18.5% Chance to gain Dusk Shroud when you use a Melee Attack that hits"]={{}," Chance to gain  when you use a  Attack that s "}
 c["+18.5% Chance to inflict Bleed on Hit"]={{}," Chance to inflict   "}
@@ -3346,7 +3346,7 @@ c["+19% Lightning Penetration"]={{[1]={flags=0,keywordFlags=0,name="LightningPen
 c["+19% Minion Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=19}}}},nil}
 c["+19% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=19}},nil}
 c["+19% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=19}},"  Retention "}
-c["+19.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=19.5}}," Chance   "}
+c["+19.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=19.5}},nil}
 c["+19.5% Chance to cast Maelstrom every 3 seconds"]={{}," Chance to cast  every 3 seconds "}
 c["+19.5% Cold Penetration with Cold Invocations"]={{[1]={flags=0,keywordFlags=4,name="ColdPenetration",type="BASE",value=19.5}},"  with  Invocations "}
 c["+19.5% Fire Penetration with Fire Invocations"]={{[1]={flags=0,keywordFlags=8,name="FirePenetration",type="BASE",value=19.5}},"  with  Invocations "}
@@ -4028,8 +4028,8 @@ c["+20% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",v
 c["+20% Withering Chance On Hit"]={{},"  "}
 c["+20% Wolves Bleed Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=20}}," Wolves  "}
 c["+20.5% Chance to Inflict Bleed on Hit with Shurikens"]={{}," Chance to Inflict   with Shurikens "}
-c["+20.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=20.5}}," Chance   "}
-c["+20.5% Chance to Poison on Minion Hit"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=20.5}}}}," Chance  on   "}
+c["+20.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=20.5}},nil}
+c["+20.5% Chance to Poison on Minion Hit"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=20.5}}}},"  on   "}
 c["+20.5% Chance to create a Void Rift when you hit an enemy (2 second cooldown)"]={{}," Chance to create a  Rift when you  an enemy (2 second cooldown) "}
 c["+20.5% Chance to gain Dusk Shroud when you use a Melee Attack that hits"]={{}," Chance to gain  when you use a  Attack that s "}
 c["+20.5% Chance to inflict Time Rot on Hit"]={{}," Chance to inflict   "}
@@ -4117,14 +4117,14 @@ c["+21% Endurance"]={{}," Endurance "}
 c["+21% Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=21}},nil}
 c["+21% Minion Necrotic Penetration"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="NecroticPenetration",type="BASE",value=21}}}},nil}
 c["+21% Necrotic Penetration"]={{[1]={flags=0,keywordFlags=0,name="NecroticPenetration",type="BASE",value=21}},nil}
-c["+21.5% Chance to Blind on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=21.5}}," Chance   "}
-c["+21.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=21.5}}," Chance   "}
-c["+21.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=21.5}}," Chance   "}
+c["+21.5% Chance to Blind on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=21.5}},nil}
+c["+21.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=21.5}},nil}
+c["+21.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=21.5}},nil}
 c["+21.5% Chance to Inflict Bleed on Hit if wielding an Axe"]={{}," Chance to Inflict   if wielding an Axe "}
-c["+21.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=21.5}}," Chance   "}
-c["+21.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=21.5}}," Chance   "}
-c["+21.5% Chance to Shred Armor on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=21.5}}," Chance  on   "}
-c["+21.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=21.5}}," Chance   "}
+c["+21.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=21.5}},nil}
+c["+21.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=21.5}},nil}
+c["+21.5% Chance to Shred Armor on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=21.5}},"  on   "}
+c["+21.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=21.5}},nil}
 c["+21.5% Chance to apply Frailty on Hit"]={{}," Chance to apply   "}
 c["+21.5% Chance to inflict Bleed on Hit"]={{}," Chance to inflict   "}
 c["+21.5% Chance to inflict Bleed on Minion Hit"]={{}," Chance to inflict  on   "}
@@ -4136,9 +4136,9 @@ c["+210 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=21
 c["+210 Block Effectiveness"]={{}," Block Effectiveness "}
 c["+210 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=210}}}},nil}
 c["+210 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=210}},"  Decay Threshold "}
-c["+210.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=210.5}}," Chance  on   "}
-c["+210.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=210.5}}," Chance   "}
-c["+210.5% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=210.5}}," Chance  on   "}
+c["+210.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=210.5}},"  on   "}
+c["+210.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=210.5}},nil}
+c["+210.5% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=210.5}},"  on   "}
 c["+211 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=211}},nil}
 c["+213 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=213}},nil}
 c["+213 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=213}},"  while using Evade "}
@@ -4176,9 +4176,9 @@ c["+22% Endurance"]={{}," Endurance "}
 c["+22% Fire Penetration with Ignite "]={{[1]={[1]={skillId="Ailment_Ignite",type="SkillId"},flags=0,keywordFlags=0,name="FirePenetration",type="BASE",value=22}},"  with   "}
 c["+22% Minion Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=22}}}},nil}
 c["+22% Necrotic Resistance"]={{[1]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=22}},nil}
-c["+22.5% Chance to Ignite on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=22.5}}," Chance  on   "}
-c["+22.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=22.5}}," Chance   "}
-c["+22.5% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=22.5}}," Chance  on   "}
+c["+22.5% Chance to Ignite on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=22.5}},"  on   "}
+c["+22.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=22.5}},nil}
+c["+22.5% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=22.5}},"  on   "}
 c["+22.5% Chance to apply Future Strike on Melee Hit"]={{}," Chance to apply   "}
 c["+22.5% Chance to cast Harvest at 3 nearby enemies when you use Reap"]={{}," Chance to cast  at 3 nearby enemies when you use Reap "}
 c["+22.5% Chance to gain Haste when you kill an enemy with a spell"]={{}," Chance to gain   with a  "}
@@ -4292,9 +4292,9 @@ c["+24% Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResi
 c["+24% Necrotic Resistance"]={{[1]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=24}},nil}
 c["+24% Physical Penetration"]={{[1]={flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=24}},nil}
 c["+24% Throwing Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=1024,name="CritMultiplier",type="BASE",value=24}},nil}
-c["+24.5% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=24.5}}," Chance   "}
-c["+24.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=24.5}}," Chance   "}
-c["+24.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=24.5}}," Chance   "}
+c["+24.5% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=24.5}},nil}
+c["+24.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=24.5}},nil}
+c["+24.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=24.5}},nil}
 c["+24.5% Chance to apply Damned on Hit"]={{}," Chance to apply   "}
 c["+24.5% Chance to inflict Bleed on Hit"]={{}," Chance to inflict   "}
 c["+24.5% Chance to inflict Time Rot on Hit"]={{}," Chance to inflict   "}
@@ -4511,9 +4511,9 @@ c["+25% Void Rift Area"]={{[1]={flags=0,keywordFlags=16,name="AreaOfEffect",type
 c["+25% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=25}},"  Retention "}
 c["+25% Zombie Explosion Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=25}}," Zombie Explosion  "}
 c["+25.5% Chance to Inflict Bleed on Hit if wielding an Axe"]={{}," Chance to Inflict   if wielding an Axe "}
-c["+25.5% Chance to Poison on Hit per equipped Dagger"]={{[1]={[1]={type="Multiplier",var="DaggerItem"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=25.5}}," Chance    "}
-c["+25.5% Chance to Poison on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=25.5}}," Chance  on   "}
-c["+25.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=25.5}}," Chance  on   "}
+c["+25.5% Chance to Poison on Hit per equipped Dagger"]={{[1]={[1]={type="Multiplier",var="DaggerItem"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=25.5}},nil}
+c["+25.5% Chance to Poison on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=25.5}},"  on   "}
+c["+25.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=25.5}},"  on   "}
 c["+25.5% Chance to apply Frailty on Hit"]={{}," Chance to apply   "}
 c["+25.5% Chance to cast Fire Aura on Kill with Fire Skills (1 second cooldown)"]={{}," Chance to cast  Aura   (1 second cooldown) "}
 c["+25.5% Chance to inflict Bleed on Hit"]={{}," Chance to inflict   "}
@@ -4552,8 +4552,8 @@ c["+26% Chance to Shred Armor on Spell Hit"]={{[1]={flags=8388608,keywordFlags=2
 c["+26% Physical Penetration with Bleed"]={{[1]={[1]={skillId="Ailment_Bleed",type="SkillId"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=26}},"  with  "}
 c["+26% Physical Penetration with Bleed "]={{[1]={[1]={skillId="Ailment_Bleed",type="SkillId"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=26}},"  with   "}
 c["+26% Physical Penetration with Shadow Daggers "]={{[1]={[1]={skillId="Ailment_ShadowDaggers",type="SkillId"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=26}},"  with   "}
-c["+26.5% Chance to Ignite on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=26.5}}," Chance  on   "}
-c["+26.5% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=26.5}}," Chance  on   "}
+c["+26.5% Chance to Ignite on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=26.5}},"  on   "}
+c["+26.5% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=26.5}},"  on   "}
 c["+26.5% Chance to inflict Bleed on Bow Hit"]={{}," Chance to inflict  on   "}
 c["+26.5% Critical Strike Avoidance"]={{}," Critical Strike Aance "}
 c["+26.5% Critical Strike Multiplier While Transformed"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=26.5}},"  While Transformed "}
@@ -4601,11 +4601,11 @@ c["+27% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",ty
 c["+27% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=27}},nil}
 c["+27% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=27},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=27},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=27},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=27},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=27},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=27},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=27}},nil}
 c["+27.5% Chance for +30 Throwing Fire Damage with Shield Throw"]={{[1]={[1]={skillId="st31io",type="SkillId"},flags=0,keywordFlags=1024,name="FireDamage",type="MORE",value=27.5}}," Chance for +30   with  "}
-c["+27.5% Chance to Blind on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=27.5}}," Chance   "}
-c["+27.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=27.5}}," Chance   "}
-c["+27.5% Chance to Ignite on Hit while at High Health"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=27.5}}," Chance   while at High Health "}
+c["+27.5% Chance to Blind on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=27.5}},nil}
+c["+27.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=27.5}},nil}
+c["+27.5% Chance to Ignite on Hit while at High Health"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=27.5}},"   while at High Health "}
 c["+27.5% Chance to Inflict Bleed on Hit with Shurikens"]={{}," Chance to Inflict   with Shurikens "}
-c["+27.5% Chance to Poison on Hit while at Low Health"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=27.5}}," Chance   while at Low Health "}
+c["+27.5% Chance to Poison on Hit while at Low Health"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=27.5}},"   while at Low Health "}
 c["+27.5% Chance to apply Frailty on Hit"]={{}," Chance to apply   "}
 c["+27.5% Chance to cast Fire Aura on Kill with Fire Skills (1 second cooldown)"]={{}," Chance to cast  Aura   (1 second cooldown) "}
 c["+27.5% Chance to gain Dusk Shroud when you use a Melee Attack that hits"]={{}," Chance to gain  when you use a  Attack that s "}
@@ -5030,7 +5030,7 @@ c["+3% chance to gain Frenzy for 3 seconds when you Echo an ability"]={{[1]={fla
 c["+3.5 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
 c["+3.5% Block Chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=3.5}},nil}
 c["+3.5% Bow Critical Strike Chance"]={{[1]={flags=0,keywordFlags=2048,name="CritChance",type="BASE",value=3.5}},nil}
-c["+3.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=3.5}}," Chance   "}
+c["+3.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=3.5}},nil}
 c["+3.5% Chance to apply Frostbite on Cold Hit"]={{}," Chance to apply   "}
 c["+3.5% Chance to cast Fire Aura when Hit (1 second cooldown)"]={{}," Chance to cast  Aura when  (1 second cooldown) "}
 c["+3.5% Chance to forge a weapon when hit"]={{}," Chance to forge a weapon when  "}
@@ -5214,10 +5214,10 @@ c["+31% Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResi
 c["+31% Physical Penetration for Bleed inflicted by Minions "]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={skillId="Ailment_Bleed",type="SkillId"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=31}}}},"  for  inflicted by s  "}
 c["+31% Physical Penetration with Bleed "]={{[1]={[1]={skillId="Ailment_Bleed",type="SkillId"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=31}},"  with   "}
 c["+31.5% Armor Shred Chance for Locusts"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=31.5}},"  for Locusts "}
-c["+31.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=31.5}}," Chance   "}
-c["+31.5% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=31.5}}," Chance   "}
-c["+31.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=31.5}}," Chance   "}
-c["+31.5% Chance to Shred Armor on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=31.5}}," Chance  on   "}
+c["+31.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=31.5}},nil}
+c["+31.5% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=31.5}},nil}
+c["+31.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=31.5}},nil}
+c["+31.5% Chance to Shred Armor on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=31.5}},"  on   "}
 c["+31.5% Chance to apply Frailty on Hit"]={{}," Chance to apply   "}
 c["+31.5% Chance to cast Fire Aura on Kill with Fire Skills (1 second cooldown)"]={{}," Chance to cast  Aura   (1 second cooldown) "}
 c["+31.5% Critical Strike Avoidance"]={{}," Critical Strike Aance "}
@@ -5251,13 +5251,13 @@ c["+32% Increased damage with Blood Splatter"]={{[1]={flags=0,keywordFlags=0,nam
 c["+32% Increased damage with Rip Blood"]={{[1]={[1]={skillId="rb31pl",type="SkillId"},flags=0,keywordFlags=0,name="Damage",type="INC",value=32}},"  with  "}
 c["+32% Physical Penetration with Bleed "]={{[1]={[1]={skillId="Ailment_Bleed",type="SkillId"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=32}},"  with   "}
 c["+32% to All Resistances While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="FireResist",type="BASE",value=32},[2]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=32},[3]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=32},[4]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=32},[5]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=32},[6]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=32},[7]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=32}},nil}
-c["+32.5% Chance to Blind on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=32.5}}," Chance   "}
-c["+32.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=32.5}}," Chance   "}
-c["+32.5% Chance to Chill on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=32.5}}," Chance   "}
-c["+32.5% Chance to Electrify on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=32.5}}," Chance   "}
-c["+32.5% Chance to Ignite on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=32.5}}," Chance   "}
-c["+32.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=32.5}}," Chance   "}
-c["+32.5% Chance to Slow on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=32.5}}," Chance   "}
+c["+32.5% Chance to Blind on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=32.5}},nil}
+c["+32.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=32.5}},nil}
+c["+32.5% Chance to Chill on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=32.5}},nil}
+c["+32.5% Chance to Electrify on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=32.5}},nil}
+c["+32.5% Chance to Ignite on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=32.5}},nil}
+c["+32.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=32.5}},nil}
+c["+32.5% Chance to Slow on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=32.5}},nil}
 c["+32.5% Chance to apply Frailty on Hit"]={{}," Chance to apply   "}
 c["+32.5% Chance to inflict Bleed on Spell Hit"]={{}," Chance to inflict  on   "}
 c["+32.5% Cold Penetration with Cold Invocations"]={{[1]={flags=0,keywordFlags=4,name="ColdPenetration",type="BASE",value=32.5}},"  with  Invocations "}
@@ -5332,8 +5332,8 @@ c["+34% Chance to Chill on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name=
 c["+34% Chance to gain Dusk Shroud when you use a Melee Attack that hits"]={nil,"Dusk Shroud when you use a Melee Attack that hits "}
 c["+34% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
 c["+34% Lightning Blast Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_StormCrowLightningBlast",type="BASE",value=34}},nil}
-c["+34.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=34.5}}," Chance   "}
-c["+34.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=34.5}}," Chance   "}
+c["+34.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=34.5}},nil}
+c["+34.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=34.5}},nil}
 c["+34.5% Cold Penetration with Frostbite "]={{[1]={[1]={skillId="Ailment_Frostbite",type="SkillId"},flags=0,keywordFlags=0,name="ColdPenetration",type="BASE",value=34.5}},"  with   "}
 c["+34.5% Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=34.5}},nil}
 c["+34.5% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
@@ -5400,10 +5400,10 @@ c["+35% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="
 c["+35% Zombie Explosion Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=35}}," Zombie Explosion  "}
 c["+35% fire and necrotic resistance"]={{[1]={flags=0,keywordFlags=8,name="NecroticResist",type="BASE",value=35}},"  and  "}
 c["+35% physical and fire resistance"]={{[1]={flags=0,keywordFlags=1,name="FireResist",type="BASE",value=35}},"  and  "}
-c["+35.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}}," Chance  on   "}
-c["+35.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}}," Chance   "}
-c["+35.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}}," Chance   "}
-c["+35.5% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}}," Chance  on   "}
+c["+35.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}},"  on   "}
+c["+35.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}},nil}
+c["+35.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}},nil}
+c["+35.5% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=35.5}},"  on   "}
 c["+35.5% Chance to inflict Bleed on Minion Hit"]={{}," Chance to inflict  on   "}
 c["+35.5% Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=35.5}},nil}
 c["+35.5% Elemental Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=35.5},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=35.5},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=35.5}},nil}
@@ -5434,7 +5434,7 @@ c["+36% Ignite Chance per Forged Weapon"]={{}," per Forged Weapon "}
 c["+36% Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=36}},nil}
 c["+36% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=36}},"  Retention "}
 c["+36.5% Chance to Inflict Bleed on Hit with Shurikens"]={{}," Chance to Inflict   with Shurikens "}
-c["+36.5% Chance to Poison on Hit per equipped Dagger"]={{[1]={[1]={type="Multiplier",var="DaggerItem"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=36.5}}," Chance    "}
+c["+36.5% Chance to Poison on Hit per equipped Dagger"]={{[1]={[1]={type="Multiplier",var="DaggerItem"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=36.5}},nil}
 c["+36.5% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=36.5}},nil}
 c["+36.5% Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=36.5}},nil}
 c["+36.5% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=36.5}},nil}
@@ -5452,13 +5452,13 @@ c["+37% Lightning Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=2,nam
 c["+37% Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=37}},nil}
 c["+37% Recurve Chance with Heartseeker"]={{}," with  "}
 c["+37% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=37}},nil}
-c["+37.5% Chance to Marked For Death on Necrotic Spell Hit"]={{[1]={flags=8388608,keywordFlags=288,name="ChanceToTriggerOnHit_Ailment_MarkedForDeath",type="BASE",value=37.5}}," Chance  on    "}
-c["+37.5% Chance to Shred Cold Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ColdResistanceShred",type="BASE",value=37.5}}," Chance   "}
-c["+37.5% Chance to Shred Fire Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_FireResistanceShred",type="BASE",value=37.5}}," Chance   "}
-c["+37.5% Chance to Shred Lightning Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_LightningResistanceShred",type="BASE",value=37.5}}," Chance   "}
-c["+37.5% Chance to Shred Necrotic Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_NecroticResistanceShred",type="BASE",value=37.5}}," Chance   "}
-c["+37.5% Chance to Shred Physical Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_PhysicalResistanceShred",type="BASE",value=37.5}}," Chance   "}
-c["+37.5% Chance to Shred Void Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_VoidResistanceShred",type="BASE",value=37.5}}," Chance   "}
+c["+37.5% Chance to Marked For Death on Necrotic Spell Hit"]={{[1]={flags=8388608,keywordFlags=288,name="ChanceToTriggerOnHit_Ailment_MarkedForDeath",type="BASE",value=37.5}},"  on    "}
+c["+37.5% Chance to Shred Cold Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ColdResistanceShred",type="BASE",value=37.5}},nil}
+c["+37.5% Chance to Shred Fire Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_FireResistanceShred",type="BASE",value=37.5}},nil}
+c["+37.5% Chance to Shred Lightning Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_LightningResistanceShred",type="BASE",value=37.5}},nil}
+c["+37.5% Chance to Shred Necrotic Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_NecroticResistanceShred",type="BASE",value=37.5}},nil}
+c["+37.5% Chance to Shred Physical Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_PhysicalResistanceShred",type="BASE",value=37.5}},nil}
+c["+37.5% Chance to Shred Void Resistance on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_VoidResistanceShred",type="BASE",value=37.5}},nil}
 c["+37.5% Chance to apply Frailty on Melee Hit"]={{}," Chance to apply   "}
 c["+37.5% Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=37.5}},nil}
 c["+37.5% Critical Strike Avoidance"]={{}," Critical Strike Aance "}
@@ -5517,7 +5517,7 @@ c["+39% Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist
 c["+39% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=39}},nil}
 c["+39% chance to cast Smite on Melee hit (up to 3 times per second)"]={{}," to cast   (up to 3 times per second) "}
 c["+39.5% Chance to Inflict Bleed on Hit if wielding an Axe"]={{}," Chance to Inflict   if wielding an Axe "}
-c["+39.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=39.5}}," Chance   "}
+c["+39.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=39.5}},nil}
 c["+39.5% Chance to apply a Spark Charge on Melee Hit"]={{}," Chance to apply a   "}
 c["+39.5% Necrotic Resistance"]={{[1]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=39.5}},nil}
 c["+4 Additional Spell And Melee Lightning Damage"]={{[1]={flags=0,keywordFlags=768,name="LightningDamage",type="BASE",value=4}},nil}
@@ -5971,7 +5971,7 @@ c["+40% Vomit Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",v
 c["+40% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=40}},"  Retention "}
 c["+40% Zombie Explosion Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=40}}," Zombie Explosion  "}
 c["+40.5% Armor Shred Chance for Locusts"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=40.5}},"  for Locusts "}
-c["+40.5% Chance to Electrify on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=40.5}}," Chance   "}
+c["+40.5% Chance to Electrify on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=40.5}},nil}
 c["+40.5% Chance to inflict Bleed on Hit"]={{}," Chance to inflict   "}
 c["+40.5% Chance to inflict Bleed on Minion Hit"]={{}," Chance to inflict  on   "}
 c["+40.5% Pierce Chance with Fireball"]={{}," Pierce Chance with  "}
@@ -5990,7 +5990,7 @@ c["+41% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name=
 c["+41% Chance to gain Dusk Shroud when you use a Melee Attack that hits"]={nil,"Dusk Shroud when you use a Melee Attack that hits "}
 c["+41% Chance to inflict Bleed on Physical Spell Hit"]={{}," to inflict  on    "}
 c["+41% Physical Penetration with Bleed "]={{[1]={[1]={skillId="Ailment_Bleed",type="SkillId"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=41}},"  with   "}
-c["+41.5% Chance to Poison on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=41.5}}," Chance  on   "}
+c["+41.5% Chance to Poison on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=41.5}},"  on   "}
 c["+41.5% Increased Projectile Speed with Bone Nova"]={{[1]={flags=0,keywordFlags=0,name="ProjectileSpeed",type="INC",value=41.5}},"  with Bone Nova "}
 c["+41.5% Increased Projectile Speed with Marrow Shards"]={{[1]={[1]={skillId="bp2nk",type="SkillId"},flags=0,keywordFlags=0,name="ProjectileSpeed",type="INC",value=41.5}},"  with  "}
 c["+411 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=411}}}},nil}
@@ -6014,8 +6014,8 @@ c["+42% Necrotic Resistance"]={{[1]={flags=0,keywordFlags=0,name="NecroticResist
 c["+42% Spell Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=256,name="CritMultiplier",type="BASE",value=42}},nil}
 c["+42.5% Chance for Summon Wraith to summon a Flame Wraith instead"]={{}," Chance for  to summon a Flame Wraith instead "}
 c["+42.5% Chance for Summon Wraith to summon a Putrid Wraith instead"]={{}," Chance for  to summon a Putrid Wraith instead "}
-c["+42.5% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=42.5}}," Chance  on   "}
-c["+42.5% Chance to Slow on Void Hit"]={{[1]={flags=8388608,keywordFlags=16,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=42.5}}," Chance   "}
+c["+42.5% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=42.5}},"  on   "}
+c["+42.5% Chance to Slow on Void Hit"]={{[1]={flags=8388608,keywordFlags=16,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=42.5}},nil}
 c["+42.5% Chance to apply Frostbite on Cold Hit"]={{}," Chance to apply   "}
 c["+42.5% Chance to gain 20 Ward on Kill with Hungering Souls"]={{[1]={[1]={type="Condition",var="KilledRecently"},[2]={skillId="hs18gu",type="SkillId"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=42.5}}," Chance to gain 20   with  "}
 c["+42.5% Poison Penetration with Poison inflicted by Melee Attacks"]={{[1]={[1]={skillId="Ailment_Poison",type="SkillId"},flags=0,keywordFlags=512,name="PoisonPenetration",type="BASE",value=42.5}},"  with  inflicted by  Attacks "}
@@ -6047,13 +6047,13 @@ c["+44% Chance to Electrify on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,n
 c["+44% Chance to Ignite on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=44}},"  on   "}
 c["+44% Chance to apply Frailty on hit for Bees"]={{}," to apply   for Bees "}
 c["+44% Increased Spirit Frequency with Chthonic Fissure"]={{}," Spirit Frequency with  "}
-c["+44.5% Chance to Blind on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=44.5}}," Chance   "}
-c["+44.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=44.5}}," Chance   "}
-c["+44.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=44.5}}," Chance   "}
-c["+44.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=44.5}}," Chance   "}
-c["+44.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=44.5}}," Chance   "}
-c["+44.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=44.5}}," Chance  on   "}
-c["+44.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=44.5}}," Chance   "}
+c["+44.5% Chance to Blind on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=44.5}},nil}
+c["+44.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=44.5}},nil}
+c["+44.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=44.5}},nil}
+c["+44.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=44.5}},nil}
+c["+44.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=44.5}},nil}
+c["+44.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=44.5}},"  on   "}
+c["+44.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=44.5}},nil}
 c["+44.5% Chance to inflict Bleed on Hit"]={{}," Chance to inflict   "}
 c["+44.5% Critical Strike Multiplier against Frozen Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Frozen"},flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=44.5}},nil}
 c["+45 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=45}},nil}
@@ -6087,9 +6087,9 @@ c["+45% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
 c["+45% Melee Attack Speed"]={{[1]={flags=3584,keywordFlags=512,name="Speed",type="BASE",value=45}},nil}
 c["+45% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=45}},nil}
 c["+45% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=45}},"  Retention "}
-c["+45.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=45.5}}," Chance  on   "}
-c["+45.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=45.5}}," Chance   "}
-c["+45.5% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=45.5}}," Chance  on   "}
+c["+45.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=45.5}},"  on   "}
+c["+45.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=45.5}},nil}
+c["+45.5% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=45.5}},"  on   "}
 c["+45.5% Chance to apply Frailty on Melee Hit"]={{}," Chance to apply   "}
 c["+45.5% Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=45.5}},nil}
 c["+45.5% Lightning Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=2,name="CritMultiplier",type="BASE",value=45.5}},nil}
@@ -6124,7 +6124,7 @@ c["+47% Chance to apply Frostbite on Cold Hit"]={{}," to apply   "}
 c["+47% Chance to cast Fire Aura on Kill with Fire Skills (1 second cooldown)"]={{}," to cast  Aura   (1 second cooldown) "}
 c["+47% Chance to gain 20 Ward on Kill with Hungering Souls"]={nil,"20 Ward  with Hungering Souls "}
 c["+47% Increased Lightning Damage while you have Lightning Aegis"]={{[1]={flags=0,keywordFlags=2,name="LightningDamage",type="INC",value=47}},"  while you have  Aegis "}
-c["+47.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=47.5}}," Chance   "}
+c["+47.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=47.5}},nil}
 c["+475 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=475}},nil}
 c["+48 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=48}},nil}
 c["+48 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=48}},nil}
@@ -6145,8 +6145,8 @@ c["+49 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",
 c["+49 Spell Physical Damage with Sacrifice"]={{[1]={[1]={skillId="sf31rc",type="SkillId"},flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=49}},"   with  "}
 c["+49 Ward per Second per Gon Rune"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=49}},"  per Second per Gon Rune "}
 c["+49% Lightning Penetration with Electrify"]={{[1]={[1]={skillId="Ailment_Electrify",type="SkillId"},flags=0,keywordFlags=0,name="LightningPenetration",type="BASE",value=49}},"  with  "}
-c["+49.5% Chance to Ignite on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=49.5}}," Chance  on   "}
-c["+49.5% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=49.5}}," Chance  on   "}
+c["+49.5% Chance to Ignite on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=49.5}},"  on   "}
+c["+49.5% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=49.5}},"  on   "}
 c["+49.5% Chance to apply Frailty on Hit"]={{}," Chance to apply   "}
 c["+49.5% Chance to inflict Bleed on Bow Hit"]={{}," Chance to inflict  on   "}
 c["+5 Added Melee Cold Damage"]={{[1]={flags=0,keywordFlags=512,name="ColdDamage",type="BASE",value=5}}," Added   "}
@@ -6407,7 +6407,7 @@ c["+5% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",va
 c["+5% chance to gain Frenzy for 3 seconds when you Echo an ability"]={{[1]={flags=0,keywordFlags=0,name="Condition:Frenzy",type="FLAG",value=true}},"  when you Echo an ability "}
 c["+5% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=5},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=5},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=5},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=5},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=5},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=5},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=5}},nil}
 c["+5.5% Chance on kill to refresh the cooldown of a random companion activatable ability"]={{}," Chance  to refresh the cooldown of a random companion activatable ability "}
-c["+5.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=5.5}}," Chance   "}
+c["+5.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=5.5}},nil}
 c["+5.5% Chance to apply Frostbite on Cold Hit"]={{}," Chance to apply   "}
 c["+5.5% Chance to cast Healing Nova when hit"]={{}," Chance to cast  Nova when  "}
 c["+5.5% Chance to create a Void Rift when you hit an enemy (2 second cooldown)"]={{}," Chance to create a  Rift when you  an enemy (2 second cooldown) "}
@@ -6616,9 +6616,9 @@ c["+52% Chance to apply Frostbite on Cold Hit"]={{}," to apply   "}
 c["+52% Chance to gain 20 Ward on Kill with Hungering Souls"]={nil,"20 Ward  with Hungering Souls "}
 c["+52% Chance to inflict Time Rot on Void Hit"]={{}," to inflict   "}
 c["+52% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=52}},nil}
-c["+52.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=52.5}}," Chance   "}
-c["+52.5% Chance to Poison on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=52.5}}," Chance  on   "}
-c["+52.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=52.5}}," Chance  on   "}
+c["+52.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=52.5}},nil}
+c["+52.5% Chance to Poison on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=52.5}},"  on   "}
+c["+52.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=52.5}},"  on   "}
 c["+52.5% Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=52.5}},nil}
 c["+52.5% Cold resistance to allies nearby Storm Totem"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=52.5}},"  to allies nearby Storm Totem "}
 c["+52.5% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
@@ -6685,9 +6685,9 @@ c["+55% Recurve Chance with Heartseeker"]={{}," with  "}
 c["+55% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=55}},nil}
 c["+55% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=55}},"  Retention "}
 c["+55.5% Chance to Inflict Bleed on Hit per equipped Sword"]={{}," Chance to Inflict    "}
-c["+55.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=55.5}}," Chance  on   "}
-c["+55.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=55.5}}," Chance   "}
-c["+55.5% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=55.5}}," Chance  on   "}
+c["+55.5% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=55.5}},"  on   "}
+c["+55.5% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=55.5}},nil}
+c["+55.5% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=55.5}},"  on   "}
 c["+55.5% Chance to apply Frailty on Melee Hit"]={{}," Chance to apply   "}
 c["+55.5% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=55.5}},nil}
 c["+550 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=550}},nil}
@@ -6719,13 +6719,13 @@ c["+57% Chance to gain 20 Ward on Kill with Hungering Souls"]={nil,"20 Ward  wit
 c["+57% Chance to inflict Bleed on Melee Hit"]={{}," to inflict   "}
 c["+57% Chance to inflict Bleed on Minion Hit"]={{}," to inflict  on   "}
 c["+57.5% Ailment Chance per Rune with Grand Nova Prism"]={{}," Ailment Chance per Rune with Grand Nova Prism "}
-c["+57.5% Chance to Blind on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=57.5}}," Chance   "}
-c["+57.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=57.5}}," Chance   "}
-c["+57.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=57.5}}," Chance   "}
-c["+57.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=57.5}}," Chance   "}
-c["+57.5% Chance to Poison on Hit per equipped Dagger"]={{[1]={[1]={type="Multiplier",var="DaggerItem"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=57.5}}," Chance    "}
-c["+57.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=57.5}}," Chance   "}
-c["+57.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=57.5}}," Chance   "}
+c["+57.5% Chance to Blind on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=57.5}},nil}
+c["+57.5% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=57.5}},nil}
+c["+57.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=57.5}},nil}
+c["+57.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=57.5}},nil}
+c["+57.5% Chance to Poison on Hit per equipped Dagger"]={{[1]={[1]={type="Multiplier",var="DaggerItem"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=57.5}},nil}
+c["+57.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=57.5}},nil}
+c["+57.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=57.5}},nil}
 c["+57.5% Chance to inflict Bleed on Bow Hit"]={{}," Chance to inflict  on   "}
 c["+57.5% Chance to inflict Bleed on Hit"]={{}," Chance to inflict   "}
 c["+57.5% Chance to inflict Time Rot on Void Hit"]={{}," Chance to inflict   "}
@@ -6746,7 +6746,7 @@ c["+58 Ward per Second per Gon Rune"]={{[1]={flags=0,keywordFlags=0,name="Ward",
 c["+58% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
 c["+59 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=59}},nil}
 c["+59 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=59}},"  Decay Threshold "}
-c["+59.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=59.5}}," Chance   "}
+c["+59.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=59.5}},nil}
 c["+59.5% Minion Freeze Rate Multiplier"]={{},"  Freeze Rate Multiplier "}
 c["+6 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=6}},nil}
 c["+6 Attunement"]={{[1]={flags=0,keywordFlags=0,name="Att",type="BASE",value=6}},nil}
@@ -6875,7 +6875,7 @@ c["+6% Void Penetration"]={{[1]={flags=0,keywordFlags=0,name="VoidPenetration",t
 c["+6% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=6},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=6},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=6},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=6},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=6},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=6},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=6}},nil}
 c["+6.5% Bleed chance per active Crimson Shroud"]={{[1]={[1]={skillId="Ailment_CrimsonShroud",type="SkillId"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=6.5}},"  per active  "}
 c["+6.5% Block Chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=6.5}},nil}
-c["+6.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=6.5}}," Chance   "}
+c["+6.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=6.5}},nil}
 c["+6.5% Chance to apply a Spark Charge on Lightning Melee Hit"]={{}," Chance to apply a  on    "}
 c["+6.5% Chance to cast Fire Aura on Crit (1 second cooldown)"]={{}," Chance to cast  Aura on Crit (1 second cooldown) "}
 c["+6.5% Chance to cast Fire Aura on Kill with Fire Skills (1 second cooldown)"]={{}," Chance to cast  Aura   (1 second cooldown) "}
@@ -6931,7 +6931,7 @@ c["+60% Stats From Boots"]={{}," Stats From Boots "}
 c["+60% Stats From Helmet"]={{}," Stats From Helmet "}
 c["+60% Storm Bolt Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=60}}," Storm Bolt  "}
 c["+60% Trap Damage Per Pass"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=60}}," Trap  Per Pass "}
-c["+60.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=60.5}}," Chance   "}
+c["+60.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=60.5}},nil}
 c["+600 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=600}}}},nil}
 c["+602 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=602}},"  while using Evade "}
 c["+61 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=61}},nil}
@@ -6944,7 +6944,7 @@ c["+61.5% Increased Spirit Frequency with Chthonic Fissure"]={{}," Spirit Freque
 c["+62 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=62}},nil}
 c["+62 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=62}},nil}
 c["+62 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=62}},nil}
-c["+62.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=62.5}}," Chance  on   "}
+c["+62.5% Chance to Shock on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=62.5}},"  on   "}
 c["+62.5% Chance to gain Dusk Shroud when you use a Melee Attack that hits"]={{}," Chance to gain  when you use a  Attack that s "}
 c["+62.5% Chance to inflict Bleed on Melee Hit"]={{}," Chance to inflict   "}
 c["+62.5% Melee Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=512,name="CritMultiplier",type="BASE",value=62.5}},nil}
@@ -7008,9 +7008,9 @@ c["+66% Min Recurve Chance"]={{}," Min Recurve Chance "}
 c["+66% More Witchfire Damage per increased Curse Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="MORE",value=66}}," Witch per increased Curse Damage "}
 c["+67 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=67}},nil}
 c["+67 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=67}},nil}
-c["+67.5% Chance to Electrify on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=67.5}}," Chance   "}
-c["+67.5% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=67.5}}," Chance   "}
-c["+67.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=67.5}}," Chance   "}
+c["+67.5% Chance to Electrify on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=67.5}},nil}
+c["+67.5% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=67.5}},nil}
+c["+67.5% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=67.5}},nil}
 c["+67.5% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=67.5}},nil}
 c["+67.5% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
 c["+67.5% Increased damage with Blood Splatter"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=67.5}},"  with Blood Splatter "}
@@ -7034,8 +7034,8 @@ c["+68% Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist
 c["+68% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=68}},nil}
 c["+68% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=68}},nil}
 c["+68% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=68}},"  Retention "}
-c["+68.5% Chance to Ignite on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=68.5}}," Chance   "}
-c["+68.5% Chance to Shock on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=68.5}}," Chance   "}
+c["+68.5% Chance to Ignite on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=68.5}},nil}
+c["+68.5% Chance to Shock on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=68.5}},nil}
 c["+68.5% Chance to apply Damned on Hit"]={{}," Chance to apply   "}
 c["+68.5% Chance to apply Frostbite on Cold Hit"]={{}," Chance to apply   "}
 c["+68.5% Chance to gain 20 Ward on Kill with Hungering Souls"]={{[1]={[1]={type="Condition",var="KilledRecently"},[2]={skillId="hs18gu",type="SkillId"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=68.5}}," Chance to gain 20   with  "}
@@ -7167,7 +7167,7 @@ c["+7% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="B
 c["+7% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=7}},"  Retention "}
 c["+7% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=7},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=7},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=7},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=7},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=7},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=7},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=7}},nil}
 c["+7.5% Chance for an Avalanche Boulder to drop at a nearby enemy on spell cast"]={{}," Chance for an  Boulder to drop at a nearby enemy on  cast "}
-c["+7.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=7.5}}," Chance   "}
+c["+7.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=7.5}},nil}
 c["+7.5% Chance to apply Frailty on Hit"]={{}," Chance to apply   "}
 c["+7.5% Chance to apply Frostbite on Cold Hit"]={{}," Chance to apply   "}
 c["+7.5% Chance to create a Void Rift when you hit an enemy (2 second cooldown)"]={{}," Chance to create a  Rift when you  an enemy (2 second cooldown) "}
@@ -7269,7 +7269,7 @@ c["+75% Poison Bolt Frequency"]={{},"  Bolt Frequency "}
 c["+75% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=75}},nil}
 c["+75% Poison Resistance for 4 seconds when you use a Potion"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=75}},"   when you use a Potion "}
 c["+75% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=75}},nil}
-c["+75.5% Chance to Poison on Hit per equipped Dagger"]={{[1]={[1]={type="Multiplier",var="DaggerItem"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=75.5}}," Chance    "}
+c["+75.5% Chance to Poison on Hit per equipped Dagger"]={{[1]={[1]={type="Multiplier",var="DaggerItem"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=75.5}},nil}
 c["+75.5% Chance to inflict Bleed on Hit"]={{}," Chance to inflict   "}
 c["+75.5% Chance to inflict Bleed on Minion Hit"]={{}," Chance to inflict  on   "}
 c["+75.5% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
@@ -7495,10 +7495,10 @@ c["+81 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",v
 c["+82 Curse Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=82}}," Curse  "}
 c["+82 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=82}},nil}
 c["+82.5% Armor Shred Chance for Locusts"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=82.5}},"  for Locusts "}
-c["+82.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=82.5}}," Chance   "}
-c["+82.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=82.5}}," Chance   "}
-c["+82.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=82.5}}," Chance   "}
-c["+82.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=82.5}}," Chance   "}
+c["+82.5% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=82.5}},nil}
+c["+82.5% Chance to Poison on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=82.5}},nil}
+c["+82.5% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=82.5}},nil}
+c["+82.5% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=82.5}},nil}
 c["+82.5% Chance to apply Frostbite on Hit"]={{}," Chance to apply   "}
 c["+82.5% Chance to inflict Bleed on Hit"]={{}," Chance to inflict   "}
 c["+82.5% Chance to inflict Bleed on Minion Hit"]={{}," Chance to inflict  on   "}
@@ -7523,7 +7523,7 @@ c["+85% Chance to inflict Bleed on Hit"]={{}," to inflict   "}
 c["+85% Chance to inflict Bleed on Melee Hit"]={{}," to inflict   "}
 c["+85% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=85}},nil}
 c["+85% Ward Granted From Rares Or Bosses"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=85}},"  Granted From Rares Or Bosses "}
-c["+85.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=85.5}}," Chance   "}
+c["+85.5% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=85.5}},nil}
 c["+850 Block Effectiveness"]={{}," Block Effectiveness "}
 c["+86 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=86}},nil}
 c["+86 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=86}},nil}
@@ -7540,7 +7540,7 @@ c["+88% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0
 c["+88% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=88}},"  on   "}
 c["+89 Stun Avoidance"]={{}," Stun Aance "}
 c["+89% Physical Penetration with Shadow Daggers "]={{[1]={[1]={skillId="Ailment_ShadowDaggers",type="SkillId"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=89}},"  with   "}
-c["+89.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=89.5}}," Chance   "}
+c["+89.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=89.5}},nil}
 c["+9 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=9}},nil}
 c["+9 Armor While Transformed"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=9}},"  While Transformed "}
 c["+9 Attunement"]={{[1]={flags=0,keywordFlags=0,name="Att",type="BASE",value=9}},nil}
@@ -7612,7 +7612,7 @@ c["+9% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",typ
 c["+9% Void Penetration"]={{[1]={flags=0,keywordFlags=0,name="VoidPenetration",type="BASE",value=9}},nil}
 c["+9.5% Block Chance per stack of Golden Aegis"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=9.5}},"  per stack of Golden Aegis "}
 c["+9.5% Chance for an Avalanche Boulder to drop at a nearby enemy on melee attack"]={{}," Chance for an  Boulder to drop at a nearby enemy on  attack "}
-c["+9.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=9.5}}," Chance   "}
+c["+9.5% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=9.5}},nil}
 c["+9.5% Chance to apply Frostbite on Cold Hit"]={{}," Chance to apply   "}
 c["+9.5% Chance to cast Fire Aura on Crit (1 second cooldown)"]={{}," Chance to cast  Aura on Crit (1 second cooldown) "}
 c["+9.5% Chance to cast Fire Aura when Hit (1 second cooldown)"]={{}," Chance to cast  Aura when  (1 second cooldown) "}
@@ -7653,7 +7653,7 @@ c["+91 Ward gained when you use Shift"]={{[1]={[1]={skillId="shiif",type="SkillI
 c["+92 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=92}},nil}
 c["+92 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=92}},nil}
 c["+92 Stun Avoidance"]={{}," Stun Aance "}
-c["+92.5% Chance to Shred Armor on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=92.5}}," Chance  on   "}
+c["+92.5% Chance to Shred Armor on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=92.5}},"  on   "}
 c["+93 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=93}},nil}
 c["+93 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=93}},"  while using Evade "}
 c["+93 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=93}},nil}
@@ -9680,9 +9680,9 @@ c["19.5% increased Melee Attack Speed"]={{[1]={flags=3584,keywordFlags=512,name=
 c["19.5% increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=19.5}},nil}
 c["190% Increased Melee Stun Chance"]={{},"  Stun Chance "}
 c["192% increased Curse Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=192}}," Curse  "}
-c["195.5% Chance to Chill Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=195.5}},"% Chance  Attackers "}
-c["195.5% Chance to Shock Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=195.5}},"% Chance  Attackers "}
-c["195.5% Chance to Slow Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=195.5}},"% Chance  Attackers "}
+c["195.5% Chance to Chill Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=195.5}},"%  Attackers "}
+c["195.5% Chance to Shock Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=195.5}},"%  Attackers "}
+c["195.5% Chance to Slow Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=195.5}},"%  Attackers "}
 c["196 Ward Gained on Potion Use"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=196}},"  Gained on Potion Use "}
 c["196% increased Elemental Damage Over Time"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=196},[2]={flags=0,keywordFlags=0,name="ColdDamage",type="INC",value=196},[3]={flags=0,keywordFlags=0,name="LightningDamage",type="INC",value=196}},"  Over Time "}
 c["2 Additional Chains"]={{}," Chains "}
@@ -10399,9 +10399,9 @@ c["25% less Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="
 c["25% of Armor Mitigation also applies to Damage over Time"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=25}},"  Mitigation also applies to Damage over Time "}
 c["25% of Critical Strike Multiplier applies to Potions"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=25}},"  applies to Potions "}
 c["25% reduced Duration of Stuns Received"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-25}},"  of Stuns Received "}
-c["25.5% Chance to Chill Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=25.5}},"% Chance  Attackers "}
-c["25.5% Chance to Shock Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=25.5}},"% Chance  Attackers "}
-c["25.5% Chance to Slow Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=25.5}},"% Chance  Attackers "}
+c["25.5% Chance to Chill Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=25.5}},"%  Attackers "}
+c["25.5% Chance to Shock Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=25.5}},"%  Attackers "}
+c["25.5% Chance to Slow Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=25.5}},"%  Attackers "}
 c["25.5% Chance to cast Icicle on Bow Hit"]={{},"% Chance to cast Icicle on   "}
 c["25.5% Increased Area with Dancing Strikes"]={{[1]={[1]={skillId="dacn33",type="SkillId"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=25.5}},"  with  "}
 c["25.5% Increased Area with Dive Bomb"]={{[1]={[1]={skillId="db992",type="SkillId"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=25.5}},"  with  "}
@@ -11036,7 +11036,7 @@ c["34# Black Feather Chance Per Second"]={{},"# Black Feather Chance Per Second 
 c["34# Burning Dagger Chance On Recurve"]={{},"# Burning Dagger Chance On Recurve "}
 c["34# Chance To Regain Symbol"]={{},"# Chance To Regain Symbol "}
 c["34# Chance To Summon Healing Totem On High Health Heal"]={{[1]={[1]={skillId="Ailment_DummyHealingWhileNotTakingDamage",type="SkillId"},flags=0,keywordFlags=0,name="Life",type="BASE",value=34}},"# Chance To Summon  Totem On High  Heal "}
-c["34# Chance to Multistrike on Block"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_multis",type="BASE",value=34}},"# Chance  on Block "}
+c["34# Chance to Multistrike on Block"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_multis",type="BASE",value=34}},"#  on Block "}
 c["34# Coldstone Elemental Chance"]={{},"# stone  Chance "}
 c["34# Recalled Blades Pierce Chance"]={{},"# Recalled Blades Pierce Chance "}
 c["34# Slow Retaliation Chance"]={{},"#  Retaliation Chance "}
@@ -11112,9 +11112,9 @@ c["35% less Void Damage Taken on Block"]={{[1]={flags=0,keywordFlags=0,name="Voi
 c["35% more Physical Ailment Damage to Moving Enemies"]={{[1]={flags=0,keywordFlags=1,name="Damage",type="MORE",value=35}},"  Ailment  to Moving Enemies "}
 c["35% of Damage Dealt to Mana Before Health"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=35}},"  Dealt to Mana Before Health "}
 c["35% of Damage Reflected"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=35}},"  Reflected "}
-c["35.5% Chance to Chill Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=35.5}},"% Chance  Attackers "}
-c["35.5% Chance to Shock Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=35.5}},"% Chance  Attackers "}
-c["35.5% Chance to Slow Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=35.5}},"% Chance  Attackers "}
+c["35.5% Chance to Chill Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=35.5}},"%  Attackers "}
+c["35.5% Chance to Shock Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=35.5}},"%  Attackers "}
+c["35.5% Chance to Slow Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=35.5}},"%  Attackers "}
 c["35.5% Chance to cast Marrow Shards when you cast Transplant"]={{},"% Chance to cast  when you cast Transplant "}
 c["35.5% Increased Aspect of the Viper Effect"]={{},"  Effect "}
 c["35.5% Increased Damage with Hammer Throw"]={{[1]={[1]={skillId="ht16aw",type="SkillId"},flags=0,keywordFlags=0,name="Damage",type="INC",value=35.5}},"  with  "}
@@ -12522,9 +12522,9 @@ c["65% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalD
 c["65% increased Spell Critical Strike Chance"]={{[1]={flags=0,keywordFlags=256,name="CritChance",type="INC",value=65}},nil}
 c["65% of Damage Reflected while you have Lightning Aegis"]={{[1]={flags=0,keywordFlags=2,name="Damage",type="BASE",value=65}},"  Reflected while you have  Aegis "}
 c["65% of Shurikens Base Damage converted to Lightning"]={{[1]={[1]={skillId="srk21",type="SkillId"},flags=0,keywordFlags=2,name="Damage",type="BASE",value=65}},"  Base  converted to  "}
-c["65.5% Chance to Chill Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=65.5}},"% Chance  Attackers "}
-c["65.5% Chance to Shock Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=65.5}},"% Chance  Attackers "}
-c["65.5% Chance to Slow Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=65.5}},"% Chance  Attackers "}
+c["65.5% Chance to Chill Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=65.5}},"%  Attackers "}
+c["65.5% Chance to Shock Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=65.5}},"%  Attackers "}
+c["65.5% Chance to Slow Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=65.5}},"%  Attackers "}
 c["65.5% Increased Damage for skills used by Shadows"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=65.5}},"  for skills used by Shadows "}
 c["65.5% Increased Melee Stun Chance"]={{},"  Stun Chance "}
 c["65.5% increased Critical Strike Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=65.5}},nil}
