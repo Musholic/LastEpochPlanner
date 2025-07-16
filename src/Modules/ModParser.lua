@@ -22,7 +22,8 @@ local formList = {
 	["^([%+%-]?[%d%.]+)%% less"] = "LESS",
 	["^(%d+)%% faster"] = "INC",
 	["^(%d+)%% slower"] = "RED",
-	["^([%+%-]?[%d%.]+)%%?"] = "BASE",
+	["^([%+%-][%d%.]+)%%"] = "BASE_MORE",
+	["^([%+%-]?[%d%.]+)"] = "BASE",
 	["^([%+%-][%d%.]+)%%? to"] = "BASE",
 	["^([%+%-]?[%d%.]+)%%? of"] = "BASE",
 	["^([%+%-][%d%.]+)%%? base"] = "BASE",
@@ -260,7 +261,6 @@ end
 
 -- List of special modifiers
 local specialQuickFixModList = {
-	["^([%+%-]?[%d%.]+%%) Damage"] = "%1 more Damage",
 	["^([%+%-]?[%d%.]+%%) Cast Speed"] = "%1 increased Cast Speed",
 	["^([%+%-]?[%d%.]+%%) Cooldown Recovery Speed"] = "%1 increased Cooldown Recovery Speed",
 	["^([%+%-]?[%d%.]+%%) Duration"] = "%1 increased Duration",
@@ -479,6 +479,15 @@ local function parseMod(line, order)
 	end
 	if not modName then
 		return { }, line
+	end
+
+	if modForm == "BASE_MORE" and modName ~= nil then
+		local modNameStr = type(modName) == "table" and modName[1] or modName
+		if modNameStr:match("Damage$") then
+			modType = "MORE"
+		else
+			modType = "BASE"
+		end
 	end
 
 	-- Combine flags and tags

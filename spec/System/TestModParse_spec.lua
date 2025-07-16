@@ -95,6 +95,15 @@ describe("TestModParse", function()
         assert.are.equals(10.5, build.configTab.modList:Sum("MORE", nil, "Damage"))
     end)
 
+    it("passive node more fire damage", function()
+        build.configTab.input.customMods = "+10.5% Melee Fire Damage"
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
+
+        assert.are.equals(10.5, build.configTab.modList:Sum("MORE", {keywordFlags = ModFlag.Melee}, "FireDamage"))
+        assert.are.equals(0, build.configTab.modList:Sum("MORE", nil, "FireDamage"))
+    end)
+
     it("effect doubled", function()
         build.configTab.input.customMods = "+40% Increased fire damage. This effect is doubled if you have 300 or more maximum mana."
         build.configTab:BuildModList()
