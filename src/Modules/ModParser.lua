@@ -67,6 +67,8 @@ local modNameList = {
 	["armor"] = "Armour",
 	["dodge rating"] = "Evasion",
 	["ward"] = "Ward",
+	["endurance"] = "Endurance",
+	["endurance threshold"] = "EnduranceThreshold",
 	-- Resistances
 	["elemental resistance"] = { "FireResist", "LightningResist", "ColdResist" },
 	["elemental resistances"] = { "FireResist", "LightningResist", "ColdResist" },

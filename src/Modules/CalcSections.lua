@@ -373,6 +373,12 @@ return {
 	{ label = "Total", { format = "{0:output:Ward}", { breakdown = "Ward" }, }, },
 } }
 } },
+{ 1, "Endurance", 2, colorCodes.WARD, {{ defaultCollapsed = false, label = "Endurance", data = {
+	extra = "{0:output:Endurance}%",
+	{ label = "Threshold ", { format = "{0:output:EnduranceThreshold}", { modName = "EnduranceThreshold" } }, },
+	{ label = "Total", { format = "{0:output:Endurance}%", { modName = "Endurance" }, }, },
+} }
+} },
 -- secondary defenses
 { 1, "Resist", 3, colorCodes.DEFENCE, {{ defaultCollapsed = false, label = "Resists", data = generateTableByValues({},
 
