@@ -1144,11 +1144,11 @@ c["+0.3% Critical Strike Chance for Totems per Intelligence"]={{[1]={[1]={stat="
 c["+0.3% Fire Damage Leech"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="MORE",value=0.3}},"  Leech "}
 c["+0.3% Lightning Damage Leech"]={{[1]={flags=0,keywordFlags=0,name="LightningDamage",type="MORE",value=0.3}},"  Leech "}
 c["+0.3% Shock Chance per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=0.3}},nil}
+c["+0.4% Critical Strike Chance for Melee Attacks per 1 Mana Cost"]={{[1]={[1]={skillId="PrimalSabertooth 01 Melee",type="SkillId"},flags=0,keywordFlags=0,name="CritChance",type="BASE",value=0.4}},"  for s per 1 Mana Cost "}
 c["+0.4% Critical Strike Chance for Totems per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="CritChance",type="BASE",value=0.4}},"  for Totems  "}
 c["+0.4% Shock Chance per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=0.4}},nil}
 c["+0.4% Time Rot Damage Per 1% Time Rot Chance With Void Skills"]={{[1]={[1]={skillId="Ailment_TimeRot",type="SkillId"},flags=0,keywordFlags=16,name="Damage",type="MORE",value=0.4}},"   Per 1% Time Rot Chance  "}
 c["+0.5% Attack Speed Per 1% Block Chance"]={{[1]={[1]={div=1,stat="BlockChance",type="PerStat"},flags=3584,keywordFlags=0,name="Speed",type="BASE",value=0.5}},nil}
-c["+0.5% Critical Strike Chance for Melee Attacks per 1 Mana Cost"]={{[1]={[1]={skillId="PrimalSabertooth 01 Melee",type="SkillId"},flags=0,keywordFlags=0,name="CritChance",type="BASE",value=0.5}},"  for s per 1 Mana Cost "}
 c["+0.5% Critical Strike Chance for Totems per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="CritChance",type="BASE",value=0.5}},"  for Totems  "}
 c["+0.5% Damage per Level of Specialised Buff Skills"]={{[1]={[1]={type="Multiplier",var="Level"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=0.5}},"   of Specialised Buff Skills "}
 c["+0.5% Elemental Damage per stack of Armor Shred"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="MORE",value=0.5},[2]={flags=0,keywordFlags=0,name="ColdDamage",type="MORE",value=0.5},[3]={flags=0,keywordFlags=0,name="LightningDamage",type="MORE",value=0.5}},"  per stack of Armor Shred "}
@@ -1161,6 +1161,9 @@ c["+0.5% Melee Lightning Leech"]={{},"   Leech "}
 c["+0.5% Recurve Chance Per Dex"]={{}," Recurve Chance Per Dex "}
 c["+0.5% Shock Chance per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=0.5}},nil}
 c["+0.5% Void Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=0,name="VoidDamage",type="MORE",value=0.5}},"  Leeched as Health "}
+c["+0.7% Shock Chance per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=0.7}},nil}
+c["+0.8% Critical Strike Chance for Totems per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="CritChance",type="BASE",value=0.8}},"  for Totems  "}
+c["+0.9% Shock Chance per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=0.9}},nil}
 c["+1 10% chance for Additional hits on Boss or Rares"]={{}," 10% chance for Additional s on Boss or Rares "}
 c["+1 Active Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Active  "}
 c["+1 Additional Abyssal Echoes Casts"]={{},"  Casts "}
@@ -7886,6 +7889,9 @@ c["0.5% Ward Lost on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="Ward",type=
 c["0.5% increased Shock Duration per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},[2]={skillId="Ailment_Shock",type="SkillId"},flags=0,keywordFlags=0,name="Duration",type="INC",value=0.5}},nil}
 c["0.6 Seconds of Traversal Skill Cooldowns Recovered on Potion Use"]={{}," Seconds of Traversal Skill Cooldowns Recovered on Potion Use "}
 c["0.7 Seconds of Traversal Skill Cooldowns Recovered on Potion Use"]={{}," Seconds of Traversal Skill Cooldowns Recovered on Potion Use "}
+c["0.7% increased Shock Duration per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},[2]={skillId="Ailment_Shock",type="SkillId"},flags=0,keywordFlags=0,name="Duration",type="INC",value=0.7}},nil}
+c["0.9 Seconds of Traversal Skill Cooldowns Recovered on Potion Use"]={{}," Seconds of Traversal Skill Cooldowns Recovered on Potion Use "}
+c["0.9% increased Shock Duration per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},[2]={skillId="Ailment_Shock",type="SkillId"},flags=0,keywordFlags=0,name="Duration",type="INC",value=0.9}},nil}
 c["1 Ability (left to right)"]={{}," Ability (left to right) "}
 c["1 Additional Chains Per Recent Direct Cast"]={{}," Chains Per Recent Direct Cast "}
 c["1 Additional Detonations At Arrival"]={{}," Detonations At Arrival "}
@@ -8032,11 +8038,8 @@ c["1 Refund Trigger Amount"]={{}," Refund Trigger Amount "}
 c["1 Retaliation Cooldown (seconds)"]={{}," Retaliation Cooldown (seconds) "}
 c["1 Sacrifice Casts"]={{},"  Casts "}
 c["1 Screech Fear duration (seconds)"]={{[1]={[1]={skillId="Ailment_Fear",type="SkillId"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Screech   (seconds) "}
-c["1 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["1 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
-c["1 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["1 Seconds of Haste on Howl"]={{}," Seconds of  on Howl "}
-c["1 Seconds of Traversal Skill Cooldowns Recovered on Potion Use"]={{}," Seconds of Traversal Skill Cooldowns Recovered on Potion Use "}
 c["1 Seeds Created"]={{}," Seeds Created "}
 c["1 Shadow Created"]={{}," Shadow Created "}
 c["1 Shadow Falcons"]={{}," Shadow Falcons "}
@@ -8194,6 +8197,11 @@ c["1% of damage dealt is leeched as health"]={{[1]={flags=0,keywordFlags=0,name=
 c["1% reduced Bonus Damage Taken from Critical Strikes"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="DamageTaken",type="INC",value=-1}}," Bonus   "}
 c["1.1 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["1.2 Maximum Cooldown Reduction (seconds)"]={{}," Maximum Cooldown Reduction (seconds) "}
+c["1.2 Seconds of Traversal Skill Cooldowns Recovered on Potion Use"]={{}," Seconds of Traversal Skill Cooldowns Recovered on Potion Use "}
+c["1.3 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
+c["1.3 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
+c["1.3 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
+c["1.4 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["1.5 Attach Cooldown (seconds)"]={{}," Attach Cooldown (seconds) "}
 c["1.5 Haste Duration (Seconds)"]={{[1]={[1]={skillId="Ailment_Haste",type="SkillId"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1.5}},"   (Seconds) "}
 c["1.5 Hungering Souls Interval (Seconds)"]={{},"  Interval (Seconds) "}
@@ -8204,6 +8212,13 @@ c["1.5 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  afte
 c["1.5 Seconds of Traversal Skill Cooldowns Recovered on Potion Use"]={{}," Seconds of Traversal Skill Cooldowns Recovered on Potion Use "}
 c["1.5% Melee Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="MORE",value=1.5}},"   Leeched as Health "}
 c["1.5% Minion Melee Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=512,name="Damage",type="MORE",value=1.5}}}},"    Leeched as Health "}
+c["1.7 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
+c["1.7 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
+c["1.7 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
+c["1.7 Seconds of Traversal Skill Cooldowns Recovered on Potion Use"]={{}," Seconds of Traversal Skill Cooldowns Recovered on Potion Use "}
+c["1.9 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
+c["1.9 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
+c["1.9 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["10 Armor Stolen"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=10}},"  Stolen "}
 c["10 Arrow Storm Cooldown"]={{}," Arrow Storm Cooldown "}
 c["10 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}}," Buff  (seconds) "}
@@ -9608,10 +9623,7 @@ c["2 Rune Bolts from Runestone"]={{}," Rune Bolts from Runestone "}
 c["2 Sacrifice Chain Targets"]={{},"  Chain Targets "}
 c["2 Seconds Older"]={{}," Seconds Older "}
 c["2 Seconds of Ancient Flight when you move after attacking"]={{}," Seconds of  when you move after attacking "}
-c["2 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["2 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
-c["2 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
-c["2 Seconds of Traversal Skill Cooldowns Recovered on Potion Use"]={{}," Seconds of Traversal Skill Cooldowns Recovered on Potion Use "}
 c["2 Slow Duration (Seconds)"]={{[1]={[1]={skillId="Ailment_Slow",type="SkillId"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"   (Seconds) "}
 c["2 Slow Duration (seconds)"]={{[1]={[1]={skillId="Ailment_Slow",type="SkillId"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"   (seconds) "}
 c["2 Slow Stacks per Second"]={{},"  Stacks per Second "}
@@ -9742,6 +9754,7 @@ c["2% of Minion Damage Leeched as Health on Hit"]={{[1]={flags=0,keywordFlags=0,
 c["2% of Minion Damage Leeched as Health on Melee Hit"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=8389120,keywordFlags=0,name="Damage",type="BASE",value=2}}}},"   Leeched as Health  "}
 c["2% of Minion Physical Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalDamage",type="BASE",value=2}}}},"   Leeched as Health "}
 c["2% of Physical Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="BASE",value=2}},"  Leeched as Health "}
+c["2% of Physical Damage Leeched as Health on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="PhysicalDamage",type="BASE",value=2}},"  Leeched as Health  "}
 c["2% of Physical Damage Over Time Damage Leeched as Health"]={{[1]={flags=4097,keywordFlags=0,name="PhysicalDamage",type="BASE",value=2}},"  Damage Leeched as Health "}
 c["2% of Spell Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=2}},"   Leeched as Health "}
 c["2% of Spell Damage Leeched as Health While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=256,name="Damage",type="BASE",value=2}},"   Leeched as Health  "}
@@ -9749,12 +9762,13 @@ c["2% of Throwing Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=1024,na
 c["2% of Void Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=0,name="VoidDamage",type="BASE",value=2}},"  Leeched as Health "}
 c["2% reduced Bonus Damage Taken from Critical Strikes"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="DamageTaken",type="INC",value=-2}}," Bonus   "}
 c["2% reduced Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=-2}},nil}
+c["2.3 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
+c["2.3 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
+c["2.4 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["2.5 Maximum Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2.5}}," Maximum  (seconds) "}
-c["2.5 Seconds of Frenzy after you use Evade"]={{}," Seconds of  after you use Evade "}
-c["2.5 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
-c["2.5 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
-c["2.5 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["2.5% Chance To Repeat Per Energy"]={{}," Chance To Repeat Per Energy "}
+c["2.6 Seconds of Frenzy after you use Evade"]={{}," Seconds of  after you use Evade "}
+c["2.8 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["20 Dodge Rating Per Dexterity"]={{[1]={[1]={stat="Dex",type="PerStat"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=20}},nil}
 c["20 Dodge Rating if Hit Recently"]={{[1]={flags=8388608,keywordFlags=0,name="Evasion",type="BASE",value=20}},"  if  Recently "}
 c["20 Explosion Mana Consumption"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=20}}," Explosion  Consumption "}
@@ -10505,9 +10519,7 @@ c["3 Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BA
 c["3 Rage Gained"]={{}," Rage Gained "}
 c["3 Rage gained per second while Transformed"]={{}," Rage gained per second while Transformed "}
 c["3 Runeweave Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Runeweave  (seconds) "}
-c["3 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["3 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
-c["3 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["3 Seconds of Haste when you directly cast Soul Feast"]={{}," Seconds of  when you directly cast Soul Feast "}
 c["3 Spreads After Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Spreads After  (Seconds) "}
 c["3 Stacks Consumed"]={{}," Stacks Consumed "}
@@ -10633,11 +10645,14 @@ c["3% of Minion Physical Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=
 c["3% of Necrotic Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=0,name="NecroticDamage",type="BASE",value=3}},"  Leeched as Health "}
 c["3% of Overkill Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=3}}," Overkill  Leeched as Health "}
 c["3% of Physical Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="BASE",value=3}},"  Leeched as Health "}
-c["3% of Physical Damage Leeched as Health on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="PhysicalDamage",type="BASE",value=3}},"  Leeched as Health  "}
 c["3% of Spell Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=3}},"   Leeched as Health "}
 c["3% of Spell Damage Leeched as Health While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=256,name="Damage",type="BASE",value=3}},"   Leeched as Health  "}
 c["3% of Throwing Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=1024,name="Damage",type="BASE",value=3}},"   Leeched as Health "}
 c["3% reduced Bonus Damage Taken from Critical Strikes"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="DamageTaken",type="INC",value=-3}}," Bonus   "}
+c["3.2 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
+c["3.2 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
+c["3.8 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
+c["3.8 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["30 Damage Taken by Attackers when Hit"]={{[1]={flags=8388608,keywordFlags=0,name="DamageTaken",type="BASE",value=30}},"  by Attackers when  "}
 c["30 Freeze Rate"]={{}," Freeze Rate "}
 c["30 Healing To Allies"]={{},"  To Allies "}
@@ -11136,9 +11151,7 @@ c["4 Number Of Enemies Spread To"]={{}," Number Of Enemies Spread To "}
 c["4 Reap Freeze Rate per Intelligence"]={{}," Reap Freeze Rate  "}
 c["4 Rime Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Rime  (seconds) "}
 c["4 Seconds of Disabled Health Leech after you directy cast a Spell"]={{[1]={flags=0,keywordFlags=256,name="Life",type="BASE",value=4}}," Seconds of Disabled  Leech after you directy cast a  "}
-c["4 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["4 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
-c["4 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["4 Stacks on Manastrike Use"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=4}}," Stacks on strike Use "}
 c["4 Stacks on use"]={{}," Stacks on use "}
 c["4 Taunt Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Taunt  (seconds) "}

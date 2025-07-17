@@ -60,8 +60,15 @@ function itemLib.applyRange(line, range, valueScalar, rounding)
     end
     line = line:gsub("(%+?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)",
             function(plus, min, max)
-                min = m_floor(min * valueScalar + 0.5)
-                max = m_floor(max * valueScalar + 0.5)
+                min = min * valueScalar
+                -- If min decimal part is exactly 0.5, round down
+                if min * precision % 1 == 0.5 then
+                    min = m_floor(min * precision) / precision
+                else
+                    min = m_floor(min * precision + 0.5) / precision
+                end
+                max = max * valueScalar
+                max = m_floor(max * precision + 0.5) / precision
                 numbers = numbers + 1
                 local numVal = (tonumber(min) + range * (tonumber(max) - tonumber(min) + 1 / precision))
                 numVal = m_floor(numVal * precision) / precision

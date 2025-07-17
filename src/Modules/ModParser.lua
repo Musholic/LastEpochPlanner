@@ -128,7 +128,6 @@ local modNameList = {
 	-- Misc modifiers
 	["movespeed"] = "MovementSpeed",
 	["movement speed"] = "MovementSpeed",
-	-- TODO: capitalize d1 and d2
 	["(%w+) and (%w+) resistance"] = function(d1, d2) return { d1:capitalize() .. "Resist", d2:capitalize() .. "Resist" } end
 }
 
