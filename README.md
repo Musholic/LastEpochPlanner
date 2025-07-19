@@ -10,7 +10,7 @@ The following features are supported (or partially):
 * Passive tree
 * Character import: for offline character and from LE tools build planner
 * A lot of stats and mods/affixes are not working correctly.
-  * **Out of 13,271 mods, 4,465 (34%) mods are recognized by the parser**. Even if a mod is recognized, it's not guaranteed that it will work as expected.
+  * **Out of 13,091 mods, 4,519 (36%) mods are recognized by the parser**. Even if a mod is recognized, it's not guaranteed that it will work as expected.
   * The total amount of mods is made of 
     * the implicits (one for each implicit of each item)
     * the prefixes and suffixes (one for each tier of each)
