@@ -69,6 +69,9 @@ local modNameList = {
 	["ward"] = "Ward",
 	["endurance"] = "Endurance",
 	["endurance threshold"] = "EnduranceThreshold",
+	["ward decay threshold"] = "WardDecayThreshold",
+	["ward per second"] = "WardPerSecond",
+	["ward retention"] = "WardRetention",
 	-- Resistances
 	["elemental resistance"] = { "FireResist", "LightningResist", "ColdResist" },
 	["elemental resistances"] = { "FireResist", "LightningResist", "ColdResist" },

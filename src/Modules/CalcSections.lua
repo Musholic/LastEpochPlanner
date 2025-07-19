@@ -369,7 +369,9 @@ return {
 } },
 { 1, "Ward", 2, colorCodes.WARD, {{ defaultCollapsed = false, label = "Ward", data = {
 	extra = "{0:output:Ward}",
-	{ label = "Ward Retention", { format = "{0:output:WardRetention}%", { modName = "WardRetention" } }, },
+	{ label = "Retention", { format = "{0:output:WardRetention}%", { modName = "WardRetention" } }, },
+	{ label = "Decay Threshold", { format = "{0:output:WardDecayThreshold}", { modName = "WardDecayThreshold" } }, },
+	{ label = "Regen Per Second", { format = "{0:output:WardPerSecond}", { modName = "WardPerSecond" } }, },
 	{ label = "Total", { format = "{0:output:Ward}", { breakdown = "Ward" }, }, },
 } }
 } },
