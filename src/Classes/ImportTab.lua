@@ -685,7 +685,7 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
                     item["explicitMods"] = {}
                     item["prefixes"] = {}
                     item["suffixes"] = {}
-                    if rarity == 7 or rarity == 9 then
+                    if rarity >= 7 and rarity <= 9 then
                         item["rarity"] = "UNIQUE"
                         local uniqueIDIndex = 8 + 3 -- 3 is the maximum amount of implicits
                         local uniqueID = itemData["data"][uniqueIDIndex] * 256 + itemData["data"][uniqueIDIndex + 1]
@@ -710,7 +710,7 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
                                 local affixTier = math.floor(itemData["data"][dataId] / 16)
                                 local modId = affixId .. "_" .. affixTier
                                 local modData = data.itemMods.Item[modId]
-                                local range = itemData["data"][dataId + 1]
+                                local range = itemData["data"][dataId + 2]
                                 if modData then
                                     if modData.type == "Prefix" then
                                         table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })

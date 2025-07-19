@@ -22,7 +22,8 @@ local formList = {
 	["^([%+%-]?[%d%.]+)%% less"] = "LESS",
 	["^(%d+)%% faster"] = "INC",
 	["^(%d+)%% slower"] = "RED",
-	["^([%+%-]?[%d%.]+)%%?"] = "BASE",
+	["^([%+%-]?[%d%.]+)%%"] = "BASE_MORE",
+	["^([%+%-]?[%d%.]+)"] = "BASE",
 	["^([%+%-][%d%.]+)%%? to"] = "BASE",
 	["^([%+%-]?[%d%.]+)%%? of"] = "BASE",
 	["^([%+%-][%d%.]+)%%? base"] = "BASE",
@@ -59,17 +60,22 @@ local modNameList = {
 	["maximum health"] = "Life",
 	["mana"] = "Mana",
 	["maximum mana"] = "Mana",
-	["mana regeneration"] = "ManaRegen",
+	["mana regen"] = "ManaRegen",
 	["mana cost"] = "ManaCost",
 	-- Primary defences
 	["armour"] = "Armour",
 	["armor"] = "Armour",
 	["dodge rating"] = "Evasion",
 	["ward"] = "Ward",
+	["endurance"] = "Endurance",
+	["endurance threshold"] = "EnduranceThreshold",
+	["ward decay threshold"] = "WardDecayThreshold",
+	["ward per second"] = "WardPerSecond",
+	["ward retention"] = "WardRetention",
 	-- Resistances
-	["elemental resistance"] = "ElementalResist",
-	["elemental resistances"] = "ElementalResist",
-	["all resistances"] = { "ElementalResist", "PhysicalResist", "PoisonResist", "NecroticResist", "VoidResist" },
+	["elemental resistance"] = { "FireResist", "LightningResist", "ColdResist" },
+	["elemental resistances"] = { "FireResist", "LightningResist", "ColdResist" },
+	["all resistances"] = { "FireResist", "LightningResist", "ColdResist", "PhysicalResist", "PoisonResist", "NecroticResist", "VoidResist" },
 	-- Damage taken
 	["damage taken"] = "DamageTaken",
 	["damage over time taken"] = "DamageTakenOverTime",
@@ -111,10 +117,6 @@ local modNameList = {
 	-- Basic damage types
 	["damage"] = "Damage",
 	["elemental damage"] = {"FireDamage", "ColdDamage", "LightningDamage"},
-	-- Other damage forms
-	["melee damage"] = { "Damage", flags = ModFlag.Melee },
-	["bow damage"] = { "Damage", flags = bor(ModFlag.Bow, ModFlag.Hit) },
-	["throwing damage"] = { "Damage", flags = bor(ModFlag.Throwing, ModFlag.Hit) },
 	["damage over time"] = { "Damage", flags = ModFlag.Dot },
 	-- Crit/accuracy/speed modifiers
 	["crit chance"] = "CritChance",
@@ -131,6 +133,7 @@ local modNameList = {
 	-- Misc modifiers
 	["movespeed"] = "MovementSpeed",
 	["movement speed"] = "MovementSpeed",
+	["(%w+) and (%w+) resistance"] = function(d1, d2) return { d1:capitalize() .. "Resist", d2:capitalize() .. "Resist" } end
 }
 
 for i,stat in ipairs(LongAttributes) do
@@ -138,6 +141,7 @@ for i,stat in ipairs(LongAttributes) do
 end
 
 for skillId, skill in pairs(data.skills) do
+	modNameList["chance to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
 	modNameList["to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
 	modNameList[skill.name:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
 	if skill.altName then
@@ -148,9 +152,6 @@ end
 for _, damageType in ipairs(DamageTypes) do
 	modNameList[damageType:lower() .. " penetration"] = damageType .. "Penetration"
 	modNameList[damageType:lower() .. " damage"] = damageType .. "Damage"
-	for _, damageSourceType in ipairs(DamageSourceTypes) do
-		modNameList[damageSourceType:lower() .. " " .. damageType:lower() .. " damage"] = { damageType .. "Damage", flags = ModFlag[damageSourceType] }
-	end
 	modNameList[damageType:lower() .. " resistance"] = damageType .. "Resist"
 	modNameList[damageType:lower() .. " damage taken"] = damageType .. "DamageTaken"
 	modNameList[damageType:lower() .. " damage over time taken"] = damageType .. "DamageTakenOverTime"
@@ -163,10 +164,9 @@ modNameList["penetration"] = "Penetration"
 local modFlagList = {
 	-- Skill types
 	["elemental"] = { keywordFlags = bor(KeywordFlag.Fire, KeywordFlag.Cold, KeywordFlag.Lightning) },
-	["spell"] = { flags = ModFlag.Spell },
-	["melee"] = { flags = ModFlag.Melee },
 	["on melee hit"] = { flags = bor(ModFlag.Melee, ModFlag.Hit) },
 	["on hit"] = { flags = ModFlag.Hit },
+	["hit"] = { flags = ModFlag.Hit },
 	["minion skills"] = { tag = { type = "SkillType", skillType = SkillType.Minion } },
 	["with elemental spells"] = { keywordFlags = bor(KeywordFlag.Lightning, KeywordFlag.Cold, KeywordFlag.Fire) },
 	["minion"] = { addToMinion = true },
@@ -177,6 +177,14 @@ local modFlagList = {
 for _, damageType in ipairs(DamageTypes) do
 	modFlagList["on " .. damageType:lower() .. " hit"] = { keywordFlags = KeywordFlag[damageType], flags = ModFlag.Hit }
 	modFlagList["with " .. damageType:lower() .. " skills"] = { keywordFlags = KeywordFlag[damageType] }
+end
+
+for _, damageSourceType in ipairs(DamageSourceTypes) do
+	modFlagList[damageSourceType:lower()] = { keywordFlags = ModFlag[damageSourceType] }
+end
+
+for _, damageType in ipairs(DamageTypes) do
+	modFlagList[damageType:lower()] = { keywordFlags = ModFlag[damageType] }
 end
 
 -- List of modifier flags/tags that appear at the start of a line
@@ -261,10 +269,10 @@ end
 
 -- List of special modifiers
 local specialQuickFixModList = {
-	["^([%+%-]?[%d%.]+%%) Damage"] = "%1 more Damage",
 	["^([%+%-]?[%d%.]+%%) Cast Speed"] = "%1 increased Cast Speed",
 	["^([%+%-]?[%d%.]+%%) Cooldown Recovery Speed"] = "%1 increased Cooldown Recovery Speed",
 	["^([%+%-]?[%d%.]+%%) Duration"] = "%1 increased Duration",
+	["^([%+%-]?[%d%.]+%%) Movespeed"] = "%1 increased Movespeed",
 }
 
 for _, damageType in ipairs(DamageTypes) do
@@ -316,7 +324,7 @@ local preSkillNameList = { }
 
 -- Scan a line for the earliest and longest match from the pattern list
 -- If a match is found, returns the corresponding value from the pattern list, plus the remainder of the line and a table of captures
-local function scan(line, patternList, plain)
+local function scan(line, patternList, plain, matchAll)
 	local bestIndex, bestEndIndex
 	local bestPattern = ""
 	local bestVal, bestStart, bestEnd, bestCaps
@@ -334,9 +342,20 @@ local function scan(line, patternList, plain)
 		end
 	end
 	if bestVal then
-		return bestVal, line:sub(1, bestStart - 1) .. line:sub(bestEnd + 1, -1), bestCaps
+		local lineRemainder = line:sub(1, bestStart - 1) .. line:sub(bestEnd + 1, -1)
+		if matchAll then
+			local results, lineRemainderFinal = scan(lineRemainder, patternList, plain, true)
+			t_insert(results, bestVal)
+			return results, lineRemainderFinal
+		else
+			return bestVal, lineRemainder, bestCaps
+		end
 	else
-		return nil, line
+		if matchAll then
+			return {nil}, line
+		else
+			return nil, line
+		end
 	end
 end
 
@@ -357,12 +376,6 @@ local function parseMod(line, order)
 
 	for pattern, replacement in pairs(specialQuickFixModList) do
 		line = line:gsub(pattern, replacement)
-	end
-
-	-- Check for add-to-cluster-jewel special
-	local addToCluster = line:match("^Added Small Passive Skills also grant: (.+)$")
-	if addToCluster then
-		return { mod("AddToClusterJewelNode", "LIST", addToCluster) }
 	end
 
 	line = line .. " "
@@ -407,7 +420,7 @@ local function parseMod(line, order)
 	end
 
 	-- Scan for modifier name and skill name
-	local modName
+	local modName, nameCap
 	if order == 2 and not skillTag then
 		skillTag, line = scan(line, skillNameList)
 	end
@@ -418,15 +431,21 @@ local function parseMod(line, order)
 		end
 		modName, line = scan(line, modNameList, true)
 	else
-		modName, line = scan(line, modNameList, true)
+		modName, line, nameCap = scan(line, modNameList)
+		if type(modName) == "function" then
+			modName = modName(unpack(nameCap))
+		end
 	end
 	if order == 1 and not skillTag then
 		skillTag, line = scan(line, skillNameList)
 	end
 
 	-- Scan for flags
-	local modFlag
-	modFlag, line = scan(line, modFlagList, true)
+	local modFlags
+	modFlags, line = scan(line, modFlagList, true, true)
+	if #modFlags > 1 then
+		line = line:gsub(" And ", "")
+	end
 
 	-- Find modifier value and type according to form
 	local keywordFlags
@@ -455,24 +474,13 @@ local function parseMod(line, order)
 		modSuffix, line = scan(line, suffixTypes, true)
 	elseif modForm == "GRANTS" then -- local
 		modType = "BASE"
-		modFlag = modFlag
 		modExtraTags = { tag = { type = "Condition", var = "{Hand}Attack" } }
 		modSuffix, line = scan(line, suffixTypes, true)
 	elseif modForm == "REMOVES" then -- local
 		modValue = -modValue
 		modType = "BASE"
-		modFlag = modFlag
 		modExtraTags = { tag = { type = "Condition", var = "{Hand}Attack" } }
 		modSuffix, line = scan(line, suffixTypes, true)
-	elseif modForm == "CHANCE" then
-		modFlag = {flags = 0, keywordFlags = 0}
-		for i=2,#formCap do
-			for _, damageSourceType in ipairs(DamageSourceTypes) do
-				if formCap[i] == damageSourceType:lower() then
-					modFlag.flags = ModFlag[damageSourceType]
-				end
-			end
-		end
 	elseif modForm == "FLAG" then
 		modName = type(modValue) == "table" and modValue.name or modValue
 		modType = type(modValue) == "table" and modValue.type or "FLAG"
@@ -484,12 +492,23 @@ local function parseMod(line, order)
 		return { }, line
 	end
 
+	if modForm == "BASE_MORE" and modName ~= nil then
+		local modNameStr = type(modName) == "table" and modName[1] or modName
+		if modNameStr:match("Damage$") or modName == "Duration" then
+			modType = "MORE"
+		else
+			modType = "BASE"
+		end
+	end
+
 	-- Combine flags and tags
 	local flags = 0
 	local baseKeywordFlags = 0
 	local tagList = { }
 	local misc = { }
-	for _, data in pairs({ modName, preFlag, modFlag, modTag, modTag2, skillTag, modExtraTags }) do
+	local dataList = { modName, preFlag, modTag, modTag2, skillTag, modExtraTags }
+	tableInsertAll(dataList, modFlags)
+	for _, data in pairs(dataList) do
 		if type(data) == "table" then
 			flags = bor(flags, data.flags or 0)
 			baseKeywordFlags = bor(baseKeywordFlags, data.keywordFlags or 0)

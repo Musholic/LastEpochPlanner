@@ -917,6 +917,10 @@ function string:split(sep)
 	return fields
 end
 
+function string:capitalize(s)
+    return self:sub(1,1):upper()..self:sub(2)
+end
+
 -- Ceil function with optional base parameter
 function ceil_b(x, base)
 	base = base or 1

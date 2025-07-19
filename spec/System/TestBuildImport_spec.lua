@@ -21,7 +21,7 @@ expose("BuildImport #buildImport", function()
         runCallback("OnFrame")
 
         assert.are.equals("Fireball", build.calcsTab.mainEnv.player.mainSkill.skillCfg.skillName)
-        assert.are.equals(7466, round(build.calcsTab.mainOutput.FullDPS))
+        assert.are.equals(8046, round(build.calcsTab.mainOutput.FullDPS))
     end)
 
     it("build import from LETools, minionDps calculation", function()
@@ -32,7 +32,7 @@ expose("BuildImport #buildImport", function()
         build:Init(false, "Imported build", importCode)
         runCallback("OnFrame")
 
-        assert.are.equals("Summon Wraith", build.calcsTab.mainEnv.player.mainSkill.skillCfg.skillName)
-        assert.are.equals(836, round(build.calcsTab.mainOutput.FullDPS))
+        assert.are.equals("Summon Skeletal Mage", build.calcsTab.mainEnv.player.mainSkill.skillCfg.skillName)
+        assert.are.equals(1591, round(build.calcsTab.mainOutput.FullDPS))
     end)
 end)

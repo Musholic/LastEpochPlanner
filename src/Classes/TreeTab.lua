@@ -677,6 +677,9 @@ function TreeTabClass:ModifyNodePopup(selectedNode)
 	for _,stat in ipairs(selectedNode.stats) do
 		stats = stats .. stat .. "\n"
 	end
+	for _,stat in ipairs(selectedNode.notScalingStats) do
+		stats = stats .. "{NotScaling}" .. stat .. "\n"
+	end
 	controls.stats = new("EditControl", nil, 0, 20, 550, 120, stats, nil, "^%C\t\n", nil, nil, 16)
 	controls.stats.inactiveText = function(val)
 		local inactiveText = ""

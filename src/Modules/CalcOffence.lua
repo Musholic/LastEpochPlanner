@@ -1277,82 +1277,6 @@ function calcs.offence(env, actor, activeSkill)
 				t_insert(breakdown.Duration, s_format("= %.3fs", output.Duration))
 			end
 		end
-		durationBase = (skillData.durationSecondary or 0) + skillModList:Sum("BASE", skillCfg, "Duration", "SecondaryDuration")
-		if durationBase > 0 then
-			local durationMod = calcLib.mod(skillModList, skillCfg, "Duration", "SecondaryDuration", "SkillAndDamagingAilmentDuration", skillData.mineDurationAppliesToSkill and "MineDuration" or nil)
-			durationMod = m_max(durationMod, 0)
-			output.DurationSecondary = durationBase * durationMod
-			if skillData.debuffSecondary then
-				output.DurationSecondary = output.DurationSecondary * debuffDurationMult
-			end
-			if breakdown and output.DurationSecondary ~= durationBase then
-				breakdown.SecondaryDurationMod = breakdown.mod(skillModList, skillCfg, "Duration", "SecondaryDuration", "SkillAndDamagingAilmentDuration", skillData.mineDurationAppliesToSkill and "MineDuration" or nil)
-				if breakdown.SecondaryDurationMod then
-					t_insert(breakdown.SecondaryDurationMod, 1, "Secondary duration:")
-				end
-				breakdown.DurationSecondary = {
-					s_format("%.2fs ^8(base)", durationBase),
-				}
-				if output.DurationMod ~= 1 then
-					t_insert(breakdown.DurationSecondary, s_format("x %.4f ^8(duration modifier)", durationMod))
-				end
-				if skillData.debuffSecondary and debuffDurationMult ~= 1 then
-					t_insert(breakdown.DurationSecondary, s_format("/ %.3f ^8(debuff expires slower/faster)", 1 / debuffDurationMult))
-				end
-				t_insert(breakdown.DurationSecondary, s_format("= %.3fs", output.DurationSecondary))
-			end
-		end
-		durationBase = (skillData.durationTertiary or 0) + skillModList:Sum("BASE", skillCfg, "Duration", "TertiaryDuration")
-		if durationBase > 0 then
-			local durationMod = calcLib.mod(skillModList, skillCfg, "Duration", "TertiaryDuration", "SkillAndDamagingAilmentDuration", skillData.mineDurationAppliesToSkill and "MineDuration" or nil)
-			durationMod = m_max(durationMod, 0)
-			output.DurationTertiary = durationBase * durationMod
-			if skillData.debuffTertiary then
-				output.DurationTertiary = output.DurationTertiary * debuffDurationMult
-			end
-			if breakdown and output.DurationTertiary ~= durationBase then
-				breakdown.TertiaryDurationMod = breakdown.mod(skillModList, skillCfg, "Duration", "TertiaryDuration", "SkillAndDamagingAilmentDuration", skillData.mineDurationAppliesToSkill and "MineDuration" or nil)
-				if breakdown.TertiaryDurationMod then
-					t_insert(breakdown.TertiaryDurationMod, 1, "Tertiary duration:")
-				end
-				breakdown.DurationTertiary = {
-					s_format("%.2fs ^8(base)", durationBase),
-				}
-				if output.DurationMod ~= 1 then
-					t_insert(breakdown.DurationTertiary, s_format("x %.4f ^8(duration modifier)", durationMod))
-				end
-				if skillData.debuffTertiary and debuffDurationMult ~= 1 then
-					t_insert(breakdown.DurationTertiary, s_format("/ %.3f ^8(debuff expires slower/faster)", 1 / debuffDurationMult))
-				end
-				t_insert(breakdown.DurationTertiary, s_format("= %.3fs", output.DurationTertiary))
-			end
-		end
-		durationBase = (skillData.auraDuration or 0)
-		if durationBase > 0 then
-			local durationMod = calcLib.mod(skillModList, skillCfg, "Duration", "SkillAndDamagingAilmentDuration")
-			durationMod = m_max(durationMod, 0)
-			output.AuraDuration = durationBase * durationMod
-			if breakdown and output.AuraDuration ~= durationBase then
-				breakdown.AuraDuration = {
-					s_format("%.2fs ^8(base)", durationBase),
-					s_format("x %.4f ^8(duration modifier)", durationMod),
-					s_format("= %.3fs", output.AuraDuration),
-				}
-			end
-		end
-		durationBase = (skillData.reserveDuration or 0)
-		if durationBase > 0 then
-			local durationMod = calcLib.mod(skillModList, skillCfg, "Duration", "SkillAndDamagingAilmentDuration")
-			durationMod = m_max(durationMod, 0)
-			output.ReserveDuration = durationBase * durationMod
-			if breakdown and output.ReserveDuration ~= durationBase then
-				breakdown.ReserveDuration = {
-					s_format("%.2fs ^8(base)", durationBase),
-					s_format("x %.4f ^8(duration modifier)", durationMod),
-					s_format("= %.3fs", output.ReserveDuration),
-				}
-			end
-		end
 		output.TotemDurationMod = calcLib.mod(skillModList, skillCfg, "TotemDuration")
 		output.TotemDurationMod = m_max(output.TotemDurationMod, 0)
 		local TotemDurationBase = skillModList:Sum("BASE", skillCfg, "TotemDuration")
@@ -1371,31 +1295,29 @@ function calcs.offence(env, actor, activeSkill)
 
 	-- Skill uptime
 	do
-		if not activeSkill.skillTypes[SkillType.Vaal] then -- exclude vaal skills as we currently don't support soul generation or gain prevention.
-			local cooldown = output.Cooldown or 0
-			for _, durationType in pairs({ "Duration", "DurationSecondary", "DurationTertiary", "AuraDuration", "reserveDuration" }) do
-				local duration = output[durationType] or 0
-				if (duration ~= 0 and cooldown ~= 0) then
-					local uptime = 1
+		local cooldown = output.Cooldown or 0
+		for _, durationType in pairs({ "Duration", "DurationSecondary", "DurationTertiary", "AuraDuration", "reserveDuration" }) do
+			local duration = output[durationType] or 0
+			if (duration ~= 0 and cooldown ~= 0) then
+				local uptime = 1
+				if skillModList:Flag(skillCfg, "NoCooldownRecoveryInDuration") then
+					uptime = duration / (cooldown + duration)
+				else
+					uptime = duration / (cooldown)
+				end
+				uptime = m_min(uptime, 1)
+				output[durationType.."Uptime"] = uptime * 100
+				if breakdown then
 					if skillModList:Flag(skillCfg, "NoCooldownRecoveryInDuration") then
-						uptime = duration / (cooldown + duration)
+						breakdown[durationType.."Uptime"] = {
+							s_format("%.2fs / (%.2fs + %.2fs)", duration, cooldown, duration),
+							s_format("= %d%%", output[durationType.."Uptime"])
+						}
 					else
-						uptime = duration / (cooldown)
-					end
-					uptime = m_min(uptime, 1)
-					output[durationType.."Uptime"] = uptime * 100
-					if breakdown then
-						if skillModList:Flag(skillCfg, "NoCooldownRecoveryInDuration") then
-							breakdown[durationType.."Uptime"] = {
-								s_format("%.2fs / (%.2fs + %.2fs)", duration, cooldown, duration),
-								s_format("= %d%%", output[durationType.."Uptime"])
-							}
-						else
-							breakdown[durationType.."Uptime"] = {
-								s_format("%.2fs / %.2fs", duration, cooldown),
-								s_format("= %d%%", output[durationType.."Uptime"])
-							}
-						end
+						breakdown[durationType.."Uptime"] = {
+							s_format("%.2fs / %.2fs", duration, cooldown),
+							s_format("= %d%%", output[durationType.."Uptime"])
+						}
 					end
 				end
 			end
@@ -1888,7 +1810,11 @@ function calcs.offence(env, actor, activeSkill)
 	end
 
 	if skillFlags.duration then
-		output.MaxStacks = round(output.Speed * output.Duration * quantityMultiplier, 2)
+		if output.Duration then
+			output.MaxStacks = round(output.Speed * output.Duration * quantityMultiplier, 2)
+		else
+			output.MaxStacks = 0
+		end
 	end
 
 	--Calculate damage (exerts, crits, ruthless, DPS, etc)

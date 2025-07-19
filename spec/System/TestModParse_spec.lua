@@ -53,6 +53,23 @@ describe("TestModParse", function()
         assert.are.equals(81, build.configTab.modList:Sum("INC", nil, "Duration"))
     end)
 
+    it("fire resistance", function()
+        build.configTab.input.customMods = "81% Fire resistance"
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
+        assert.are.equals(81, build.configTab.modList:Sum("BASE", nil, "FireResist"))
+        assert.are.equals(0, build.configTab.modList:Sum("INC", nil, "FireResist"))
+        assert.are.equals(0, build.configTab.modList:Sum("MORE", nil, "FireResist"))
+    end)
+
+    it("fire and necrotic resistance", function()
+        build.configTab.input.customMods = "+81% fire and necrotic resistance"
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
+        assert.are.equals(81, build.configTab.modList:Sum("BASE", nil, "FireResist"))
+        assert.are.equals(81, build.configTab.modList:Sum("BASE", nil, "NecroticResist"))
+    end)
+
     it("attributes", function()
         build.configTab.input.customMods = "+2 to All Attributes"
         build.configTab:BuildModList()
@@ -73,10 +90,10 @@ describe("TestModParse", function()
 
         assert.are.equals(10, build.configTab.modList:Sum("BASE", { keywordFlags = KeywordFlag.Physical }, "Damage"))
         assert.are.equals(10, build.configTab.modList:Sum("BASE", { keywordFlags = KeywordFlag.Physical }, "Damage"))
-        assert.are.equals(20, build.configTab.modList:Sum("BASE", { flags = ModFlag.Melee }, "PhysicalDamage"))
+        assert.are.equals(20, build.configTab.modList:Sum("BASE", { keywordFlags = ModFlag.Melee }, "PhysicalDamage"))
         assert.are.equals(0, build.configTab.modList:Sum("BASE", nil, "PhysicalDamage"))
         assert.are.equals(0, build.configTab.modList:Sum("BASE", { keywordFlags = KeywordFlag.Fire }, "FireDamage"))
-        assert.are.equals(25, build.configTab.modList:Sum("BASE", { keywordFlags = KeywordFlag.Fire, flags = KeywordFlag.Spell }, "FireDamage"))
+        assert.are.equals(25, build.configTab.modList:Sum("BASE", { keywordFlags = bit.bor(KeywordFlag.Fire, KeywordFlag.Spell) }, "FireDamage"))
     end)
 
     it("increased damage", function()
@@ -84,7 +101,7 @@ describe("TestModParse", function()
         build.configTab:BuildModList()
         runCallback("OnFrame")
 
-        assert.are.equals(50, build.configTab.modList:Sum("INC", { keywordFlags = KeywordFlag.Void, flags = ModFlag.Melee }, "VoidDamage"))
+        assert.are.equals(50, build.configTab.modList:Sum("INC", { keywordFlags = bit.bor(KeywordFlag.Void, KeywordFlag.Melee) }, "VoidDamage"))
     end)
 
     it("passive node more damage", function()
@@ -93,6 +110,15 @@ describe("TestModParse", function()
         runCallback("OnFrame")
 
         assert.are.equals(10.5, build.configTab.modList:Sum("MORE", nil, "Damage"))
+    end)
+
+    it("passive node more fire damage", function()
+        build.configTab.input.customMods = "+10.5% Melee Fire Damage"
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
+
+        assert.are.equals(10.5, build.configTab.modList:Sum("MORE", {keywordFlags = ModFlag.Melee}, "FireDamage"))
+        assert.are.equals(0, build.configTab.modList:Sum("MORE", nil, "FireDamage"))
     end)
 
     it("effect doubled", function()
@@ -122,6 +148,16 @@ describe("TestModParse", function()
         assert.are.equals(10, build.configTab.modList:Sum("INC", {keywordFlags = KeywordFlag.Fire, flags = ModFlag.Cast}, "Speed"))
     end)
 
+    it("melee and throwing attack speed", function()
+        build.configTab.input.customMods = "+10% increased Melee And Throwing Attack Speed"
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
+
+        assert.are.equals(0, build.configTab.modList:Sum("INC", {flags = ModFlag.Attack}, "Speed"))
+        assert.are.equals(10, build.configTab.modList:Sum("INC", {keywordFlags = ModFlag.Melee, flags = ModFlag.Attack}, "Speed"))
+        assert.are.equals(10, build.configTab.modList:Sum("INC", {keywordFlags = ModFlag.Throwing, flags = ModFlag.Attack}, "Speed"))
+    end)
+
     it("shred chance", function()
         build.configTab.input.customMods = "+10% Void Shred Chance"
         build.configTab:BuildModList()
@@ -131,7 +167,7 @@ describe("TestModParse", function()
     end)
 
     it("melee chance", function()
-        build.configTab.input.customMods = "+10% Melee Chance to Ignite on Hit"
+        build.configTab.input.customMods = "+10% Chance to Ignite on Melee Hit"
         build.configTab:BuildModList()
         runCallback("OnFrame")
 

@@ -46,6 +46,10 @@ function itemLib.applyRange(line, range, valueScalar, rounding)
     elseif rounding == "Thousandth" then
         precision = 1000
     end
+    -- If there is a percent, we need to divide the precision by 100
+    if line:find("%%") and precision >= 100 then
+        precision = precision / 100
+    end
 
     -- range is actually given as a roll (TODO:rename)
     range = range / 255.0
@@ -56,8 +60,15 @@ function itemLib.applyRange(line, range, valueScalar, rounding)
     end
     line = line:gsub("(%+?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)",
             function(plus, min, max)
-                min = m_floor(min * valueScalar + 0.5)
-                max = m_floor(max * valueScalar + 0.5)
+                min = min * valueScalar
+                -- If min decimal part is exactly 0.5, round down
+                if min * precision % 1 == 0.5 then
+                    min = m_floor(min * precision) / precision
+                else
+                    min = m_floor(min * precision + 0.5) / precision
+                end
+                max = max * valueScalar
+                max = m_floor(max * precision + 0.5) / precision
                 numbers = numbers + 1
                 local numVal = (tonumber(min) + range * (tonumber(max) - tonumber(min) + 1 / precision))
                 numVal = m_floor(numVal * precision) / precision
@@ -67,7 +78,6 @@ function itemLib.applyRange(line, range, valueScalar, rounding)
                 return (numVal < 0 and "" or plus) .. tostring(numVal)
             end)
                :gsub("%-(%d+%.?%d*%%) (%a+)", antonymFunc)
-
     return line
 end
 

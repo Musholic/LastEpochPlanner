@@ -334,14 +334,13 @@ return {
 } },
 -- primary defenses
 { 1, "Life", 2, colorCodes.LIFE, {{ defaultCollapsed = false, label = "Health", data = {
-	extra = "{0:output:LifeUnreserved}/{0:output:Life}",
+	extra = "{0:output:Life}",
 	{ label = "Base from Gear", { format = "{0:mod:1}", { modName = "Life", modType = "BASE", modSource = "Item" }, }, },
 	{ label = "Inc. from Tree", { format = "{0:mod:1}%", { modName = "Life", modType = "INC", modSource = "Tree" }, }, },
 	{ label = "Total Base", { format = "{0:mod:1}", { modName = "Life", modType = "BASE" }, }, },
 	{ label = "Total Increased", { format = "{0:mod:1}%", { modName = "Life", modType = "INC", }, }, },
 	{ label = "Total More", { format = "{0:mod:1}%", { modName = "Life", modType = "MORE", }, }, },
 	{ label = "Total", { format = "{0:output:Life}", { breakdown = "Life" }, }, },
-	{ label = "Total Recoverable", haveOutput = "CappingLife", { format = "{0:output:LifeRecoverable}", { breakdown = "LifeUnreserved" }, }, },
 	{ label = "Recovery", { format = "{1:output:LifeRegenRecovery} ({1:output:LifeRegenPercent}%)",
 		{ breakdown = "LifeRegenRecovery" },
 		{ label = "Sources", modName = { "LifeRegen", "LifeRegenPercent", "LifeDegen", "LifeDegenPercent", "LifeRecovery" }, modType = "BASE" },
@@ -352,7 +351,7 @@ return {
 } }
 } },
 { 1, "Mana", 2, colorCodes.MANA, {{ defaultCollapsed = false, label = "Mana", data = {
-	extra = "{0:output:ManaUnreserved}/{0:output:Mana}",
+	extra = "{0:output:Mana}",
 	notFlag = "minionSkill",
 	{ label = "Base from Gear", { format = "{0:mod:1}", { modName = "Mana", modType = "BASE", modSource = "Item" }, }, },
 	{ label = "Inc. from Tree", { format = "{0:mod:1}%", { modName = "Mana", modType = "INC", modSource = "Tree" }, }, },
@@ -370,8 +369,16 @@ return {
 } },
 { 1, "Ward", 2, colorCodes.WARD, {{ defaultCollapsed = false, label = "Ward", data = {
 	extra = "{0:output:Ward}",
-	{ label = "Ward Retention", { format = "{0:output:WardRetention}%", { modName = "WardRetention" } }, },
+	{ label = "Retention", { format = "{0:output:WardRetention}%", { modName = "WardRetention" } }, },
+	{ label = "Decay Threshold", { format = "{0:output:WardDecayThreshold}", { modName = "WardDecayThreshold" } }, },
+	{ label = "Regen Per Second", { format = "{0:output:WardPerSecond}", { modName = "WardPerSecond" } }, },
 	{ label = "Total", { format = "{0:output:Ward}", { breakdown = "Ward" }, }, },
+} }
+} },
+{ 1, "Endurance", 2, colorCodes.WARD, {{ defaultCollapsed = false, label = "Endurance", data = {
+	extra = "{0:output:Endurance}%",
+	{ label = "Threshold ", { format = "{0:output:EnduranceThreshold}", { modName = "EnduranceThreshold" } }, },
+	{ label = "Total", { format = "{0:output:Endurance}%", { modName = "Endurance" }, }, },
 } }
 } },
 -- secondary defenses
@@ -386,8 +393,7 @@ return {
 } },
 { 1, "Armour", 3, colorCodes.ARMOUR, {{ defaultCollapsed = false, label = "Armor", data = {
 	extra = "{0:output:Armour}",
-	{ label = "Base from Armours", { format = "{0:output:Gear:Armour}", { breakdown = "Armour", gearOnly = true }, }, },
-	{ label = "Global Base", { format = "{0:mod:1}", { modName = { "Armour", "ArmourAndEvasion" }, modType = "BASE" }, }, },
+	{ label = "Base", { format = "{0:mod:1}", { modName = { "Armour", "ArmourAndEvasion" }, modType = "BASE" }, }, },
 	{ label = "Inc. from Tree", { format = "{0:mod:1}%", { modName = { "Armour", "ArmourAndEvasion" }, modType = "INC", modSource = "Tree", }, }, },
 	{ label = "Total Increased", { format = "{0:mod:1}%", { modName = { "Armour", "ArmourAndEvasion", "Defences" }, modType = "INC" }, }, },
 	{ label = "Total More", { format = "{0:mod:1}%", { modName = { "Armour", "ArmourAndEvasion", "Defences" }, modType = "MORE" }, }, },
