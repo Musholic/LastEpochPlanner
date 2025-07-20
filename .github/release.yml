@@ -9,7 +9,7 @@ changelog:
     authors:
       - github-actions
   categories:
-    - title: New to Path of Building
+    - title: New to Last Epoch Planner
       labels:
         - enhancement
     - title: Fixed Crashes

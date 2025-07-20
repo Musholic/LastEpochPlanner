@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Class: Undo Handler
 -- Handler for classes that need to provide undo/redo functionality

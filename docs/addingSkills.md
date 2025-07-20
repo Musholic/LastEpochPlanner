@@ -1,4 +1,4 @@
-Skills in Path of Building are generated from what is called a template file.  These template files are used when exporting data from the ggpk and can be found [here](../src/Export/Skills).  While this tutorial will focus on the [combined data files](../src/Data/Skills) know that any changes will be overwritten unless added to the template files.  The script that combines these template files with the game data can be found [here](../src/Export/Scripts/skills.lua)
+Skills in Last Epoch Planner are generated from what is called a template file.  These template files are used when exporting data from the ggpk and can be found [here](../src/Export/Skills).  While this tutorial will focus on the [combined data files](../src/Data/Skills) know that any changes will be overwritten unless added to the template files.  The script that combines these template files with the game data can be found [here](../src/Export/Scripts/skills.lua)
 
 ## Template files
 
@@ -54,7 +54,7 @@ The most important tables constructed from the game data are the `stats` table, 
   ```
   The value for `spell_minimum_base_fire_damage` would be 0.80000001192093, the value for `base_chance_to_ignite_%` would be 25, and since `base_is_projectile` doesn't have a number, it's just a flag on the skill to properly factor in projectile mods.
   
-Each of these stats are mapped to a mod in Path of Building either via `SkillStatMap.lua`, or if the stat is specific to this particular skill (e.g. `spectral_helix_rotations_%` would only apply to Spectral Helix) in `statMap` in this same table.  If a mapping exists in both places, the one local to this skill will take precedence.  The corresponding mod will have `nil` in place of its normal value, and that value instead comes from this row in the `levels` table.
+Each of these stats are mapped to a mod in Last Epoch Planner either via `SkillStatMap.lua`, or if the stat is specific to this particular skill (e.g. `spectral_helix_rotations_%` would only apply to Spectral Helix) in `statMap` in this same table.  If a mapping exists in both places, the one local to this skill will take precedence.  The corresponding mod will have `nil` in place of its normal value, and that value instead comes from this row in the `levels` table.
 
 Notice how these stat numbers don't really align with damage numbers in any meaningful way for active skills.  The stat numbers are interpolated by the numbers in the corresponding position in the `statInterpolation` table in the same row.
 * 1 means take the number as-is.  This is the most common interpolation

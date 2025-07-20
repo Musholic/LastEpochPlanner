@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Calcs Tab
 -- Calculations breakdown tab for the current build.

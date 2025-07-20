@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Build Site Tools
 -- Functions used to import and export PoB build codes from external websites
@@ -31,7 +31,7 @@ function buildSites.UploadBuild(buildCode, websiteInfo)
 			local easy = curl.easy()
 			easy:setopt_url(']]..websiteInfo.postUrl..[[')
 			easy:setopt(curl.OPT_POST, true)
-			easy:setopt(curl.OPT_USERAGENT, "Path of Building for Last Epoch/]]..launch.versionNumber..[[")
+			easy:setopt(curl.OPT_USERAGENT, "Last Epoch Planner/]]..launch.versionNumber..[[")
 			easy:setopt(curl.OPT_POSTFIELDS, ']]..websiteInfo.postFields..[['..code)
 			easy:setopt(curl.OPT_ACCEPT_ENCODING, "")
 			if connectionProtocol then

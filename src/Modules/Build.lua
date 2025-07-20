@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Build
 -- Loads and manages the current build.
@@ -1141,7 +1141,7 @@ Info:^7 You are trying to load a build created for a version of Last Epoch that 
 not supported by us. You will have to convert it to the current game version to load it.
 To use a build newer than the current supported game version, you may have to update.
 To use a build older than the current supported game version, we recommend loading it
-in an older version of Path of Building For Last Epoch instead.
+in an older version of Last Epoch Planner instead.
 ]])
 	controls.label = new("LabelControl", nil, 0, 110, 0, 16, colorCodes.WARNING..[[
 Warning:^7 Converting a build to a different game version may have side effects.
@@ -1651,8 +1651,8 @@ function buildMode:LoadDB(xmlText, fileName)
 	if not dbXML then
 		launch:ShowErrMsg("^1Error loading '%s': %s", fileName, errMsg)
 		return true
-	elseif dbXML[1].elem ~= "PathOfBuilding" then
-		launch:ShowErrMsg("^1Error parsing '%s': 'PathOfBuilding' root element missing", fileName)
+	elseif dbXML[1].elem ~= "LastEpochPlanner" then
+		launch:ShowErrMsg("^1Error parsing '%s': 'LastEpochPlanner' root element missing", fileName)
 		return true
 	end
 
@@ -1688,7 +1688,7 @@ function buildMode:LoadDBFile()
 end
 
 function buildMode:SaveDB(fileName)
-	local dbXML = { elem = "PathOfBuilding" }
+	local dbXML = { elem = "LastEpochPlanner" }
 
 	-- Save Build section first
 	do

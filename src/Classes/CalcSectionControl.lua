@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Class: Calc Section Control
 -- Section control used in the Calcs tab

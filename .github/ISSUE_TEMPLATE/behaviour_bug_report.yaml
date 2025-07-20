@@ -12,14 +12,14 @@ body:
     attributes:
       label: Check version
       options:
-        - label: I'm running the latest version of Path of Building and I've verified this by checking the [changelog](https://github.com/Musholic/PathOfBuildingForLastEpoch/blob/master/CHANGELOG.md)
+        - label: I'm running the latest version of Last Epoch Planner and I've verified this by checking the [changelog](https://github.com/Musholic/LastEpochPlanner/blob/master/CHANGELOG.md)
           required: true
   - type: checkboxes
     id: duplicates
     attributes:
       label: Check for duplicates
       options:
-        - label: I've checked for duplicate open **and closed** issues by using the search function of the [issue tracker](https://github.com/Musholic/PathOfBuildingForLastEpoch/issues?q=is%3Aissue)
+        - label: I've checked for duplicate open **and closed** issues by using the search function of the [issue tracker](https://github.com/Musholic/LastEpochPlanner/issues?q=is%3Aissue)
           required: true
   - type: checkboxes
     id: validity
@@ -39,9 +39,9 @@ body:
   - type: textarea
     id: actual
     attributes:
-      label: What is the behaviour in Path of Building?
+      label: What is the behaviour in Last Epoch Planner?
       description: Please write a clear and concise description of what actually happens.
-      placeholder: E.g. In Path of Building something behaves incorrectly e.g. incorrect curse priority, auras not disabled by mod, skill not triggered correctly, etc.
+      placeholder: E.g. In Last Epoch Planner something behaves incorrectly e.g. incorrect curse priority, auras not disabled by mod, skill not triggered correctly, etc.
     validations:
       required: true
   - type: textarea

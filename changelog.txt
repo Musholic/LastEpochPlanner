@@ -1,6 +1,6 @@
 VERSION[0.6.0][2025/07/02]
 
---- New to Path of Building for Last Epoch ---
+--- New to Last Epoch Planner ---
 - Support for modifying nodes in order to do some quick fix of some not yet supported mods (Alt + Left click on node)
 - Support for weekly beta release (same as PoB) that you can opt in from the options
 
@@ -37,7 +37,7 @@ VERSION[0.5.1][2025/06/11]
 
 VERSION[0.5.0][2025/06/04]
 
---- New to Path of Building for Last Epoch ---
+--- New to Last Epoch Planner ---
 
 Finally updated with game data from season 2 along with several changes:
 
@@ -49,7 +49,7 @@ Finally updated with game data from season 2 along with several changes:
 
 VERSION[0.4.0][2024/04/26]
 
---- New to Path of Building for Last Epoch ---
+--- New to Last Epoch Planner ---
 
 Major improvement to DPS calculations with the support of ailments, debuffs, channeled skills and DOT skills. I decided to consider the ailments as triggered skills since it seemed more flexible this way.
 
@@ -60,7 +60,7 @@ Major improvement to DPS calculations with the support of ailments, debuffs, cha
 
 VERSION[0.3.0][2024/04/16]
 
---- New to Path of Building for Last Epoch ---
+--- New to Last Epoch Planner ---
 
 Major improvement to skill Hit DPS calculations and improvement to the passives and skills tree looks (multiple points can now be allocated to a single node).
 
@@ -77,7 +77,7 @@ There is no support yet for ailments and DoT.
 
 VERSION[0.2.0][2024/04/09]
 
---- New to Path of Building for Last Epoch ---
+--- New to Last Epoch Planner ---
 
 This release introduces DPS calculation. It takes into account a large variety of skills, but it does not support yet a lot of mods.
 
@@ -89,7 +89,7 @@ So do not expect passives in the skill tree to have the intended effect for exam
 * A few minor fixes (save/load fix, display of damage types in breakdown,...)
 
 VERSION[0.1.0][2024/04/02]
-First release, it started as a fork of Path of Building which is slowly adapted to Last Epoch
+First release, it started as a fork of Last Epoch Planner which is slowly adapted to Last Epoch
 so most content is not yet relevant to the game.
 
 The following features are supported (or partially):

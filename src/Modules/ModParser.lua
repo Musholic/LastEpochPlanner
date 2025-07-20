@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Mod Parser for 3.0
 -- Parser function for modifier names

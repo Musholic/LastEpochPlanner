@@ -1,5 +1,5 @@
 #@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Update Check
 -- Checks for updates
@@ -108,7 +108,7 @@ if localManXML and localManXML[1].elem == "PoBVersion" then
 					fullPath = scriptPath .. "/" .. node.attrib.name
 				end
 				localFiles[node.attrib.name] = { sha1 = node.attrib.sha1, part = node.attrib.part, platform = node.attrib.platform, fullPath = fullPath }
-				if node.attrib.part == "runtime" and node.attrib.name:match("Path of Building") then
+				if node.attrib.part == "runtime" and node.attrib.name:match("Last Epoch Planner") then
 					runtimeExecutable = fullPath
 				end
 			end

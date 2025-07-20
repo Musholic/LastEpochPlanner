@@ -1,4 +1,4 @@
-# Path of Building Community Fork Codebase Rundown
+# Last Epoch Planner Community Fork Codebase Rundown
 
 ## Layout
 * ### Assets
