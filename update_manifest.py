@@ -119,7 +119,7 @@ def create_manifest(version: str | None = None, replace: bool = False) -> None:
 
     files.sort(key=lambda attr: (attr["part"], _alphanumeric(attr["name"])))
 
-    root = Et.Element("PoBVersion")
+    root = Et.Element("LEPVersion")
     Et.SubElement(root, "Version", number=new_version)
     for attributes in parts:
         Et.SubElement(root, "Source", attributes)

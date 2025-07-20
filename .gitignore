@@ -22,17 +22,5 @@ src/luacov.stats.out
 # Release
 manifest-updated.xml
 
-# GGPK Export
-src/Export/ggpk/metadata/
-src/Export/ggpk/data/
-src/Export/ggpk/*.exe
-src/Export/ggpk/*.dll
-
-# PoB Trader
-*_currency_values.json
-
-# Timeless Jewels
-src/Data/TimelessJewelData/*.bin
-
 gameFileExtractScript/generatedAssets/
 gameFileExtractScript/originalAssets/

@@ -1,7 +1,7 @@
 -- Last Epoch Planner
 --
 -- Module: Build Site Tools
--- Functions used to import and export PoB build codes from external websites
+-- Functions used to import and export LEP build codes from external websites
 --
 
 buildSites = { }
@@ -18,7 +18,7 @@ buildSites.websiteList = {
 	{ label = "Rentry.co", id = "rentry", matchURL = "rentry%.co/%w+", regexURL = "rentry%.co/(%w+)%s*$", downloadURL = "rentry.co/paste/%1/raw" },
 }
 
---- Uploads a PoB build code to a website
+--- Uploads a LEP build code to a website
 --- @param websiteInfo Table Contains the postUrl, any postParams, and a prefix to add to the response
 --- @param buildCode String The build code that will be uploaded
 function buildSites.UploadBuild(buildCode, websiteInfo)
@@ -57,7 +57,7 @@ function buildSites.UploadBuild(buildCode, websiteInfo)
 	return response
 end
 
---- Downloads a PoB build code from a website
+--- Downloads a LEP build code from a website
 --- @param link String A link to the site that contains the link to the raw build code
 --- @param websiteInfo Table Contains the downloadUrl
 --- @param callback Function The function to call when the download is complete

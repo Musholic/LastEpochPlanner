@@ -5,7 +5,7 @@ In ModParser, the standard format of a mod looks like this: `mod(ModName, ModTyp
 For Skills, the format is [simplified slightly](../src/Modules/Data.lua#L51-L60) to remove the `source` parameter, as that is [added in automatically](../src/Modules/Data.lua#L70) based on the gem it came from.
 
 ### ModName
-Used as a key, so you can reference this mod elsewhere in PoB.  Can really be anything, but look around the codebase to find ones you need (e.g. "Damage", "Life", "PhysicalDamageGainAsLightning", etc)
+Used as a key, so you can reference this mod elsewhere in LEP.  Can really be anything, but look around the codebase to find ones you need (e.g. "Damage", "Life", "PhysicalDamageGainAsLightning", etc)
 ### ModType
 - "BASE": used for flat values that add to other base values (e.g. Flat added damage, flat life, flat evasion)
 - "INC": used for increased and reduced mods that stack additively.  Use a negative value to represent "reduced".

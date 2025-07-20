@@ -88,7 +88,7 @@ local localFiles = { }
 local localManXML = xml.LoadXMLFile(scriptPath.."/manifest.xml")
 local localSource
 local runtimeExecutable
-if localManXML and localManXML[1].elem == "PoBVersion" then
+if localManXML and localManXML[1].elem == "LEPVersion" then
 	for _, node in ipairs(localManXML[1]) do
 		if type(node) == "table" then
 			if node.elem == "Version" then
@@ -131,7 +131,7 @@ if not remoteManText then
 	return nil, "Couldn't download version manifest.\nReason: "..errMsg.."\nCheck your internet connectivity.\nIf you are using a proxy, specify it in Options."
 end
 local remoteManXML = xml.ParseXML(remoteManText)
-if remoteManXML and remoteManXML[1].elem == "PoBVersion" then
+if remoteManXML and remoteManXML[1].elem == "LEPVersion" then
 	for _, node in ipairs(remoteManXML[1]) do
 		if type(node) == "table" then
 			if node.elem == "Version" then
@@ -263,7 +263,7 @@ if failedFile then
 end
 
 -- Create new manifest
-localManXML = { elem = "PoBVersion" }
+localManXML = { elem = "LEPVersion" }
 table.insert(localManXML, { elem = "Version", attrib = { number = remoteVer, platform = localPlatform, branch = localBranch } })
 for part, platforms in pairs(remoteSources) do
 	for platform, url in pairs(platforms) do

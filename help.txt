@@ -1,6 +1,6 @@
 ---[Help File Introduction]
 
-This file contains a list of shortcuts and other misc information about PoB for Last Epoch functionality
+This file contains a list of shortcuts and other misc information about Last Epoch Planner functionality
 While holding shift scroll bars in the help section and version history will jump to the previous/next section while scrolling
 
 ---[Contents]

@@ -16,7 +16,7 @@ local NotesTabClass = newClass("NotesTab", "ControlHost", "Control", function(se
 
 	local notesDesc = [[^7You can use Ctrl +/- (or Ctrl+Scroll) to zoom in and out and Ctrl+0 to reset.
 This field also supports different colors.  Using the caret symbol (^) followed by a Hex code or a number (0-9) will set the color.
-Below are some common color codes PoB uses:	]]
+Below are some common color codes LEP uses:	]]
 	self.controls.notesDesc = new("LabelControl", {"TOPLEFT",self,"TOPLEFT"}, 8, 8, 150, 16, notesDesc)
 	self.controls.normal = new("ButtonControl", {"TOPLEFT",self.controls.notesDesc,"TOPLEFT"}, 0, 48, 100, 18, colorCodes.NORMAL.."NORMAL", function() self:SetColor(colorCodes.NORMAL) end)
 	self.controls.magic = new("ButtonControl", {"TOPLEFT",self.controls.normal,"TOPLEFT"}, 120, 0, 100, 18, colorCodes.MAGIC.."MAGIC", function() self:SetColor(colorCodes.MAGIC) end)

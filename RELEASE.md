@@ -19,13 +19,9 @@ Steps:
     - Choose a new version number (see above)
 4. This will run and create a new branch and PR so you can review the changes, making tweaks to any of the release notes that don't make sense
 5. If you changed any files after the PR was created, you'll have to update [the manifest file](manifest.xml)
-    - Run `python3 update_manifest.py --in-place` from the root directory of PoB
+    - Run `python3 update_manifest.py --in-place` from the root directory of LEP
 6. Create a tag for the new release either by creating a release on GitHub, or running (for example) `git tag v2.4.0; git push --tags`
-7. Merge the PR into `master`.  PoB will take a few minutes before it can find the update
-
-## GGPK Data updates
-
-Updating data from the GGPK uses the PoB exporter (see CONTRIBUTING.md#exporting-ggpk-data-from-path-of-exile).  Run each script in order, then check the differences in data to make sure nothing is missing that is expected.
+7. Merge the PR into `master`.  LEP will take a few minutes before it can find the update
 
 ## Skill tree updates
 

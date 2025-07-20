@@ -26,7 +26,7 @@ body:
     attributes:
       label: How is Last Epoch Planner expected to behave?
       description: Please write a clear and concise description of what should happen.
-      placeholder: E.g. When I resize PoB all [...] should be accessible.
+      placeholder: E.g. When I resize LEP all [...] should be accessible.
     validations:
       required: true
   - type: textarea
@@ -34,7 +34,7 @@ body:
     attributes:
       label: How does Last Epoch Planner behave?
       description: Please write a clear and concise description of what actually happens.
-      placeholder: E.g. When I resize PoB some [...] become inaccessible. 
+      placeholder: E.g. When I resize LEP some [...] become inaccessible. 
     validations:
       required: true
   - type: textarea

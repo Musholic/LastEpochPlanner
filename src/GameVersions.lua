@@ -10,7 +10,7 @@ liveTargetVersion = "1_2"
 treeVersionList = { "1_2", }
 --- Always points to the latest skill tree version.
 latestTreeVersion = treeVersionList[#treeVersionList]
----Tree version where multiple skill trees per build were introduced to PoBC.
+---Tree version where multiple skill trees per build were introduced to LEP.
 defaultTreeVersion = treeVersionList[2]
 ---Display, comparison and export data for all supported skill tree versions.
 ---@type table<string, {display: string, num: number, url: string}>

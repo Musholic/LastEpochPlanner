@@ -200,7 +200,7 @@ If you're using linux you can run the ./runtime/Path{space}of{space}Building.exe
 
 ## Testing
 
-PoB uses the [Busted](https://olivinelabs.com/busted/) framework to run its tests.  Tests are stored under `spec/System` and run automatically when a PR is modified.
+LEP uses the [Busted](https://olivinelabs.com/busted/) framework to run its tests.  Tests are stored under `spec/System` and run automatically when a PR is modified.
 More tests can be added to this folder to test specific functionality, or new test builds can be added to ensure nothing changed that wasn't intended. 
 
 ### Running tests
@@ -216,7 +216,7 @@ Docker alternative:
 
 ### Creating new test builds or fixing an existing build
 
-Sometimes a change will be made that intends to change the stats garnered by PoB, which will break our tests.
+Sometimes a change will be made that intends to change the stats garnered by LEP, which will break our tests.
 1. Add the new build XML (if applicable) to the `TestBuilds` folder
 2. Run `busted --lua=luajit -r generate` to generate a LUA file that contains the current stats of that build
 3. Run `busted --lua=luajit` and the tests should pass

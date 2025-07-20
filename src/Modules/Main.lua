@@ -246,7 +246,7 @@ function main:Init()
 	end
 	self.controls.forkLabel = new("LabelControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 148, -26, 0, 16, "")
 	self.controls.forkLabel.label = function()
-		return "^8PoB for Last Epoch"
+		return "^8Last Epoch Planner"
 	end
 	self.controls.versionLabel = new("LabelControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 148, -2, 0, 16, "")
 	self.controls.versionLabel.label = function()
@@ -304,7 +304,7 @@ the "Releases" section of the GitHub page.]])
 end
 
 function main:DetectUnicodeSupport()
-	-- PoeCharm has utf8 global that normal PoB doesn't have
+	-- PoeCharm has utf8 global that normal LEP doesn't have
 	self.unicode = type(_G.utf8) == "table"
 	if self.unicode then
 		ConPrintf("Unicode support detected")
@@ -598,13 +598,6 @@ function main:LoadSettings(ignoreBuild)
 					self.colorHighlight = node.attrib.colorHighlight
 				end
 
-				-- In order to preserve users' settings through renaming/merging this variable, we have this if statement to use the first found setting
-				-- Once the user has closed PoB once, they will be using the new `showThousandsSeparator` variable name, so after some time, this statement may be removed
-				if node.attrib.showThousandsCalcs then
-					self.showThousandsSeparators = node.attrib.showThousandsCalcs == "true"
-				elseif node.attrib.showThousandsSidebar then
-					self.showThousandsSeparators = node.attrib.showThousandsSidebar == "true"
-				end
 				if node.attrib.showThousandsSeparators then
 					self.showThousandsSeparators = node.attrib.showThousandsSeparators == "true"
 				end
@@ -1022,7 +1015,7 @@ function main:SetManifestBranch(branchName)
 		manifestLocation = "../manifest.xml"
 		localManXML = xml.LoadXMLFile(manifestLocation)
 	end
-	if localManXML and localManXML[1].elem == "PoBVersion" then
+	if localManXML and localManXML[1].elem == "LEPVersion" then
 		for _, node in ipairs(localManXML[1]) do
 			if type(node) == "table" then
 				if node.elem == "Version" then

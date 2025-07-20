@@ -15,7 +15,7 @@ ConPrintf("Preparing to complete installation...\n")
 
 local localBranch, localSource
 local localManXML = xml.LoadXMLFile("manifest.xml")
-if localManXML and localManXML[1].elem == "PoBVersion" then
+if localManXML and localManXML[1].elem == "LEPVersion" then
 	for _, node in ipairs(localManXML[1]) do
 		if type(node) == "table" then
 			if node.elem == "Version" then
