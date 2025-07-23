@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<PoBVersion>
+<LEPVersion>
 	<Version number="0.6.0" />
 	<Source part="default" url="https://raw.githubusercontent.com/Musholic/PathOfBuildingForLastEpoch/{branch}/" />
 	<Source part="runtime" platform="win32" url="https://raw.githubusercontent.com/Musholic/PathOfBuildingForLastEpoch/{branch}/runtime/" />
@@ -371,4 +371,4 @@
 	<File name="TreeData/VaalJewelCircle2.png" part="tree" sha1="facc5d2fea2f0027d09fdb6e4692f9f298aff293" />
 	<File name="TreeData/VerdantOil.png" part="tree" sha1="97e77b6e96accf440c17a81d622bf629b8c78fe7" />
 	<File name="TreeData/VioletOil.png" part="tree" sha1="1e9e4f0683a5156c27cb7ddafada8bed877e1c25" />
-</PoBVersion>
+</LEPVersion>

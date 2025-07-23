@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Class: Shared Item Set List
 -- Shared item set list control.

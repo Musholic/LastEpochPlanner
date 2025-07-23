@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Build List
 -- Displays the list of builds.

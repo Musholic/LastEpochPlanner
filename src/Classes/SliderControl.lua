@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Class: Slider Control
 -- Basic slider control.

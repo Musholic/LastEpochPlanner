@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Class: Passive Tree View
 -- Passive skill tree viewer.

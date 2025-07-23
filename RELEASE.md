@@ -1,10 +1,10 @@
-# How to release Path of Building Community
+# How to release Last Epoch Planner
 
 ## Prerequisites
 
 ## Choosing a new version number
 
-Path of Building Community follows [Semantic Versioning](https://semver.org/).
+Last Epoch Planner follows [Semantic Versioning](https://semver.org/).
 
 ## General Application updates
 
@@ -12,20 +12,16 @@ Releases are done via GitHub actions in order to simplify release note generatio
 
 Steps:
 1. First, update any GGPK files and tree files needed in the dev branch.  This will minimize what you have to update later.
-2. [Navigate to the "Release new version" action](https://github.com/Musholic/PathOfBuildingForLastEpoch/actions/workflows/release.yml)
+2. [Navigate to the "Release new version" action](https://github.com/Musholic/LastEpochPlanner/actions/workflows/release.yml)
 3. Click "Run workflow" on the right, and fill in the values
     - Run the workflow from the 'dev' branch
-    - Fill in the [most recent tag](https://github.com/Musholic/PathOfBuildingForLastEpoch/tags)
+    - Fill in the [most recent tag](https://github.com/Musholic/LastEpochPlanner/tags)
     - Choose a new version number (see above)
 4. This will run and create a new branch and PR so you can review the changes, making tweaks to any of the release notes that don't make sense
 5. If you changed any files after the PR was created, you'll have to update [the manifest file](manifest.xml)
-    - Run `python3 update_manifest.py --in-place` from the root directory of PoB
+    - Run `python3 update_manifest.py --in-place` from the root directory of LEP
 6. Create a tag for the new release either by creating a release on GitHub, or running (for example) `git tag v2.4.0; git push --tags`
-7. Merge the PR into `master`.  PoB will take a few minutes before it can find the update
-
-## GGPK Data updates
-
-Updating data from the GGPK uses the PoB exporter (see CONTRIBUTING.md#exporting-ggpk-data-from-path-of-exile).  Run each script in order, then check the differences in data to make sure nothing is missing that is expected.
+7. Merge the PR into `master`.  LEP will take a few minutes before it can find the update
 
 ## Skill tree updates
 
@@ -53,12 +49,12 @@ Steps:
 6. Open `./src/GameVersions.lua` and update `treeVersionList` and `treeVersions`
    according to the file's format. This is important, otherwise the JSON data converter
    won't trigger.
-7. Restart Path of Building Community. This should result in a new file `tree.lua`.
+7. Restart Last Epoch Planner. This should result in a new file `tree.lua`.
 8. Remove `data.json` from the new directory. Do not commit this file.
 
 ## Installer creation
 
-Path of Building Community offers both installable and standalone releases. They're
+Last Epoch Planner offers both installable and standalone releases. They're
 built with automation scripts found in the repository described below.
 
 Prerequisites:
@@ -75,9 +71,8 @@ Prerequisites:
 Installation:
 - Clone this repository to a directory of your choice:
 
-      git clone https://github.com/Musholic/PathOfBuildingForLastEpochInstaller.git
-- Please note that you might not have access to this repository if you're not a Path of
-  Building Community maintainer.
+      git clone https://github.com/Musholic/LastEpochPlanner-Installer.git
+- Please note that you might not have access to this repository if you're not a Last Epoch Planner maintainer.
   
 Usage:
 

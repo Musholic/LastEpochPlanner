@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Main
 -- Main module of program.
@@ -53,7 +53,7 @@ function main:Init()
 		-- If running in dev mode or standalone mode, put user data in the script path
 		self.userPath = GetScriptPath().."/"
 	else
-		self.userPath = GetUserPath().."/Path of Building for Last Epoch/"
+		self.userPath = GetUserPath().."/Last Epoch Planner/"
 		MakeDir(self.userPath)
 	end
 	self.defaultBuildPath = self.userPath.."Builds/"
@@ -246,7 +246,7 @@ function main:Init()
 	end
 	self.controls.forkLabel = new("LabelControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 148, -26, 0, 16, "")
 	self.controls.forkLabel.label = function()
-		return "^8PoB for Last Epoch"
+		return "^8Last Epoch Planner"
 	end
 	self.controls.versionLabel = new("LabelControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 148, -2, 0, 16, "")
 	self.controls.versionLabel.label = function()
@@ -304,7 +304,7 @@ the "Releases" section of the GitHub page.]])
 end
 
 function main:DetectUnicodeSupport()
-	-- PoeCharm has utf8 global that normal PoB doesn't have
+	-- PoeCharm has utf8 global that normal LEP doesn't have
 	self.unicode = type(_G.utf8) == "table"
 	if self.unicode then
 		ConPrintf("Unicode support detected")
@@ -537,8 +537,8 @@ function main:LoadSettings(ignoreBuild)
 	local setXML, errMsg = common.xml.LoadXMLFile(self.userPath.."Settings.xml")
 	if not setXML then
 		return true
-	elseif setXML[1].elem ~= "PathOfBuilding" then
-		launch:ShowErrMsg("^1Error parsing 'Settings.xml': 'PathOfBuilding' root element missing")
+	elseif setXML[1].elem ~= "LastEpochPlanner" then
+		launch:ShowErrMsg("^1Error parsing 'Settings.xml': 'LastEpochPlanner' root element missing")
 		return true
 	end
 	for _, node in ipairs(setXML[1]) do
@@ -598,13 +598,6 @@ function main:LoadSettings(ignoreBuild)
 					self.colorHighlight = node.attrib.colorHighlight
 				end
 
-				-- In order to preserve users' settings through renaming/merging this variable, we have this if statement to use the first found setting
-				-- Once the user has closed PoB once, they will be using the new `showThousandsSeparator` variable name, so after some time, this statement may be removed
-				if node.attrib.showThousandsCalcs then
-					self.showThousandsSeparators = node.attrib.showThousandsCalcs == "true"
-				elseif node.attrib.showThousandsSidebar then
-					self.showThousandsSeparators = node.attrib.showThousandsSidebar == "true"
-				end
 				if node.attrib.showThousandsSeparators then
 					self.showThousandsSeparators = node.attrib.showThousandsSeparators == "true"
 				end
@@ -656,8 +649,8 @@ function main:LoadSharedItems()
 	local setXML, errMsg = common.xml.LoadXMLFile(self.userPath.."Settings.xml")
 	if not setXML then
 		return true
-	elseif setXML[1].elem ~= "PathOfBuilding" then
-		launch:ShowErrMsg("^1Error parsing 'Settings.xml': 'PathOfBuilding' root element missing")
+	elseif setXML[1].elem ~= "LastEpochPlanner" then
+		launch:ShowErrMsg("^1Error parsing 'Settings.xml': 'LastEpochPlanner' root element missing")
 		return true
 	end
 	for _, node in ipairs(setXML[1]) do
@@ -696,7 +689,7 @@ function main:LoadSharedItems()
 end
 
 function main:SaveSettings()
-	local setXML = { elem = "PathOfBuilding" }
+	local setXML = { elem = "LastEpochPlanner" }
 	local mode = { elem = "Mode", attrib = { mode = self.mode } }
 	for _, val in ipairs({ self:CallMode("GetArgs") }) do
 		local child = { elem = "Arg", attrib = { } }
@@ -1022,7 +1015,7 @@ function main:SetManifestBranch(branchName)
 		manifestLocation = "../manifest.xml"
 		localManXML = xml.LoadXMLFile(manifestLocation)
 	end
-	if localManXML and localManXML[1].elem == "PoBVersion" then
+	if localManXML and localManXML[1].elem == "LEPVersion" then
 		for _, node in ipairs(localManXML[1]) do
 			if type(node) == "table" then
 				if node.elem == "Version" then
@@ -1161,10 +1154,10 @@ function main:OpenAboutPopup(helpSectionIndex)
 	controls.close = new("ButtonControl", {"TOPRIGHT",nil,"TOPRIGHT"}, -10, 10, 50, 20, "Close", function()
 		self:ClosePopup()
 	end)
-	controls.version = new("LabelControl", nil, 0, 18, 0, 18, "^7Path of Building for Last Epoch v"..launch.versionNumber)
+	controls.version = new("LabelControl", nil, 0, 18, 0, 18, "^7Last Epoch Planner v"..launch.versionNumber)
 	controls.forum = new("LabelControl", nil, 0, 36, 0, 18, "^7Based on Path of Building Community")
-	controls.github = new("ButtonControl", nil, 0, 62, 438, 18, "^7GitHub page: ^x4040FFhttps://github.com/Musholic/PathOfBuildingForLastEpoch", function(control)
-		OpenURL("https://github.com/Musholic/PathOfBuildingForLastEpoch")
+	controls.github = new("ButtonControl", nil, 0, 62, 438, 18, "^7GitHub page: ^x4040FFhttps://github.com/Musholic/LastEpochPlanner", function(control)
+		OpenURL("https://github.com/Musholic/LastEpochPlanner")
 	end)
 	controls.verLabel = new("ButtonControl", { "TOPLEFT", nil, "TOPLEFT" }, 10, 85, 100, 18, "^7Version history:", function()
 		controls.changelog.list = changeList

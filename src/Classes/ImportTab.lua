@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Import Tab
 -- Import/Export tab for the current build.
@@ -150,7 +150,7 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
 
     -- Build import/export
     self.controls.sectionBuild = new("SectionControl", { "TOPLEFT", self.controls.sectionCharImport, "BOTTOMLEFT" }, 0, 18, 650, 182 + 16, "Build Sharing")
-    self.controls.generateCodeLabel = new("LabelControl", { "TOPLEFT", self.controls.sectionBuild, "TOPLEFT" }, 6, 14, 0, 16, "^7Generate a code to share this build with other Path of Building users:")
+    self.controls.generateCodeLabel = new("LabelControl", { "TOPLEFT", self.controls.sectionBuild, "TOPLEFT" }, 6, 14, 0, 16, "^7Generate a code to share this build with other Last Epoch Planner users:")
     self.controls.generateCode = new("ButtonControl", { "LEFT", self.controls.generateCodeLabel, "RIGHT" }, 4, 0, 80, 20, "Generate", function()
         self.controls.generateCodeOut:SetText(common.base64.encode(Deflate(self.build:SaveDB("code"))):gsub("+", "-"):gsub("/", "_"))
     end)

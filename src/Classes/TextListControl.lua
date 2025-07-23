@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Class: Text List
 -- Simple list control for displaying a block of text

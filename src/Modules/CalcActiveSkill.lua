@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Calc Active Skill
 -- Active skill setup.

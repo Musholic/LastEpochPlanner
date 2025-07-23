@@ -1,4 +1,4 @@
-# Contributing to Path of Building
+# Contributing to Last Epoch Planner
 
 # Table of contents
 1. [Reporting bugs](#reporting-bugs)
@@ -7,9 +7,8 @@
 4. [Setting up a development installation](#setting-up-a-development-installation)
 5. [Setting up a development environment](#setting-up-a-development-environment)
 6. [Keeping your fork up to date](#keeping-your-fork-up-to-date)
-7. [Path of Building development tutorials](#path-of-building-development-tutorials)
-8. [Exporting GGPK data from Path of Exile](#exporting-ggpk-data-from-path-of-exile)
-9. [Using the inbuilt profiler](#Using-the-inbuilt-profiler)
+7. [Last Epoch Planner development tutorials](#path-of-building-development-tutorials)
+8. [Using the inbuilt profiler](#Using-the-inbuilt-profiler)
 
 ## Reporting bugs
 
@@ -58,13 +57,13 @@ The easiest way to make and test changes is by setting up a development installa
 
 1. Clone the repository using this command:
 
-       git clone -b dev https://github.com/Musholic/PathOfBuildingForLastEpoch.git
+       git clone -b dev https://github.com/Musholic/LastEpochPlanner.git
 
-2. Go to the actual folder on your computer where you cloned Path of Building. (e.g. C:/XX/GitHub/PathOfBuilding/runtime/)
+2. Go to the actual folder on your computer where you cloned Last Epoch Planner. (e.g. C:/XX/GitHub/LastEpochPlanner/runtime/)
 
-       cd PathOfBuilding
+       cd LastEpochPlanner
 
-3. Start Path of Building from the repository by running `./runtime/Path{space}of{space}Building.exe`.
+3. Start Last Epoch Planner from the repository by running `./runtime/Path{space}of{space}Building.exe`.
 
 You can now use the shortcut to run the program from the repository. Running the program in this manner automatically enables "Dev Mode", which has some handy debugging feature:
 * `F5` restarts the program in-place (this is what usually happens when an update is applied).
@@ -82,7 +81,7 @@ Note that automatic updates are disabled in Dev Mode.
 
 ### Forcing Dev Mode OFF when using dev branch
 
-Sometimes you may need to force Dev mode OFF when running from the dev branch to debug a specific part of Path of Building (e.g. the update system).
+Sometimes you may need to force Dev mode OFF when running from the dev branch to debug a specific part of Last Epoch Planner (e.g. the update system).
 
 To do so [comment out Line 54 to line 58](./src/Launch.lua#L54-L58) of the [Launch.lua](./src/Launch.lua) file:
 ```
@@ -105,7 +104,7 @@ Note: If you've configured a remote already, you can skip ahead to step 3.
 
 1. Add a new remote repository and name it `upstream`.
 
-       git remote add upstream https://github.com/Musholic/PathOfBuildingForLastEpoch.git
+       git remote add upstream https://github.com/Musholic/LastEpochPlanner.git
 2. Verify that adding the remote worked.
 
        git remote -v
@@ -158,16 +157,16 @@ package.cpath = package.cpath .. ";C:/Users/someuser/.vscode/extensions/tangzx.e
 local dbg = require("emmy_core")
 -- This port must match the Visual Studio Code configuration. Default is 9966.
 dbg.tcpListen("localhost", 9966)
--- Uncomment the next line if you want Path of Building to block until the debugger is attached
+-- Uncomment the next line if you want Last Epoch Planner to block until the debugger is attached
 --dbg.waitIDE()
   ```
-5. Start Path of Building Community
+5. Start Last Epoch Planner Community
 6. Attach the debugger
 
 #### Excluding directories from emmyLua
 
-Depending on the amount of system ram you have available and the amount that gets assigned to the jvm running the emmylua language server you might run into issues when trying to debug Path of building.
-Files in /Data /Export and /TreeData can be massive and cause the emmyLua language server to use a significant amount of memory. Sometimes causing the language server to crash. To avoid this and speed up initialization consider adding an `emmy.config.json` file to the .vscode folder in the root of the Path of building repository with the following content:
+Depending on the amount of system ram you have available and the amount that gets assigned to the jvm running the emmylua language server you might run into issues when trying to debug Last Epoch Planner.
+Files in /Data /Export and /TreeData can be massive and cause the emmyLua language server to use a significant amount of memory. Sometimes causing the language server to crash. To avoid this and speed up initialization consider adding an `emmy.config.json` file to the .vscode folder in the root of the Last Epoch Planner repository with the following content:
 
 ```
 {
@@ -190,7 +189,7 @@ Files in /Data /Export and /TreeData can be massive and cause the emmyLua langua
 2. Select "x86" version.
 3. Select if you want the program to block (checkbox) until you attached the debugger (useful if you have to debug the startup process).
 4. Copy the generated code snippet directly below `function launch:OnInit()` in `./src/Launch.lua`.
-5. Start Path of Building Community
+5. Start Last Epoch Planner Community
 6. Attach the debugger
 
 #### Miscellaneous tips
@@ -201,7 +200,7 @@ If you're using linux you can run the ./runtime/Path{space}of{space}Building.exe
 
 ## Testing
 
-PoB uses the [Busted](https://olivinelabs.com/busted/) framework to run its tests.  Tests are stored under `spec/System` and run automatically when a PR is modified.
+LEP uses the [Busted](https://olivinelabs.com/busted/) framework to run its tests.  Tests are stored under `spec/System` and run automatically when a PR is modified.
 More tests can be added to this folder to test specific functionality, or new test builds can be added to ensure nothing changed that wasn't intended. 
 
 ### Running tests
@@ -217,7 +216,7 @@ Docker alternative:
 
 ### Creating new test builds or fixing an existing build
 
-Sometimes a change will be made that intends to change the stats garnered by PoB, which will break our tests.
+Sometimes a change will be made that intends to change the stats garnered by LEP, which will break our tests.
 1. Add the new build XML (if applicable) to the `TestBuilds` folder
 2. Run `busted --lua=luajit -r generate` to generate a LUA file that contains the current stats of that build
 3. Run `busted --lua=luajit` and the tests should pass
@@ -227,36 +226,11 @@ Docker alternative:
 1. Add the new build XML (if applicable) to the `TestBuilds` folder
 2. Run `docker-compose up -d` to generate a LUA file that contains the current stats of that build and run the tests
 
-## Path of Building development tutorials
+## Last Epoch Planner development tutorials
 
 * [How are mods parsed?](docs/addingMods.md)
 * [Mod Syntax](docs/modSyntax.md)
-* [How skills work in Path of Building](docs/addingSkills.md)
-
-## Exporting GGPK data from Path of Exile
-
-Note: This tutorial assumes that you are already familiar with the GGPK and its structure. [poe-tool-dev/ggpk.discussion](https://github.com/poe-tool-dev/ggpk.discussion/wiki)
-is a good starting point.
-
-The `./src/Data` folder contains generated files which are created using the scripts in the `./src/Export/Scripts` folder based on Path of Exile game data. 
-If you change any logic/configuration in `./src/Export`, you will need to regenerate the appropriate `./src/Data` files. You can do so by running the `./src/Export` scripts using the `.dat` viewer at `./src/Export/Launch.lua`:
-
-### Obtain an Oodle extractor
-Note: For this tutorial, you will need a working installation of [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/)
-as well as some familiarity with build tools such as [CMake](https://cmake.org).
-1. In Visual Studio, clone the following repository using this command:
-
-        git clone --recurse-submodules -b master https://github.com/zao/ooz
-2. Configure CMake.
-3. Build `bun_extract_file.exe`, `libbun.dll` and `libooz.dll`.
-
-### Set up the exporter   
-1. Copy `bun_extract_file.exe`, `libbun.dll` and `libooz.dll` to `./src/Export/ggpk/`.
-2. Create a shortcut to `./runtime/Path{space}of{space}Building.exe` with the path to `./src/Export/Launch.lua` as first argument. You should end up with something like: `"<path to repo>\runtime\Path{space}of{space}Building.exe" "<path to repo>\src\Export\Launch.lua"`.
-3. Run the shortcut, and the GGPK data viewer UI will appear. If you get an error, be sure you're using the latest release of Path of Building Community.
-4. Paste the path to `Content.ggpk` (or, for Steam users, `C:\Program Files (x86)\Steam\steamapps\common\Path of Exile`) into the text box in the top left, and hit `Enter` to read the GGPK. If successful, you will see a list of the data tables in the GGPK file. Note: This will not work on the GGPK from the torrent file released before league launches, as it contains no `Data` section.
-5. Click `Scripts >>` to show the list of available export scripts. Double-clicking a script will run it, and the box to the right will show any output from the script.
-6. If you run into any errors, update the code in `./src/Export` as necessary and try again.
+* [How skills work in Last Epoch Planner](docs/addingSkills.md)
 
 ## Using the inbuilt profiler
 The profiler is found at https://github.com/charlesmallah/lua-profiler and is written entirely in lua under a MIT license.

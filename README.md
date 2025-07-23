@@ -1,4 +1,4 @@
-# Path of Building For Last Epoch
+# Last Epoch Planner
 
 This is a fork of Path Of Building adapted to work for the game **Last Epoch**.
 
@@ -28,7 +28,7 @@ The following features are supported (or partially):
 Note that **most content (docs or code) is outdated** since they only apply to the original project. Everything should be migrated as time goes by.
 
 ## Running
-The current build can be run by running `./runtime/Path of Building for Last Epoch.exe`. 
+The current build can be run by running `./runtime/Last Epoch Planner.exe`. 
 
 ## Linux support
 For linux, there may be a native support in the future but for now it runs fine with wine

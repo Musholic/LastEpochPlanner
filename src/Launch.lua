@@ -1,12 +1,12 @@
 #@ SimpleGraphic
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Launch
 -- Program entry point; loads and runs the Main module within a protected environment
 --
 
 local startTime = GetTime()
-APP_NAME = "Path of Building for Last Epoch"
+APP_NAME = "Last Epoch Planner"
 
 SetWindowTitle(APP_NAME)
 ConExecute("set vid_mode 8")
@@ -42,7 +42,7 @@ function launch:OnInit()
 	end
 	local xml = require("xml")
 	local localManXML = xml.LoadXMLFile("manifest.xml") or xml.LoadXMLFile("../manifest.xml")
-	if localManXML and localManXML[1].elem == "PoBVersion" then
+	if localManXML and localManXML[1].elem == "LEPVersion" then
 		for _, node in ipairs(localManXML[1]) do
 			if type(node) == "table" then
 				if node.elem == "Version" then
@@ -264,7 +264,7 @@ function launch:DownloadPage(url, callback, params)
 			easy:setopt(curl.OPT_HTTPHEADER, header)
 		end
 		easy:setopt_url(url)
-		easy:setopt(curl.OPT_USERAGENT, "Path of Building for Last Epoch/]]..self.versionNumber..[[")
+		easy:setopt(curl.OPT_USERAGENT, "Last Epoch Planner/]]..self.versionNumber..[[")
 		easy:setopt(curl.OPT_ACCEPT_ENCODING, "")
 		if requestBody then
 			easy:setopt(curl.OPT_POST, true)

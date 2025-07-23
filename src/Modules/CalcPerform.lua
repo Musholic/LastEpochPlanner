@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Calc Perform
 -- Manages the offence/defence calculations.

@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Stat to internal modifier mapping table for skills
 -- Stat data (c) Grinding Gear Games

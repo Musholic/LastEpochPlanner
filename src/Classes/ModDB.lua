@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Mod DB
 -- Stores modifiers in a database, with modifiers separated by stat

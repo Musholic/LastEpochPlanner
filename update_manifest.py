@@ -51,7 +51,7 @@ def _alphanumeric(key: str) -> list[int | str]:
 
 
 def create_manifest(version: str | None = None, replace: bool = False) -> None:
-    """Generate new SHA1 hashes and version number for Path of Building's manifest file.
+    """Generate new SHA1 hashes and version number for Last Epoch Planner's manifest file.
 
     :param version: Three-part version number following https://semver.org/.
     :param replace: Whether to overwrite the existing manifest file.
@@ -78,7 +78,7 @@ def create_manifest(version: str | None = None, replace: bool = False) -> None:
         logging.critical(f"Manifest configuration file not found in path '{base_path}'")
         return
 
-    base_url = "https://raw.githubusercontent.com/Musholic/PathOfBuildingForLastEpoch/{branch}/"
+    base_url = "https://raw.githubusercontent.com/Musholic/LastEpochPlanner/{branch}/"
     parts: list[dict[str, str]] = []
     for part in config.sections():
         url = base_url + config[part]["path"]
@@ -119,7 +119,7 @@ def create_manifest(version: str | None = None, replace: bool = False) -> None:
 
     files.sort(key=lambda attr: (attr["part"], _alphanumeric(attr["name"])))
 
-    root = Et.Element("PoBVersion")
+    root = Et.Element("LEPVersion")
     Et.SubElement(root, "Version", number=new_version)
     for attributes in parts:
         Et.SubElement(root, "Source", attributes)
@@ -134,12 +134,12 @@ def create_manifest(version: str | None = None, replace: bool = False) -> None:
 
 
 def cli() -> None:
-    """CLI for conveniently updating Path of Building's manifest file."""
+    """CLI for conveniently updating Last Epoch Planner's manifest file."""
     import argparse
 
     parser = argparse.ArgumentParser(
         usage="%(prog)s [options]",
-        description="Update Path of Building's manifest file for a new release.",
+        description="Update Last Epoch Planner's manifest file for a new release.",
         allow_abbrev=False,
     )
     parser.add_argument("--version", action="version", version="2.0.0")

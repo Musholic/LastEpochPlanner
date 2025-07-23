@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Class: Popup Dialog
 -- Popup Dialog Box with a configurable list of controls

@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Calc Defence
 -- Performs defence calculations.
@@ -41,6 +41,7 @@ function calcs.armourReductionF(armour, raw)
 	if armour == 0 and raw == 0 then
 		return 0
 	end
+	-- TODO: Implement proper armour reduction calculation
 	return (armour / (armour + raw * 5) * 100)
 end
 
@@ -984,6 +985,7 @@ function calcs.buildDefenceEstimations(env, actor)
 		end
 		output[damageType.."takenFlat"] = takenFlat
 		if percentOfArmourApplies > 0 then
+		--TODO: debug damage value
 			armourReduct = calcs.armourReduction(effectiveAppliedArmour, damage * resMult)
 			armourReduct = m_min(output.DamageReductionMax, armourReduct)
 			if impaleDamage > 0 then

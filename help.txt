@@ -1,6 +1,6 @@
 ---[Help File Introduction]
 
-This file contains a list of shortcuts and other misc information about PoB for Last Epoch functionality
+This file contains a list of shortcuts and other misc information about Last Epoch Planner functionality
 While holding shift scroll bars in the help section and version history will jump to the previous/next section while scrolling
 
 ---[Contents]
@@ -105,7 +105,7 @@ This can be useful for seeing how much damage you are getting from specific skil
 
 ---[Items Tab]
 
-The Item Tab in Path of Building allows you to plan out the gear you will use for your character. To access the Item Tab, click on the "Items" tab located at the top of the screen.
+The Item Tab in Last Epoch Planner allows you to plan out the gear you will use for your character. To access the Item Tab, click on the "Items" tab located at the top of the screen.
 
 From here, you can view all of the gear slots for your character, such as your weapon, chest armour, and boots. To add an item to a slot, click on the arrow button on the right side of the slot. This will bring up a list of all the items available in your build, which are visible in the "All items" window.
 If you wish to add more items, you can copy and paste items using CTRL+C and CTRL+V into the "Shared items" window. Additionally, you can craft items using the "Craft item..." button on the top or create completely customizable items using the "Create custom..." option.

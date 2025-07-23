@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Mod Tools
 -- Various functions for dealing with modifiers

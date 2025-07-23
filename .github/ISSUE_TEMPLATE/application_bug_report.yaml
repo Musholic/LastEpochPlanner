@@ -1,5 +1,5 @@
 name: Application bug report
-description: Create a bug report to help us fix an issue in Path of Building
+description: Create a bug report to help us fix an issue in Last Epoch Planner
 labels: [bug]
 body:
   - type: markdown
@@ -12,29 +12,29 @@ body:
     attributes:
       label: Check version
       options:
-        - label: I'm running the latest version of Path of Building and I've verified this by checking the [changelog](https://github.com/Musholic/PathOfBuildingForLastEpoch/blob/master/CHANGELOG.md)
+        - label: I'm running the latest version of Last Epoch Planner and I've verified this by checking the [changelog](https://github.com/Musholic/LastEpochPlanner/blob/master/CHANGELOG.md)
           required: true
   - type: checkboxes
     id: duplicates
     attributes:
       label: Check for duplicates
       options:
-        - label: I've checked for duplicate open **and closed** issues by using the search function of the [issue tracker](https://github.com/Musholic/PathOfBuildingForLastEpoch/issues?q=is%3Aissue)
+        - label: I've checked for duplicate open **and closed** issues by using the search function of the [issue tracker](https://github.com/Musholic/LastEpochPlanner/issues?q=is%3Aissue)
           required: true
   - type: textarea
     id: expected
     attributes:
-      label: How is Path of Building expected to behave?
+      label: How is Last Epoch Planner expected to behave?
       description: Please write a clear and concise description of what should happen.
-      placeholder: E.g. When I resize PoB all [...] should be accessible.
+      placeholder: E.g. When I resize LEP all [...] should be accessible.
     validations:
       required: true
   - type: textarea
     id: actual
     attributes:
-      label: How does Path of Building behave?
+      label: How does Last Epoch Planner behave?
       description: Please write a clear and concise description of what actually happens.
-      placeholder: E.g. When I resize PoB some [...] become inaccessible. 
+      placeholder: E.g. When I resize LEP some [...] become inaccessible. 
     validations:
       required: true
   - type: textarea

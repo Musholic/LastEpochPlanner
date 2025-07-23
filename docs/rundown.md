@@ -1,4 +1,4 @@
-# Path of Building Community Fork Codebase Rundown
+# Last Epoch Planner Community Fork Codebase Rundown
 
 ## Layout
 * ### Assets
@@ -138,9 +138,9 @@
 * **GameVersions.lua**
     Contains global variables to identify and convert outdated builds. Also contains global table of passive skill tree versions used to upgrade to newer skill tree versions.
 * **HeadlessWrapper.lua**
-    Provides stubs for PoB's graphics host and its environment. Can be used to run PoB from the command line. You would still need to implement at least `Deflate()` and `Inflate()` to import/export builds. Useful for automated testing.
+    Provides stubs for LEP's graphics host and its environment. Can be used to run LEP from the command line. You would still need to implement at least `Deflate()` and `Inflate()` to import/export builds. Useful for automated testing.
 * **Launch.lua**
-    Updates on first start, discerns whether PoB is running in dev mode, initialises renderer, loads `Main` module, has callbacks for exiting the program, advancing frames, registering key presses, launching non-blocking subscripts, updating, notification and error prompts.
+    Updates on first start, discerns whether LEP is running in dev mode, initialises renderer, loads `Main` module, has callbacks for exiting the program, advancing frames, registering key presses, launching non-blocking subscripts, updating, notification and error prompts.
 * **LaunchInstall.lua**
     Downloads and installs the auto-updater on finishing program installation.
 * **LICENSE.md**
@@ -150,7 +150,7 @@
 * **README.md**
     Project overview
 * **runtime-win32.zip**
-    Contains PoB executable, update executable, compiled libraries `libcurl` (HTTPS requests), `lcurl` (libcurl bindings for Lua), `lua51` (LuaJIT 5.1), `lzip` (DEFLATE), `SimpleGraphic` (custom 2D graphics host), Lua libraries for Base64, JSON, SHA-1, XML, and fonts.
+    Contains LEP executable, update executable, compiled libraries `libcurl` (HTTPS requests), `lcurl` (libcurl bindings for Lua), `lua51` (LuaJIT 5.1), `lzip` (DEFLATE), `SimpleGraphic` (custom 2D graphics host), Lua libraries for Base64, JSON, SHA-1, XML, and fonts.
 * **tree-2_6.zip**
 * **tree-3_6.zip**
 * **tree-3_7.zip**

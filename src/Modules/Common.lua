@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Common
 -- Libraries, functions and classes used by various modules.

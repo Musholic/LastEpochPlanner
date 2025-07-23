@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Stat Describer
 -- Manages stat description files, and provides stat descriptions

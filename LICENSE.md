@@ -1,4 +1,4 @@
-Path of Building For Last Epoch:
+Last Epoch Planner:
 
 *******************************************************************************
 

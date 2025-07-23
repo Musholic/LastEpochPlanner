@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Class: RectangleOutline Control
 -- Simple Outline Only Rectangle control

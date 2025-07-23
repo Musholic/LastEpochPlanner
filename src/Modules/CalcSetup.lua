@@ -1,4 +1,4 @@
--- Path of Building
+-- Last Epoch Planner
 --
 -- Module: Calc Setup
 -- Initialises the environment for calculations.

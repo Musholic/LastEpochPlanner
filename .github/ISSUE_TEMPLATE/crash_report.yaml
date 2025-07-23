@@ -12,14 +12,14 @@ body:
     attributes:
       label: Check version
       options:
-        - label: I'm running the latest version of Path of Building and I've verified this by checking the [changelog](https://github.com/Musholic/PathOfBuildingForLastEpoch/blob/master/CHANGELOG.md)
+        - label: I'm running the latest version of Last Epoch Planner and I've verified this by checking the [changelog](https://github.com/Musholic/LastEpochPlanner/blob/master/CHANGELOG.md)
           required: true
   - type: checkboxes
     id: duplicates
     attributes:
       label: Check for duplicates
       options:
-        - label: I've checked for duplicate open **and closed** issues by using the search function of the [issue tracker](https://github.com/Musholic/PathOfBuildingForLastEpoch/issues?q=is%3Aissue)
+        - label: I've checked for duplicate open **and closed** issues by using the search function of the [issue tracker](https://github.com/Musholic/LastEpochPlanner/issues?q=is%3Aissue)
           required: true
   - type: textarea
     id: context
@@ -39,7 +39,7 @@ body:
         Operating System: Windows 10
         Graphics: Nvidia gtx 1060; Driver xxxx
         File Path / File Permissions: e.g. non-ascii characters.
-        Other notable system configuration information: e.g. a certain app might be conflicting with Path of Building.
+        Other notable system configuration information: e.g. a certain app might be conflicting with Last Epoch Planner.
     validations:
       required: true
   - type: textarea
@@ -62,8 +62,8 @@ body:
       description: Provide a build code if the crash/graphical issue is caused by a certain build.
       placeholder: |
         This can be either a code copied from the "Import/Export Build" tab or a link to a shared build. 
-        In the case where Path of Building crashes/doesn't work on startup or when you open a build.
-        Go to your builds folder (default %userprofile%/Documents/Path of Building/Builds) and copy the problematic build's .xml contents into a pastebin and supply the link.
+        In the case where Last Epoch Planner crashes/doesn't work on startup or when you open a build.
+        Go to your builds folder (default %userprofile%/Documents/Last Epoch Planner/Builds) and copy the problematic build's .xml contents into a pastebin and supply the link.
       render: shell
     validations:
       required: false
