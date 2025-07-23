@@ -328,7 +328,7 @@ return {
 -- attributes/resists
 { 1, "Attributes", 2, colorCodes.NORMAL, {{ defaultCollapsed = false, label = "Attributes", data = generateTableByValues({},
 		Attributes, function(i, stat)
-			return { label = LongAttributes[i], { format = "{0:output:" .. stat .. "}", { breakdown = stat }, { modName = stat }, }, }
+			return { label = AttributesColored[i], { format = "{0:output:" .. stat .. "}", { breakdown = stat }, { modName = stat }, }, }
 		end),
 }
 } },

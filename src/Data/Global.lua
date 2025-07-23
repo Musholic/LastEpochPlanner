@@ -60,10 +60,13 @@ colorCodes = {
 	SAPBG = "^x261500",
 	SCOURGE = "^xFF6E25",
 	CRUCIBLE = "^xFFA500",
+
+	VITALITY = "^xFFFD60",
+	STRENGTH = "^xFF7B61",
+	DEXTERITY = "^x9EFF76",
+	INTELLIGENCE = "^x8EFFFF",
+	ATTUNEMENT = "^xFD9CFF",
 }
-colorCodes.STRENGTH = colorCodes.MARAUDER
-colorCodes.DEXTERITY = colorCodes.RANGER
-colorCodes.INTELLIGENCE = colorCodes.WITCH
 
 colorCodes.LIFE = colorCodes.MARAUDER
 colorCodes.MANA = colorCodes.WITCH
@@ -107,8 +110,15 @@ DamageTypes = {
 	"Void"
 }
 
-Attributes = {"Str","Dex","Int","Att","Vit"}
-LongAttributes = {"Strength","Dexterity","Intelligence","Attunement","Vitality"}
+Attributes = {"Vit","Str","Dex","Int","Att"}
+LongAttributes = {"Vitality","Strength","Dexterity","Intelligence","Attunement"}
+AttributesColored = {
+    colorCodes.VITALITY.."Vitality",
+    colorCodes.STRENGTH.."Strength",
+    colorCodes.DEXTERITY.."Dexterity",
+    colorCodes.INTELLIGENCE.."Intelligence",
+    colorCodes.ATTUNEMENT.."Attunement"
+}
 
 DamageTypesColored = {
 	colorCodes.FIRE.."Fire",

@@ -66,7 +66,7 @@ data.powerStatList = {
 }
 
 for i, attribute in ipairs(Attributes) do
-	t_insert(data.powerStatList, { stat=attribute, label=LongAttributes[i] })
+	t_insert(data.powerStatList, { stat=attribute, label=AttributesColored[i] })
 end
 
 tableInsertAll(data.powerStatList, {
@@ -75,8 +75,8 @@ tableInsertAll(data.powerStatList, {
 	{ stat = "SecondMinimalMaximumHitTaken", label = "Eff. Maximum Hit Taken" }
 })
 
-for _, damageType in ipairs(DamageTypes) do
-	t_insert(data.powerStatList, { stat=damageType .. "TakenHit", label="Taken " .. damageType .. " dmg", transform=function(value) return -value end })
+for i, damageType in ipairs(DamageTypes) do
+	t_insert(data.powerStatList, { stat=damageType .. "TakenHit", label=DamageTypeColors[i] .. "Taken " .. damageType .. " dmg", transform=function(value) return -value end })
 end
 
 tableInsertAll(data.powerStatList,{
