@@ -1,3 +1,16 @@
+VERSION[0.7.0][2025/07/23]
+<!-- Release notes generated using configuration in .github/release.yml at dev -->
+
+* Support offline import on linux (Musholic)
+* Correctly import mods and items on offline import (Musholic)
+* Fix nihilis mods due to a mix of positive and negative values in range (Musholic)
+* Add blessings support (Musholic)
+* Fix base stats (Musholic)
+* Fix/Improve stats for: Movespeed, All resistances, Mana Regen (Musholic)
+* Rename the tool to Last Epoch Planner + update runtimes (Musholic)
+* Use attribute colors (Musholic)
+
+
 VERSION[0.6.0][2025/07/02]
 
 --- New to Last Epoch Planner ---

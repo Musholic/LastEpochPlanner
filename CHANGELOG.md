@@ -1,5 +1,24 @@
 # Changelog
 
+## [v0.7.0](https://github.com/Musholic/PathOfBuildingForLastEpoch/tree/v0.7.0) (2025/07/23)
+
+[Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.6.0...v0.7.0)
+
+<!-- Release notes generated using configuration in .github/release.yml at dev -->
+
+## What's Changed
+### Other changes
+- Support offline import on linux [\#21](https://github.com/Musholic/LastEpochPlanner/pull/21) ([Musholic](https://github.com/Musholic))
+- Correctly import mods and items on offline import [\#22](https://github.com/Musholic/LastEpochPlanner/pull/22) ([Musholic](https://github.com/Musholic))
+- Fix nihilis mods due to a mix of positive and negative values in range [\#23](https://github.com/Musholic/LastEpochPlanner/pull/23) ([Musholic](https://github.com/Musholic))
+- Add blessings support [\#24](https://github.com/Musholic/LastEpochPlanner/pull/24) ([Musholic](https://github.com/Musholic))
+- Fix base stats [\#25](https://github.com/Musholic/LastEpochPlanner/pull/25) ([Musholic](https://github.com/Musholic))
+- Fix/Improve stats for: Movespeed, All resistances, Mana Regen [\#26](https://github.com/Musholic/LastEpochPlanner/pull/26) ([Musholic](https://github.com/Musholic))
+- Rename the tool to Last Epoch Planner + update runtimes [\#31](https://github.com/Musholic/LastEpochPlanner/pull/31) ([Musholic](https://github.com/Musholic))
+- Use attribute colors [\#32](https://github.com/Musholic/LastEpochPlanner/pull/32) ([Musholic](https://github.com/Musholic))
+
+
+
 ## [v0.6.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.6.0) (2025/07/02)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.5.1...v0.6.0)
