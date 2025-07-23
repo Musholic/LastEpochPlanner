@@ -4,20 +4,30 @@
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.6.0...v0.7.0)
 
-<!-- Release notes generated using configuration in .github/release.yml at dev -->
-
 ## What's Changed
-### Other changes
-- Support offline import on linux [\#21](https://github.com/Musholic/LastEpochPlanner/pull/21) ([Musholic](https://github.com/Musholic))
-- Correctly import mods and items on offline import [\#22](https://github.com/Musholic/LastEpochPlanner/pull/22) ([Musholic](https://github.com/Musholic))
-- Fix nihilis mods due to a mix of positive and negative values in range [\#23](https://github.com/Musholic/LastEpochPlanner/pull/23) ([Musholic](https://github.com/Musholic))
+### New
 - Add blessings support [\#24](https://github.com/Musholic/LastEpochPlanner/pull/24) ([Musholic](https://github.com/Musholic))
-- Fix base stats [\#25](https://github.com/Musholic/LastEpochPlanner/pull/25) ([Musholic](https://github.com/Musholic))
-- Fix/Improve stats for: Movespeed, All resistances, Mana Regen [\#26](https://github.com/Musholic/LastEpochPlanner/pull/26) ([Musholic](https://github.com/Musholic))
 - Rename the tool to Last Epoch Planner + update runtimes [\#31](https://github.com/Musholic/LastEpochPlanner/pull/31) ([Musholic](https://github.com/Musholic))
+
+### User interface
 - Use attribute colors [\#32](https://github.com/Musholic/LastEpochPlanner/pull/32) ([Musholic](https://github.com/Musholic))
 
+### Fixed calculations
+- Fix base stats [\#25](https://github.com/Musholic/LastEpochPlanner/pull/25) ([Musholic](https://github.com/Musholic))
+- Fix/Improve stats for: Movespeed, All resistances, Mana Regen [\#26](https://github.com/Musholic/LastEpochPlanner/pull/26) ([Musholic](https://github.com/Musholic))
+- Fix nihilis mods due to a mix of positive and negative values in range [\#23](https://github.com/Musholic/LastEpochPlanner/pull/23) ([Musholic](https://github.com/Musholic))
 
+### Fixed bugs
+- Support offline import on linux [\#21](https://github.com/Musholic/LastEpochPlanner/pull/21) ([Musholic](https://github.com/Musholic))
+- Correctly import mods and items on offline import [\#22](https://github.com/Musholic/LastEpochPlanner/pull/22) ([Musholic](https://github.com/Musholic))
+
+## Mod parsing progression
+* **Out of 13,091 mods, 4,519 (36%) mods are recognized by the parser**. Even if a mod is recognized, it's not guaranteed that it will work as expected.
+* The total amount of mods is made of
+    * the implicits (one for each implicit of each item)
+    * the prefixes and suffixes (one for each tier of each)
+    * the unique modifiers (one for each mod of each unique)
+    * the passive and skill trees (one for each mod of each node)
 
 ## [v0.6.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.6.0) (2025/07/02)
 
