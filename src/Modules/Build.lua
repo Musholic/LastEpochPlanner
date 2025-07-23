@@ -234,7 +234,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 	}
 
 	for i,stat in ipairs(Attributes) do
-		local statLabel = LongAttributes[i]
+		local statLabel = AttributesColored[i]
 		t_insert(self.displayStats, { stat = stat, label = statLabel, fmt = "d" })
 		t_insert(self.displayStats, { stat = "Req" .. stat, label = statLabel .. " Required", fmt = "d", lowerIsBetter = true, condFunc = function(v,o) return v > o[stat] end, warnFunc = function(v) return "You do not meet the " .. statLabel .. " requirement" end })
 	end
