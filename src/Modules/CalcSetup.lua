@@ -414,7 +414,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 
 		-- Initialise enemy modifier database
 		calcs.initModDB(env, enemyDB)
-		enemyDB:NewMod("Accuracy", "BASE", env.data.monsterAccuracyTable[env.enemyLevel], "Base")
 		enemyDB:NewMod("Condition:AgainstDamageOverTime", "FLAG", true, "Base", ModFlag.Dot, { type = "ActorCondition", actor = "player", var = "Combat" })
 
 		-- Add mods from the config tab

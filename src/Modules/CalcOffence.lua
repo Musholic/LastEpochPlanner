@@ -618,13 +618,7 @@ function calcs.offence(env, actor, activeSkill)
 		end
 
 	end
-	if skillModList:Flag(nil, "LightRadiusAppliesToAccuracy") then
-		-- Light Radius conversion from Corona Solaris
-		for i, value in ipairs(skillModList:Tabulate("INC",  { }, "LightRadius")) do
-			local mod = value.mod
-			skillModList:NewMod("Accuracy", "INC", mod.value, mod.source, mod.flags, mod.keywordFlags, unpack(mod))
-		end
-	end
+
 	if skillModList:Flag(nil, "LightRadiusAppliesToAreaOfEffect") then
 		-- Light Radius conversion from Wreath of Phrecia
 		for i, value in ipairs(skillModList:Tabulate("INC",  { }, "LightRadius")) do
@@ -1226,24 +1220,6 @@ function calcs.offence(env, actor, activeSkill)
 		output.WarcryCastTime = calcWarcryCastTime(skillModList, skillCfg, actor)
 	end
 
-	if skillFlags.corpse then
-		output.CorpseLevel = skillModList:Sum("BASE", skillCfg, "CorpseLevel")
-		output.BaseCorpseLife = env.data.monsterLifeTable[output.CorpseLevel or 1] * (env.data.monsterVarietyLifeMult[skillData.corpseMonsterVariety] or 1) * (env.data.mapLevelLifeMult[env.enemyLevel] or 1)
-		output.CorpseLifeInc = 1 + (skillModList:Sum("INC", skillCfg, "CorpseLife") or 0) / 100
-		output.CorpseLife = output.BaseCorpseLife * output.CorpseLifeInc
-		if breakdown then
-			breakdown.CorpseLife = {
-				s_format("%d ^8(base life of a level %d monster)", env.data.monsterLifeTable[output.CorpseLevel or 1], output.CorpseLevel or "n/a"),
-				s_format("x %.2f ^8(%s variety multiplier)", env.data.monsterVarietyLifeMult[skillData.corpseMonsterVariety] or 1, skillData.corpseMonsterVariety),
-				s_format("x %.2f ^8(map level %d monster life multiplier from config)", env.data.mapLevelLifeMult[env.enemyLevel] or 1, env.enemyLevel),
-				s_format(" = %d ^8(base corpse life)", output.BaseCorpseLife),
-				s_format(""),
-				s_format("x %.2f ^8(corpse maximum life increases)", output.CorpseLifeInc),
-				s_format(" = %d", output.CorpseLife),
-			}
-		end
-	end
-
 	-- Skill duration
 	local debuffDurationMult = 1
 	if env.mode_effective then
@@ -1487,22 +1463,6 @@ function calcs.offence(env, actor, activeSkill)
 
 	runSkillFunc("preDamageFunc")
 
-	-- Handle corpse and enemy explosions
-	local monsterLife = skillData.corpseLife or (env.enemyLevel and data.monsterLifeTable[env.enemyLevel] or 100)
-	if skillData.explodeCorpse and (skillData.corpseLife or env.enemyLevel) then
-		local damageType = skillData.corpseExplosionDamageType or "Fire"
-		skillData[damageType.."BonusMin"] = monsterLife * ( skillData.corpseExplosionLifeMultiplier or skillData.selfFireExplosionLifeMultiplier )
-		skillData[damageType.."BonusMax"] = monsterLife * ( skillData.corpseExplosionLifeMultiplier or skillData.selfFireExplosionLifeMultiplier )
-	end
-	if skillFlags.monsterExplode then
-		for _, damageType in pairs(dmgTypeList) do
-			local percentage = skillData[damageType.."EffectiveExplodePercentage"]
-			local base = (percentage or 0) * monsterLife / 100
-			skillData[damageType.."Min"] = base
-			skillData[damageType.."Max"] = base
-		end
-	end
-
 	-- Cache global damage disabling flags
 	local canDeal = { }
 	for _, damageType in pairs(dmgTypeList) do
@@ -1563,10 +1523,8 @@ function calcs.offence(env, actor, activeSkill)
 		breakdown = breakdown,
 	})
 
-	local storedMainHandAccuracy = nil
-	local storedMainHandAccuracyVsEnemy = nil
 	local storedSustainedTraumaBreakdown = { }
-	-- Calculate how often you hit (speed, accuracy, block, etc)
+	-- Calculate how often you hit (speed, block, etc)
 	for _, pass in ipairs(passList) do
 		globalOutput, globalBreakdown = output, breakdown
 		local source, output, cfg, breakdown = pass.source, pass.output, pass.cfg, pass.breakdown
@@ -1577,47 +1535,6 @@ function calcs.offence(env, actor, activeSkill)
 			output.AverageBurstHits = output.Repeats
 		end
 
-		-- Calculate hit chance
-		local base = skillModList:Sum("BASE", cfg, "Accuracy")
-		local baseVsEnemy = skillModList:Sum("BASE", cfg, "Accuracy", "AccuracyVsEnemy")
-		local inc = skillModList:Sum("INC", cfg, "Accuracy")
-		local incVsEnemy = skillModList:Sum("INC", cfg, "Accuracy", "AccuracyVsEnemy")
-		local more = skillModList:More("MORE", cfg, "Accuracy")
-		local moreVsEnemy = skillModList:More("MORE", cfg, "Accuracy", "AccuracyVsEnemy")
-
-		output.Accuracy = m_max(0, m_floor(base * (1 + inc / 100) * more))
-		local accuracyVsEnemy = m_max(0, m_floor(baseVsEnemy * (1 + incVsEnemy / 100) * moreVsEnemy))
-		if breakdown then
-			breakdown.Accuracy = { }
-			breakdown.multiChain(breakdown.Accuracy, {
-				base = { "%g ^8(base)", base },
-				{ "%.2f ^8(increased/reduced)", 1 + inc / 100 },
-				{ "%.2f ^8(more/less)", more },
-				total = s_format("= %g", output.Accuracy)
-			})
-			if output.Accuracy ~= accuracyVsEnemy then
-				t_insert(breakdown.Accuracy, s_format(""))
-				breakdown.multiChain(breakdown.Accuracy, {
-					label = "Effective Accuracy vs Enemy",
-					base = { "%g ^8(base)", baseVsEnemy },
-					{ "%.2f ^8(increased/reduced)", 1 + incVsEnemy / 100 },
-					{ "%.2f ^8(more/less)", moreVsEnemy },
-					total = s_format("= %g", accuracyVsEnemy)
-				})
-			end
-		end
-		if skillModList:Flag(nil, "Condition:OffHandAccuracyIsMainHandAccuracy") and pass.label == "Main Hand" then
-			storedMainHandAccuracy = output.Accuracy
-			storedMainHandAccuracyVsEnemy = accuracyVsEnemy
-		elseif skillModList:Flag(nil, "Condition:OffHandAccuracyIsMainHandAccuracy") and pass.label == "Off Hand" and storedMainHandAccuracy then
-			output.Accuracy = storedMainHandAccuracy
-			accuracyVsEnemy = storedMainHandAccuracyVsEnemy
-			if breakdown then
-				breakdown.Accuracy = {
-					"Using Main Hand Accuracy due to Mastery: "..output.Accuracy,
-				}
-			end
-		end
 		-- A hit cannot miss in Last Epoch
 		output.AccuracyHitChance = 100
 		--enemy block chance
@@ -1644,10 +1561,6 @@ function calcs.offence(env, actor, activeSkill)
 				}
 			end
 		end
-
-		-- Check Precise Technique Keystone condition per pass as MH/OH might have different values
-		local condName = pass.label:gsub(" ", "") .. "AccRatingHigherThanMaxLife"
-		skillModList.conditions[condName] = output.Accuracy > env.player.output.Life
 
 		-- Calculate attack/cast speed
 		if activeSkill.activeEffect.grantedEffect.castTime == 0 and not skillData.castTimeOverride and not skillData.triggered then

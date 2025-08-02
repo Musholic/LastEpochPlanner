@@ -635,7 +635,6 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 			minion.level = env.build and env.build.characterLevel
 			minion.itemList = { }
 			minion.uses = activeGrantedEffect.minionUses
-			minion.lifeTable = (minion.minionData.lifeScaling == "AltLife1" and env.data.monsterLifeTable2) or (minion.minionData.lifeScaling == "AltLife2" and env.data.monsterLifeTable3) or (isSpectre and env.data.monsterLifeTable) or env.data.monsterAllyLifeTable
 			minion.weaponData1 = env.player.weaponData1
 			minion.weaponData2 = { }
 		end
