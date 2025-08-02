@@ -105,6 +105,15 @@
     "name": "StormTotem",
     "life": "120"
   },
+  "Summon_Raptor": {
+    "skillList": [
+      "FeatheredRaptorJumpSlash",
+      "BasicEnemyMelee"
+    ],
+    "modList": [],
+    "name": "PrimalRaptor",
+    "life": "240"
+  },
   "SummonedAbomination": {
     "skillList": [
       "Abomination Melee"
