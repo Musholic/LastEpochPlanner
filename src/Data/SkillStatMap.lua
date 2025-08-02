@@ -1410,15 +1410,6 @@ local result = {
 ["damage_+%_per_power_charge"] = {
 	mod("Damage", "INC", nil, 0, 0, { type = "Multiplier", var = "PowerCharge" })
 },
-["accuracy_rating"] = {
-	mod("Accuracy", "BASE", nil),
-},
-["accuracy_rating_+%"] = {
-	mod("Accuracy", "INC", nil),
-},
-["accuracy_rating_+%_when_on_low_life"] = {
-	mod("Accuracy", "INC", nil, 0, 0, { type = "Condition", var = "LowLife"})
-},
 ["attack_damage_+%"] = {
 	mod("Damage", "INC", nil, ModFlag.Attack),
 },

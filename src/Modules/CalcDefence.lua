@@ -27,15 +27,6 @@ local dmgTypeList = DamageTypes
 
 local resistTypeList = dmgTypeList
 
--- Calculate hit chance
-function calcs.hitChance(evasion, accuracy)
-	if accuracy < 0 then
-		return 5
-	end
-	local rawChance = accuracy / (accuracy + (evasion / 5) ^ 0.9) * 125
-	return m_max(m_min(round(rawChance), 100), 5)	
-end
-
 -- Calculate damage reduction from armour, float
 function calcs.armourReductionF(armour, raw)
 	if armour == 0 and raw == 0 then
@@ -328,49 +319,10 @@ function calcs.defence(env, actor)
 		output.LowestOfArmourAndEvasion = m_min(output.Armour, output.Evasion)
 		output.Ward = m_max(round(ward), 0)
 
-		if modDB:Flag(nil, "CannotEvade") or enemyDB:Flag(nil, "CannotBeEvaded") then
-			output.EvadeChance = 0
-			output.MeleeEvadeChance = 0
-			output.ProjectileEvadeChance = 0
-		elseif modDB:Flag(nil, "AlwaysEvade") then
-			output.EvadeChance = 100
-			output.MeleeEvadeChance = 100
-			output.ProjectileEvadeChance = 100
-		else
-			local enemyAccuracy = round(calcLib.val(enemyDB, "Accuracy"))
-			local evadeChance = modDB:Sum("BASE", nil, "EvadeChance")
-			local hitChance = calcLib.mod(enemyDB, nil, "HitChance")
-			output.EvadeChance = 100 - (calcs.hitChance(output.Evasion, enemyAccuracy) - evadeChance) * hitChance
-			output.MeleeEvadeChance = m_max(0, m_min(data.misc.EvadeChanceCap, (100 - (calcs.hitChance(output.MeleeEvasion, enemyAccuracy) - evadeChance) * hitChance) * calcLib.mod(modDB, nil, "EvadeChance", "MeleeEvadeChance")))
-			output.ProjectileEvadeChance = m_max(0, m_min(data.misc.EvadeChanceCap, (100 - (calcs.hitChance(output.ProjectileEvasion, enemyAccuracy) - evadeChance) * hitChance) * calcLib.mod(modDB, nil, "EvadeChance", "ProjectileEvadeChance")))
-			-- Condition for displaying evade chance only if melee or projectile evade chance have the same values
-			if output.MeleeEvadeChance ~= output.ProjectileEvadeChance then
-				output.splitEvade = true
-			else
-				output.EvadeChance = output.MeleeEvadeChance
-				output.noSplitEvade = true
-			end
-			if breakdown then
-				breakdown.EvadeChance = {
-					s_format("Enemy level: %d ^8(%s the Configuration tab)", env.enemyLevel, env.configInput.enemyLevel and "overridden from" or "can be overridden in"),
-					s_format("Average enemy accuracy: %d", enemyAccuracy),
-					s_format("Approximate evade chance: %d%%", output.EvadeChance),
-				}
-				breakdown.MeleeEvadeChance = {
-					s_format("Enemy level: %d ^8(%s the Configuration tab)", env.enemyLevel, env.configInput.enemyLevel and "overridden from" or "can be overridden in"),
-					s_format("Average enemy accuracy: %d", enemyAccuracy),
-					s_format("Effective Evasion: %d", output.MeleeEvasion),
-					s_format("Approximate melee evade chance: %d%%", output.MeleeEvadeChance),
-				}
-				breakdown.ProjectileEvadeChance = {
-					s_format("Enemy level: %d ^8(%s the Configuration tab)", env.enemyLevel, env.configInput.enemyLevel and "overridden from" or "can be overridden in"),
-					s_format("Average enemy accuracy: %d", enemyAccuracy),
-					s_format("Effective Evasion: %d", output.ProjectileEvasion),
-					s_format("Approximate projectile evade chance: %d%%", output.ProjectileEvadeChance),
-				}
-			end
-		end
 	end
+		output.EvadeChance = 0
+		output.MeleeEvadeChance = 0
+		output.ProjectileEvadeChance = 0
 
 	-- Spell Suppression
 	local weaponsCfg = {

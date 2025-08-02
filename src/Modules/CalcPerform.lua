@@ -312,16 +312,9 @@ function calcs.perform(env, fullDPSSkipEHP)
 		env.minion.output = output.Minion
 		env.minion.modDB.multipliers["Level"] = env.minion.level
 		calcs.initModDB(env, env.minion.modDB)
-		env.minion.modDB:NewMod("Life", "BASE", m_floor(env.minion.lifeTable[env.minion.level] * env.minion.minionData.life), "Base")
-		--Armour formula is math.floor((10 + 2 * level) * 1.067 ^ level)
+		env.minion.modDB:NewMod("Life", "BASE", env.minion.minionData.life, "Base")
 		env.minion.modDB:NewMod("Armour", "BASE", 0, "Base")
-		--Evasion formula is math.floor((50 + 16 * level + 16 * level * (MonsterType.Evasion / 100)) * (1.0212 ^ level)
 		env.minion.modDB:NewMod("Evasion", "BASE", 0, "Base")
-		if modDB:Flag(nil, "MinionAccuracyEqualsAccuracy") then
-			env.minion.modDB:NewMod("Accuracy", "BASE", calcLib.val(modDB, "Accuracy") + calcLib.val(modDB, "Dex") * (modDB:Override(nil, "DexAccBonusOverride") or data.misc.AccuracyPerDexBase), "Player")
-		else
-			env.minion.modDB:NewMod("Accuracy", "BASE", round(env.data.monsterAccuracyTable[env.minion.level] * (env.minion.minionData.accuracy or 1)), "Base")
-		end
 		env.minion.modDB:NewMod("CritMultiplier", "BASE", 30, "Base")
 		env.minion.modDB:NewMod("CritDegenMultiplier", "BASE", 30, "Base")
 		env.minion.modDB:NewMod("ProjectileCount", "BASE", 1, "Base")

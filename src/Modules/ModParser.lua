@@ -118,14 +118,12 @@ local modNameList = {
 	["damage"] = "Damage",
 	["elemental damage"] = {"FireDamage", "ColdDamage", "LightningDamage"},
 	["damage over time"] = { "Damage", flags = ModFlag.Dot },
-	-- Crit/accuracy/speed modifiers
+	-- Crit/speed modifiers
 	["crit chance"] = "CritChance",
 	["critical chance"] = "CritChance",
 	["critical strike chance"] = "CritChance",
 	["critical strike multiplier"] = "CritMultiplier",
 	["critical multiplier"] = "CritMultiplier",
-	["accuracy"] = "Accuracy",
-	["minion accuracy"] = { "Accuracy", addToMinion = true },
 	["attack speed"] = { "Speed", flags = ModFlag.Attack },
 	["cast speed"] = { "Speed", flags = ModFlag.Cast },
 	["attack and cast speed"] = "Speed",
