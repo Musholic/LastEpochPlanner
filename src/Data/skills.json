@@ -2300,6 +2300,25 @@
       "base_skill_effect_duration": 10
     }
   },
+  "FeatheredRaptorJumpSlash": {
+    "name": "Melee Attack",
+    "skillTypeTags": 513,
+    "castTime": 1.2727273,
+    "baseFlags": {
+      "melee": true,
+      "attack": true,
+      "hit": true,
+      "duration": true
+    },
+    "stats": {
+      "damageEffectiveness": 1,
+      "melee_base_physical_damage": 18,
+      "base_critical_strike_multiplier_+": 100,
+      "critChance": 5,
+      "base_skill_effect_duration": 10,
+      "cooldown": 4
+    }
+  },
   "FrenzyAura": {
     "name": "Frenzy Aura",
     "skillTypeTags": 131328,
