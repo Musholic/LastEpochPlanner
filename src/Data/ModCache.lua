@@ -1507,7 +1507,7 @@ c["+1 to Abyssal Echoes"]={{},"  "}
 c["+1 to Acid Flask"]={{},"  "}
 c["+1 to Acolyte Skills"]={{}," Acolyte Skills "}
 c["+1 to Aerial Assault"]={{},"  "}
-c["+1 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=1},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=1},[4]={flags=0,keywordFlags=0,name="Att",type="BASE",value=1},[5]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=1}},nil}
+c["+1 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=1},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=1},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=1},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=1}},nil}
 c["+1 to All Minion Skills"]={{}," All  "}
 c["+1 to All Skills"]={{}," All Skills "}
 c["+1 to Anomaly"]={{},"  "}
@@ -1837,7 +1837,7 @@ c["+10 Ward Gain"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=1
 c["+10 Ward Per 2 Seconds"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=10}},"  Per 2 Seconds "}
 c["+10 Ward granted by Silver Shroud per stack"]={{[1]={[1]={skillId="Ailment_SilverShroud",type="SkillId"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=10}},"  granted by  per stack "}
 c["+10 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=10}},nil}
-c["+10 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=10},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=10},[4]={flags=0,keywordFlags=0,name="Att",type="BASE",value=10},[5]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=10}},nil}
+c["+10 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=10},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=10},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=10},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=10},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=10}},nil}
 c["+10% Active Effect Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="MORE",value=10}}," Active Effect  "}
 c["+10% Adrenaline Rush Chance"]={{}," Adrenaline Rush Chance "}
 c["+10% Ailment Frequency"]={{}," Ailment Frequency "}
@@ -3484,7 +3484,7 @@ c["+2 to Acolyte Minion Skills"]={{}," Acolyte  "}
 c["+2 to Acolyte Skills"]={{}," Acolyte Skills "}
 c["+2 to Acolyte Spells"]={{}," Acolyte s "}
 c["+2 to Aerial Assault"]={{},"  "}
-c["+2 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=2},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=2},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=2},[4]={flags=0,keywordFlags=0,name="Att",type="BASE",value=2},[5]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=2}},nil}
+c["+2 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=2},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=2},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=2},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=2},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=2}},nil}
 c["+2 to All Minion Skills"]={{}," All  "}
 c["+2 to All Skills"]={{}," All Skills "}
 c["+2 to Anomaly"]={{},"  "}
@@ -4761,7 +4761,7 @@ c["+3 random Totems teleported to your location after you use a traversal skill"
 c["+3 to Abyssal Echoes"]={{},"  "}
 c["+3 to Acid Flask"]={{},"  "}
 c["+3 to Aerial Assault"]={{},"  "}
-c["+3 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=3},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=3},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=3},[4]={flags=0,keywordFlags=0,name="Att",type="BASE",value=3},[5]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=3}},nil}
+c["+3 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=3},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=3},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=3},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=3},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=3}},nil}
 c["+3 to Anomaly"]={{},"  "}
 c["+3 to Arcane Ascendance"]={{},"  "}
 c["+3 to Assemble Abomination"]={{},"  "}
@@ -5547,7 +5547,7 @@ c["+4 Ward per second per Active Maelstrom"]={{[1]={[1]={skillId="mas54",type="S
 c["+4 to Abyssal Echoes"]={{},"  "}
 c["+4 to Acid Flask"]={{},"  "}
 c["+4 to Aerial Assault"]={{},"  "}
-c["+4 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=4},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=4},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=4},[4]={flags=0,keywordFlags=0,name="Att",type="BASE",value=4},[5]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=4}},nil}
+c["+4 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=4},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=4},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=4},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=4},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=4}},nil}
 c["+4 to Anomaly"]={{},"  "}
 c["+4 to Arcane Ascendance"]={{},"  "}
 c["+4 to Assemble Abomination"]={{},"  "}
@@ -6169,7 +6169,7 @@ c["+5 Ward On Crit"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value
 c["+5 Ward On Spirit Thorns Cast"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=5}},"  On Spirit Thorns Cast "}
 c["+5 Ward gained when you use Evade"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=5}},"  gained when you use Evade "}
 c["+5 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=5}},nil}
-c["+5 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=5},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=5},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=5},[4]={flags=0,keywordFlags=0,name="Att",type="BASE",value=5},[5]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=5}},nil}
+c["+5 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=5},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=5},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=5},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=5},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=5}},nil}
 c["+5 to Elemental Nova"]={{},"  "}
 c["+5% Added Critical Multiplier Per Second"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=5}}," Added  Per Second "}
 c["+5% Added Critical Strike Chance Per Second"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=5}}," Added  Per Second "}
@@ -6712,7 +6712,7 @@ c["+6 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThresh
 c["+6 Ward gained each second per Active Wandering Spirit"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=6}},"  gained each second per Active Wandering Spirit "}
 c["+6 Ward granted by Silver Shroud per stack"]={{[1]={[1]={skillId="Ailment_SilverShroud",type="SkillId"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=6}},"  granted by  per stack "}
 c["+6 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=6}},nil}
-c["+6 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=6},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=6},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=6},[4]={flags=0,keywordFlags=0,name="Att",type="BASE",value=6},[5]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=6}},nil}
+c["+6 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=6},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=6},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=6},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=6},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=6}},nil}
 c["+6% Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="BASE",value=6}},nil}
 c["+6% Axe Attack And Cast Speed"]={{[1]={flags=0,keywordFlags=0,name="Speed",type="BASE",value=6}}," Axe  "}
 c["+6% Base Crit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=6}},nil}
@@ -7008,7 +7008,7 @@ c["+7 Vitality"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=7}},
 c["+7 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=7}},nil}
 c["+7 Ward Gained"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=7}},"  Gained "}
 c["+7 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=7}},nil}
-c["+7 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=7},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=7},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=7},[4]={flags=0,keywordFlags=0,name="Att",type="BASE",value=7},[5]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=7}},nil}
+c["+7 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=7},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=7},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=7},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=7},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=7}},nil}
 c["+7% All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=7},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=7},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=7},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=7},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=7},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=7},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=7}},nil}
 c["+7% Aspect of the Storm Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="BASE",value=7}}," Aspect of the Storm  "}
 c["+7% Aspect of the Storm Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="BASE",value=7}}," Aspect of the Storm  "}
@@ -7253,7 +7253,7 @@ c["+8 Ward gained when you Dodge"]={{[1]={flags=0,keywordFlags=0,name="Ward",typ
 c["+8 Ward granted by Silver Shroud per stack"]={{[1]={[1]={skillId="Ailment_SilverShroud",type="SkillId"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=8}},"  granted by  per stack "}
 c["+8 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=8}},nil}
 c["+8 Ward per Second per 1% uncapped Physical Resistance while channelling Rebuke"]={{[1]={[1]={type="Condition",var="Channelling"},[2]={skillId="re82ke",type="SkillId"},flags=0,keywordFlags=1,name="WardPerSecond",type="BASE",value=8}},"  per 1% uncapped  Resistance   "}
-c["+8 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=8},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=8},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=8},[4]={flags=0,keywordFlags=0,name="Att",type="BASE",value=8},[5]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=8}},nil}
+c["+8 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=8},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=8},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=8},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=8},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=8}},nil}
 c["+8% Ailment Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="MORE",value=8}}," Ailment  "}
 c["+8% Ailment Frequency"]={{}," Ailment Frequency "}
 c["+8% Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=8}},nil}
@@ -7366,7 +7366,7 @@ c["+80 Initial Slam Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage"
 c["+80 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=80}},nil}
 c["+80 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=80}},nil}
 c["+80 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=80}},nil}
-c["+80% Accuracy"]={{[1]={flags=0,keywordFlags=0,name="Accuracy",type="BASE",value=80}},nil}
+c["+80% Accuracy"]={{}," Accuracy "}
 c["+80% Chance to inflict Bleed on Minion Hit"]={{}," to inflict  on   "}
 c["+80% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=80}},nil}
 c["+80% Detached duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="MORE",value=80}}," Detached  "}
@@ -7481,7 +7481,7 @@ c["+9 Throwing Damage"]={{[1]={flags=0,keywordFlags=1024,name="Damage",type="BAS
 c["+9 Ward gained each second per Active Wandering Spirit"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=9}},"  gained each second per Active Wandering Spirit "}
 c["+9 Ward gained when you use Evade"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=9}},"  gained when you use Evade "}
 c["+9 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=9}},nil}
-c["+9 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=9},[2]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=9},[3]={flags=0,keywordFlags=0,name="Int",type="BASE",value=9},[4]={flags=0,keywordFlags=0,name="Att",type="BASE",value=9},[5]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=9}},nil}
+c["+9 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=9},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=9},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=9},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=9},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=9}},nil}
 c["+9% Bleed chance per active Crimson Shroud"]={{}," per active  "}
 c["+9% Block Chance"]={{}," "}
 c["+9% Chance to apply a Spark Charge on Lightning Melee Hit"]={{}," to apply a  on    "}
@@ -7962,7 +7962,7 @@ c["1 Haste Duration (seconds)"]={{[1]={[1]={skillId="Ailment_Haste",type="SkillI
 c["1 Haste duration after Channeling (seconds)"]={{[1]={[1]={skillId="Ailment_Haste",type="SkillId"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   after Channeling (seconds) "}
 c["1 Healing Per Point of Dexterity"]={{[1]={[1]={skillId="Ailment_DummyHealingWhileNotTakingDamage",type="SkillId"},flags=0,keywordFlags=0,name="Dex",type="BASE",value=1}},"  Per Point of  "}
 c["1 Health Gain Per 2 Dex"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain Per 2 Dex "}
-c["1 Health Gain per 2 total attributes"]={{[1]={[1]={div=2,statList={[1]="Str",[2]="Dex",[3]="Int",[4]="Att",[5]="Vit"},type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain  "}
+c["1 Health Gain per 2 total attributes"]={{[1]={[1]={div=2,statList={[1]="Vit",[2]="Str",[3]="Dex",[4]="Int",[5]="Att"},type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain  "}
 c["1 Health Gained Per Point Of Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gained Per Point Of Intelligence "}
 c["1 Health Gained per Stack of Shroud"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gained per Stack of Shroud "}
 c["1 Health gained per Dexterity when your Falcon hits an enemy"]={{[1]={[1]={stat="Dex",type="PerStat"},flags=8388608,keywordFlags=0,name="Life",type="BASE",value=1}},"  gained  when your Falcs an enemy "}
@@ -7989,7 +7989,7 @@ c["1 Mana Gain"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}}
 c["1 Mana Gain Per Storm Stack On Use"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gain Per Storm Stack On Use "}
 c["1 Mana Gain against Cursed"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gain against Cursed "}
 c["1 Mana Gain on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gain  "}
-c["1 Mana Gain per 40 total attributes"]={{[1]={[1]={div=40,statList={[1]="Str",[2]="Dex",[3]="Int",[4]="Att",[5]="Vit"},type="PerStat"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gain  "}
+c["1 Mana Gain per 40 total attributes"]={{[1]={[1]={div=40,statList={[1]="Vit",[2]="Str",[3]="Dex",[4]="Int",[5]="Att"},type="PerStat"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gain  "}
 c["1 Mana Gain with at least 50 Vitality"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gain with at least 50 Vitality "}
 c["1 Mana Gained When Hit"]={{[1]={flags=8388608,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gained When  "}
 c["1 Mana Gained on Potion Use per 4 Intelligence"]={{[1]={[1]={div=4,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gained on Potion Use  "}
