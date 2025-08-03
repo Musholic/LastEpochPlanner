@@ -289,6 +289,9 @@ local options = {
 	end },
 	-- Section: Enemy Stats
 	{ section = "Enemy Stats", col = 3 },
+	{ var = "enemyLevel", type = "count", label = "Enemy / Area Level:", defaultPlaceholderState = 1, tooltip = "This overrides the default enemy level used to estimate your armor reduction and ^x33FF77dodge ^7chance.\n\nThe default level is set to your character level and cannot exceeds 100", apply = function(val, modList, enemyModList, build)
+		build.configTab.varControls['enemyLevel']:SetPlaceholder(build.configTab.enemyLevel, true)
+	end },
 }
 
 for i,damageType in ipairs(DamageTypes) do

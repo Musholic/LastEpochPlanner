@@ -824,6 +824,7 @@ function buildMode:EstimatePlayerProgress()
 	if self.characterLevelAutoMode and self.characterLevel ~= level then
 		self.characterLevel = level
 		self.controls.characterLevel:SetText(self.characterLevel)
+		self.configTab:BuildModList()
 	end
 
 	if PointsUsed > usedMax then InsertIfNew(self.controls.warnings.lines, "You have too many passive points allocated") end
