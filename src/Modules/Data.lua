@@ -122,7 +122,7 @@ data.misc = { -- magic numbers
 	StunBaseMult = 200,
 	StunBaseDuration = 0.35,
 	StunNotMeleeDamageMult = 0.75,
-	MaxEnemyLevel = 85,
+	MaxEnemyLevel = 100,
 	maxExperiencePenaltyFreeAreaLevel = 70,
 	experiencePenaltyMultiplier = 0.06,
 	-- Expected values to calculate EHP
@@ -147,54 +147,6 @@ data.misc = { -- magic numbers
 }
 
 data.skillColorMap = { colorCodes.STRENGTH, colorCodes.DEXTERITY, colorCodes.INTELLIGENCE, colorCodes.NORMAL }
-
-do
-	---@param areaLevel number
-	---@return number
-	local function effectiveMonsterLevel(areaLevel)
-		--- Areas with area level above a certain penalty-free level are considered to have
-		--- a scaling lower effective monster level for experience penalty calculations.
-		if areaLevel <= data.misc.maxExperiencePenaltyFreeAreaLevel then
-			return areaLevel
-		end
-		return areaLevel - triangular(areaLevel - data.misc.maxExperiencePenaltyFreeAreaLevel) * data.misc.experiencePenaltyMultiplier
-	end
-
-	---@type table<number, number>
-	data.monsterExperienceLevelMap = {}
-	-- to max enemy level + 2 to keep functionality the same
-	for i = 1, (data.misc.MaxEnemyLevel + 2) do
-		data.monsterExperienceLevelMap[i] = effectiveMonsterLevel(i)
-	end
-end
-
-data.cursePriority = {
-	["Temporal Chains"] = 1, -- Despair and Elemental Weakness override Temporal Chains.
-	["Enfeeble"] = 2, -- Elemental Weakness and Vulnerability override Enfeeble.
-	["Vulnerability"] = 3, -- Despair and Elemental Weakness override Vulnerability. Vulnerability was reworked in 3.1.0.
-	["Elemental Weakness"] = 4, -- Despair and Flammability override Elemental Weakness.
-	["Flammability"] = 5, -- Frostbite overrides Flammability.
-	["Frostbite"] = 6, -- Conductivity overrides Frostbite.
-	["Conductivity"] = 7,
-	["Despair"] = 8, -- Despair was created in 3.1.0.
-	["Punishment"] = 9, -- Punishment was reworked in 3.12.0.
-	["Warlord's Mark"] = 10,
-	["Assassin's Mark"] = 11,
-	["Sniper's Mark"] = 12,
-	["Poacher's Mark"] = 13,
-	["SocketPriorityBase"] = 100,
-	["Weapon 1"] = 1000,
-	["Amulet"] = 2000,
-	["Helmet"] = 3000,
-	["Weapon 2"] = 4000,
-	["Body Armour"] = 5000,
-	["Gloves"] = 6000,
-	["Boots"] = 7000,
-	["Ring 1"] = 8000,
-	["Ring 2"] = 9000,
-	["CurseFromEquipment"] = 10000,
-	["CurseFromAura"] = 20000,
-}
 
 -- TODO
 data.ailmentTypeList = { "Ignite" }

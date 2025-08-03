@@ -767,14 +767,12 @@ end
 
 function ConfigTabClass:UpdateLevel()
 	local input = self.input
-	local placeholder = self.placeholder
 	if input.enemyLevel and input.enemyLevel > 0 then
-		self.enemyLevel = m_min(data.misc.MaxEnemyLevel, input.enemyLevel)
-	elseif placeholder.enemyLevel and placeholder.enemyLevel > 0 then
-		self.enemyLevel = m_min(data.misc.MaxEnemyLevel, placeholder.enemyLevel)
+		self.enemyLevel = input.enemyLevel
 	else
-		self.enemyLevel = m_min(data.misc.MaxEnemyLevel, self.build.characterLevel)
+		self.enemyLevel = self.build.characterLevel
 	end
+	self.enemyLevel = m_max(m_min(self.enemyLevel, 100), 1)
 end
 
 function ConfigTabClass:BuildModList()
