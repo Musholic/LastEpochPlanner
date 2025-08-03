@@ -626,7 +626,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		if base then
 			self:DrawAsset(base, scrX, scrY, scale)
 			-- Draw the allocated number
-			DrawString(scrX - 48 * scale, scrY + 32 * scale, "LEFT", 90 * scale, "VAR", node.alloc .. "/" .. node.maxPoints)
+			DrawString(scrX - 48 * scale, scrY + 32 * scale, "LEFT", round(90 * scale), "VAR", "^7" .. node.alloc .. "/" .. node.maxPoints)
 		end
 
 		if overlay then
