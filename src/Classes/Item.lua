@@ -706,23 +706,6 @@ function ItemClass:BuildRaw()
 			t_insert(rawLines, "Suffix: " .. (affix.range and ("{range:" .. round(affix.range,3) .. "}") or "") .. affix.modId)
 		end
 	end
-	if self.catalyst and self.catalyst > 0 then
-		t_insert(rawLines, "Catalyst: " .. catalystList[self.catalyst])
-	end
-	if self.catalystQuality then
-		t_insert(rawLines, "CatalystQuality: " .. self.catalystQuality)
-	end
-	if self.clusterJewel then
-		if self.clusterJewelSkill then
-			t_insert(rawLines, "Cluster Jewel Skill: " .. self.clusterJewelSkill)
-		end
-		if self.clusterJewelNodeCount then
-			t_insert(rawLines, "Cluster Jewel Node Count: " .. self.clusterJewelNodeCount)
-		end
-	end
-	if self.talismanTier then
-		t_insert(rawLines, "Talisman Tier: " .. self.talismanTier)
-	end
 	if self.itemLevel then
 		t_insert(rawLines, "Item Level: " .. self.itemLevel)
 	end
@@ -808,21 +791,8 @@ function ItemClass:BuildRaw()
 	if self.quality then
 		t_insert(rawLines, "Quality: " .. self.quality)
 	end
-	if self.sockets and #self.sockets > 0 then
-		local line = "Sockets: "
-		for i, socket in pairs(self.sockets) do
-			line = line .. socket.color
-			if self.sockets[i+1] then
-				line = line .. (socket.group == self.sockets[i+1].group and "-" or " ")
-			end
-		end
-		t_insert(rawLines, line)
-	end
 	if self.requirements and self.requirements.level then
 		t_insert(rawLines, "LevelReq: " .. self.requirements.level)
-	end
-	if self.jewelRadiusLabel then
-		t_insert(rawLines, "Radius: " .. self.jewelRadiusLabel)
 	end
 	if self.limit then
 		t_insert(rawLines, "Limited to: " .. self.limit)
@@ -1144,90 +1114,6 @@ function ItemClass:BuildModListForSlotNum(baseList, slotNum)
 		for _, value in ipairs(modList:List(nil, "ArmourData")) do
 			armourData[value.key] = value.value
 		end
-	elseif self.base.flask then
-		local flaskData = self.flaskData
-		local durationInc = calcLocal(modList, "Duration", "INC", 0)
-		local durationMore = calcLocal(modList, "Duration", "MORE", 0)
-		if self.base.flask.life or self.base.flask.mana then
-			-- Recovery flask
-			flaskData.instantPerc = calcLocal(modList, "FlaskInstantRecovery", "BASE", 0)
-			local recoveryMod = 1 + calcLocal(modList, "FlaskRecovery", "INC", 0) / 100
-			local rateMod = 1 + calcLocal(modList, "FlaskRecoveryRate", "INC", 0) / 100
-			flaskData.duration = round(self.base.flask.duration * (1 + durationInc / 100) / rateMod * durationMore, 1)
-			if self.base.flask.life then
-				flaskData.lifeBase = self.base.flask.life * (1 + self.quality / 100) * recoveryMod
-				flaskData.lifeInstant = flaskData.lifeBase * flaskData.instantPerc / 100
-				flaskData.lifeGradual = flaskData.lifeBase * (1 - flaskData.instantPerc / 100)
-				flaskData.lifeTotal = flaskData.lifeInstant + flaskData.lifeGradual
-				flaskData.lifeAdditional = calcLocal(modList, "FlaskAdditionalLifeRecovery", "BASE", 0)
-				flaskData.lifeEffectNotRemoved = calcLocal(baseList, "LifeFlaskEffectNotRemoved", "FLAG", 0)
-			end
-			if self.base.flask.mana then
-				flaskData.manaBase = self.base.flask.mana * (1 + self.quality / 100) * recoveryMod
-				flaskData.manaInstant = flaskData.manaBase * flaskData.instantPerc / 100
-				flaskData.manaGradual = flaskData.manaBase * (1 - flaskData.instantPerc / 100)
-				flaskData.manaTotal = flaskData.manaInstant + flaskData.manaGradual
-				flaskData.manaEffectNotRemoved = calcLocal(baseList, "ManaFlaskEffectNotRemoved", "FLAG", 0)
-			end
-		else
-			-- Utility flask
-			flaskData.duration = round(self.base.flask.duration * (1 + (durationInc + self.quality) / 100) * durationMore, 1)
-		end
-		flaskData.chargesMax = self.base.flask.chargesMax + calcLocal(modList, "FlaskCharges", "BASE", 0)
-		flaskData.chargesUsed = m_floor(self.base.flask.chargesUsed * (1 + calcLocal(modList, "FlaskChargesUsed", "INC", 0) / 100))
-		flaskData.gainMod = 1 + calcLocal(modList, "FlaskChargeRecovery", "INC", 0) / 100
-		flaskData.effectInc = calcLocal(modList, "FlaskEffect", "INC", 0)
-		for _, value in ipairs(modList:List(nil, "FlaskData")) do
-			flaskData[value.key] = value.value
-		end
-	elseif self.type == "Jewel" then
-		if self.name:find("Grand Spectrum") then
-			local spectrumMod = modLib.createMod("Multiplier:GrandSpectrum", "BASE", 1, self.name)
-			modList:AddMod(spectrumMod)
-			modList:NewMod("MinionModifier", "LIST", { mod = spectrumMod }, self.name)
-		end
-
-		local jewelData = self.jewelData
-		for _, func in ipairs(modList:List(nil, "JewelFunc")) do
-			jewelData.funcList = jewelData.funcList or { }
-			t_insert(jewelData.funcList, func)
-		end
-		for _, value in ipairs(modList:List(nil, "JewelData")) do
-			jewelData[value.key] = value.value
-		end
-		if modList:List(nil, "ImpossibleEscapeKeystones") then
-			jewelData.impossibleEscapeKeystones = { }
-			for _, value in ipairs(modList:List(nil, "ImpossibleEscapeKeystones")) do
-				jewelData.impossibleEscapeKeystones[value.key] = value.value
-			end
-		end
-		if self.clusterJewel then
-			jewelData.clusterJewelNotables = { }
-			for _, name in ipairs(modList:List(nil, "ClusterJewelNotable")) do
-				t_insert(jewelData.clusterJewelNotables, name)
-			end
-			jewelData.clusterJewelAddedMods = { }
-			for _, line in ipairs(modList:List(nil, "AddToClusterJewelNode")) do
-				t_insert(jewelData.clusterJewelAddedMods, line)
-			end
-
-			-- Small and Medium Curse Cluster Jewel passive mods are parsed the same so the medium cluster data overwrites small and the skills differ
-			-- This changes small curse clusters to have the correct clusterJewelSkill so it passes validation below and works as expected in the tree
-			if jewelData.clusterJewelSkill == "affliction_curse_effect" and jewelData.clusterJewelNodeCount and jewelData.clusterJewelNodeCount < 4 then
-				jewelData.clusterJewelSkill = "affliction_curse_effect_small"
-			end
-
-			-- Validation
-			if jewelData.clusterJewelNodeCount then
-				jewelData.clusterJewelNodeCount = m_min(m_max(jewelData.clusterJewelNodeCount, self.clusterJewel.minNodes), self.clusterJewel.maxNodes)
-			end
-			if jewelData.clusterJewelSkill and not self.clusterJewel.skills[jewelData.clusterJewelSkill] then
-				jewelData.clusterJewelSkill = nil
-			end
-			jewelData.clusterJewelValid = jewelData.clusterJewelKeystone 
-				or ((jewelData.clusterJewelSkill or jewelData.clusterJewelSmallsAreNothingness) and jewelData.clusterJewelNodeCount) 
-				or (jewelData.clusterJewelSocketCountOverride and jewelData.clusterJewelNothingnessCount)
-		end
 	end	
 	return { unpack(modList) }
 end
@@ -1242,11 +1128,6 @@ function ItemClass:BuildModList()
 		self.weaponData = { }
 	elseif self.base.armour then
 		self.armourData = self.armourData or { }
-	elseif self.base.flask then
-		self.flaskData = { }
-		self.buffModList = { }
-	elseif self.type == "Jewel" then
-		self.jewelData = { }
 	end
 	self.baseModList = baseList
 	self.rangeLineList = { }
@@ -1319,58 +1200,6 @@ function ItemClass:BuildModList()
 				triggerChance = skill.triggerChance,
 			})
 		end
-	end
-	local socketCount = calcLocal(baseList, "SocketCount", "BASE", 0)
-	self.abyssalSocketCount = calcLocal(baseList, "AbyssalSocketCount", "BASE", 0)
-	self.selectableSocketCount = m_max(self.base.socketLimit or 0, #self.sockets) - self.abyssalSocketCount
-	if calcLocal(baseList, "NoSockets", "FLAG", 0) then
-		-- Remove all sockets
-		wipeTable(self.sockets)
-		self.selectableSocketCount = 0
-	elseif socketCount > 0 then
-		-- Force the socket count to be equal to the stated number
-		self.selectableSocketCount = socketCount
-		local group = 0
-		for i = 1, m_max(socketCount, #self.sockets) do 
-			if i > socketCount then
-				self.sockets[i] = nil
-			elseif not self.sockets[i] then
-				self.sockets[i] = {
-					color = self.defaultSocketColor,
-					group = group
-				}
-			else
-				group = self.sockets[i].group
-			end
-		end
-	elseif self.abyssalSocketCount > 0 then
-		-- Ensure that there are the correct number of abyssal sockets present
-		local newSockets = { }
-		local group = 0
-		if self.sockets then
-			for i, socket in ipairs(self.sockets) do
-				if socket.color ~= "A" then
-					t_insert(newSockets, socket)
-					group = socket.group
-					if #newSockets >= self.selectableSocketCount then
-						break
-					end
-				end
-			end
-		end
-		for i = 1, self.abyssalSocketCount do
-			group = group + 1
-			t_insert(newSockets, {
-				color = "A",
-				group = group
-			})
-		end
-		self.sockets = newSockets
-	end
-	self.socketedJewelEffectModifier = 1 + calcLocal(baseList, "SocketedJewelEffect", "INC", 0) / 100
-	if self.name == "Tabula Rasa, Simple Robe" or self.name == "Skin of the Loyal, Simple Robe" or self.name == "Skin of the Lords, Simple Robe" then
-		-- Hack to remove the energy shield
-		baseList:NewMod("ArmourData", "LIST", { key = "EnergyShield", value = 0 })
 	end
 	self.modList = baseList
 end

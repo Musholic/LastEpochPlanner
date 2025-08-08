@@ -127,21 +127,6 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 
 	self.controls.idolPositionsLabel = new("LabelControl", {"TOPLEFT",self.controls.specLabel,"BOTTOMLEFT"}, 0, 16, 0, 16, "Idol positions start from bottom left then left to right")
 
-	self.sockets = { }
-	local socketOrder = { }
-	for _, node in pairs(build.latestTree.nodes) do
-		if node.type == "Socket" then
-			t_insert(socketOrder, node)
-		end
-	end
-	table.sort(socketOrder, function(a, b)
-		return a.id < b.id
-	end)
-	for _, node in ipairs(socketOrder) do
-		local socketControl = new("ItemSlotControl", {"TOPLEFT",prevSlot,"BOTTOMLEFT"}, 0, 2, self, "Jewel "..node.id, "Socket", node.id)
-		self.sockets[node.id] = socketControl
-		addSlot(socketControl)
-	end
 	self.controls.slotHeader = new("LabelControl", {"BOTTOMLEFT",self.slotAnchor,"TOPLEFT"}, 0, -4, 0, 16, "^7Equipped items:")
 	self.controls.weaponSwap1 = new("ButtonControl", {"BOTTOMRIGHT",self.slotAnchor,"TOPRIGHT"}, -20, -2, 18, 18, "I", function()
 		if self.activeItemSet.useSecondWeaponSet then
@@ -411,66 +396,15 @@ holding Shift will put it in the second.]])
 						tooltip:AddLine(16, "Tags: "..table.concat(maxMod.modTags, ', '))
 					end
 				end
-				local mod = self.displayItem.affixes[value.modId or modList[1]]
-				local notableName = mod[1] and mod[1]:match("1 Added Passive Skill is (.*)")
-				local node = notableName and self.build.spec.tree.clusterNodeMap[notableName]
-				if node then
-					tooltip:AddSeparator(14)
-
-					-- Node name
-					self.socketViewer:AddNodeName(tooltip, node, self.build)
-
-					-- Node description
-					if node.sd[1] then
-						tooltip:AddLine(16, "")
-						for i, line in ipairs(node.sd) do
-							tooltip:AddLine(16, ((node.mods[i].extra or not node.mods[i].list) and colorCodes.UNSUPPORTED or colorCodes.MAGIC)..line)
-						end
-					end
-
-					-- Reminder text
-					if node.reminderText then
-						tooltip:AddSeparator(14)
-						for _, line in ipairs(node.reminderText) do
-							tooltip:AddLine(14, "^xA0A080"..line)
-						end
-					end
-
-					-- Comparison
-					tooltip:AddSeparator(14)
-					self:AppendAddedNotableTooltip(tooltip, node)
-
-					-- Information of for this notable appears
-					local clusterInfo = self.build.data.clusterJewelInfoForNotable[notableName]
-					if clusterInfo then
-						tooltip:AddSeparator(14)
-						tooltip:AddLine(20, "^7"..notableName.." can appear on:")
-						local isFirstSize = true
-						for size, v in pairs(clusterInfo.size) do
-							tooltip:AddLine(18, colorCodes.MAGIC..size..":")
-							local sizeSkills = self.build.data.clusterJewels.jewels[size].skills
-							for i, type in ipairs(clusterInfo.jewelTypes) do
-								if sizeSkills[type] then
-									tooltip:AddLine(14, "^7    "..sizeSkills[type].name)
-								end
-							end
-							if not isFirstSize then
-								tooltip:AddLine(10, "")
-							end
-							isFirstSize = false
-						end
-					end
+				local mod = { }
+				if value.modId or #modList == 1 then
+					mod = self.displayItem.affixes[value.modId or modList[1]]
 				else
-					local mod = { }
-					if value.modId or #modList == 1 then
-						mod = self.displayItem.affixes[value.modId or modList[1]]
-					else
-						mod = self.displayItem.affixes[modList[1 + round((#modList - 1) * main.defaultItemAffixQuality / 256)]]
-					end
-
-					-- Adding Mod
-					self:AddModComparisonTooltip(tooltip, mod)
+					mod = self.displayItem.affixes[modList[1 + round((#modList - 1) * main.defaultItemAffixQuality / 256)]]
 				end
+
+				-- Adding Mod
+				self:AddModComparisonTooltip(tooltip, mod)
 			end
 		end
 		drop.shown = function()
@@ -851,8 +785,6 @@ function ItemsTabClass:Draw(viewPort, inputEvents)
 		self.displayItemTooltip:Draw(x, y, nil, nil, viewPort)
 	end
 
-	self:UpdateSockets()
-
 	self:DrawControls(viewPort)
 	if self.controls.scrollBarH:IsShown() then
 		self.controls.scrollBarH:Draw(viewPort)
@@ -959,37 +891,6 @@ function ItemsTabClass:PopulateSlots()
 	end
 end
 
--- Updates the status and position of the socket controls
-function ItemsTabClass:UpdateSockets()
-	-- Build a list of active sockets
-	local activeSocketList = { }
-	for nodeId, slot in pairs(self.sockets) do
-		if self.build.spec.allocNodes[nodeId] then
-			t_insert(activeSocketList, nodeId)
-			slot.inactive = false
-		else
-			slot.inactive = true
-		end
-	end
-	table.sort(activeSocketList)
-
-	-- Update the state of the active socket controls
-	self.lastSlot = self.slots[baseSlots[#baseSlots]]
-	for index, nodeId in ipairs(activeSocketList) do
-		self.sockets[nodeId].label = "Socket #"..index
-		self.lastSlot = self.sockets[nodeId]
-	end
-
-	if main.portraitMode then
-		self.controls.itemList:SetAnchor("TOPRIGHT",self.lastSlot,"BOTTOMRIGHT", 0, 40)
-	end
-end
-
--- Returns the slot control and equipped jewel for the given node ID
-function ItemsTabClass:GetSocketAndJewelForNodeID(nodeId)
-	return self.sockets[nodeId], self.items[self.sockets[nodeId].selItemId]
-end
-
 -- Adds the given item to the build's item list
 function ItemsTabClass:AddItem(item, noAutoEquip, index)
 	if not item.id then
@@ -1021,14 +922,6 @@ function ItemsTabClass:AddItem(item, noAutoEquip, index)
 	local replacing = self.items[item.id]
 	self.items[item.id] = item
 	item:BuildModList()
-
-	if replacing and (replacing.clusterJewel or item.clusterJewel or replacing.baseName == "Timeless Jewel") then
-		-- We're replacing an existing item, and either the new or old one is a cluster jewel
-		if isValueInTable(self.build.spec.jewels, item.id) then
-			-- Item is currently equipped, so we need to rebuild the graphs
-			self.build.spec:BuildClusterJewelGraphs()
-		end
-	end
 end
 
 -- Adds the current display item to the build's item list
@@ -1145,16 +1038,12 @@ function ItemsTabClass:SetDisplayItem(item)
 		self:UpdateDisplayItemTooltip()
 		self.snapHScroll = "RIGHT"
 
-		self:UpdateSocketControls()
 		if item.crafted then
 			self:UpdateAffixControls()
 		end
 
 		self:UpdateCustomControls()
 		self:UpdateDisplayItemRangeLines()
-		if item.clusterJewel and item.crafted then
-			self:UpdateClusterJewelControls()
-		end
 	else
 		self.snapHScroll = "LEFT"
 	end
@@ -1164,64 +1053,6 @@ function ItemsTabClass:UpdateDisplayItemTooltip()
 	self.displayItemTooltip:Clear()
 	self:AddItemTooltip(self.displayItemTooltip, self.displayItem)
 	self.displayItemTooltip.center = false
-end
-
-function ItemsTabClass:UpdateSocketControls()
-	local sockets = self.displayItem.sockets
-	for i = 1, #sockets - self.displayItem.abyssalSocketCount do
-		self.controls["displayItemSocket"..i]:SelByValue(sockets[i].color, "color")
-		if i > 1 then
-			self.controls["displayItemLink"..(i-1)].state = sockets[i].group == sockets[i-1].group
-		end
-	end
-end
-
-function ItemsTabClass:UpdateClusterJewelControls()
-	local item = self.displayItem
-
-	local unavailableSkills = { ["affliction_strength"] = true, ["affliction_dexterity"] = true, ["affliction_intelligence"] = true, }
-
-	-- Update list of skills
-	local skillList = wipeTable(self.controls.displayItemClusterJewelSkill.list)
-	for skillId, skill in pairs(item.clusterJewel.skills) do
-		if not unavailableSkills[skillId] then
-			t_insert(skillList, { label = skill.name, skillId = skillId })
-		end
-	end
-	table.sort(skillList, function(a, b) return a.label < b.label end)
-	if not item.clusterJewelSkill or not item.clusterJewel.skills[item.clusterJewelSkill] then
-		item.clusterJewelSkill = skillList[1].skillId
-	end
-	self.controls.displayItemClusterJewelSkill:SelByValue(item.clusterJewelSkill, "skillId")
-
-	-- Update added node count slider
-	local countControl = self.controls.displayItemClusterJewelNodeCount
-	item.clusterJewelNodeCount = m_min(m_max(item.clusterJewelNodeCount or item.clusterJewel.maxNodes, item.clusterJewel.minNodes), item.clusterJewel.maxNodes)
-	countControl.divCount = item.clusterJewel.maxNodes - item.clusterJewel.minNodes
-	countControl.val = (item.clusterJewelNodeCount - item.clusterJewel.minNodes) / (item.clusterJewel.maxNodes - item.clusterJewel.minNodes)
-
-	self:CraftClusterJewel()
-end
-
-function ItemsTabClass:CraftClusterJewel()
-	local item = self.displayItem
-	wipeTable(item.enchantModLines)
-	t_insert(item.enchantModLines, { line = "Adds "..(item.clusterJewelNodeCount or item.clusterJewel.maxNodes).." Passive Skills", crafted = true })
-	if item.clusterJewel.size == "Large" then
-		t_insert(item.enchantModLines, { line = "2 Added Passive Skills are Jewel Sockets", crafted = true })
-	elseif item.clusterJewel.size == "Medium" then
-		t_insert(item.enchantModLines, { line = "1 Added Passive Skill is a Jewel Socket", crafted = true })
-	end
-	local skill = item.clusterJewel.skills[item.clusterJewelSkill]
-	t_insert(item.enchantModLines, { line = table.concat(skill.enchant, "\n"), crafted = true })
-	item:BuildAndParseRaw()
-
-	-- Update affixes manually to force out affixes that may now be invalid
-	self:UpdateAffixControls()
-	for i = 1, item.affixLimit do
-		local drop = self.controls["displayItemAffix"..i]
-		drop.selFunc(drop.selIndex, drop.list[drop.selIndex])
-	end
 end
 
 -- Update affix selection controls
@@ -1256,12 +1087,6 @@ function ItemsTabClass:UpdateAffixControl(control, item, type, outputTable, outp
 			end
 		end
 	end
-	if item.clusterJewel and item.clusterJewelSkill then
-		local skill = item.clusterJewel.skills[item.clusterJewelSkill]
-		if skill then
-			extraTags[skill.tag] = true
-		end
-	end
 	local affixList = { }
 	for modId, mod in pairs(item.affixes) do
 		if mod.type == type and not excludeGroups[mod.group] then
@@ -1289,46 +1114,26 @@ function ItemsTabClass:UpdateAffixControl(control, item, type, outputTable, outp
 	control.slider.shown = false
 	control.slider.val = main.defaultItemAffixQuality / 256 or 0
 	local selAffix = item[outputTable][outputIndex].modId
-	if (item.type == "Jewel" and item.base.subType ~= "Abyss") then
-		for i, modId in pairs(affixList) do
-			local mod = item.affixes[modId]
-			if selAffix == modId then
-				control.selIndex = i + 1
-			end
+	local lastSeries
+	for _, modId in ipairs(affixList) do
+		local mod = item.affixes[modId]
+		if not lastSeries or lastSeries.statOrderKey ~= mod.statOrderKey then
 			local modString = table.concat(mod, "/")
-			local label = modString
-			if item.type == "Flask" then
-				label = mod.affix .. "   ^8[" .. modString .. "]"
-			end
-			control.list[i + 1] = {
-				label = label,
-				modList = { modId },
-				modId = modId,
+			lastSeries = {
+				label = modString,
+				modList = { },
 				haveRange = modString:match("%(%-?[%d%.]+%-%-?[%d%.]+%)"),
+				statOrderKey = mod.statOrderKey,
 			}
+			t_insert(control.list, lastSeries)
 		end
-	else
-		local lastSeries
-		for _, modId in ipairs(affixList) do
-			local mod = item.affixes[modId]
-			if not lastSeries or lastSeries.statOrderKey ~= mod.statOrderKey then
-				local modString = table.concat(mod, "/")
-				lastSeries = {
-					label = modString,
-					modList = { },
-					haveRange = modString:match("%(%-?[%d%.]+%-%-?[%d%.]+%)"),
-					statOrderKey = mod.statOrderKey,
-				}
-				t_insert(control.list, lastSeries)
-			end
-			if selAffix == modId then
-				control.selIndex = #control.list
-			end
-			t_insert(lastSeries.modList, 1, modId)
-			if #lastSeries.modList == 2 then
-				lastSeries.label = lastSeries.label:gsub("%(%-?[%d%.]+%-%-?[%d%.]+%)","#"):gsub("%-?%d+%.?%d*","#")
-				lastSeries.haveRange = true
-			end
+		if selAffix == modId then
+			control.selIndex = #control.list
+		end
+		t_insert(lastSeries.modList, 1, modId)
+		if #lastSeries.modList == 2 then
+			lastSeries.label = lastSeries.label:gsub("%(%-?[%d%.]+%-%-?[%d%.]+%)","#"):gsub("%-?%d+%.?%d*","#")
+			lastSeries.haveRange = true
 		end
 	end
 	if control.list[control.selIndex].haveRange then
@@ -1526,14 +1331,6 @@ function ItemsTabClass:CraftItem()
 		item.crucibleModLines = { }
 		item.quality = 0
 		local raritySel = controls.rarity.selIndex
-		if base.base.flask
-				or (base.base.type == "Jewel" and base.base.subType == "Charm")
-		 		or base.base.type == "Tincture"
-		then
-			if raritySel == 3 then
-				raritySel = 2
-			end
-		end
 		if raritySel == 2 or raritySel == 3 then
 			item.crafted = true
 		end
@@ -2572,31 +2369,6 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 		end
 	end
 
-	-- Cluster jewel notables/keystone
-	if item.clusterJewel then
-		tooltip:AddSeparator(10)
-		if #item.jewelData.clusterJewelNotables > 0 then
-			for _, name in ipairs(item.jewelData.clusterJewelNotables) do
-				local node = self.build.spec.tree.clusterNodeMap[name]
-				if node then
-					tooltip:AddLine(16, colorCodes.MAGIC .. node.dn)
-					for _, stat in ipairs(node.sd) do
-						tooltip:AddLine(16, "^x7F7F7F"..stat)
-					end
-				end
-			end
-		elseif item.jewelData.clusterJewelKeystone then
-			local node = self.build.spec.tree.clusterNodeMap[item.jewelData.clusterJewelKeystone]
-			if node then
-				tooltip:AddLine(16, colorCodes.MAGIC .. node.dn)
-				for _, stat in ipairs(node.sd) do
-					tooltip:AddLine(16, "^x7F7F7F"..stat)
-				end
-			end
-		end
-		tooltip:AddSeparator(10)
-	end
-
 	-- Corrupted item label
 	if item.corrupted or item.split or item.mirrored then
 		if #item.explicitModLines == 0 then
@@ -2616,7 +2388,6 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 
 	-- Stat differences
 	local calcFunc, calcBase = self.build.calcsTab:GetMiscCalculator()
-	self:UpdateSockets()
 	-- Build sorted list of slots to compare with
 	local compareSlots = { }
 	if base.type:find("Idol") or base.type:find("Blessing") then

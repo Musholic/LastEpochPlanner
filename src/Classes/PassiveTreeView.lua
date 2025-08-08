@@ -410,11 +410,6 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			end
 		end
 	end
-	for _, subGraph in pairs(spec.subGraphs) do
-		for _, connector in pairs(subGraph.connectors) do
-			renderConnector(connector)
-		end
-	end
 
 	if self.showHeatMap then
 		-- Build the power numbers if needed
@@ -474,65 +469,9 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			else
 				state = "unalloc"
 			end
-			if node.type == "Socket" then
-				-- Node is a jewel socket, retrieve the socketed jewel (if present) so we can display the correct art
-				base = tree.assets[(node.name == "Charm Socket" and "Azmeri" or "" ) .. node.overlay[state .. (node.expansionJewel and "Alt" or "")]]
-				local socket, jewel = build.itemsTab:GetSocketAndJewelForNodeID(nodeId)
-				if isAlloc and jewel then
-					if jewel.baseName == "Crimson Jewel" then
-						overlay = node.expansionJewel and "JewelSocketActiveRedAlt" or "JewelSocketActiveRed"
-					elseif jewel.baseName == "Viridian Jewel" then
-						overlay = node.expansionJewel and "JewelSocketActiveGreenAlt" or "JewelSocketActiveGreen"
-					elseif jewel.baseName == "Cobalt Jewel" then
-						overlay = node.expansionJewel and "JewelSocketActiveBlueAlt" or "JewelSocketActiveBlue"
-					elseif jewel.baseName == "Prismatic Jewel" then
-						overlay = node.expansionJewel and "JewelSocketActivePrismaticAlt" or "JewelSocketActivePrismatic"
-					elseif jewel.base.subType == "Abyss" then
-						overlay = node.expansionJewel and "JewelSocketActiveAbyssAlt" or "JewelSocketActiveAbyss"
-					elseif jewel.base.subType == "Charm" then
-						if jewel.baseName == "Ursine Charm" then
-							overlay = "CharmSocketActiveStr"
-						elseif jewel.baseName == "Corvine Charm" then
-							overlay = "CharmSocketActiveInt"
-						elseif jewel.baseName == "Lupine Charm" then
-							overlay = "CharmSocketActiveDex"
-						end
-					elseif jewel.baseName == "Timeless Jewel" then
-						overlay = node.expansionJewel and "JewelSocketActiveLegionAlt" or "JewelSocketActiveLegion"
-					elseif jewel.baseName == "Large Cluster Jewel" then
-						overlay = "JewelSocketActiveAltPurple"
-					elseif jewel.baseName == "Medium Cluster Jewel" then
-						overlay = "JewelSocketActiveAltBlue"
-					elseif jewel.baseName == "Small Cluster Jewel" then
-						overlay = "JewelSocketActiveAltRed"
-					end
-				end
-			elseif node.type == "Mastery" then
-				-- This is the icon that appears in the center of many groups
-				if node.masteryEffects then
-					if isAlloc then
-						base = node.masterySprites.activeIcon.masteryActiveSelected
-						effect = node.masterySprites.activeEffectImage.masteryActiveEffect
-					elseif node == hoverNode then
-						base = node.masterySprites.inactiveIcon.masteryConnected
-					else
-						base = node.masterySprites.inactiveIcon.masteryInactive
-					end
-				else
-					base = node.sprites.mastery
-				end
-				SetDrawLayer(nil, 15)
-			else
-				-- Normal node (includes keystones and notables)
-				if node.isTattoo and node.effectSprites then -- trees < 3.22.0 don't have effectSprites
-					effect = node.effectSprites["tattooActiveEffect"]
-				end
-				base = node.sprites[node.type:lower()..(isAlloc and "Active" or "Inactive")]
-				overlay = node.overlay[state .. (node.ascendancyName and "Ascend" or "") .. (node.isBlighted and "Blighted" or "")]
-				if node.ascendancyName and tree.secondaryAscendNameMap and tree.secondaryAscendNameMap[node.ascendancyName] then
-					overlay = "Azmeri"..overlay
-				end
-			end
+			-- Normal node (includes keystones and notables)
+			base = node.sprites[node.type:lower()..(isAlloc and "Active" or "Inactive")]
+			overlay = node.overlay[state .. (node.ascendancyName and "Ascend" or "") .. (node.isBlighted and "Blighted" or "")]
 		end
 
 		-- Convert node position to screen-space
@@ -637,33 +576,6 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 					if hoverDep and hoverDep[node] then
 						-- This node depends on the hover node, turn it red
 						SetDrawColor(1, 0, 0)
-					elseif hoverNode.type == "Socket" and hoverNode.nodesInRadius then
-						-- Hover node is a socket, check if this node falls within its radius and color it accordingly
-						local socket, jewel = build.itemsTab:GetSocketAndJewelForNodeID(hoverNode.id)
-						local isThreadOfHope = jewel and jewel.jewelRadiusLabel == "Variable"
-						if isThreadOfHope then
-							-- Jewel in socket is Thread of Hope or similar
-							for index, data in ipairs(build.data.jewelRadius) do
-								if hoverNode.nodesInRadius[index][node.id] then
-									-- Draw Thread of Hope's annuli
-									if data.inner ~= 0 then
-										SetDrawColor(data.col)
-										break
-									end
-								end
-							end
-						else
-							-- Jewel in socket is not Thread of Hope or similar
-							for index, data in ipairs(build.data.jewelRadius) do
-								if hoverNode.nodesInRadius[index][node.id] then
-									-- Draw normal jewel radii
-									if data.inner == 0 then
-										SetDrawColor(data.col)
-										break
-									end
-								end
-							end
-						end
 					end
 				end
 			end

@@ -37,13 +37,6 @@ function calcs.buildModListForNode(env, node)
 		modList:AddList(node.modList)
 	end
 
-	-- Run first pass radius jewels
-	for _, rad in pairs(env.radiusJewelList) do
-		if rad.type == "Other" and rad.nodes[node.id] and rad.nodes[node.id].type ~= "Mastery" then
-			rad.func(node, modList, rad.data)
-		end
-	end
-
 	if modList:Flag(nil, "PassiveSkillHasNoEffect") or (env.allocNodes[node.id] and modList:Flag(nil, "AllocatedPassiveSkillHasNoEffect")) then
 		wipeTable(modList)
 	end
@@ -54,13 +47,6 @@ function calcs.buildModListForNode(env, node)
 		local scaledList = new("ModList")
 		scaledList:ScaleAddList(modList, scale)
 		modList = scaledList
-	end
-
-	-- Run second pass radius jewels
-	for _, rad in pairs(env.radiusJewelList) do
-		if rad.nodes[node.id] and rad.nodes[node.id].type ~= "Mastery" and (rad.type == "Threshold" or (rad.type == "Self" and env.allocNodes[node.id]) or (rad.type == "SelfUnalloc" and not env.allocNodes[node.id])) then
-			rad.func(node, modList, rad.data)
-		end
 	end
 
 	if modList:Flag(nil, "PassiveSkillHasOtherEffect") then
@@ -90,13 +76,7 @@ function calcs.buildModListForNode(env, node)
 end
 
 -- Build list of modifiers from the listed tree nodes
-function calcs.buildModListForNodeList(env, nodeList, finishJewels)
-	-- Initialise radius jewels
-	for _, rad in pairs(env.radiusJewelList) do
-		wipeTable(rad.data)
-		rad.data.modSource = "Tree:"..rad.nodeId
-	end
-
+function calcs.buildModListForNodeList(env, nodeList)
 	-- Add node modifiers
 	local modList = new("ModList")
 	for _, node in pairs(nodeList) do
@@ -104,27 +84,6 @@ function calcs.buildModListForNodeList(env, nodeList, finishJewels)
 		modList:AddList(nodeModList)
 		if env.mode == "MAIN" then
 			node.finalModList = nodeModList
-		end
-	end
-
-	if finishJewels then
-		-- Process extra radius nodes; these are unallocated nodes near conversion or threshold jewels that need to be processed
-		for _, node in pairs(env.extraRadiusNodeList) do
-			local nodeModList = calcs.buildModListForNode(env, node)
-			if env.mode == "MAIN" then
-				node.finalModList = nodeModList
-			end
-		end
-
-		-- Finalise radius jewels
-		for _, rad in pairs(env.radiusJewelList) do
-			rad.func(nil, modList, rad.data)
-			if env.mode == "MAIN" then
-				if not rad.item.jewelRadiusData then
-					rad.item.jewelRadiusData = { }
-				end
-				rad.item.jewelRadiusData[rad.nodeId] = rad.data
-			end
 		end
 	end
 
@@ -166,11 +125,9 @@ function wipeEnv(env, accelerate)
 		wipeTable(env.itemModDB.mods)
 		wipeTable(env.itemModDB.conditions)
 		wipeTable(env.itemModDB.multipliers)
-		-- 1) Jewels and Jewel-Radius related node modifications
 		-- 2) Player items
 		-- 3) Granted Skill from items (e.g., Curse on Hit rings)
 		-- 4) Flasks
-		wipeTable(env.radiusJewelList)
 		wipeTable(env.extraRadiusNodeList)
 		wipeTable(env.player.itemList)
 		wipeTable(env.grantedSkillsItems)
@@ -333,8 +290,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 		env.requirementsTableGems = { }
 
 		-- Prepare item, skill, flask tables
-		env.radiusJewelList = wipeTable(env.radiusJewelList)
-		env.extraRadiusNodeList = wipeTable(env.extraRadiusNodeList)
 		env.player.itemList = { }
 		env.grantedSkills = { }
 		env.grantedSkillsNodes = { }
@@ -509,7 +464,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 	-- Build and merge item modifiers, and create list of radius jewels
 	if not accelerate.requirementsItems then
 		local items = {}
-		local jewelLimits = {}
 		for _, slot in pairs(build.itemsTab.orderedSlots) do
 			local slotName = slot.slotName
 			local item
@@ -519,8 +473,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 			(override.repItem.base.type == "Staff" or override.repItem.base.type == "Two Handed Sword" or override.repItem.base.type == "Two Handed Axe" or override.repItem.base.type == "Two Handed Mace"
 			or (override.repItem.base.type == "Bow" and item and item.base.type ~= "Quiver")) then
 				item = nil
-			elseif slot.nodeId and override.spec then
-				item = build.itemsTab.items[env.spec.jewels[slot.nodeId]]
 			else
 				item = build.itemsTab.items[slot.selItemId]
 			end
@@ -543,90 +495,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 			end
 			if slot.weaponSet == 2 and build.itemsTab.activeItemSet.useSecondWeaponSet then
 				slotName = slotName:gsub(" Swap","")
-			end
-			if slot.nodeId then
-				-- Slot is a jewel socket, check if socket is allocated
-				if not env.allocNodes[slot.nodeId] then
-					item = nil
-				elseif item then
-					if item.jewelData then
-						item.jewelData.limitDisabled = nil
-					end
-					if item and item.type == "Jewel" and item.name:match("The Adorned, Crimson Jewel") then
-						env.modDB.multipliers["CorruptedMagicJewelEffect"] = item.jewelData.corruptedMagicJewelIncEffect / 100
-					end
-					if item.limit and not env.configInput.ignoreJewelLimits then
-						local limitKey = item.base.subType == "Timeless" and "Historic" or item.title
-						if jewelLimits[limitKey] and jewelLimits[limitKey] >= item.limit then
-							if item.jewelData then
-								item.jewelData.limitDisabled = true
-							end
-							env.itemWarnings.jewelLimitWarning = env.itemWarnings.jewelLimitWarning or { }
-							t_insert(env.itemWarnings.jewelLimitWarning, limitKey)
-							item = nil
-						else
-							jewelLimits[limitKey] = (jewelLimits[limitKey] or 0) + 1
-						end
-					end
-					if item and ( item.jewelRadiusIndex or (override and override.extraJewelFuncs and #override.extraJewelFuncs > 0) ) then
-						-- Jewel has a radius, add it to the list
-						local funcList = (item.jewelData and item.jewelData.funcList) or { { type = "Self", func = function(node, out, data)
-							-- Default function just tallies all stats in radius
-							if node then
-								for _, stat in pairs({"Str","Dex","Int"}) do
-									data[stat] = (data[stat] or 0) + out:Sum("BASE", nil, stat)
-								end
-							end
-						end } }
-						for _, func in ipairs(funcList) do
-							local node = env.spec.nodes[slot.nodeId]
-							t_insert(env.radiusJewelList, {
-								nodes = node.nodesInRadius and node.nodesInRadius[item.jewelRadiusIndex] or { },
-								func = func.func,
-								type = func.type,
-								item = item,
-								nodeId = slot.nodeId,
-								attributes = node.attributesInRadius and node.attributesInRadius[item.jewelRadiusIndex] or { },
-								data = { }
-							})
-							if func.type ~= "Self" and node.nodesInRadius then
-								-- Add nearby unallocated nodes to the extra node list
-								for nodeId, node in pairs(node.nodesInRadius[item.jewelRadiusIndex]) do
-									if not env.allocNodes[nodeId] then
-										env.extraRadiusNodeList[nodeId] = env.spec.nodes[nodeId]
-									end
-								end
-							end
-						end
-						for _, funcData in ipairs(override and override.extraJewelFuncs and override.extraJewelFuncs:List({item = item}, "ExtraJewelFunc") or {}) do
-							local node = env.spec.nodes[slot.nodeId]
-							local radius
-							for index, data in pairs(data.jewelRadius) do
-								if funcData.radius == data.label then
-									radius = index
-									break
-								end
-							end
-							t_insert(env.radiusJewelList, {
-								nodes = node.nodesInRadius and node.nodesInRadius[radius] or { },
-								func = funcData.func,
-								type = funcData.type,
-								item = item,
-								nodeId = slot.nodeId,
-								attributes = node.attributesInRadius and node.attributesInRadius[radius] or { },
-								data = { }
-							})
-							if funcData.type ~= "Self" and node.nodesInRadius then
-								-- Add nearby unallocated nodes to the extra node list
-								for nodeId, node in pairs(node.nodesInRadius[radius]) do
-									if not env.allocNodes[nodeId] then
-										env.extraRadiusNodeList[nodeId] = env.spec.nodes[nodeId]
-									end
-								end
-							end
-						end
-					end
-				end
 			end
 			items[slotName] = item
 		end
@@ -701,21 +569,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 				item = nil
 			end
 			local scale = 1
-			if item and item.type == "Jewel" and item.base.subType == "Abyss" and slot.parentSlot then
-				-- Check if the item in the parent slot has enough Abyssal Sockets
-				local parentItem = env.player.itemList[slot.parentSlot.slotName]
-				if not parentItem or parentItem.abyssalSocketCount < slot.slotNum then
-					item = nil
-				else
-					scale = parentItem.socketedJewelEffectModifier
-				end
-			end
-			if slot.nodeId and item and item.type == "Jewel" and item.jewelData and item.jewelData.jewelIncEffectFromClassStart then
-				local node = env.spec.nodes[slot.nodeId]
-				if node and node.distanceToClassStart then
-					scale = scale + node.distanceToClassStart * (item.jewelData.jewelIncEffectFromClassStart / 100)
-				end
-			end
 			if item then
 				env.player.itemList[slotName] = item
 				-- Merge mods for this item
@@ -729,23 +582,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 						Dex = item.requirements.dexMod,
 						Int = item.requirements.intMod,
 					})
-				end
-				if item.type == "Jewel" and item.base.subType == "Abyss" then
-					-- Update Abyss Jewel conditions/multipliers
-					local cond = "Have"..item.baseName:gsub(" ","")
-					if not env.itemModDB.conditions[cond] then
-						env.itemModDB.conditions[cond] = true
-						env.itemModDB.multipliers["AbyssJewelType"] = (env.itemModDB.multipliers["AbyssJewelType"] or 0) + 1
-					end
-					if slot.parentSlot then
-						env.itemModDB.conditions[cond.."In"..slot.parentSlot.slotName] = true
-					end
-					env.itemModDB.multipliers["AbyssJewel"] = (env.itemModDB.multipliers["AbyssJewel"] or 0) + 1
-					if item.rarity == "NORMAL" then env.itemModDB.multipliers["NormalAbyssJewels"] = (env.itemModDB.multipliers["NormalAbyssJewels"] or 0) + 1 end
-					if item.rarity == "MAGIC" then env.itemModDB.multipliers["MagicAbyssJewels"] = (env.itemModDB.multipliers["MagicAbyssJewels"] or 0) + 1 end
-					if item.rarity == "RARE" then env.itemModDB.multipliers["RareAbyssJewels"] = (env.itemModDB.multipliers["RareAbyssJewels"] or 0) + 1 end
-					if item.rarity == "UNIQUE" or item.rarity == "RELIC" then env.itemModDB.multipliers["UniqueAbyssJewels"] = (env.itemModDB.multipliers["UniqueAbyssJewels"] or 0) + 1 end
-					env.itemModDB.multipliers[item.baseName:gsub(" ","")] = (env.itemModDB.multipliers[item.baseName:gsub(" ","")] or 0) + 1
 				end
 				if item.type == "Shield" and env.allocNodes[45175] and env.allocNodes[45175].dn == "Necromantic Aegis" then
 					-- Special handling for Necromantic Aegis
@@ -868,9 +704,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 						combinedList:MergeMod(mod)
 					end
 					env.itemModDB:ScaleAddList(combinedList, scale)
-				elseif env.modDB.multipliers["CorruptedMagicJewelEffect"] and item.type == "Jewel" and item.rarity == "MAGIC" and item.corrupted and slot.nodeId and item.base.subType ~= "Charm" then
-					scale = scale + env.modDB.multipliers["CorruptedMagicJewelEffect"]
-					env.itemModDB:ScaleAddList(srcList, scale)
 				else
 					env.itemModDB:ScaleAddList(srcList, scale)
 				end
@@ -878,66 +711,29 @@ function calcs.initEnv(build, mode, override, specEnv)
 				if item.classRestriction then
 					env.itemModDB.conditions[item.title:gsub(" ", "")] = item.classRestriction
 				end
-				if item.type ~= "Jewel" and item.type ~= "Flask" then
-					-- Update item counts
-					local key
-					if item.rarity == "UNIQUE" or item.rarity == "RELIC" then
-						key = "UniqueItem"
-					elseif item.rarity == "RARE" then
-						key = "RareItem"
-					elseif item.rarity == "MAGIC" then
-						key = "MagicItem"
+				local key
+				if item.rarity == "UNIQUE" or item.rarity == "RELIC" then
+					key = "UniqueItem"
+				elseif item.rarity == "RARE" then
+					key = "RareItem"
+				elseif item.rarity == "MAGIC" then
+					key = "MagicItem"
+				else
+					key = "NormalItem"
+				end
+				env.itemModDB.multipliers[key] = (env.itemModDB.multipliers[key] or 0) + 1
+				env.itemModDB.conditions[key .. "In" .. slotName] = true
+				for mult, property in pairs({["CorruptedItem"] = "corrupted", ["ShaperItem"] = "shaper", ["ElderItem"] = "elder"}) do
+					if item[property] then
+						env.itemModDB.multipliers[mult] = (env.itemModDB.multipliers[mult] or 0) + 1
 					else
-						key = "NormalItem"
-					end
-					env.itemModDB.multipliers[key] = (env.itemModDB.multipliers[key] or 0) + 1
-					env.itemModDB.conditions[key .. "In" .. slotName] = true
-					for mult, property in pairs({["CorruptedItem"] = "corrupted", ["ShaperItem"] = "shaper", ["ElderItem"] = "elder"}) do
-						if item[property] then
-							env.itemModDB.multipliers[mult] = (env.itemModDB.multipliers[mult] or 0) + 1
-						else
-							env.itemModDB.multipliers["Non"..mult] = (env.itemModDB.multipliers["Non"..mult] or 0) + 1
-						end
-					end
-					if item.shaper or item.elder then
-						env.itemModDB.multipliers.ShaperOrElderItem = (env.itemModDB.multipliers.ShaperOrElderItem or 0) + 1
-					end
-					env.itemModDB.multipliers[item.type:gsub(" ", ""):gsub(".+Handed", "").."Item"] = (env.itemModDB.multipliers[item.type:gsub(" ", ""):gsub(".+Handed", "").."Item"] or 0) + 1
-					-- Calculate socket counts
-					local slotEmptySocketsCount = { R = 0, G = 0, B = 0, W = 0}	
-					local slotGemSocketsCount = 0
-					local socketedGems = 0
-					-- Loop through socket groups to calculate number of socketed gems
-					for _, socketGroup in pairs(env.build.skillsTab.socketGroupList) do
-						if (not socketGroup.source and socketGroup.enabled and socketGroup.slot and socketGroup.slot == slotName and socketGroup.gemList) then
-							for _, gem in pairs(socketGroup.gemList) do
-								if (gem.gemData and gem.enabled) then
-									socketedGems = socketedGems + 1
-								end
-							end
-						end
-					end
-					for i, socket in ipairs(item.sockets) do
-						-- Check socket color to ignore abyssal sockets
-						if socket.color == 'R' or socket.color == 'B' or socket.color == 'G' or socket.color == 'W' then
-							slotGemSocketsCount = slotGemSocketsCount + 1
-							-- loop through sockets indexes that are greater than number of socketed gems
-							if i > socketedGems then
-								slotEmptySocketsCount[socket.color] = slotEmptySocketsCount[socket.color] + 1
-							end
-						end
-					end
-					env.itemModDB.multipliers["SocketedGemsIn"..slotName] = (env.itemModDB.multipliers["SocketedGemsIn"..slotName] or 0) + math.min(slotGemSocketsCount, socketedGems)
-					env.itemModDB.multipliers.EmptyRedSocketsInAnySlot = (env.itemModDB.multipliers.EmptyRedSocketsInAnySlot or 0) + slotEmptySocketsCount.R
-					env.itemModDB.multipliers.EmptyGreenSocketsInAnySlot = (env.itemModDB.multipliers.EmptyGreenSocketsInAnySlot or 0) + slotEmptySocketsCount.G
-					env.itemModDB.multipliers.EmptyBlueSocketsInAnySlot = (env.itemModDB.multipliers.EmptyBlueSocketsInAnySlot or 0) + slotEmptySocketsCount.B
-					env.itemModDB.multipliers.EmptyWhiteSocketsInAnySlot = (env.itemModDB.multipliers.EmptyWhiteSocketsInAnySlot or 0) + slotEmptySocketsCount.W
-					-- Warn if socketed gems over socket limit
-					if socketedGems > slotGemSocketsCount then
-						env.itemWarnings.socketLimitWarning = env.itemWarnings.socketLimitWarning or { }
-						t_insert(env.itemWarnings.socketLimitWarning, slotName)
+						env.itemModDB.multipliers["Non"..mult] = (env.itemModDB.multipliers["Non"..mult] or 0) + 1
 					end
 				end
+				if item.shaper or item.elder then
+					env.itemModDB.multipliers.ShaperOrElderItem = (env.itemModDB.multipliers.ShaperOrElderItem or 0) + 1
+				end
+				env.itemModDB.multipliers[item.type:gsub(" ", ""):gsub(".+Handed", "").."Item"] = (env.itemModDB.multipliers[item.type:gsub(" ", ""):gsub(".+Handed", "").."Item"] or 0) + 1
 			end
 		end
 		-- Override empty socket calculation if set in config
@@ -988,19 +784,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 	end
 
 	-- Merge modifiers for allocated passives
-	env.modDB:AddList(calcs.buildModListForNodeList(env, env.allocNodes, true))
-
-	if not override or (override and not override.extraJewelFuncs) then
-		override = override or {}
-		override.extraJewelFuncs = new("ModList")
-		override.extraJewelFuncs.actor = env.player
-		for _, mod in ipairs(env.modDB:Tabulate("LIST", nil, "ExtraJewelFunc")) do
-			override.extraJewelFuncs:AddMod(mod.mod)
-		end
-		if #override.extraJewelFuncs > 0 then
-			return calcs.initEnv(build, mode, override, specEnv)
-		end
-	end
+	env.modDB:AddList(calcs.buildModListForNodeList(env, env.allocNodes))
 
 	-- Find skills granted by tree nodes
 	if not accelerate.nodeAlloc then

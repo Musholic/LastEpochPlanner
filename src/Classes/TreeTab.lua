@@ -372,25 +372,9 @@ function TreeTabClass:SetActiveSpec(specId)
 	local prevSpec = self.build.spec
 	self.activeSpec = m_min(specId, #self.specList)
 	local curSpec = self.specList[self.activeSpec]
-	data.setJewelRadiiGlobally(curSpec.treeVersion)
 	self.build.spec = curSpec
 	self.build.buildFlag = true
 	self.build.spec:SetWindowTitleWithBuildClass()
-	for _, slot in pairs(self.build.itemsTab.slots) do
-		if slot.nodeId then
-			if prevSpec then
-				-- Update the previous spec's jewel for this slot
-				prevSpec.jewels[slot.nodeId] = slot.selItemId
-			end
-			if curSpec.jewels[slot.nodeId] then
-				-- Socket the jewel for the new spec
-				slot.selItemId = curSpec.jewels[slot.nodeId]
-			else
-				-- Unsocket the old jewel from the previous spec
-				slot.selItemId = 0
-			end
-		end
-	end
 	self.showConvert = not curSpec.treeVersion:match("^" .. latestTreeVersion)
 	if self.build.itemsTab.itemOrderList[1] then
 		-- Update item slots if items have been loaded already
@@ -419,9 +403,7 @@ function TreeTabClass:ConvertToVersion(version, remove, success, ignoreRuthlessC
 	end
 	local newSpec = new("PassiveSpec", self.build, version)
 	newSpec.title = self.build.spec.title
-	newSpec.jewels = copyTable(self.build.spec.jewels)
 	newSpec:RestoreUndoState(self.build.spec:CreateUndoState(), version)
-	newSpec:BuildClusterJewelGraphs()
 	t_insert(self.specList, self.activeSpec + 1, newSpec)
 	if remove then
 		t_remove(self.specList, self.activeSpec)
