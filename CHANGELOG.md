@@ -1,5 +1,19 @@
 # Changelog
 
+## [v0.7.1](https://github.com/Musholic/PathOfBuildingForLastEpoch/tree/v0.7.1) (2025/08/08)
+
+[Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.7.0...v0.7.1)
+
+## What's Changed
+### Fixed bugs
+- Fix missing summon_raptor minion data [\#35](https://github.com/Musholic/LastEpochPlanner/pull/35) ([Musholic](https://github.com/Musholic))
+- Fix crash due to wrong life/accuracy calculations for minions [\#36](https://github.com/Musholic/LastEpochPlanner/pull/36) ([Musholic](https://github.com/Musholic))
+- Fix passive point allocations no longer displayed with new runtime [\#37](https://github.com/Musholic/LastEpochPlanner/pull/37) ([Musholic](https://github.com/Musholic))
+- Fix crash with dot skills without duration [\#42](https://github.com/Musholic/LastEpochPlanner/pull/42) ([Musholic](https://github.com/Musholic))
+- Clean a lot of obsolete code related to jewels or sockets from PoE [\#43](https://github.com/Musholic/LastEpochPlanner/pull/43) ([Musholic](https://github.com/Musholic))
+
+
+
 ## [v0.7.0](https://github.com/Musholic/PathOfBuildingForLastEpoch/tree/v0.7.0) (2025/07/23)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.6.0...v0.7.0)

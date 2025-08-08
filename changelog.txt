@@ -1,3 +1,13 @@
+VERSION[0.7.1][2025/08/08]
+
+--- Fixed bugs ---
+* Fix missing summon_raptor minion data (Musholic)
+* Fix crash due to wrong life/accuracy calculations for minions (Musholic)
+* Fix passive point allocations no longer displayed with new runtime (Musholic)
+* Fix crash with dot skills without duration (Musholic)
+* Clean a lot of obsolete code related to jewels or sockets from PoE (Musholic)
+
+
 VERSION[0.7.0][2025/07/23]
 
 --- New to Last Epoch Planner ---
