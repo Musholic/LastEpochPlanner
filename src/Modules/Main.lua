@@ -316,18 +316,16 @@ function main:SaveModCache()
 	local out = io.open("Data/ModCache.lua", "w")
 	out:write('local c=...')
 	for line, dat in pairsSortByKey(modLib.parseModCache) do
-		if not dat[1] or not dat[1][1] then
-			out:write('c["', line:gsub("\n","\\n"), '"]={')
-			if dat[1] then
-				writeLuaTable(out, dat[1])
-			else
-				out:write('nil')
-			end
-			if dat[2] then
-				out:write(',"', dat[2]:gsub("\n","\\n"), '"}\n')
-			else
-				out:write(',nil}\n')
-			end
+		out:write('c["', line:gsub("\n","\\n"), '"]={')
+		if dat[1] then
+			writeLuaTable(out, dat[1])
+		else
+			out:write('nil')
+		end
+		if dat[2] then
+			out:write(',"', dat[2]:gsub("\n","\\n"), '"}\n')
+		else
+			out:write(',nil}\n')
 		end
 	end
 	out:close()
