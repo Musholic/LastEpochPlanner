@@ -1,7 +1,6 @@
 VERSION[0.7.1][2025/08/08]
---
-<!-- Release notes generated using configuration in .github/release.yml at dev -->
 
+--- Fixed bugs ---
 * Fix missing summon_raptor minion data (Musholic)
 * Fix crash due to wrong life/accuracy calculations for minions (Musholic)
 * Fix passive point allocations no longer displayed with new runtime (Musholic)

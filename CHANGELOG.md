@@ -4,11 +4,8 @@
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.7.0...v0.7.1)
 
---
-<!-- Release notes generated using configuration in .github/release.yml at dev -->
-
 ## What's Changed
-### Other changes
+### Fixed bugs
 - Fix missing summon_raptor minion data [\#35](https://github.com/Musholic/LastEpochPlanner/pull/35) ([Musholic](https://github.com/Musholic))
 - Fix crash due to wrong life/accuracy calculations for minions [\#36](https://github.com/Musholic/LastEpochPlanner/pull/36) ([Musholic](https://github.com/Musholic))
 - Fix passive point allocations no longer displayed with new runtime [\#37](https://github.com/Musholic/LastEpochPlanner/pull/37) ([Musholic](https://github.com/Musholic))
