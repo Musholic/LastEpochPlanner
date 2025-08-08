@@ -543,7 +543,7 @@ function calcs.buildOutput(build, mode)
 			end
 			local stackCount = env.debuffs[name]:Sum("BASE", nil, "Multiplier:"..name.."Stack")
 			if stackCount > 0 then
-				curseList[index] = name .. " (" .. stackCount .. " stack" .. (stackCount > 1 and "s" or "") .. ")"
+				curseList[index] = name .. " (" .. round(stackCount, 2) .. " stack" .. (stackCount > 1 and "s" or "") .. ")"
 			end
 		end
 		for _, slot in ipairs(env.curseSlots) do
