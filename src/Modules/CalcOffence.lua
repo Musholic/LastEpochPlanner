@@ -1723,7 +1723,9 @@ function calcs.offence(env, actor, activeSkill)
 	end
 
 	if skillFlags.duration and output.Duration then
-		output.MaxStacks = round(output.Speed * output.Duration * quantityMultiplier, 2)
+		output.MaxStacks = output.Speed * output.Duration * quantityMultiplier
+	else
+		output.MaxStacks = 1
 	end
 
 	--Calculate damage (exerts, crits, ruthless, DPS, etc)
@@ -2324,7 +2326,7 @@ function calcs.offence(env, actor, activeSkill)
 						end
 					end
 					if skillFlags.dot then
-						if not skillData.damageInterval then
+						if output.Duration then
 							t_insert(breakdown[damageType], s_format("/ %.2f ^8(duration)", skillData.duration))
 						end
 					end
@@ -2624,7 +2626,8 @@ function calcs.offence(env, actor, activeSkill)
 		if skillFlags.dot then
 			if skillData.damageInterval then
 				output.TotalDPS = output.TotalDPS / skillData.damageInterval
-			else
+			end
+			if output.Duration then
 				output.TotalDPS = output.TotalDPS * output.MaxStacks
 				if breakdown then
 					breakdown.MaxStacks = {
@@ -2793,16 +2796,14 @@ function calcs.offence(env, actor, activeSkill)
 				output.HitSpeed and s_format("x %.2f ^8(hit rate)", output.HitSpeed) or s_format("x %.2f ^8(trigger rate)", output.Speed),
 			}
 		elseif skillFlags.dot then
+			breakdown.TotalDPS = {
+				s_format("%.1f ^8(Damage per Instance)", output.AverageDamage),
+			}
 			if skillData.damageInterval then
-				breakdown.TotalDPS = {
-					s_format("%.1f ^8(Damage per Instance)", output.AverageDamage),
-					s_format("/ %.2f ^8(damage interval)", skillData.damageInterval),
-				}
-			else
-				breakdown.TotalDPS = {
-					s_format("%.1f ^8(Damage per Instance)", output.AverageDamage),
-					s_format("x %.2f ^8(max stacks)", output.MaxStacks),
-				}
+				t_insert(breakdown.TotalDPS, s_format("/ %.2f ^8(damage interval)", skillData.damageInterval))
+			end
+			if skillData.duration then
+				t_insert(breakdown.TotalDPS, s_format("x %.2f ^8(max stacks)", output.MaxStacks))
 			end
 		else
 			breakdown.TotalDPS = {
