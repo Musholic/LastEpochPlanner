@@ -316,7 +316,7 @@ function main:SaveModCache()
 	local out = io.open("Data/ModCache.lua", "w")
 	out:write('local c=...')
 	for line, dat in pairsSortByKey(modLib.parseModCache) do
-		if not dat[1] or not dat[1][1] or (dat[1][1].name ~= "JewelFunc" and dat[1][1].name ~= "ExtraJewelFunc") then
+		if not dat[1] or not dat[1][1] then
 			out:write('c["', line:gsub("\n","\\n"), '"]={')
 			if dat[1] then
 				writeLuaTable(out, dat[1])
@@ -335,10 +335,8 @@ end
 
 function main:LoadTree(treeVersion)
 	if self.tree[treeVersion] then
-		data.setJewelRadiiGlobally(treeVersion)
 		return self.tree[treeVersion]
 	elseif isValueInTable(treeVersionList, treeVersion) then
-		data.setJewelRadiiGlobally(treeVersion)
 		--ConPrintf("[main:LoadTree] - Lazy Loading Tree " .. treeVersion)
 		self.tree[treeVersion] = new("PassiveTree", treeVersion)
 		return self.tree[treeVersion]

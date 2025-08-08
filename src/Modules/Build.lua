@@ -37,8 +37,6 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 
 	-- Load build file
 	self.xmlSectionList = { }
-	self.spectreList = { }
-	self.timelessData = { jewelType = { }, conquerorType = { }, devotionVariant1 = 1, devotionVariant2 = 1, jewelSocket = { }, fallbackWeightMode = { }, searchList = "", searchListFallback = "", searchResults = { }, sharedResults = { } }
 	self.viewMode = "TREE"
 	self.characterLevel = m_min(m_max(main.defaultCharLevel or 1, 1), 100)
 	self.targetVersion = liveTargetVersion
@@ -492,7 +490,6 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 
 	-- Initialise build components
 	self.latestTree = main.tree[latestTreeVersion]
-	data.setJewelRadiiGlobally(latestTreeVersion)
 	self.data = data
 	self.importTab = new("ImportTab", self)
 	self.notesTab = new("NotesTab", self)
@@ -880,33 +877,6 @@ function buildMode:Load(xml, fileName)
 		self[diff] = xml.attrib[diff] or "None"
 	end
 	self.mainSocketGroup = tonumber(xml.attrib.mainSkillIndex) or tonumber(xml.attrib.mainSocketGroup) or 1
-	wipeTable(self.spectreList)
-	for _, child in ipairs(xml) do
-		if child.elem == "Spectre" then
-			if child.attrib.id and data.minions[child.attrib.id] then
-				t_insert(self.spectreList, child.attrib.id)
-			end
-		elseif child.elem == "TimelessData" then
-			self.timelessData.jewelType = {
-				id = tonumber(child.attrib.jewelTypeId)
-			}
-			self.timelessData.conquerorType = {
-				id = tonumber(child.attrib.conquerorTypeId)
-			}
-			self.timelessData.devotionVariant1 = tonumber(child.attrib.devotionVariant1) or 1
-			self.timelessData.devotionVariant2 = tonumber(child.attrib.devotionVariant2) or 1
-			self.timelessData.jewelSocket = {
-				id = tonumber(child.attrib.jewelSocketId)
-			}
-			self.timelessData.fallbackWeightMode = {
-				idx = tonumber(child.attrib.fallbackWeightModeIdx)
-			}
-			self.timelessData.socketFilter = child.attrib.socketFilter == "true"
-			self.timelessData.socketFilterDistance = tonumber(child.attrib.socketFilterDistance) or 0
-			self.timelessData.searchList = child.attrib.searchList
-			self.timelessData.searchListFallback = child.attrib.searchListFallback
-		end
-	end
 end
 
 function buildMode:Save(xml)
@@ -922,9 +892,6 @@ function buildMode:Save(xml)
 		mainSocketGroup = tostring(self.mainSocketGroup),
 		characterLevelAutoMode = tostring(self.characterLevelAutoMode)
 	}
-	for _, id in ipairs(self.spectreList) do
-		t_insert(xml, { elem = "Spectre", attrib = { id = id } })
-	end
 	local addedStatNames = { }
 	for index, statData in ipairs(self.displayStats) do
 		if not statData.flag or self.calcsTab.mainEnv.player.mainSkill.skillFlags[statData.flag] then
@@ -973,22 +940,6 @@ function buildMode:Save(xml)
 			end
 		end
 	end
-	local timelessData = {
-		elem = "TimelessData",
-		attrib = {
-			jewelTypeId = next(self.timelessData.jewelType) and tostring(self.timelessData.jewelType.id),
-			conquerorTypeId = next(self.timelessData.conquerorType) and tostring(self.timelessData.conquerorType.id),
-			devotionVariant1 = tostring(self.timelessData.devotionVariant1),
-			devotionVariant2 = tostring(self.timelessData.devotionVariant2),
-			jewelSocketId = next(self.timelessData.jewelSocket) and tostring(self.timelessData.jewelSocket.id),
-			fallbackWeightModeIdx = next(self.timelessData.fallbackWeightMode) and tostring(self.timelessData.fallbackWeightMode.idx),
-			socketFilter = self.timelessData.socketFilter and "true",
-			socketFilterDistance = self.timelessData.socketFilterDistance and tostring(self.timelessData.socketFilterDistance),
-			searchList = self.timelessData.searchList and tostring(self.timelessData.searchList),
-			searchListFallback = self.timelessData.searchListFallback and tostring(self.timelessData.searchListFallback)
-		}
-	}
-	t_insert(xml, timelessData)
 end
 
 function buildMode:ResetModFlags()
@@ -1503,16 +1454,6 @@ function buildMode:AddDisplayStatList(statList, actor)
 end
 
 function buildMode:InsertItemWarnings()
-	if self.calcsTab.mainEnv.itemWarnings.jewelLimitWarning then
-		for _, warning in ipairs(self.calcsTab.mainEnv.itemWarnings.jewelLimitWarning) do
-			InsertIfNew(self.controls.warnings.lines, "You are exceeding jewel limit with the jewel "..warning)
-		end
-	end
-	if self.calcsTab.mainEnv.itemWarnings.socketLimitWarning then
-		for _, warning in ipairs(self.calcsTab.mainEnv.itemWarnings.socketLimitWarning) do
-			InsertIfNew(self.controls.warnings.lines, "You have too many gems in your "..warning.." slot")
-		end
-	end
 end
 
 -- Build list of side bar stats

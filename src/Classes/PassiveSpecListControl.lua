@@ -13,9 +13,7 @@ local PassiveSpecListClass = newClass("PassiveSpecListControl", "ListControl", f
 	self.controls.copy = new("ButtonControl", {"BOTTOMLEFT",self,"TOP"}, 2, -4, 60, 18, "Copy", function()
 		local newSpec = new("PassiveSpec", treeTab.build, self.selValue.treeVersion)
 		newSpec.title = self.selValue.title
-		newSpec.jewels = copyTable(self.selValue.jewels)
 		newSpec:RestoreUndoState(self.selValue:CreateUndoState())
-		newSpec:BuildClusterJewelGraphs()
 		self:RenameSpec(newSpec, "Copy Tree", true)
 	end)
 	self.controls.copy.enabled = function()

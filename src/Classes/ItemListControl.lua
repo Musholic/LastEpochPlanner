@@ -23,11 +23,6 @@ local ItemListClass = newClass("ItemListControl", "ListControl", function(self, 
 			for _, slot in pairs(itemsTab.slots) do
 				slot:SetSelItemId(0)
 			end
-			for _, spec in pairs(itemsTab.build.treeTab.specList) do
-				for nodeId, itemId in pairs(spec.jewels) do
-					spec.jewels[nodeId] = 0
-				end
-			end
 			wipeTable(self.list)
 			wipeTable(self.itemsTab.items)
 			itemsTab:PopulateSlots()
@@ -50,27 +45,6 @@ local ItemListClass = newClass("ItemListControl", "ListControl", function(self, 
 		itemsTab:SortItemList()
 	end)
 end)
-
-function ItemListClass:FindEquippedAbyssJewel(jewelId, excludeActiveSet)
-	if not self.itemsTab.items[jewelId] or self.itemsTab.items[jewelId].base.subType ~= "Abyss" then
-		return nil
-	end
-	local equipSet = nil
-	local matchActive = false
-	for _, itemSet in pairs(self.itemsTab.itemSets) do
-		for slotName, slot in pairs(itemSet) do
-			if type(slot) == "table" and slot.selItemId == jewelId then
-				if excludeActiveSet and (itemSet == self.itemsTab.activeItemSet or matchActive) then
-					equipSet = nil
-					matchActive = true
-				else
-					equipSet = itemSet.title or "Default"
-				end
-			end
-		end
-	end
-	return equipSet
-end
 
 function ItemListClass:GetRowValue(column, index, itemId)
 	local item = self.itemsTab.items[itemId]
@@ -164,28 +138,9 @@ function ItemListClass:OnSelDelete(index, itemId)
 			self.selValue = nil
 		end)
 	else
-		local equipSet = self:FindEquippedAbyssJewel(itemId, true)
-		if equipSet then
-			local inSet = equipSet and (" in set '"..(equipSet.title or "Default").."'") or ""
-			main:OpenConfirmPopup("Delete Item", item.name.." is currently equipped in an Abyssal Socket"..inSet..".\nAre you sure you want to delete it?", "Delete", function()
-				self.itemsTab:DeleteItem(item)
-				self.selIndex = nil
-				self.selValue = nil
-			end)
-		else
-			local equipTree = self:FindSocketedJewel(itemId, true)
-			if equipTree then
-				main:OpenConfirmPopup("Delete Item", item.name.." is currently equipped in passive tree '"..equipTree.."'.\nAre you sure you want to delete it?", "Delete", function()
-					self.itemsTab:DeleteItem(item)
-					self.selIndex = nil
-					self.selValue = nil
-				end)
-			else
-				self.itemsTab:DeleteItem(item)
-				self.selIndex = nil
-				self.selValue = nil
-			end
-		end
+		self.itemsTab:DeleteItem(item)
+		self.selIndex = nil
+		self.selValue = nil
 	end
 end
 

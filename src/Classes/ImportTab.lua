@@ -890,8 +890,6 @@ function ImportTabClass:BuildItem(itemData)
         for _, property in pairs(itemData.properties) do
             if property.name == "Quality" then
                 item.quality = tonumber(property.values[1][1]:match("%d+"))
-            elseif property.name == "Radius" then
-                item.jewelRadiusLabel = property.values[1][1]
             elseif property.name == "Limited to" then
                 item.limit = tonumber(property.values[1][1])
             elseif property.name == "Evasion Rating" then
@@ -960,85 +958,6 @@ function ImportTabClass:BuildItem(itemData)
     item:Craft()
 
     return item
-end
-
-function ImportTabClass:ImportSocketedItems(item, socketedItems, slotName)
-    -- Build socket group list
-    local itemSocketGroupList = { }
-    local abyssalSocketId = 1
-    for _, socketedItem in ipairs(socketedItems) do
-        if socketedItem.abyssJewel then
-            self:ImportItem(socketedItem, slotName .. " Abyssal Socket " .. abyssalSocketId)
-            abyssalSocketId = abyssalSocketId + 1
-        else
-            local normalizedBasename, qualityType = self.build.skillsTab:GetBaseNameAndQuality(socketedItem.typeLine, nil)
-            local gemId = self.build.data.gemForBaseName[normalizedBasename:lower()]
-            if socketedItem.hybrid then
-                -- Used by transfigured gems and dual-skill gems (currently just Stormbind)
-                normalizedBasename, qualityType = self.build.skillsTab:GetBaseNameAndQuality(socketedItem.hybrid.baseTypeName, nil)
-                gemId = self.build.data.gemForBaseName[normalizedBasename:lower()]
-                if gemId and socketedItem.hybrid.isVaalGem then
-                    gemId = self.build.data.gemGrantedEffectIdForVaalGemId[self.build.data.gems[gemId].grantedEffectId]
-                end
-            end
-            if gemId then
-                local gemInstance = { level = 20, quality = 0, enabled = true, enableGlobal1 = true, gemId = gemId }
-                gemInstance.nameSpec = self.build.data.gems[gemId].name
-                gemInstance.support = socketedItem.support
-                gemInstance.qualityId = qualityType
-                for _, property in pairs(socketedItem.properties) do
-                    if property.name == "Level" then
-                        gemInstance.level = tonumber(property.values[1][1]:match("%d+"))
-                    elseif property.name == "Quality" then
-                        gemInstance.quality = tonumber(property.values[1][1]:match("%d+"))
-                    end
-                end
-                local groupID = item.sockets[socketedItem.socket + 1].group
-                if not itemSocketGroupList[groupID] then
-                    itemSocketGroupList[groupID] = { label = "", enabled = true, gemList = { }, slot = slotName }
-                end
-                local socketGroup = itemSocketGroupList[groupID]
-                if not socketedItem.support and socketGroup.gemList[1] and socketGroup.gemList[1].support and item.title ~= "Dialla's Malefaction" then
-                    -- If the first gemInstance is a support gemInstance, put the first active gemInstance before it
-                    t_insert(socketGroup.gemList, 1, gemInstance)
-                else
-                    t_insert(socketGroup.gemList, gemInstance)
-                end
-            end
-        end
-    end
-
-    -- Import the socket groups
-    for _, itemSocketGroup in pairs(itemSocketGroupList) do
-        -- Check if this socket group matches an existing one
-        local repGroup
-        for index, socketGroup in pairs(self.build.skillsTab.socketGroupList) do
-            if #socketGroup.gemList == #itemSocketGroup.gemList and (not socketGroup.slot or socketGroup.slot == slotName) then
-                local match = true
-                for gemIndex, gem in pairs(socketGroup.gemList) do
-                    if gem.nameSpec:lower() ~= itemSocketGroup.gemList[gemIndex].nameSpec:lower() then
-                        match = false
-                        break
-                    end
-                end
-                if match then
-                    repGroup = socketGroup
-                    break
-                end
-            end
-        end
-        if repGroup then
-            -- Update the existing one
-            for gemIndex, gem in pairs(repGroup.gemList) do
-                local itemGem = itemSocketGroup.gemList[gemIndex]
-                gem.level = itemGem.level
-                gem.quality = itemGem.quality
-            end
-        else
-            t_insert(self.build.skillsTab.socketGroupList, itemSocketGroup)
-        end
-        self.build.skillsTab:ProcessSocketGroup(itemSocketGroup)
-    end
 end
 
 -- Return the index of the group with the most gems

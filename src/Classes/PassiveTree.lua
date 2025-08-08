@@ -300,46 +300,6 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
             node.type = "AscendClassStart"
             local ascendClass = self.ascendNameMap[node.ascendancyName].ascendClass
             ascendClass.startNodeId = node.id
-        elseif node.m or node.isMastery then
-            node.type = "Mastery"
-            if node.masteryEffects then
-                for _, effect in pairs(node.masteryEffects) do
-                    if not self.masteryEffects[effect.effect] then
-                        self.masteryEffects[effect.effect] = { id = effect.effect, sd = effect.stats }
-                        self:ProcessStats(self.masteryEffects[effect.effect])
-                    else
-                        -- Copy multiline stats from an earlier ProcessStats call
-                        effect.stats = self.masteryEffects[effect.effect].sd
-                    end
-                end
-            end
-        elseif node.isJewelSocket then
-            node.type = "Socket"
-            self.sockets[node.id] = node
-        elseif node.ks or node.isKeystone then
-            node.type = "Keystone"
-            self.keystoneMap[node.dn] = node
-            self.keystoneMap[node.dn:lower()] = node
-        elseif node["not"] or node.isNotable then
-            node.type = "Notable"
-            if not node.ascendancyName then
-                -- Some nodes have duplicate names in the tree data for some reason, even though they're not on the tree
-                -- Only add them if they're actually part of a group (i.e. in the tree)
-                -- Add everything otherwise, because cluster jewel notables don't have a group
-                if not self.notableMap[node.dn:lower()] then
-                    self.notableMap[node.dn:lower()] = node
-                elseif node.g then
-                    self.notableMap[node.dn:lower()] = node
-                end
-            else
-                self.ascendancyMap[node.dn:lower()] = node
-                if not self.classNotables[self.ascendNameMap[node.ascendancyName].class.name] then
-                    self.classNotables[self.ascendNameMap[node.ascendancyName].class.name] = { }
-                end
-                if self.ascendNameMap[node.ascendancyName].class.name ~= "Scion" then
-                    t_insert(self.classNotables[self.ascendNameMap[node.ascendancyName].class.name], node.dn)
-                end
-            end
         else
             node.type = "Normal"
         end
@@ -366,65 +326,6 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
         end
         for _, otherId in pairs(node["in"] or {}) do
             t_insert(node.linkedId, otherId)
-        end
-    end
-
-    -- Precalculate the lists of nodes that are within each radius of each socket
-    for nodeId, socket in pairs(self.sockets) do
-        if socket.name == "Charm Socket" then
-            socket.charmSocket = true
-        else
-            socket.nodesInRadius = { }
-            socket.attributesInRadius = { }
-            for radiusIndex, _ in ipairs(data.jewelRadius) do
-                socket.nodesInRadius[radiusIndex] = { }
-                socket.attributesInRadius[radiusIndex] = { }
-            end
-
-            local minX, maxX = socket.x - data.maxJewelRadius, socket.x + data.maxJewelRadius
-            local minY, maxY = socket.y - data.maxJewelRadius, socket.y + data.maxJewelRadius
-
-            for _, node in pairs(self.nodes) do
-                if node.x and node.x >= minX and node.x <= maxX and node.y and node.y >= minY and node.y <= maxY
-                        and node ~= socket and not node.isBlighted and node.group and not node.isProxy
-                        and not node.group.isProxy and not node.isMastery then
-                    local vX, vY = node.x - socket.x, node.y - socket.y
-                    local distSquared = vX * vX + vY * vY
-                    for radiusIndex, radiusInfo in ipairs(data.jewelRadius) do
-                        if distSquared <= radiusInfo.outerSquared and radiusInfo.innerSquared <= distSquared then
-                            socket.nodesInRadius[radiusIndex][node.id] = node
-                        end
-                    end
-                end
-            end
-        end
-    end
-
-    for name, keystone in pairs(self.keystoneMap) do
-        if not keystone.nodesInRadius then
-            keystone.nodesInRadius = { }
-            for radiusIndex, _ in ipairs(data.jewelRadius) do
-                keystone.nodesInRadius[radiusIndex] = { }
-            end
-
-            if (keystone.x and keystone.y) then
-                local minX, maxX = keystone.x - data.maxJewelRadius, keystone.x + data.maxJewelRadius
-                local minY, maxY = keystone.y - data.maxJewelRadius, keystone.y + data.maxJewelRadius
-
-                for _, node in pairs(self.nodes) do
-                    if node.x and node.x >= minX and node.x <= maxX and node.y and node.y >= minY and node.y <= maxY
-                            and node ~= keystone and not node.isBlighted and node.group and not node.isProxy
-                            and not node.group.isProxy and not node.isMastery and not node.isSocket then
-                        local vX, vY = node.x - keystone.x, node.y - keystone.y
-                        local distSquared = vX * vX + vY * vY
-                        for radiusIndex, radiusInfo in ipairs(data.jewelRadius) do
-                            if distSquared <= radiusInfo.outerSquared and radiusInfo.innerSquared <= distSquared then
-                                keystone.nodesInRadius[radiusIndex][node.id] = node
-                            end
-                        end
-                    end
-                end
-            end
         end
     end
 
