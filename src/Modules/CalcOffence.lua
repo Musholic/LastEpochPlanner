@@ -2326,8 +2326,8 @@ function calcs.offence(env, actor, activeSkill)
 						end
 					end
 					if skillFlags.dot then
-						if output.Duration then
-							t_insert(breakdown[damageType], s_format("/ %.2f ^8(duration)", skillData.duration))
+						if not skillData.damageInterval and skillData.duration then
+							t_insert(breakdown[damageType], s_format("/ %.2f ^8(base skill duration)", skillData.duration))
 						end
 					end
 					t_insert(breakdown[damageType], s_format("= %.1f", baseDmg))
