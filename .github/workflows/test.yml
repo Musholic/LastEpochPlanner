@@ -13,6 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Run tests
-        run: busted --lua=luajit
+        run: busted --lua=luajit --exclude-tags=""
       - name: Report coverage
         run: cd src; luacov-coveralls --repo-token=${{ secrets.github_token }} -e TestData -e Data -e runtime
