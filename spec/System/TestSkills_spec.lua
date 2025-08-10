@@ -45,7 +45,6 @@ describe("TestSkills #skills", function()
         build.itemsTab:CreateDisplayItemFromRaw([[Rarity: RARE
         Brass Sceptre
         Brass Sceptre
-        TODO: check if added damage count for dot spells
         +10 Spell Damage
         20% increased Spell Damage
         20% increased Damage Over Time]])
@@ -74,4 +73,23 @@ describe("TestSkills #skills", function()
         local castSpeed = 1 / build.calcsTab.mainEnv.player.mainSkill.activeEffect.grantedEffect.castTime
         assert.are.equals(round((2 + 48 * 1.25) * (1 + 0.04 * 10) * 1.05 * 0.92 * castSpeed, 4), round(build.calcsTab.mainOutput.TotalDPS, 4))
     end)
+    
+end)
+
+-- Check that at least all skills can load without crash
+expose("test all skills #allSkills", function()
+    newBuild()
+    runCallback("OnFrame")
+    for classId, class in pairs(build.latestTree.classes) do
+        build.spec:SelectClass(classId)
+        runCallback("OnFrame")
+        local className = class.name
+        local skillList = build.spec.curClass.skills
+        for _, skill in ipairs(skillList) do
+            it(skill.label .. " for class ".. className .. " #" .. skill.treeId, function()
+                build.skillsTab:SelSkill(1, skill.treeId)
+                runCallback("OnFrame")
+            end)
+        end
+    end
 end)
