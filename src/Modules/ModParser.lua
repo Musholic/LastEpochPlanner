@@ -157,6 +157,9 @@ for _, damageType in ipairs(DamageTypes) do
 	modNameList[damageType:lower() .. " damage taken"] = damageType .. "DamageTaken"
 	modNameList[damageType:lower() .. " damage over time taken"] = damageType .. "DamageTakenOverTime"
 	modNameList[damageType:lower() .. " damage over time"] = { damageType .. "Damage", flags = ModFlag.Dot + ModFlag[damageType] }
+	for _, damageSourceType in ipairs(DamageSourceTypes) do
+	   modNameList[damageType:lower() .. " " .. damageSourceType:lower() .. " damage"] = {damageType .. "Damage", keywordFlags = KeywordFlag.Spell}
+	end
 end
 
 modNameList["penetration"] = "Penetration"

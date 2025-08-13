@@ -95,6 +95,15 @@ describe("TestModParse", function()
         assert.are.equals(0, build.configTab.modList:Sum("BASE", { keywordFlags = KeywordFlag.Fire }, "FireDamage"))
         assert.are.equals(25, build.configTab.modList:Sum("BASE", { keywordFlags = bit.bor(KeywordFlag.Fire, KeywordFlag.Spell) }, "FireDamage"))
     end)
+    
+    it("void spell damage", function()
+        build.configTab.input.customMods = "+13 void spell damage"
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
+
+        assert.are.equals(13, build.configTab.modList:Sum("BASE", { keywordFlags = ModFlag.Spell }, "VoidDamage"))
+        assert.are.equals(0, build.configTab.modList:Sum("BASE", nil, "VoidDamage"))
+    end)
 
     it("increased damage", function()
         build.configTab.input.customMods = "50% increased melee void damage"
