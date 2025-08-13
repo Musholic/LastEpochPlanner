@@ -138,7 +138,7 @@ function PCall(func, ...)
 		table.remove(ret, 1)
 		return nil, unpack(ret)
 	else
-		print("ERROR: " .. ret[2])
+		error("ERROR: " .. ret[2])
 		return ret[2]
 	end	
 end
