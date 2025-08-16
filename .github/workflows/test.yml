@@ -10,9 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
     steps:
+      - name: Install xmllint and git dependency
+        run: apk add libxml2-utils git
       - name: Checkout
         uses: actions/checkout@v4
       - name: Run tests
         run: busted --lua=luajit --exclude-tags=""
+      - name: Generate Builds
+        run: busted --lua=luajit -r generate
+      - run: git config --global --add safe.directory $(pwd)
+      - name: Check if the generated builds are different
+        run: git diff --exit-code spec
+        continue-on-error: true
       - name: Report coverage
         run: cd src; luacov-coveralls --repo-token=${{ secrets.github_token }} -e TestData -e Data -e runtime
