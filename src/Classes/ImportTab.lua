@@ -651,7 +651,7 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
             table.insert(char["hashes"], skillTree['treeID'] .. "-" .. skill .. "#" .. nbPoints)
         end
     end
-    for _, itemData in pairs(saveContent["savedItems"]) do
+    for _, itemData in pairsSortByKey(saveContent["savedItems"]) do
         if itemData["containerID"] <= 12 or
                 itemData["containerID"] >= 29 and itemData["containerID"] <= 36 or
                 itemData["containerID"] >= 40 and  itemData["containerID"] <= 43  then
@@ -798,7 +798,7 @@ function ImportTabClass:ImportItemsAndSkills(charData)
     end
 
     --ConPrintTable(charItemData)
-    for _, itemData in pairs(charData.items) do
+    for _, itemData in pairsSortByKey(charData.items) do
         self:ImportItem(itemData)
     end
     self.build.itemsTab:PopulateSlots()

@@ -22,5 +22,7 @@ src/luacov.stats.out
 # Release
 manifest-updated.xml
 
-gameFileExtractScript/generatedAssets/
-gameFileExtractScript/originalAssets/
+.devenv*
+devenv.lock
+
+runtime/imgui.ini

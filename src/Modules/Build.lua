@@ -772,7 +772,7 @@ function buildMode:ReadLeToolsSave(saveContent)
 			return item
 		end
 	end
-	for slotName,itemData in pairs(saveContent["equipment"]) do
+	for slotName,itemData in pairsSortByKey(saveContent["equipment"]) do
 		local item = processItemData(slotName, itemData)
 		if item then
 			table.insert(char["items"], item)
@@ -1639,7 +1639,7 @@ function buildMode:SaveDB(fileName)
 	end
 
 	-- Call on all savers to save their data in their respective sections
-	for elem, saver in pairs(self.savers) do
+	for elem, saver in pairsSortByKey(self.savers) do
 		local node = { elem = elem }
 		saver:Save(node)
 		t_insert(dbXML, node)

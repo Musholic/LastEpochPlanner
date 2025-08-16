@@ -133,7 +133,7 @@ end
 
 function PassiveSpecClass:Save(xml)
 	local allocNodeIdList = { }
-	for nodeId in pairs(self.allocNodes) do
+	for nodeId in pairsSortByKey(self.allocNodes) do
 		t_insert(allocNodeIdList, nodeId .. "#" .. self.nodes[nodeId].alloc)
 	end
 	xml.attrib = {

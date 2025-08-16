@@ -1,0 +1,478 @@
+{
+  "data": {
+    "fromSaveFile": 2,
+    "gh": "32249a393106bf78e3ca83c405bdafae",
+    "newGrid": true,
+    "bio": { "level": 98, "characterClass": 0, "chosenMastery": 3 },
+    "equipment": {
+      "head": {
+        "id": "IIwBjIJgDnI",
+        "affixes": [
+          { "id": "AAwdgzEA", "tier": 5, "r": 42 },
+          { "id": "AKwBgjEA", "tier": 7, "r": 179 },
+          { "id": "AAwJgrEA", "tier": 5, "r": 226 },
+          { "id": "AAwVgTEA", "tier": 5, "r": 130 }
+        ],
+        "sealedAffix": { "id": "AAwFgrEA", "tier": 2, "r": 93 },
+        "ir": [231, 226, 239],
+        "ur": []
+      },
+      "chest": {
+        "id": "IIwBhoZjMg",
+        "affixes": [
+          { "id": "AKwBgjEA", "tier": 7, "r": 129 },
+          { "id": "AAwTgrEA", "tier": 2, "r": 84 },
+          { "id": "AAwVgTEA", "tier": 5, "r": 251 },
+          { "id": "AAwJgrEA", "tier": 5, "r": 214 }
+        ],
+        "sealedAffix": { "id": "AAwRmQ", "tier": 1, "r": 162 },
+        "ir": [64, 37, 14],
+        "ur": []
+      },
+      "weapon1": {
+        "id": "UAzCcGYEZiA",
+        "affixes": [
+          { "id": "AAzAsQ", "tier": 7, "r": 219 },
+          { "id": "AAzBsQ", "tier": 5, "r": 216 }
+        ],
+        "ir": [238, 29, 197],
+        "ur": [181, 179, 154, 104, 73, 45, 193, 31]
+      },
+      "weapon2": {
+        "id": "UAzBswZgRiA",
+        "affixes": [
+          { "id": "AAzCsQ", "tier": 7, "r": 242 },
+          { "id": "AAzBsQ", "tier": 7, "r": 71 },
+          { "id": "AAwDgbEA", "tier": 4, "r": 197 }
+        ],
+        "ir": [93, 216, 243],
+        "ur": [41, 161, 127, 94, 128, 87, 82, 157]
+      },
+      "hands": {
+        "id": "IIwBhBYVMSA",
+        "affixes": [
+          { "id": "AAzAsQ", "tier": 5, "r": 249 },
+          { "id": "AKwBgjEA", "tier": 5, "r": 190 },
+          { "id": "AAwJgrEA", "tier": 5, "r": 102 },
+          { "id": "AAwZgbEA", "tier": 7, "r": 217 }
+        ],
+        "ir": [234, 30, 181],
+        "ur": []
+      },
+      "waist": {
+        "id": "UAzDsBZgJiA",
+        "affixes": [
+          { "id": "AAwdgrEA", "tier": 5, "r": 9 },
+          { "id": "AAwVgTEA", "tier": 7, "r": 230 },
+          { "id": "AAwJg7EA", "tier": 5, "r": 43 }
+        ],
+        "ir": [35, 72, 68],
+        "ur": [175, 254, 233, 166, 90, 86, 147, 90]
+      },
+      "feet": {
+        "id": "UAzBMGZgNiA",
+        "affixes": [{ "id": "AAwJgHEA", "tier": 7, "r": 219 }],
+        "ir": [123, 17, 130],
+        "ur": [171, 142, 234, 142, 252, 189, 35, 223]
+      },
+      "ring1": {
+        "id": "UAwRhGYDZKA",
+        "affixes": [
+          { "id": "AKwBgTEA", "tier": 7, "r": 219 },
+          { "id": "AAwJgrEA", "tier": 5, "r": 4 }
+        ],
+        "ir": [99, 179, 84],
+        "ur": [150, 114, 18, 42, 154, 39, 116, 170]
+      },
+      "ring2": {
+        "id": "UAzDMCYHZKA",
+        "affixes": [{ "id": "AKwBgjEA", "tier": 7, "r": 199 }],
+        "ir": [52, 2, 46],
+        "ur": [176, 248, 69, 11, 132, 52, 206, 17]
+      },
+      "amulet": {
+        "id": "UAwRgTAzArBQ",
+        "affixes": [{ "id": "AAzBsQ", "tier": 7, "r": 215 }],
+        "ir": [221, 151, 247],
+        "ur": [213, 122, 135, 222, 86, 249, 207, 148]
+      },
+      "relic": {
+        "id": "UAzAcYRiA",
+        "affixes": [
+          { "id": "AAwFgzEA", "tier": 5, "r": 116 },
+          { "id": "AAzBsQ", "tier": 7, "r": 196 },
+          { "id": "AAwJgrEA", "tier": 6, "r": 98 },
+          { "id": "ABwJgrEA", "tier": 6, "r": 91 }
+        ],
+        "ir": [67, 15, 119],
+        "ur": [231, 101, 12, 102, 116, 146, 243, 101]
+      }
+    },
+    "idols": [
+      {
+        "x": 5,
+        "y": 2,
+        "id": "IIwBgTAHCKtQ",
+        "affixes": [
+          { "id": "ABzAMQ", "tier": 1, "r": 151 },
+          { "id": "AIwo", "tier": 1, "r": 190 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 1,
+        "y": 3,
+        "id": "IIwBgTAHCKtQ",
+        "affixes": [
+          { "id": "ABwdmQ", "tier": 1, "r": 220 },
+          { "id": "ABzDsQ", "tier": 1, "r": 101 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "id": "IIwBgTAHCKtQ",
+        "affixes": [
+          { "id": "ABwdmQ", "tier": 1, "r": 91 },
+          { "id": "AIwo", "tier": 1, "r": 26 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "id": "IIwBgTA7CKtQ",
+        "affixes": [
+          { "id": "ABwNgzEA", "tier": 1, "r": 154 },
+          { "id": "ABwdgDEA", "tier": 1, "r": 23 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "id": "IIwBgTA7CKtQ",
+        "affixes": [
+          { "id": "AIwZgHEA", "tier": 1, "r": 56 },
+          { "id": "ABwdgDEA", "tier": 1, "r": 25 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 4,
+        "y": 2,
+        "id": "IIwBgzATCIKzSQ",
+        "affixes": [
+          { "id": "AIwVgLEA", "tier": 1, "r": 207 },
+          { "id": "AIwNgTEA", "tier": 1, "r": 222 },
+          { "id": "ABwThQ", "tier": 6, "r": 43 },
+          { "id": "AJwJgrEA", "tier": 1, "r": 18 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "id": "IIwBgTArC7SQ",
+        "affixes": [
+          { "id": "ABwJgnEA", "tier": 1, "r": 179 },
+          { "id": "ACwZgDEA", "tier": 1, "r": 54 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "id": "IIwBgTArC7SQ",
+        "affixes": [
+          { "id": "ABwZgTEA", "tier": 1, "r": 25 },
+          { "id": "ABwZgrEA", "tier": 1, "r": 146 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "id": "IIwBgTArC7SQ",
+        "affixes": [
+          { "id": "ABwZgjEA", "tier": 1, "r": 111 },
+          { "id": "ABwZgrEA", "tier": 1, "r": 246 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "id": "IIwBgTArC00A",
+        "affixes": [
+          { "id": "AIwZgrEA", "tier": 1, "r": 180 },
+          { "id": "AIzAsQ", "tier": 1, "r": 226 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 2,
+        "y": 5,
+        "id": "IIwBgTArC7SQ",
+        "affixes": [
+          { "id": "AIwZgrEA", "tier": 1, "r": 112 },
+          { "id": "ABwZgrEA", "tier": 1, "r": 230 }
+        ],
+        "ur": []
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "id": "IIwBgTArC7SQ",
+        "affixes": [
+          { "id": "ABwZgLEA", "tier": 1, "r": 236 },
+          { "id": "ABwZmQ", "tier": 1, "r": 81 }
+        ],
+        "ur": []
+      }
+    ],
+    "blessings": {
+      "1": { "id": "IIwBgzALMwSdA", "ir": [0, 0, 0] },
+      "2": { "id": "IIwBgzALMBMEvQ", "ir": [210, 192, 115] },
+      "3": { "id": "IIwBgzALODsJ0A", "ir": [239, 228, 219] },
+      "5": { "id": "IIwBgzALCDs0vQ", "ir": [0, 0, 0] },
+      "7": { "id": "IIwBgzALMCsJyQ", "ir": [180, 221, 233] },
+      "9": { "id": "IIwBgzALMCc0vQ", "ir": [0, 0, 0] },
+      "10": { "id": "IIwBgzALATCCcIKA", "ir": [171, 169, 192] }
+    },
+    "weaverTreeContainers": {
+      "93": {
+        "id": "IIwBhFYVMSA",
+        "affixes": [
+          { "id": "AAwdgnEA", "tier": 3, "r": 88 },
+          { "id": "AOwRmQ", "tier": 7, "r": 203 },
+          { "id": "AAwVg7EA", "tier": 7, "r": 186 },
+          { "id": "AAwDgbEA", "tier": 1, "r": 232 }
+        ],
+        "sealedAffix": { "id": "AAwdgHEA", "tier": 4, "r": 194 },
+        "ir": [105, 124, 238],
+        "ur": []
+      },
+      "94": {
+        "id": "IIwBhFYVMSA",
+        "affixes": [
+          { "id": "AAwdgnEA", "tier": 3, "r": 88 },
+          { "id": "AOwRmQ", "tier": 7, "r": 203 },
+          { "id": "AAwVg7EA", "tier": 7, "r": 186 },
+          { "id": "AAwDgbEA", "tier": 1, "r": 232 }
+        ],
+        "sealedAffix": { "id": "AAwdgHEA", "tier": 4, "r": 194 },
+        "ir": [105, 124, 238],
+        "ur": []
+      },
+      "95": {
+        "id": "IIwBgTKIGwrQ",
+        "affixes": [
+          { "id": "AKwBgjEA", "tier": 2, "r": 96 },
+          { "id": "AAwJgzEA", "tier": 2, "r": 225 },
+          { "id": "ABwJgrEA", "tier": 7, "r": 60 },
+          { "id": "AAwTgTEA", "tier": 5, "r": 229 }
+        ],
+        "sealedAffix": { "id": "AAwRgHEA", "tier": 1, "r": 185 },
+        "ir": [84, 67, 25],
+        "ur": []
+      },
+      "96": {
+        "id": "IIwBhFYVMSA",
+        "affixes": [
+          { "id": "AAwdgnEA", "tier": 3, "r": 88 },
+          { "id": "AOwRmQ", "tier": 7, "r": 203 },
+          { "id": "AAwVg7EA", "tier": 7, "r": 186 },
+          { "id": "AAwDgbEA", "tier": 1, "r": 232 }
+        ],
+        "sealedAffix": { "id": "AAwdgHEA", "tier": 4, "r": 194 },
+        "ir": [105, 124, 238],
+        "ur": []
+      }
+    },
+    "charTree": {
+      "treeID": "",
+      "selected": {
+        "1": 8,
+        "3": 5,
+        "6": 6,
+        "10": 1,
+        "12": 8,
+        "19": 2,
+        "38": 5,
+        "40": 1,
+        "41": 8,
+        "79": 5,
+        "81": 3,
+        "82": 5,
+        "89": 4,
+        "92": 5,
+        "93": 5,
+        "94": 2,
+        "97": 7,
+        "99": 8,
+        "104": 10,
+        "111": 8,
+        "118": 5
+      },
+      "version": 11
+    },
+    "skillTrees": [
+      {
+        "treeID": "ga2st",
+        "selected": {
+          "2": 1,
+          "3": 4,
+          "6": 1,
+          "9": 1,
+          "10": 1,
+          "11": 2,
+          "13": 4,
+          "14": 1,
+          "16": 1,
+          "22": 4,
+          "23": 2
+        },
+        "level": 22,
+        "slotNumber": 0,
+        "version": 1
+      },
+      {
+        "treeID": "wb8fo",
+        "selected": {
+          "2": 1,
+          "3": 1,
+          "4": 5,
+          "5": 1,
+          "7": 1,
+          "13": 2,
+          "15": 4,
+          "18": 4,
+          "26": 1,
+          "29": 2
+        },
+        "level": 22,
+        "slotNumber": 1,
+        "version": 3
+      },
+      {
+        "treeID": "to50",
+        "selected": {
+          "2": 4,
+          "4": 4,
+          "5": 1,
+          "6": 4,
+          "11": 3,
+          "17": 1,
+          "18": 1,
+          "19": 4
+        },
+        "level": 22,
+        "slotNumber": 2,
+        "version": 0
+      },
+      {
+        "treeID": "wc57",
+        "selected": {
+          "2": 2,
+          "3": 3,
+          "5": 1,
+          "6": 2,
+          "7": 1,
+          "12": 1,
+          "13": 1,
+          "15": 1,
+          "17": 1,
+          "18": 2,
+          "19": 1,
+          "27": 2,
+          "28": 1,
+          "30": 1,
+          "32": 1,
+          "33": 1
+        },
+        "level": 22,
+        "slotNumber": 3,
+        "version": 1
+      },
+      {
+        "treeID": "sw43",
+        "selected": {
+          "3": 3,
+          "8": 5,
+          "13": 4,
+          "15": 5,
+          "16": 2,
+          "19": 1,
+          "21": 2
+        },
+        "level": 22,
+        "slotNumber": 4,
+        "version": 2
+      }
+    ],
+    "weaverTree": {
+      "treeID": "",
+      "selected": {
+        "4": 1,
+        "10": 2,
+        "11": 2,
+        "12": 2,
+        "13": 2,
+        "21": 1,
+        "25": 1,
+        "41": 1,
+        "42": 1,
+        "43": 1,
+        "44": 1,
+        "45": 1,
+        "46": 1,
+        "55": 2,
+        "58": 3,
+        "59": 2,
+        "101": 3,
+        "103": 3,
+        "122": 1,
+        "125": 1,
+        "151": 3,
+        "152": 3,
+        "153": 2,
+        "154": 1,
+        "155": 1,
+        "156": 3,
+        "161": 1,
+        "164": 1,
+        "165": 1,
+        "166": 1,
+        "168": 1
+      },
+      "version": 6
+    },
+    "hud": ["sw43", "wc57", "fl13", "wb8fo", "to50"],
+    "weaponTypes": [10, 5],
+    "dataVersion": "Version 1.2.5",
+    "charTreeProgression": [],
+    "skillTreesProgression": {},
+    "weaverTreeProgression": [],
+    "conditions": [],
+    "customConditions": [],
+    "activeBuffs": { "buffs": [], "ailments": [], "skills": [] },
+    "buffSettings": [],
+    "completedQuests": [
+      128, 131, 129, 1, 94, 3, 39, 35, 9, 37, 159, 20, 24, 30, 36, 160, 46, 47,
+      45, 158
+    ]
+  },
+  "tags": [
+    { "1": 3, "2": 3, "256": 2, "512": 2, "4096": 1, "8192": 1, "16384": 1 },
+    { "4": 1, "256": 1 }
+  ],
+  "level": 98,
+  "class": 0,
+  "mastery": 3,
+  "created_for_build": "Version 1.2.5",
+  "data_version": "Version 1.2.5",
+  "guide": null,
+  "source": "https://www.lastepochtools.com/planner/BxVZxK6A"
+}
