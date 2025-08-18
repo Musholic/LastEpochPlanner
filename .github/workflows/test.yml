@@ -22,5 +22,13 @@ jobs:
       - name: Check if the generated builds are different
         run: git diff --exit-code spec
         continue-on-error: true
+      - name: Regenerate ModCache
+        env:
+          LUA_PATH: ../runtime/lua/?.lua;../runtime/lua/?/init.lua
+          REGENERATE_MOD_CACHE: 1
+        run: cd src; luajit HeadlessWrapper.lua
+      - name: Check if the generated ModCache is different
+        run: git diff --exit-code Data/ModCache.lua
+        continue-on-error: true
       - name: Report coverage
         run: cd src; luacov-coveralls --repo-token=${{ secrets.github_token }} -e TestData -e Data -e runtime
