@@ -44,5 +44,5 @@ jobs:
         run: cd src; luajit HeadlessWrapper.lua
       - run: git config --global --add safe.directory $(pwd)
       - name: Check if the generated ModCache is different
-        run: git diff --exit-code Data/ModCache.lua
+        run: git diff --exit-code src/Data/ModCache.lua
     
