@@ -179,20 +179,33 @@ function main:Init()
 		local saved = self.defaultItemAffixQuality
 		self.defaultItemAffixQuality = 127.5
 		loadItemDBs()
+		
+		local function parseRangedMod(line)
+    		local rounding
+			line = line:gsub("{(%a*):?([^}]*)}", function(k,val)
+				if k == "rounding" then
+				rounding = val
+				end
+
+				return ""
+			end)
+			local rangedLine = itemLib.applyRange(line, self.defaultItemAffixQuality, 1, rounding)
+			modLib.parseMod(rangedLine)
+		end
+		
+		-- Load all the not scaling stats
+		for _,node in pairs(self.tree[latestTreeVersion].nodes) do
+    		if node.notScalingStats then
+          		for _, line in ipairs(node.notScalingStats) do
+                    parseRangedMod(line)
+                end
+    		end
+		end
 
 		-- Load all affixes
 		for _,mod in pairs(data.itemMods.Item) do
 			for _, line in ipairs(mod) do
-				local rounding
-				line = line:gsub("{(%a*):?([^}]*)}", function(k,val)
-					if k == "rounding" then
-						rounding = val
-					end
-
-					return ""
-				end)
-				local rangedLine = itemLib.applyRange(line, self.defaultItemAffixQuality, 1, rounding)
-				modLib.parseMod(rangedLine)
+                parseRangedMod(line)
 			end
 		end
 
