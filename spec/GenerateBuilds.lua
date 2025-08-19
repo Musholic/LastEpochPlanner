@@ -23,6 +23,24 @@ local function fetchBuilds(path, buildList)
     return buildList
 end
 
+local function formatXmlFile(filepath)
+    local command = "xmllint --c14n " .. filepath
+
+    -- Open the command process for reading ('r')
+    local handle = io.popen(command, 'r')
+    if not handle then
+        return nil, "Failed to run xmllint. Is it installed and in your PATH?"
+    end
+
+    -- Read the entire output from the command
+    local result = handle:read("*a")
+    handle:close()
+
+    local fileHnd, errMsg = io.open(filepath:gsub("-unformatted", ""), "w")
+    fileHnd:write(result)
+    fileHnd:close()
+end
+
 function buildTable(tableName, values, string)
     string = string or ""
     string = string .. tableName .. " = {"
@@ -47,13 +65,15 @@ function buildTable(tableName, values, string)
 end
 
 local buildList = fetchBuilds("../spec/TestBuilds")
-for filename, testBuild in pairs(buildList) do
+for filename, importCode in pairs(buildList) do
     print("Loading build " .. filename)
-    loadBuildFromJSON(testBuild)
+    loadBuildFromXML(importCode, filename)
     local fileHnd, errMsg = io.open(filename:gsub("^(.+)%..+$", "%1.lua"), "w+")
     fileHnd:write("return {\n    ")
     fileHnd:write(buildTable("output", build.calcsTab.mainOutput) .. "\n}")
     fileHnd:close()
-    build.dbFileName = filename:gsub("^(.+)%..+$", "%1.xml")
+    build.dbFileName = filename:gsub("^(.+)%..+$", "%1-unformatted.xml")
     build:SaveDBFile()
+    -- Format/order the XML file to easily see differences with previous generations
+    formatXmlFile(build.dbFileName)
 end

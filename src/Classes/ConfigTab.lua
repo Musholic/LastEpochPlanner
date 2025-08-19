@@ -647,7 +647,7 @@ function ConfigTabClass:GetDefaultState(var, varType)
 end
 
 function ConfigTabClass:Save(xml)
-	for k, v in pairs(self.input) do
+    for k, v in pairsSortByKey(self.input) do
 		if v ~= self:GetDefaultState(k, type(v)) then
 			local child = { elem = "Input", attrib = { name = k } }
 			if type(v) == "number" then
@@ -660,7 +660,7 @@ function ConfigTabClass:Save(xml)
 			t_insert(xml, child)
 		end
 	end
-	for k, v in pairs(self.placeholder) do
+	for k, v in pairsSortByKey(self.placeholder) do
 		local child = { elem = "Placeholder", attrib = { name = k } }
 		if type(v) == "number" then
 			child.attrib.number = tostring(v)

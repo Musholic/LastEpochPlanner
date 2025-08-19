@@ -664,7 +664,7 @@ function ItemsTabClass:Save(xml)
 	for _, itemSetId in ipairs(self.itemSetOrderList) do
 		local itemSet = self.itemSets[itemSetId]
 		local child = { elem = "ItemSet", attrib = { id = tostring(itemSetId), title = itemSet.title, useSecondWeaponSet = tostring(itemSet.useSecondWeaponSet) } }
-		for slotName, slot in pairs(self.slots) do
+		for slotName, slot in pairsSortByKey(self.slots) do
 			if not slot.nodeId then
 				t_insert(child, { elem = "Slot", attrib = { name = slotName, itemId = tostring(itemSet[slotName].selItemId), itemPbURL = itemSet[slotName].pbURL or "", active = itemSet[slotName].active and "true" }})
 			else
