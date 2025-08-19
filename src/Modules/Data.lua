@@ -508,6 +508,14 @@ end
 data.skills = readJsonFile("Data/skills.json")
 data.skillStatMap = LoadModule("Data/SkillStatMap", makeSkillMod, makeFlagMod, makeSkillDataMod)
 
+-- Add a default skill
+data.skills["Default"] = {
+	name = "Default",
+	skillTypeTags = 0,
+	baseFlags = {},
+	stats = {}
+}
+
 -- Load minions
 data.minions = readJsonFile("Data/minions.json")
 
