@@ -264,7 +264,7 @@ function SkillsTabClass:Save(xml)
 		local child = { elem = "SkillSet", attrib = { id = tostring(skillSetId), title = skillSet.title } }
 		t_insert(xml, child)
 
-		for _, socketGroup in pairs(skillSet.socketGroupList) do
+		for _, socketGroup in pairsSortByKey(skillSet.socketGroupList) do
 			local node = { elem = "Skill", attrib = {
 				enabled = tostring(socketGroup.enabled),
 				includeInFullDPS = tostring(socketGroup.includeInFullDPS),

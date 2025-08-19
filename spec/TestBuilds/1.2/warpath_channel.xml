@@ -836,12 +836,12 @@ Implicits: 1
 			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ah443" slot="Skill 3"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="si4lgl" slot="Skill 4"></Skill>
 			<Skill enabled="true" includeInFullDPS="true" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="javeli" slot="Skill 5"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Shred Armor (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:sm87r4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" label="Shock (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Shred Armor (from Warpath)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" label="Shred Armor (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:sm87r4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" label="Shock (from Warpath)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:va53st"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" label="Shred Armor (from Javelin)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" label="Shred Armor (from Warpath)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:va53st"></Skill>
 			<Skill enabled="true" includeInFullDPS="true" label="Shock (from Javelin)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" label="Shred Armor (from Javelin)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:javeli"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
