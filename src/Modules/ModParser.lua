@@ -314,8 +314,8 @@ local flagTypes = {
 local skillNameList = {
 }
 
-for skillId, skill in pairs(data.skills) do
-	skillNameList[skill.name:lower()] = { tag = { type = "SkillId", skillId = skillId } }
+for _, skill in pairs(data.skills) do
+	skillNameList[skill.name:lower()] = { tag = { type = "SkillName", skillName = skill.name } }
 end
 
 local preSkillNameList = { }
