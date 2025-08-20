@@ -1429,7 +1429,7 @@ c["+1 Once you have two Runes for Runic Invocation your runes cannot change unti
 c["+1 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="BASE",value=1}},nil}
 c["+1 Physical Damage per Dexterity with a Sword"]={{[1]={[1]={stat="Dex",type="PerStat"},[2]={type="Condition",var="UsingSword"},flags=0,keywordFlags=0,name="PhysicalDamage",type="BASE",value=1}},nil}
 c["+1 Physical Res Shred Stacks"]={{},"  Res Shred Stacks "}
-c["+1 Physical Spell Damage per Strength from Nearby Ally"]={{[1]={[1]={stat="Str",type="PerStat"},flags=0,keywordFlags=257,name="Damage",type="BASE",value=1}},"     from Nearby Ally "}
+c["+1 Physical Spell Damage per Strength from Nearby Ally"]={{[1]={[1]={stat="Str",type="PerStat"},flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=1}},"   from Nearby Ally "}
 c["+1 Pool Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Pool  (seconds) "}
 c["+1 Potion Slot per equipped Weaver Item"]={{}," Potion Slot per equipped Weaver Item "}
 c["+1 Potion Slots"]={{}," Potion Slots "}
@@ -1457,7 +1457,7 @@ c["+1 Slow Duration (seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},f
 c["+1 Slow Stacks"]={{},"  Stacks "}
 c["+1 Slow Stacks on Screech"]={{},"  Stacks on Screech "}
 c["+1 Small Boulders Per Cast"]={{}," Small Boulders Per Cast "}
-c["+1 Smite Void Spell Damage per Vitality"]={{[1]={[1]={stat="Vit",type="PerStat"},[2]={skillName="Smite",type="SkillName"},flags=0,keywordFlags=272,name="Damage",type="BASE",value=1}},nil}
+c["+1 Smite Void Spell Damage per Vitality"]={{[1]={[1]={stat="Vit",type="PerStat"},[2]={skillName="Smite",type="SkillName"},flags=0,keywordFlags=256,name="VoidDamage",type="BASE",value=1}},nil}
 c["+1 Spark Charge to all targets around the destination when you Teleport"]={{},"  to all targets around the destination when you Teleport "}
 c["+1 Spell Cold Damage"]={{[1]={flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=1}},nil}
 c["+1 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=1}},nil}
@@ -1874,7 +1874,7 @@ c["+10 Minion Health per player Strength"]={{[1]={flags=0,keywordFlags=0,name="M
 c["+10 Minion Melee Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=512,name="Damage",type="BASE",value=10}}}},nil}
 c["+10 Minion Spell Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=256,name="Damage",type="BASE",value=10}}}},nil}
 c["+10 Missing Mana Restored"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=10}}," Missing  Restored "}
-c["+10 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=1025,name="Damage",type="BASE",value=10}},nil}
+c["+10 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=10}},nil}
 c["+10 Ravaging Aura Spell Void Damage"]={{[1]={flags=0,keywordFlags=256,name="VoidDamage",type="BASE",value=10}}," Ravaging Aura   "}
 c["+10 Shared Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=10}}," Shared  "}
 c["+10 Spell Cold Damage with Runeword: Avalanche"]={{[1]={[1]={skillName="Avalanche",type="SkillName"},flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=10}},"   with Runeword:  "}
@@ -2459,7 +2459,7 @@ c["+12 Endurance Threshold against Shocked enemies"]={{[1]={[1]={actor="enemy",t
 c["+12 Freeze Rate"]={{}," Freeze Rate "}
 c["+12 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=12}},nil}
 c["+12 Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=12}},nil}
-c["+12 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=1026,name="Damage",type="BASE",value=12}},"    with  "}
+c["+12 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=256,name="LightningDamage",type="BASE",value=12}},"  with  "}
 c["+12 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=12}},nil}
 c["+12 Melee Physical Damage if wielding a Mace"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDamage",type="BASE",value=12}},"   if wielding a Mace "}
 c["+12 Melee Physical Damage if wielding a Sword"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDamage",type="BASE",value=12}},"   if wielding a Sword "}
@@ -2467,7 +2467,7 @@ c["+12 Minion Health per player Strength"]={{[1]={flags=0,keywordFlags=0,name="M
 c["+12 Minion Melee Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=512,name="Damage",type="BASE",value=12}}}},nil}
 c["+12 Minion Spell Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=256,name="Damage",type="BASE",value=12}}}},nil}
 c["+12 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="BASE",value=12}},nil}
-c["+12 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=1025,name="Damage",type="BASE",value=12}},nil}
+c["+12 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=12}},nil}
 c["+12 Potion Slots"]={{}," Potion Slots "}
 c["+12 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=12}},nil}
 c["+12 Spell Damage While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=256,name="Damage",type="BASE",value=12}},nil}
@@ -3115,7 +3115,7 @@ c["+16 Bow Fire Damage"]={{[1]={flags=0,keywordFlags=2048,name="FireDamage",type
 c["+16 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=16}},nil}
 c["+16 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=16}},nil}
 c["+16 Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=16}},nil}
-c["+16 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=1026,name="Damage",type="BASE",value=16}},"    with  "}
+c["+16 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=256,name="LightningDamage",type="BASE",value=16}},"  with  "}
 c["+16 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=16}},nil}
 c["+16 Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=16}},nil}
 c["+16 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=16}},nil}
@@ -3124,7 +3124,7 @@ c["+16 Melee Physical Damage if wielding a Mace"]={{[1]={flags=0,keywordFlags=51
 c["+16 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=16}}}},nil}
 c["+16 Minion Health Regen"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=16}}}},nil}
 c["+16 Minion Melee Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=512,name="FireDamage",type="BASE",value=16}}}},nil}
-c["+16 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=1025,name="Damage",type="BASE",value=16}},nil}
+c["+16 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=16}},nil}
 c["+16 Spell Cold Damage"]={{[1]={flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=16}},nil}
 c["+16 Spell Cold Damage While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=16}},nil}
 c["+16 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=16}},nil}
@@ -3344,7 +3344,7 @@ c["+19 Bow Fire Damage"]={{[1]={flags=0,keywordFlags=2048,name="FireDamage",type
 c["+19 Bow Lightning Damage"]={{[1]={flags=0,keywordFlags=2048,name="LightningDamage",type="BASE",value=19}},nil}
 c["+19 Bow Physical Damage"]={{[1]={flags=0,keywordFlags=2048,name="PhysicalDamage",type="BASE",value=19}},nil}
 c["+19 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=19}},nil}
-c["+19 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=1026,name="Damage",type="BASE",value=19}},"    with  "}
+c["+19 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=256,name="LightningDamage",type="BASE",value=19}},"  with  "}
 c["+19 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=19}},nil}
 c["+19 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=19}},nil}
 c["+19 Melee Lightning Damage"]={{[1]={flags=0,keywordFlags=512,name="LightningDamage",type="BASE",value=19}},nil}
@@ -3487,7 +3487,7 @@ c["+2 Minion Throwing Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifie
 c["+2 Mirages Created"]={{}," Mirages Created "}
 c["+2 Mirages created by Lethal Mirage"]={{}," Mirages created by  "}
 c["+2 Necrotic Damage"]={{[1]={flags=0,keywordFlags=0,name="NecroticDamage",type="BASE",value=2}},nil}
-c["+2 Necrotic Spell Damage per Skeletal Mage"]={{[1]={flags=0,keywordFlags=288,name="Damage",type="BASE",value=2}},"    per Skeletal Mage "}
+c["+2 Necrotic Spell Damage per Skeletal Mage"]={{[1]={flags=0,keywordFlags=256,name="NecroticDamage",type="BASE",value=2}},"  per Skeletal Mage "}
 c["+2 Number Of Arrows"]={{}," Number Of Arrows "}
 c["+2 Number Of Enemies Spread To"]={{}," Number Of Enemies Spread To "}
 c["+2 Physical Throwing Attack Damage with a Shield"]={{[1]={flags=0,keywordFlags=1025,name="Damage",type="BASE",value=2}},"   Attack  with a Shield "}
@@ -3832,7 +3832,7 @@ c["+20 Freeze Rate"]={{}," Freeze Rate "}
 c["+20 Freeze Rate With Melee Strikes"]={{}," Freeze Rate With  Strikes "}
 c["+20 Frigid Tempest Freeze Rate"]={{}," Frigid Tempest Freeze Rate "}
 c["+20 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=20}},nil}
-c["+20 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=1026,name="Damage",type="BASE",value=20}},"    with  "}
+c["+20 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=256,name="LightningDamage",type="BASE",value=20}},"  with  "}
 c["+20 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=20}},nil}
 c["+20 Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=20}},nil}
 c["+20 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=20}},nil}
@@ -4304,7 +4304,7 @@ c["+24 Melee Physical Damage"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDam
 c["+24 Melee Physical Damage if wielding a Mace"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDamage",type="BASE",value=24}},"   if wielding a Mace "}
 c["+24 Melee Physical Damage if wielding a Sword"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDamage",type="BASE",value=24}},"   if wielding a Sword "}
 c["+24 Melee Void Damage"]={{[1]={flags=0,keywordFlags=512,name="VoidDamage",type="BASE",value=24}},nil}
-c["+24 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=1025,name="Damage",type="BASE",value=24}},nil}
+c["+24 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=24}},nil}
 c["+24 Spell Damage While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=256,name="Damage",type="BASE",value=24}},nil}
 c["+24 Spell Fire Damage"]={{[1]={flags=0,keywordFlags=256,name="FireDamage",type="BASE",value=24}},nil}
 c["+24 Spell Lightning Damage"]={{[1]={flags=0,keywordFlags=256,name="LightningDamage",type="BASE",value=24}},nil}
@@ -5242,7 +5242,7 @@ c["+31 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=31}}
 c["+31 Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=31}},nil}
 c["+31 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=31}},nil}
 c["+31 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=31}},nil}
-c["+31 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=1025,name="Damage",type="BASE",value=31}},nil}
+c["+31 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=31}},nil}
 c["+31 Ward gained per Rune consumed with Runic Invocation"]={{[1]={[1]={skillName="Runic Invocation",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=31}},"  gained per Rune consumed with  "}
 c["+31 Ward gained when you use Shift"]={{[1]={[1]={skillName="Shift",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=31}},"  gained when you use  "}
 c["+31 Ward per Second per Gon Rune"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=31}},"  per Gon Rune "}
@@ -5264,7 +5264,7 @@ c["+316 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition
 c["+32 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=32}},nil}
 c["+32 Armor While Transformed"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=32}},"  While Transformed "}
 c["+32 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=32}},nil}
-c["+32 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=1026,name="Damage",type="BASE",value=32}},"    with  "}
+c["+32 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=256,name="LightningDamage",type="BASE",value=32}},"  with  "}
 c["+32 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=32}},nil}
 c["+32 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=32}},nil}
 c["+32 Melee Void Damage"]={{[1]={flags=0,keywordFlags=512,name="VoidDamage",type="BASE",value=32}},nil}
@@ -5560,7 +5560,7 @@ c["+4 Bow Physical Damage"]={{[1]={flags=0,keywordFlags=2048,name="PhysicalDamag
 c["+4 Cinder Strike Melee Damage per Falcon Hit in the past 6 seconds if you are unarmed"]={{[1]={[1]={skillName="Cinder Strike",type="SkillName"},flags=8388608,keywordFlags=512,name="Damage",type="BASE",value=4}},"    per Falc in the past 6 seconds if you are unarmed "}
 c["+4 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamage",type="BASE",value=4}},nil}
 c["+4 Cold Damage with Spells and Attacks per Attached Infernal Shade for Minions affected by Dread Shade"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={skillName="Infernal Shade",type="SkillName"},flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=4}}}},"  with s and Attacks per Attached  for s affected by Dread Shade "}
-c["+4 Cold Spell Damage"]={{[1]={flags=0,keywordFlags=260,name="Damage",type="BASE",value=4}},nil}
+c["+4 Cold Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=4}},nil}
 c["+4 Companion Melee Physical Damage"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDamage",type="BASE",value=4}}," Companion   "}
 c["+4 Companion Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=4}}," Companion   "}
 c["+4 Cooldown"]={{}," Cooldown "}
@@ -5873,7 +5873,7 @@ c["+40 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",v
 c["+40 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=40}},nil}
 c["+40 Endurance Threshold if you have not been Hit Recently"]={{[1]={[1]={neg=true,type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=40}},nil}
 c["+40 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=40}},nil}
-c["+40 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=1026,name="Damage",type="BASE",value=40}},"    with  "}
+c["+40 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=256,name="LightningDamage",type="BASE",value=40}},"  with  "}
 c["+40 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=40}},nil}
 c["+40 Mana Consumed"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=40}},"  Consumed "}
 c["+40 Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=40}},nil}
@@ -6788,7 +6788,7 @@ c["+6 Minion Melee Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionM
 c["+6 Minion Spell Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=256,name="Damage",type="BASE",value=6}}}},nil}
 c["+6 Necrotic Damage on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="NecroticDamage",type="BASE",value=6}},nil}
 c["+6 Next Melee Attack Lightning Damage"]={{[1]={[1]={skillName="Melee Attack",type="SkillName"},flags=0,keywordFlags=0,name="LightningDamage",type="BASE",value=6}}," Next   "}
-c["+6 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=1025,name="Damage",type="BASE",value=6}},nil}
+c["+6 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=6}},nil}
 c["+6 Potion Slots"]={{}," Potion Slots "}
 c["+6 Seconds Cooldown Duration for Summon Vines"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=6}}," Seconds  for Summon Vines "}
 c["+6 Spell Cold Damage"]={{[1]={flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=6}},nil}
@@ -7075,7 +7075,7 @@ c["+7 Health Gain On Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},f
 c["+7 Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=7}},nil}
 c["+7 Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=7}},nil}
 c["+7 Lightning Damage with Shurikens"]={{[1]={[1]={skillName="Shurikens",type="SkillName"},flags=0,keywordFlags=0,name="LightningDamage",type="BASE",value=7}},"  with  "}
-c["+7 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=1026,name="Damage",type="BASE",value=7}},"    with  "}
+c["+7 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=256,name="LightningDamage",type="BASE",value=7}},"  with  "}
 c["+7 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=7}},nil}
 c["+7 Mana Cost Per Second"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=7}},"  Per Second "}
 c["+7 Mana Gained When you directly cast Smite"]={{[1]={[1]={skillName="Smite",type="SkillName"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=7}},"  Gained When you directly cast  "}
@@ -7335,7 +7335,7 @@ c["+8 Minion Health per player Attunement"]={{[1]={flags=0,keywordFlags=0,name="
 c["+8 Minion Health per player Intelligence"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={actor="parent",stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=8}}}},nil}
 c["+8 Minion Melee Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=512,name="Damage",type="BASE",value=8}}}},nil}
 c["+8 Minion Spell Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=256,name="Damage",type="BASE",value=8}}}},nil}
-c["+8 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=1025,name="Damage",type="BASE",value=8}},nil}
+c["+8 Physical Throwing Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=8}},nil}
 c["+8 Spell Cold Damage"]={{[1]={flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=8}},nil}
 c["+8 Spell Cold Damage While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=8}},nil}
 c["+8 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=8}},nil}
@@ -7554,7 +7554,7 @@ c["+9 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=9}},n
 c["+9 Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=9}},nil}
 c["+9 Health gained when you Dodge"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=9}},"  gained when you Dodge "}
 c["+9 Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=9}},nil}
-c["+9 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=1026,name="Damage",type="BASE",value=9}},"    with  "}
+c["+9 Lightning Throwing Damage with Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=256,name="LightningDamage",type="BASE",value=9}},"  with  "}
 c["+9 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=9}},nil}
 c["+9 Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=9}},nil}
 c["+9 Mana Gained When you directly cast Smite"]={{[1]={[1]={skillName="Smite",type="SkillName"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=9}},"  Gained When you directly cast  "}
@@ -9448,8 +9448,8 @@ c["16% Increased Spreading Flames Duration "]={{[1]={[1]={skillName="Spreading F
 c["16% Increased Suffix Shard Drop Rate"]={{}," Suffix Shard Drop Rate "}
 c["16% Increased area with the first attack of Cinder Strike"]={{[1]={[1]={skillName="Cinder Strike",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=16}},"  with the first attack of  "}
 c["16% Increased aura area of Storm Totem"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=16}}," aura  of Storm Totem "}
-c["16% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=16}},"    if you have directly cast a   recently "}
-c["16% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=16}},"    if you have directly cast a   recently "}
+c["16% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=257,name="ColdDamage",type="INC",value=16}},"  if you have directly cast a   recently "}
+c["16% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=260,name="PhysicalDamage",type="INC",value=16}},"  if you have directly cast a   recently "}
 c["16% Maximum Damage Bonus"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=16}}," Maximum  Bonus "}
 c["16% Portion of Mana Cost Recovered"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=16}}," Portion of  Recovered "}
 c["16% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=16}},"  for Area Skills "}
@@ -9602,8 +9602,8 @@ c["18% Increased Stun Chance"]={{}," Stun Chance "}
 c["18% Increased Stun Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="INC",value=18}},nil}
 c["18% Increased area of effect with Acid Flask"]={{[1]={[1]={skillName="Acid Flask",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=18}},"  with  "}
 c["18% Increased attack, cast, and movement speed for Locusts"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=18}}," attack, cast, and  for Locusts "}
-c["18% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=18}},"    if you have directly cast a   recently "}
-c["18% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=18}},"    if you have directly cast a   recently "}
+c["18% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=257,name="ColdDamage",type="INC",value=18}},"  if you have directly cast a   recently "}
+c["18% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=260,name="PhysicalDamage",type="INC",value=18}},"  if you have directly cast a   recently "}
 c["18% Kill Threshold"]={{}," Kill Threshold "}
 c["18% More Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=18}},nil}
 c["18% Reduced Delay"]={{}," Delay "}
@@ -10169,8 +10169,8 @@ c["22% Increased Healing Effectiveness"]={{},"  Effectiveness "}
 c["22% Increased Poison Duration "]={{[1]={[1]={skillName="Poison",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=22}},nil}
 c["22% Increased Skeleton Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=22}}," Skeleton  "}
 c["22% Increased Stun Chance"]={{}," Stun Chance "}
-c["22% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=22}},"    if you have directly cast a   recently "}
-c["22% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=22}},"    if you have directly cast a   recently "}
+c["22% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=257,name="ColdDamage",type="INC",value=22}},"  if you have directly cast a   recently "}
+c["22% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=260,name="PhysicalDamage",type="INC",value=22}},"  if you have directly cast a   recently "}
 c["22% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-22}},"  Cost of s "}
 c["22% increased Cooldown Recovery Speed for Evade"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=22}},"  for Evade "}
 c["22% increased Critical Strike Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=22}},nil}
@@ -10471,8 +10471,8 @@ c["26% Increased Healing Effectiveness"]={{},"  Effectiveness "}
 c["26% Increased Melee Stun Duration"]={{[1]={flags=0,keywordFlags=512,name="EnemyStunDuration",type="INC",value=26}},nil}
 c["26% Increased Stun Chance"]={{}," Stun Chance "}
 c["26% Increased Volcanic Orb Shrapnel Speed"]={{},"  Shrapnel Speed "}
-c["26% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=26}},"    if you have directly cast a   recently "}
-c["26% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=26}},"    if you have directly cast a   recently "}
+c["26% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=257,name="ColdDamage",type="INC",value=26}},"  if you have directly cast a   recently "}
+c["26% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=260,name="PhysicalDamage",type="INC",value=26}},"  if you have directly cast a   recently "}
 c["26% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-26}},"  Cost of s "}
 c["26% increased Block Effectiveness"]={{}," Block Effectiveness "}
 c["26% increased Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="INC",value=26}},nil}
@@ -10972,9 +10972,9 @@ c["32% Increased Aspect of the Boar Duration"]={{[1]={[1]={skillName="Aspect of 
 c["32% Increased Damage with Dive Bomb"]={{[1]={[1]={skillName="Dive Bomb",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=32}},"  with  "}
 c["32% Increased Damage with Hammer Throw"]={{[1]={[1]={skillName="Hammer Throw",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=32}},"  with  "}
 c["32% Increased Skeletal Mage Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=32}}," Skeletal Mage  "}
-c["32% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=32}},"    if you have directly cast a   recently "}
+c["32% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=257,name="ColdDamage",type="INC",value=32}},"  if you have directly cast a   recently "}
 c["32% Increased damage with Smelter's Wrath"]={{[1]={[1]={skillName="Smelter's Wrath",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=32}},"  with  "}
-c["32% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=32}},"    if you have directly cast a   recently "}
+c["32% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=260,name="PhysicalDamage",type="INC",value=32}},"  if you have directly cast a   recently "}
 c["32% Increased spell critical strike chance. This effect is doubled if you have 300 or more maximum mana."]={{[1]={[1]={mult=2,stat="Mana",threshold=300,type="StatThreshold"},flags=0,keywordFlags=256,name="CritChance",type="INC",value=32}},nil}
 c["32% More Damage with your next Movement Skill Every 3 Seconds"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=32}},"  with your next Movement Skill Every 3 Seconds "}
 c["32% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=32}},"  for Area Skills "}
@@ -11692,10 +11692,10 @@ c["45% Increased Leech Rate"]={{}," Leech Rate "}
 c["45% Increased Relic Drop Rate"]={{}," Relic Drop Rate "}
 c["45% Increased Spell Damage per Skeletal Mage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="INC",value=45}},"   per Skeletal Mage "}
 c["45% Increased Spell Stun Chance"]={{},"  Stun Chance "}
-c["45% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=45}},"    if you have directly cast a   recently "}
+c["45% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=257,name="ColdDamage",type="INC",value=45}},"  if you have directly cast a   recently "}
 c["45% Increased damage with Smelter's Wrath"]={{[1]={[1]={skillName="Smelter's Wrath",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=45}},"  with  "}
 c["45% Increased melee damage if Echoed recently"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="INC",value=45}},"   if Echoed recently "}
-c["45% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=45}},"    if you have directly cast a   recently "}
+c["45% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=260,name="PhysicalDamage",type="INC",value=45}},"  if you have directly cast a   recently "}
 c["45% Increased spell critical strike chance. This effect is doubled if you have 300 or more maximum mana."]={{[1]={[1]={mult=2,stat="Mana",threshold=300,type="StatThreshold"},flags=0,keywordFlags=256,name="CritChance",type="INC",value=45}},nil}
 c["45% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-45}},"  Cost of s "}
 c["45% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=45}},nil}
@@ -12217,10 +12217,10 @@ c["55% Increased Off-Hand Catalyst Drop Rate"]={{}," Off-Hand Catalyst Drop Rate
 c["55% Increased Ring Drop Rate"]={{}," Ring Drop Rate "}
 c["55% Increased Shield Drop Rate"]={{}," Shield Drop Rate "}
 c["55% Increased area with the first attack of Cinder Strike"]={{[1]={[1]={skillName="Cinder Strike",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=55}},"  with the first attack of  "}
-c["55% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=55}},"    if you have directly cast a   recently "}
+c["55% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=257,name="ColdDamage",type="INC",value=55}},"  if you have directly cast a   recently "}
 c["55% Increased critical strike chance with Shield Throw"]={{[1]={[1]={skillName="Shield Throw",type="SkillName"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=55}},"  with  "}
 c["55% Increased damage with Vengeance"]={{[1]={[1]={skillName="Vengeance",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=55}},"  with  "}
-c["55% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=55}},"    if you have directly cast a   recently "}
+c["55% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=260,name="PhysicalDamage",type="INC",value=55}},"  if you have directly cast a   recently "}
 c["55% Increased void damage if Echoed recently"]={{[1]={flags=0,keywordFlags=0,name="VoidDamage",type="INC",value=55}},"  if Echoed recently "}
 c["55% increased Cold Damage Over Time"]={{[1]={flags=4100,keywordFlags=0,name="ColdDamage",type="INC",value=55}},nil}
 c["55% increased Critical Strike Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=55}},nil}
@@ -12527,8 +12527,8 @@ c["65% Increased Fire Aura Damage"]={{[1]={flags=0,keywordFlags=8,name="Damage",
 c["65% Increased Leech Rate"]={{}," Leech Rate "}
 c["65% Increased Melee Stun Chance"]={{},"  Stun Chance "}
 c["65% Increased Stun Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="INC",value=65}},nil}
-c["65% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=65}},"    if you have directly cast a   recently "}
-c["65% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=261,name="Damage",type="INC",value=65}},"    if you have directly cast a   recently "}
+c["65% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=257,name="ColdDamage",type="INC",value=65}},"  if you have directly cast a   recently "}
+c["65% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=260,name="PhysicalDamage",type="INC",value=65}},"  if you have directly cast a   recently "}
 c["65% Serpent Damage Buff on Heal"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=65}}," Serpent  Buff on Heal "}
 c["65% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=65}},nil}
 c["65% increased Damage Over Time"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="INC",value=65}},nil}
