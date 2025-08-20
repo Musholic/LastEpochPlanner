@@ -930,11 +930,9 @@ function ImportTabClass:BuildItem(itemData)
         end
     end
     item.enchantModLines = { }
-    item.scourgeModLines = { }
     item.classRequirementModLines = { }
     item.implicitModLines = { }
     item.explicitModLines = { }
-    item.crucibleModLines = { }
     if itemData.implicitMods then
         for _, line in ipairs(itemData.implicitMods) do
             for line in line:gmatch("[^\n]+") do

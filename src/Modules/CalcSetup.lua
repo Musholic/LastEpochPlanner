@@ -614,10 +614,8 @@ function calcs.initEnv(build, mode, override, specEnv)
 						item.classRequirementModLines = { }
 						item.buffModLines = { }
 						item.enchantModLines = { }
-						item.scourgeModLines = { }
 						item.implicitModLines = { }
 						item.explicitModLines = { }
-						item.crucibleModLines = { }
 						item.quality = 0
 						item.rarity = "NORMAL"
 						if item.baseName.implicit then
