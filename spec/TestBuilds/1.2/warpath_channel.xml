@@ -1,15 +1,15 @@
 <LastEpochPlanner>
 	<Build ascendClassName="Paladin" bandit="None" characterLevelAutoMode="false" className="Sentinel" level="97" mainSocketGroup="5" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_2" viewMode="TREE">
-		<PlayerStat stat="AverageHit" value="810.3728"></PlayerStat>
-		<PlayerStat stat="AverageDamage" value="810.3728"></PlayerStat>
-		<PlayerStat stat="AverageBurstDamage" value="810.3728"></PlayerStat>
+		<PlayerStat stat="AverageHit" value="863.39648"></PlayerStat>
+		<PlayerStat stat="AverageDamage" value="863.39648"></PlayerStat>
+		<PlayerStat stat="AverageBurstDamage" value="863.39648"></PlayerStat>
 		<PlayerStat stat="Speed" value="1.4373332950044"></PlayerStat>
-		<PlayerStat stat="PreEffectiveCritChance" value="9"></PlayerStat>
-		<PlayerStat stat="CritChance" value="9"></PlayerStat>
+		<PlayerStat stat="PreEffectiveCritChance" value="14.4"></PlayerStat>
+		<PlayerStat stat="CritChance" value="14.4"></PlayerStat>
 		<PlayerStat stat="CritMultiplier" value="2.36"></PlayerStat>
 		<PlayerStat stat="HitChance" value="100"></PlayerStat>
-		<PlayerStat stat="TotalDPS" value="1164.775806806"></PlayerStat>
-		<PlayerStat stat="CombinedDPS" value="1164.775806806"></PlayerStat>
+		<PlayerStat stat="TotalDPS" value="1240.9885074936"></PlayerStat>
+		<PlayerStat stat="CombinedDPS" value="1240.9885074936"></PlayerStat>
 		<PlayerStat stat="ManaCost" value="10"></PlayerStat>
 		<PlayerStat stat="ManaPercentCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPerSecondCost" value="14.373332950044"></PlayerStat>
@@ -19,14 +19,14 @@
 		<PlayerStat stat="Dex" value="3"></PlayerStat>
 		<PlayerStat stat="Int" value="18"></PlayerStat>
 		<PlayerStat stat="Att" value="21"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="13008.192036578"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="13656"></PlayerStat>
-		<PlayerStat stat="LightningMaximumHitTaken" value="9483"></PlayerStat>
-		<PlayerStat stat="ColdMaximumHitTaken" value="9483"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="15288"></PlayerStat>
-		<PlayerStat stat="PoisonMaximumHitTaken" value="13656"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="13656"></PlayerStat>
-		<PlayerStat stat="VoidMaximumHitTaken" value="13656"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="13876.835967588"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="14528"></PlayerStat>
+		<PlayerStat stat="LightningMaximumHitTaken" value="10089"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="10089"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="16264"></PlayerStat>
+		<PlayerStat stat="PoisonMaximumHitTaken" value="14528"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="14528"></PlayerStat>
+		<PlayerStat stat="VoidMaximumHitTaken" value="14528"></PlayerStat>
 		<PlayerStat stat="Life" value="3414"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="24"></PlayerStat>
 		<PlayerStat stat="LifeRegenRecovery" value="147.7"></PlayerStat>
@@ -43,7 +43,7 @@
 		<PlayerStat stat="ProjectileEvadeChance" value="0"></PlayerStat>
 		<PlayerStat stat="Armour" value="2285"></PlayerStat>
 		<PlayerStat stat="Spec:ArmourInc" value="24"></PlayerStat>
-		<PlayerStat stat="PhysicalDamageReduction" value="64"></PlayerStat>
+		<PlayerStat stat="PhysicalDamageReduction" value="66"></PlayerStat>
 		<PlayerStat stat="BlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
@@ -63,8 +63,11 @@
 		<PlayerStat stat="VoidResist" value="75"></PlayerStat>
 		<PlayerStat stat="VoidResistOverCap" value="1"></PlayerStat>
 		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.56"></PlayerStat>
-		<PlayerStat stat="FullDPS" value="1164.775806806"></PlayerStat>
-		<FullDPSSkill skillPart="" source="" stat="Javelin" value="1164.775806806"></FullDPSSkill>
+		<PlayerStat stat="FullDPS" value="1386.2759464326"></PlayerStat>
+		<FullDPSSkill skillPart="" source="" stat="Javelin" value="1240.9885074936"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="javeli" stat="Ignite" value="84.756669739822"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="javeli" stat="Bleed" value="40.981246907167"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="javeli" stat="Electrify" value="19.549522292013"></FullDPSSkill>
 	</Build>
 	<Calcs>
 		<Input name="misc_buffMode" string="EFFECTIVE"></Input>
@@ -836,6 +839,18 @@ Implicits: 1
 			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ah443" slot="Skill 3"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="si4lgl" slot="Skill 4"></Skill>
 			<Skill enabled="true" includeInFullDPS="true" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="javeli" slot="Skill 5"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" label="Blind (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" label="Electrify (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" label="Ignite (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" label="Blind (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" label="Electrify (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" label="Bleed (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" label="Blind (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" label="Electrify (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" label="Frailty (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Frailty" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" label="Ignite (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" label="Slow (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" label="Bleed (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:javeli"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" label="Shock (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:sm87r4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" label="Shred Armor (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:sm87r4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" label="Shock (from Warpath)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:va53st"></Skill>
