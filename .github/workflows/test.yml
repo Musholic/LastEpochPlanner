@@ -15,6 +15,7 @@ jobs:
       - name: Run tests
         run: busted --lua=luajit --exclude-tags=""
       - name: Report coverage
+        continue-on-error: true # Coverage report may fail if the coveralls.io server is overloaded
         run: cd src; luacov-coveralls --repo-token=${{ secrets.github_token }} -e TestData -e Data -e runtime
   check_generated_builds:
     runs-on: ubuntu-latest

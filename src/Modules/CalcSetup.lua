@@ -799,7 +799,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 	-- We need the skillModList computed to calculate the skill chance to trigger a given skill
 	local grantedTriggeredSkills = {}
 	if env.mode ~= "CACHE" then
-		for index, group in pairs(build.skillsTab.socketGroupList) do
+		for index, group in ipairs(build.skillsTab.socketGroupList) do
 			-- Ailments cannot trigger spells and ailments
 			if not group.grantedEffect.baseFlags.ailment and group.enabled then
 				local uuid = cacheSkillUUIDFromGroup(group, env)
@@ -814,7 +814,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 				end
 				cache = GlobalCache.cachedData["CACHE"][uuid]
 				local activeSkill = cache.ActiveSkill
-				for skillId, skill in pairs(data.skills) do
+				for skillId, skill in pairsSortByKey(data.skills) do
 					local triggerChance = activeSkill.skillModList:Sum("BASE", activeSkill.skillCfg, "ChanceToTriggerOnHit_"..skillId)
 					if triggerChance > 0 then
 						t_insert(grantedTriggeredSkills, {
@@ -838,10 +838,10 @@ function calcs.initEnv(build, mode, override, specEnv)
 		if env.mode == "MAIN" then
 			-- Process extra skills granted by items or tree nodes
 			local markList = wipeTable(tempTable1)
-			for _, grantedSkill in ipairs(env.grantedSkills) do
+			for grantedIndex, grantedSkill in ipairs(env.grantedSkills) do
 				-- Check if a matching group already exists
 				local group
-				for index, socketGroup in pairs(build.skillsTab.socketGroupList) do
+				for index, socketGroup in ipairs(build.skillsTab.socketGroupList) do
 					if socketGroup.source == grantedSkill.source and socketGroup.slot == grantedSkill.slotName then
 						if socketGroup.skillId == grantedSkill.skillId then
 							group = socketGroup
@@ -853,7 +853,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 				if not group then
 					-- Create a new group for this skill
 					group = { label = "", enabled = true, source = grantedSkill.source, slot = grantedSkill.slotName }
-					t_insert(build.skillsTab.socketGroupList, group)
+					t_insert(build.skillsTab.socketGroupList, 5 + grantedIndex, group)
 					markList[group] = true
 				end
 
@@ -877,49 +877,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 					end
 				end
 				group.triggerChance = grantedSkill.triggerChance
-				build.skillsTab:ProcessSocketGroup(group)
-			end
-
-			if #env.explodeSources ~= 0 then
-				-- Check if a matching group already exists
-				local group
-				for _, socketGroup in pairs(build.skillsTab.socketGroupList) do
-					if socketGroup.source == "Explode" then
-						group = socketGroup
-						break
-					end
-				end
-				if not group then
-					-- Create a new group for this skill
-					group = { label = "On Kill Monster Explosion", enabled = true, gemList = { }, source = "Explode", noSupports = true }
-					t_insert(build.skillsTab.socketGroupList, group)
-				end
-				-- Update the group
-				group.explodeSources = env.explodeSources
-				local gemsBySource = { }
-				for _, gem in ipairs(group.gemList) do
-					if gem.explodeSource then
-						gemsBySource[gem.explodeSource.modSource or gem.explodeSource.id] = gem
-					end
-				end
-				wipeTable(group.gemList)
-				for _, explodeSource in ipairs(env.explodeSources) do
-					local activeGemInstance
-					if gemsBySource[explodeSource.modSource or explodeSource.id] then
-						activeGemInstance = gemsBySource[explodeSource.modSource or explodeSource.id]
-					else
-						activeGemInstance = {
-							skillId = "EnemyExplode",
-							quality = 0,
-							enabled = true,
-							level = 1,
-							triggered = true,
-							explodeSource = explodeSource,
-						}
-					end
-					t_insert(group.gemList, activeGemInstance)
-				end
-				markList[group] = true
 				build.skillsTab:ProcessSocketGroup(group)
 			end
 

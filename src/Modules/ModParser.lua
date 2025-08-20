@@ -38,7 +38,6 @@ local formList = {
 	["^lose %+(%d+)%% to"] = "LOSE",
 	["^(%d+)"] = "BASE",
 	["^([%+%-]?%d+)%% chance"] = "CHANCE",
-	["^([%+%-]?%d+)%% (%a+) chance"] = "CHANCE",
 	["^([%+%-]?%d+)%% chance to gain "] = "FLAG",
 	["^([%+%-]?%d+)%% additional chance"] = "CHANCE",
 	["^you have "] = "FLAG",
