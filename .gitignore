@@ -17,6 +17,7 @@ Settings.xml
 luajit/
 spec/test_results.log
 spec/test_generation.log
+spec/TestBuilds/*/*-unformatted.xml
 src/luacov.stats.out
 
 # Release

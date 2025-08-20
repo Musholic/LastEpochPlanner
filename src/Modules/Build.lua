@@ -688,8 +688,18 @@ function buildMode:ReadLeToolsSave(saveContent)
 			end
 			item["inventoryId"] = "Idol " .. idolPosition
 		end
-		local itemName = data.LETools_itemBases[itemData.id]
-		item["name"] = itemName
+		local baseTypeID = data.LETools_itemBases[itemData.id].baseTypeId
+		local subTypeID = data.LETools_itemBases[itemData.id].subTypeId
+		local uniqueId = data.LETools_itemBases[itemData.id].uniqueId
+		
+		for itemBaseName, itemBase in pairs(self.data.itemBases) do
+            if itemBase.baseTypeID == baseTypeID and itemBase.subTypeID == subTypeID then
+                item.base = itemBase
+          		item.name = itemBaseName
+          		item.baseName = itemBaseName
+            end
+		end
+		
 		item["rarity"] = "RARE"
 		item["explicitMods"] = {}
 		item["prefixes"] = {}
@@ -729,40 +739,29 @@ function buildMode:ReadLeToolsSave(saveContent)
 			end
 		end
 
-		local foundItemBase = data.itemBases[itemName]
-		if not foundItemBase then
-			for _, uniqueBase in pairs(data.uniques) do
-				if uniqueBase.name == itemName then
-					item["rarity"] = "UNIQUE"
-					local baseTypeID = uniqueBase["baseTypeID"]
-					local subTypeID = uniqueBase["subTypeID"]
-					for itemBaseName, itemBase in pairs(data.itemBases) do
-						if itemBase.baseTypeID == baseTypeID and itemBase.subTypeID == subTypeID then
-							item.baseName = itemBaseName
-							foundItemBase = itemBase
-						end
-					end
-					for i, modLine in ipairs(uniqueBase.mods) do
-                        if itemLib.hasRange(modLine) then
-                            local range = main.defaultItemAffixQuality
-                            if itemData['ur'] and #itemData['ur'] > 0 then
-                                range = itemData["ur"][uniqueBase.rollIds[i] + 1]
-                            end
-                            -- TODO: avoid using crafted
-                            table.insert(item.explicitMods, "{crafted}{range: " .. range .. "}" .. modLine)
-                        else
-                            table.insert(item.explicitMods, "{crafted}" .. modLine)
+		if uniqueId then
+			local uniqueBase = data.uniques[uniqueId]
+			if uniqueBase then
+			    item.name = uniqueBase.name
+				item["rarity"] = "UNIQUE"
+				for i, modLine in ipairs(uniqueBase.mods) do
+                    if itemLib.hasRange(modLine) then
+                        local range = main.defaultItemAffixQuality
+                        if itemData['ur'] and #itemData['ur'] > 0 then
+                            range = itemData["ur"][uniqueBase.rollIds[i] + 1]
                         end
-					end
+                        -- TODO: avoid using crafted
+                        table.insert(item.explicitMods, "{crafted}{range: " .. range .. "}" .. modLine)
+                    else
+                        table.insert(item.explicitMods, "{crafted}" .. modLine)
+                    end
 				end
 			end
-		else
-			item.baseName = itemName
 		end
-		if foundItemBase then
-			item.base = foundItemBase
+		
+		if item.base then
 			item.implicitMods= {}
-			for i,implicit in ipairs(foundItemBase.implicits) do
+			for i,implicit in ipairs(item.base.implicits) do
 				local range = main.defaultItemAffixQuality
 				if itemData['ir'] then
 					range = itemData["ir"][i]
