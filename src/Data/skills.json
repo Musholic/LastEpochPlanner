@@ -15,7 +15,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "Ailment_AbyssalDecay": {
     "name": "Abyssal Decay",
@@ -2191,7 +2192,8 @@
     },
     "baseMods": [
       "5% increased Attack Speed per player Dexterity"
-    ]
+    ],
+    "fromMinion": true
   },
   "BasicEnemyMelee": {
     "name": "Melee Attack",
@@ -2209,7 +2211,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "Bone Golem 02 Big Slam": {
     "name": "Maul",
@@ -2232,7 +2235,8 @@
     "baseMods": [
       "4% increased Damage per player Strength",
       "4% increased Damage per player Attunement"
-    ]
+    ],
+    "fromMinion": true
   },
   "Bone Golem 03 Leap Slam": {
     "name": "Maul",
@@ -2255,7 +2259,8 @@
     "baseMods": [
       "4% increased Damage per player Strength",
       "4% increased Damage per player Attunement"
-    ]
+    ],
+    "fromMinion": true
   },
   "Bone Golem Rampage": {
     "name": "Rampage",
@@ -2279,7 +2284,8 @@
       "4% increased Damage per player Strength",
       "4% increased Damage per player Attunement",
       "+2% Mana Efficiency per player Attunement"
-    ]
+    ],
+    "fromMinion": true
   },
   "DeathSlash": {
     "name": "Death Slash",
@@ -2298,7 +2304,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "FeatheredRaptorJumpSlash": {
     "name": "Melee Attack",
@@ -2317,7 +2324,8 @@
       "critChance": 5,
       "base_skill_effect_duration": 10,
       "cooldown": 4
-    }
+    },
+    "fromMinion": true
   },
   "FrenzyAura": {
     "name": "Frenzy Aura",
@@ -2330,7 +2338,8 @@
     "stats": {
       "chance_to_cast_Ailment_Frenzy_on_hit_%": 100,
       "base_skill_effect_duration": 2000
-    }
+    },
+    "fromMinion": true
   },
   "LightningStorm": {
     "name": "Lightning Storm",
@@ -2347,7 +2356,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 2000
-    }
+    },
+    "fromMinion": true
   },
   "Manifest Armor 01 Melee": {
     "name": "Melee Attack",
@@ -2365,7 +2375,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "PrimalBear 01 melee attack": {
     "name": "Melee Attack",
@@ -2383,7 +2394,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "PrimalSabertooth 01 Melee": {
     "name": "Melee Attack",
@@ -2401,7 +2413,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "PrimalWolf 01 melee": {
     "name": "Melee Attack",
@@ -2419,7 +2432,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "RogueFalcon Diving Attack": {
     "name": "Surge",
@@ -2441,7 +2455,8 @@
     "baseMods": [
       "4% increased Damage per player Intelligence",
       "4% increased Damage per player Dexterity"
-    ]
+    ],
+    "fromMinion": true
   },
   "RogueFalcon Melee": {
     "name": "Rogue Falcon Melee",
@@ -2459,7 +2474,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "ScorpionMeleeComboStart": {
     "name": "Melee Attack",
@@ -2477,7 +2493,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "ScorpionTailMelee": {
     "name": "Melee Attack",
@@ -2496,7 +2513,8 @@
       "critChance": 5,
       "chance_to_cast_Ailment_Poison_on_hit_%": 200,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "Skeletal Mages Necrotic Projectile": {
     "name": "Dread Bolt",
@@ -2517,7 +2535,8 @@
     },
     "baseMods": [
       "4% increased Damage per player Intelligence"
-    ]
+    ],
+    "fromMinion": true
   },
   "StormCrowLightningBlast": {
     "name": "Lightning Blast",
@@ -2537,7 +2556,8 @@
     },
     "baseMods": [
       "4% increased Damage per player Intelligence"
-    ]
+    ],
+    "fromMinion": true
   },
   "Suicide": {
     "name": "Suicide Explosion",
@@ -2549,7 +2569,8 @@
     },
     "stats": {
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "Summon Skeleton Archer Bow Attack": {
     "name": "Bow Attack",
@@ -2567,7 +2588,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 600
-    }
+    },
+    "fromMinion": true
   },
   "ThornTotemAttack": {
     "name": "Mystic Thorns",
@@ -2584,7 +2606,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 600
-    }
+    },
+    "fromMinion": true
   },
   "ThornVolley": {
     "name": "Thorn Volley",
@@ -2605,7 +2628,8 @@
     "baseMods": [
       "4% increased Damage per player Attunement",
       "+4% Freeze Rate Multiplier per player Attunement"
-    ]
+    ],
+    "fromMinion": true
   },
   "Wraith 01 Melee": {
     "name": "Melee Attack",
@@ -2623,7 +2647,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "aa710": {
     "name": "Assemble Abomination",
@@ -3684,7 +3709,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
-    }
+    },
+    "fromMinion": true
   },
   "gs15de": {
     "name": "Vengeance",

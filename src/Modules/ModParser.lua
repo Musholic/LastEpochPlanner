@@ -139,12 +139,15 @@ for i,stat in ipairs(LongAttributes) do
 end
 
 for skillId, skill in pairs(data.skills) do
-	modNameList["chance to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-	modNameList["to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-	modNameList[skill.name:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-	if skill.altName then
-		modNameList[skill.altName:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-	end
+    -- The player cannot trigger a minion skill and cannot trigger "Stacking" variants of skills
+    if not skill.fromMinion and not skillId:find("Stacking") then
+    	modNameList["chance to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
+    	modNameList["to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
+    	modNameList[skill.name:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
+    	if skill.altName then
+    		modNameList[skill.altName:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
+    	end
+    end
 end
 
 for _, damageType in ipairs(DamageTypes) do
@@ -314,8 +317,8 @@ local flagTypes = {
 local skillNameList = {
 }
 
-for skillId, skill in pairs(data.skills) do
-	skillNameList[skill.name:lower()] = { tag = { type = "SkillId", skillId = skillId } }
+for _, skill in pairs(data.skills) do
+	skillNameList[skill.name:lower()] = { tag = { type = "SkillName", skillName = skill.name } }
 end
 
 local preSkillNameList = { }
