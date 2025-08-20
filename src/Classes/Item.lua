@@ -238,9 +238,8 @@ function ItemClass:FindModifierSubstring(substring, itemSlotName)
 	for _,v in pairs(self.explicitModLines) do t_insert(modLines, v) end
 	if explicit < 1 then
 		for _,v in pairs(self.enchantModLines) do t_insert(modLines, v) end
-		for _,v in pairs(self.scourgeModLines) do t_insert(modLines, v) end
 		for _,v in pairs(self.implicitModLines) do t_insert(modLines, v) end
-		for _,v in pairs(self.crucibleModLines) do t_insert(modLines, v) end
+
 	end
 
 	for _,v in pairs(modLines) do
@@ -347,10 +346,8 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.classRequirementModLines = { }
 	self.buffModLines = { }
 	self.enchantModLines = { }
-	self.scourgeModLines = { }
 	self.implicitModLines = { }
 	self.explicitModLines = { }
-	self.crucibleModLines = { }
 	local implicitLines = 0
 	self.variantList = nil
 	self.prefixes = { }
@@ -800,11 +797,8 @@ function ItemClass:BuildRaw()
 	if self.classRestriction then
 		t_insert(rawLines, "Requires Class " .. self.classRestriction)
 	end
-	t_insert(rawLines, "Implicits: " .. (#self.enchantModLines + #self.implicitModLines + #self.scourgeModLines))
+	t_insert(rawLines, "Implicits: " .. (#self.enchantModLines + #self.implicitModLines))
 	for _, modLine in ipairs(self.enchantModLines) do
-		writeModLine(modLine)
-	end
-	for _, modLine in ipairs(self.scourgeModLines) do
 		writeModLine(modLine)
 	end
 	for _, modLine in ipairs(self.classRequirementModLines) do
@@ -814,9 +808,6 @@ function ItemClass:BuildRaw()
 		writeModLine(modLine)
 	end
 	for _, modLine in ipairs(self.explicitModLines) do
-		writeModLine(modLine)
-	end
-	for _, modLine in ipairs(self.crucibleModLines) do
 		writeModLine(modLine)
 	end
 	if self.split then
@@ -1164,9 +1155,6 @@ function ItemClass:BuildModList()
 	for _, modLine in ipairs(self.enchantModLines) do
 		processModLine(modLine)
 	end
-	for _, modLine in ipairs(self.scourgeModLines) do
-		processModLine(modLine)
-	end
 	for _, modLine in ipairs(self.classRequirementModLines) do
 		processModLine(modLine)
 	end
@@ -1174,9 +1162,6 @@ function ItemClass:BuildModList()
 		processModLine(modLine)
 	end
 	for _, modLine in ipairs(self.explicitModLines) do
-		processModLine(modLine)
-	end
-	for _, modLine in ipairs(self.crucibleModLines) do
 		processModLine(modLine)
 	end
 	if calcLocal(baseList, "NoAttributeRequirements", "FLAG", 0) then
