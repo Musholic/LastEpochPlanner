@@ -116,6 +116,7 @@
   },
   "SummonedAbomination": {
     "skillList": [
+      "Abomination Consume Minions",
       "Abomination Melee"
     ],
     "modList": [],

@@ -4493,7 +4493,7 @@
     "affixEffectModifier": 2.2,
     "implicits": [
       "+110 Melee Damage",
-      "(40-60)% Increased Melee Stun Chance",
+      "(40-60)% increased Increased Melee Stun Chance",
       "+(6-10)% Melee Critical Strike Chance"
     ],
     "weapon": {
@@ -5520,7 +5520,7 @@
     },
     "affixEffectModifier": 2.2,
     "implicits": [
-      "+90 Melee Damage",
+      "+80 Melee Damage",
       "+(5-8)% Melee Critical Strike Chance"
     ],
     "weapon": {
@@ -6412,6 +6412,33 @@
     "affixEffectModifier": 0.17,
     "implicits": [
       "{rounding:Integer}+(16-48) Mana"
+    ]
+  },
+  "Stone Amulet": {
+    "type": "Amulet",
+    "baseTypeID": 20,
+    "subTypeID": 14,
+    "req": {
+      "level": 80
+    },
+    "affixEffectModifier": 0.17,
+    "implicits": [
+      "+(11-15)% Endurance",
+      "{rounding:Integer}+(50-110) Endurance Threshold"
+    ]
+  },
+  "Fossil Amulet": {
+    "type": "Amulet",
+    "baseTypeID": 20,
+    "subTypeID": 15,
+    "req": {
+      "level": 11
+    },
+    "affixEffectModifier": 0.17,
+    "implicits": [
+      "{rounding:Integer}+(2-6) to All Attributes",
+      "(3-10)% increased Movement Speed",
+      "+(4-15)% to All Resistances"
     ]
   },
   "Copper Ring": {
@@ -7370,6 +7397,19 @@
     "affixEffectModifier": 0,
     "implicits": [
       "{rounding:Integer}(5-10)% less Damage Taken"
+    ]
+  },
+  "Ancient Remains": {
+    "type": "Relic",
+    "baseTypeID": 22,
+    "subTypeID": 63,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "{rounding:Integer}+(2-4) to All Attributes",
+      "+(11-15)% Endurance"
     ]
   },
   "Shortbow": {

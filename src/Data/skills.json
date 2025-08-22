@@ -1,4 +1,25 @@
 {
+  "Abomination Consume Minions": {
+    "name": "Devour",
+    "skillTypeTags": 0,
+    "castTime": 1.3636364,
+    "baseFlags": {
+      "hit": true,
+      "spell": true,
+      "duration": true
+    },
+    "stats": {
+      "damageEffectiveness": 2,
+      "spell_base_necrotic_damage": 40,
+      "base_critical_strike_multiplier_+": 100,
+      "critChance": 5,
+      "base_skill_effect_duration": 2000
+    },
+    "baseMods": [
+      "+2% Mana Efficiency per player Attunement"
+    ],
+    "fromMinion": true
+  },
   "Abomination Melee": {
     "name": "Melee Attack",
     "skillTypeTags": 513,
@@ -10,8 +31,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 1,
-      "melee_base_physical_damage": 18,
+      "damageEffectiveness": 1.5,
+      "melee_base_physical_damage": 30,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
@@ -289,7 +310,8 @@
       "5% less Damage",
       "-10% less Damage Leeched as Health",
       "10% less Ward Retention",
-      "10% less Health Regen"
+      "10% less Health Regen",
+      "-50% Increased Healing Effectiveness"
     ]
   },
   "Ailment_Aterroth Shock": {
@@ -850,6 +872,25 @@
       "35% increased Movement Speed"
     ]
   },
+  "Ailment_ExposedFlesh": {
+    "name": "Exposed Flesh",
+    "skillTypeTags": 16781312,
+    "baseFlags": {
+      "duration": true,
+      "ailment": true,
+      "dot": true
+    },
+    "stats": {
+      "base_skill_effect_duration": 8000,
+      "maximum_stacks": 1,
+      "damageEffectiveness": 4,
+      "dot_base_poison_damage": 80
+    },
+    "buffs": [
+      "-15% Cold Resistance",
+      "+30% "
+    ]
+  },
   "Ailment_Falcon Mark": {
     "name": "Falconer's Mark",
     "skillTypeTags": 16777472,
@@ -1123,7 +1164,7 @@
     }
   },
   "Ailment_LightningInfusion": {
-    "name": "Lightning Infusion",
+    "name": "Storm Infusion",
     "skillTypeTags": 0,
     "baseFlags": {
       "duration": true,
@@ -1135,7 +1176,10 @@
       "damageEffectiveness": 1
     },
     "buffs": [
-      "+21 Lightning Damage"
+      "+21 Spell Lightning Damage",
+      "+21 Melee Lightning Damage",
+      "+21 Bow Lightning Damage",
+      "+21 Throwing Lightning Damage"
     ]
   },
   "Ailment_LightningResistanceShred": {
@@ -1903,7 +1947,7 @@
     },
     "stats": {
       "base_skill_effect_duration": 3000,
-      "maximum_stacks": 10
+      "maximum_stacks": 5
     }
   },
   "Ailment_Stagger": {
@@ -2400,7 +2444,7 @@
   "PrimalSabertooth 01 Melee": {
     "name": "Melee Attack",
     "skillTypeTags": 513,
-    "castTime": 1.3636364,
+    "castTime": 1.0031347,
     "baseFlags": {
       "melee": true,
       "attack": true,
@@ -2408,8 +2452,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 1,
-      "melee_base_physical_damage": 18,
+      "damageEffectiveness": 0.75,
+      "melee_base_physical_damage": 15,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
@@ -2497,7 +2541,7 @@
     "fromMinion": true
   },
   "ScorpionTailMelee": {
-    "name": "Melee Attack",
+    "name": "Scorpion Tail Melee",
     "skillTypeTags": 513,
     "castTime": 0.81818175,
     "baseFlags": {
@@ -2909,8 +2953,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 1.1,
-      "spell_base_physical_damage": 22,
+      "damageEffectiveness": 1.25,
+      "spell_base_physical_damage": 25,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 766.6666
@@ -2989,7 +3033,7 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 1.2,
+      "damageEffectiveness": 1.5,
       "melee_base_physical_damage": 2,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
@@ -3193,7 +3237,7 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 5000,
-      "cooldown": 5
+      "cooldown": 10
     },
     "baseMods": [
       "4% increased Damage per player Intelligence"
@@ -3463,6 +3507,28 @@
     },
     "baseMods": [
       "4% increased Damage per player Strength"
+    ]
+  },
+  "fl44": {
+    "name": "Flay",
+    "skillTypeTags": 513,
+    "castTime": 0.9090909,
+    "baseFlags": {
+      "melee": true,
+      "attack": true,
+      "hit": true,
+      "duration": true
+    },
+    "stats": {
+      "damageEffectiveness": 2,
+      "melee_base_physical_damage": 2,
+      "base_critical_strike_multiplier_+": 100,
+      "critChance": 5,
+      "base_skill_effect_duration": 50
+    },
+    "baseMods": [
+      "4% increased Damage per player Intelligence",
+      "+2 Melee Physical Damage per player Dexterity"
     ]
   },
   "fl71ds": {
@@ -3766,15 +3832,15 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 0.7,
+      "damageEffectiveness": 1,
       "melee_base_necrotic_damage": 2,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
     },
     "baseMods": [
-      "4% increased Damage per player Dexterity",
-      "+1 Melee Necrotic Damage per player Intelligence"
+      "+2 Melee Necrotic Damage per player Dexterity",
+      "4% increased Damage per player Intelligence"
     ]
   },
   "hh7pa3": {
@@ -4241,7 +4307,7 @@
     },
     "stats": {
       "damageEffectiveness": 1,
-      "spell_base_physical_damage": 15,
+      "spell_base_physical_damage": 20,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
@@ -4339,7 +4405,9 @@
     },
     "baseMods": [
       "+12 Minion Health per player Strength",
-      "4% increased Minion Damage per player Strength"
+      "4% increased Minion Damage per player Strength",
+      "+12 Minion Health per player Dexterity",
+      "4% increased Minion Damage per player Dexterity"
     ],
     "minionList": [
       "PrimalSabertooth"
@@ -4415,7 +4483,9 @@
     },
     "baseMods": [
       "+15 Minion Health per player Strength",
-      "4% increased Minion Damage per player Strength"
+      "4% increased Minion Damage per player Strength",
+      "+12 Minion Health per player Dexterity",
+      "4% increased Minion Damage per player Dexterity"
     ],
     "minionList": [
       "PrimalScorpion"
@@ -4449,8 +4519,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 2,
-      "spell_base_physical_damage": 40,
+      "damageEffectiveness": 4,
+      "spell_base_physical_damage": 80,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
@@ -4543,7 +4613,7 @@
     },
     "baseMods": [
       "4% increased Damage per player Attunement",
-      "4% Increased Healing Effectiveness per player Attunement"
+      "4% increased Increased Healing Effectiveness per player Attunement"
     ]
   },
   "smbmb": {
@@ -4697,7 +4767,9 @@
     },
     "baseMods": [
       "+12 Minion Health per player Strength",
-      "4% increased Minion Damage per player Strength"
+      "4% increased Minion Damage per player Strength",
+      "+12 Minion Health per player Dexterity",
+      "4% increased Damage per player Dexterity"
     ],
     "minionList": [
       "Summon_Raptor"
@@ -4986,7 +5058,7 @@
       "melee_base_physical_damage": 5,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 250,
+      "base_skill_effect_duration": 200,
       "cooldown": 1
     },
     "baseMods": [

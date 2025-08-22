@@ -1,5 +1,5 @@
 <LastEpochPlanner>
-	<Build ascendClassName="Paladin" bandit="None" characterLevelAutoMode="false" className="Sentinel" level="97" mainSocketGroup="5" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_2" viewMode="TREE">
+	<Build ascendClassName="Paladin" bandit="None" characterLevelAutoMode="false" className="Sentinel" level="97" mainSocketGroup="5" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="863.39648"></PlayerStat>
 		<PlayerStat stat="AverageDamage" value="863.39648"></PlayerStat>
 		<PlayerStat stat="AverageBurstDamage" value="863.39648"></PlayerStat>
@@ -17,26 +17,26 @@
 		<PlayerStat stat="Vit" value="13"></PlayerStat>
 		<PlayerStat stat="Str" value="20"></PlayerStat>
 		<PlayerStat stat="Dex" value="3"></PlayerStat>
-		<PlayerStat stat="Int" value="18"></PlayerStat>
+		<PlayerStat stat="Int" value="15"></PlayerStat>
 		<PlayerStat stat="Att" value="21"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="13876.835967588"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="14528"></PlayerStat>
-		<PlayerStat stat="LightningMaximumHitTaken" value="10089"></PlayerStat>
-		<PlayerStat stat="ColdMaximumHitTaken" value="10089"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="16264"></PlayerStat>
-		<PlayerStat stat="PoisonMaximumHitTaken" value="14528"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="14528"></PlayerStat>
-		<PlayerStat stat="VoidMaximumHitTaken" value="14528"></PlayerStat>
-		<PlayerStat stat="Life" value="3414"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="13819.930371939"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="14468"></PlayerStat>
+		<PlayerStat stat="LightningMaximumHitTaken" value="10047"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="10047"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="16204"></PlayerStat>
+		<PlayerStat stat="PoisonMaximumHitTaken" value="14468"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="14468"></PlayerStat>
+		<PlayerStat stat="VoidMaximumHitTaken" value="14468"></PlayerStat>
+		<PlayerStat stat="Life" value="3400"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="24"></PlayerStat>
-		<PlayerStat stat="LifeRegenRecovery" value="147.7"></PlayerStat>
+		<PlayerStat stat="LifeRegenRecovery" value="141.2"></PlayerStat>
 		<PlayerStat stat="LifeLeechGainRate" value="0"></PlayerStat>
 		<PlayerStat stat="Mana" value="246"></PlayerStat>
 		<PlayerStat stat="Spec:ManaInc" value="24"></PlayerStat>
 		<PlayerStat stat="ManaRegenRecovery" value="13.3"></PlayerStat>
 		<PlayerStat stat="ManaLeechGainRate" value="0"></PlayerStat>
 		<PlayerStat stat="Ward" value="0"></PlayerStat>
-		<PlayerStat stat="WardRetention" value="36"></PlayerStat>
+		<PlayerStat stat="WardRetention" value="30"></PlayerStat>
 		<PlayerStat stat="Evasion" value="94"></PlayerStat>
 		<PlayerStat stat="Spec:EvasionInc" value="0"></PlayerStat>
 		<PlayerStat stat="MeleeEvadeChance" value="0"></PlayerStat>
@@ -332,7 +332,7 @@ Implicits: 1
 {range:54}{rounding:Integer}+(100-130) Health
 {crafted}{range:155}{rounding:Integer}+(1-2) to Symbols of Hope
 {crafted}{range:188}(20-40)% Increased Symbol Gain Rate
-{crafted}{range:76}(70-80)% Sigils of Hope Mana Cost consumed to cast it every 6 seconds while above half mana
+{crafted}{range:76}(70-80)% of Sigils of Hope Mana Cost consumed to cast it every 6 seconds while above half mana
 {crafted}{range:29}(15-25)% Increased Healing Effectiveness
 {crafted}{range:108}{rounding:Integer}(10-15)% increased Armor
 			<ModRange id="1" range="227"></ModRange>
@@ -394,7 +394,7 @@ Implicits: 2
 +3 Potion Slots
 {range:244}{rounding:Integer}(8-9)% increased Health
 {crafted}{range:77}(30-45)% Chance to cast Smite on hit (max 6 per 10 seconds, this cooldown resets when you use a potion)
-{crafted}{range:131}{rounding:Integer}+(4-25) Intelligence
+{crafted}{range:131}{rounding:Integer}+(4-20) Intelligence
 {crafted}{range:77}(32-55)% Increased Chance To Find Potions
 {crafted}{range:198}{rounding:Integer}(8-16) Mana Gained on Potion Use
 {crafted}100% of Volatile Reversal cooldown reset on potion use
@@ -527,8 +527,8 @@ LevelReq: 0
 Implicits: 0
 {range:224}+(9-12)% Poison Resistance
 {range:224}+(9-12)% Minion Poison Resistance
-{range:44}{rounding:Integer}(13-15)% increased Health Regen
-{range:44}{rounding:Integer}+(15-20) Health
+{range:44}{rounding:Integer}(5-8)% increased Health Regen
+{range:44}{rounding:Integer}+(14-18) Health
 			<ModRange id="1" range="224"></ModRange>
 			<ModRange id="2" range="224"></ModRange>
 			<ModRange id="3" range="44"></ModRange>
@@ -573,8 +573,8 @@ LevelReq: 0
 Implicits: 0
 {range:190}+(9-12)% Void Resistance
 {range:190}+(9-12)% Minion Void Resistance
-{range:97}(18-25)% Increased Healing Effectiveness
-{range:97}{rounding:Integer}+(15-20) Health
+{range:97}(5-10)% Increased Healing Effectiveness
+{range:97}{rounding:Integer}+(14-18) Health
 			<ModRange id="1" range="190"></ModRange>
 			<ModRange id="2" range="190"></ModRange>
 			<ModRange id="3" range="97"></ModRange>
@@ -595,8 +595,8 @@ Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:68}{scalar:0.17}+(20-45)% Necrotic Resistance
-{range:247}{rounding:Integer}(13-15)% increased Health Regen
-{range:247}{rounding:Integer}+(15-20) Health
+{range:247}{rounding:Integer}(5-8)% increased Health Regen
+{range:247}{rounding:Integer}+(14-18) Health
 			<ModRange id="1" range="68"></ModRange>
 			<ModRange id="2" range="247"></ModRange>
 			<ModRange id="3" range="247"></ModRange>
@@ -640,8 +640,8 @@ LevelReq: 0
 Implicits: 0
 {range:195}+(9-12)% Necrotic Resistance
 {range:195}+(9-12)% Minion Necrotic Resistance
-{range:249}(18-25)% Increased Healing Effectiveness
-{range:249}{rounding:Integer}+(15-20) Health
+{range:249}(5-10)% Increased Healing Effectiveness
+{range:249}{rounding:Integer}+(14-18) Health
 			<ModRange id="1" range="195"></ModRange>
 			<ModRange id="2" range="195"></ModRange>
 			<ModRange id="3" range="249"></ModRange>
@@ -860,7 +860,7 @@ Implicits: 1
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
-		<Spec ascendClassId="3" classId="2" nodes="Paladin#1,Sentinel#1,Sentinel-0#8,Sentinel-104#1,Sentinel-107#10,Sentinel-11#5,Sentinel-119#5,Sentinel-2#5,Sentinel-4#2,Sentinel-49#8,Sentinel-6#1,Sentinel-69#8,Sentinel-7#1,Sentinel-71#8,Sentinel-77#7,Sentinel-83#6,Sentinel-86#8,Sentinel-91#5,Sentinel-93#5,Sentinel-94#1,Sentinel-95#2,Sentinel-96#2,Sentinel-98#12,ah443-0#1,ah443-12#4,ah443-16#1,ah443-19#2,ah443-2#1,ah443-4#3,ah443-5#2,ah443-7#5,ah443-8#2,ah443-9#2,javeli-0#1,javeli-2#1,javeli-20#1,javeli-21#1,javeli-22#1,javeli-24#4,javeli-25#1,javeli-26#1,javeli-27#5,javeli-8#1,si4lgl-0#1,si4lgl-15#2,si4lgl-23#2,si4lgl-24#1,si4lgl-28#1,si4lgl-29#3,si4lgl-32#4,si4lgl-6#3,si4lgl-7#3,si4lgl-8#2,si4lgl-9#1,sm87r4-0#1,sm87r4-16#3,sm87r4-17#4,sm87r4-20#4,sm87r4-26#4,sm87r4-28#5,sm87r4-30#5,va53st-0#1,va53st-10#1,va53st-12#2,va53st-13#3,va53st-14#2,va53st-16#3,va53st-17#1,va53st-18#4,va53st-23#2,va53st-25#5,va53st-27#1,va53st-9#1" treeVersion="1_2">
+		<Spec ascendClassId="3" classId="2" nodes="Paladin#1,Sentinel#1,Sentinel-0#8,Sentinel-104#1,Sentinel-107#10,Sentinel-11#5,Sentinel-119#5,Sentinel-2#5,Sentinel-4#2,Sentinel-49#8,Sentinel-6#1,Sentinel-69#8,Sentinel-7#1,Sentinel-71#8,Sentinel-77#7,Sentinel-83#6,Sentinel-86#8,Sentinel-91#5,Sentinel-93#5,Sentinel-94#1,Sentinel-95#2,Sentinel-96#2,Sentinel-98#12,ah443-0#1,ah443-12#4,ah443-16#1,ah443-19#2,ah443-2#1,ah443-4#3,ah443-5#2,ah443-7#5,ah443-8#2,ah443-9#2,javeli-0#1,javeli-2#1,javeli-20#1,javeli-21#1,javeli-22#1,javeli-24#4,javeli-25#1,javeli-26#1,javeli-27#5,javeli-8#1,si4lgl-0#1,si4lgl-15#2,si4lgl-23#2,si4lgl-24#1,si4lgl-28#1,si4lgl-29#3,si4lgl-32#4,si4lgl-6#3,si4lgl-7#3,si4lgl-8#2,si4lgl-9#1,sm87r4-0#1,sm87r4-16#3,sm87r4-17#4,sm87r4-20#4,sm87r4-26#4,sm87r4-28#5,sm87r4-30#5,va53st-0#1,va53st-10#1,va53st-12#2,va53st-13#3,va53st-14#2,va53st-16#3,va53st-17#1,va53st-18#4,va53st-23#2,va53st-25#5,va53st-27#1,va53st-9#1" treeVersion="1_3">
 			<Overrides></Overrides>
 		</Spec>
 	</Tree>

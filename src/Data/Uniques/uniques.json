@@ -327,8 +327,8 @@
       "level": 6
     },
     "mods": [
-      "+(50-70)% Chance to Poison on Hit",
-      "+(50-70)% Chance to Slow on Hit",
+      "+(50-80)% Chance to Poison on Hit",
+      "+(10-30)% Chance to Slow on Hit",
       "(5-10)% increased Melee Attack Speed",
       "{rounding:Integer}(45-60)% increased Dodge Rating",
       "7% Chance to Summon a Primal Serpent on kill with Serpent Strike"
@@ -1043,12 +1043,14 @@
     "mods": [
       "100% less Damage Taken on Block",
       "(60-56)% reduced Block Chance",
-      "{rounding:Integer}+(35-65) Health"
+      "{rounding:Integer}+(35-65) Health",
+      "75% Maximum Block Chance"
     ],
     "rollIds": [
       null,
       1,
-      0
+      0,
+      null
     ]
   },
   "51": {
@@ -1495,7 +1497,7 @@
     "mods": [
       "+(100-220)% Chance to Poison on Hit",
       "+100% Chance to inflict Plague on Hit",
-      "(10-20)% more Damage Over Time per stack of A Plague",
+      "(10-20)% more more Damage Over Time per stack of A Plague",
       "(3-6)% of Current Health Drained per Second",
       "+(10-200)% Poison Penetration with Plague "
     ],
@@ -2424,11 +2426,11 @@
     },
     "mods": [
       "{rounding:Integer}+(13-18) Spell Fire Damage",
-      "{rounding:Integer}(5-13)% increased Fire Damage Taken on Hit",
+      "{rounding:Integer}(3-9)% increased Fire Damage Taken on Hit",
       "{rounding:Integer}+(13-18) Spell Necrotic Damage",
-      "{rounding:Integer}(5-13)% increased Necrotic Damage Taken on Hit",
+      "{rounding:Integer}(3-9)% increased Necrotic Damage Taken on Hit",
       "{rounding:Integer}+(13-18) Spell Void Damage",
-      "{rounding:Integer}(5-13)% increased Void Damage Taken on Hit"
+      "{rounding:Integer}(3-9)% increased Void Damage Taken on Hit"
     ],
     "rollIds": [
       1,
@@ -2580,7 +2582,7 @@
       "(4-2)% less Damage Taken from Chilled Enemies",
       "+(24-40)% Chance to Shock on Hit",
       "(10-20)% Increased Shock Duration ",
-      "1% more Damage per stack of Shock"
+      "1% more more Damage per stack of Shock"
     ],
     "rollIds": [
       0,
@@ -2968,7 +2970,7 @@
     },
     "mods": [
       "{rounding:Integer}(80-130)% increased Poison Damage",
-      "100% Hail of Arrows Damage converted to Poison",
+      "100% of Hail of Arrows Damage converted to Poison",
       "(30-60)% increased Hail of Arrows Duration",
       "+(80-130)% Chance to Shred Armor on Bow Hit",
       "(80-130)% Increased Armor Shred Effect "
@@ -3778,7 +3780,7 @@
       "{rounding:Integer}(50-70)% increased Melee Damage",
       "+100% Potion Use Cleanses Stun and Freeze",
       "+100% Stun Immunity for 4 seconds when you use a Potion",
-      "5% more Melee Damage per stack of Doom"
+      "5% more more Melee Damage per stack of Doom"
     ],
     "rollIds": [
       0,
@@ -3973,7 +3975,7 @@
       "level": 0
     },
     "mods": [
-      "(100-125)% Chance to Inflict Bleed on Hit gained as Bleed Chance per second with Hail of Arrows",
+      "(100-125)% of Chance to Inflict Bleed on Hit gained as Bleed Chance per second with Hail of Arrows",
       "25% increased Bow Attack Speed",
       "{rounding:Integer}-15 to -10 Hail of Arrows Mana Cost",
       "{rounding:Integer}+(25-45) Health",
@@ -5175,7 +5177,7 @@
       "level": 86
     },
     "mods": [
-      "(20-40)% of Health Regen also applies to Ward",
+      "(20-30)% of Health Regen also applies to Ward",
       "+(40-66)% Ward Retention",
       "{rounding:Integer}+(40-66) Mana",
       "{rounding:Integer}+(4-6) Spell Void Damage",
@@ -5527,7 +5529,7 @@
       "level": 0
     },
     "mods": [
-      "(13-19)% Chance to Gain Ward on Hit per Ignite and Damned on You and the Target (1 second cooldown)",
+      "(13-19)% Chance to Gain Ward on Hit per Ignite and Damned on You and the Target (up to 2000 ward, 2 second cooldown)",
       "(6-13)% increased Cast Speed",
       "+(13-30)% Ward Retention",
       "{rounding:Integer}(30-76)% increased Fire Damage",
@@ -5673,7 +5675,7 @@
       "+1 Heal all totems and give them 2 seconds of Damage Immunity when you use a Potion",
       "{rounding:Integer}+(24-34) Spell Lightning Damage for all existing totems when you directly cast Summon Storm Totem",
       "+(10-17)% Lightning Penetration for Totems",
-      "+1 All Totem Skills"
+      "+1 to All Totem Skills"
     ],
     "rollIds": [
       0,
@@ -5789,7 +5791,7 @@
       "level": 0
     },
     "mods": [
-      "+(700-1200)% Added Health for Bees per Attunement",
+      "{rounding:Integer}+(12-16) Added Health for Bees per Attunement",
       "(7-12)% Increased Damage for Bees per Attunement",
       "+(4-6)% Physical Penetration with Bleed inflicted by Bees per Strength",
       "+1 When you directly cast Thorn Shield, the nearest Bee also gains Thorn Shield",
@@ -5885,10 +5887,10 @@
     "mods": [
       "+1 Maximum Bone Golems per 4 maximum Skeletons",
       "100% Can't Summon Skeletons",
-      "(2-4)% Bone Golems have 6% chance on hit to grant you a percentage of their missing health as ward.",
-      "{rounding:Integer}(6-18)% increased Health",
-      "{rounding:Integer}(60-180)% increased Minion Health",
-      "{rounding:Integer}+(60-180) Minion Health",
+      "(2-4)% of Bone Golems have 6% chance on hit to grant you a percentage of their missing health as ward.",
+      "{rounding:Integer}(10-24)% increased Health",
+      "{rounding:Integer}(100-240)% increased Minion Health",
+      "{rounding:Integer}+(100-240) Minion Health",
       "+1 to All Minion Skills",
       "+3 Seconds Cooldown for Bone Shatter"
     ],
@@ -6130,7 +6132,7 @@
     },
     "mods": [
       "+(14-26)% Chance to inflict Spreading Flames on Hit",
-      "(26-42)% more Fire Damage per stack of Spreading Flames",
+      "(26-42)% more more Fire Damage per stack of Spreading Flames",
       "{rounding:Integer}(42-72)% increased Fire Damage Over Time",
       "-4 Fire Spell Mana Cost",
       "4% increased Movement Speed"
@@ -6204,7 +6206,7 @@
     },
     "mods": [
       "{rounding:Integer}+(48-65) Melee Damage for directly used Detonating Arrow",
-      "+3 Detonating Arrow",
+      "+3 to Detonating Arrow",
       "{rounding:Integer}-6 to -3 Mana Cost for Detonating Arrow",
       "1 Detonating Arrow Converted to a Melee Attack"
     ],
@@ -6666,9 +6668,9 @@
       "30% increased Movement Speed",
       "(30-67)% Increased Bleed Duration ",
       "(30-40)% more Physical Ailment Damage to Moving Enemies",
-      "{rounding:Integer}+(8-12) Strength",
-      "{rounding:Integer}+(8-12) Dexterity",
-      "{rounding:Integer}+(8-12) Intelligence"
+      "{rounding:Integer}+(5-8) Strength",
+      "{rounding:Integer}+(5-8) Dexterity",
+      "{rounding:Integer}+(5-8) Intelligence"
     ],
     "rollIds": [
       null,
@@ -6756,7 +6758,7 @@
     },
     "mods": [
       "(10-35)% Chance to gain Haste for 1 second on Hit",
-      "3% increased Spell Damage per 1% increased Movement Speed",
+      "2% increased Spell Damage per 1% increased Movement Speed",
       "+1 Wrongwarp with Teleport or Transplant",
       "(5-10)% Increased Cooldown Recovery Speed for Teleport",
       "(5-10)% Increased Cooldown Recovery Speed for Transplant"
@@ -6779,9 +6781,9 @@
     "mods": [
       "(60-64)% of Volcanic Orb speed modifiers also apply to Flame Rush speed and distance",
       "+1 Increases to Fire Aura Area also apply to Glyph of Dominion",
-      "(40-80)% chance to cast Fire Aura each second while standing on your Glyph of Dominion",
-      "{rounding:Integer}+(4-8) Spell Damage with Flame Rush per stack of Fire Aura",
-      "+(16-24)% Elemental Penetration",
+      "(80-120)% chance to cast Fire Aura each second while standing on your Glyph of Dominion",
+      "{rounding:Integer}+(6-10) Spell Damage with Flame Rush per stack of Fire Aura",
+      "+(12-20)% Elemental Penetration",
       "{rounding:Integer}+(16-24) Spell Damage"
     ],
     "rollIds": [
@@ -6895,7 +6897,7 @@
     "mods": [
       "{rounding:Integer}+(39-91) Ward per Second for you or your allies while standing on your Glyph of Dominion",
       "{rounding:Integer}+(78-182) Ward Decay Threshold",
-      "100% Ignite Shock and Chill Chance converted to Fire Lightning and Cold Resistance Shred Chance while standing on your Glyph of Dominion",
+      "100% of Ignite Shock and Chill Chance converted to Fire Lightning and Cold Resistance Shred Chance while standing on your Glyph of Dominion",
       "{rounding:Integer}+(1-2) to Buff Skills",
       "(39-52)% Increased Ignite Duration ",
       "(39-52)% Increased Chill Duration ",
@@ -7442,7 +7444,7 @@
       "+(2-4)% Void Penetration per 5 Dexterity",
       "(6-24)% of Lethal Mirage's remaining cooldown recovered on Melee Hit (up to 12 times)",
       "+(12-120)% Chance to Shock on Hit",
-      "+(12-120)% Chance to inflict Time Rot on Hit",
+      "+(6-60)% Chance to inflict Time Rot on Hit",
       "{rounding:Integer}+(24-56) Melee Void Damage"
     ],
     "rollIds": [
@@ -7467,7 +7469,7 @@
     "mods": [
       "{rounding:Integer}+(1-2) to Symbols of Hope",
       "(20-40)% Increased Symbol Gain Rate",
-      "(70-80)% Sigils of Hope Mana Cost consumed to cast it every 6 seconds while above half mana",
+      "(70-80)% of Sigils of Hope Mana Cost consumed to cast it every 6 seconds while above half mana",
       "(15-25)% Increased Healing Effectiveness",
       "{rounding:Integer}(10-15)% increased Armor"
     ],
@@ -8036,7 +8038,7 @@
     },
     "mods": [
       "+2% increased Area for Melee Area Skills per 1 Mana Cost",
-      "{rounding:Thousandth}+(0.3-0.5)% Critical Strike Chance for Melee Attacks per 1 Mana Cost",
+      "{rounding:Thousandth}+(0.2-0.3)% Critical Strike Chance for Melee Attacks per 1 Mana Cost",
       "{rounding:Integer}(30-52)% increased Mana Regen",
       "{rounding:Integer}(30-52)% increased Mana",
       "{rounding:Integer}+(30-52) Melee Void Damage",
@@ -8063,9 +8065,9 @@
       "100% Swiftness",
       "100% of Wandering Spirits Base Damage Converted to Fire",
       "100% Create a Wandering Spirit on direct Fire, Necrotic, or Void Skill Use",
-      "+(10-17)% Fire Penetration",
-      "+(10-17)% Necrotic Penetration",
-      "+(10-17)% Void Penetration",
+      "+(7-11)% Fire Penetration",
+      "+(7-11)% Necrotic Penetration",
+      "+(7-11)% Void Penetration",
       "{rounding:Integer}+(4-7) Ward gained each second per Active Wandering Spirit"
     ],
     "rollIds": [
@@ -8161,9 +8163,9 @@
       "level": 64
     },
     "mods": [
-      "{rounding:Integer}(20-32)% increased Health",
+      "{rounding:Integer}(12-18)% increased Health",
       "(16-24)% of Damage Redirected to your Highest Health Minion",
-      "{rounding:Integer}(20-32)% increased Minion Health",
+      "{rounding:Integer}(12-18)% increased Minion Health",
       "{rounding:Integer}+(12-16) Strength",
       "(6-10)% increased Movement Speed",
       "{rounding:Integer}+(1-2) to Strength Minion Skills"
@@ -8252,10 +8254,10 @@
     },
     "mods": [
       "+100% Bone Curse also inflicts Decrepify",
-      "{rounding:Integer}(113-133) Ward per Second for each Curse affecting you",
+      "{rounding:Integer}(113-166) Ward per Second for each Curse affecting you",
       "{rounding:Integer}(31-55)% increased Physical Damage",
-      "{rounding:Integer}+(7-13) Vitality",
-      "+(7-13)% to All Resistances",
+      "{rounding:Integer}+(5-9) Vitality",
+      "+(7-11)% to All Resistances",
       "{rounding:Integer}+(1-4) to All Attributes"
     ],
     "rollIds": [
@@ -8276,10 +8278,10 @@
     },
     "mods": [
       "+100% Bone Curse also inflicts Penance",
-      "{rounding:Integer}(113-133) Ward per Second for each Curse affecting you",
+      "{rounding:Integer}(113-166) Ward per Second for each Curse affecting you",
       "{rounding:Integer}(31-55)% increased Fire Damage",
-      "{rounding:Integer}+(7-13) Vitality",
-      "+(7-13)% to All Resistances",
+      "{rounding:Integer}+(5-9) Vitality",
+      "+(7-11)% to All Resistances",
       "{rounding:Integer}+(1-4) to All Attributes"
     ],
     "rollIds": [
@@ -8300,10 +8302,10 @@
     },
     "mods": [
       "+100% Bone Curse also inflicts Acid Skin",
-      "{rounding:Integer}(113-133) Ward per Second for each Curse affecting you",
+      "{rounding:Integer}(113-166) Ward per Second for each Curse affecting you",
       "{rounding:Integer}(31-55)% increased Poison Damage",
-      "{rounding:Integer}+(7-13) Vitality",
-      "+(7-13)% to All Resistances",
+      "{rounding:Integer}+(5-9) Vitality",
+      "+(7-11)% to All Resistances",
       "{rounding:Integer}+(1-4) to All Attributes"
     ],
     "rollIds": [
@@ -8650,7 +8652,7 @@
     },
     "mods": [
       "(30-45)% Chance to cast Smite on hit (max 6 per 10 seconds, this cooldown resets when you use a potion)",
-      "{rounding:Integer}+(4-25) Intelligence",
+      "{rounding:Integer}+(4-20) Intelligence",
       "(32-55)% Increased Chance To Find Potions",
       "{rounding:Integer}(8-16) Mana Gained on Potion Use",
       "100% of Volatile Reversal cooldown reset on potion use",
@@ -8801,8 +8803,8 @@
     "mods": [
       "+20% Chance every second for each enemy looking at you to be Petrified for 2 seconds",
       "+20% Chance on block to Petrify the attacker for 2 seconds",
-      "(30-35)% of Block Effectiveness applies to Damage over Time as if it had been Blocked",
-      "{rounding:Integer}+(300-600) Block Effectiveness"
+      "(25-30)% of Block Effectiveness applies to Damage over Time as if it had been Blocked",
+      "{rounding:Integer}+(150-300) Block Effectiveness"
     ],
     "rollIds": [
       null,
@@ -8915,7 +8917,7 @@
       "level": 0
     },
     "mods": [
-      "{rounding:Integer}+(8-14) Vitality",
+      "{rounding:Integer}+(6-10) Vitality",
       "+(12-20)% Endurance",
       "{rounding:Integer}+(3-4) Potion Slots",
       "{rounding:Integer}(300-400) Health Gained on Potion Use",
@@ -8937,21 +8939,21 @@
       "level": 0
     },
     "mods": [
-      "+90 Melee Damage",
-      "{rounding:Integer}+(4-11) Strength",
-      "{rounding:Integer}+(4-11) Dexterity",
+      "{rounding:Integer}+(60-80) Melee Damage",
+      "{rounding:Integer}+(3-10) Strength",
+      "{rounding:Integer}+(3-10) Dexterity",
       "20% Increased range with Firebrand",
       "20% Increased range with Puncture",
-      "+(15-25)% Melee Critical Strike Multiplier per meter from the target (up to 5 meters)",
+      "+(15-22)% Melee Critical Strike Multiplier per meter from the target (up to 5 meters)",
       "+1 Block Chance converted to Parry Chance while not wielding a shield"
     ],
     "rollIds": [
-      null,
+      3,
       0,
       1,
       null,
       null,
-      0,
+      2,
       null
     ]
   },
@@ -8963,8 +8965,8 @@
       "level": 60
     },
     "mods": [
-      "+50 Melee Damage",
-      "(14-22)% increased Attack Speed",
+      "+46 Melee Damage",
+      "(12-16)% increased Attack Speed",
       "{rounding:Integer}+(1-2) to Melee Attacks",
       "{rounding:Integer}+(4-9) Vitality",
       "1 Kismet Stacks gained when you directly use a Melee Attack and hit at least one enemy"
@@ -8999,6 +9001,730 @@
       3,
       0,
       0
+    ]
+  },
+  "420": {
+    "name": "Executioner's Tithe",
+    "baseTypeID": 5,
+    "subTypeID": 9,
+    "req": {
+      "level": 70
+    },
+    "mods": [
+      "+(3-4)% Critical Strike Chance",
+      "50% of added melee damage on equipped weapons applied as added spell damage for Chaos Bolts",
+      "1 Converts Harvest to Great Harvest which has a 5 second cooldown, deals 150% more damage, and has 50% more area of effect",
+      "(2-4)% more your maximum mana restored when Great Harvest kills an enemy",
+      "(20-30)% more your maximum mana restored when Great Harvest hits a rare or boss enemy",
+      "(2-4)% more Increased Mana per stack of Spirit Battery",
+      "+1 Spirit Battery stacks gained when triggered"
+    ],
+    "rollIds": [
+      0,
+      null,
+      null,
+      1,
+      2,
+      3,
+      null
+    ]
+  },
+  "421": {
+    "name": "The Land Before",
+    "baseTypeID": 33,
+    "subTypeID": 0,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "+4 Maximum Companions if this is your only equipped Unique Idol",
+      "+(36-56)% Physical Resistance",
+      "+(36-56)% Minion Physical Resistance",
+      "+1 Limited to One Companion of Each Type"
+    ],
+    "rollIds": [
+      null,
+      0,
+      1,
+      null
+    ]
+  },
+  "422": {
+    "name": "Lightning in a Bottle",
+    "baseTypeID": 2,
+    "subTypeID": 6,
+    "req": {
+      "level": 28
+    },
+    "mods": [
+      "{rounding:Integer}+(5-14) Melee Lightning Damage",
+      "1 Shock Immunity",
+      "{rounding:Integer}+(140-215) Dodge Rating while using Evade",
+      "1 Evade Charges gained on Potion Use",
+      "1 After you use Evade to move next to an enemy you attack it with Gathering Storm"
+    ],
+    "rollIds": [
+      0,
+      null,
+      1,
+      null,
+      null
+    ]
+  },
+  "423": {
+    "name": "Legends Entwined",
+    "baseTypeID": 21,
+    "subTypeID": 10,
+    "req": {
+      "level": 42
+    },
+    "mods": [
+      "(5-12)% increased Attack Speed",
+      "(5-12)% increased Cast Speed",
+      "{rounding:Integer}+(2-5) to All Attributes per Complete Set",
+      "+(2-5)% to All Resistances per Complete Set",
+      "+1 to All Skills per Complete Set"
+    ],
+    "rollIds": [
+      0,
+      0,
+      1,
+      2,
+      null
+    ]
+  },
+  "424": {
+    "name": "Tyrant's Skull",
+    "baseTypeID": 22,
+    "subTypeID": 63,
+    "req": {
+      "level": 36
+    },
+    "mods": [
+      "{rounding:Integer}+(2-3) to All Minion Skills",
+      "+100% Summons Tyrannosaur Minion"
+    ],
+    "rollIds": [
+      0,
+      null
+    ]
+  },
+  "425": {
+    "name": "Wildfire Embers",
+    "baseTypeID": 20,
+    "subTypeID": 13,
+    "req": {
+      "level": 70
+    },
+    "mods": [
+      "+(50-75)% Fire Resistance",
+      "{rounding:Integer}(17-25)% increased Health",
+      "+(4-7)% Chance to Ignite on Hit per 10% uncapped Fire Resistance",
+      "(32-36)% Chance to create a Wildfire Wisp next to an ignited enemy",
+      "(10-12)% Chance for Wildfire Wisps within 12 metres to repeat Fire Skills",
+      "+(60-100)% Fire Penetration with Ignite for skills cast from Wildfire Wisps",
+      "+(240-300)% Ignite Chance for skills cast from Wildfire Wisps"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "426": {
+    "name": "Thicket of Blinding Light",
+    "baseTypeID": 1,
+    "subTypeID": 7,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "{rounding:Integer}(121-209) Damage Reflected to Attackers",
+      "+1 Damage dealt to enemies facing you every 0.5 seconds per 1 Damage Reflected to Attackers",
+      "(329-401)% more Damage Reflected to Bosses and Rare Enemies",
+      "{rounding:Integer}(37-83)% increased Armor",
+      "(13-29)% more Armor against Blinded Enemies",
+      "+(17-41)% Physical Resistance",
+      "{rounding:Integer}(11-17) Damage Reflected to Attackers per 10% uncapped Physical Resistance"
+    ],
+    "rollIds": [
+      0,
+      null,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "427": {
+    "name": "Harmony of the First",
+    "baseTypeID": 14,
+    "subTypeID": 3,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "(6-10)% increased Melee Attack Speed",
+      "(4-6)% increased Movement Speed",
+      "{rounding:Integer}+(48-64) Melee Damage",
+      "+(16-20)% Main Hand Weapon Stat Multiplier per equipped non-idol Magic Item"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "428": {
+    "name": "Onslaught of Cerata",
+    "baseTypeID": 18,
+    "subTypeID": 11,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "{rounding:Integer}+(3-4) to Strength Skills",
+      "{rounding:Integer}+(10-16) Strength",
+      "+(30-60)% Block Chance while preparing to Riposte",
+      "(20-42)% increased area for Melee Area Skills",
+      "(20-42)% increased area for Minion Melee Area Skills",
+      "{rounding:Integer}(30-60) Health Gain on Block",
+      "3 Enemies attacked with Vengeance after using a Movement Skill (max 2 per 12 seconds)"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      null
+    ]
+  },
+  "429": {
+    "name": "Blossom of Immortal Stone",
+    "baseTypeID": 20,
+    "subTypeID": 14,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "100% of Void Damage Taken as Physical",
+      "100% of Necrotic Damage Taken as Physical",
+      "100% of Poison Damage Taken as Physical",
+      "(12-21)% of Armor Mitigation also applies to Damage over Time",
+      "{rounding:Integer}(21-60)% increased Armor",
+      "{rounding:Integer}+(3-12) Attunement"
+    ],
+    "rollIds": [
+      null,
+      null,
+      null,
+      0,
+      1,
+      2
+    ]
+  },
+  "430": {
+    "name": "Chorus of the Anurok",
+    "baseTypeID": 0,
+    "subTypeID": 56,
+    "req": {
+      "level": 73
+    },
+    "mods": [
+      "1 Summon Anuroks up to your Companion Limit",
+      "+2 Maximum Companions",
+      "+(50-75)% Cold Resistance",
+      "+(50-75)% Minion Cold Resistance",
+      "(25-45)% increased area for Minion Area Skills",
+      "{rounding:Integer}+(90-175) Health",
+      "(15-25)% increased Minion Attack Speed",
+      "(15-25)% increased Minion Cast Speed"
+    ],
+    "rollIds": [
+      null,
+      null,
+      0,
+      1,
+      2,
+      3,
+      4,
+      4
+    ]
+  },
+  "431": {
+    "name": "Carrion of Creation",
+    "baseTypeID": 4,
+    "subTypeID": 12,
+    "req": {
+      "level": 81
+    },
+    "mods": [
+      "+(100-157)% Chance to inflict Bleed on Hit",
+      "100% of Ignite Chance Converted to Bleed Chance",
+      "100% of Frostbite Chance Converted to Bleed Chance",
+      "100% of Shock Chance Converted to Bleed Chance",
+      "100% of Time Rot Chance Converted to Bleed Chance",
+      "100% of Damned Chance Converted to Bleed Chance",
+      "100% of Poison Chance Converted to Bleed Chance",
+      "(25-47)% Chance for Primordial Blood on Kill (up to 5 times per 2 seconds)",
+      "+(37-100)% Chance to inflict Bleed on Hit for Primordial Blood per stack of Bleed on the enemy releasing it (up to 20)"
+    ],
+    "rollIds": [
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1,
+      2
+    ]
+  },
+  "432": {
+    "name": "Horn of the Bone Wisp",
+    "baseTypeID": 10,
+    "subTypeID": 6,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "{rounding:Integer}+(3-4) to Intelligence Skills",
+      "{rounding:Integer}+(10-16) Intelligence",
+      "{rounding:Integer}+(20-25) Spell Damage",
+      "{rounding:Integer}+(20-25) Minion Spell Damage",
+      "{rounding:Integer}(100-160)% increased Spell Damage",
+      "{rounding:Integer}(100-160)% increased Minion Damage",
+      "(25-49)% chance to cast Flame Ward after using a movement skill within 16 metres of a boss or rare enemy (max 2 per 16 seconds)"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "433": {
+    "name": "Reliquary Nest",
+    "baseTypeID": 22,
+    "subTypeID": 63,
+    "req": {
+      "level": 60
+    },
+    "mods": [
+      "+(40-60)% Non-Unique Idol Stat Multiplier",
+      "+(5-10)% to All Resistances",
+      "{rounding:Integer}+(20-40) Health",
+      "{rounding:Integer}+(60-100) Stun Avoidance",
+      "{rounding:Integer}(10-20)% increased Endurance Threshold"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "434": {
+    "name": "Mask of Indifference",
+    "baseTypeID": 0,
+    "subTypeID": 7,
+    "req": {
+      "level": 60
+    },
+    "mods": [
+      "100% Blind Immunity",
+      "100% Bleed Immunity",
+      "+100% Stun Immunity",
+      "100% Slow and Chill Immunity",
+      "1 Shock Immunity",
+      "(10-100)% reduced Bonus Damage Taken from Critical Strikes",
+      "{rounding:Integer}+(20-200) Armor",
+      "{rounding:Integer}+(20-200) Endurance Threshold",
+      "(10-100)% of Damage Reflected"
+    ],
+    "rollIds": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "435": {
+    "name": "Permanence of Primal Knowledge",
+    "baseTypeID": 4,
+    "subTypeID": 11,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "(6-12)% increased Cast Speed",
+      "52% increased Effect of Skill Level modifiers on Legendary Affixes",
+      "(6-12)% increased Attack Speed",
+      "(12-24)% increased Area for Area Skills",
+      "{rounding:Integer}+(48-96) Mana",
+      "{rounding:Integer}(12-36)% increased Mana Regen"
+    ],
+    "rollIds": [
+      0,
+      null,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "436": {
+    "name": "Wings of Discord",
+    "baseTypeID": 1,
+    "subTypeID": 4,
+    "req": {
+      "level": 64
+    },
+    "mods": [
+      "{rounding:Integer}+(126-256) Dodge Rating",
+      "+(2-4)% Critical Strike Chance",
+      "{rounding:Integer}+(256-512) Dodge Rating if you have been hit recently",
+      "{rounding:Integer}+(32-64) Ward gained when you Dodge",
+      "100% increased effect of stats on your Non-Unique Idols that are a different shape to all other equipped Non-Unique Idols",
+      "(32-16)% less Damage Taken from the First Hit Received from each enemy"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      null,
+      4
+    ]
+  },
+  "437": {
+    "name": "Primal Cadence",
+    "baseTypeID": 12,
+    "subTypeID": 8,
+    "req": {
+      "level": 63
+    },
+    "mods": [
+      "(40-85)% of Overkill damage from your hits and your minion hits dealt as direct damage to surrounding enemies",
+      "+(4-9)% Critical Strike Chance",
+      "+(4-9)% Minion Critical Strike Chance",
+      "{rounding:Integer}(20-80) Health Gain on Kill",
+      "(4-9)% of Overkill Damage Leeched as Health",
+      "{rounding:Integer}(190-275)% increased Hit Damage",
+      "+1% Critical Strike Multiplier per 2 Strength",
+      "{rounding:Integer}+(4-9) to All Attributes"
+    ],
+    "rollIds": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      4,
+      null,
+      5
+    ]
+  },
+  "438": {
+    "name": "Whetstone Gavel",
+    "baseTypeID": 7,
+    "subTypeID": 10,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "+1 to Fire Skills",
+      "+1 to Physical Skills",
+      "(90-100)% increased effectiveness of Stats on an offhand Exalted Weapon",
+      "{rounding:Integer}(15-35)% increased Armor",
+      "(15-35)% of Armor Mitigation also applies to Damage over Time",
+      "{rounding:Integer}+(5-13) to All Attributes"
+    ],
+    "rollIds": [
+      null,
+      null,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "439": {
+    "name": "Truesight Glass",
+    "baseTypeID": 20,
+    "subTypeID": 8,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "100% You can deal Super Critical Strikes",
+      "+(20-50)% Critical Strike Multiplier",
+      "(6-10)% Increased Cooldown Recovery Speed",
+      "+(60-100)% Critical Strike Avoidance"
+    ],
+    "rollIds": [
+      null,
+      0,
+      1,
+      2
+    ]
+  },
+  "440": {
+    "name": "Bluefeather Band",
+    "baseTypeID": 21,
+    "subTypeID": 11,
+    "req": {
+      "level": 36
+    },
+    "mods": [
+      "(6-9)% of Damage Dealt to Mana Before Health",
+      "{rounding:Integer}(54-48)% less Spell Mana Cost",
+      "{rounding:Integer}(54-48)% less Mana",
+      "{rounding:Integer}(54-48)% less Mana Regen",
+      "{rounding:Integer}(15-21) Mana gained when you use 3 zero mana cost skills in a row (3 second cooldown)",
+      "{rounding:Integer}(180-330) Ward gained when you use 3 zero mana cost skills in a row (3 second cooldown)",
+      "{rounding:Integer}+(180-330) Ward Decay Threshold"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "441": {
+    "name": "Hydra Arc",
+    "baseTypeID": 23,
+    "subTypeID": 8,
+    "req": {
+      "level": 72
+    },
+    "mods": [
+      "{rounding:Integer}+(3-33) Bow Fire Damage",
+      "{rounding:Integer}+(3-33) Bow Cold Damage",
+      "{rounding:Integer}+(3-33) Bow Lightning Damage",
+      "{rounding:Integer}+(3-4) to Dexterity Skills",
+      "{rounding:Integer}+(10-16) Dexterity",
+      "100% chance to Repeat your most recent Bow Attack after Evading"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      null
+    ]
+  },
+  "442": {
+    "name": "Velocyn's Jaw",
+    "baseTypeID": 6,
+    "subTypeID": 9,
+    "req": {
+      "level": 75
+    },
+    "mods": [
+      "{rounding:Integer}+(3-4) to Dexterity Skills",
+      "{rounding:Integer}+(10-16) Dexterity",
+      "(10-20)% Chance to gain Haste for 1 second on Hit",
+      "+(20-40)% Penetration",
+      "(4-10)% increased Movement Speed",
+      "1% increased Movement Speed per 10 Dexterity"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      null
+    ]
+  },
+  "443": {
+    "name": "Army of Skin",
+    "baseTypeID": 3,
+    "subTypeID": 8,
+    "req": {
+      "level": 49
+    },
+    "mods": [
+      "100% chance to gain a stack of Excoriation when Flay kills an enemy or hits a boss or rare enemy",
+      "(13-26)% increased Melee Attack Speed",
+      "(13-26)% increased Movement Speed",
+      "(26-52)% more Melee Damage to High Health Enemies"
+    ],
+    "rollIds": [
+      null,
+      1,
+      2,
+      3
+    ]
+  },
+  "444": {
+    "name": "Evolution's End",
+    "baseTypeID": 20,
+    "subTypeID": 15,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "{rounding:Integer}+(1-2) to All Skills",
+      "100% chance to Summon a Rift Beast when a hit leaves a Boss or Champion below 40% health (40 second cooldown)",
+      "40% increased Minion Damage"
+    ],
+    "rollIds": [
+      0,
+      null,
+      null
+    ]
+  },
+  "445": {
+    "name": "Spirit Xylem",
+    "baseTypeID": 15,
+    "subTypeID": 8,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "{rounding:Integer}(20-10)% reduced Spell Mana Cost",
+      "(10-20)% Reduced Health Cost of Spells",
+      "{rounding:Integer}+(2-4) Health per Attunement",
+      "{rounding:Integer}+(2-4) Mana per Attunement",
+      "(20-10)% less Damage Taken from Bosses and Rare Enemies while below half mana",
+      "(10-20)% more Damage to Bosses and Rare Enemies while above half mana",
+      "{rounding:Integer}+(3-4) to Attunement Skills",
+      "{rounding:Integer}+(10-16) Attunement"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "446": {
+    "name": "Fangs of the Berserker",
+    "baseTypeID": 2,
+    "subTypeID": 5,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "(9-15)% of Health Leech also drains the health of the nearest enemy within 6 meters",
+      "(9-15)% more Melee Damage while you have Frenzy",
+      "(21-35)% of Health Leech also drains the health of the nearest enemy within 6 meters while you have Frenzy",
+      "(3-5)% of Melee Damage leeched as Health while you have Frenzy",
+      "+(9-15)% increased Damage Taken while you have Frenzy",
+      "{rounding:Integer}+(6-10) Seconds of Frenzy on Potion Use",
+      "(12-20)% increased Effect of Frenzy while Dual Wielding",
+      "1% increased Effect of Frenzy per Strength"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      null
+    ]
+  },
+  "447": {
+    "name": "Bones of the Ancestral Pack",
+    "baseTypeID": 19,
+    "subTypeID": 13,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "{rounding:Integer}+(1-2) to All Minion Skills",
+      "{rounding:Integer}+(123-200) Ward Decay Threshold",
+      "{rounding:Integer}+(77-123) Endurance Threshold",
+      "+(7-12)% chance to gain Ancestral Pack on minion hit (1 second cooldown)",
+      "(77-123)% of Endurance Threshold gained as Ward when you gain a stack of Ancestral Pack"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "448": {
+    "name": "Architects of Astral Blood",
+    "baseTypeID": 1,
+    "subTypeID": 4,
+    "req": {
+      "level": 72
+    },
+    "mods": [
+      "(200-240)% of Maximum Health applied as a Ward Limit",
+      "20% of Current Health Lost per second",
+      "(36-42)% of Missing Health gained as Ward per second",
+      "(36-42)% of Maximum Health gained as Ward Decay Threshold",
+      "{rounding:Integer}+(72-168) Health",
+      "{rounding:Integer}+(72-168) Stun Avoidance",
+      "{rounding:Integer}+(4-6) to All Attributes"
+    ],
+    "rollIds": [
+      0,
+      null,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "449": {
+    "name": "The Butcher's Crown",
+    "baseTypeID": 0,
+    "subTypeID": 6,
+    "req": {
+      "level": 72
+    },
+    "mods": [
+      "(6-12)% of Current Health Lost per second",
+      "100% Disabled Mana Regen",
+      "(60-112)% increased Effect of Frenzy on You ",
+      "{rounding:Integer}(112-144)% increased Damage",
+      "1 Mana and 12 Health gained on Hit per 12% increased mana regen (up to 4 times per 2 seconds)",
+      "+100% You have Frenzy"
+    ],
+    "rollIds": [
+      0,
+      null,
+      1,
+      2,
+      null,
+      null
     ]
   }
 }

@@ -440,7 +440,7 @@ function ImportTabClass:DownloadCharacterListOnline()
         main.gameAccounts[accountName] = main.gameAccounts[accountName] or { }
         local leagueList = { }
         for i, char in ipairs(charList) do
-            char.league = char.cycle == 5 and "Cycle" or "Legacy"
+            char.league = char.cycle == 6 and "Cycle" or "Legacy"
             char.ascendancy = char.mastery
             char.ascendancyName = self.build.latestTree.classes[char.class].ascendancies[char.ascendancy].name
             char.name = char.characterName
@@ -638,7 +638,7 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
         ["items"] = {},
         ["hashes"] = { }
     }
-    char.league = saveContent["cycle"] == 5 and "Cycle" or "Legacy"
+    char.league = saveContent["cycle"] == 6 and "Cycle" or "Legacy"
     for passiveIdx, passive in pairs(saveContent["savedCharacterTree"]["nodeIDs"]) do
         local nbPoints = saveContent["savedCharacterTree"]["nodePoints"][passiveIdx]
         table.insert(char["hashes"], className .. "-" .. passive .. "#" .. nbPoints)
