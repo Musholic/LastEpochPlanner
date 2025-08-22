@@ -834,29 +834,29 @@ Implicits: 1
 	<Party ShowAdvanceTools="false" append="false" destination="All"></Party>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showAltQualityGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
-			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="sm87r4" slot="Skill 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="va53st" slot="Skill 2"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ah443" slot="Skill 3"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="si4lgl" slot="Skill 4"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="javeli" slot="Skill 5"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Shred Armor (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Blind (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Electrify (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Ignite (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Shock (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Shred Armor (from Warpath)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:va53st"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Bleed (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:va53st"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Blind (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:va53st"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Electrify (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:va53st"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Shock (from Warpath)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:va53st"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" label="Shred Armor (from Javelin)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" label="Bleed (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" label="Blind (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" label="Electrify (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" label="Frailty (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Frailty" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" label="Ignite (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" label="Shock (from Javelin)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" label="Slow (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="1" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="sm87r4" slot="Skill 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="2" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="va53st" slot="Skill 2"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="3" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ah443" slot="Skill 3"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="si4lgl" slot="Skill 4"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="5" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="javeli" slot="Skill 5"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="6" label="Shred Armor (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="7" label="Blind (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="8" label="Electrify (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="9" label="Ignite (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="10" label="Shock (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="11" label="Shred Armor (from Warpath)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="12" label="Bleed (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="13" label="Blind (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="14" label="Electrify (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="15" label="Shock (from Warpath)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="16" label="Shred Armor (from Javelin)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="17" label="Bleed (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="18" label="Blind (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="19" label="Electrify (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="20" label="Frailty (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Frailty" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="21" label="Ignite (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="22" label="Shock (from Javelin)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="23" label="Slow (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="SkillId:javeli"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">

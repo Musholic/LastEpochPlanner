@@ -1221,7 +1221,7 @@ end
 -- Refresh the set of controls used to select main group/skill/minion
 function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 	wipeTable(controls.mainSocketGroup.list)
-	for i, socketGroup in pairs(self.skillsTab.socketGroupList) do
+	for i, socketGroup in pairsSortByKey(self.skillsTab.socketGroupList) do
 		table.insert(controls.mainSocketGroup.list, { val = i, label = socketGroup.displayLabel })
 		if i == mainGroup then
 			controls.mainSocketGroup.selIndex = #controls.mainSocketGroup.list

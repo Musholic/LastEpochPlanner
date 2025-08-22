@@ -937,12 +937,12 @@ Implicits: 1
 	<Party ShowAdvanceTools="false" append="false" destination="All"></Party>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showAltQualityGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
-			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="sw42ih" slot="Skill 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="bg36nl" slot="Skill 2"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="is40" slot="Skill 3"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ds4d3" slot="Skill 4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ad0ry" slot="Skill 5"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" label="Poison (from Aura Of Decay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="SkillId:ad0ry"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="1" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="sw42ih" slot="Skill 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="2" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="bg36nl" slot="Skill 2"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="3" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="is40" slot="Skill 3"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ds4d3" slot="Skill 4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ad0ry" slot="Skill 5"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="6" label="Poison (from Aura Of Decay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="SkillId:ad0ry"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">

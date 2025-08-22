@@ -623,6 +623,12 @@ function pairsSortByKey(t, f)
 	end
 end
 
+function tableKeys(t)
+	local keys = { }
+	for key in pairs(t) do table.insert(keys, key) end
+    return keys
+end
+
 -- Natural sort comparator
 function naturalSortCompare(a, b)
 	local aIndex, bIndex = 1, 1
