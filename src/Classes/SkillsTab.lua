@@ -222,7 +222,11 @@ function SkillsTabClass:LoadSkill(node, skillSetId)
 	socketGroup.skillId = skillId
 	socketGroup.grantedEffect = grantedEffect
 	self:ProcessSocketGroup(socketGroup)
-	t_insert(self.skillSets[skillSetId].socketGroupList, socketGroup)
+	if node.attrib.index then
+	    self.skillSets[skillSetId].socketGroupList[tonumber(node.attrib.index)] = socketGroup
+	else
+		t_insert(self.skillSets[skillSetId].socketGroupList, socketGroup)
+	end
 end
 
 function SkillsTabClass:Load(xml, fileName)
@@ -267,8 +271,9 @@ function SkillsTabClass:Save(xml)
 		local child = { elem = "SkillSet", attrib = { id = tostring(skillSetId), title = skillSet.title } }
 		t_insert(xml, child)
 
-		for _, socketGroup in pairsSortByKey(skillSet.socketGroupList) do
+		for index, socketGroup in pairsSortByKey(skillSet.socketGroupList) do
 			local node = { elem = "Skill", attrib = {
+				index = tostring(index),
 				enabled = tostring(socketGroup.enabled),
 				includeInFullDPS = tostring(socketGroup.includeInFullDPS),
 				groupCount = socketGroup.groupCount ~= nil and tostring(socketGroup.groupCount),
