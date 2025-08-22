@@ -1,3 +1,29 @@
+VERSION[0.8.0][2025/08/22]
+--
+
+--- New to Last Epoch Planner ---
+* Season 3 update
+
+--- Fixed calculations ---
+* Fix bonus to damage with first damage type and then source type (e.g. void spell damage)
+* Fix mods like "+10% (one_word) Chance"
+
+--- User interface ---
+* Fix the listing of skills in SkillsTab: increase limit + fix color
+
+--- Fixed bugs ---
+* Remove the "Add Crucible mod..." button that causes a crash
+* Fix mod cache picking wrong skills
+* Fix import of unique with duplicate names from letools
+* Fix unable to select some skills in CalcsTab when less than 5 skills are selected
+
+--- Other changes ---
+* Modcache fix for notScalingStats
+* Minor automated testing improvement
+
+--- Mod parsing progression ---
+* Out of 14,246 mods, 5,020 (35%) mods are recognized by the parser
+
 VERSION[0.7.1][2025/08/08]
 
 --- Fixed bugs ---
