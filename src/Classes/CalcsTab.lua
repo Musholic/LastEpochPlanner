@@ -36,7 +36,7 @@ local CalcsTabClass = newClass("CalcsTab", "UndoHandler", "ControlHost", "Contro
 	self:NewSection(3, "SkillSelect", 1, colorCodes.NORMAL, {{ defaultCollapsed = false, label = "View Skill Details", data = {
 		{ label = "Active Skill", { controlName = "mainSocketGroup",
 			control = new("DropDownControl", nil, 0, 0, 300, 16, nil, function(index, value)
-				self.input.skill_number = index
+				self.input.skill_number = tableKeys(self.build.skillsTab.socketGroupList)[index]
 				self:AddUndoState()
 				self.build.buildFlag = true
 			end)

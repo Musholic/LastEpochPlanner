@@ -799,7 +799,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 	-- We need the skillModList computed to calculate the skill chance to trigger a given skill
 	local grantedTriggeredSkills = {}
 	if env.mode ~= "CACHE" then
-		for index, group in ipairs(build.skillsTab.socketGroupList) do
+		for index, group in pairsSortByKey(build.skillsTab.socketGroupList) do
 			-- Ailments cannot trigger spells and ailments
 			if not group.grantedEffect.baseFlags.ailment and group.enabled then
 				local uuid = cacheSkillUUIDFromGroup(group, env)
@@ -841,7 +841,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 			for grantedIndex, grantedSkill in ipairs(env.grantedSkills) do
 				-- Check if a matching group already exists
 				local group
-				for index, socketGroup in ipairs(build.skillsTab.socketGroupList) do
+				for index, socketGroup in pairs(build.skillsTab.socketGroupList) do
 					if socketGroup.source == grantedSkill.source and socketGroup.slot == grantedSkill.slotName then
 						if socketGroup.skillId == grantedSkill.skillId then
 							group = socketGroup
@@ -911,10 +911,10 @@ function calcs.initEnv(build, mode, override, specEnv)
 
 		-- Determine main skill group
 		if env.mode == "CALCS" then
-			env.calcsInput.skill_number = m_min(m_max(#build.skillsTab.socketGroupList, 1), env.calcsInput.skill_number or 1)
+			env.calcsInput.skill_number = m_min(m_max(1, unpack(tableKeys(build.skillsTab.socketGroupList))), env.calcsInput.skill_number or 1)
 			env.mainSocketGroup = env.calcsInput.skill_number
 		else
-			build.mainSocketGroup = m_min(m_max(#build.skillsTab.socketGroupList, 1), build.mainSocketGroup or 1)
+			build.mainSocketGroup = m_min(m_max(1, unpack(tableKeys(build.skillsTab.socketGroupList))), build.mainSocketGroup or 1)
 			env.mainSocketGroup = build.mainSocketGroup
 		end
 
