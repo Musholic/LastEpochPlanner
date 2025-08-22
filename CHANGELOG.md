@@ -1,5 +1,38 @@
 # Changelog
 
+## [v0.8.0](https://github.com/Musholic/PathOfBuildingForLastEpoch/tree/v0.8.0) (2025/08/22)
+
+[Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.7.1...v0.8.0)
+
+## What's Changed
+### New
+- Season 3 update [\#61](https://github.com/Musholic/LastEpochPlanner/pull/61) ([Musholic](https://github.com/Musholic))
+
+### Fixed calculations
+- Fix bonus to damage with first damage type and then source type (e.g. void spell damage) [\#51](https://github.com/Musholic/LastEpochPlanner/pull/51) ([Musholic](https://github.com/Musholic))
+- Fix mods like "+10% (one_word) Chance" [\#57](https://github.com/Musholic/LastEpochPlanner/pull/57) ([Musholic](https://github.com/Musholic))
+
+### User interface
+- Fix the listing of skills in SkillsTab: increase limit + fix color [\#58](https://github.com/Musholic/LastEpochPlanner/pull/58) ([Musholic](https://github.com/Musholic))
+
+### Fixed bugs
+- Fix mod cache picking wrong skills [\#52](https://github.com/Musholic/LastEpochPlanner/pull/52) ([Musholic](https://github.com/Musholic))
+- Remove the "Add Crucible mod..." button that causes a crash [\#55](https://github.com/Musholic/LastEpochPlanner/pull/55) ([Musholic](https://github.com/Musholic))
+- Fix import of unique with duplicate names from letools [\#60](https://github.com/Musholic/LastEpochPlanner/pull/60) ([Musholic](https://github.com/Musholic))
+- Fix unable to select some skills in CalcsTab when less than 5 skills are selected [\#62](https://github.com/Musholic/LastEpochPlanner/pull/62) ([Musholic](https://github.com/Musholic))
+
+### Other changes
+- Modcache fix for notScalingStats [\#50](https://github.com/Musholic/LastEpochPlanner/pull/50) ([Musholic](https://github.com/Musholic))
+- Minor automated testing improvement [\#46](https://github.com/Musholic/LastEpochPlanner/pull/46) ([Musholic](https://github.com/Musholic))
+
+## Mod parsing progression TODO
+* **Out of 14,246 mods, 5,020 (35%) mods are recognized by the parser**. Even if a mod is recognized, it's not guaranteed that it will work as expected.
+* The total amount of mods is made of
+    * the implicits (one for each implicit of each item)
+    * the prefixes and suffixes (one for each tier of each)
+    * the unique modifiers (one for each mod of each unique)
+    * the passive and skill trees (one for each mod of each node)
+
 ## [v0.7.1](https://github.com/Musholic/PathOfBuildingForLastEpoch/tree/v0.7.1) (2025/08/08)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.7.0...v0.7.1)
