@@ -1,40 +1,40 @@
 <LastEpochPlanner>
-	<Build ascendClassName="Necromancer" bandit="None" characterLevelAutoMode="false" className="Acolyte" level="100" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_2" viewMode="TREE">
-		<PlayerStat stat="AverageHit" value="102.76"></PlayerStat>
-		<PlayerStat stat="AverageBurstDamage" value="102.76"></PlayerStat>
-		<PlayerStat stat="Speed" value="1.7599999530667"></PlayerStat>
+	<Build ascendClassName="Necromancer" bandit="None" characterLevelAutoMode="false" className="Acolyte" level="100" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="110.9808"></PlayerStat>
+		<PlayerStat stat="AverageBurstDamage" value="110.9808"></PlayerStat>
+		<PlayerStat stat="Speed" value="1.4666666275556"></PlayerStat>
 		<PlayerStat stat="PreEffectiveCritChance" value="0"></PlayerStat>
 		<PlayerStat stat="CritChance" value="0"></PlayerStat>
 		<PlayerStat stat="CritMultiplier" value="0"></PlayerStat>
-		<PlayerStat stat="TotalDPS" value="3562.3465716708"></PlayerStat>
-		<PlayerStat stat="CombinedDPS" value="3562.3465716708"></PlayerStat>
+		<PlayerStat stat="TotalDPS" value="3206.1119145037"></PlayerStat>
+		<PlayerStat stat="CombinedDPS" value="3206.1119145037"></PlayerStat>
 		<PlayerStat stat="ManaCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPercentCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPerSecondCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPercentPerSecondCost" value="0"></PlayerStat>
-		<PlayerStat stat="Vit" value="5"></PlayerStat>
+		<PlayerStat stat="Vit" value="6"></PlayerStat>
 		<PlayerStat stat="Str" value="1"></PlayerStat>
 		<PlayerStat stat="Dex" value="14"></PlayerStat>
 		<PlayerStat stat="Int" value="97"></PlayerStat>
 		<PlayerStat stat="Att" value="1"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="8292.9609575378"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="8083"></PlayerStat>
-		<PlayerStat stat="LightningMaximumHitTaken" value="11640"></PlayerStat>
-		<PlayerStat stat="ColdMaximumHitTaken" value="6326"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="12503"></PlayerStat>
-		<PlayerStat stat="PoisonMaximumHitTaken" value="4099"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="11640"></PlayerStat>
-		<PlayerStat stat="VoidMaximumHitTaken" value="11192"></PlayerStat>
-		<PlayerStat stat="Life" value="2910"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="7841.1377968603"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="6641"></PlayerStat>
+		<PlayerStat stat="LightningMaximumHitTaken" value="11688"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="5411"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="12552"></PlayerStat>
+		<PlayerStat stat="PoisonMaximumHitTaken" value="4174"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="11688"></PlayerStat>
+		<PlayerStat stat="VoidMaximumHitTaken" value="11238"></PlayerStat>
+		<PlayerStat stat="Life" value="2922"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="24"></PlayerStat>
-		<PlayerStat stat="LifeRegenRecovery" value="14"></PlayerStat>
+		<PlayerStat stat="LifeRegenRecovery" value="22"></PlayerStat>
 		<PlayerStat stat="LifeLeechGainRate" value="0"></PlayerStat>
 		<PlayerStat stat="Mana" value="103"></PlayerStat>
 		<PlayerStat stat="Spec:ManaInc" value="0"></PlayerStat>
 		<PlayerStat stat="ManaRegenRecovery" value="10.8"></PlayerStat>
 		<PlayerStat stat="ManaLeechGainRate" value="0"></PlayerStat>
 		<PlayerStat stat="Ward" value="0"></PlayerStat>
-		<PlayerStat stat="WardRetention" value="418"></PlayerStat>
+		<PlayerStat stat="WardRetention" value="408"></PlayerStat>
 		<PlayerStat stat="Evasion" value="113"></PlayerStat>
 		<PlayerStat stat="Spec:EvasionInc" value="0"></PlayerStat>
 		<PlayerStat stat="MeleeEvadeChance" value="0"></PlayerStat>
@@ -46,23 +46,23 @@
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
-		<PlayerStat stat="FireResist" value="64"></PlayerStat>
+		<PlayerStat stat="FireResist" value="56"></PlayerStat>
 		<PlayerStat stat="FireResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="LightningResist" value="75"></PlayerStat>
-		<PlayerStat stat="LightningResistOverCap" value="33"></PlayerStat>
-		<PlayerStat stat="ColdResist" value="54"></PlayerStat>
+		<PlayerStat stat="LightningResistOverCap" value="25"></PlayerStat>
+		<PlayerStat stat="ColdResist" value="46"></PlayerStat>
 		<PlayerStat stat="ColdResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="PhysicalResist" value="75"></PlayerStat>
 		<PlayerStat stat="PhysicalResistOverCap" value="8"></PlayerStat>
-		<PlayerStat stat="PoisonResist" value="29"></PlayerStat>
+		<PlayerStat stat="PoisonResist" value="30"></PlayerStat>
 		<PlayerStat stat="PoisonResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="NecroticResist" value="75"></PlayerStat>
-		<PlayerStat stat="NecroticResistOverCap" value="126"></PlayerStat>
+		<PlayerStat stat="NecroticResistOverCap" value="127"></PlayerStat>
 		<PlayerStat stat="VoidResist" value="74"></PlayerStat>
 		<PlayerStat stat="VoidResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.81"></PlayerStat>
-		<PlayerStat stat="FullDPS" value="3562.3465716708"></PlayerStat>
-		<FullDPSSkill skillPart="" source="" stat="Infernal Shade" value="3562.3465716708"></FullDPSSkill>
+		<PlayerStat stat="FullDPS" value="3206.1119145037"></PlayerStat>
+		<FullDPSSkill skillPart="" source="" stat="Infernal Shade" value="3206.1119145037"></FullDPSSkill>
 	</Build>
 	<Calcs>
 		<Input name="misc_buffMode" string="EFFECTIVE"></Input>
@@ -514,8 +514,8 @@ LevelReq: 0
 Implicits: 0
 {range:145}+(4-6)% Elemental Resistance
 {range:145}+(4-6)% Minion Elemental Resistance
-{range:239}+(6-9)% Ward Retention
-{range:239}{rounding:Integer}+(7-10) Ward per Second
+{range:239}+(5-7)% Ward Retention
+{range:239}{rounding:Integer}+(5-8) Ward per Second
 			<ModRange id="1" range="145"></ModRange>
 			<ModRange id="2" range="145"></ModRange>
 			<ModRange id="3" range="239"></ModRange>
@@ -558,8 +558,8 @@ LevelReq: 0
 Implicits: 0
 {range:22}+(9-12)% Cold Resistance
 {range:22}+(9-12)% Minion Cold Resistance
-{range:136}+(6-9)% Ward Retention
-{range:136}{rounding:Integer}+(7-10) Ward per Second
+{range:136}+(5-7)% Ward Retention
+{range:136}{rounding:Integer}+(5-8) Ward per Second
 			<ModRange id="1" range="22"></ModRange>
 			<ModRange id="2" range="22"></ModRange>
 			<ModRange id="3" range="136"></ModRange>
@@ -602,8 +602,8 @@ LevelReq: 0
 Implicits: 0
 {range:41}+(9-12)% Fire Resistance
 {range:41}+(9-12)% Minion Fire Resistance
-{range:175}+(6-9)% Ward Retention
-{range:175}{rounding:Integer}+(7-10) Ward per Second
+{range:175}+(5-7)% Ward Retention
+{range:175}{rounding:Integer}+(5-8) Ward per Second
 			<ModRange id="1" range="41"></ModRange>
 			<ModRange id="2" range="41"></ModRange>
 			<ModRange id="3" range="175"></ModRange>
@@ -625,8 +625,8 @@ LevelReq: 0
 Implicits: 0
 {range:189}+(9-12)% Fire Resistance
 {range:189}+(9-12)% Minion Fire Resistance
-{range:108}+(6-9)% Ward Retention
-{range:108}{rounding:Integer}+(7-10) Ward per Second
+{range:108}+(5-7)% Ward Retention
+{range:108}{rounding:Integer}+(5-8) Ward per Second
 			<ModRange id="1" range="189"></ModRange>
 			<ModRange id="2" range="189"></ModRange>
 			<ModRange id="3" range="108"></ModRange>
@@ -647,8 +647,8 @@ Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:25}{scalar:0.17}+(20-45)% Cold Resistance
-{range:241}+(6-9)% Ward Retention
-{range:241}{rounding:Integer}+(7-10) Ward per Second
+{range:241}+(5-7)% Ward Retention
+{range:241}{rounding:Integer}+(5-8) Ward per Second
 			<ModRange id="1" range="25"></ModRange>
 			<ModRange id="2" range="241"></ModRange>
 			<ModRange id="3" range="241"></ModRange>
@@ -695,8 +695,8 @@ Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:151}{scalar:0.17}+(8-20)% Elemental Resistance
-{range:249}+(6-9)% Ward Retention
-{range:249}{rounding:Integer}+(7-10) Ward per Second
+{range:249}+(5-7)% Ward Retention
+{range:249}{rounding:Integer}+(5-8) Ward per Second
 			<ModRange id="1" range="151"></ModRange>
 			<ModRange id="2" range="249"></ModRange>
 			<ModRange id="3" range="249"></ModRange>
@@ -946,7 +946,7 @@ Implicits: 1
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
-		<Spec ascendClassId="1" classId="3" nodes="Acolyte#1,Acolyte-0#1,Acolyte-1#8,Acolyte-11#8,Acolyte-15#5,Acolyte-16#10,Acolyte-21#1,Acolyte-23#8,Acolyte-26#10,Acolyte-3#1,Acolyte-32#8,Acolyte-34#8,Acolyte-38#8,Acolyte-4#3,Acolyte-55#5,Acolyte-58#5,Acolyte-59#1,Acolyte-62#5,Acolyte-63#5,Acolyte-7#5,Acolyte-8#1,Acolyte-80#1,Acolyte-83#6,Necromancer#1,ad0ry-0#1,ad0ry-13#4,ad0ry-14#1,ad0ry-15#3,ad0ry-20#1,ad0ry-21#3,ad0ry-22#1,ad0ry-28#4,ad0ry-30#3,bg36nl-0#1,bg36nl-13#1,bg36nl-15#4,bg36nl-16#1,bg36nl-2#5,bg36nl-5#3,bg36nl-7#1,bg36nl-8#5,ds4d3-0#1,ds4d3-10#1,ds4d3-11#3,ds4d3-14#1,ds4d3-15#1,ds4d3-16#3,ds4d3-2#2,ds4d3-20#4,ds4d3-32#1,ds4d3-4#1,ds4d3-8#3,is40-0#1,is40-13#2,is40-14#4,is40-17#1,is40-19#3,is40-20#1,is40-21#1,is40-22#1,is40-23#1,is40-24#3,is40-25#3,sw42ih-0#1,sw42ih-10#1,sw42ih-11#1,sw42ih-12#3,sw42ih-2#1,sw42ih-22#1,sw42ih-23#5,sw42ih-28#5,sw42ih-4#3,sw42ih-9#2" treeVersion="1_2">
+		<Spec ascendClassId="1" classId="3" nodes="Acolyte#1,Acolyte-0#1,Acolyte-1#8,Acolyte-11#8,Acolyte-15#5,Acolyte-16#10,Acolyte-21#1,Acolyte-23#8,Acolyte-26#10,Acolyte-3#1,Acolyte-32#8,Acolyte-34#8,Acolyte-38#8,Acolyte-4#3,Acolyte-55#5,Acolyte-58#5,Acolyte-59#1,Acolyte-62#5,Acolyte-63#5,Acolyte-7#5,Acolyte-8#1,Acolyte-80#1,Acolyte-83#6,Necromancer#1,ad0ry-0#1,ad0ry-13#4,ad0ry-14#1,ad0ry-15#3,ad0ry-20#1,ad0ry-21#3,ad0ry-22#1,ad0ry-28#4,ad0ry-30#3,bg36nl-0#1,bg36nl-13#1,bg36nl-15#4,bg36nl-16#1,bg36nl-2#5,bg36nl-5#3,bg36nl-7#1,bg36nl-8#5,ds4d3-0#1,ds4d3-14#1,ds4d3-15#1,ds4d3-16#3,ds4d3-2#2,ds4d3-20#4,ds4d3-4#1,ds4d3-8#3,is40-0#1,is40-13#2,is40-14#4,is40-17#1,is40-19#3,is40-20#1,is40-21#1,is40-22#1,is40-23#1,is40-24#3,is40-25#3,sw42ih-0#1,sw42ih-10#1,sw42ih-11#1,sw42ih-12#3,sw42ih-2#1,sw42ih-22#1,sw42ih-23#5,sw42ih-28#5,sw42ih-4#3,sw42ih-9#2" treeVersion="1_3">
 			<Overrides></Overrides>
 		</Spec>
 	</Tree>

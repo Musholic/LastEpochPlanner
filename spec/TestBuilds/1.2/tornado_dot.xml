@@ -1,5 +1,5 @@
 <LastEpochPlanner>
-	<Build ascendClassName="Druid" bandit="None" characterLevelAutoMode="false" className="Primalist" level="98" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_2" viewMode="TREE">
+	<Build ascendClassName="Druid" bandit="None" characterLevelAutoMode="false" className="Primalist" level="98" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="162.816"></PlayerStat>
 		<PlayerStat stat="AverageBurstDamage" value="162.816"></PlayerStat>
 		<PlayerStat stat="Speed" value="3.1491430370939"></PlayerStat>
@@ -13,19 +13,19 @@
 		<PlayerStat stat="ManaPerSecondCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPercentPerSecondCost" value="0"></PlayerStat>
 		<PlayerStat stat="Vit" value="7"></PlayerStat>
-		<PlayerStat stat="Str" value="111"></PlayerStat>
-		<PlayerStat stat="Dex" value="17"></PlayerStat>
-		<PlayerStat stat="Int" value="35"></PlayerStat>
+		<PlayerStat stat="Str" value="107"></PlayerStat>
+		<PlayerStat stat="Dex" value="14"></PlayerStat>
+		<PlayerStat stat="Int" value="31"></PlayerStat>
 		<PlayerStat stat="Att" value="35"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="15489.144316731"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="15160"></PlayerStat>
-		<PlayerStat stat="LightningMaximumHitTaken" value="15160"></PlayerStat>
-		<PlayerStat stat="ColdMaximumHitTaken" value="15160"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="17530"></PlayerStat>
-		<PlayerStat stat="PoisonMaximumHitTaken" value="15160"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="12633"></PlayerStat>
-		<PlayerStat stat="VoidMaximumHitTaken" value="11844"></PlayerStat>
-		<PlayerStat stat="Life" value="3790"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="15449.908182004"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="15144"></PlayerStat>
+		<PlayerStat stat="LightningMaximumHitTaken" value="15144"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="15144"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="17455"></PlayerStat>
+		<PlayerStat stat="PoisonMaximumHitTaken" value="15144"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="12620"></PlayerStat>
+		<PlayerStat stat="VoidMaximumHitTaken" value="11831"></PlayerStat>
+		<PlayerStat stat="Life" value="3786"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="10"></PlayerStat>
 		<PlayerStat stat="LifeRegenRecovery" value="112.6"></PlayerStat>
 		<PlayerStat stat="LifeLeechGainRate" value="0"></PlayerStat>
@@ -34,14 +34,14 @@
 		<PlayerStat stat="ManaRegenRecovery" value="12"></PlayerStat>
 		<PlayerStat stat="ManaLeechGainRate" value="0"></PlayerStat>
 		<PlayerStat stat="Ward" value="0"></PlayerStat>
-		<PlayerStat stat="WardRetention" value="70"></PlayerStat>
-		<PlayerStat stat="Evasion" value="177"></PlayerStat>
+		<PlayerStat stat="WardRetention" value="62"></PlayerStat>
+		<PlayerStat stat="Evasion" value="164"></PlayerStat>
 		<PlayerStat stat="Spec:EvasionInc" value="0"></PlayerStat>
 		<PlayerStat stat="MeleeEvadeChance" value="0"></PlayerStat>
 		<PlayerStat stat="ProjectileEvadeChance" value="0"></PlayerStat>
-		<PlayerStat stat="Armour" value="3426"></PlayerStat>
+		<PlayerStat stat="Armour" value="3330"></PlayerStat>
 		<PlayerStat stat="Spec:ArmourInc" value="0"></PlayerStat>
-		<PlayerStat stat="PhysicalDamageReduction" value="73"></PlayerStat>
+		<PlayerStat stat="PhysicalDamageReduction" value="72"></PlayerStat>
 		<PlayerStat stat="BlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
@@ -193,9 +193,9 @@ Implicits: 2
 {crafted}30% increased Movement Speed
 {crafted}{range:171}(30-67)% Increased Bleed Duration
 {crafted}{range:142}(30-40)% more Physical Ailment Damage to Moving Enemies
-{crafted}{range:234}{rounding:Integer}+(8-12) Strength
-{crafted}{range:142}{rounding:Integer}+(8-12) Dexterity
-{crafted}{range:252}{rounding:Integer}+(8-12) Intelligence
+{crafted}{range:234}{rounding:Integer}+(5-8) Strength
+{crafted}{range:142}{rounding:Integer}+(5-8) Dexterity
+{crafted}{range:252}{rounding:Integer}+(5-8) Intelligence
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="17"></ModRange>
 			<ModRange id="3" range="219"></ModRange>
@@ -287,7 +287,7 @@ Implicits: 2
 {range:98}{rounding:Integer}+(100-130) Health
 {range:91}{rounding:Integer}+(85-105) Health
 {range:91}{rounding:Integer}+(15-19) Health Regen
-{range:116}(66-83)% Increased Healing Effectiveness
+{range:116}(48-60)% Increased Healing Effectiveness
 {range:196}+(41-50)% Critical Strike Multiplier
 {crafted}{range:231}{rounding:Integer}+(20-40) Mana
 {crafted}{range:101}+(20-40)% Cold Resistance
@@ -326,9 +326,9 @@ Implicits: 1
 {crafted}100% Swiftness
 {crafted}100% of Wandering Spirits Base Damage Converted to Fire
 {crafted}100% Create a Wandering Spirit on direct Fire, Necrotic, or Void Skill Use
-{crafted}{range:150}+(10-17)% Fire Penetration
-{crafted}{range:150}+(10-17)% Necrotic Penetration
-{crafted}{range:150}+(10-17)% Void Penetration
+{crafted}{range:150}+(7-11)% Fire Penetration
+{crafted}{range:150}+(7-11)% Necrotic Penetration
+{crafted}{range:150}+(7-11)% Void Penetration
 {crafted}{range:114}{rounding:Integer}+(4-7) Ward gained each second per Active Wandering Spirit
 			<ModRange id="1" range="99"></ModRange>
 			<ModRange id="2" range="4"></ModRange>
@@ -435,7 +435,7 @@ Implicits: 3
 {range:219}{scalar:1.75}(24-30)% increased Cast Speed
 {range:216}{scalar:1.75}+(21-25)% Critical Strike Multiplier
 {crafted}{range:181}(10-35)% Chance to gain Haste for 1 second on Hit
-{crafted}3% increased Spell Damage per 1% increased Movement Speed
+{crafted}2% increased Spell Damage per 1% increased Movement Speed
 {crafted}+1 Wrongwarp with Teleport or Transplant
 {crafted}{range:179}(5-10)% Increased Cooldown Recovery Speed for Teleport
 {crafted}{range:179}(5-10)% Increased Cooldown Recovery Speed for Transplant
@@ -569,8 +569,8 @@ LevelReq: 0
 Implicits: 0
 {range:23}+(18-23)% Physical Resistance
 {range:23}+(18-23)% Minion Physical Resistance
-{range:154}+(4-6)% Necrotic Penetration
-{range:154}+(4-6)% Minion Necrotic Penetration
+{range:154}+(3-4)% Necrotic Penetration
+{range:154}+(3-4)% Minion Necrotic Penetration
 			<ModRange id="1" range="23"></ModRange>
 			<ModRange id="2" range="23"></ModRange>
 			<ModRange id="3" range="154"></ModRange>
@@ -641,8 +641,8 @@ Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:54}{scalar:0.17}+(20-45)% Physical Resistance
-{range:179}(18-25)% Increased Healing Effectiveness
-{range:179}{rounding:Integer}+(15-20) Health
+{range:179}(5-10)% Increased Healing Effectiveness
+{range:179}{rounding:Integer}+(14-18) Health
 			<ModRange id="1" range="54"></ModRange>
 			<ModRange id="2" range="179"></ModRange>
 			<ModRange id="3" range="179"></ModRange>
@@ -663,8 +663,8 @@ LevelReq: 0
 Implicits: 0
 {range:146}+(9-12)% Void Resistance
 {range:146}+(9-12)% Minion Void Resistance
-{range:25}+(1-3)% Poison Penetration
-{range:25}+(1-3)% Minion Poison Penetration
+{range:25}+(1-2)% Poison Penetration
+{range:25}+(1-2)% Minion Poison Penetration
 			<ModRange id="1" range="146"></ModRange>
 			<ModRange id="2" range="146"></ModRange>
 			<ModRange id="3" range="25"></ModRange>
@@ -686,8 +686,8 @@ LevelReq: 0
 Implicits: 0
 {range:246}+(9-12)% Void Resistance
 {range:246}+(9-12)% Minion Void Resistance
-{range:111}+(1-3)% Void Penetration
-{range:111}+(1-3)% Minion Void Penetration
+{range:111}+(1-2)% Void Penetration
+{range:111}+(1-2)% Minion Void Penetration
 			<ModRange id="1" range="246"></ModRange>
 			<ModRange id="2" range="246"></ModRange>
 			<ModRange id="3" range="111"></ModRange>
@@ -708,7 +708,7 @@ Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:226}{scalar:0.17}+(20-45)% Necrotic Resistance
-{range:180}{scalar:0.17}(37-100)% Increased Healing Effectiveness
+{range:180}{scalar:0.17}(37-70)% Increased Healing Effectiveness
 			<ModRange id="1" range="226"></ModRange>
 			<ModRange id="2" range="180"></ModRange>
 		</Item>
@@ -728,7 +728,7 @@ LevelReq: 0
 Implicits: 0
 {range:230}+(9-12)% Void Resistance
 {range:230}+(9-12)% Minion Void Resistance
-{range:112}{scalar:0.17}(37-100)% Increased Healing Effectiveness
+{range:112}{scalar:0.17}(37-70)% Increased Healing Effectiveness
 			<ModRange id="1" range="230"></ModRange>
 			<ModRange id="2" range="230"></ModRange>
 			<ModRange id="3" range="112"></ModRange>
@@ -749,8 +749,8 @@ LevelReq: 0
 Implicits: 0
 {range:81}+(9-12)% Necrotic Resistance
 {range:81}+(9-12)% Minion Necrotic Resistance
-{range:236}+(1-3)% Necrotic Penetration
-{range:236}+(1-3)% Minion Necrotic Penetration
+{range:236}+(1-2)% Necrotic Penetration
+{range:236}+(1-2)% Minion Necrotic Penetration
 			<ModRange id="1" range="81"></ModRange>
 			<ModRange id="2" range="81"></ModRange>
 			<ModRange id="3" range="236"></ModRange>
@@ -953,7 +953,7 @@ Implicits: 1
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
-		<Spec ascendClassId="3" classId="0" nodes="Druid#1,Primalist#1,Primalist-1#8,Primalist-10#1,Primalist-104#10,Primalist-111#8,Primalist-118#5,Primalist-12#8,Primalist-19#2,Primalist-3#5,Primalist-38#5,Primalist-40#1,Primalist-41#8,Primalist-6#6,Primalist-79#5,Primalist-81#3,Primalist-82#5,Primalist-89#4,Primalist-92#5,Primalist-93#5,Primalist-94#2,Primalist-97#7,Primalist-99#8,ga2st-0#1,ga2st-10#1,ga2st-11#2,ga2st-13#4,ga2st-14#1,ga2st-16#1,ga2st-2#1,ga2st-22#4,ga2st-23#2,ga2st-3#4,ga2st-6#1,ga2st-9#1,sw43-0#1,sw43-13#4,sw43-15#5,sw43-16#2,sw43-19#1,sw43-21#2,sw43-3#3,sw43-8#5,to50-0#1,to50-11#3,to50-17#1,to50-18#1,to50-19#4,to50-2#4,to50-4#4,to50-5#1,to50-6#4,wb8fo-0#1,wb8fo-13#2,wb8fo-15#4,wb8fo-18#4,wb8fo-2#1,wb8fo-26#1,wb8fo-29#2,wb8fo-3#1,wb8fo-4#5,wb8fo-5#1,wb8fo-7#1,wc57-0#1,wc57-12#1,wc57-13#1,wc57-15#1,wc57-17#1,wc57-18#2,wc57-19#1,wc57-2#2,wc57-27#2,wc57-28#1,wc57-3#3,wc57-30#1,wc57-32#1,wc57-33#1,wc57-5#1,wc57-6#2,wc57-7#1" treeVersion="1_2">
+		<Spec ascendClassId="3" classId="0" nodes="Druid#1,Primalist#1,Primalist-1#8,Primalist-10#1,Primalist-104#10,Primalist-111#8,Primalist-118#5,Primalist-12#8,Primalist-19#2,Primalist-3#5,Primalist-38#5,Primalist-40#1,Primalist-41#8,Primalist-6#6,Primalist-79#5,Primalist-81#3,Primalist-82#5,Primalist-89#4,Primalist-92#5,Primalist-93#5,Primalist-94#2,Primalist-97#7,Primalist-99#8,ga2st-0#1,ga2st-10#1,ga2st-11#2,ga2st-13#4,ga2st-14#1,ga2st-16#1,ga2st-2#1,ga2st-22#4,ga2st-23#2,ga2st-3#4,ga2st-6#1,ga2st-9#1,sw43-0#1,sw43-13#4,sw43-15#5,sw43-16#2,sw43-19#1,sw43-21#2,sw43-3#3,sw43-8#5,to50-0#1,to50-11#3,to50-17#1,to50-18#1,to50-19#4,to50-2#4,to50-4#4,to50-5#1,to50-6#4,wb8fo-0#1,wb8fo-13#2,wb8fo-15#4,wb8fo-18#4,wb8fo-2#1,wb8fo-26#1,wb8fo-29#2,wb8fo-3#1,wb8fo-4#5,wb8fo-5#1,wb8fo-7#1,wc57-0#1,wc57-12#1,wc57-13#1,wc57-15#1,wc57-17#1,wc57-18#2,wc57-19#1,wc57-2#2,wc57-27#2,wc57-28#1,wc57-3#3,wc57-30#1,wc57-32#1,wc57-33#1,wc57-5#1,wc57-6#2,wc57-7#1" treeVersion="1_3">
 			<Overrides></Overrides>
 		</Spec>
 	</Tree>
