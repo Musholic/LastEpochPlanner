@@ -2,12 +2,12 @@
 ---Default target version for unknown builds and builds created before 3.0.0.
 legacyTargetVersion = "1_2"
 ---Default target for new builds and target to convert legacy builds to.
-liveTargetVersion = "1_2"
+liveTargetVersion = "1_3"
 
 -- Skill tree versions
 ---Added for convenient indexing of skill tree versions.
 ---@type string[]
-treeVersionList = { "1_2", }
+treeVersionList = { "1_2", "1_3" }
 --- Always points to the latest skill tree version.
 latestTreeVersion = treeVersionList[#treeVersionList]
 ---Tree version where multiple skill trees per build were introduced to LEP.
@@ -18,6 +18,11 @@ treeVersions = {
 	["1_2"] = {
 		display = "1.2",
 		num = 1.2,
+		url = "",
+	},
+	["1_3"] = {
+		display = "1.3",
+		num = 1.3,
 		url = "",
 	},
 }

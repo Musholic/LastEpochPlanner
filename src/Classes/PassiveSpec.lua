@@ -182,8 +182,6 @@ function PassiveSpecClass:ImportFromNodeList(classId, ascendClassId, abilities, 
 			node.alloc = nbPoint
 			self.tree:ProcessStats(node)
 			self.allocNodes[id] = node
-		else
-			t_insert(self.allocSubgraphNodes, id)
 		end
 	end
 
