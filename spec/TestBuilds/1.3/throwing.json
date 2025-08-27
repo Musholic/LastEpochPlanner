@@ -1,0 +1,341 @@
+{
+  "data": {
+    "fromSaveFile": 0,
+    "newGrid": true,
+    "bio": { "level": 100, "characterClass": 2, "chosenMastery": 3 },
+    "equipment": {
+      "hands": {
+        "id": "UAwRgTALAzCQ",
+        "affixes": [{ "id": "AAwZgbEA", "tier": "7" }]
+      },
+      "weapon1": {
+        "id": "IIwBhFYWUyA",
+        "affixes": [
+          { "id": "AAwZmQ", "tier": "7" },
+          { "id": "AAwdgTEA", "tier": "5" },
+          { "id": "AAwNgHEA", "tier": "5" },
+          { "id": "AAwVhQ", "tier": "5" }
+        ]
+      },
+      "relic": {
+        "id": "UAzAswdgRiA",
+        "affixes": [{ "id": "AAwJgrEA", "tier": "7" }]
+      },
+      "chest": {
+        "id": "IIwBhoNlMg",
+        "affixes": [
+          { "id": "AMwVgHEA", "tier": "5" },
+          { "id": "AMwNmQ", "tier": "5" },
+          { "id": "AAwVgTEA", "tier": "7" },
+          { "id": "AAwJgrEA", "tier": "5" }
+        ]
+      },
+      "weapon2": {
+        "id": "UAwRgzALCJA",
+        "affixes": [
+          { "id": "AAzDMQ", "tier": "7" },
+          { "id": "AAwDgjEA", "tier": "5" }
+        ]
+      },
+      "ring1": {
+        "id": "IIwBgTKIMwrQ",
+        "affixes": [
+          { "id": "AAwDg7EA", "tier": "7" },
+          { "id": "AAwdgTEA", "tier": "5" },
+          { "id": "AAwJgrEA", "tier": "5" },
+          { "id": "ABwJgrEA", "tier": "5" }
+        ],
+        "sealedAffix": { "id": "AKwBg7EA", "tier": "1" }
+      },
+      "ring2": {
+        "id": "IIwBgTKIMwrQ",
+        "affixes": [
+          { "id": "AAwDg7EA", "tier": "7" },
+          { "id": "AAwZmQ", "tier": "5" },
+          { "id": "AAwJgrEA", "tier": "5" },
+          { "id": "ABwJgrEA", "tier": "5" }
+        ],
+        "sealedAffix": { "id": "AKwBg7EA", "tier": "1" }
+      },
+      "feet": {
+        "id": "UAzBMGZgNiA",
+        "affixes": [
+          { "id": "AAwJgHEA", "tier": "7" },
+          { "id": "AAwZgbEA", "tier": "5" }
+        ]
+      },
+      "amulet": {
+        "id": "UAzDsGZQFiA",
+        "affixes": [
+          { "id": "AAwZmQ", "tier": "5" },
+          { "id": "AAwJgrEA", "tier": "7" }
+        ]
+      },
+      "head": {
+        "id": "IIwBjINlMg",
+        "affixes": [
+          { "id": "AMwNmQ", "tier": "5" },
+          { "id": "AMwVgHEA", "tier": "5" },
+          { "id": "AAwVgTEA", "tier": "7" },
+          { "id": "AOwRgrEA", "tier": "5" }
+        ]
+      },
+      "waist": {
+        "id": "UAzCMCZgFiA",
+        "affixes": [
+          { "id": "AAwZmQ", "tier": "5" },
+          { "id": "AAwdgrEA", "tier": "1" },
+          { "id": "AAwVgTEA", "tier": "7" }
+        ]
+      }
+    },
+    "idols": [
+      {
+        "x": 1,
+        "y": 2,
+        "id": "IIwBgzCkOySQ",
+        "affixes": [
+          { "id": "AIwJgHEA", "tier": 1 },
+          { "id": "AIwTgzEA", "tier": 1 },
+          { "id": "ABwThQ", "tier": "7" }
+        ]
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "id": "IIwBgzGIgnFJA",
+        "affixes": [
+          { "id": "AEwdgbEA", "tier": 1 },
+          { "id": "AIwTg7EA", "tier": 1 },
+          { "id": "AJwJgjEA", "tier": "7" }
+        ]
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "id": "IIwBgzCkOySQ",
+        "affixes": [
+          { "id": "AIwJgHEA", "tier": 1 },
+          { "id": "AIwTgzEA", "tier": 1 },
+          { "id": "ABwThQ", "tier": "7" }
+        ]
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "id": "IIwBgzCkOySQ",
+        "affixes": [
+          { "id": "AIwJgHEA", "tier": 1 },
+          { "id": "AIwTgzEA", "tier": 1 },
+          { "id": "ABwThQ", "tier": "7" }
+        ]
+      },
+      {
+        "x": 5,
+        "y": 2,
+        "id": "IIwBgzCkOySQ",
+        "affixes": [
+          { "id": "AIwJgHEA", "tier": 1 },
+          { "id": "AIwTgzEA", "tier": 1 },
+          { "id": "ABwThQ", "tier": "7" }
+        ]
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "id": "IIwBgTA7CKtQ",
+        "affixes": [
+          { "id": "ABwVmQ", "tier": 1 },
+          { "id": "ABwdgDEA", "tier": 1 }
+        ]
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "id": "IIwBgTA7CKtQ",
+        "affixes": [
+          { "id": "ABwVmQ", "tier": 1 },
+          { "id": "ABwNg7EA", "tier": 1 }
+        ]
+      }
+    ],
+    "blessings": {
+      "3": { "id": "IIwBgzALOCsJ0A" },
+      "5": { "id": "IIwBgzALCAcDsIKA" },
+      "7": { "id": "IIwBgzALMCs0vQ" },
+      "9": { "id": "IIwBgzALMCcDsIKA" },
+      "10": { "id": "IIwBgzALATCCsIKA" }
+    },
+    "weaverTreeContainers": [],
+    "charTree": {
+      "treeID": "",
+      "selected": {
+        "0": 8,
+        "1": 1,
+        "2": 5,
+        "8": 5,
+        "11": 5,
+        "27": 3,
+        "49": 6,
+        "65": 5,
+        "69": 2,
+        "72": 5,
+        "77": 8,
+        "81": 8,
+        "84": 10,
+        "87": 7,
+        "89": 4,
+        "90": 5,
+        "93": 5,
+        "95": 5,
+        "98": 6,
+        "108": 5,
+        "119": 5
+      },
+      "version": 12
+    },
+    "skillTrees": [
+      {
+        "treeID": "ht16aw",
+        "selected": {
+          "0": 0,
+          "2": 1,
+          "9": 5,
+          "16": 1,
+          "17": 1,
+          "18": 2,
+          "20": 1,
+          "21": 1,
+          "22": 6,
+          "24": 3
+        },
+        "level": 21,
+        "slotNumber": 0,
+        "version": 0
+      },
+      {
+        "treeID": "ah443",
+        "selected": {
+          "0": 0,
+          "4": 3,
+          "10": 4,
+          "11": 2,
+          "12": 5,
+          "16": 1,
+          "18": 3,
+          "19": 2
+        },
+        "level": 20,
+        "slotNumber": 1,
+        "version": 2
+      },
+      {
+        "treeID": "si4lgl",
+        "selected": {
+          "0": 0,
+          "2": 1,
+          "4": 1,
+          "5": 5,
+          "15": 2,
+          "23": 2,
+          "24": 1,
+          "26": 3,
+          "28": 1,
+          "32": 4
+        },
+        "level": 20,
+        "slotNumber": 2,
+        "version": 5
+      },
+      {
+        "treeID": "sm87r4",
+        "selected": {
+          "0": 0,
+          "9": 1,
+          "10": 3,
+          "11": 4,
+          "20": 2,
+          "28": 5,
+          "30": 5
+        },
+        "level": 20,
+        "slotNumber": 3,
+        "version": 1
+      },
+      {
+        "treeID": "hh7pa3",
+        "selected": {
+          "0": 0,
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "9": 4,
+          "10": 3,
+          "11": 1,
+          "18": 4,
+          "20": 2,
+          "22": 1,
+          "26": 1
+        },
+        "level": 20,
+        "slotNumber": 4,
+        "version": 0
+      }
+    ],
+    "weaverTree": { "treeID": "", "selected": [], "version": 9 },
+    "hud": ["ah443", "sr31hu", "hh7pa3", "si4lgl", "ht16aw"],
+    "weaponTypes": [5, 18],
+    "dataVersion": "Version 1.3.0",
+    "charTreeProgression": [
+      0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 8, 8, 8, 8, 8, 0, 0, 0, 49, 1, 65, 65, 65,
+      65, 65, 72, 72, 72, 77, 77, 77, 77, 77, 77, 77, 77, 84, 84, 84, 84, 84,
+      84, 84, 84, 84, 84, 69, 69, 72, 72, 90, 90, 90, 90, 90, 81, 81, 81, 81,
+      81, 89, 89, 89, 89, 81, 87, 87, 87, 87, 87, 87, 87, 81, 81, 119, 119, 119,
+      119, 119, 93, 93, 93, 93, 93, 95, 95, 95, 95, 95, 49, 49, 49, 49, 49, 108,
+      108, 108, 108, 108, 11, 11, 11, 11, 11, 27, 27, 27, 98, 98, 98, 98, 98, 98
+    ],
+    "skillTreesProgression": {
+      "ht16aw": [
+        16, 17, 18, 18, 22, 20, 22, 22, 22, 9, 9, 24, 24, 24, 22, 22, 9, 9, 9,
+        21, 2
+      ],
+      "si4lgl": [
+        15, 15, 23, 23, 28, 24, 26, 26, 26, 32, 32, 2, 4, 5, 5, 5, 5, 5, 32, 32
+      ],
+      "hh7pa3": [
+        20, 20, 22, 26, 1, 2, 3, 4, 11, 10, 10, 10, 9, 9, 9, 9, 18, 18, 18, 18
+      ],
+      "ah443": [
+        10, 10, 4, 4, 4, 11, 11, 18, 18, 18, 19, 19, 16, 12, 12, 12, 12, 12, 10,
+        10
+      ],
+      "sm87r4": [
+        9, 10, 10, 10, 11, 11, 11, 11, 20, 20, 30, 28, 28, 28, 28, 28, 30, 30,
+        30, 30
+      ]
+    },
+    "weaverTreeProgression": [],
+    "conditions": [],
+    "customConditions": [],
+    "activeBuffs": {
+      "buffs": [],
+      "ailments": [],
+      "skills": ["ah443", "si4lgl"]
+    },
+    "buffSettings": [],
+    "completedQuests": [
+      128, 129, 131, 1, 39, 94, 3, 11, 49, 97, 9, 35, 159, 20, 12, 37, 160, 24,
+      30, 36, 158, 32, 33, 45, 46, 47, 57, 58, 93, 124, 117, 119, 120, 121, 122,
+      151
+    ]
+  },
+  "tags": [{ "1": 1, "8": 2, "256": 4, "1024": 1, "131072": 3 }, []],
+  "level": 100,
+  "class": 2,
+  "mastery": 3,
+  "created_for_build": "Version 1.3.0",
+  "data_version": "Version 1.3.0",
+  "guide": null,
+  "source": "https://www.lastepochtools.com/planner/Qe3Oq12o"
+}
