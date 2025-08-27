@@ -470,7 +470,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				state = "unalloc"
 			end
 			-- Normal node (includes keystones and notables)
-			base = node.sprites[node.type:lower()..(isAlloc and "Active" or "Inactive")]
+			base = node.sprites
 			overlay = node.overlay[state .. (node.ascendancyName and "Ascend" or "") .. (node.isBlighted and "Blighted" or "")]
 		end
 
