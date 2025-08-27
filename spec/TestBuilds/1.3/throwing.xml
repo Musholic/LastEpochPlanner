@@ -1,0 +1,804 @@
+<LastEpochPlanner>
+	<Build ascendClassName="Paladin" bandit="None" characterLevelAutoMode="false" className="Sentinel" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="558.707625"></PlayerStat>
+		<PlayerStat stat="AverageDamage" value="558.707625"></PlayerStat>
+		<PlayerStat stat="AverageBurstDamage" value="558.707625"></PlayerStat>
+		<PlayerStat stat="Speed" value="2.8135800405156"></PlayerStat>
+		<PlayerStat stat="PreEffectiveCritChance" value="5"></PlayerStat>
+		<PlayerStat stat="CritChance" value="5"></PlayerStat>
+		<PlayerStat stat="CritMultiplier" value="2"></PlayerStat>
+		<PlayerStat stat="HitChance" value="100"></PlayerStat>
+		<PlayerStat stat="TotalDPS" value="1571.9686221838"></PlayerStat>
+		<PlayerStat stat="CombinedDPS" value="1571.9686221838"></PlayerStat>
+		<PlayerStat stat="ManaCost" value="6"></PlayerStat>
+		<PlayerStat stat="ManaPercentCost" value="0"></PlayerStat>
+		<PlayerStat stat="ManaPerSecondCost" value="16.881480243093"></PlayerStat>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"></PlayerStat>
+		<PlayerStat stat="Vit" value="18"></PlayerStat>
+		<PlayerStat stat="Str" value="26"></PlayerStat>
+		<PlayerStat stat="Dex" value="11"></PlayerStat>
+		<PlayerStat stat="Int" value="11"></PlayerStat>
+		<PlayerStat stat="Att" value="4"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="8268.6594039795"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="7783"></PlayerStat>
+		<PlayerStat stat="LightningMaximumHitTaken" value="5046"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="5046"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="21710"></PlayerStat>
+		<PlayerStat stat="PoisonMaximumHitTaken" value="6290"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="18368"></PlayerStat>
+		<PlayerStat stat="VoidMaximumHitTaken" value="11774"></PlayerStat>
+		<PlayerStat stat="Life" value="4592"></PlayerStat>
+		<PlayerStat stat="Spec:LifeInc" value="12"></PlayerStat>
+		<PlayerStat stat="LifeRegenRecovery" value="54.6"></PlayerStat>
+		<PlayerStat stat="LifeLeechGainRate" value="0"></PlayerStat>
+		<PlayerStat stat="Mana" value="142"></PlayerStat>
+		<PlayerStat stat="Spec:ManaInc" value="12"></PlayerStat>
+		<PlayerStat stat="ManaRegenRecovery" value="8"></PlayerStat>
+		<PlayerStat stat="ManaLeechGainRate" value="0"></PlayerStat>
+		<PlayerStat stat="Ward" value="0"></PlayerStat>
+		<PlayerStat stat="WardRetention" value="22"></PlayerStat>
+		<PlayerStat stat="Evasion" value="44"></PlayerStat>
+		<PlayerStat stat="Spec:EvasionInc" value="0"></PlayerStat>
+		<PlayerStat stat="MeleeEvadeChance" value="0"></PlayerStat>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"></PlayerStat>
+		<PlayerStat stat="Armour" value="4938"></PlayerStat>
+		<PlayerStat stat="Spec:ArmourInc" value="40"></PlayerStat>
+		<PlayerStat stat="PhysicalDamageReduction" value="80"></PlayerStat>
+		<PlayerStat stat="BlockChance" value="0"></PlayerStat>
+		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
+		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
+		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
+		<PlayerStat stat="FireResist" value="41"></PlayerStat>
+		<PlayerStat stat="FireResistOverCap" value="0"></PlayerStat>
+		<PlayerStat stat="LightningResist" value="9"></PlayerStat>
+		<PlayerStat stat="LightningResistOverCap" value="0"></PlayerStat>
+		<PlayerStat stat="ColdResist" value="9"></PlayerStat>
+		<PlayerStat stat="ColdResistOverCap" value="0"></PlayerStat>
+		<PlayerStat stat="PhysicalResist" value="75"></PlayerStat>
+		<PlayerStat stat="PhysicalResistOverCap" value="2"></PlayerStat>
+		<PlayerStat stat="PoisonResist" value="27"></PlayerStat>
+		<PlayerStat stat="PoisonResistOverCap" value="0"></PlayerStat>
+		<PlayerStat stat="NecroticResist" value="75"></PlayerStat>
+		<PlayerStat stat="NecroticResistOverCap" value="0"></PlayerStat>
+		<PlayerStat stat="VoidResist" value="61"></PlayerStat>
+		<PlayerStat stat="VoidResistOverCap" value="0"></PlayerStat>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.9"></PlayerStat>
+		<PlayerStat stat="FullDPS" value="9454.2021088106"></PlayerStat>
+		<FullDPSSkill skillPart="" source="ht16aw" stat="Bleed" value="6441.4927514663"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="" stat="Hammer Throw" value="1571.9686221838"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="ht16aw" stat="Ignite" value="1440.7407351604"></FullDPSSkill>
+	</Build>
+	<Calcs>
+		<Input name="misc_buffMode" string="EFFECTIVE"></Input>
+		<Input name="skill_number" number="1"></Input>
+		<Section collapsed="false" id="SkillSelect" subsection="ViewSkillDetails"></Section>
+		<Section collapsed="false" id="HitDamage" subsection="SkillDamage"></Section>
+		<Section collapsed="false" id="Speed" subsection="AttackCastRate"></Section>
+		<Section collapsed="false" id="Crit" subsection="Crits"></Section>
+		<Section collapsed="false" id="SkillTypeStats" subsection="SkilltypespecificStats"></Section>
+		<Section collapsed="false" id="LeechGain" subsection="LeechGainonHit"></Section>
+		<Section collapsed="false" id="MiscEffects" subsection="OtherEffects"></Section>
+		<Section collapsed="false" id="Attributes" subsection="Attributes"></Section>
+		<Section collapsed="false" id="Life" subsection="Health"></Section>
+		<Section collapsed="false" id="Mana" subsection="Mana"></Section>
+		<Section collapsed="false" id="Ward" subsection="Ward"></Section>
+		<Section collapsed="false" id="Endurance" subsection="Endurance"></Section>
+		<Section collapsed="false" id="Resist" subsection="Resists"></Section>
+		<Section collapsed="false" id="Armour" subsection="Armor"></Section>
+		<Section collapsed="false" id="DamageAvoidance" subsection="Block"></Section>
+		<Section collapsed="false" id="DamageAvoidance" subsection="Dodge"></Section>
+		<Section collapsed="false" id="MiscDefences" subsection="OtherDefences"></Section>
+		<Section collapsed="false" id="DamageTaken" subsection="DamageTaken"></Section>
+		<Section collapsed="false" id="DamageTaken" subsection="DamagingHits"></Section>
+		<Section collapsed="false" id="DamageTaken" subsection="EffectiveHealthPool"></Section>
+		<Section collapsed="false" id="DamageTaken" subsection="MaximumHitTaken"></Section>
+		<Section collapsed="false" id="DamageTaken" subsection="DotsandDegens"></Section>
+	</Calcs>
+	<Config>
+		<Input name="bandit" string="None"></Input>
+		<Input boolean="true" name="campaignBonuses"></Input>
+		<Input name="pantheonMajorGod" string="None"></Input>
+		<Input name="pantheonMinorGod" string="None"></Input>
+		<Placeholder name="enemyColdDamage" number="1000"></Placeholder>
+		<Placeholder name="enemyCritChance" number="5"></Placeholder>
+		<Placeholder name="enemyCritDamage" number="30"></Placeholder>
+		<Placeholder name="enemyDamageRollRange" number="70"></Placeholder>
+		<Placeholder name="enemyFireDamage" number="1000"></Placeholder>
+		<Placeholder name="enemyLightningDamage" number="1000"></Placeholder>
+		<Placeholder name="enemyNecroticDamage" number="1000"></Placeholder>
+		<Placeholder name="enemyPhysicalDamage" number="1000"></Placeholder>
+		<Placeholder name="enemyPoisonDamage" number="1000"></Placeholder>
+		<Placeholder name="enemySpeed" number="700"></Placeholder>
+		<Placeholder name="enemyVoidDamage" number="1000"></Placeholder>
+	</Config>
+	<Import exportParty="false"></Import>
+	<Items activeItemSet="1" useSecondWeaponSet="nil">
+		<Item id="1">
+			Rarity: UNIQUE
+Pearls of the Swine
+Bone Amulet
+Unique ID: 11
+Crafted: true
+Prefix: {range:127.5}25_6
+Prefix: None
+Prefix: None
+Suffix: {range:127.5}30_4
+Suffix: None
+Suffix: None
+LevelReq: 58
+Implicits: 2
+{range:127.5}+(13-40)% Physical Resistance
+{range:127.5}+(13-40)% Necrotic Resistance
+{range:127.5}{scalar:1.17}{rounding:Integer}+(131-180) Health
+{range:127.5}{scalar:1.17}{rounding:Integer}(40-60)% increased Physical Damage
+{crafted}+100% Bone Curse also inflicts Decrepify
+{crafted}{range:127.5}{rounding:Integer}(113-166) Ward per Second for each Curse affecting you
+{crafted}{range:127.5}{rounding:Integer}(31-55)% increased Physical Damage
+{crafted}{range:127.5}{rounding:Integer}+(5-9) Vitality
+{crafted}{range:127.5}+(7-11)% to All Resistances
+{crafted}{range:127.5}{rounding:Integer}+(1-4) to All Attributes
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+			<ModRange id="7" range="127.5"></ModRange>
+			<ModRange id="8" range="127.5"></ModRange>
+			<ModRange id="9" range="127.5"></ModRange>
+			<ModRange id="10" range="127.5"></ModRange>
+		</Item>
+		<Item id="2">
+			Rarity: RARE
+Champion Regalia
+Champion Regalia
+Unique ID: 3
+Crafted: true
+Prefix: {range:127.5}52_6
+Prefix: {range:127.5}25_4
+Prefix: None
+Suffix: {range:127.5}358_4
+Suffix: {range:127.5}363_4
+Suffix: None
+LevelReq: 86
+Implicits: 2
++700 Armor
+{range:127.5}(10-17)% of Armor Mitigation also applies to Damage over Time
+{range:127.5}{scalar:1.5}{rounding:Integer}(21-26)% increased Health
+{range:127.5}{scalar:1.5}{rounding:Integer}+(61-90) Health
+{range:127.5}{scalar:1.5}+(37-45)% Physical Penetration with Bleed
+{range:127.5}{scalar:1.5}+(36-43)% Chance to Inflict Bleed on Hit if wielding an Axe
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+		</Item>
+		<Item id="3">
+			Rarity: UNIQUE
+Blood of the Exile
+Iron Greaves
+Unique ID: 8
+Crafted: true
+Prefix: {range:127.5}36_4
+Prefix: None
+Prefix: None
+Suffix: {range:127.5}28_6
+Suffix: None
+Suffix: None
+LevelReq: 16
+Implicits: 2
++35 Armor
+{range:127.5}(8-10)% increased Movement Speed
+{range:127.5}{rounding:Integer}+(46-68) Health
+5% increased Health
+{range:127.5}(26-30)% increased Movement Speed
+{crafted}30% increased Movement Speed
+{crafted}{range:127.5}(30-67)% Increased Bleed Duration
+{crafted}{range:127.5}(30-40)% more Physical Ailment Damage to Moving Enemies
+{crafted}{range:127.5}{rounding:Integer}+(5-8) Strength
+{crafted}{range:127.5}{rounding:Integer}+(5-8) Dexterity
+{crafted}{range:127.5}{rounding:Integer}+(5-8) Intelligence
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+			<ModRange id="7" range="127.5"></ModRange>
+			<ModRange id="8" range="127.5"></ModRange>
+			<ModRange id="9" range="127.5"></ModRange>
+			<ModRange id="10" range="127.5"></ModRange>
+			<ModRange id="11" range="127.5"></ModRange>
+		</Item>
+		<Item id="4">
+			Rarity: UNIQUE
+Carrion of Creation
+Eternal Gauntlets
+Unique ID: 6
+Crafted: true
+Prefix: {range:127.5}36_6
+Prefix: None
+Prefix: None
+Suffix: None
+Suffix: None
+Suffix: None
+LevelReq: 86
+Implicits: 2
++211 Armor
+{range:127.5}(11-24)% of Armor Mitigation also applies to Damage over Time
+{range:127.5}{rounding:Integer}+(106-135) Health
+{range:127.5}{rounding:Integer}(8-10)% increased Health
+{crafted}{range:127.5}+(100-157)% Chance to inflict Bleed on Hit
+{crafted}100% of Ignite Chance Converted to Bleed Chance
+{crafted}100% of Frostbite Chance Converted to Bleed Chance
+{crafted}100% of Shock Chance Converted to Bleed Chance
+{crafted}100% of Time Rot Chance Converted to Bleed Chance
+{crafted}100% of Damned Chance Converted to Bleed Chance
+{crafted}100% of Poison Chance Converted to Bleed Chance
+{crafted}{range:127.5}(25-47)% Chance for Primordial Blood on Kill (up to 5 times per 2 seconds)
+{crafted}{range:127.5}+(37-100)% Chance to inflict Bleed on Hit for Primordial Blood per stack of Bleed on the enemy releasing it (up to 20)
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+			<ModRange id="7" range="127.5"></ModRange>
+			<ModRange id="8" range="127.5"></ModRange>
+			<ModRange id="9" range="127.5"></ModRange>
+			<ModRange id="10" range="127.5"></ModRange>
+			<ModRange id="11" range="127.5"></ModRange>
+			<ModRange id="12" range="127.5"></ModRange>
+			<ModRange id="13" range="127.5"></ModRange>
+		</Item>
+		<Item id="5">
+			Rarity: RARE
+Leonine Greathelm
+Leonine Greathelm
+Unique ID: 2
+Crafted: true
+Prefix: {range:127.5}52_6
+Prefix: {range:127.5}715_4
+Prefix: None
+Suffix: {range:127.5}363_4
+Suffix: {range:127.5}358_4
+Suffix: None
+LevelReq: 85
+Implicits: 2
++550 Armor
+{range:127.5}(50-85)% reduced Bonus Damage Taken from Critical Strikes
+{range:127.5}{rounding:Integer}(21-26)% increased Health
+{range:127.5}{rounding:Integer}+(71-95) Armor
+{range:127.5}(25-30)% reduced Bonus Damage Taken from Critical Strikes
+{range:127.5}+(36-43)% Chance to Inflict Bleed on Hit if wielding an Axe
+{range:127.5}+(37-45)% Physical Penetration with Bleed
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+			<ModRange id="7" range="127.5"></ModRange>
+		</Item>
+		<Item id="6">
+			Rarity: UNIQUE
+Valdyr's Chalice
+Silver Grail
+Unique ID: 12
+Crafted: true
+Prefix: {range:127.5}25_6
+Prefix: None
+Prefix: None
+Suffix: None
+Suffix: None
+Suffix: None
+LevelReq: 15
+Implicits: 1
+{range:127.5}{rounding:Integer}+(10-25) Mana
+{range:127.5}{rounding:Integer}+(131-180) Health
+{crafted}100% of Damage Reflected
+{crafted}{range:127.5}+(40-50)% Chance to inflict Bleed on Hit
+{crafted}{range:127.5}(40-50)% Increased Bleed Duration
+{crafted}2% of Physical Damage Over Time Damage Leeched as Health
+{crafted}20 Health gained on Kill per stack of Bleed on the Target
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+			<ModRange id="7" range="127.5"></ModRange>
+		</Item>
+		<Item id="7">
+			Rarity: RARE
+Silver Ring
+Silver Ring
+Unique ID: 9
+Crafted: true
+Prefix: {range:127.5}25_4
+Prefix: {range:127.5}825_4
+Prefix: None
+Suffix: {range:127.5}87_6
+Suffix: {range:127.5}72_4
+Suffix: {range:127.5}507_0
+LevelReq: 0
+Implicits: 1
+{range:127.5}(3-8)% increased Movement Speed
+{range:127.5}{rounding:Integer}+(61-90) Health
+{range:127.5}{rounding:Integer}+(46-68) Health
+{range:127.5}{rounding:Integer}+(10-12) Health Regen
+{range:127.5}(31-36)% increased Throwing Attack Speed
+{range:127.5}{rounding:Integer}(40-60)% increased Damage Over Time
+{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
+-3 Throwing Attack Mana Cost
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+			<ModRange id="7" range="127.5"></ModRange>
+			<ModRange id="8" range="127.5"></ModRange>
+		</Item>
+		<Item id="8">
+			Rarity: RARE
+Silver Ring
+Silver Ring
+Unique ID: 10
+Crafted: true
+Prefix: {range:127.5}25_4
+Prefix: {range:127.5}825_4
+Prefix: None
+Suffix: {range:127.5}87_6
+Suffix: {range:127.5}30_4
+Suffix: {range:127.5}507_0
+LevelReq: 0
+Implicits: 1
+{range:127.5}(3-8)% increased Movement Speed
+{range:127.5}{rounding:Integer}+(61-90) Health
+{range:127.5}{rounding:Integer}+(46-68) Health
+{range:127.5}{rounding:Integer}+(10-12) Health Regen
+{range:127.5}(31-36)% increased Throwing Attack Speed
+{range:127.5}{rounding:Integer}(40-60)% increased Physical Damage
+{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
+-3 Throwing Attack Mana Cost
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+			<ModRange id="7" range="127.5"></ModRange>
+			<ModRange id="8" range="127.5"></ModRange>
+		</Item>
+		<Item id="9">
+			Rarity: UNIQUE
+Thorn Slinger
+Leather Belt
+Unique ID: 7
+Crafted: true
+Prefix: {range:127.5}52_6
+Prefix: None
+Prefix: None
+Suffix: {range:127.5}30_4
+Suffix: {range:127.5}75_0
+Suffix: None
+LevelReq: 9
+Implicits: 1
++4 Potion Slots
+{range:127.5}{rounding:Integer}(21-26)% increased Health
+{range:127.5}{rounding:Integer}(40-60)% increased Physical Damage
+{range:127.5}{rounding:Integer}(20-30) Ward Gained on Potion Use
+100% chance to Cleanse All Ailments on Potion Use
+{crafted}+1 to Physical Skills
+{crafted}{range:127.5}+(24-48)% Chance to inflict Bleed on Hit
+{crafted}6% increased Movement Speed
+{crafted}{range:127.5}{rounding:Integer}(24-48) Damage Reflected to Attackers
+{crafted}6% increased Throwing Attack Speed
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+			<ModRange id="7" range="127.5"></ModRange>
+			<ModRange id="8" range="127.5"></ModRange>
+			<ModRange id="9" range="127.5"></ModRange>
+			<ModRange id="10" range="127.5"></ModRange>
+		</Item>
+		<Item id="10">
+			Rarity: RARE
+Dragonbone Axe
+Dragonbone Axe
+Unique ID: 4
+Crafted: true
+Prefix: {range:127.5}68_4
+Prefix: {range:127.5}55_4
+Prefix: None
+Suffix: {range:127.5}30_6
+Suffix: {range:127.5}72_4
+Suffix: None
+Quality: 0
+LevelReq: 80
+Implicits: 3
++51 Melee Damage
+{range:127.5}{rounding:Integer}+(10-14) Minion Melee Damage
+{range:127.5}+(70-100)% Chance to inflict Bleed on Hit
+{range:127.5}{scalar:1.75}+(24-30)% Chance to inflict Bleed on Hit
+{range:127.5}{scalar:1.75}+(24-30)% Chance to Ignite on Hit
+{range:127.5}{scalar:1.75}{rounding:Integer}(96-120)% increased Physical Damage
+{range:127.5}{scalar:1.75}{rounding:Integer}(40-60)% increased Damage Over Time
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+			<ModRange id="7" range="127.5"></ModRange>
+		</Item>
+		<Item id="11">
+			Rarity: UNIQUE
+Countenance of Majasa
+Ironglass Shield
+Unique ID: 5
+Crafted: true
+Prefix: None
+Prefix: None
+Prefix: None
+Suffix: {range:127.5}3_6
+Suffix: {range:127.5}81_4
+Suffix: None
+LevelReq: 72
+Implicits: 2
++35% Block Chance
+{range:127.5}{rounding:Integer}+(400-620) Block Effectiveness
+{range:127.5}+(21-26)% Block Chance
+{range:127.5}{rounding:Integer}+(351-500) Block Effectiveness
+{crafted}+20% Chance every second for each enemy looking at you to be Petrified for 2 seconds
+{crafted}+20% Chance on block to Petrify the attacker for 2 seconds
+{crafted}{range:127.5}(25-30)% of Block Effectiveness applies to Damage over Time as if it had been Blocked
+{crafted}{range:127.5}{rounding:Integer}+(150-300) Block Effectiveness
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+			<ModRange id="5" range="127.5"></ModRange>
+			<ModRange id="6" range="127.5"></ModRange>
+			<ModRange id="7" range="127.5"></ModRange>
+			<ModRange id="8" range="127.5"></ModRange>
+		</Item>
+		<Item id="12">
+			Rarity: RARE
+Heretical Large Rahyeh Idol
+Heretical Large Rahyeh Idol
+Unique ID: Idol 4
+Crafted: true
+Prefix: {range:127.5}193_0
+Prefix: {range:127.5}899_6
+Prefix: None
+Suffix: {range:127.5}128_0
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 0
+{range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
+{range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
++5% Endurance
+{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+		</Item>
+		<Item id="13">
+			Rarity: RARE
+Heretical Adorned Rahyeh Idol
+Heretical Adorned Rahyeh Idol
+Unique ID: Idol 14
+Crafted: true
+Prefix: {range:127.5}197_0
+Prefix: {range:127.5}921_6
+Prefix: None
+Suffix: {range:127.5}276_0
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 0
+{range:127.5}{scalar:0.95}{rounding:Integer}+(185-400) Block Effectiveness
+{range:127.5}{scalar:1.28}{rounding:Integer}(7-8)% increased Armor
+{scalar:1.28}4% of Armor Mitigation also applies to Damage over Time
+{range:127.5}+(10-25)% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+		</Item>
+		<Item id="14">
+			Rarity: RARE
+Heretical Large Rahyeh Idol
+Heretical Large Rahyeh Idol
+Unique ID: Idol 1
+Crafted: true
+Prefix: {range:127.5}193_0
+Prefix: {range:127.5}899_6
+Prefix: None
+Suffix: {range:127.5}128_0
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 0
+{range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
+{range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
++5% Endurance
+{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+		</Item>
+		<Item id="15">
+			Rarity: RARE
+Heretical Large Rahyeh Idol
+Heretical Large Rahyeh Idol
+Unique ID: Idol 11
+Crafted: true
+Prefix: {range:127.5}193_0
+Prefix: {range:127.5}899_6
+Prefix: None
+Suffix: {range:127.5}128_0
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 0
+{range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
+{range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
++5% Endurance
+{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+		</Item>
+		<Item id="16">
+			Rarity: RARE
+Heretical Large Rahyeh Idol
+Heretical Large Rahyeh Idol
+Unique ID: Idol 7
+Crafted: true
+Prefix: {range:127.5}193_0
+Prefix: {range:127.5}899_6
+Prefix: None
+Suffix: {range:127.5}128_0
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 0
+{range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
+{range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
++5% Endurance
+{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+		</Item>
+		<Item id="17">
+			Rarity: RARE
+Humble Weaver Idol
+Humble Weaver Idol
+Unique ID: Idol 2
+Crafted: true
+Prefix: {range:127.5}870_0
+Prefix: None
+Prefix: None
+Suffix: {range:127.5}858_0
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 0
+{range:127.5}+(18-23)% Physical Resistance
+{range:127.5}+(18-23)% Minion Physical Resistance
+{range:127.5}+(15-20)% Chance to inflict Bleed on Hit
+{range:127.5}+(1-2)% Physical Penetration with Bleed
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+		</Item>
+		<Item id="18">
+			Rarity: RARE
+Humble Weaver Idol
+Humble Weaver Idol
+Unique ID: Idol 6
+Crafted: true
+Prefix: {range:127.5}867_0
+Prefix: None
+Prefix: None
+Suffix: {range:127.5}858_0
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 0
+{range:127.5}+(18-23)% Necrotic Resistance
+{range:127.5}+(18-23)% Minion Necrotic Resistance
+{range:127.5}+(15-20)% Chance to inflict Bleed on Hit
+{range:127.5}+(1-2)% Physical Penetration with Bleed
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
+		</Item>
+		<Item id="19">
+			Rarity: RARE
+Grand Flames of the Black Sun
+Grand Flames of the Black Sun
+Unique ID: 35
+Crafted: true
+Prefix: None
+Prefix: None
+Prefix: None
+Suffix: None
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 1
+{range:127.5}+(65-100)% Chance to Ignite on Hit
+			<ModRange id="1" range="127.5"></ModRange>
+		</Item>
+		<Item id="20">
+			Rarity: RARE
+Grand Cruelty of the Meruna
+Grand Cruelty of the Meruna
+Unique ID: 37
+Crafted: true
+Prefix: None
+Prefix: None
+Prefix: None
+Suffix: None
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 1
+{range:127.5}+(65-100)% Chance to Shock on Hit
+			<ModRange id="1" range="127.5"></ModRange>
+		</Item>
+		<Item id="21">
+			Rarity: RARE
+Grand Hemmorage of Marrow
+Grand Hemmorage of Marrow
+Unique ID: 39
+Crafted: true
+Prefix: None
+Prefix: None
+Prefix: None
+Suffix: None
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 1
+{range:127.5}+(65-100)% Chance to inflict Bleed on Hit
+			<ModRange id="1" range="127.5"></ModRange>
+		</Item>
+		<Item id="22">
+			Rarity: RARE
+Grand Bones of Eternity
+Grand Bones of Eternity
+Unique ID: 44
+Crafted: true
+Prefix: None
+Prefix: None
+Prefix: None
+Suffix: None
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 2
+{range:127.5}+(5-8)% Block Chance
+{range:127.5}{rounding:Integer}+(180-240) Block Effectiveness
+			<ModRange id="1" range="127.5"></ModRange>
+			<ModRange id="2" range="127.5"></ModRange>
+		</Item>
+		<Item id="23">
+			Rarity: RARE
+Grand Body of Obsidian
+Grand Body of Obsidian
+Unique ID: 45
+Crafted: true
+Prefix: None
+Prefix: None
+Prefix: None
+Suffix: None
+Suffix: None
+Suffix: None
+LevelReq: 0
+Implicits: 1
+{range:127.5}{rounding:Integer}+(200-320) Armor
+			<ModRange id="1" range="127.5"></ModRange>
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="nil">
+			<Slot itemId="1" itemPbURL="" name="Amulet"></Slot>
+			<Slot itemId="9" itemPbURL="" name="Belt"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Blessing 1"></Slot>
+			<Slot itemId="23" itemPbURL="" name="Blessing 10"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Blessing 2"></Slot>
+			<Slot itemId="19" itemPbURL="" name="Blessing 3"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Blessing 4"></Slot>
+			<Slot itemId="20" itemPbURL="" name="Blessing 5"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Blessing 6"></Slot>
+			<Slot itemId="21" itemPbURL="" name="Blessing 7"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Blessing 8"></Slot>
+			<Slot itemId="22" itemPbURL="" name="Blessing 9"></Slot>
+			<Slot itemId="2" itemPbURL="" name="Body Armor"></Slot>
+			<Slot itemId="3" itemPbURL="" name="Boots"></Slot>
+			<Slot itemId="4" itemPbURL="" name="Gloves"></Slot>
+			<Slot itemId="5" itemPbURL="" name="Helmet"></Slot>
+			<Slot itemId="14" itemPbURL="" name="Idol 1"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 10"></Slot>
+			<Slot itemId="15" itemPbURL="" name="Idol 11"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 12"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 13"></Slot>
+			<Slot itemId="13" itemPbURL="" name="Idol 14"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 15"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 16"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 17"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 18"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 19"></Slot>
+			<Slot itemId="17" itemPbURL="" name="Idol 2"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 20"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 3"></Slot>
+			<Slot itemId="12" itemPbURL="" name="Idol 4"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 5"></Slot>
+			<Slot itemId="18" itemPbURL="" name="Idol 6"></Slot>
+			<Slot itemId="16" itemPbURL="" name="Idol 7"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 8"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Idol 9"></Slot>
+			<Slot itemId="6" itemPbURL="" name="Relic"></Slot>
+			<Slot itemId="7" itemPbURL="" name="Ring 1"></Slot>
+			<Slot itemId="8" itemPbURL="" name="Ring 2"></Slot>
+			<Slot itemId="10" itemPbURL="" name="Weapon 1"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 1"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 2"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 3"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 4"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 5"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 6"></Slot>
+			<Slot itemId="11" itemPbURL="" name="Weapon 2"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 1"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 2"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 3"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 4"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 5"></Slot>
+			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 6"></Slot>
+		</ItemSet>
+	</Items>
+	<Notes>
+		
+	</Notes>
+	<Party ShowAdvanceTools="false" append="false" destination="All"></Party>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showAltQualityGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="true" index="1" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="ht16aw" slot="Skill 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="2" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ah443" slot="Skill 2"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="3" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="si4lgl" slot="Skill 3"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="sm87r4" slot="Skill 4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="hh7pa3" slot="Skill 5"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="6" label="Bleed (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:ht16aw"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="7" label="Ignite (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:ht16aw"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="8" label="Shock (from Hammer Throw)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:ht16aw"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="9" label="Blind (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="10" label="Ignite (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="11" label="Shock (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="12" label="Healing Hands Lingering Warmth (from Healing Hands)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_HealingHandsHealOverTime" source="SkillId:hh7pa3"></Skill>
+		</SkillSet>
+	</Skills>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="3" classId="2" nodes="Paladin#1,Sentinel#1,Sentinel-0#8,Sentinel-1#1,Sentinel-108#5,Sentinel-11#5,Sentinel-119#5,Sentinel-2#5,Sentinel-27#3,Sentinel-49#6,Sentinel-65#5,Sentinel-69#2,Sentinel-72#5,Sentinel-77#8,Sentinel-8#5,Sentinel-81#8,Sentinel-84#10,Sentinel-87#7,Sentinel-89#4,Sentinel-90#5,Sentinel-93#5,Sentinel-95#5,Sentinel-98#6,ah443-0#1,ah443-10#4,ah443-11#2,ah443-12#5,ah443-16#1,ah443-18#3,ah443-19#2,ah443-4#3,hh7pa3-0#1,hh7pa3-1#1,hh7pa3-10#3,hh7pa3-11#1,hh7pa3-18#4,hh7pa3-2#1,hh7pa3-20#2,hh7pa3-22#1,hh7pa3-26#1,hh7pa3-3#1,hh7pa3-4#1,hh7pa3-9#4,ht16aw-0#1,ht16aw-16#1,ht16aw-17#1,ht16aw-18#2,ht16aw-2#1,ht16aw-20#1,ht16aw-21#1,ht16aw-22#6,ht16aw-24#3,ht16aw-9#5,si4lgl-0#1,si4lgl-15#2,si4lgl-2#1,si4lgl-23#2,si4lgl-24#1,si4lgl-26#3,si4lgl-28#1,si4lgl-32#4,si4lgl-4#1,si4lgl-5#5,sm87r4-0#1,sm87r4-10#3,sm87r4-11#4,sm87r4-20#2,sm87r4-28#5,sm87r4-30#5,sm87r4-9#1" treeVersion="1_3">
+			<Overrides></Overrides>
+		</Spec>
+	</Tree>
+	<TreeView searchStr="" showStatDifferences="true" zoomLevel="12" zoomX="0" zoomY="0"></TreeView>
+</LastEpochPlanner>
