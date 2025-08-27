@@ -706,16 +706,20 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
                             local nbMods = itemData["data"][nbAffixesIndex]
                             for i = 0, nbMods - 1 do
                                 local dataId = nbAffixesIndex + 1 + 3 * i
-                                local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 4) * 256
-                                local affixTier = math.floor(itemData["data"][dataId] / 16)
-                                local modId = affixId .. "_" .. affixTier
-                                local modData = data.itemMods.Item[modId]
-                                local range = itemData["data"][dataId + 2]
-                                if modData then
-                                    if modData.type == "Prefix" then
-                                        table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
-                                    else
-                                        table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
+                                -- There are cases where the "nbAffixesIndex" value is wrong, not sure why but
+                                -- we should at least prevent a crash when it's higher than expected (could it be lower?)
+                                if itemData["data"][dataId] then
+                                    local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 4) * 256
+                                    local affixTier = math.floor(itemData["data"][dataId] / 16)
+                                    local modId = affixId .. "_" .. affixTier
+                                    local modData = data.itemMods.Item[modId]
+                                    local range = itemData["data"][dataId + 2]
+                                    if modData then
+                                        if modData.type == "Prefix" then
+                                            table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
+                                        else
+                                            table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
+                                        end
                                     end
                                 end
                             end
