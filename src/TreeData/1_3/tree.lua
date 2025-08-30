@@ -114,34 +114,6 @@ return {
             846
         }
     },
-    ["skillSprites"]= {
-        ["normalInactive"]= {
-            {
-                ["filename"]= "https://web.poecdn.com/image/passive-skill/skills-disabled-3.jpg?c661252e",
-                ["coords"]= {
-                    ["Art/2DArt/SkillIcons/passives/MasteryBlank.png"]= {
-                        ["x"]= 312,
-                        ["y"]= 104,
-                        ["w"]= 26,
-                        ["h"]= 26
-                    },
-                }
-            }
-        },
-        ["normalActive"]= {
-            {
-                ["filename"]= "https://web.poecdn.com/image/passive-skill/skills-3.jpg?911d3130",
-                ["coords"]= {
-                    ["Art/2DArt/SkillIcons/passives/MasteryBlank.png"]= {
-                        ["x"]= 312,
-                        ["y"]= 104,
-                        ["w"]= 26,
-                        ["h"]= 26
-                    },
-                }
-            }
-        },
-    },
     ["imageZoomLevels"]= {
         0.1246,
         0.2109,

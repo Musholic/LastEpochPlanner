@@ -178,28 +178,18 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
 
     -- Load sprite sheets and build sprite map
     self.spriteMap = { }
-    local spriteSheets = { }
-    for type, data in pairs(self.skillSprites) do
-        local maxZoom = data[#data]
-        maxZoom = data[0.3835] or data[1]
-        local sheet = spriteSheets[maxZoom.filename]
-        if not sheet then
-            sheet = { }
-            self:LoadImage(maxZoom.filename:gsub("%?%x+$", ""):gsub(".*/", "") or maxZoom.filename:gsub("%?%x+$", ""), maxZoom.filename or "https://web.poecdn.com" .. (self.imageRoot or "/image/") .. ("passive-skill/" or "build-gen/passive-skill-sprite/") .. maxZoom.filename, sheet, "CLAMP")--, "MIPMAP")
-            spriteSheets[maxZoom.filename] = sheet
-        end
-        for name, coords in pairs(maxZoom.coords) do
-            if not self.spriteMap[name] then
-                self.spriteMap[name] = { }
-            end
-            self.spriteMap[name][type] = {
+    for _, node in pairs(self.nodes) do
+        if node.icon and not self.spriteMap[node.icon] then
+            local sheet = { }
+            self:LoadImage("extracted_sprites/" .. node.icon .. ".png", nil, sheet)
+            self.spriteMap[node.icon] = {
                 handle = sheet.handle,
-                width = coords.w,
-                height = coords.h,
-                [1] = coords.x / sheet.width,
-                [2] = coords.y / sheet.height,
-                [3] = (coords.x + coords.w) / sheet.width,
-                [4] = (coords.y + coords.h) / sheet.height
+                width = sheet.width,
+                height = sheet.height,
+                [1] = 0,
+                [2] = 0,
+                [3] = 1,
+                [4] = 1
             }
         end
     end
@@ -432,14 +422,10 @@ end
 
 -- Common processing code for nodes (used for both real tree nodes and subgraph nodes)
 function PassiveTreeClass:ProcessNode(node)
-    -- Assign node artwork assets
-    if node.type == "Mastery" and node.masteryEffects then
-        node.masterySprites = { activeIcon = self.spriteMap[node.activeIcon], inactiveIcon = self.spriteMap[node.inactiveIcon], activeEffectImage = self.spriteMap[node.activeEffectImage] }
-    else
-        node.sprites = self.spriteMap[node.icon]
-    end
+    node.sprites = self.spriteMap[node.icon]
     if not node.sprites then
         --error("missing sprite "..node.icon)
+        -- TODO: do we need a default here?
         node.sprites = self.spriteMap["Art/2DArt/SkillIcons/passives/MasteryBlank.png"]
     end
     node.overlay = self.nodeOverlay[node.type]

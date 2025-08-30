@@ -139,6 +139,7 @@
     "Primalist-0": {
       "skill": "Primalist-0",
       "name": "Primal Strength",
+      "icon": "C-Fury Leap",
       "x": -1777.8,
       "y": 615.2001,
       "maxPoints": 8,
@@ -164,6 +165,7 @@
     "Primalist-1": {
       "skill": "Primalist-1",
       "name": "Natural Attunement",
+      "icon": "C-Eterra's Blessing",
       "x": -1777.8,
       "y": -307.59998,
       "maxPoints": 8,
@@ -190,6 +192,7 @@
     "Primalist-2": {
       "skill": "Primalist-2",
       "name": "Gift of the Wilderness",
+      "icon": "C-Summon-Wolf",
       "x": -1777.8,
       "y": -615.19995,
       "maxPoints": 6,
@@ -210,6 +213,7 @@
     "Primalist-3": {
       "skill": "Primalist-3",
       "name": "Hunter's Restoration",
+      "icon": "c-spriggan healing wind alt",
       "x": -1115.8,
       "y": 307.6001,
       "maxPoints": 5,
@@ -238,6 +242,7 @@
     "Primalist-4": {
       "skill": "Primalist-4",
       "name": "Primal Medicine",
+      "icon": "C-Charm-Animal",
       "x": -1115.8,
       "y": -615.19995,
       "maxPoints": 6,
@@ -263,6 +268,7 @@
     "Primalist-5": {
       "skill": "Primalist-5",
       "name": "Survival of the Pack",
+      "icon": "C-Cross Slash",
       "x": -453.80005,
       "y": 615.2001,
       "maxPoints": 6,
@@ -287,6 +293,7 @@
     "Primalist-6": {
       "skill": "Primalist-6",
       "name": "Wisdom of the Wild",
+      "icon": "c-Vale Spirit Bolt_3",
       "x": -453.80005,
       "y": -307.59998,
       "maxPoints": 6,
@@ -309,6 +316,7 @@
     "Primalist-7": {
       "skill": "Primalist-7",
       "name": "Tempest Bond",
+      "icon": "c-tempest strike3",
       "x": 208.19995,
       "y": 6.1035156E-05,
       "maxPoints": 8,
@@ -334,6 +342,7 @@
     "Primalist-8": {
       "skill": "Primalist-8",
       "name": "Hunter's Emanation",
+      "icon": "c-Bear_Charge_3",
       "x": 208.19995,
       "y": 307.6001,
       "maxPoints": 5,
@@ -358,6 +367,7 @@
     "Primalist-9": {
       "skill": "Primalist-9",
       "name": "Ancient Call",
+      "icon": "bear roar",
       "x": 208.19995,
       "y": -615.19995,
       "maxPoints": 6,
@@ -379,6 +389,7 @@
     "Primalist-10": {
       "skill": "Primalist-10",
       "name": "Harmony of Blades",
+      "icon": "c-crossed-swords",
       "x": -1115.8,
       "y": 6.1035156E-05,
       "maxPoints": 1,
@@ -404,6 +415,7 @@
     "Primalist-12": {
       "skill": "Primalist-12",
       "name": "Ursine Strength",
+      "icon": "c-Bear_Charge_3",
       "x": -1777.8,
       "y": 984.80005,
       "maxPoints": 8,
@@ -430,6 +442,7 @@
     "Primalist-13": {
       "skill": "Primalist-13",
       "name": "Savagery",
+      "icon": "c-Bear Ravage",
       "x": -1777.8,
       "y": 2215.2002,
       "maxPoints": 8,
@@ -453,6 +466,7 @@
     "Primalist-14": {
       "skill": "Primalist-14",
       "name": "Artor's Loyalty",
+      "icon": "Charm animal",
       "x": -1387.4,
       "y": 1600,
       "maxPoints": 1,
@@ -477,6 +491,7 @@
     "Primalist-15": {
       "skill": "Primalist-15",
       "name": "Ambush",
+      "icon": "c-damage debuff",
       "x": -1387.4,
       "y": 1907.6001,
       "maxPoints": 8,
@@ -502,6 +517,7 @@
     "Primalist-16": {
       "skill": "Primalist-16",
       "name": "Lamprey Teeth",
+      "icon": "c-ferocity_1",
       "x": -997,
       "y": 2215.2002,
       "maxPoints": 6,
@@ -523,6 +539,7 @@
     "Primalist-17": {
       "skill": "Primalist-17",
       "name": "Feline Bond",
+      "icon": "Summon Sabertooth",
       "x": -1777.8,
       "y": 1600,
       "maxPoints": 8,
@@ -544,6 +561,7 @@
     "Primalist-18": {
       "skill": "Primalist-18",
       "name": "Tusk Warrior",
+      "icon": "c-Attack Speed Debuff (generic)_3",
       "x": -997,
       "y": 984.80005,
       "maxPoints": 8,
@@ -567,6 +585,7 @@
     "Primalist-19": {
       "skill": "Primalist-19",
       "name": "Boar Heart",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": -1387.4,
       "y": 1292.4,
       "maxPoints": 5,
@@ -592,6 +611,7 @@
     "Primalist-20": {
       "skill": "Primalist-20",
       "name": "Hawk Wings",
+      "icon": "c-Falcon",
       "x": 955,
       "y": 1292.4,
       "maxPoints": 10,
@@ -615,6 +635,7 @@
     "Primalist-21": {
       "skill": "Primalist-21",
       "name": "Cry of the Lynx",
+      "icon": "c-sabertooth swipe alt",
       "x": 564.59985,
       "y": 1600,
       "maxPoints": 8,
@@ -642,6 +663,7 @@
     "Primalist-22": {
       "skill": "Primalist-22",
       "name": "The Chase",
+      "icon": "c-Swiftness",
       "x": -606.6001,
       "y": 1600,
       "maxPoints": 8,
@@ -666,6 +688,7 @@
     "Primalist-23": {
       "skill": "Primalist-23",
       "name": "Envenom",
+      "icon": "c-scorpion poison alt",
       "x": -216.20007,
       "y": 1292.4,
       "maxPoints": 5,
@@ -687,6 +710,7 @@
     "Primalist-24": {
       "skill": "Primalist-24",
       "name": "Call of the Pack",
+      "icon": "c-wolf howl",
       "x": -997,
       "y": 1600,
       "maxPoints": 5,
@@ -714,6 +738,7 @@
     "Primalist-25": {
       "skill": "Primalist-25",
       "name": "Rending Maw",
+      "icon": "c-Stun Susceptibility Debuff (generic)",
       "x": -606.6001,
       "y": 1907.6001,
       "maxPoints": 5,
@@ -736,6 +761,7 @@
     "Primalist-26": {
       "skill": "Primalist-26",
       "name": "Rattlesnake Rattlesnake",
+      "icon": "c-Vale Spirit Bolt_4",
       "x": 1345.3999,
       "y": 984.80005,
       "maxPoints": 10,
@@ -759,6 +785,7 @@
     "Primalist-27": {
       "skill": "Primalist-27",
       "name": "Life in the Wilderness",
+      "icon": "Glyph of Fire",
       "x": 174.19995,
       "y": 1600,
       "maxPoints": 8,
@@ -787,6 +814,7 @@
     "Primalist-28": {
       "skill": "Primalist-28",
       "name": "Serrated Claws",
+      "icon": "c-Bear Swipe_Yellow",
       "x": 1345.3999,
       "y": 1600,
       "maxPoints": 6,
@@ -813,6 +841,7 @@
     "Primalist-29": {
       "skill": "Primalist-29",
       "name": "Avian Shelter",
+      "icon": "c-Blade Wings",
       "x": 564.59985,
       "y": 1292.4,
       "maxPoints": 10,
@@ -840,6 +869,7 @@
     "Primalist-30": {
       "skill": "Primalist-30",
       "name": "Feeding Frenzy",
+      "icon": "c-Frenzy",
       "x": 1735.7998,
       "y": 2215.2002,
       "maxPoints": 1,
@@ -863,6 +893,7 @@
     "Primalist-31": {
       "skill": "Primalist-31",
       "name": "Exemplar",
+      "icon": "c-Ravage",
       "x": 1735.7998,
       "y": 1292.4,
       "maxPoints": 5,
@@ -885,6 +916,7 @@
     "Primalist-32": {
       "skill": "Primalist-32",
       "name": "Natural Bond",
+      "icon": "c-Healing Hands",
       "x": 564.59985,
       "y": 1907.6001,
       "maxPoints": 1,
@@ -909,6 +941,7 @@
     "Primalist-33": {
       "skill": "Primalist-33",
       "name": "Primal Aspects",
+      "icon": "Summon Snakes",
       "x": 1735.7998,
       "y": 1907.6001,
       "maxPoints": 10,
@@ -932,6 +965,7 @@
     "Primalist-34": {
       "skill": "Primalist-34",
       "name": "Ancient Might",
+      "icon": "c-bear roar",
       "x": 1735.7998,
       "y": 984.80005,
       "maxPoints": 10,
@@ -961,6 +995,7 @@
     "Primalist-35": {
       "skill": "Primalist-35",
       "name": "Fate Carver",
+      "icon": "c-thorn-totem-new",
       "x": -997,
       "y": 3815.2002,
       "maxPoints": 8,
@@ -980,6 +1015,7 @@
     "Primalist-36": {
       "skill": "Primalist-36",
       "name": "Sky Warrior",
+      "icon": "c-storm_crows",
       "x": -1777.8,
       "y": 3200,
       "maxPoints": 8,
@@ -1005,6 +1041,7 @@
     "Primalist-37": {
       "skill": "Primalist-37",
       "name": "Ancestral Speed",
+      "icon": "c-Spellpower Buff (generic)_2",
       "x": -606.6001,
       "y": 3815.2002,
       "maxPoints": 5,
@@ -1028,6 +1065,7 @@
     "Primalist-38": {
       "skill": "Primalist-38",
       "name": "Totemic Fury",
+      "icon": "rage_totem",
       "x": -1387.4,
       "y": 3507.6,
       "maxPoints": 5,
@@ -1051,6 +1089,7 @@
     "Primalist-39": {
       "skill": "Primalist-39",
       "name": "Rhythm of Thunder",
+      "icon": "gathering-storm",
       "x": 564.59985,
       "y": 3815.2002,
       "maxPoints": 10,
@@ -1075,6 +1114,7 @@
     "Primalist-40": {
       "skill": "Primalist-40",
       "name": "Silent Protector",
+      "icon": "c-frenzy-totem-new",
       "x": -1777.8,
       "y": 3815.2002,
       "maxPoints": 8,
@@ -1102,6 +1142,7 @@
     "Primalist-41": {
       "skill": "Primalist-41",
       "name": "Shamanic Infusion",
+      "icon": "C-Teleport",
       "x": -1777.8,
       "y": 2584.8,
       "maxPoints": 8,
@@ -1128,6 +1169,7 @@
     "Primalist-42": {
       "skill": "Primalist-42",
       "name": "Wind Bringer",
+      "icon": "ice_crash",
       "x": -997,
       "y": 2584.8,
       "maxPoints": 10,
@@ -1157,6 +1199,7 @@
     "Primalist-43": {
       "skill": "Primalist-43",
       "name": "Storm Bringer",
+      "icon": "lightning_swipe",
       "x": -997,
       "y": 3200,
       "maxPoints": 10,
@@ -1182,6 +1225,7 @@
     "Primalist-44": {
       "skill": "Primalist-44",
       "name": "Hail Bringer",
+      "icon": "c-freeze",
       "x": -606.6001,
       "y": 2892.4,
       "maxPoints": 5,
@@ -1206,6 +1250,7 @@
     "Primalist-45": {
       "skill": "Primalist-45",
       "name": "Rune of Awe",
+      "icon": "amplified-spell",
       "x": 174.19995,
       "y": 3200,
       "maxPoints": 8,
@@ -1228,6 +1273,7 @@
     "Primalist-46": {
       "skill": "Primalist-46",
       "name": "Storm Elder",
+      "icon": "c-tempest strike3",
       "x": -216.20007,
       "y": 3815.2002,
       "maxPoints": 10,
@@ -1248,6 +1294,7 @@
     "Primalist-48": {
       "skill": "Primalist-48",
       "name": "Protective Circle",
+      "icon": "mosaic-glass",
       "x": 174.19995,
       "y": 2892.4,
       "maxPoints": 5,
@@ -1274,6 +1321,7 @@
     "Primalist-49": {
       "skill": "Primalist-49",
       "name": "Swirling Maelstrom",
+      "icon": "c-tempest strike4",
       "x": 1345.3999,
       "y": 3200,
       "maxPoints": 6,
@@ -1300,6 +1348,7 @@
     "Primalist-50": {
       "skill": "Primalist-50",
       "name": "Elemental Shrines",
+      "icon": "c-Holy Aura Temp",
       "x": 564.59985,
       "y": 3200,
       "maxPoints": 8,
@@ -1323,6 +1372,7 @@
     "Primalist-51": {
       "skill": "Primalist-51",
       "name": "Glacial Strike",
+      "icon": "cold-rune2",
       "x": -216.20007,
       "y": 2892.4,
       "maxPoints": 8,
@@ -1347,6 +1397,7 @@
     "Primalist-52": {
       "skill": "Primalist-52",
       "name": "Gift of the Skies",
+      "icon": "C-Birds of Prey",
       "x": 1345.3999,
       "y": 2584.8,
       "maxPoints": 8,
@@ -1370,6 +1421,7 @@
     "Primalist-53": {
       "skill": "Primalist-53",
       "name": "Ascendant Circle",
+      "icon": "spell-reflect",
       "x": 1735.7998,
       "y": 3200,
       "maxPoints": 8,
@@ -1392,6 +1444,7 @@
     "Primalist-54": {
       "skill": "Primalist-54",
       "name": "Nature's Embrace",
+      "icon": "c-bear form_2",
       "x": 174.19995,
       "y": 1292.4,
       "maxPoints": 1,
@@ -1411,6 +1464,7 @@
     "Primalist-55": {
       "skill": "Primalist-55",
       "name": "Predator",
+      "icon": "c-Laceration",
       "x": -216.20007,
       "y": 984.80005,
       "maxPoints": 8,
@@ -1436,6 +1490,7 @@
     "Primalist-56": {
       "skill": "Primalist-56",
       "name": "Porcine Constitution",
+      "icon": "c-armor buff_2",
       "x": 174.19995,
       "y": 984.80005,
       "maxPoints": 5,
@@ -1463,6 +1518,7 @@
     "Primalist-57": {
       "skill": "Primalist-57",
       "name": "The Circle Of Life",
+      "icon": "c-flurry2 - orange",
       "x": 174.19995,
       "y": 2215.2002,
       "maxPoints": 5,
@@ -1491,6 +1547,7 @@
     "Primalist-58": {
       "skill": "Primalist-58",
       "name": "Viper Fangs",
+      "icon": "c-serpent strike",
       "x": 564.59985,
       "y": 984.80005,
       "maxPoints": 10,
@@ -1517,6 +1574,7 @@
     "Primalist-59": {
       "skill": "Primalist-59",
       "name": "Embodiment",
+      "icon": "c-raptor_enrage",
       "x": 955,
       "y": 1907.6001,
       "maxPoints": 5,
@@ -1546,6 +1604,7 @@
     "Primalist-60": {
       "skill": "Primalist-60",
       "name": "Lagonian Wrath",
+      "icon": "c-sky bolt-purple",
       "x": -1387.4,
       "y": 3200,
       "maxPoints": 5,
@@ -1568,6 +1627,7 @@
     "Primalist-61": {
       "skill": "Primalist-61",
       "name": "Tempest Form",
+      "icon": "c-tempest",
       "x": -1387.4,
       "y": 2892.4,
       "maxPoints": 8,
@@ -1594,6 +1654,7 @@
     "Primalist-62": {
       "skill": "Primalist-62",
       "name": "Earthen Supremacy",
+      "icon": "c-tremor2",
       "x": -997,
       "y": 3507.6,
       "maxPoints": 8,
@@ -1618,6 +1679,7 @@
     "Primalist-63": {
       "skill": "Primalist-63",
       "name": "Avatar of Thunder",
+      "icon": "lightning-rune",
       "x": -216.20007,
       "y": 3200,
       "maxPoints": 5,
@@ -1642,6 +1704,7 @@
     "Primalist-64": {
       "skill": "Primalist-64",
       "name": "Shattered Heavens",
+      "icon": "cold-buff",
       "x": -216.20007,
       "y": 2584.8,
       "maxPoints": 5,
@@ -1667,6 +1730,7 @@
     "Primalist-65": {
       "skill": "Primalist-65",
       "name": "Dervish",
+      "icon": "elemental-nova",
       "x": 174.19995,
       "y": 3507.6,
       "maxPoints": 5,
@@ -1688,6 +1752,7 @@
     "Primalist-66": {
       "skill": "Primalist-66",
       "name": "Storm Blade",
+      "icon": "Manifest Weapon Temp",
       "x": 955,
       "y": 2892.4,
       "maxPoints": 8,
@@ -1710,6 +1775,7 @@
     "Primalist-67": {
       "skill": "Primalist-67",
       "name": "Weathered Elements",
+      "icon": "c-tornado3",
       "x": -216.20007,
       "y": 2215.2002,
       "maxPoints": 5,
@@ -1735,6 +1801,7 @@
     "Primalist-68": {
       "skill": "Primalist-68",
       "name": "Thunder Strike",
+      "icon": "c-storm_crows",
       "x": 1345.3999,
       "y": 3815.2002,
       "maxPoints": 5,
@@ -1764,6 +1831,7 @@
     "Primalist-69": {
       "skill": "Primalist-69",
       "name": "Lagon's Answer",
+      "icon": "lightning_from_sky",
       "x": 955,
       "y": 3507.6,
       "maxPoints": 5,
@@ -1792,6 +1860,7 @@
     "Primalist-70": {
       "skill": "Primalist-70",
       "name": "Conflux",
+      "icon": "glyph-of-dominion",
       "x": 1735.7998,
       "y": 3507.6,
       "maxPoints": 8,
@@ -1819,6 +1888,7 @@
     "Primalist-71": {
       "skill": "Primalist-71",
       "name": "Spirit Warden",
+      "icon": "c-harden",
       "x": -1777.8,
       "y": 4800,
       "maxPoints": 7,
@@ -1841,6 +1911,7 @@
     "Primalist-72": {
       "skill": "Primalist-72",
       "name": "Blossoming Garden",
+      "icon": "c-eterras-blessing-new",
       "x": -997,
       "y": 5415.2,
       "maxPoints": 10,
@@ -1871,6 +1942,7 @@
     "Primalist-73": {
       "skill": "Primalist-73",
       "name": "Claws of the Forest",
+      "icon": "c-bleed_poison",
       "x": -1387.4,
       "y": 4492.4,
       "maxPoints": 7,
@@ -1895,6 +1967,7 @@
     "Primalist-74": {
       "skill": "Primalist-74",
       "name": "Fetid Resilience",
+      "icon": "c-Damage Mitigation Buff (generic)",
       "x": 564.59985,
       "y": 4800,
       "maxPoints": 8,
@@ -1918,6 +1991,7 @@
     "Primalist-76": {
       "skill": "Primalist-76",
       "name": "Nightshade Fangs",
+      "icon": "Spirit_Thorns-red",
       "x": -606.6001,
       "y": 4492.4,
       "maxPoints": 10,
@@ -1941,6 +2015,7 @@
     "Primalist-77": {
       "skill": "Primalist-77",
       "name": "Thicket of Thorns",
+      "icon": "Thorn_Shield-red",
       "x": -997,
       "y": 4184.8,
       "maxPoints": 5,
@@ -1968,6 +2043,7 @@
     "Primalist-78": {
       "skill": "Primalist-78",
       "name": "Natural Duality",
+      "icon": "c-red-eye",
       "x": 955,
       "y": 4184.8,
       "maxPoints": 1,
@@ -1995,6 +2071,7 @@
     "Primalist-79": {
       "skill": "Primalist-79",
       "name": "Wind in the Leaves",
+      "icon": "dash",
       "x": -606.6001,
       "y": 4184.8,
       "maxPoints": 5,
@@ -2021,6 +2098,7 @@
     "Primalist-80": {
       "skill": "Primalist-80",
       "name": "Totemic Restoration",
+      "icon": "Summon_healing_totem",
       "x": -216.20007,
       "y": 5415.2,
       "maxPoints": 5,
@@ -2046,6 +2124,7 @@
     "Primalist-81": {
       "skill": "Primalist-81",
       "name": "Focused Wrath",
+      "icon": "swipe",
       "x": -997,
       "y": 4800,
       "maxPoints": 5,
@@ -2071,6 +2150,7 @@
     "Primalist-82": {
       "skill": "Primalist-82",
       "name": "Bush Stalker",
+      "icon": "Armblade_Slashes2",
       "x": -216.20007,
       "y": 4184.8,
       "maxPoints": 5,
@@ -2092,6 +2172,7 @@
     "Primalist-83": {
       "skill": "Primalist-83",
       "name": "River Spirits",
+      "icon": "wanderingspirits-blue",
       "x": -606.6001,
       "y": 5107.6,
       "maxPoints": 7,
@@ -2117,6 +2198,7 @@
     "Primalist-84": {
       "skill": "Primalist-84",
       "name": "Woodland Beings",
+      "icon": "Summon_Hive_Purple",
       "x": 564.59985,
       "y": 4492.4,
       "maxPoints": 6,
@@ -2143,6 +2225,7 @@
     "Primalist-85": {
       "skill": "Primalist-85",
       "name": "Reincarnation",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 1345.3999,
       "y": 5107.6,
       "maxPoints": 6,
@@ -2167,6 +2250,7 @@
     "Primalist-86": {
       "skill": "Primalist-86",
       "name": "Rotbane",
+      "icon": "c-thorn-totem-new",
       "x": 1532.2,
       "y": -615.19995,
       "maxPoints": 5,
@@ -2188,6 +2272,7 @@
     "Primalist-87": {
       "skill": "Primalist-87",
       "name": "Overgrowth",
+      "icon": "c-holy aura blue",
       "x": 955,
       "y": 4800,
       "maxPoints": 8,
@@ -2210,6 +2295,7 @@
     "Primalist-88": {
       "skill": "Primalist-88",
       "name": "Harmonious Wisdom",
+      "icon": "Focus",
       "x": 174.19995,
       "y": 5415.2,
       "maxPoints": 10,
@@ -2231,6 +2317,7 @@
     "Primalist-89": {
       "skill": "Primalist-89",
       "name": "Chitinous Plating",
+      "icon": "c-Damage Mitigation Debuff (generic)",
       "x": -1777.8,
       "y": 4184.8,
       "maxPoints": 7,
@@ -2258,6 +2345,7 @@
     "Primalist-90": {
       "skill": "Primalist-90",
       "name": "Force of Nature",
+      "icon": "c-physical damage buff",
       "x": 174.19995,
       "y": 5107.6,
       "maxPoints": 10,
@@ -2285,6 +2373,7 @@
     "Primalist-91": {
       "skill": "Primalist-91",
       "name": "Eternal Nature",
+      "icon": "c-Spellpower 1 Buff (generic)",
       "x": 1735.7998,
       "y": 4184.8,
       "maxPoints": 10,
@@ -2308,6 +2397,7 @@
     "Primalist-92": {
       "skill": "Primalist-92",
       "name": "Tiger Spirit",
+      "icon": "c-harpoon",
       "x": 955,
       "y": 5415.2,
       "maxPoints": 5,
@@ -2331,6 +2421,7 @@
     "Primalist-93": {
       "skill": "Primalist-93",
       "name": "Primal Shifter",
+      "icon": "spriggan_to_swarm",
       "x": 564.59985,
       "y": 5107.6,
       "maxPoints": 8,
@@ -2359,6 +2450,7 @@
     "Primalist-94": {
       "skill": "Primalist-94",
       "name": "Impervious",
+      "icon": "Rebuke",
       "x": 1735.7998,
       "y": 5415.2,
       "maxPoints": 5,
@@ -2385,6 +2477,7 @@
     "Primalist-97": {
       "skill": "Primalist-97",
       "name": "Druidic Prowess",
+      "icon": "bear_to_spriggan",
       "x": -1387.4,
       "y": 4800,
       "maxPoints": 7,
@@ -2407,6 +2500,7 @@
     "Primalist-98": {
       "skill": "Primalist-98",
       "name": "Blessed Springs",
+      "icon": "c-blue-swirl",
       "x": -1387.4,
       "y": 5107.6,
       "maxPoints": 7,
@@ -2438,6 +2532,7 @@
     "Primalist-99": {
       "skill": "Primalist-99",
       "name": "Rageborn",
+      "icon": "Roar",
       "x": 1345.3999,
       "y": 4800,
       "maxPoints": 10,
@@ -2459,6 +2554,7 @@
     "Primalist-100": {
       "skill": "Primalist-100",
       "name": "Toxic Reach",
+      "icon": "Summon_3_Vines",
       "x": 1345.3999,
       "y": 4492.4,
       "maxPoints": 10,
@@ -2484,6 +2580,7 @@
     "Primalist-101": {
       "skill": "Primalist-101",
       "name": "Axe and Claw",
+      "icon": "c-claws",
       "x": -216.20007,
       "y": 1600,
       "maxPoints": 5,
@@ -2504,6 +2601,7 @@
     "Primalist-102": {
       "skill": "Primalist-102",
       "name": "Fist of Stone",
+      "icon": "mace-hit",
       "x": -216.20007,
       "y": 3507.6,
       "maxPoints": 5,
@@ -2529,6 +2627,7 @@
     "Primalist-103": {
       "skill": "Primalist-103",
       "name": "Heorot's Path",
+      "icon": "frost-wall-explosion",
       "x": 174.19995,
       "y": 2584.8,
       "maxPoints": 10,
@@ -2553,6 +2652,7 @@
     "Primalist-104": {
       "skill": "Primalist-104",
       "name": "Hideskin",
+      "icon": "bear",
       "x": 1735.7998,
       "y": 4800,
       "maxPoints": 10,
@@ -2579,6 +2679,7 @@
     "Primalist-106": {
       "skill": "Primalist-106",
       "name": "Eternal Storm",
+      "icon": "tempest-strike",
       "x": 955,
       "y": 2584.8,
       "maxPoints": 5,
@@ -2600,6 +2701,7 @@
     "Primalist-107": {
       "skill": "Primalist-107",
       "name": "Ironbark",
+      "icon": "Summon_healing_totem",
       "x": 1735.7998,
       "y": 2892.4,
       "maxPoints": 10,
@@ -2626,6 +2728,7 @@
     "Primalist-108": {
       "skill": "Primalist-108",
       "name": "Natural Fortitude",
+      "icon": "c-human form",
       "x": -606.6001,
       "y": 1292.4,
       "maxPoints": 8,
@@ -2649,6 +2752,7 @@
     "Primalist-109": {
       "skill": "Primalist-109",
       "name": "Ocean Maw",
+      "icon": "c-primal fury",
       "x": 955,
       "y": 2215.2002,
       "maxPoints": 8,
@@ -2674,6 +2778,7 @@
     "Primalist-110": {
       "skill": "Primalist-110",
       "name": "Rancour",
+      "icon": "Rampage",
       "x": -216.20007,
       "y": 4800,
       "maxPoints": 1,
@@ -2696,6 +2801,7 @@
     "Primalist-111": {
       "skill": "Primalist-111",
       "name": "Aspects of Might",
+      "icon": "Maul",
       "x": 174.19995,
       "y": 4184.8,
       "maxPoints": 10,
@@ -2718,6 +2824,7 @@
     "Primalist-112": {
       "skill": "Primalist-112",
       "name": "Piercing Gale",
+      "icon": "c-ice barrage",
       "x": 174.19995,
       "y": 4492.4,
       "maxPoints": 8,
@@ -2747,6 +2854,7 @@
     "Primalist-114": {
       "skill": "Primalist-114",
       "name": "Cornered Beast",
+      "icon": "c-Laceration",
       "x": 870.19995,
       "y": 307.6001,
       "maxPoints": 5,
@@ -2770,6 +2878,7 @@
     "Primalist-115": {
       "skill": "Primalist-115",
       "name": "Elder Branch",
+      "icon": "c-frenzy-totem-blue",
       "x": 870.19995,
       "y": -307.59998,
       "maxPoints": 5,
@@ -2796,6 +2905,7 @@
     "Primalist-116": {
       "skill": "Primalist-116",
       "name": "Ancestral Weaponry",
+      "icon": "c-Axe Throw",
       "x": 1532.2,
       "y": 615.2001,
       "maxPoints": 10,
@@ -2820,6 +2930,7 @@
     "Primalist-118": {
       "skill": "Primalist-118",
       "name": "Primordial Resonance",
+      "icon": "c-claws_lightning",
       "x": -1777.8,
       "y": 5415.2,
       "maxPoints": 7,
@@ -2882,6 +2993,7 @@
     "av75ch-2": {
       "skill": "av75ch-2",
       "name": "Mountain Peak",
+      "icon": "c-tornado1",
       "x": 5685,
       "y": -252.80005,
       "maxPoints": 1,
@@ -2908,6 +3020,7 @@
     "av75ch-3": {
       "skill": "av75ch-3",
       "name": "Precision",
+      "icon": "ice_bolt",
       "x": 5069,
       "y": -700,
       "maxPoints": 2,
@@ -2932,6 +3045,7 @@
     "av75ch-4": {
       "skill": "av75ch-4",
       "name": "Crater",
+      "icon": "earthquake",
       "x": 4293,
       "y": 601.6,
       "maxPoints": 1,
@@ -2955,6 +3069,7 @@
     "av75ch-5": {
       "skill": "av75ch-5",
       "name": "Naturaly Occuring",
+      "icon": "c-Mana Regeneration Buff (generic)",
       "x": 4997,
       "y": 196,
       "maxPoints": 3,
@@ -2980,6 +3095,7 @@
     "av75ch-6": {
       "skill": "av75ch-6",
       "name": "Hailstorm",
+      "icon": "c-holy aura blue",
       "x": 4193,
       "y": -750.4,
       "maxPoints": 1,
@@ -3002,6 +3118,7 @@
     "av75ch-7": {
       "skill": "av75ch-7",
       "name": "Unyielding Storm",
+      "icon": "cold-glyph",
       "x": 4469,
       "y": -240,
       "maxPoints": 2,
@@ -3026,6 +3143,7 @@
     "av75ch-8": {
       "skill": "av75ch-8",
       "name": "Harsh Winter",
+      "icon": "cold-explosion",
       "x": 6201,
       "y": 762.8,
       "maxPoints": 4,
@@ -3053,6 +3171,7 @@
     "av75ch-9": {
       "skill": "av75ch-9",
       "name": "Rockfall",
+      "icon": "Maul",
       "x": 5337,
       "y": 932.8,
       "maxPoints": 1,
@@ -3081,6 +3200,7 @@
     "av75ch-10": {
       "skill": "av75ch-10",
       "name": "Excavation",
+      "icon": "Upheaval",
       "x": 5685,
       "y": 312,
       "maxPoints": 2,
@@ -3106,6 +3226,7 @@
     "av75ch-11": {
       "skill": "av75ch-11",
       "name": "Winter Buildup",
+      "icon": "arcane ascendance",
       "x": 5925,
       "y": 1276,
       "maxPoints": 4,
@@ -3128,6 +3249,7 @@
     "av75ch-12": {
       "skill": "av75ch-12",
       "name": "Grounding",
+      "icon": "claw_totem",
       "x": 7137,
       "y": 762.8,
       "maxPoints": 3,
@@ -3154,6 +3276,7 @@
     "av75ch-13": {
       "skill": "av75ch-13",
       "name": "Storm Slide",
+      "icon": "storm_totem",
       "x": 7533,
       "y": 1276,
       "maxPoints": 1,
@@ -3176,6 +3299,7 @@
     "av75ch-14": {
       "skill": "av75ch-14",
       "name": "Stormcaller",
+      "icon": "gathering-storm",
       "x": 6777,
       "y": 1276,
       "maxPoints": 3,
@@ -3198,6 +3322,7 @@
     "av75ch-15": {
       "skill": "av75ch-15",
       "name": "Intensity",
+      "icon": "c-fade_grey",
       "x": 7281,
       "y": 300,
       "maxPoints": 4,
@@ -3222,6 +3347,7 @@
     "av75ch-16": {
       "skill": "av75ch-16",
       "name": "Snow Storm",
+      "icon": "c-Hail Blade",
       "x": 8621,
       "y": 1216,
       "maxPoints": 3,
@@ -3245,6 +3371,7 @@
     "av75ch-17": {
       "skill": "av75ch-17",
       "name": "Pummeling",
+      "icon": "fault_line",
       "x": 4597,
       "y": 1132.8,
       "maxPoints": 1,
@@ -3267,6 +3394,7 @@
     "av75ch-18": {
       "skill": "av75ch-18",
       "name": "Alpine Guide",
+      "icon": "ice_crash",
       "x": 7897,
       "y": -0,
       "maxPoints": 3,
@@ -3292,6 +3420,7 @@
     "av75ch-19": {
       "skill": "av75ch-19",
       "name": "Dead of Winter",
+      "icon": "ice wall",
       "x": 7281,
       "y": -348,
       "maxPoints": 4,
@@ -3318,6 +3447,7 @@
     "av75ch-20": {
       "skill": "av75ch-20",
       "name": "Frost",
+      "icon": "cold-rune",
       "x": 8229,
       "y": -572,
       "maxPoints": 1,
@@ -3349,6 +3479,7 @@
     "av75ch-21": {
       "skill": "av75ch-21",
       "name": "Frost Touch",
+      "icon": "c-snap freeze",
       "x": 8893,
       "y": -383.6,
       "maxPoints": 2,
@@ -3374,6 +3505,7 @@
     "av75ch-22": {
       "skill": "av75ch-22",
       "name": "Frosted Font",
+      "icon": "Freeze buff",
       "x": 9125,
       "y": 240,
       "maxPoints": 2,
@@ -3397,6 +3529,7 @@
     "av75ch-23": {
       "skill": "av75ch-23",
       "name": "Shatter Shot",
+      "icon": "c-freeze",
       "x": 9125,
       "y": -1000,
       "maxPoints": 3,
@@ -3421,6 +3554,7 @@
     "av75ch-24": {
       "skill": "av75ch-24",
       "name": "Explosive Impact",
+      "icon": "Stacking cold",
       "x": 6889,
       "y": -800,
       "maxPoints": 3,
@@ -3446,6 +3580,7 @@
     "av75ch-25": {
       "skill": "av75ch-25",
       "name": "Mountain's Fury",
+      "icon": "amplified-spell",
       "x": 7657.8,
       "y": -950.4,
       "maxPoints": 4,
@@ -3472,6 +3607,7 @@
     "av75ch-26": {
       "skill": "av75ch-26",
       "name": "Unpredictability",
+      "icon": "cold-nova",
       "x": 6081,
       "y": -800,
       "maxPoints": 2,
@@ -3495,6 +3631,7 @@
     "av75ch-27": {
       "skill": "av75ch-27",
       "name": "Elemental Bond",
+      "icon": "c-tempest",
       "x": 7989,
       "y": 848,
       "maxPoints": 3,
@@ -3520,6 +3657,7 @@
     "av75ch-28": {
       "skill": "av75ch-28",
       "name": "Absorption",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 8725,
       "y": 648,
       "maxPoints": 3,
@@ -3567,6 +3705,7 @@
     "be36ar-2": {
       "skill": "be36ar-2",
       "name": "Lacerating Claws",
+      "icon": "c-flurry3 - orange",
       "x": 5742.6,
       "y": -0,
       "maxPoints": 5,
@@ -3594,6 +3733,7 @@
     "be36ar-3": {
       "skill": "be36ar-3",
       "name": "Thorn Bear",
+      "icon": "c-thorn burst",
       "x": 4481,
       "y": -216,
       "maxPoints": 1,
@@ -3621,6 +3761,7 @@
     "be36ar-4": {
       "skill": "be36ar-4",
       "name": "Barbed Thorns",
+      "icon": "Spirit_Thorns",
       "x": 3861,
       "y": -272,
       "maxPoints": 4,
@@ -3644,6 +3785,7 @@
     "be36ar-5": {
       "skill": "be36ar-5",
       "name": "Thorned Fur",
+      "icon": "c-Manifest-Armour-Green",
       "x": 4585,
       "y": -848,
       "maxPoints": 3,
@@ -3668,6 +3810,7 @@
     "be36ar-6": {
       "skill": "be36ar-6",
       "name": "Shredding Thorns",
+      "icon": "Summon_3_Vines",
       "x": 4889,
       "y": 316,
       "maxPoints": 3,
@@ -3690,6 +3833,7 @@
     "be36ar-7": {
       "skill": "be36ar-7",
       "name": "Unflinching",
+      "icon": "c-Health Regeneration Buff (generic)",
       "x": 8012.6,
       "y": 566.4,
       "maxPoints": 5,
@@ -3713,6 +3857,7 @@
     "be36ar-8": {
       "skill": "be36ar-8",
       "name": "Bestial Fury",
+      "icon": "c-claws",
       "x": 5193,
       "y": -248,
       "maxPoints": 4,
@@ -3737,6 +3882,7 @@
     "be36ar-9": {
       "skill": "be36ar-9",
       "name": "Endless Rampage",
+      "icon": "Rampage",
       "x": 7773.8,
       "y": 1156,
       "maxPoints": 1,
@@ -3762,6 +3908,7 @@
     "be36ar-10": {
       "skill": "be36ar-10",
       "name": "Thorn Eruption",
+      "icon": "c-thorn burst_2",
       "x": 6594.2,
       "y": 1125.6,
       "maxPoints": 3,
@@ -3789,6 +3936,7 @@
     "be36ar-11": {
       "skill": "be36ar-11",
       "name": "Forceful Swipes",
+      "icon": "Swipe-3",
       "x": 7390.2,
       "y": -109.6,
       "maxPoints": 1,
@@ -3816,6 +3964,7 @@
     "be36ar-12": {
       "skill": "be36ar-12",
       "name": "Rapid Swipes",
+      "icon": "Eterra's Blessing",
       "x": 7926.2,
       "y": -421.6,
       "maxPoints": 3,
@@ -3838,6 +3987,7 @@
     "be36ar-13": {
       "skill": "be36ar-13",
       "name": "Vicious Strikes",
+      "icon": "Fire Shield",
       "x": 8126.2,
       "y": 94.3999,
       "maxPoints": 4,
@@ -3861,6 +4011,7 @@
     "be36ar-14": {
       "skill": "be36ar-14",
       "name": "Thick Hide",
+      "icon": "summon_bear",
       "x": 7389,
       "y": 336,
       "maxPoints": 5,
@@ -3890,6 +4041,7 @@
     "be36ar-15": {
       "skill": "be36ar-15",
       "name": "Groundshaking Might",
+      "icon": "c-earthquake",
       "x": 6179.4004,
       "y": 747.2,
       "maxPoints": 1,
@@ -3916,6 +4068,7 @@
     "be36ar-16": {
       "skill": "be36ar-16",
       "name": "Primal Precision",
+      "icon": "physical_bolt",
       "x": 4973,
       "y": 1008,
       "maxPoints": 3,
@@ -3940,6 +4093,7 @@
     "be36ar-17": {
       "skill": "be36ar-17",
       "name": "Unstoppable Force",
+      "icon": "Rampage",
       "x": 4145,
       "y": 1036,
       "maxPoints": 4,
@@ -3966,6 +4120,7 @@
     "be36ar-18": {
       "skill": "be36ar-18",
       "name": "Armored Bears",
+      "icon": "c-forge-strike",
       "x": 7161,
       "y": 1026,
       "maxPoints": 5,
@@ -3990,6 +4145,7 @@
     "be36ar-19": {
       "skill": "be36ar-19",
       "name": "Toxic Growths",
+      "icon": "c-arrow storm",
       "x": 4057,
       "y": 356,
       "maxPoints": 4,
@@ -4013,6 +4169,7 @@
     "be36ar-21": {
       "skill": "be36ar-21",
       "name": "Bellowing Roar",
+      "icon": "Roar",
       "x": 6776.6,
       "y": -586.4,
       "maxPoints": 3,
@@ -4039,6 +4196,7 @@
     "be36ar-22": {
       "skill": "be36ar-22",
       "name": "Wounded Prey",
+      "icon": "festering_wound",
       "x": 5485,
       "y": -536.8,
       "maxPoints": 1,
@@ -4062,6 +4220,7 @@
     "be36ar-23": {
       "skill": "be36ar-23",
       "name": "Ursine Dominion",
+      "icon": "swipe",
       "x": 5460.2,
       "y": 609.6,
       "maxPoints": 4,
@@ -4087,6 +4246,7 @@
     "be36ar-24": {
       "skill": "be36ar-24",
       "name": "Renewed Force",
+      "icon": "c-warcry",
       "x": 5764.6006,
       "y": 1125.6,
       "maxPoints": 1,
@@ -4113,6 +4273,7 @@
     "be36ar-25": {
       "skill": "be36ar-25",
       "name": "Storm Beast",
+      "icon": "lightning_from_sky",
       "x": 8446.2,
       "y": 1083.6,
       "maxPoints": 1,
@@ -4137,6 +4298,7 @@
     "be36ar-26": {
       "skill": "be36ar-26",
       "name": "Mother Bear",
+      "icon": "c-Damage Mitigation Buff (generic)",
       "x": 6225.8,
       "y": -722.8,
       "maxPoints": 4,
@@ -4159,6 +4321,7 @@
     "be36ar-27": {
       "skill": "be36ar-27",
       "name": "Frighten",
+      "icon": "c-bear roar",
       "x": 7318.6,
       "y": -664,
       "maxPoints": 3,
@@ -4183,6 +4346,7 @@
     "be36ar-28": {
       "skill": "be36ar-28",
       "name": "Guardian",
+      "icon": "c-armor buff_2",
       "x": 7844.6,
       "y": -744.4,
       "maxPoints": 2,
@@ -4227,6 +4391,7 @@
     "eb5656-2": {
       "skill": "eb5656-2",
       "name": "Safeguard",
+      "icon": "c-armor debuff_3",
       "x": 5781,
       "y": -420,
       "maxPoints": 5,
@@ -4254,6 +4419,7 @@
     "eb5656-3": {
       "skill": "eb5656-3",
       "name": "Embolden",
+      "icon": "c-Spellpower  1 debuff (generic)",
       "x": 5137,
       "y": -736,
       "maxPoints": 4,
@@ -4281,6 +4447,7 @@
     "eb5656-4": {
       "skill": "eb5656-4",
       "name": "Lifestream",
+      "icon": "c-ferocity_1",
       "x": 4213,
       "y": -657.4,
       "maxPoints": 2,
@@ -4303,6 +4470,7 @@
     "eb5656-5": {
       "skill": "eb5656-5",
       "name": "Natural Affinity",
+      "icon": "c-Damage Mitigation Debuff (generic)",
       "x": 4833,
       "y": -340,
       "maxPoints": 1,
@@ -4327,6 +4495,7 @@
     "eb5656-6": {
       "skill": "eb5656-6",
       "name": "Caustic Renewal",
+      "icon": "scorpion poison",
       "x": 4130.2,
       "y": -235.99997,
       "maxPoints": 5,
@@ -4349,6 +4518,7 @@
     "eb5656-7": {
       "skill": "eb5656-7",
       "name": "Symbiosis",
+      "icon": "c-Laceration_sq",
       "x": 5165,
       "y": -0,
       "maxPoints": 3,
@@ -4373,6 +4543,7 @@
     "eb5656-8": {
       "skill": "eb5656-8",
       "name": "Ardent Touch",
+      "icon": "c-shift",
       "x": 5833,
       "y": 457.4,
       "maxPoints": 5,
@@ -4402,6 +4573,7 @@
     "eb5656-9": {
       "skill": "eb5656-9",
       "name": "Encourage",
+      "icon": "CooldownSpeedUp",
       "x": 4793,
       "y": 584,
       "maxPoints": 4,
@@ -4429,6 +4601,7 @@
     "eb5656-10": {
       "skill": "eb5656-10",
       "name": "Swift Recovery",
+      "icon": "Overgrowth",
       "x": 4081,
       "y": 333.2,
       "maxPoints": 1,
@@ -4451,6 +4624,7 @@
     "eb5656-11": {
       "skill": "eb5656-11",
       "name": "Eterra's Furor",
+      "icon": "Summon Bear 1",
       "x": 4101,
       "y": 932.8004,
       "maxPoints": 1,
@@ -4474,6 +4648,7 @@
     "eb5656-12": {
       "skill": "eb5656-12",
       "name": "Binding Heal",
+      "icon": "c-Vale Spirit Bolt_3",
       "x": 5478.6,
       "y": 903.6,
       "maxPoints": 4,
@@ -4499,6 +4674,7 @@
     "eb5656-13": {
       "skill": "eb5656-13",
       "name": "Triage",
+      "icon": "Healing Wind",
       "x": 4972.44,
       "y": 1247.6,
       "maxPoints": 1,
@@ -4522,6 +4698,7 @@
     "eb5656-14": {
       "skill": "eb5656-14",
       "name": "Soul Bond",
+      "icon": "c-spriggan healing wind alt",
       "x": 5982.6,
       "y": 1247.6,
       "maxPoints": 4,
@@ -4544,6 +4721,7 @@
     "eb5656-15": {
       "skill": "eb5656-15",
       "name": "Overgrowth",
+      "icon": "Nova-yellow",
       "x": 6457,
       "y": 732.8,
       "maxPoints": 4,
@@ -4573,6 +4751,7 @@
     "eb5656-16": {
       "skill": "eb5656-16",
       "name": "Conservation",
+      "icon": "c-Mana Regeneration Buff (generic)",
       "x": 7109,
       "y": 352,
       "maxPoints": 5,
@@ -4601,6 +4780,7 @@
     "eb5656-18": {
       "skill": "eb5656-18",
       "name": "Rebuke",
+      "icon": "c-tornado1",
       "x": 6689,
       "y": 1200,
       "maxPoints": 3,
@@ -4626,6 +4806,7 @@
     "eb5656-20": {
       "skill": "eb5656-20",
       "name": "Rosebloom",
+      "icon": "Thorn_Shield",
       "x": 8053.8,
       "y": 347.2,
       "maxPoints": 1,
@@ -4648,6 +4829,7 @@
     "eb5656-21": {
       "skill": "eb5656-21",
       "name": "Skyboon",
+      "icon": "c-Dive Bomb",
       "x": 7925.4,
       "y": 940.4,
       "maxPoints": 1,
@@ -4671,6 +4853,7 @@
     "eb5656-23": {
       "skill": "eb5656-23",
       "name": "Improved Blessing",
+      "icon": "c-Health Regeneration Buff (generic)_2",
       "x": 7213,
       "y": -140,
       "maxPoints": 5,
@@ -4698,6 +4881,7 @@
     "eb5656-24": {
       "skill": "eb5656-24",
       "name": "Purge",
+      "icon": "Eterra's Blessing",
       "x": 8020.6,
       "y": -183.6,
       "maxPoints": 1,
@@ -4720,6 +4904,7 @@
     "eb5656-26": {
       "skill": "eb5656-26",
       "name": "Efflorescence",
+      "icon": "c-Heal over time",
       "x": 8484.2,
       "y": -758.80005,
       "maxPoints": 1,
@@ -4744,6 +4929,7 @@
     "eb5656-27": {
       "skill": "eb5656-27",
       "name": "Regrowth",
+      "icon": "Rod of Power",
       "x": 8953,
       "y": -620,
       "maxPoints": 1,
@@ -4766,6 +4952,7 @@
     "eb5656-28": {
       "skill": "eb5656-28",
       "name": "Tranquil Spirit",
+      "icon": "SummonValeSpirit",
       "x": 7513.4,
       "y": -858.8,
       "maxPoints": 1,
@@ -4789,6 +4976,7 @@
     "eb5656-29": {
       "skill": "eb5656-29",
       "name": "Ancestral Renewal",
+      "icon": "c-thorn-totem-new",
       "x": 6984.2,
       "y": -576,
       "maxPoints": 3,
@@ -4818,6 +5006,7 @@
     "eb5656-30": {
       "skill": "eb5656-30",
       "name": "Boon of the Shifter",
+      "icon": "c-human form (2) green",
       "x": 6481,
       "y": -776,
       "maxPoints": 4,
@@ -4845,6 +5034,7 @@
     "eb5656-32": {
       "skill": "eb5656-32",
       "name": "Savage Boon",
+      "icon": "c-Frenzy",
       "x": 7289.4,
       "y": 1020.8,
       "maxPoints": 4,
@@ -4888,6 +5078,7 @@
     "eq5s-1": {
       "skill": "eq5s-1",
       "name": "Lethargy",
+      "icon": "c-slow",
       "x": 5857,
       "y": 436,
       "maxPoints": 4,
@@ -4914,6 +5105,7 @@
     "eq5s-2": {
       "skill": "eq5s-2",
       "name": "Outbreak",
+      "icon": "SummonValeSpirit",
       "x": 5712.2,
       "y": -109.2,
       "maxPoints": 3,
@@ -4942,6 +5134,7 @@
     "eq5s-3": {
       "skill": "eq5s-3",
       "name": "Shatterquake",
+      "icon": "c-Shatter Strike",
       "x": 5349,
       "y": 290,
       "maxPoints": 5,
@@ -4964,6 +5157,7 @@
     "eq5s-4": {
       "skill": "eq5s-4",
       "name": "Magnitude",
+      "icon": "Innervate",
       "x": 4469,
       "y": -109.2,
       "maxPoints": 2,
@@ -4990,6 +5184,7 @@
     "eq5s-5": {
       "skill": "eq5s-5",
       "name": "Shattered Earth",
+      "icon": "c-Vale Spirit Bolt_5",
       "x": 3993,
       "y": -348,
       "maxPoints": 5,
@@ -5012,6 +5207,7 @@
     "eq5s-6": {
       "skill": "eq5s-6",
       "name": "Snowcrash",
+      "icon": "c-avalanche",
       "x": 4820.6,
       "y": 290,
       "maxPoints": 4,
@@ -5035,6 +5231,7 @@
     "eq5s-7": {
       "skill": "eq5s-7",
       "name": "Divining Totem",
+      "icon": "c-frenzy-totem-blue",
       "x": 4049,
       "y": 392,
       "maxPoints": 1,
@@ -5057,6 +5254,7 @@
     "eq5s-8": {
       "skill": "eq5s-8",
       "name": "Torpor",
+      "icon": "c-Stagger",
       "x": 5297,
       "y": 996,
       "maxPoints": 3,
@@ -5082,6 +5280,7 @@
     "eq5s-9": {
       "skill": "eq5s-9",
       "name": "Buffet",
+      "icon": "Erasing-Strike-red",
       "x": 4781,
       "y": 812,
       "maxPoints": 3,
@@ -5107,6 +5306,7 @@
     "eq5s-10": {
       "skill": "eq5s-10",
       "name": "Overwhelm",
+      "icon": "c-Frenzy",
       "x": 4661,
       "y": 1168,
       "maxPoints": 3,
@@ -5130,6 +5330,7 @@
     "eq5s-11": {
       "skill": "eq5s-11",
       "name": "Upheaval",
+      "icon": "Tornado Temp",
       "x": 6481,
       "y": 768,
       "maxPoints": 1,
@@ -5156,6 +5357,7 @@
     "eq5s-12": {
       "skill": "eq5s-12",
       "name": "Unabating",
+      "icon": "Storm Call-yellow",
       "x": 5921,
       "y": 1176,
       "maxPoints": 4,
@@ -5181,6 +5383,7 @@
     "eq5s-13": {
       "skill": "eq5s-13",
       "name": "Dust Storm",
+      "icon": "c-yellow eye",
       "x": 7041,
       "y": 1176,
       "maxPoints": 1,
@@ -5203,6 +5406,7 @@
     "eq5s-14": {
       "skill": "eq5s-14",
       "name": "Crushing Wake",
+      "icon": "c-Bear Ravage",
       "x": 7105,
       "y": 436,
       "maxPoints": 5,
@@ -5229,6 +5433,7 @@
     "eq5s-15": {
       "skill": "eq5s-15",
       "name": "Tremors",
+      "icon": "c-root",
       "x": 7665,
       "y": 996,
       "maxPoints": 3,
@@ -5253,6 +5458,7 @@
     "eq5s-16": {
       "skill": "eq5s-16",
       "name": "Amplitude",
+      "icon": "c-harden red",
       "x": 8301,
       "y": 1168,
       "maxPoints": 3,
@@ -5275,6 +5481,7 @@
     "eq5s-17": {
       "skill": "eq5s-17",
       "name": "Rupture",
+      "icon": "c-damage buff",
       "x": 7249.8,
       "y": -105.19995,
       "maxPoints": 5,
@@ -5302,6 +5509,7 @@
     "eq5s-18": {
       "skill": "eq5s-18",
       "name": "Potency",
+      "icon": "c-Spellpower  1 debuff (generic)",
       "x": 8277.8,
       "y": -109.2,
       "maxPoints": 3,
@@ -5327,6 +5535,7 @@
     "eq5s-19": {
       "skill": "eq5s-19",
       "name": "Ground Slam",
+      "icon": "c-Ravage",
       "x": 8997.8,
       "y": -109.19995,
       "maxPoints": 1,
@@ -5351,6 +5560,7 @@
     "eq5s-20": {
       "skill": "eq5s-20",
       "name": "Seismic Smash",
+      "icon": "c-Laceration_sq",
       "x": 7641.8,
       "y": -401.2,
       "maxPoints": 1,
@@ -5376,6 +5586,7 @@
     "eq5s-21": {
       "skill": "eq5s-21",
       "name": "Seismic Tide",
+      "icon": "Frenzy Totem2",
       "x": 8277.8,
       "y": -514.80005,
       "maxPoints": 1,
@@ -5400,6 +5611,7 @@
     "eq5s-22": {
       "skill": "eq5s-22",
       "name": "Sunder",
+      "icon": "c-armor debuff_2",
       "x": 7642.2,
       "y": 166,
       "maxPoints": 5,
@@ -5425,6 +5637,7 @@
     "eq5s-23": {
       "skill": "eq5s-23",
       "name": "The Harder They Fall",
+      "icon": "c-despair",
       "x": 8277.8,
       "y": 292.4,
       "maxPoints": 5,
@@ -5447,6 +5660,7 @@
     "eq5s-24": {
       "skill": "eq5s-24",
       "name": "Cataclysm",
+      "icon": "Earthquake",
       "x": 7923.4,
       "y": 598.80005,
       "maxPoints": 1,
@@ -5470,6 +5684,7 @@
     "eq5s-25": {
       "skill": "eq5s-25",
       "name": "Concussion",
+      "icon": "c-Stun Susceptibility Debuff (generic)",
       "x": 6481,
       "y": -740,
       "maxPoints": 4,
@@ -5499,6 +5714,7 @@
     "eq5s-26": {
       "skill": "eq5s-26",
       "name": "Storm Rift",
+      "icon": "Storm Call",
       "x": 5581,
       "y": -648,
       "maxPoints": 1,
@@ -5526,6 +5742,7 @@
     "eq5s-27": {
       "skill": "eq5s-27",
       "name": "Thunderblight",
+      "icon": "chain lightning",
       "x": 4803,
       "y": -464.4,
       "maxPoints": 4,
@@ -5551,6 +5768,7 @@
     "eq5s-28": {
       "skill": "eq5s-28",
       "name": "Fury Of The Elements",
+      "icon": "charged ground",
       "x": 4193,
       "y": -700,
       "maxPoints": 2,
@@ -5577,6 +5795,7 @@
     "eq5s-30": {
       "skill": "eq5s-30",
       "name": "Staggering Force",
+      "icon": "c-stun",
       "x": 7310.2,
       "y": -794.80005,
       "maxPoints": 1,
@@ -5604,6 +5823,7 @@
     "eq5s-31": {
       "skill": "eq5s-31",
       "name": "Shattered Resolve",
+      "icon": "c-rebuke-alternate",
       "x": 7993.8,
       "y": -985.6,
       "maxPoints": 3,
@@ -5627,6 +5847,7 @@
     "eq5s-32": {
       "skill": "eq5s-32",
       "name": "Deep Impact",
+      "icon": "c-Sky Bolt Temp",
       "x": 4029,
       "y": 968,
       "maxPoints": 1,
@@ -5670,6 +5891,7 @@
     "er6no-2": {
       "skill": "er6no-2",
       "name": "Toxic Envelopment",
+      "icon": "c-poison",
       "x": 5921,
       "y": -440,
       "maxPoints": 5,
@@ -5696,6 +5918,7 @@
     "er6no-3": {
       "skill": "er6no-3",
       "name": "Venomous Briar",
+      "icon": "c-bleed_poison",
       "x": 5481,
       "y": -899.99976,
       "maxPoints": 1,
@@ -5723,6 +5946,7 @@
     "er6no-4": {
       "skill": "er6no-4",
       "name": "Kobra Vines",
+      "icon": "blindness",
       "x": 4877,
       "y": -770,
       "maxPoints": 1,
@@ -5745,6 +5969,7 @@
     "er6no-5": {
       "skill": "er6no-5",
       "name": "Poisonous Seeds",
+      "icon": "seed_sprouts",
       "x": 4801,
       "y": -0,
       "maxPoints": 5,
@@ -5773,6 +5998,7 @@
     "er6no-6": {
       "skill": "er6no-6",
       "name": "Renewing Pollen",
+      "icon": "white_flower",
       "x": 4291.8,
       "y": -504.8,
       "maxPoints": 4,
@@ -5799,6 +6025,7 @@
     "er6no-7": {
       "skill": "er6no-7",
       "name": "Nectar of Rejuvenation",
+      "icon": "c-haste",
       "x": 3794.5999,
       "y": -0,
       "maxPoints": 1,
@@ -5822,6 +6049,7 @@
     "er6no-8": {
       "skill": "er6no-8",
       "name": "Earthy Puffball",
+      "icon": "c-maul",
       "x": 4291.8,
       "y": -0,
       "maxPoints": 1,
@@ -5845,6 +6073,7 @@
     "er6no-9": {
       "skill": "er6no-9",
       "name": "Rampant Growth",
+      "icon": "Summon_3_Vines",
       "x": 4291.8,
       "y": 496,
       "maxPoints": 1,
@@ -5870,6 +6099,7 @@
     "er6no-10": {
       "skill": "er6no-10",
       "name": "Entrapped",
+      "icon": "Rod of Power",
       "x": 5921,
       "y": 440,
       "maxPoints": 4,
@@ -5896,6 +6126,7 @@
     "er6no-11": {
       "skill": "er6no-11",
       "name": "Inescapable Thicket",
+      "icon": "c-shield-bash",
       "x": 5661,
       "y": -0,
       "maxPoints": 1,
@@ -5918,6 +6149,7 @@
     "er6no-12": {
       "skill": "er6no-12",
       "name": "Frenzying Thorns",
+      "icon": "Summon_healing_totem",
       "x": 5227,
       "y": 743.6,
       "maxPoints": 5,
@@ -5945,6 +6177,7 @@
     "er6no-13": {
       "skill": "er6no-13",
       "name": "Bramblewood Wardens",
+      "icon": "spriggan_bright",
       "x": 4556.6,
       "y": 1153.6,
       "maxPoints": 1,
@@ -5968,6 +6201,7 @@
     "er6no-14": {
       "skill": "er6no-14",
       "name": "Reclamation",
+      "icon": "Summon_3_Vines-red",
       "x": 5721,
       "y": 1191.2001,
       "maxPoints": 3,
@@ -5992,6 +6226,7 @@
     "er6no-15": {
       "skill": "er6no-15",
       "name": "Noxious Grasp",
+      "icon": "thorny_vines",
       "x": 6481,
       "y": 1191.2001,
       "maxPoints": 5,
@@ -6020,6 +6255,7 @@
     "er6no-16": {
       "skill": "er6no-16",
       "name": "Lethal Spines",
+      "icon": "Spirit_Plague_spread",
       "x": 7041,
       "y": 440,
       "maxPoints": 5,
@@ -6042,6 +6278,7 @@
     "er6no-17": {
       "skill": "er6no-17",
       "name": "Overgrown Garden",
+      "icon": "c-penta-swirl-green",
       "x": 7290.2,
       "y": 1039.2001,
       "maxPoints": 1,
@@ -6068,6 +6305,7 @@
     "er6no-18": {
       "skill": "er6no-18",
       "name": "Rooted System",
+      "icon": "thorn_totem",
       "x": 8121.4,
       "y": 1191.2001,
       "maxPoints": 1,
@@ -6090,6 +6328,7 @@
     "er6no-19": {
       "skill": "er6no-19",
       "name": "Briarthorn's Wrath",
+      "icon": "c-harden red",
       "x": 7830.6,
       "y": 571.2,
       "maxPoints": 1,
@@ -6113,6 +6352,7 @@
     "er6no-20": {
       "skill": "er6no-20",
       "name": "Shredding Vines",
+      "icon": "c-Stun Susceptibility Debuff (generic)",
       "x": 7041,
       "y": -439.99988,
       "maxPoints": 5,
@@ -6139,6 +6379,7 @@
     "er6no-21": {
       "skill": "er6no-21",
       "name": "Thick Growth",
+      "icon": "c-Ravage",
       "x": 7341,
       "y": -0,
       "maxPoints": 4,
@@ -6162,6 +6403,7 @@
     "er6no-22": {
       "skill": "er6no-22",
       "name": "Winternid Thorns",
+      "icon": "c-freeze",
       "x": 8161,
       "y": -4.5776E-05,
       "maxPoints": 1,
@@ -6188,6 +6430,7 @@
     "er6no-23": {
       "skill": "er6no-23",
       "name": "Iceshard Roots",
+      "icon": "c-cold damage buff",
       "x": 8622.6,
       "y": 543.6,
       "maxPoints": 1,
@@ -6213,6 +6456,7 @@
     "er6no-24": {
       "skill": "er6no-24",
       "name": "Thicket of Frost",
+      "icon": "ice_wall",
       "x": 9037.8,
       "y": 827.6,
       "maxPoints": 5,
@@ -6235,6 +6479,7 @@
     "er6no-25": {
       "skill": "er6no-25",
       "name": "Nourishment Surge",
+      "icon": "c-Health Regeneration Buff (generic)",
       "x": 7481,
       "y": -899.99994,
       "maxPoints": 3,
@@ -6264,6 +6509,7 @@
     "er6no-26": {
       "skill": "er6no-26",
       "name": "Wild Weapons",
+      "icon": "c-physical damage buff",
       "x": 8304.2,
       "y": -658.8,
       "maxPoints": 2,
@@ -6291,6 +6537,7 @@
     "er6no-27": {
       "skill": "er6no-27",
       "name": "Blooming Magic",
+      "icon": "c-Spellpower  1 debuff (generic)",
       "x": 8976.601,
       "y": -340.80005,
       "maxPoints": 5,
@@ -6315,6 +6562,7 @@
     "er6no-28": {
       "skill": "er6no-28",
       "name": "Bush Stalkers",
+      "icon": "c-harpoon",
       "x": 8976.601,
       "y": -974.00006,
       "maxPoints": 5,
@@ -6340,6 +6588,7 @@
     "er6no-29": {
       "skill": "er6no-29",
       "name": "Venomsting",
+      "icon": "c-scorpion poison alt",
       "x": 6481,
       "y": -760,
       "maxPoints": 5,
@@ -6390,6 +6639,7 @@
     "fl13-2": {
       "skill": "fl13-2",
       "name": "Brutal Impact",
+      "icon": "Swipe",
       "x": 4913,
       "y": 28,
       "maxPoints": 5,
@@ -6415,6 +6665,7 @@
     "fl13-3": {
       "skill": "fl13-3",
       "name": "Regain Stamina",
+      "icon": "c-Attack Speed Debuff (generic)_3",
       "x": 6749,
       "y": 1216,
       "maxPoints": 4,
@@ -6437,6 +6688,7 @@
     "fl13-4": {
       "skill": "fl13-4",
       "name": "Lagon's Wrath",
+      "icon": "Storm Call",
       "x": 8057,
       "y": -372,
       "maxPoints": 1,
@@ -6464,6 +6716,7 @@
     "fl13-5": {
       "skill": "fl13-5",
       "name": "Storm Bringer",
+      "icon": "Innervate",
       "x": 8485,
       "y": -804.00006,
       "maxPoints": 5,
@@ -6488,6 +6741,7 @@
     "fl13-6": {
       "skill": "fl13-6",
       "name": "Rejuvenating Storms",
+      "icon": "c-disintegrate_lightning",
       "x": 8865,
       "y": -316.00006,
       "maxPoints": 1,
@@ -6511,6 +6765,7 @@
     "fl13-7": {
       "skill": "fl13-7",
       "name": "Warrior's Entrance",
+      "icon": "Hammer-Throw",
       "x": 6045,
       "y": 600,
       "maxPoints": 5,
@@ -6540,6 +6795,7 @@
     "fl13-8": {
       "skill": "fl13-8",
       "name": "Frenzied Onslaught",
+      "icon": "c-Frenzy",
       "x": 5437,
       "y": 624,
       "maxPoints": 1,
@@ -6564,6 +6820,7 @@
     "fl13-9": {
       "skill": "fl13-9",
       "name": "Pack Leader",
+      "icon": "Summon Wolf",
       "x": 6285,
       "y": 1036,
       "maxPoints": 1,
@@ -6586,6 +6843,7 @@
     "fl13-10": {
       "skill": "fl13-10",
       "name": "Crushing Impact",
+      "icon": "c-Stun Susceptibility Debuff (generic)",
       "x": 7377,
       "y": 1052,
       "maxPoints": 5,
@@ -6612,6 +6870,7 @@
     "fl13-11": {
       "skill": "fl13-11",
       "name": "Gravity",
+      "icon": "c-tornado1",
       "x": 8429,
       "y": 452,
       "maxPoints": 1,
@@ -6634,6 +6893,7 @@
     "fl13-12": {
       "skill": "fl13-12",
       "name": "Rise",
+      "icon": "Summon Snakes",
       "x": 8201,
       "y": 1152,
       "maxPoints": 4,
@@ -6663,6 +6923,7 @@
     "fl13-13": {
       "skill": "fl13-13",
       "name": "Poisonous Thicket",
+      "icon": "VenomStrike",
       "x": 9025,
       "y": 756,
       "maxPoints": 4,
@@ -6688,6 +6949,7 @@
     "fl13-14": {
       "skill": "fl13-14",
       "name": "Crater",
+      "icon": "c-rebuke",
       "x": 6961,
       "y": -616,
       "maxPoints": 4,
@@ -6715,6 +6977,7 @@
     "fl13-15": {
       "skill": "fl13-15",
       "name": "Ambush Predator",
+      "icon": "Kill Command",
       "x": 7853,
       "y": 568,
       "maxPoints": 5,
@@ -6740,6 +7003,7 @@
     "fl13-16": {
       "skill": "fl13-16",
       "name": "Savage Impact",
+      "icon": "c-tempest",
       "x": 5997,
       "y": -632,
       "maxPoints": 5,
@@ -6768,6 +7032,7 @@
     "fl13-17": {
       "skill": "fl13-17",
       "name": "Aspect of the Mantis",
+      "icon": "c-flurry3",
       "x": 5185,
       "y": -664,
       "maxPoints": 1,
@@ -6793,6 +7058,7 @@
     "fl13-18": {
       "skill": "fl13-18",
       "name": "Unshackled",
+      "icon": "c-Shatter Strike",
       "x": 4181,
       "y": 452,
       "maxPoints": 1,
@@ -6815,6 +7081,7 @@
     "fl13-20": {
       "skill": "fl13-20",
       "name": "Panther Strike",
+      "icon": "c-Swiftness",
       "x": 7153,
       "y": 472,
       "maxPoints": 4,
@@ -6842,6 +7109,7 @@
     "fl13-22": {
       "skill": "fl13-22",
       "name": "Violent Upheaval",
+      "icon": "Upheaval",
       "x": 4205,
       "y": -280,
       "maxPoints": 1,
@@ -6865,6 +7133,7 @@
     "fl13-24": {
       "skill": "fl13-24",
       "name": "Heorot's Protection",
+      "icon": "ice_wall",
       "x": 7433,
       "y": -68,
       "maxPoints": 1,
@@ -6889,6 +7158,7 @@
     "fl13-25": {
       "skill": "fl13-25",
       "name": "Wind Hammer",
+      "icon": "c-storm_crows",
       "x": 5585,
       "y": 32,
       "maxPoints": 3,
@@ -6916,6 +7186,7 @@
     "fl13-26": {
       "skill": "fl13-26",
       "name": "Wings of Endurance",
+      "icon": "bees",
       "x": 4881,
       "y": 776,
       "maxPoints": 3,
@@ -6943,6 +7214,7 @@
     "fl13-27": {
       "skill": "fl13-27",
       "name": "Battle Bloom",
+      "icon": "white_flower",
       "x": 4613,
       "y": 1228,
       "maxPoints": 1,
@@ -6986,6 +7258,7 @@
     "ga2st-2": {
       "skill": "ga2st-2",
       "name": "Looming Clouds",
+      "icon": "lightning-rod",
       "x": 5581,
       "y": -0,
       "maxPoints": 4,
@@ -7012,6 +7285,7 @@
     "ga2st-3": {
       "skill": "ga2st-3",
       "name": "Concentrated Storm",
+      "icon": "chain lightning",
       "x": 4865,
       "y": -460,
       "maxPoints": 4,
@@ -7038,6 +7312,7 @@
     "ga2st-4": {
       "skill": "ga2st-4",
       "name": "In the Eye of the Storm",
+      "icon": "c-tornado1",
       "x": 4205,
       "y": -460,
       "maxPoints": 2,
@@ -7064,6 +7339,7 @@
     "ga2st-6": {
       "skill": "ga2st-6",
       "name": "A Storm Gathers",
+      "icon": "Lightning Bolt",
       "x": 4705,
       "y": 168,
       "maxPoints": 3,
@@ -7089,6 +7365,7 @@
     "ga2st-7": {
       "skill": "ga2st-7",
       "name": "Lightning Gale",
+      "icon": "c-haste-blue",
       "x": 4405,
       "y": 796,
       "maxPoints": 1,
@@ -7113,6 +7390,7 @@
     "ga2st-8": {
       "skill": "ga2st-8",
       "name": "Whirlwind Tactics",
+      "icon": "wolf_howl",
       "x": 3985,
       "y": 1112,
       "maxPoints": 4,
@@ -7137,6 +7415,7 @@
     "ga2st-9": {
       "skill": "ga2st-9",
       "name": "Lightning Strikes Twice",
+      "icon": "c-claws_lightning",
       "x": 5493,
       "y": 536,
       "maxPoints": 1,
@@ -7163,6 +7442,7 @@
     "ga2st-10": {
       "skill": "ga2st-10",
       "name": "Lagonian Diplomacy",
+      "icon": "lightning-pillar",
       "x": 5001,
       "y": 976,
       "maxPoints": 1,
@@ -7191,6 +7471,7 @@
     "ga2st-11": {
       "skill": "ga2st-11",
       "name": "Clouds on the Horizon",
+      "icon": "glyph-of-dominion",
       "x": 5645,
       "y": 1224,
       "maxPoints": 2,
@@ -7218,6 +7499,7 @@
     "ga2st-12": {
       "skill": "ga2st-12",
       "name": "Friends of the Tempest",
+      "icon": "storm_totem",
       "x": 6481,
       "y": 1224,
       "maxPoints": 5,
@@ -7248,6 +7530,7 @@
     "ga2st-13": {
       "skill": "ga2st-13",
       "name": "Thunderous Strikes",
+      "icon": "lightning-resist-debuff",
       "x": 7313,
       "y": 976,
       "maxPoints": 4,
@@ -7278,6 +7561,7 @@
     "ga2st-14": {
       "skill": "ga2st-14",
       "name": "Excited Bolts",
+      "icon": "Stacking cold buff",
       "x": 6849,
       "y": 656,
       "maxPoints": 1,
@@ -7307,6 +7591,7 @@
     "ga2st-15": {
       "skill": "ga2st-15",
       "name": "Two Eyed Storm",
+      "icon": "Static_Orb",
       "x": 6101,
       "y": 656,
       "maxPoints": 1,
@@ -7329,6 +7614,7 @@
     "ga2st-16": {
       "skill": "ga2st-16",
       "name": "Windfury Blows",
+      "icon": "c-flurry3 - blue",
       "x": 7421,
       "y": 240,
       "maxPoints": 3,
@@ -7355,6 +7641,7 @@
     "ga2st-17": {
       "skill": "ga2st-17",
       "name": "Manafused Storm",
+      "icon": "c-Mana Regeneration Buff (generic)",
       "x": 7953,
       "y": 700,
       "maxPoints": 1,
@@ -7382,6 +7669,7 @@
     "ga2st-18": {
       "skill": "ga2st-18",
       "name": "The Typhoon",
+      "icon": "c-stun",
       "x": 8505,
       "y": 976,
       "maxPoints": 2,
@@ -7412,6 +7700,7 @@
     "ga2st-19": {
       "skill": "ga2st-19",
       "name": "Energized by the Skies",
+      "icon": "runestone1",
       "x": 8765,
       "y": 456,
       "maxPoints": 3,
@@ -7445,6 +7734,7 @@
     "ga2st-20": {
       "skill": "ga2st-20",
       "name": "Island Cleaver",
+      "icon": "star-sign1",
       "x": 8153,
       "y": -0,
       "maxPoints": 4,
@@ -7476,6 +7766,7 @@
     "ga2st-21": {
       "skill": "ga2st-21",
       "name": "Wings of Lightning",
+      "icon": "c-storm_crows",
       "x": 9005,
       "y": -136,
       "maxPoints": 4,
@@ -7498,6 +7789,7 @@
     "ga2st-22": {
       "skill": "ga2st-22",
       "name": "Jolting Strikes",
+      "icon": "c-shock",
       "x": 6997,
       "y": -700,
       "maxPoints": 4,
@@ -7528,6 +7820,7 @@
     "ga2st-23": {
       "skill": "ga2st-23",
       "name": "Tempest Weapon",
+      "icon": "Future strike",
       "x": 7545,
       "y": -336,
       "maxPoints": 2,
@@ -7556,6 +7849,7 @@
     "ga2st-24": {
       "skill": "ga2st-24",
       "name": "Earth Smasher",
+      "icon": "Upheaval",
       "x": 5993,
       "y": -700,
       "maxPoints": 1,
@@ -7581,6 +7875,7 @@
     "ga2st-25": {
       "skill": "ga2st-25",
       "name": "Seismic Crash",
+      "icon": "Maul",
       "x": 5409,
       "y": -824,
       "maxPoints": 1,
@@ -7603,6 +7898,7 @@
     "ga2st-26": {
       "skill": "ga2st-26",
       "name": "Frostbringer",
+      "icon": "Frostbite",
       "x": 7877,
       "y": -844,
       "maxPoints": 1,
@@ -7629,6 +7925,7 @@
     "ga2st-27": {
       "skill": "ga2st-27",
       "name": "Of Ice and Snow",
+      "icon": "c-cold damage buff",
       "x": 8365,
       "y": -500,
       "maxPoints": 3,
@@ -7654,6 +7951,7 @@
     "ga2st-28": {
       "skill": "ga2st-28",
       "name": "Winter Comes",
+      "icon": "c-freeze",
       "x": 8877,
       "y": -844,
       "maxPoints": 1,
@@ -7677,6 +7975,7 @@
     "ga2st-30": {
       "skill": "ga2st-30",
       "name": "Rending Vortex",
+      "icon": "ice_bolt",
       "x": 3841,
       "y": -6,
       "maxPoints": 1,
@@ -7720,6 +8019,7 @@
     "mas54-2": {
       "skill": "mas54-2",
       "name": "Turmoil",
+      "icon": "SummonValeSpirit",
       "x": 5781,
       "y": -296,
       "maxPoints": 5,
@@ -7746,6 +8046,7 @@
     "mas54-3": {
       "skill": "mas54-3",
       "name": "Storm's Aid",
+      "icon": "Charm animal",
       "x": 4901,
       "y": -644,
       "maxPoints": 1,
@@ -7770,6 +8071,7 @@
     "mas54-4": {
       "skill": "mas54-4",
       "name": "Vortex",
+      "icon": "c-thorn-totem-new ice",
       "x": 4083,
       "y": -468,
       "maxPoints": 5,
@@ -7792,6 +8094,7 @@
     "mas54-5": {
       "skill": "mas54-5",
       "name": "Grip of Chaos",
+      "icon": "Tornado",
       "x": 4559.8,
       "y": -72,
       "maxPoints": 1,
@@ -7814,6 +8117,7 @@
     "mas54-6": {
       "skill": "mas54-6",
       "name": "Arctic Chill",
+      "icon": "c-chill",
       "x": 6101,
       "y": 816,
       "maxPoints": 5,
@@ -7841,6 +8145,7 @@
     "mas54-7": {
       "skill": "mas54-7",
       "name": "Tsunami",
+      "icon": "c-blue-swirl",
       "x": 5161,
       "y": 356,
       "maxPoints": 1,
@@ -7865,6 +8170,7 @@
     "mas54-8": {
       "skill": "mas54-8",
       "name": "Typhoon",
+      "icon": "c-flurry2 - blue",
       "x": 4083,
       "y": 556,
       "maxPoints": 5,
@@ -7888,6 +8194,7 @@
     "mas54-9": {
       "skill": "mas54-9",
       "name": "Healing Winds",
+      "icon": "c-Health Regeneration Buff (generic)",
       "x": 5309,
       "y": 1132,
       "maxPoints": 3,
@@ -7912,6 +8219,7 @@
     "mas54-10": {
       "skill": "mas54-10",
       "name": "Violent Squall",
+      "icon": "ice bolt",
       "x": 4505,
       "y": 996,
       "maxPoints": 1,
@@ -7937,6 +8245,7 @@
     "mas54-11": {
       "skill": "mas54-11",
       "name": "Eye of the Storm",
+      "icon": "c-Vale Spirit Bolt_2",
       "x": 6809,
       "y": 656,
       "maxPoints": 4,
@@ -7960,6 +8269,7 @@
     "mas54-12": {
       "skill": "mas54-12",
       "name": "Arctic Blast",
+      "icon": "c-freeze",
       "x": 6909,
       "y": 1212,
       "maxPoints": 5,
@@ -7984,6 +8294,7 @@
     "mas54-13": {
       "skill": "mas54-13",
       "name": "Beneath The Waves",
+      "icon": "c-tornado3",
       "x": 5557,
       "y": 168,
       "maxPoints": 3,
@@ -8009,6 +8320,7 @@
     "mas54-14": {
       "skill": "mas54-14",
       "name": "Calm",
+      "icon": "Focus",
       "x": 7221,
       "y": -684,
       "maxPoints": 4,
@@ -8033,6 +8345,7 @@
     "mas54-15": {
       "skill": "mas54-15",
       "name": "Sleet-Footed",
+      "icon": "c-shift - azure",
       "x": 7977,
       "y": 592,
       "maxPoints": 3,
@@ -8058,6 +8371,7 @@
     "mas54-16": {
       "skill": "mas54-16",
       "name": "Cyclone",
+      "icon": "c-flurry3 - orange",
       "x": 8589,
       "y": 812,
       "maxPoints": 1,
@@ -8085,6 +8399,7 @@
     "mas54-17": {
       "skill": "mas54-17",
       "name": "Whirlpool",
+      "icon": "c-Ward Retention Buff (generic)",
       "x": 7181,
       "y": 296,
       "maxPoints": 4,
@@ -8110,6 +8425,7 @@
     "mas54-18": {
       "skill": "mas54-18",
       "name": "Power of the Storm",
+      "icon": "charged ground",
       "x": 8605,
       "y": 56,
       "maxPoints": 1,
@@ -8138,6 +8454,7 @@
     "mas54-19": {
       "skill": "mas54-19",
       "name": "Strong Tides",
+      "icon": "Static",
       "x": 8329,
       "y": -580,
       "maxPoints": 3,
@@ -8160,6 +8477,7 @@
     "mas54-20": {
       "skill": "mas54-20",
       "name": "Energized",
+      "icon": "chain lightning",
       "x": 8901,
       "y": -628,
       "maxPoints": 3,
@@ -8185,6 +8503,7 @@
     "mas54-21": {
       "skill": "mas54-21",
       "name": "Turbulence",
+      "icon": "c-Vale Spirit Bolt",
       "x": 7641,
       "y": -144,
       "maxPoints": 5,
@@ -8211,6 +8530,7 @@
     "mas54-22": {
       "skill": "mas54-22",
       "name": "Growing Storm",
+      "icon": "c-Shatter Strike",
       "x": 7857,
       "y": -844,
       "maxPoints": 5,
@@ -8234,6 +8554,7 @@
     "mas54-23": {
       "skill": "mas54-23",
       "name": "Windswept",
+      "icon": "c-haste",
       "x": 6561,
       "y": -832,
       "maxPoints": 1,
@@ -8258,6 +8579,7 @@
     "mas54-24": {
       "skill": "mas54-24",
       "name": "Windfury",
+      "icon": "c-Frenzy",
       "x": 5933,
       "y": -720,
       "maxPoints": 1,
@@ -8280,6 +8602,7 @@
     "mas54-26": {
       "skill": "mas54-26",
       "name": "Essence of Debris",
+      "icon": "c-earthquake",
       "x": 9077,
       "y": 580,
       "maxPoints": 4,
@@ -8305,6 +8628,7 @@
     "mas54-28": {
       "skill": "mas54-28",
       "name": "Frozen Abyss",
+      "icon": "wanderingspirits-blue",
       "x": 7625,
       "y": 1024,
       "maxPoints": 4,
@@ -8353,6 +8677,7 @@
     "sa36oh-2": {
       "skill": "sa36oh-2",
       "name": "Prowling Juggernaut",
+      "icon": "Charm animal-green",
       "x": 5841,
       "y": -500,
       "maxPoints": 4,
@@ -8380,6 +8705,7 @@
     "sa36oh-3": {
       "skill": "sa36oh-3",
       "name": "Frozen Fur",
+      "icon": "ice_wall",
       "x": 4973,
       "y": -264,
       "maxPoints": 3,
@@ -8409,6 +8735,7 @@
     "sa36oh-4": {
       "skill": "sa36oh-4",
       "name": "Shatterhide",
+      "icon": "Ward-blast",
       "x": 4201,
       "y": -116,
       "maxPoints": 1,
@@ -8431,6 +8758,7 @@
     "sa36oh-5": {
       "skill": "sa36oh-5",
       "name": "Ferocity",
+      "icon": "c-Bear Swipe_Yellow",
       "x": 5139.4,
       "y": 313.2,
       "maxPoints": 5,
@@ -8463,6 +8791,7 @@
     "sa36oh-6": {
       "skill": "sa36oh-6",
       "name": "Camouflage",
+      "icon": "spectral army",
       "x": 5726.6,
       "y": -0,
       "maxPoints": 4,
@@ -8489,6 +8818,7 @@
     "sa36oh-7": {
       "skill": "sa36oh-7",
       "name": "Savage Catalyst",
+      "icon": "swarmblade_armblade",
       "x": 5969,
       "y": 584,
       "maxPoints": 4,
@@ -8515,6 +8845,7 @@
     "sa36oh-8": {
       "skill": "sa36oh-8",
       "name": "Sabermaw",
+      "icon": "c-Bear Ravage",
       "x": 5321,
       "y": 904,
       "maxPoints": 4,
@@ -8544,6 +8875,7 @@
     "sa36oh-9": {
       "skill": "sa36oh-9",
       "name": "Keen Senses",
+      "icon": "Glyph of Fire",
       "x": 4681,
       "y": 1104,
       "maxPoints": 5,
@@ -8568,6 +8900,7 @@
     "sa36oh-10": {
       "skill": "sa36oh-10",
       "name": "Opportunistic Hunter",
+      "icon": "meteor",
       "x": 4051,
       "y": 860,
       "maxPoints": 4,
@@ -8590,6 +8923,7 @@
     "sa36oh-12": {
       "skill": "sa36oh-12",
       "name": "Agile and Deadly",
+      "icon": "c-Swiftness",
       "x": 6832.6,
       "y": 1087.2,
       "maxPoints": 4,
@@ -8617,6 +8951,7 @@
     "sa36oh-13": {
       "skill": "sa36oh-13",
       "name": "Frenzy",
+      "icon": "c-rive-3",
       "x": 7591.4,
       "y": 1208,
       "maxPoints": 1,
@@ -8641,6 +8976,7 @@
     "sa36oh-14": {
       "skill": "sa36oh-14",
       "name": "From the Brink",
+      "icon": "Phoenix Strike",
       "x": 8397,
       "y": 1208,
       "maxPoints": 2,
@@ -8667,6 +9003,7 @@
     "sa36oh-15": {
       "skill": "sa36oh-15",
       "name": "Patient Predator",
+      "icon": "rip blood-bone",
       "x": 7553,
       "y": 608,
       "maxPoints": 5,
@@ -8693,6 +9030,7 @@
     "sa36oh-16": {
       "skill": "sa36oh-16",
       "name": "Frost Fang",
+      "icon": "Shatter strike",
       "x": 7205,
       "y": -200,
       "maxPoints": 4,
@@ -8718,6 +9056,7 @@
     "sa36oh-17": {
       "skill": "sa36oh-17",
       "name": "Ice Tiger",
+      "icon": "Charm animal-blue",
       "x": 7941.8,
       "y": 132,
       "maxPoints": 1,
@@ -8748,6 +9087,7 @@
     "sa36oh-18": {
       "skill": "sa36oh-18",
       "name": "Rhyme Heart",
+      "icon": "Ice Ward 1",
       "x": 8521,
       "y": 672,
       "maxPoints": 3,
@@ -8775,6 +9115,7 @@
     "sa36oh-19": {
       "skill": "sa36oh-19",
       "name": "Ice Bringer",
+      "icon": "ice bolt",
       "x": 8521,
       "y": -436,
       "maxPoints": 3,
@@ -8800,6 +9141,7 @@
     "sa36oh-20": {
       "skill": "sa36oh-20",
       "name": "King of the Tundra",
+      "icon": "c-Shatter Strike",
       "x": 9081,
       "y": 132,
       "maxPoints": 3,
@@ -8827,6 +9169,7 @@
     "sa36oh-21": {
       "skill": "sa36oh-21",
       "name": "Northwind",
+      "icon": "SummonValeSpirit",
       "x": 8521,
       "y": 132,
       "maxPoints": 1,
@@ -8852,6 +9195,7 @@
     "sa36oh-22": {
       "skill": "sa36oh-22",
       "name": "Heavy Paws",
+      "icon": "walk2",
       "x": 5805,
       "y": 1184,
       "maxPoints": 1,
@@ -8876,6 +9220,7 @@
     "sa36oh-23": {
       "skill": "sa36oh-23",
       "name": "Destructive Power",
+      "icon": "claw_swipe",
       "x": 6577,
       "y": -500,
       "maxPoints": 4,
@@ -8905,6 +9250,7 @@
     "sa36oh-24": {
       "skill": "sa36oh-24",
       "name": "Earthshaking Entrance",
+      "icon": "earthquake",
       "x": 7113,
       "y": -844,
       "maxPoints": 1,
@@ -8927,6 +9273,7 @@
     "sa36oh-25": {
       "skill": "sa36oh-25",
       "name": "Hunter's Trail",
+      "icon": "c-haste",
       "x": 5285,
       "y": -792,
       "maxPoints": 4,
@@ -8950,6 +9297,7 @@
     "sa36oh-26": {
       "skill": "sa36oh-26",
       "name": "Cornered Beast",
+      "icon": "lion_roar",
       "x": 4569,
       "y": 460,
       "maxPoints": 1,
@@ -8976,6 +9324,7 @@
     "sa36oh-27": {
       "skill": "sa36oh-27",
       "name": "Ancestral Favor",
+      "icon": "SummonValeSpirit",
       "x": 7573,
       "y": -880,
       "maxPoints": 1,
@@ -8999,6 +9348,7 @@
     "sa36oh-28": {
       "skill": "sa36oh-28",
       "name": "Ancestral Hunter",
+      "icon": "Armblade_Slashes1",
       "x": 7873,
       "y": -476,
       "maxPoints": 1,
@@ -9027,6 +9377,7 @@
     "sa36oh-29": {
       "skill": "sa36oh-29",
       "name": "Ancient Bond",
+      "icon": "FlankingStrike-blue",
       "x": 8309,
       "y": -852,
       "maxPoints": 3,
@@ -9050,6 +9401,7 @@
     "sa36oh-30": {
       "skill": "sa36oh-30",
       "name": "Gouging Claws",
+      "icon": "rip blood",
       "x": 6989,
       "y": 472,
       "maxPoints": 3,
@@ -9098,6 +9450,7 @@
     "sbf4m-2": {
       "skill": "sbf4m-2",
       "name": "Death by a Thousand Wings",
+      "icon": "c-bleed",
       "x": 5485.4,
       "y": -805.2,
       "maxPoints": 5,
@@ -9124,6 +9477,7 @@
     "sbf4m-3": {
       "skill": "sbf4m-3",
       "name": "Bloodlust Swarm",
+      "icon": "c-Ravage",
       "x": 4859,
       "y": -805.2,
       "maxPoints": 1,
@@ -9148,6 +9502,7 @@
     "sbf4m-4": {
       "skill": "sbf4m-4",
       "name": "Feverous Stings",
+      "icon": "c-poison",
       "x": 5285,
       "y": -288,
       "maxPoints": 5,
@@ -9175,6 +9530,7 @@
     "sbf4m-5": {
       "skill": "sbf4m-5",
       "name": "Grand Colony",
+      "icon": "locust",
       "x": 5285,
       "y": 296,
       "maxPoints": 3,
@@ -9204,6 +9560,7 @@
     "sbf4m-6": {
       "skill": "sbf4m-6",
       "name": "Hive Mind",
+      "icon": "c-lethal_mirage",
       "x": 4610.6,
       "y": -201.99997,
       "maxPoints": 3,
@@ -9232,6 +9589,7 @@
     "sbf4m-7": {
       "skill": "sbf4m-7",
       "name": "Swarmkeeper's Call",
+      "icon": "swarm_to_spriggan",
       "x": 4231.8,
       "y": -477.59998,
       "maxPoints": 1,
@@ -9255,6 +9613,7 @@
     "sbf4m-8": {
       "skill": "sbf4m-8",
       "name": "Bountiful Hibernacula",
+      "icon": "c-harden",
       "x": 4568.2,
       "y": 376.00003,
       "maxPoints": 3,
@@ -9282,6 +9641,7 @@
     "sbf4m-9": {
       "skill": "sbf4m-9",
       "name": "Release the Horde",
+      "icon": "bees",
       "x": 3900.2,
       "y": 376,
       "maxPoints": 3,
@@ -9304,6 +9664,7 @@
     "sbf4m-10": {
       "skill": "sbf4m-10",
       "name": "Frost Bites",
+      "icon": "c-freeze",
       "x": 4979.8,
       "y": 896,
       "maxPoints": 1,
@@ -9330,6 +9691,7 @@
     "sbf4m-11": {
       "skill": "sbf4m-11",
       "name": "Chitin Sleet Storm",
+      "icon": "c-cold damage buff",
       "x": 4359.4,
       "y": 1194,
       "maxPoints": 5,
@@ -9352,6 +9714,7 @@
     "sbf4m-12": {
       "skill": "sbf4m-12",
       "name": "Spiked Vespiary",
+      "icon": "thorn_explosion",
       "x": 3833.8,
       "y": -201.99997,
       "maxPoints": 1,
@@ -9378,6 +9741,7 @@
     "sbf4m-13": {
       "skill": "sbf4m-13",
       "name": "Locust Agility",
+      "icon": "c-armor buff_2",
       "x": 5981,
       "y": 460,
       "maxPoints": 5,
@@ -9406,6 +9770,7 @@
     "sbf4m-14": {
       "skill": "sbf4m-14",
       "name": "Water Strider",
+      "icon": "c-tornado1",
       "x": 5579.4,
       "y": 1194,
       "maxPoints": 4,
@@ -9429,6 +9794,7 @@
     "sbf4m-15": {
       "skill": "sbf4m-15",
       "name": "Springer's Fury",
+      "icon": "c-warcry",
       "x": 6165.4,
       "y": 1248.8,
       "maxPoints": 2,
@@ -9451,6 +9817,7 @@
     "sbf4m-16": {
       "skill": "sbf4m-16",
       "name": "Ironclad Beetle",
+      "icon": "c-yellow eye",
       "x": 6481,
       "y": 778.8,
       "maxPoints": 1,
@@ -9473,6 +9840,7 @@
     "sbf4m-17": {
       "skill": "sbf4m-17",
       "name": "Slashing Spiral",
+      "icon": "c-dancing-strikes",
       "x": 6981,
       "y": 460,
       "maxPoints": 5,
@@ -9502,6 +9870,7 @@
     "sbf4m-18": {
       "skill": "sbf4m-18",
       "name": "Vampiric Mandibles",
+      "icon": "Drain_Life",
       "x": 8622.199,
       "y": 360,
       "maxPoints": 5,
@@ -9529,6 +9898,7 @@
     "sbf4m-20": {
       "skill": "sbf4m-20",
       "name": "Neverending Drove",
+      "icon": "Swarm_Strike",
       "x": 7971.4,
       "y": 1080,
       "maxPoints": 4,
@@ -9557,6 +9927,7 @@
     "sbf4m-21": {
       "skill": "sbf4m-21",
       "name": "Swarm's Fury",
+      "icon": "swarm_to_bear",
       "x": 8622.199,
       "y": 1080,
       "maxPoints": 1,
@@ -9580,6 +9951,7 @@
     "sbf4m-22": {
       "skill": "sbf4m-22",
       "name": "Inspiring Swarm",
+      "icon": "c-raptor_enrage",
       "x": 7349,
       "y": 1194,
       "maxPoints": 1,
@@ -9602,6 +9974,7 @@
     "sbf4m-23": {
       "skill": "sbf4m-23",
       "name": "Plague of Locusts",
+      "icon": "Spirit_Plague_spread",
       "x": 8299.4,
       "y": 721.2,
       "maxPoints": 3,
@@ -9630,6 +10003,7 @@
     "sbf4m-24": {
       "skill": "sbf4m-24",
       "name": "Earth Stinger",
+      "icon": "c-melee damage buff",
       "x": 7430.6,
       "y": 4.5776E-05,
       "maxPoints": 5,
@@ -9658,6 +10032,7 @@
     "sbf4m-25": {
       "skill": "sbf4m-25",
       "name": "Needle-Like Sting",
+      "icon": "c-harpoon",
       "x": 8256.6,
       "y": -273.2,
       "maxPoints": 5,
@@ -9684,6 +10059,7 @@
     "sbf4m-26": {
       "skill": "sbf4m-26",
       "name": "Hornet Nest",
+      "icon": "Summon_Hive_Purple",
       "x": 8965.8,
       "y": -2,
       "maxPoints": 1,
@@ -9713,6 +10089,7 @@
     "sbf4m-27": {
       "skill": "sbf4m-27",
       "name": "Grasshopper's Frenzy",
+      "icon": "c-descent",
       "x": 8965.8,
       "y": -552.4,
       "maxPoints": 2,
@@ -9735,6 +10112,7 @@
     "sbf4m-28": {
       "skill": "sbf4m-28",
       "name": "Viper's Call",
+      "icon": "VenomStrike",
       "x": 6981,
       "y": -460,
       "maxPoints": 1,
@@ -9761,6 +10139,7 @@
     "sbf4m-29": {
       "skill": "sbf4m-29",
       "name": "Endless Pressure",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 7593.8,
       "y": -768.4,
       "maxPoints": 3,
@@ -9786,6 +10165,7 @@
     "sbf4m-30": {
       "skill": "sbf4m-30",
       "name": "Windfury Strikes",
+      "icon": "Tornado",
       "x": 8256.601,
       "y": -768.4,
       "maxPoints": 1,
@@ -9811,6 +10191,7 @@
     "sbf4m-31": {
       "skill": "sbf4m-31",
       "name": "Army of the Tempest",
+      "icon": "c-tempest_strike-weapon-blue",
       "x": 8785,
       "y": -988,
       "maxPoints": 2,
@@ -9834,6 +10215,7 @@
     "sbf4m-32": {
       "skill": "sbf4m-32",
       "name": "Locust Master",
+      "icon": "c-glyph-green",
       "x": 6481,
       "y": -792,
       "maxPoints": 1,
@@ -9856,6 +10238,7 @@
     "sbf4m-34": {
       "skill": "sbf4m-34",
       "name": "Wasp Flight",
+      "icon": "swarmblade_armblade",
       "x": 5981,
       "y": -460,
       "maxPoints": 5,
@@ -9883,6 +10266,7 @@
     "sbf4m-35": {
       "skill": "sbf4m-35",
       "name": "Soaring Scourge",
+      "icon": "beetle_mandible",
       "x": 7971.4,
       "y": 360,
       "maxPoints": 1,
@@ -9909,6 +10293,7 @@
     "sbf4m-36": {
       "skill": "sbf4m-36",
       "name": "Carnage",
+      "icon": "dash",
       "x": 6781,
       "y": 1248.8,
       "maxPoints": 5,
@@ -9957,6 +10342,7 @@
     "sc36pi-1": {
       "skill": "sc36pi-1",
       "name": "Steel Carapace",
+      "icon": "c-Stun Susceptibility Buff (generic)",
       "x": 5677,
       "y": 9.5368E-07,
       "maxPoints": 4,
@@ -9986,6 +10372,7 @@
     "sc36pi-2": {
       "skill": "sc36pi-2",
       "name": "Venomous Maw",
+      "icon": "beetle_mandible",
       "x": 5919.8,
       "y": -511.19992,
       "maxPoints": 4,
@@ -10012,6 +10399,7 @@
     "sc36pi-3": {
       "skill": "sc36pi-3",
       "name": "Envenomed Prey",
+      "icon": "c-bear roar alt",
       "x": 5394.2,
       "y": -916.8,
       "maxPoints": 1,
@@ -10037,6 +10425,7 @@
     "sc36pi-4": {
       "skill": "sc36pi-4",
       "name": "Pinches and Pokes",
+      "icon": "Armblade_SlashesMain",
       "x": 4982.2,
       "y": -200,
       "maxPoints": 3,
@@ -10065,6 +10454,7 @@
     "sc36pi-5": {
       "skill": "sc36pi-5",
       "name": "Blood Poisoning",
+      "icon": "rip blood",
       "x": 4758.2,
       "y": -700,
       "maxPoints": 5,
@@ -10092,6 +10482,7 @@
     "sc36pi-6": {
       "skill": "sc36pi-6",
       "name": "Ironclad",
+      "icon": "swarmblade_armblade",
       "x": 4149,
       "y": -240,
       "maxPoints": 1,
@@ -10115,6 +10506,7 @@
     "sc36pi-7": {
       "skill": "sc36pi-7",
       "name": "Maternal Instinct",
+      "icon": "Thornclaw form",
       "x": 5465.8,
       "y": 546.4,
       "maxPoints": 3,
@@ -10143,6 +10535,7 @@
     "sc36pi-8": {
       "skill": "sc36pi-8",
       "name": "Temper Tantrum",
+      "icon": "desecrate",
       "x": 4741.4,
       "y": 281.2,
       "maxPoints": 4,
@@ -10168,6 +10561,7 @@
     "sc36pi-9": {
       "skill": "sc36pi-9",
       "name": "Sweet Release",
+      "icon": "Assemble abomination",
       "x": 4363,
       "y": 758.8,
       "maxPoints": 3,
@@ -10193,6 +10587,7 @@
     "sc36pi-10": {
       "skill": "sc36pi-10",
       "name": "Small Target",
+      "icon": "bear roar",
       "x": 5293.4,
       "y": 1192,
       "maxPoints": 2,
@@ -10217,6 +10612,7 @@
     "sc36pi-11": {
       "skill": "sc36pi-11",
       "name": "Scurry",
+      "icon": "c-tempest strike2",
       "x": 4618.2,
       "y": 1192,
       "maxPoints": 4,
@@ -10240,6 +10636,7 @@
     "sc36pi-12": {
       "skill": "sc36pi-12",
       "name": "Chromatic Carapace",
+      "icon": "c-Ring-of-Shields-alt",
       "x": 7041.8,
       "y": 532,
       "maxPoints": 4,
@@ -10268,6 +10665,7 @@
     "sc36pi-13": {
       "skill": "sc36pi-13",
       "name": "Cold-Blooded",
+      "icon": "c-blue-swirl",
       "x": 7629,
       "y": 868,
       "maxPoints": 1,
@@ -10294,6 +10692,7 @@
     "sc36pi-14": {
       "skill": "sc36pi-14",
       "name": "Ice Sting",
+      "icon": "c-snap freeze",
       "x": 6841.8,
       "y": 1172,
       "maxPoints": 4,
@@ -10320,6 +10719,7 @@
     "sc36pi-15": {
       "skill": "sc36pi-15",
       "name": "Frozen Winds",
+      "icon": "c-tornado1",
       "x": 6213,
       "y": 896,
       "maxPoints": 4,
@@ -10345,6 +10745,7 @@
     "sc36pi-16": {
       "skill": "sc36pi-16",
       "name": "Thunder Stinger",
+      "icon": "Storm Call",
       "x": 8007,
       "y": 425.6,
       "maxPoints": 1,
@@ -10375,6 +10776,7 @@
     "sc36pi-17": {
       "skill": "sc36pi-17",
       "name": "Shock and Claw",
+      "icon": "lightning_swipe",
       "x": 8729.8,
       "y": 532,
       "maxPoints": 5,
@@ -10398,6 +10800,7 @@
     "sc36pi-18": {
       "skill": "sc36pi-18",
       "name": "Reverberating Strike",
+      "icon": "c-avalanche",
       "x": 6245,
       "y": 552,
       "maxPoints": 1,
@@ -10423,6 +10826,7 @@
     "sc36pi-19": {
       "skill": "sc36pi-19",
       "name": "Storm Conduit",
+      "icon": "c-lightningBall",
       "x": 8729.8,
       "y": 180,
       "maxPoints": 1,
@@ -10450,6 +10854,7 @@
     "sc36pi-20": {
       "skill": "sc36pi-20",
       "name": "Noxious Carapace",
+      "icon": "c-scorpion poison alt",
       "x": 7041.8,
       "y": -511.19992,
       "maxPoints": 5,
@@ -10475,6 +10880,7 @@
     "sc36pi-22": {
       "skill": "sc36pi-22",
       "name": "Miasma",
+      "icon": "c-Plague",
       "x": 7629,
       "y": -868,
       "maxPoints": 5,
@@ -10501,6 +10907,7 @@
     "sc36pi-23": {
       "skill": "sc36pi-23",
       "name": "Deeper Puddle",
+      "icon": "Reclamation",
       "x": 8007,
       "y": -425.60004,
       "maxPoints": 1,
@@ -10525,6 +10932,7 @@
     "sc36pi-24": {
       "skill": "sc36pi-24",
       "name": "Pus Sacks",
+      "icon": "Summon Snakes",
       "x": 8729.8,
       "y": -280.40005,
       "maxPoints": 3,
@@ -10552,6 +10960,7 @@
     "sc36pi-25": {
       "skill": "sc36pi-25",
       "name": "Brood Invigoration",
+      "icon": "Swipe-2",
       "x": 8506.2,
       "y": -922.80005,
       "maxPoints": 4,
@@ -10576,6 +10985,7 @@
     "sc36pi-26": {
       "skill": "sc36pi-26",
       "name": "Winternid Jaws",
+      "icon": "ice_bolt",
       "x": 6053,
       "y": 1252,
       "maxPoints": 1,
@@ -10599,6 +11009,7 @@
     "sc36pi-28": {
       "skill": "sc36pi-28",
       "name": "Rest for the WIcked",
+      "icon": "c-claws",
       "x": 7484.6,
       "y": 27.2,
       "maxPoints": 3,
@@ -10644,6 +11055,7 @@
     "sf5rd-2": {
       "skill": "sf5rd-2",
       "name": "Overgrowth",
+      "icon": "Rod of Power",
       "x": 5801,
       "y": -360,
       "maxPoints": 5,
@@ -10670,6 +11082,7 @@
     "sf5rd-3": {
       "skill": "sf5rd-3",
       "name": "Creeping Underbrush",
+      "icon": "Summon_3_Vines",
       "x": 4729,
       "y": -804,
       "maxPoints": 5,
@@ -10700,6 +11113,7 @@
     "sf5rd-4": {
       "skill": "sf5rd-4",
       "name": "Blades of the Forest",
+      "icon": "spriggan_to_swarm",
       "x": 3986.2,
       "y": -804,
       "maxPoints": 1,
@@ -10723,6 +11137,7 @@
     "sf5rd-5": {
       "skill": "sf5rd-5",
       "name": "Garden of Rage",
+      "icon": "red_thorny_vines",
       "x": 3786.2,
       "y": -256,
       "maxPoints": 3,
@@ -10748,6 +11163,7 @@
     "sf5rd-6": {
       "skill": "sf5rd-6",
       "name": "Great Vine",
+      "icon": "thorny_vines",
       "x": 4153.4,
       "y": 122,
       "maxPoints": 1,
@@ -10775,6 +11191,7 @@
     "sf5rd-7": {
       "skill": "sf5rd-7",
       "name": "Barbed Thicket",
+      "icon": "Thorn_Shield-red",
       "x": 4729,
       "y": 8,
       "maxPoints": 4,
@@ -10804,6 +11221,7 @@
     "sf5rd-8": {
       "skill": "sf5rd-8",
       "name": "Spikeburst",
+      "icon": "thorn_explosion",
       "x": 5801,
       "y": 359.5999,
       "maxPoints": 5,
@@ -10832,6 +11250,7 @@
     "sf5rd-9": {
       "skill": "sf5rd-9",
       "name": "Stinging Bramble",
+      "icon": "c-bleed",
       "x": 4815.4,
       "y": 480,
       "maxPoints": 5,
@@ -10857,6 +11276,7 @@
     "sf5rd-10": {
       "skill": "sf5rd-10",
       "name": "Glacial Grove",
+      "icon": "c-tornado1",
       "x": 3953.4,
       "y": 653.2,
       "maxPoints": 3,
@@ -10879,6 +11299,7 @@
     "sf5rd-11": {
       "skill": "sf5rd-11",
       "name": "Ironbark",
+      "icon": "c-armor buff_2",
       "x": 6481,
       "y": 680,
       "maxPoints": 5,
@@ -10906,6 +11327,7 @@
     "sf5rd-12": {
       "skill": "sf5rd-12",
       "name": "Deep Roots",
+      "icon": "Frenzy Totem2",
       "x": 5845.8,
       "y": 932.8,
       "maxPoints": 3,
@@ -10932,6 +11354,7 @@
     "sf5rd-13": {
       "skill": "sf5rd-13",
       "name": "Eterra's Bulwark",
+      "icon": "Thorn_Shield",
       "x": 5329.4,
       "y": 717.6,
       "maxPoints": 5,
@@ -10958,6 +11381,7 @@
     "sf5rd-14": {
       "skill": "sf5rd-14",
       "name": "Introspection",
+      "icon": "c-armor buff_2",
       "x": 4237.4,
       "y": 960.80005,
       "maxPoints": 1,
@@ -10983,6 +11407,7 @@
     "sf5rd-15": {
       "skill": "sf5rd-15",
       "name": "Bulb Growth",
+      "icon": "c-harden red",
       "x": 4515,
       "y": 1250,
       "maxPoints": 3,
@@ -11005,6 +11430,7 @@
     "sf5rd-16": {
       "skill": "sf5rd-16",
       "name": "Briar Shell",
+      "icon": "c-rebuke",
       "x": 6481,
       "y": 1221.2,
       "maxPoints": 5,
@@ -11027,6 +11453,7 @@
     "sf5rd-17": {
       "skill": "sf5rd-17",
       "name": "Roar of the Woodland",
+      "icon": "spriggan_to_bear",
       "x": 5329.4,
       "y": 1250,
       "maxPoints": 1,
@@ -11050,6 +11477,7 @@
     "sf5rd-18": {
       "skill": "sf5rd-18",
       "name": "Leaf Barrier",
+      "icon": "Eterra's Blessing-blue",
       "x": 7013.4,
       "y": 880,
       "maxPoints": 1,
@@ -11074,6 +11502,7 @@
     "sf5rd-19": {
       "skill": "sf5rd-19",
       "name": "Friend of the Forest",
+      "icon": "spriggan_bright",
       "x": 7381,
       "y": 1266.7999,
       "maxPoints": 1,
@@ -11099,6 +11528,7 @@
     "sf5rd-20": {
       "skill": "sf5rd-20",
       "name": "Totem Warden",
+      "icon": "c-Heal over time",
       "x": 7161,
       "y": 359.59985,
       "maxPoints": 4,
@@ -11126,6 +11556,7 @@
     "sf5rd-21": {
       "skill": "sf5rd-21",
       "name": "Spiked Totems",
+      "icon": "thorn_totem",
       "x": 7905,
       "y": 1122.4,
       "maxPoints": 1,
@@ -11151,6 +11582,7 @@
     "sf5rd-22": {
       "skill": "sf5rd-22",
       "name": "Unbound Garden",
+      "icon": "Totemic Rising",
       "x": 8711.4,
       "y": 1266.7999,
       "maxPoints": 3,
@@ -11175,6 +11607,7 @@
     "sf5rd-23": {
       "skill": "sf5rd-23",
       "name": "Guardian of Nature",
+      "icon": "Summon_healing_totem",
       "x": 8072.2,
       "y": 359.59998,
       "maxPoints": 4,
@@ -11202,6 +11635,7 @@
     "sf5rd-24": {
       "skill": "sf5rd-24",
       "name": "Ire of Trees",
+      "icon": "rage_totem",
       "x": 8372.601,
       "y": 788.8,
       "maxPoints": 1,
@@ -11228,6 +11662,7 @@
     "sf5rd-25": {
       "skill": "sf5rd-25",
       "name": "Wrath of the Glade",
+      "icon": "3_leaves",
       "x": 8814.6,
       "y": 517.6,
       "maxPoints": 1,
@@ -11255,6 +11690,7 @@
     "sf5rd-26": {
       "skill": "sf5rd-26",
       "name": "Rose Meadow",
+      "icon": "Spirit_Thorns",
       "x": 7161,
       "y": -360,
       "maxPoints": 3,
@@ -11281,6 +11717,7 @@
     "sf5rd-27": {
       "skill": "sf5rd-27",
       "name": "Ancestral Call",
+      "icon": "c-enrage",
       "x": 7892.6,
       "y": -536.8,
       "maxPoints": 3,
@@ -11310,6 +11747,7 @@
     "sf5rd-28": {
       "skill": "sf5rd-28",
       "name": "Branch Storm",
+      "icon": "c-Attack Speed Debuff (generic)_3",
       "x": 8263.4,
       "y": -56,
       "maxPoints": 4,
@@ -11338,6 +11776,7 @@
     "sf5rd-29": {
       "skill": "sf5rd-29",
       "name": "Spiritwhisperer",
+      "icon": "c-arrow storm",
       "x": 8704.6,
       "y": -392,
       "maxPoints": 3,
@@ -11365,6 +11804,7 @@
     "sf5rd-30": {
       "skill": "sf5rd-30",
       "name": "Cycle of Life",
+      "icon": "c-Vale Spirit Bolt_3",
       "x": 9070.6,
       "y": -16,
       "maxPoints": 3,
@@ -11387,6 +11827,7 @@
     "sf5rd-31": {
       "skill": "sf5rd-31",
       "name": "Valetide",
+      "icon": "Entangling_Roots1",
       "x": 8939.4,
       "y": -900,
       "maxPoints": 3,
@@ -11411,6 +11852,7 @@
     "sf5rd-32": {
       "skill": "sf5rd-32",
       "name": "Spirit Vortex",
+      "icon": "c-flurry2 - blue",
       "x": 8157.8,
       "y": -1030,
       "maxPoints": 3,
@@ -11433,6 +11875,7 @@
     "sf5rd-33": {
       "skill": "sf5rd-33",
       "name": "Nightshade",
+      "icon": "c-poison",
       "x": 6481,
       "y": -700,
       "maxPoints": 5,
@@ -11461,6 +11904,7 @@
     "sf5rd-34": {
       "skill": "sf5rd-34",
       "name": "Ice Branch",
+      "icon": "c-freeze",
       "x": 7457,
       "y": -876,
       "maxPoints": 1,
@@ -11485,6 +11929,7 @@
     "sf5rd-35": {
       "skill": "sf5rd-35",
       "name": "Huntersbane",
+      "icon": "c-flurry3",
       "x": 5564.2,
       "y": -876,
       "maxPoints": 1,
@@ -11531,6 +11976,7 @@
     "sf37-2": {
       "skill": "sf37-2",
       "name": "Reinforced Totem",
+      "icon": "FrenzyTotem",
       "x": 5781,
       "y": -404,
       "maxPoints": 5,
@@ -11558,6 +12004,7 @@
     "sf37-3": {
       "skill": "sf37-3",
       "name": "Reach",
+      "icon": "Frenzy Totem2",
       "x": 4905,
       "y": -820,
       "maxPoints": 5,
@@ -11582,6 +12029,7 @@
     "sf37-4": {
       "skill": "sf37-4",
       "name": "Healing Pulse",
+      "icon": "Eterra's Blessing",
       "x": 3909,
       "y": -820,
       "maxPoints": 4,
@@ -11604,6 +12052,7 @@
     "sf37-5": {
       "skill": "sf37-5",
       "name": "Thorn Idol",
+      "icon": "c-storm-totem-new",
       "x": 4905,
       "y": -0,
       "maxPoints": 4,
@@ -11635,6 +12084,7 @@
     "sf37-6": {
       "skill": "sf37-6",
       "name": "Improved Thorn Idol",
+      "icon": "Storm Call",
       "x": 4237,
       "y": 392.80005,
       "maxPoints": 4,
@@ -11657,6 +12107,7 @@
     "sf37-7": {
       "skill": "sf37-7",
       "name": "Lash Out",
+      "icon": "c-ice thorns 2",
       "x": 3909,
       "y": -0,
       "maxPoints": 3,
@@ -11684,6 +12135,7 @@
     "sf37-8": {
       "skill": "sf37-8",
       "name": "Sloth Totem",
+      "icon": "c-frenzy-totem-blue",
       "x": 4477,
       "y": -404,
       "maxPoints": 1,
@@ -11713,6 +12165,7 @@
     "sf37-9": {
       "skill": "sf37-9",
       "name": "Grounded",
+      "icon": "tremor",
       "x": 5781,
       "y": 404,
       "maxPoints": 5,
@@ -11739,6 +12192,7 @@
     "sf37-10": {
       "skill": "sf37-10",
       "name": "Dig In",
+      "icon": "c-disintegrate_combined ",
       "x": 5274.6,
       "y": 700,
       "maxPoints": 3,
@@ -11768,6 +12222,7 @@
     "sf37-11": {
       "skill": "sf37-11",
       "name": "Totemic Reach",
+      "icon": "c-rebuke",
       "x": 4590.6,
       "y": 706.80005,
       "maxPoints": 4,
@@ -11790,6 +12245,7 @@
     "sf37-13": {
       "skill": "sf37-13",
       "name": "Dig Deep",
+      "icon": "c-double-strike",
       "x": 4930.6,
       "y": 1272.8,
       "maxPoints": 5,
@@ -11812,6 +12268,7 @@
     "sf37-14": {
       "skill": "sf37-14",
       "name": "Revitalizing Totem",
+      "icon": "Rod of Power",
       "x": 7181,
       "y": 404,
       "maxPoints": 5,
@@ -11838,6 +12295,7 @@
     "sf37-15": {
       "skill": "sf37-15",
       "name": "Symbol of Haste",
+      "icon": "c-haste",
       "x": 7181,
       "y": 1236,
       "maxPoints": 3,
@@ -11862,6 +12320,7 @@
     "sf37-16": {
       "skill": "sf37-16",
       "name": "Symbol of Selflessness",
+      "icon": "c-bear roar alt",
       "x": 6721,
       "y": 1036,
       "maxPoints": 1,
@@ -11887,6 +12346,7 @@
     "sf37-17": {
       "skill": "sf37-17",
       "name": "Warding Totem",
+      "icon": "c-harden",
       "x": 6197,
       "y": 1236,
       "maxPoints": 3,
@@ -11910,6 +12370,7 @@
     "sf37-18": {
       "skill": "sf37-18",
       "name": "Mortuary Totem",
+      "icon": "c-Heal over time",
       "x": 7959.8,
       "y": 932.80005,
       "maxPoints": 2,
@@ -11934,6 +12395,7 @@
     "sf37-19": {
       "skill": "sf37-19",
       "name": "Invigorated Renewal",
+      "icon": "Overgrowth",
       "x": 8917,
       "y": 932.80005,
       "maxPoints": 1,
@@ -11959,6 +12421,7 @@
     "sf37-20": {
       "skill": "sf37-20",
       "name": "Venomous Intent",
+      "icon": "VenomStrike",
       "x": 7641,
       "y": 176,
       "maxPoints": 5,
@@ -11985,6 +12448,7 @@
     "sf37-22": {
       "skill": "sf37-22",
       "name": "Rabidity",
+      "icon": "Primal Roar",
       "x": 7181,
       "y": -404,
       "maxPoints": 3,
@@ -12010,6 +12474,7 @@
     "sf37-23": {
       "skill": "sf37-23",
       "name": "Reckless Frenzy",
+      "icon": "rage_totem",
       "x": 7617,
       "y": -892,
       "maxPoints": 3,
@@ -12036,6 +12501,7 @@
     "sf37-24": {
       "skill": "sf37-24",
       "name": "Bestial Frenzy",
+      "icon": "c-maul",
       "x": 8119.8,
       "y": -64,
       "maxPoints": 5,
@@ -12066,6 +12532,7 @@
     "sf37-25": {
       "skill": "sf37-25",
       "name": "Furious Cry",
+      "icon": "c-primal fury",
       "x": 8659.8,
       "y": -620,
       "maxPoints": 1,
@@ -12088,6 +12555,7 @@
     "sf37-26": {
       "skill": "sf37-26",
       "name": "Maim",
+      "icon": "Summon Sabertooth",
       "x": 9069,
       "y": 296,
       "maxPoints": 1,
@@ -12110,6 +12578,7 @@
     "sf37-28": {
       "skill": "sf37-28",
       "name": "Lead The Pack",
+      "icon": "Summon Wolf",
       "x": 9089.8,
       "y": -306.4,
       "maxPoints": 5,
@@ -12132,6 +12601,7 @@
     "sf37-29": {
       "skill": "sf37-29",
       "name": "Venom Spray",
+      "icon": "scorpion poison",
       "x": 8519.8,
       "y": 496,
       "maxPoints": 5,
@@ -12176,6 +12646,7 @@
     "sp38-2": {
       "skill": "sp38-2",
       "name": "Briar Summoner",
+      "icon": "thorny_vines",
       "x": 5981,
       "y": -399.99988,
       "maxPoints": 1,
@@ -12203,6 +12674,7 @@
     "sp38-3": {
       "skill": "sp38-3",
       "name": "Vine Mastery",
+      "icon": "c-harden",
       "x": 4416.2,
       "y": -252.79993,
       "maxPoints": 4,
@@ -12225,6 +12697,7 @@
     "sp38-4": {
       "skill": "sp38-4",
       "name": "Deadly Thicket",
+      "icon": "c-damage buff",
       "x": 5024.6,
       "y": -252.8,
       "maxPoints": 5,
@@ -12250,6 +12723,7 @@
     "sp38-5": {
       "skill": "sp38-5",
       "name": "Forest Raiser",
+      "icon": "Summon_3_Vines",
       "x": 4416.2,
       "y": -732.80005,
       "maxPoints": 1,
@@ -12273,6 +12747,7 @@
     "sp38-6": {
       "skill": "sp38-6",
       "name": "Attuned Vines",
+      "icon": "c-poison_protection_buff",
       "x": 5024.6,
       "y": -732.8,
       "maxPoints": 5,
@@ -12296,6 +12771,7 @@
     "sp38-7": {
       "skill": "sp38-7",
       "name": "Floral Ascendance",
+      "icon": "c-Spellpower 1 Buff (generic)",
       "x": 5981,
       "y": 440,
       "maxPoints": 5,
@@ -12322,6 +12798,7 @@
     "sp38-8": {
       "skill": "sp38-8",
       "name": "Thorn Barrage",
+      "icon": "Spirit_Thorns",
       "x": 5070.6,
       "y": 983.6,
       "maxPoints": 4,
@@ -12347,6 +12824,7 @@
     "sp38-9": {
       "skill": "sp38-9",
       "name": "Barbed Assault",
+      "icon": "c-multishot-green",
       "x": 4474.6,
       "y": 1234,
       "maxPoints": 1,
@@ -12370,6 +12848,7 @@
     "sp38-10": {
       "skill": "sp38-10",
       "name": "Brutal Mire",
+      "icon": "Armblade_Slashes1",
       "x": 6181,
       "y": 1123.2,
       "maxPoints": 4,
@@ -12398,6 +12877,7 @@
     "sp38-11": {
       "skill": "sp38-11",
       "name": "Vile Bramble",
+      "icon": "c-Attack Speed Debuff (generic)_3",
       "x": 5679.4,
       "y": 1234,
       "maxPoints": 3,
@@ -12420,6 +12900,7 @@
     "sp38-12": {
       "skill": "sp38-12",
       "name": "Aura of Life",
+      "icon": "c-Health Regeneration Buff (generic)",
       "x": 6981,
       "y": 440,
       "maxPoints": 5,
@@ -12449,6 +12930,7 @@
     "sp38-13": {
       "skill": "sp38-13",
       "name": "Aura of Kinship",
+      "icon": "c-mana storm",
       "x": 7425,
       "y": 1148,
       "maxPoints": 3,
@@ -12478,6 +12960,7 @@
     "sp38-14": {
       "skill": "sp38-14",
       "name": "Aura of Retribution",
+      "icon": "c-ShadowCascade",
       "x": 6781,
       "y": 1123.2,
       "maxPoints": 4,
@@ -12509,6 +12992,7 @@
     "sp38-15": {
       "skill": "sp38-15",
       "name": "Arboreal Vitality",
+      "icon": "c-armor buff_2",
       "x": 6981,
       "y": -400,
       "maxPoints": 5,
@@ -12534,6 +13018,7 @@
     "sp38-16": {
       "skill": "sp38-16",
       "name": "Warding Bark",
+      "icon": "c-Damage Mitigation Debuff (generic)",
       "x": 6481,
       "y": -782.4,
       "maxPoints": 5,
@@ -12559,6 +13044,7 @@
     "sp38-17": {
       "skill": "sp38-17",
       "name": "Creeping Roots",
+      "icon": "Entangling_Roots1",
       "x": 7912.2,
       "y": -210,
       "maxPoints": 1,
@@ -12585,6 +13071,7 @@
     "sp38-18": {
       "skill": "sp38-18",
       "name": "Barbed Roots",
+      "icon": "Swarm_Strike",
       "x": 8166.5996,
       "y": -667.2,
       "maxPoints": 4,
@@ -12609,6 +13096,7 @@
     "sp38-20": {
       "skill": "sp38-20",
       "name": "Branches of Winter",
+      "icon": "c-freeze",
       "x": 5425,
       "y": 148.4,
       "maxPoints": 1,
@@ -12637,6 +13125,7 @@
     "sp38-21": {
       "skill": "sp38-21",
       "name": "Protective Roots",
+      "icon": "spriggan",
       "x": 8166.6,
       "y": 264,
       "maxPoints": 1,
@@ -12661,6 +13150,7 @@
     "sp38-22": {
       "skill": "sp38-22",
       "name": "Nature’s Reach",
+      "icon": "c-flurry3",
       "x": 9046.6,
       "y": -210,
       "maxPoints": 3,
@@ -12683,6 +13173,7 @@
     "sp38-23": {
       "skill": "sp38-23",
       "name": "Lasting Roots",
+      "icon": "3_leaves",
       "x": 8479.8,
       "y": -210,
       "maxPoints": 4,
@@ -12705,6 +13196,7 @@
     "sp38-24": {
       "skill": "sp38-24",
       "name": "Aura of Loyalty",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 7709,
       "y": 476,
       "maxPoints": 4,
@@ -12734,6 +13226,7 @@
     "sp38-25": {
       "skill": "sp38-25",
       "name": "Frostleaf",
+      "icon": "c-cold damage buff",
       "x": 4653,
       "y": 464.00003,
       "maxPoints": 5,
@@ -12757,6 +13250,7 @@
     "sp38-26": {
       "skill": "sp38-26",
       "name": "Aura of Evasion",
+      "icon": "c-Swiftness",
       "x": 8285,
       "y": 1016,
       "maxPoints": 1,
@@ -12782,6 +13276,7 @@
     "sp38-27": {
       "skill": "sp38-27",
       "name": "Garden of Nourishment",
+      "icon": "white_flower",
       "x": 8787.4,
       "y": 264,
       "maxPoints": 4,
@@ -12804,6 +13299,7 @@
     "sp38-28": {
       "skill": "sp38-28",
       "name": "Invading Underbrush",
+      "icon": "c-shift",
       "x": 8787.4,
       "y": -667.2001,
       "maxPoints": 1,
@@ -12828,6 +13324,7 @@
     "sp38-29": {
       "skill": "sp38-29",
       "name": "Thorny Stalks",
+      "icon": "Thorn_Shield",
       "x": 7471,
       "y": -782.4,
       "maxPoints": 3,
@@ -12850,6 +13347,7 @@
     "sp38-30": {
       "skill": "sp38-30",
       "name": "Aura of Hordes",
+      "icon": "c-storm_crows",
       "x": 8433,
       "y": 594.4,
       "maxPoints": 2,
@@ -12877,6 +13375,7 @@
     "sp38-31": {
       "skill": "sp38-31",
       "name": "Aura of Voracity",
+      "icon": "Bear Roar 1",
       "x": 7797,
       "y": 1044,
       "maxPoints": 3,
@@ -12926,6 +13425,7 @@
     "srtor-2": {
       "skill": "srtor-2",
       "name": "Iridescent Plumage",
+      "icon": "elementalProtection",
       "x": 5881,
       "y": -420,
       "maxPoints": 4,
@@ -12952,6 +13452,7 @@
     "srtor-3": {
       "skill": "srtor-3",
       "name": "Screech",
+      "icon": "c-bear roar alt",
       "x": 4969,
       "y": -452,
       "maxPoints": 1,
@@ -12982,6 +13483,7 @@
     "srtor-4": {
       "skill": "srtor-4",
       "name": "Earsplitting Roar",
+      "icon": "c-bear roar",
       "x": 4120.2,
       "y": -444,
       "maxPoints": 4,
@@ -13005,6 +13507,7 @@
     "srtor-6": {
       "skill": "srtor-6",
       "name": "Clever Girl",
+      "icon": "cooldown-reduction",
       "x": 4741,
       "y": -4,
       "maxPoints": 4,
@@ -13032,6 +13535,7 @@
     "srtor-7": {
       "skill": "srtor-7",
       "name": "Brilliant Display",
+      "icon": "CooldownSpeedUp",
       "x": 5341,
       "y": -812,
       "maxPoints": 1,
@@ -13057,6 +13561,7 @@
     "srtor-8": {
       "skill": "srtor-8",
       "name": "Razor Wings",
+      "icon": "c-claws",
       "x": 5881,
       "y": 420,
       "maxPoints": 4,
@@ -13084,6 +13589,7 @@
     "srtor-9": {
       "skill": "srtor-9",
       "name": "Volcanic Adaptation",
+      "icon": "Raptor_Fire_Primalist",
       "x": 4887.4,
       "y": 500,
       "maxPoints": 1,
@@ -13113,6 +13619,7 @@
     "srtor-10": {
       "skill": "srtor-10",
       "name": "Molten Lungs",
+      "icon": "firebolt",
       "x": 4239.4,
       "y": 900,
       "maxPoints": 4,
@@ -13141,6 +13648,7 @@
     "srtor-11": {
       "skill": "srtor-11",
       "name": "Taste for Flesh",
+      "icon": "c-Bear Swipe_5",
       "x": 4994.2,
       "y": 1030.4,
       "maxPoints": 3,
@@ -13165,6 +13673,7 @@
     "srtor-12": {
       "skill": "srtor-12",
       "name": "Scent of Blood",
+      "icon": "rip blood",
       "x": 6481,
       "y": 700,
       "maxPoints": 4,
@@ -13192,6 +13701,7 @@
     "srtor-13": {
       "skill": "srtor-13",
       "name": "In for the Kill",
+      "icon": "MinionBloodInfusion",
       "x": 7081,
       "y": 1172,
       "maxPoints": 1,
@@ -13214,6 +13724,7 @@
     "srtor-14": {
       "skill": "srtor-14",
       "name": "Ravage",
+      "icon": "c-ferocity_2",
       "x": 5881,
       "y": 1172,
       "maxPoints": 3,
@@ -13238,6 +13749,7 @@
     "srtor-15": {
       "skill": "srtor-15",
       "name": "Tear Flesh",
+      "icon": "c-bleed",
       "x": 7081,
       "y": 420,
       "maxPoints": 5,
@@ -13264,6 +13776,7 @@
     "srtor-16": {
       "skill": "srtor-16",
       "name": "Sharp Claws",
+      "icon": "BasicMeleeTemp",
       "x": 7757,
       "y": 708,
       "maxPoints": 5,
@@ -13289,6 +13802,7 @@
     "srtor-17": {
       "skill": "srtor-17",
       "name": "Acidic Bile",
+      "icon": "c-red-eye",
       "x": 8289,
       "y": 1076,
       "maxPoints": 4,
@@ -13316,6 +13830,7 @@
     "srtor-19": {
       "skill": "srtor-19",
       "name": "Dripping Blood",
+      "icon": "c-ferocity_1",
       "x": 8697,
       "y": 500,
       "maxPoints": 1,
@@ -13338,6 +13853,7 @@
     "srtor-20": {
       "skill": "srtor-20",
       "name": "Cornered",
+      "icon": "c-Frenzy",
       "x": 7757,
       "y": 220,
       "maxPoints": 3,
@@ -13370,6 +13886,7 @@
     "srtor-21": {
       "skill": "srtor-21",
       "name": "Broken Tooth",
+      "icon": "FuryLeap",
       "x": 8413,
       "y": 32,
       "maxPoints": 1,
@@ -13393,6 +13910,7 @@
     "srtor-22": {
       "skill": "srtor-22",
       "name": "Vicious Rampage",
+      "icon": "c-primal fury",
       "x": 7081,
       "y": -420,
       "maxPoints": 4,
@@ -13422,6 +13940,7 @@
     "srtor-23": {
       "skill": "srtor-23",
       "name": "Predator",
+      "icon": "c-flanking-strike-new-3",
       "x": 7757,
       "y": -444,
       "maxPoints": 4,
@@ -13453,6 +13972,7 @@
     "srtor-24": {
       "skill": "srtor-24",
       "name": "Vexation",
+      "icon": "Anamoly",
       "x": 8413,
       "y": -476,
       "maxPoints": 4,
@@ -13478,6 +13998,7 @@
     "srtor-25": {
       "skill": "srtor-25",
       "name": "Eager",
+      "icon": "c-tempest",
       "x": 8973,
       "y": -168,
       "maxPoints": 3,
@@ -13500,6 +14021,7 @@
     "srtor-26": {
       "skill": "srtor-26",
       "name": "Challenger",
+      "icon": "Erasing-Strike",
       "x": 8957,
       "y": -724,
       "maxPoints": 1,
@@ -13523,6 +14045,7 @@
     "srtor-27": {
       "skill": "srtor-27",
       "name": "Primal Rage",
+      "icon": "Summon Bear 1",
       "x": 7757,
       "y": -900,
       "maxPoints": 1,
@@ -13545,6 +14068,7 @@
     "srtor-28": {
       "skill": "srtor-28",
       "name": "Menacing Aura",
+      "icon": "Armblade_Slashes2",
       "x": 6481,
       "y": -763.2,
       "maxPoints": 2,
@@ -13567,6 +14091,7 @@
     "srtor-29": {
       "skill": "srtor-29",
       "name": "Hot Streak",
+      "icon": "c-ball_of_fire",
       "x": 4069,
       "y": 448,
       "maxPoints": 1,
@@ -13592,6 +14117,7 @@
     "srtor-30": {
       "skill": "srtor-30",
       "name": "Brutal Shredding",
+      "icon": "claw_swipe",
       "x": 8233,
       "y": -928,
       "maxPoints": 4,
@@ -13639,6 +14165,7 @@
     "ssc50-1": {
       "skill": "ssc50-1",
       "name": "Avis",
+      "icon": "c-Blade Wings",
       "x": 5961,
       "y": -440,
       "maxPoints": 3,
@@ -13666,6 +14193,7 @@
     "ssc50-2": {
       "skill": "ssc50-2",
       "name": "Shredding Beaks",
+      "icon": "c-armor debuff_3",
       "x": 4881,
       "y": -818.39996,
       "maxPoints": 5,
@@ -13692,6 +14220,7 @@
     "ssc50-3": {
       "skill": "ssc50-3",
       "name": "Murder of Crows",
+      "icon": "c-yellow eye",
       "x": 4183.8,
       "y": -818.39996,
       "maxPoints": 5,
@@ -13714,6 +14243,7 @@
     "ssc50-4": {
       "skill": "ssc50-4",
       "name": "Feathered Storm",
+      "icon": "c-red-eye",
       "x": 4183.8,
       "y": -316.8,
       "maxPoints": 1,
@@ -13737,6 +14267,7 @@
     "ssc50-5": {
       "skill": "ssc50-5",
       "name": "Huntsman",
+      "icon": "Swipe-3",
       "x": 4681,
       "y": -172,
       "maxPoints": 4,
@@ -13759,6 +14290,7 @@
     "ssc50-6": {
       "skill": "ssc50-6",
       "name": "Shocking Display",
+      "icon": "c-shock",
       "x": 5961,
       "y": 440,
       "maxPoints": 5,
@@ -13786,6 +14318,7 @@
     "ssc50-7": {
       "skill": "ssc50-7",
       "name": "Thundering Strike",
+      "icon": "charged ground",
       "x": 5153,
       "y": 776,
       "maxPoints": 3,
@@ -13812,6 +14345,7 @@
     "ssc50-8": {
       "skill": "ssc50-8",
       "name": "Nimbleness",
+      "icon": "c-haste",
       "x": 5431.8,
       "y": -618.39996,
       "maxPoints": 5,
@@ -13837,6 +14371,7 @@
     "ssc50-9": {
       "skill": "ssc50-9",
       "name": "Expansive Pulse",
+      "icon": "c-lightningBall",
       "x": 4383.8,
       "y": 776,
       "maxPoints": 5,
@@ -13862,6 +14397,7 @@
     "ssc50-10": {
       "skill": "ssc50-10",
       "name": "Frigid Wings",
+      "icon": "ice bolt",
       "x": 5231.8,
       "y": 240,
       "maxPoints": 1,
@@ -13888,6 +14424,7 @@
     "ssc50-11": {
       "skill": "ssc50-11",
       "name": "Arctic Breath",
+      "icon": "c-freeze",
       "x": 4303,
       "y": 240,
       "maxPoints": 5,
@@ -13910,6 +14447,7 @@
     "ssc50-12": {
       "skill": "ssc50-12",
       "name": "Storm Breath",
+      "icon": "c-lightning damage buff",
       "x": 6481,
       "y": 700,
       "maxPoints": 3,
@@ -13937,6 +14475,7 @@
     "ssc50-13": {
       "skill": "ssc50-13",
       "name": "Fulminating Caw",
+      "icon": "Storm Call",
       "x": 5909,
       "y": 968,
       "maxPoints": 5,
@@ -13964,6 +14503,7 @@
     "ssc50-14": {
       "skill": "ssc50-14",
       "name": "Thunderstruck",
+      "icon": "chain lightning",
       "x": 6481,
       "y": 1168,
       "maxPoints": 5,
@@ -13986,6 +14526,7 @@
     "ssc50-15": {
       "skill": "ssc50-15",
       "name": "Shatterbolt",
+      "icon": "c-detonating-arrow",
       "x": 7001,
       "y": 440,
       "maxPoints": 5,
@@ -14013,6 +14554,7 @@
     "ssc50-16": {
       "skill": "ssc50-16",
       "name": "Pincers",
+      "icon": "c-Featherstorm",
       "x": 7553.4,
       "y": 1060,
       "maxPoints": 5,
@@ -14037,6 +14579,7 @@
     "ssc50-17": {
       "skill": "ssc50-17",
       "name": "Observe and Learn",
+      "icon": "c-dagger dance - purple",
       "x": 7025,
       "y": 1168,
       "maxPoints": 5,
@@ -14059,6 +14602,7 @@
     "ssc50-18": {
       "skill": "ssc50-18",
       "name": "Charged Feathers",
+      "icon": "c-flurry3 - blue",
       "x": 8069,
       "y": 776,
       "maxPoints": 5,
@@ -14086,6 +14630,7 @@
     "ssc50-19": {
       "skill": "ssc50-19",
       "name": "Winged Raptor",
+      "icon": "c-Dive Bomb",
       "x": 8701,
       "y": 1216.8,
       "maxPoints": 1,
@@ -14111,6 +14656,7 @@
     "ssc50-20": {
       "skill": "ssc50-20",
       "name": "Power Claw",
+      "icon": "c-flurry2 - blue",
       "x": 8764.6,
       "y": 512.8,
       "maxPoints": 3,
@@ -14137,6 +14683,7 @@
     "ssc50-21": {
       "skill": "ssc50-21",
       "name": "Aspect of the Crow",
+      "icon": "c-claws_lightning",
       "x": 7001,
       "y": -440,
       "maxPoints": 3,
@@ -14165,6 +14712,7 @@
     "ssc50-22": {
       "skill": "ssc50-22",
       "name": "Navigator",
+      "icon": "c-bear roar",
       "x": 7553.4,
       "y": 72,
       "maxPoints": 1,
@@ -14190,6 +14738,7 @@
     "ssc50-23": {
       "skill": "ssc50-23",
       "name": "Goodberries",
+      "icon": "c-Health Regeneration Debuff (generic)",
       "x": 8475.8,
       "y": 71.999954,
       "maxPoints": 4,
@@ -14217,6 +14766,7 @@
     "ssc50-24": {
       "skill": "ssc50-24",
       "name": "Silverberries",
+      "icon": "c-Damage Mitigation Debuff (generic)",
       "x": 8980.2,
       "y": -440,
       "maxPoints": 4,
@@ -14241,6 +14791,7 @@
     "ssc50-25": {
       "skill": "ssc50-25",
       "name": "Forager",
+      "icon": "c-Ward Generation Debuff (generic)",
       "x": 8475.8,
       "y": -899.9999,
       "maxPoints": 3,
@@ -14263,6 +14814,7 @@
     "ssc50-26": {
       "skill": "ssc50-26",
       "name": "Winds of Restoration",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 8475.8,
       "y": -439.99976,
       "maxPoints": 1,
@@ -14288,6 +14840,7 @@
     "ssc50-27": {
       "skill": "ssc50-27",
       "name": "Wisdom of the Storm",
+      "icon": "Static-blue",
       "x": 7593,
       "y": -860,
       "maxPoints": 1,
@@ -14313,6 +14866,7 @@
     "ssc50-28": {
       "skill": "ssc50-28",
       "name": "Ornithology",
+      "icon": "arcane ascendance",
       "x": 7963,
       "y": -440,
       "maxPoints": 5,
@@ -14335,6 +14889,7 @@
     "ssc50-29": {
       "skill": "ssc50-29",
       "name": "Arborist",
+      "icon": "c-frenzy-totem-new",
       "x": 6481,
       "y": -800,
       "maxPoints": 1,
@@ -14358,6 +14913,7 @@
     "ssc50-30": {
       "skill": "ssc50-30",
       "name": "Sky Passage",
+      "icon": "Birds of Prey",
       "x": 5365,
       "y": 1239.6,
       "maxPoints": 1,
@@ -14384,6 +14940,7 @@
     "ssc50-31": {
       "skill": "ssc50-31",
       "name": "Thunderous Blast",
+      "icon": "Innervate",
       "x": 4183.8,
       "y": 1239.6,
       "maxPoints": 2,
@@ -14431,6 +14988,7 @@
     "st31et-2": {
       "skill": "st31et-2",
       "name": "Primal Serpent",
+      "icon": "Summon Snakes",
       "x": 7640.6,
       "y": -480,
       "maxPoints": 1,
@@ -14458,6 +15016,7 @@
     "st31et-3": {
       "skill": "st31et-3",
       "name": "Culling Point",
+      "icon": "reap",
       "x": 6597,
       "y": -700,
       "maxPoints": 3,
@@ -14487,6 +15046,7 @@
     "st31et-4": {
       "skill": "st31et-4",
       "name": "Coldfang",
+      "icon": "c-chill",
       "x": 3897,
       "y": 216,
       "maxPoints": 5,
@@ -14512,6 +15072,7 @@
     "st31et-5": {
       "skill": "st31et-5",
       "name": "Serpent Venom",
+      "icon": "thorn_explosion",
       "x": 7645,
       "y": 684,
       "maxPoints": 2,
@@ -14538,6 +15099,7 @@
     "st31et-6": {
       "skill": "st31et-6",
       "name": "Spirit Viper",
+      "icon": "soul feast",
       "x": 8093,
       "y": 284,
       "maxPoints": 1,
@@ -14563,6 +15125,7 @@
     "st31et-7": {
       "skill": "st31et-7",
       "name": "Poison Tipped",
+      "icon": "poison_tipped_blade",
       "x": 6589,
       "y": 768,
       "maxPoints": 5,
@@ -14590,6 +15153,7 @@
     "st31et-8": {
       "skill": "st31et-8",
       "name": "Venomous Union",
+      "icon": "scorpion poison",
       "x": 3929,
       "y": -728,
       "maxPoints": 1,
@@ -14612,6 +15176,7 @@
     "st31et-9": {
       "skill": "st31et-9",
       "name": "Cobra Lunge",
+      "icon": "c-lunge",
       "x": 4649,
       "y": -884,
       "maxPoints": 1,
@@ -14636,6 +15201,7 @@
     "st31et-10": {
       "skill": "st31et-10",
       "name": "Constrictor",
+      "icon": "thorn_totem",
       "x": 5513,
       "y": -748,
       "maxPoints": 5,
@@ -14667,6 +15233,7 @@
     "st31et-11": {
       "skill": "st31et-11",
       "name": "Mussurana",
+      "icon": "Summon_healing_totem",
       "x": 5101,
       "y": -388,
       "maxPoints": 3,
@@ -14692,6 +15259,7 @@
     "st31et-12": {
       "skill": "st31et-12",
       "name": "Sapping Coils",
+      "icon": "c-Mana Regeneration Buff (generic)",
       "x": 4401,
       "y": -316,
       "maxPoints": 2,
@@ -14714,6 +15282,7 @@
     "st31et-13": {
       "skill": "st31et-13",
       "name": "Slither",
+      "icon": "c-flurry2",
       "x": 5845,
       "y": 484,
       "maxPoints": 3,
@@ -14740,6 +15309,7 @@
     "st31et-14": {
       "skill": "st31et-14",
       "name": "Gouging Spear",
+      "icon": "throwing_spear",
       "x": 5169,
       "y": 748,
       "maxPoints": 5,
@@ -14768,6 +15338,7 @@
     "st31et-15": {
       "skill": "st31et-15",
       "name": "Hydra Strikes",
+      "icon": "c-ice barrage green",
       "x": 5825,
       "y": 1144,
       "maxPoints": 3,
@@ -14795,6 +15366,7 @@
     "st31et-16": {
       "skill": "st31et-16",
       "name": "Corrosive Venom",
+      "icon": "c-Stun Susceptibility Debuff (generic)",
       "x": 6593,
       "y": 1256,
       "maxPoints": 5,
@@ -14819,6 +15391,7 @@
     "st31et-17": {
       "skill": "st31et-17",
       "name": "Devour Prey",
+      "icon": "c-Bear Ravage",
       "x": 5745,
       "y": -340,
       "maxPoints": 2,
@@ -14846,6 +15419,7 @@
     "st31et-18": {
       "skill": "st31et-18",
       "name": "Eye of the Viper",
+      "icon": "c-red-eye",
       "x": 5297,
       "y": 92,
       "maxPoints": 3,
@@ -14868,6 +15442,7 @@
     "st31et-20": {
       "skill": "st31et-20",
       "name": "Frostwyrm's Fury",
+      "icon": "ice_crash",
       "x": 4317,
       "y": 604,
       "maxPoints": 1,
@@ -14894,6 +15469,7 @@
     "st31et-21": {
       "skill": "st31et-21",
       "name": "Vicious Strikes",
+      "icon": "c-claws-blood",
       "x": 8198.2,
       "y": -430.79996,
       "maxPoints": 3,
@@ -14920,6 +15496,7 @@
     "st31et-22": {
       "skill": "st31et-22",
       "name": "Iron Scales",
+      "icon": "c-summon vine",
       "x": 8921,
       "y": -504,
       "maxPoints": 3,
@@ -14943,6 +15520,7 @@
     "st31et-23": {
       "skill": "st31et-23",
       "name": "Emerald Fangs",
+      "icon": "boneprojectile-green",
       "x": 8769,
       "y": 44.00004,
       "maxPoints": 3,
@@ -14966,6 +15544,7 @@
     "st31et-24": {
       "skill": "st31et-24",
       "name": "Guardian Spear",
+      "icon": "c-Heal over time",
       "x": 8080.2,
       "y": -825.6,
       "maxPoints": 1,
@@ -14993,6 +15572,7 @@
     "st31et-26": {
       "skill": "st31et-26",
       "name": "Biting Winds",
+      "icon": "c-tornado3",
       "x": 3897,
       "y": 1020,
       "maxPoints": 3,
@@ -15016,6 +15596,7 @@
     "st31et-27": {
       "skill": "st31et-27",
       "name": "Shroud of Winter",
+      "icon": "Thorn_Shield-silver",
       "x": 4717,
       "y": 216,
       "maxPoints": 1,
@@ -15038,6 +15619,7 @@
     "st31et-28": {
       "skill": "st31et-28",
       "name": "Swirling Carnage",
+      "icon": "swipe",
       "x": 4917,
       "y": 1220,
       "maxPoints": 1,
@@ -15061,6 +15643,7 @@
     "st31et-29": {
       "skill": "st31et-29",
       "name": "Steel Eater",
+      "icon": "Upheaval",
       "x": 7305,
       "y": 1180,
       "maxPoints": 1,
@@ -15083,6 +15666,7 @@
     "st31et-30": {
       "skill": "st31et-30",
       "name": "Shattered Immunity",
+      "icon": "Swarm_Strike",
       "x": 8097,
       "y": 1068,
       "maxPoints": 3,
@@ -15112,6 +15696,7 @@
     "st31et-31": {
       "skill": "st31et-31",
       "name": "Fast Acting Toxins",
+      "icon": "Spirit_Thorns",
       "x": 8501,
       "y": 712,
       "maxPoints": 1,
@@ -15137,6 +15722,7 @@
     "st31et-32": {
       "skill": "st31et-32",
       "name": "Dread Fang",
+      "icon": "Blinding poison",
       "x": 7461,
       "y": 96,
       "maxPoints": 3,
@@ -15182,6 +15768,7 @@
     "st38ml-2": {
       "skill": "st38ml-2",
       "name": "Static Field",
+      "icon": "c-static",
       "x": 5725.8,
       "y": -53.2,
       "maxPoints": 3,
@@ -15208,6 +15795,7 @@
     "st38ml-3": {
       "skill": "st38ml-3",
       "name": "Exploit Weaknesses",
+      "icon": "Charged Ground Temp-yellow",
       "x": 4881,
       "y": 458.40018,
       "maxPoints": 3,
@@ -15232,6 +15820,7 @@
     "st38ml-4": {
       "skill": "st38ml-4",
       "name": "Press Your Advantage",
+      "icon": "charged ground-yellow",
       "x": 4327.8,
       "y": 458.40012,
       "maxPoints": 4,
@@ -15254,6 +15843,7 @@
     "st38ml-5": {
       "skill": "st38ml-5",
       "name": "Fulgurite Core",
+      "icon": "lightning_from_sky",
       "x": 5165.4,
       "y": -52.79982,
       "maxPoints": 2,
@@ -15282,6 +15872,7 @@
     "st38ml-6": {
       "skill": "st38ml-6",
       "name": "Overstimulation",
+      "icon": "c-avalanche",
       "x": 4034.6,
       "y": -52.799683,
       "maxPoints": 1,
@@ -15304,6 +15895,7 @@
     "st38ml-7": {
       "skill": "st38ml-7",
       "name": "Stormrider",
+      "icon": "dash",
       "x": 4881,
       "y": -534.7998,
       "maxPoints": 4,
@@ -15328,6 +15920,7 @@
     "st38ml-8": {
       "skill": "st38ml-8",
       "name": "Grounding Conduit",
+      "icon": "Erasing-Strike",
       "x": 4327.8,
       "y": -534.8,
       "maxPoints": 3,
@@ -15350,6 +15943,7 @@
     "st38ml-9": {
       "skill": "st38ml-9",
       "name": "Shielding Totem",
+      "icon": "FrenzyTotem",
       "x": 5921,
       "y": -625.6,
       "maxPoints": 2,
@@ -15374,6 +15968,7 @@
     "st38ml-10": {
       "skill": "st38ml-10",
       "name": "Steel Plating",
+      "icon": "c-eterras-blessing-new",
       "x": 7041,
       "y": -625.6,
       "maxPoints": 4,
@@ -15399,6 +15994,7 @@
     "st38ml-11": {
       "skill": "st38ml-11",
       "name": "Heavy Impact",
+      "icon": "c-flanking-strike-new-3",
       "x": 6481,
       "y": -848.4,
       "maxPoints": 3,
@@ -15424,6 +16020,7 @@
     "st38ml-12": {
       "skill": "st38ml-12",
       "name": "Limited Resistance",
+      "icon": "SummonValeSpirit",
       "x": 5987,
       "y": 562.4,
       "maxPoints": 4,
@@ -15448,6 +16045,7 @@
     "st38ml-13": {
       "skill": "st38ml-13",
       "name": "Lightning Raider",
+      "icon": "Anamoly",
       "x": 7230.2,
       "y": -53.2,
       "maxPoints": 4,
@@ -15473,6 +16071,7 @@
     "st38ml-14": {
       "skill": "st38ml-14",
       "name": "Direct Current",
+      "icon": "c-tremor2",
       "x": 7783.4,
       "y": 231.2,
       "maxPoints": 3,
@@ -15500,6 +16099,7 @@
     "st38ml-15": {
       "skill": "st38ml-15",
       "name": "Power Shunt",
+      "icon": "c-Vale Spirit Bolt",
       "x": 8520.6,
       "y": 300,
       "maxPoints": 3,
@@ -15522,6 +16122,7 @@
     "st38ml-16": {
       "skill": "st38ml-16",
       "name": "Blizzard",
+      "icon": "ice_crash",
       "x": 7681,
       "y": -367.19995,
       "maxPoints": 1,
@@ -15551,6 +16152,7 @@
     "st38ml-17": {
       "skill": "st38ml-17",
       "name": "Icicles",
+      "icon": "c-ice barrage",
       "x": 8272.2,
       "y": -825.6,
       "maxPoints": 5,
@@ -15575,6 +16177,7 @@
     "st38ml-18": {
       "skill": "st38ml-18",
       "name": "Chill to the Bone",
+      "icon": "Glacier",
       "x": 8815.8,
       "y": -825.60004,
       "maxPoints": 3,
@@ -15597,6 +16200,7 @@
     "st38ml-19": {
       "skill": "st38ml-19",
       "name": "Frostbite",
+      "icon": "ice bolt",
       "x": 8272.2,
       "y": -167.2,
       "maxPoints": 3,
@@ -15621,6 +16225,7 @@
     "st38ml-20": {
       "skill": "st38ml-20",
       "name": "Piercing Winds",
+      "icon": "ice_wall",
       "x": 8815.8,
       "y": -167.2,
       "maxPoints": 3,
@@ -15643,6 +16248,7 @@
     "st38ml-21": {
       "skill": "st38ml-21",
       "name": "Storm's Reach",
+      "icon": "Static",
       "x": 6991.8,
       "y": 562.4,
       "maxPoints": 5,
@@ -15671,6 +16277,7 @@
     "st38ml-22": {
       "skill": "st38ml-22",
       "name": "Shockfury",
+      "icon": "c-warding blade",
       "x": 7783.4,
       "y": 872.8,
       "maxPoints": 5,
@@ -15695,6 +16302,7 @@
     "st38ml-23": {
       "skill": "st38ml-23",
       "name": "Discharge",
+      "icon": "charged ground",
       "x": 8538.6,
       "y": 1144.8,
       "maxPoints": 1,
@@ -15720,6 +16328,7 @@
     "st38ml-24": {
       "skill": "st38ml-24",
       "name": "Intensity",
+      "icon": "lightning_swipe",
       "x": 7207.8,
       "y": 1144.8,
       "maxPoints": 5,
@@ -15745,6 +16354,7 @@
     "st38ml-25": {
       "skill": "st38ml-25",
       "name": "Thunder Totem",
+      "icon": "c-frenzy-totem-new",
       "x": 6480.9995,
       "y": 1144.8,
       "maxPoints": 1,
@@ -15768,6 +16378,7 @@
     "st38ml-26": {
       "skill": "st38ml-26",
       "name": "Unmatched Storms",
+      "icon": "gathering-storm",
       "x": 5328.6,
       "y": 944.80005,
       "maxPoints": 1,
@@ -15817,6 +16428,7 @@
     "sw43-2": {
       "skill": "sw43-2",
       "name": "Claws of the Bear",
+      "icon": "Summon Bear",
       "x": 4617,
       "y": 340,
       "maxPoints": 1,
@@ -15844,6 +16456,7 @@
     "sw43-3": {
       "skill": "sw43-3",
       "name": "Twin Fangs",
+      "icon": "c-Bear Ravage",
       "x": 8505,
       "y": 980,
       "maxPoints": 3,
@@ -15867,6 +16480,7 @@
     "sw43-4": {
       "skill": "sw43-4",
       "name": "Blood Beast",
+      "icon": "c-red-eye",
       "x": 6005,
       "y": 420,
       "maxPoints": 5,
@@ -15891,6 +16505,7 @@
     "sw43-5": {
       "skill": "sw43-5",
       "name": "Rending",
+      "icon": "c-Laceration_sq",
       "x": 5785,
       "y": 955.2551,
       "maxPoints": 4,
@@ -15915,6 +16530,7 @@
     "sw43-6": {
       "skill": "sw43-6",
       "name": "Duality of Nature",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 5133,
       "y": 1108,
       "maxPoints": 3,
@@ -15941,6 +16557,7 @@
     "sw43-7": {
       "skill": "sw43-7",
       "name": "Culling",
+      "icon": "c-shadow assault - red",
       "x": 4997,
       "y": -364,
       "maxPoints": 2,
@@ -15965,6 +16582,7 @@
     "sw43-8": {
       "skill": "sw43-8",
       "name": "Sabertooth's Endurance",
+      "icon": "summon_sabertooth",
       "x": 7829,
       "y": 1108,
       "maxPoints": 5,
@@ -15994,6 +16612,7 @@
     "sw43-9": {
       "skill": "sw43-9",
       "name": "Storm Claw",
+      "icon": "lightning_swipe",
       "x": 7085,
       "y": -176,
       "maxPoints": 1,
@@ -16021,6 +16640,7 @@
     "sw43-10": {
       "skill": "sw43-10",
       "name": "Lagon's Fury",
+      "icon": "c-sky bolt-blue",
       "x": 7273,
       "y": -712.8,
       "maxPoints": 1,
@@ -16047,6 +16667,7 @@
     "sw43-11": {
       "skill": "sw43-11",
       "name": "Umjol's Guidance",
+      "icon": "c-storm_crows",
       "x": 7621,
       "y": 188,
       "maxPoints": 5,
@@ -16073,6 +16694,7 @@
     "sw43-12": {
       "skill": "sw43-12",
       "name": "Storm Scour",
+      "icon": "lightning_from_sky",
       "x": 8345,
       "y": 340,
       "maxPoints": 1,
@@ -16095,6 +16717,7 @@
     "sw43-13": {
       "skill": "sw43-13",
       "name": "Way of the Hunt",
+      "icon": "Roar",
       "x": 5877,
       "y": -176,
       "maxPoints": 5,
@@ -16121,6 +16744,7 @@
     "sw43-14": {
       "skill": "sw43-14",
       "name": "Claws of Stone",
+      "icon": "claw_totem",
       "x": 5689,
       "y": -712.80005,
       "maxPoints": 3,
@@ -16148,6 +16772,7 @@
     "sw43-15": {
       "skill": "sw43-15",
       "name": "Aspect of the Panther",
+      "icon": "sabretooth swipe",
       "x": 6957,
       "y": 420,
       "maxPoints": 5,
@@ -16178,6 +16803,7 @@
     "sw43-16": {
       "skill": "sw43-16",
       "name": "Lion's Strength",
+      "icon": "lion_roar",
       "x": 6481,
       "y": 1200,
       "maxPoints": 2,
@@ -16201,6 +16827,7 @@
     "sw43-17": {
       "skill": "sw43-17",
       "name": "Wild Calling",
+      "icon": "wolf_howl",
       "x": 6481,
       "y": 716,
       "maxPoints": 3,
@@ -16226,6 +16853,7 @@
     "sw43-18": {
       "skill": "sw43-18",
       "name": "Lupine Attunement",
+      "icon": "c-wolf howl",
       "x": 4029,
       "y": 904,
       "maxPoints": 1,
@@ -16251,6 +16879,7 @@
     "sw43-19": {
       "skill": "sw43-19",
       "name": "Feline Hunter",
+      "icon": "c-Swiftness",
       "x": 7177,
       "y": 955.2551,
       "maxPoints": 1,
@@ -16277,6 +16906,7 @@
     "sw43-20": {
       "skill": "sw43-20",
       "name": "Wrath of the Wild",
+      "icon": "ice_crash",
       "x": 7965,
       "y": -364,
       "maxPoints": 3,
@@ -16303,6 +16933,7 @@
     "sw43-21": {
       "skill": "sw43-21",
       "name": "Wengarian Reach",
+      "icon": "throwing_spear",
       "x": 5341,
       "y": 188,
       "maxPoints": 5,
@@ -16329,6 +16960,7 @@
     "sw43-22": {
       "skill": "sw43-22",
       "name": "Primal Resonance",
+      "icon": "thorn_explosion",
       "x": 4145,
       "y": -328,
       "maxPoints": 1,
@@ -16355,6 +16987,7 @@
     "sw43-23": {
       "skill": "sw43-23",
       "name": "Avatar of Stone",
+      "icon": "storm_totem",
       "x": 6481,
       "y": -843.6,
       "maxPoints": 3,
@@ -16386,6 +17019,7 @@
     "sw43-24": {
       "skill": "sw43-24",
       "name": "Trapper",
+      "icon": "c-Oil Trap",
       "x": 4737,
       "y": -788,
       "maxPoints": 3,
@@ -16430,6 +17064,7 @@
     "th39-2": {
       "skill": "th39-2",
       "name": "Forested Expanse",
+      "icon": "Totemic Rising",
       "x": 6481,
       "y": -736,
       "maxPoints": 4,
@@ -16456,6 +17091,7 @@
     "th39-3": {
       "skill": "th39-3",
       "name": "Grove Mind",
+      "icon": "c-eterras-blessing-new",
       "x": 5317,
       "y": -732,
       "maxPoints": 1,
@@ -16483,6 +17119,7 @@
     "th39-4": {
       "skill": "th39-4",
       "name": "Memories of Eterra",
+      "icon": "c-summon vine",
       "x": 7069,
       "y": -460,
       "maxPoints": 4,
@@ -16510,6 +17147,7 @@
     "th39-5": {
       "skill": "th39-5",
       "name": "Totemic Wisdom",
+      "icon": "SummonValeSpirit",
       "x": 7161,
       "y": 272,
       "maxPoints": 5,
@@ -16535,6 +17173,7 @@
     "th39-6": {
       "skill": "th39-6",
       "name": "Venom Tipped Thorns",
+      "icon": "c-arrow storm",
       "x": 8041,
       "y": 272,
       "maxPoints": 4,
@@ -16562,6 +17201,7 @@
     "th39-7": {
       "skill": "th39-7",
       "name": "Rotten Core",
+      "icon": "Orb Poison",
       "x": 7805,
       "y": -436,
       "maxPoints": 1,
@@ -16587,6 +17227,7 @@
     "th39-8": {
       "skill": "th39-8",
       "name": "Lasting Affliction",
+      "icon": "c-striped-eye",
       "x": 8205,
       "y": -188,
       "maxPoints": 4,
@@ -16613,6 +17254,7 @@
     "th39-9": {
       "skill": "th39-9",
       "name": "Pillars of Heorot",
+      "icon": "c-thorn-totem-new ice",
       "x": 8881,
       "y": 720,
       "maxPoints": 1,
@@ -16647,6 +17289,7 @@
     "th39-10": {
       "skill": "th39-10",
       "name": "Frost Attunement",
+      "icon": "c-avalanche",
       "x": 8041,
       "y": 720,
       "maxPoints": 1,
@@ -16673,6 +17316,7 @@
     "th39-11": {
       "skill": "th39-11",
       "name": "Winterwood",
+      "icon": "ice_bolt",
       "x": 8041,
       "y": 1168,
       "maxPoints": 5,
@@ -16700,6 +17344,7 @@
     "th39-12": {
       "skill": "th39-12",
       "name": "On Astral Winds",
+      "icon": "c-tornado1",
       "x": 7261,
       "y": 1024,
       "maxPoints": 4,
@@ -16727,6 +17372,7 @@
     "th39-13": {
       "skill": "th39-13",
       "name": "Torrent of Thorns",
+      "icon": "c-thorn burst_2",
       "x": 6481,
       "y": 736,
       "maxPoints": 3,
@@ -16752,6 +17398,7 @@
     "th39-14": {
       "skill": "th39-14",
       "name": "Titan's Bane",
+      "icon": "c-Vale Spirit Bolt_2",
       "x": 6141,
       "y": 1200,
       "maxPoints": 1,
@@ -16782,6 +17429,7 @@
     "th39-15": {
       "skill": "th39-15",
       "name": "Spriggans' Wrath",
+      "icon": "SummonSpriggan",
       "x": 6821,
       "y": 1200,
       "maxPoints": 4,
@@ -16804,6 +17452,7 @@
     "th39-16": {
       "skill": "th39-16",
       "name": "Ancient Power",
+      "icon": "c-Vale Spirit Bolt_3",
       "x": 5801,
       "y": 272,
       "maxPoints": 4,
@@ -16830,6 +17479,7 @@
     "th39-17": {
       "skill": "th39-17",
       "name": "Impale",
+      "icon": "c-Enchant Weapon",
       "x": 4441,
       "y": 1024,
       "maxPoints": 3,
@@ -16856,6 +17506,7 @@
     "th39-18": {
       "skill": "th39-18",
       "name": "Shred Armor",
+      "icon": "exorcise",
       "x": 3921,
       "y": 608,
       "maxPoints": 5,
@@ -16883,6 +17534,7 @@
     "th39-19": {
       "skill": "th39-19",
       "name": "Winged Thorns",
+      "icon": "Birds of Prey",
       "x": 3921,
       "y": -64,
       "maxPoints": 3,
@@ -16910,6 +17562,7 @@
     "th39-20": {
       "skill": "th39-20",
       "name": "Frenetic Attunement",
+      "icon": "c-Shatter Strike",
       "x": 4441,
       "y": -480,
       "maxPoints": 3,
@@ -16938,6 +17591,7 @@
     "th39-21": {
       "skill": "th39-21",
       "name": "Oaken Protection",
+      "icon": "Teleport",
       "x": 5101,
       "y": -104,
       "maxPoints": 5,
@@ -16966,6 +17620,7 @@
     "th39-22": {
       "skill": "th39-22",
       "name": "Guided Thorns",
+      "icon": "c-flanking strike-new",
       "x": 4569,
       "y": 272,
       "maxPoints": 1,
@@ -16992,6 +17647,7 @@
     "th39-23": {
       "skill": "th39-23",
       "name": "Eternal Forest",
+      "icon": "c-harden",
       "x": 5893,
       "y": -460,
       "maxPoints": 4,
@@ -17017,6 +17673,7 @@
     "th39-24": {
       "skill": "th39-24",
       "name": "Lethal Thicket",
+      "icon": "Summon_3_Vines-red",
       "x": 5701,
       "y": 1024,
       "maxPoints": 4,
@@ -17042,6 +17699,7 @@
     "th39-25": {
       "skill": "th39-25",
       "name": "Nightshade Briar",
+      "icon": "c-flurry2",
       "x": 8653,
       "y": -376,
       "maxPoints": 1,
@@ -17091,6 +17749,7 @@
     "to50-2": {
       "skill": "to50-2",
       "name": "Lasting Storm",
+      "icon": "Ward-blast",
       "x": 5853,
       "y": -395.99997,
       "maxPoints": 4,
@@ -17116,6 +17775,7 @@
     "to50-3": {
       "skill": "to50-3",
       "name": "Strength of Air",
+      "icon": "BlackHole",
       "x": 6061,
       "y": 840,
       "maxPoints": 4,
@@ -17140,6 +17800,7 @@
     "to50-4": {
       "skill": "to50-4",
       "name": "Hurricane",
+      "icon": "wanderingspirits-blue",
       "x": 5293,
       "y": -732,
       "maxPoints": 4,
@@ -17165,6 +17826,7 @@
     "to50-5": {
       "skill": "to50-5",
       "name": "Charged Storm",
+      "icon": "chain lightning",
       "x": 7065.4,
       "y": -498,
       "maxPoints": 1,
@@ -17193,6 +17855,7 @@
     "to50-6": {
       "skill": "to50-6",
       "name": "Frequent Lightning",
+      "icon": "Innervate",
       "x": 6465.8,
       "y": -884,
       "maxPoints": 4,
@@ -17218,6 +17881,7 @@
     "to50-7": {
       "skill": "to50-7",
       "name": "Debris",
+      "icon": "Enchant-weapon",
       "x": 5189,
       "y": -320,
       "maxPoints": 4,
@@ -17243,6 +17907,7 @@
     "to50-8": {
       "skill": "to50-8",
       "name": "Fire Tornado",
+      "icon": "Inferno",
       "x": 7247.4,
       "y": 960.80005,
       "maxPoints": 1,
@@ -17271,6 +17936,7 @@
     "to50-9": {
       "skill": "to50-9",
       "name": "Druidic Control",
+      "icon": "Dissolve",
       "x": 6481,
       "y": 1124,
       "maxPoints": 1,
@@ -17294,6 +17960,7 @@
     "to50-10": {
       "skill": "to50-10",
       "name": "Eye of the Storm",
+      "icon": "Focus",
       "x": 4577,
       "y": -408,
       "maxPoints": 1,
@@ -17320,6 +17987,7 @@
     "to50-11": {
       "skill": "to50-11",
       "name": "Overcast Skies",
+      "icon": "charged ground",
       "x": 7485.4,
       "y": -932,
       "maxPoints": 4,
@@ -17345,6 +18013,7 @@
     "to50-12": {
       "skill": "to50-12",
       "name": "Churning Orbs",
+      "icon": "Static",
       "x": 5253,
       "y": 212,
       "maxPoints": 1,
@@ -17373,6 +18042,7 @@
     "to50-13": {
       "skill": "to50-13",
       "name": "Trail of Storms",
+      "icon": "RodofPower",
       "x": 5869,
       "y": 420,
       "maxPoints": 5,
@@ -17395,6 +18065,7 @@
     "to50-14": {
       "skill": "to50-14",
       "name": "Igniting Swirl",
+      "icon": "Glyph of Fire",
       "x": 7807,
       "y": 676.4,
       "maxPoints": 1,
@@ -17419,6 +18090,7 @@
     "to50-15": {
       "skill": "to50-15",
       "name": "Inferno",
+      "icon": "Fire Shield",
       "x": 8376.6,
       "y": 902,
       "maxPoints": 4,
@@ -17441,6 +18113,7 @@
     "to50-16": {
       "skill": "to50-16",
       "name": "Stormbringer",
+      "icon": "Erasing-Strike",
       "x": 6481,
       "y": 524,
       "maxPoints": 4,
@@ -17467,6 +18140,7 @@
     "to50-17": {
       "skill": "to50-17",
       "name": "Aspect of the Storm",
+      "icon": "arcane ascendance",
       "x": 7215,
       "y": 153.19995,
       "maxPoints": 1,
@@ -17495,6 +18169,7 @@
     "to50-18": {
       "skill": "to50-18",
       "name": "Storm Dervish",
+      "icon": "Ice Ward 1",
       "x": 7985,
       "y": 96.00004,
       "maxPoints": 3,
@@ -17520,6 +18195,7 @@
     "to50-19": {
       "skill": "to50-19",
       "name": "Gust of Renewal",
+      "icon": "Focus",
       "x": 7837,
       "y": -396,
       "maxPoints": 4,
@@ -17543,6 +18219,7 @@
     "to50-20": {
       "skill": "to50-20",
       "name": "Swift Wings",
+      "icon": "Birds of Prey",
       "x": 8569.4,
       "y": -356,
       "maxPoints": 5,
@@ -17565,6 +18242,7 @@
     "to50-21": {
       "skill": "to50-21",
       "name": "Snap Gale",
+      "icon": "Glacier",
       "x": 4685,
       "y": 416,
       "maxPoints": 1,
@@ -17591,6 +18269,7 @@
     "to50-22": {
       "skill": "to50-22",
       "name": "Storm Soul",
+      "icon": "ice bolt",
       "x": 5485,
       "y": 856,
       "maxPoints": 6,
@@ -17635,6 +18314,7 @@
     "ts85i-2": {
       "skill": "ts85i-2",
       "name": "Lagonian Shamanism",
+      "icon": "lightning-buff",
       "x": 5329,
       "y": -768,
       "maxPoints": 1,
@@ -17664,6 +18344,7 @@
     "ts85i-3": {
       "skill": "ts85i-3",
       "name": "Tempestuous Legend",
+      "icon": "c-Elemental Damage Buff (generic)",
       "x": 4543.4,
       "y": -548,
       "maxPoints": 4,
@@ -17692,6 +18373,7 @@
     "ts85i-4": {
       "skill": "ts85i-4",
       "name": "Thunderous Storm",
+      "icon": "lightning_swipe",
       "x": 3781,
       "y": -383.6,
       "maxPoints": 4,
@@ -17714,6 +18396,7 @@
     "ts85i-5": {
       "skill": "ts85i-5",
       "name": "Grand Cyclone",
+      "icon": "wind-tornado",
       "x": 4173,
       "y": -77.2,
       "maxPoints": 4,
@@ -17736,6 +18419,7 @@
     "ts85i-6": {
       "skill": "ts85i-6",
       "name": "Nature's Storm",
+      "icon": "Future strike",
       "x": 5001,
       "y": -240,
       "maxPoints": 1,
@@ -17758,6 +18442,7 @@
     "ts85i-7": {
       "skill": "ts85i-7",
       "name": "Scheme of the Architect",
+      "icon": "c-storm_crows",
       "x": 6069,
       "y": -664,
       "maxPoints": 1,
@@ -17780,6 +18465,7 @@
     "ts85i-8": {
       "skill": "ts85i-8",
       "name": "Stormriding Companions",
+      "icon": "elemental-nova",
       "x": 5097,
       "y": 296,
       "maxPoints": 1,
@@ -17811,6 +18497,7 @@
     "ts85i-9": {
       "skill": "ts85i-9",
       "name": "Bulwark of Nature",
+      "icon": "Summon_healing_totem",
       "x": 4629,
       "y": 664,
       "maxPoints": 3,
@@ -17839,6 +18526,7 @@
     "ts85i-10": {
       "skill": "ts85i-10",
       "name": "Druid's Call",
+      "icon": "human_to_swarm",
       "x": 4048.6,
       "y": 464,
       "maxPoints": 5,
@@ -17866,6 +18554,7 @@
     "ts85i-11": {
       "skill": "ts85i-11",
       "name": "Attuned Slam",
+      "icon": "Maul",
       "x": 5377,
       "y": 1112,
       "maxPoints": 4,
@@ -17895,6 +18584,7 @@
     "ts85i-12": {
       "skill": "ts85i-12",
       "name": "Looming Gale",
+      "icon": "storm_totem",
       "x": 4425.8,
       "y": 1215.6,
       "maxPoints": 1,
@@ -17924,6 +18614,7 @@
     "ts85i-13": {
       "skill": "ts85i-13",
       "name": "Rousing Symbols",
+      "icon": "claw_totem",
       "x": 3845.8,
       "y": 1015.6,
       "maxPoints": 2,
@@ -17947,6 +18638,7 @@
     "ts85i-14": {
       "skill": "ts85i-14",
       "name": "Sky Opener",
+      "icon": "lightning_from_sky",
       "x": 5529,
       "y": 580,
       "maxPoints": 1,
@@ -17970,6 +18662,7 @@
     "ts85i-15": {
       "skill": "ts85i-15",
       "name": "Windfury Force",
+      "icon": "swipe",
       "x": 6173,
       "y": 700,
       "maxPoints": 4,
@@ -17997,6 +18690,7 @@
     "ts85i-16": {
       "skill": "ts85i-16",
       "name": "Heorot's Arsenal",
+      "icon": "c-double-strike",
       "x": 6481,
       "y": 1208,
       "maxPoints": 4,
@@ -18020,6 +18714,7 @@
     "ts85i-17": {
       "skill": "ts85i-17",
       "name": "Firm Grip",
+      "icon": "Spear stab",
       "x": 7038.2,
       "y": 700,
       "maxPoints": 3,
@@ -18047,6 +18742,7 @@
     "ts85i-18": {
       "skill": "ts85i-18",
       "name": "Calm Seas",
+      "icon": "star-sign3",
       "x": 7344.2,
       "y": 1208,
       "maxPoints": 1,
@@ -18073,6 +18769,7 @@
     "ts85i-19": {
       "skill": "ts85i-19",
       "name": "Crashing Waves",
+      "icon": "ice_crash",
       "x": 7912.6,
       "y": 1208,
       "maxPoints": 1,
@@ -18098,6 +18795,7 @@
     "ts85i-20": {
       "skill": "ts85i-20",
       "name": "Grounded Refuge",
+      "icon": "star-sign2",
       "x": 8210.6,
       "y": 700,
       "maxPoints": 1,
@@ -18125,6 +18823,7 @@
     "ts85i-21": {
       "skill": "ts85i-21",
       "name": "Gladiator of Lagon",
+      "icon": "lightning-rune",
       "x": 5729,
       "y": -0,
       "maxPoints": 4,
@@ -18152,6 +18851,7 @@
     "ts85i-23": {
       "skill": "ts85i-23",
       "name": "Resurgence of the Land",
+      "icon": "c-Mana Regeneration Buff (generic)",
       "x": 7912.6,
       "y": 227.2,
       "maxPoints": 1,
@@ -18176,6 +18876,7 @@
     "ts85i-24": {
       "skill": "ts85i-24",
       "name": "Warm Shelter",
+      "icon": "star-sign4",
       "x": 7344.2,
       "y": 227.19995,
       "maxPoints": 1,
@@ -18202,6 +18903,7 @@
     "ts85i-25": {
       "skill": "ts85i-25",
       "name": "Ancestral Swiftness",
+      "icon": "Armblade_Slashes1",
       "x": 7238.2,
       "y": -348,
       "maxPoints": 4,
@@ -18227,6 +18929,7 @@
     "ts85i-26": {
       "skill": "ts85i-26",
       "name": "Soaring Blows",
+      "icon": "c-tempest strike2",
       "x": 8042.6,
       "y": -260.4,
       "maxPoints": 1,
@@ -18255,6 +18958,7 @@
     "ts85i-27": {
       "skill": "ts85i-27",
       "name": "Wind Booster",
+      "icon": "c-fade_grey",
       "x": 8661,
       "y": 76,
       "maxPoints": 3,
@@ -18280,6 +18984,7 @@
     "ts85i-28": {
       "skill": "ts85i-28",
       "name": "Ceaseless Tyhoon",
+      "icon": "Tornado",
       "x": 8861,
       "y": 624,
       "maxPoints": 1,
@@ -18305,6 +19010,7 @@
     "ts85i-29": {
       "skill": "ts85i-29",
       "name": "Devastating Whirlwind",
+      "icon": "physical_bolt",
       "x": 8861,
       "y": 1152,
       "maxPoints": 3,
@@ -18328,6 +19034,7 @@
     "ts85i-30": {
       "skill": "ts85i-30",
       "name": "Blizzard's Wrath",
+      "icon": "ice_bolt",
       "x": 4048.6,
       "y": -834.8,
       "maxPoints": 4,
@@ -18350,6 +19057,7 @@
     "ts85i-32": {
       "skill": "ts85i-32",
       "name": "Coldest Night",
+      "icon": "ice_wall",
       "x": 8589.8,
       "y": -586.4,
       "maxPoints": 3,
@@ -18375,6 +19083,7 @@
     "ts85i-33": {
       "skill": "ts85i-33",
       "name": "Wrath of the Mountain",
+      "icon": "cold-3-novas",
       "x": 9057.8,
       "y": -810.8001,
       "maxPoints": 1,
@@ -18397,6 +19106,7 @@
     "ts85i-34": {
       "skill": "ts85i-34",
       "name": "Fulminating Strikes",
+      "icon": "lightning-explosion",
       "x": 7513,
       "y": -768,
       "maxPoints": 3,
@@ -18422,6 +19132,7 @@
     "ts85i-35": {
       "skill": "ts85i-35",
       "name": "Cloudburst Conduit",
+      "icon": "lightning-pillar",
       "x": 8012.6,
       "y": -920,
       "maxPoints": 1,
@@ -18468,6 +19179,7 @@
     "uph41-2": {
       "skill": "uph41-2",
       "name": "Tremblor",
+      "icon": "earthquake",
       "x": 5618.6,
       "y": 908.4,
       "maxPoints": 3,
@@ -18497,6 +19209,7 @@
     "uph41-3": {
       "skill": "uph41-3",
       "name": "Excavating Blow",
+      "icon": "c-flurry-2",
       "x": 6481,
       "y": -787.6,
       "maxPoints": 1,
@@ -18523,6 +19236,7 @@
     "uph41-4": {
       "skill": "uph41-4",
       "name": "Erupting Earth",
+      "icon": "tremor",
       "x": 5841,
       "y": -632,
       "maxPoints": 1,
@@ -18547,6 +19261,7 @@
     "uph41-5": {
       "skill": "uph41-5",
       "name": "Glacial Cascade",
+      "icon": "ice_bolt",
       "x": 4592.2,
       "y": -407.59998,
       "maxPoints": 1,
@@ -18575,6 +19290,7 @@
     "uph41-6": {
       "skill": "uph41-6",
       "name": "Sundering Strike",
+      "icon": "c-cinder-strike-1",
       "x": 8012.2,
       "y": -738,
       "maxPoints": 3,
@@ -18602,6 +19318,7 @@
     "uph41-7": {
       "skill": "uph41-7",
       "name": "Inexhaustible",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 5841,
       "y": -0,
       "maxPoints": 3,
@@ -18628,6 +19345,7 @@
     "uph41-8": {
       "skill": "uph41-8",
       "name": "Mantle Strike",
+      "icon": "Maul",
       "x": 5330.2,
       "y": 376,
       "maxPoints": 1,
@@ -18655,6 +19373,7 @@
     "uph41-9": {
       "skill": "uph41-9",
       "name": "Crust Rupture",
+      "icon": "physical_bolt",
       "x": 4852.6,
       "y": 137.2,
       "maxPoints": 4,
@@ -18677,6 +19396,7 @@
     "uph41-10": {
       "skill": "uph41-10",
       "name": "Stonethorn Pillars",
+      "icon": "thorn_totem",
       "x": 4367.8,
       "y": 1006.4,
       "maxPoints": 1,
@@ -18703,6 +19423,7 @@
     "uph41-11": {
       "skill": "uph41-11",
       "name": "Mountain Fortress",
+      "icon": "Totemic Rising",
       "x": 3831.7998,
       "y": 1162.4,
       "maxPoints": 1,
@@ -18726,6 +19447,7 @@
     "uph41-12": {
       "skill": "uph41-12",
       "name": "Frozen Collision",
+      "icon": "c-tempest_strike_weapon",
       "x": 4192.2,
       "y": 0.4,
       "maxPoints": 5,
@@ -18749,6 +19471,7 @@
     "uph41-13": {
       "skill": "uph41-13",
       "name": "Cold Front",
+      "icon": "ice_wall",
       "x": 4192.2,
       "y": -815.6,
       "maxPoints": 5,
@@ -18774,6 +19497,7 @@
     "uph41-14": {
       "skill": "uph41-14",
       "name": "Sublimation",
+      "icon": "ice_crash",
       "x": 3777.4,
       "y": -407.59998,
       "maxPoints": 1,
@@ -18796,6 +19520,7 @@
     "uph41-15": {
       "skill": "uph41-15",
       "name": "Quarry Maker",
+      "icon": "c-flurry-1",
       "x": 5177.8,
       "y": -787.6001,
       "maxPoints": 2,
@@ -18820,6 +19545,7 @@
     "uph41-16": {
       "skill": "uph41-16",
       "name": "Maiming Rubble",
+      "icon": "c-slow",
       "x": 5317,
       "y": -312,
       "maxPoints": 3,
@@ -18847,6 +19573,7 @@
     "uph41-17": {
       "skill": "uph41-17",
       "name": "Terrain Delving",
+      "icon": "c-tremor2",
       "x": 6941,
       "y": 500,
       "maxPoints": 5,
@@ -18877,6 +19604,7 @@
     "uph41-18": {
       "skill": "uph41-18",
       "name": "Primal Bulwark",
+      "icon": "c-harden red",
       "x": 6481,
       "y": 828.8,
       "maxPoints": 3,
@@ -18908,6 +19636,7 @@
     "uph41-19": {
       "skill": "uph41-19",
       "name": "Through Muck and Clay",
+      "icon": "c-tornado1",
       "x": 6090.6,
       "y": 1221.2,
       "maxPoints": 1,
@@ -18931,6 +19660,7 @@
     "uph41-20": {
       "skill": "uph41-20",
       "name": "Terraforming Clash",
+      "icon": "fault_line",
       "x": 7584.5996,
       "y": 1134.3999,
       "maxPoints": 3,
@@ -18955,6 +19685,7 @@
     "uph41-21": {
       "skill": "uph41-21",
       "name": "Earthbreaker",
+      "icon": "c-Ravage",
       "x": 8256.2,
       "y": 1250.3999,
       "maxPoints": 1,
@@ -18979,6 +19710,7 @@
     "uph41-22": {
       "skill": "uph41-22",
       "name": "Glacial Crash",
+      "icon": "c-tempest strike",
       "x": 7984.6,
       "y": 877.19995,
       "maxPoints": 4,
@@ -19004,6 +19736,7 @@
     "uph41-23": {
       "skill": "uph41-23",
       "name": "Natural Weapons",
+      "icon": "c-double-strike",
       "x": 7725.8,
       "y": 500.00006,
       "maxPoints": 3,
@@ -19028,6 +19761,7 @@
     "uph41-24": {
       "skill": "uph41-24",
       "name": "Unstoppable Strength",
+      "icon": "Armblade_Slashes2",
       "x": 6941,
       "y": -500,
       "maxPoints": 5,
@@ -19055,6 +19789,7 @@
     "uph41-25": {
       "skill": "uph41-25",
       "name": "Brutish Engagement",
+      "icon": "c-bear roar",
       "x": 7768.2,
       "y": -62.8,
       "maxPoints": 5,
@@ -19082,6 +19817,7 @@
     "uph41-26": {
       "skill": "uph41-26",
       "name": "Hindering Tremors",
+      "icon": "c-Attack Speed Debuff (generic)_3",
       "x": 8325,
       "y": 591.19995,
       "maxPoints": 3,
@@ -19106,6 +19842,7 @@
     "uph41-27": {
       "skill": "uph41-27",
       "name": "Rock Upsurge",
+      "icon": "Abyssal-Echoes-red",
       "x": 8564.2,
       "y": -391.2,
       "maxPoints": 4,
@@ -19134,6 +19871,7 @@
     "uph41-28": {
       "skill": "uph41-28",
       "name": "Master of the Totem",
+      "icon": "Summon_healing_totem",
       "x": 9009.4,
       "y": 113.2,
       "maxPoints": 1,
@@ -19157,6 +19895,7 @@
     "uph41-29": {
       "skill": "uph41-29",
       "name": "Rejuvenating Splinters",
+      "icon": "white_flower",
       "x": 9009.4,
       "y": -921.6,
       "maxPoints": 1,
@@ -19183,6 +19922,7 @@
     "uph41-30": {
       "skill": "uph41-30",
       "name": "Upheaval Totems",
+      "icon": "Frenzy Totem2",
       "x": 4895.4,
       "y": 844,
       "maxPoints": 1,
@@ -19211,6 +19951,7 @@
     "uph41-32": {
       "skill": "uph41-32",
       "name": "Strengthened Roots",
+      "icon": "claw_totem",
       "x": 4377,
       "y": 612,
       "maxPoints": 3,
@@ -19256,6 +19997,7 @@
     "wb8fo-2": {
       "skill": "wb8fo-2",
       "name": "Ursine Heart",
+      "icon": "c-Damage Mitigation Debuff (generic)",
       "x": 5921,
       "y": -400,
       "maxPoints": 4,
@@ -19282,6 +20024,7 @@
     "wb8fo-3": {
       "skill": "wb8fo-3",
       "name": "Frenzied Strikes",
+      "icon": "c-bear roar",
       "x": 5621,
       "y": -900,
       "maxPoints": 4,
@@ -19309,6 +20052,7 @@
     "wb8fo-4": {
       "skill": "wb8fo-4",
       "name": "Relentless Thunder",
+      "icon": "c-shock",
       "x": 4797.8,
       "y": -0,
       "maxPoints": 5,
@@ -19338,6 +20082,7 @@
     "wb8fo-5": {
       "skill": "wb8fo-5",
       "name": "Wisened Claws",
+      "icon": "c-storm_crows",
       "x": 4669,
       "y": -568,
       "maxPoints": 1,
@@ -19365,6 +20110,7 @@
     "wb8fo-6": {
       "skill": "wb8fo-6",
       "name": "Ursine Storm",
+      "icon": "c-tornado1",
       "x": 5265,
       "y": -480,
       "maxPoints": 4,
@@ -19387,6 +20133,7 @@
     "wb8fo-7": {
       "skill": "wb8fo-7",
       "name": "Rip and Tear",
+      "icon": "Maul",
       "x": 5921,
       "y": 400,
       "maxPoints": 5,
@@ -19412,6 +20159,7 @@
     "wb8fo-8": {
       "skill": "wb8fo-8",
       "name": "Dauntless",
+      "icon": "c-flanking strike-new",
       "x": 6481,
       "y": 710.8,
       "maxPoints": 3,
@@ -19440,6 +20188,7 @@
     "wb8fo-9": {
       "skill": "wb8fo-9",
       "name": "Apex Predator",
+      "icon": "Rampage",
       "x": 5401,
       "y": 1098.4,
       "maxPoints": 3,
@@ -19463,6 +20212,7 @@
     "wb8fo-10": {
       "skill": "wb8fo-10",
       "name": "Eterra's Renewal",
+      "icon": "c-haste",
       "x": 6144.6,
       "y": 1234.8,
       "maxPoints": 1,
@@ -19488,6 +20238,7 @@
     "wb8fo-11": {
       "skill": "wb8fo-11",
       "name": "Voice of the Thicket",
+      "icon": "bear_to_spriggan",
       "x": 6810.2,
       "y": 1234.8,
       "maxPoints": 1,
@@ -19511,6 +20262,7 @@
     "wb8fo-12": {
       "skill": "wb8fo-12",
       "name": "Intimidating Cry",
+      "icon": "Roar",
       "x": 7561,
       "y": 1098.4,
       "maxPoints": 1,
@@ -19536,6 +20288,7 @@
     "wb8fo-13": {
       "skill": "wb8fo-13",
       "name": "Army Sunderer",
+      "icon": "c-armor debuff_3",
       "x": 4997.8,
       "y": 646.8,
       "maxPoints": 5,
@@ -19563,6 +20316,7 @@
     "wb8fo-14": {
       "skill": "wb8fo-14",
       "name": "Unending Storm",
+      "icon": "storm_totem",
       "x": 3949,
       "y": -624,
       "maxPoints": 1,
@@ -19587,6 +20341,7 @@
     "wb8fo-15": {
       "skill": "wb8fo-15",
       "name": "Insatiable",
+      "icon": "lion_roar",
       "x": 4284.6,
       "y": 1064,
       "maxPoints": 4,
@@ -19612,6 +20367,7 @@
     "wb8fo-17": {
       "skill": "wb8fo-17",
       "name": "Crackling Assault",
+      "icon": "lightning_from_sky",
       "x": 3735.8,
       "y": -0,
       "maxPoints": 5,
@@ -19636,6 +20392,7 @@
     "wb8fo-18": {
       "skill": "wb8fo-18",
       "name": "Invigoration",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 7041,
       "y": 400,
       "maxPoints": 4,
@@ -19661,6 +20418,7 @@
     "wb8fo-19": {
       "skill": "wb8fo-19",
       "name": "Bloodthirst",
+      "icon": "c-bleed",
       "x": 8058.6,
       "y": 646.8,
       "maxPoints": 5,
@@ -19690,6 +20448,7 @@
     "wb8fo-21": {
       "skill": "wb8fo-21",
       "name": "Territorial",
+      "icon": "c-tremor2",
       "x": 7041,
       "y": -400,
       "maxPoints": 5,
@@ -19716,6 +20475,7 @@
     "wb8fo-22": {
       "skill": "wb8fo-22",
       "name": "Fury of the Maul",
+      "icon": "c-Frenzy",
       "x": 7798.6,
       "y": -2.47956E-05,
       "maxPoints": 2,
@@ -19744,6 +20504,7 @@
     "wb8fo-24": {
       "skill": "wb8fo-24",
       "name": "Wild Command",
+      "icon": "c-bear roar alt",
       "x": 8644.2,
       "y": 646.8,
       "maxPoints": 5,
@@ -19766,6 +20527,7 @@
     "wb8fo-25": {
       "skill": "wb8fo-25",
       "name": "Enrage",
+      "icon": "Primal Roar",
       "x": 8077.8,
       "y": -457.6,
       "maxPoints": 5,
@@ -19793,6 +20555,7 @@
     "wb8fo-26": {
       "skill": "wb8fo-26",
       "name": "Bringer of Storms",
+      "icon": "lightning_swipe",
       "x": 4284.6,
       "y": 398.8,
       "maxPoints": 1,
@@ -19818,6 +20581,7 @@
     "wb8fo-27": {
       "skill": "wb8fo-27",
       "name": "Pummel and Bash",
+      "icon": "c-claws-blood",
       "x": 7341,
       "y": -900.00006,
       "maxPoints": 5,
@@ -19846,6 +20610,7 @@
     "wb8fo-29": {
       "skill": "wb8fo-29",
       "name": "Ruthless",
+      "icon": "c-red-eye",
       "x": 6481,
       "y": -720,
       "maxPoints": 4,
@@ -19873,6 +20638,7 @@
     "wb8fo-31": {
       "skill": "wb8fo-31",
       "name": "Skull Crusher",
+      "icon": "FuryLeap",
       "x": 8644.2,
       "y": 1196,
       "maxPoints": 1,
@@ -19899,6 +20665,7 @@
     "wb8fo-32": {
       "skill": "wb8fo-32",
       "name": "Tremor Slam",
+      "icon": "Upheaval",
       "x": 8644.2,
       "y": 77.2,
       "maxPoints": 1,
@@ -19924,6 +20691,7 @@
     "wb8fo-33": {
       "skill": "wb8fo-33",
       "name": "Barrage of the Swarm",
+      "icon": "bear_to_swarm",
       "x": 8995.4,
       "y": -510.4,
       "maxPoints": 1,
@@ -19947,6 +20715,7 @@
     "wb8fo-34": {
       "skill": "wb8fo-34",
       "name": "Woodland Bear",
+      "icon": "Entangling_Roots1",
       "x": 8384.2,
       "y": -980.4,
       "maxPoints": 1,
@@ -19994,6 +20763,7 @@
     "wc57-2": {
       "skill": "wc57-2",
       "name": "Deep Roar",
+      "icon": "c-tremor2",
       "x": 6025.8,
       "y": -452,
       "maxPoints": 5,
@@ -20020,6 +20790,7 @@
     "wc57-3": {
       "skill": "wc57-3",
       "name": "Battle Cry",
+      "icon": "c-Bear_Charge_3",
       "x": 5600.6,
       "y": -900,
       "maxPoints": 4,
@@ -20044,6 +20815,7 @@
     "wc57-4": {
       "skill": "wc57-4",
       "name": "Ferocity",
+      "icon": "c-flanking strike-new",
       "x": 6481,
       "y": -775.59985,
       "maxPoints": 1,
@@ -20066,6 +20838,7 @@
     "wc57-5": {
       "skill": "wc57-5",
       "name": "Jormun's Wrath",
+      "icon": "Ward-blast",
       "x": 5002.2,
       "y": -320,
       "maxPoints": 1,
@@ -20098,6 +20871,7 @@
     "wc57-6": {
       "skill": "wc57-6",
       "name": "Frost Claw",
+      "icon": "c-freeze",
       "x": 4425,
       "y": -320,
       "maxPoints": 5,
@@ -20122,6 +20896,7 @@
     "wc57-7": {
       "skill": "wc57-7",
       "name": "Bringer of Winter",
+      "icon": "c-cold damage buff",
       "x": 3857,
       "y": -320,
       "maxPoints": 1,
@@ -20148,6 +20923,7 @@
     "wc57-8": {
       "skill": "wc57-8",
       "name": "Heart of Rime",
+      "icon": "ice bolt",
       "x": 4425,
       "y": -919.2,
       "maxPoints": 5,
@@ -20170,6 +20946,7 @@
     "wc57-9": {
       "skill": "wc57-9",
       "name": "Frigid Breath",
+      "icon": "c-snap freeze",
       "x": 4425,
       "y": 217.6,
       "maxPoints": 1,
@@ -20192,6 +20969,7 @@
     "wc57-10": {
       "skill": "wc57-10",
       "name": "Debilitating Shout",
+      "icon": "c-despair",
       "x": 5543.4,
       "y": 168,
       "maxPoints": 5,
@@ -20220,6 +20998,7 @@
     "wc57-11": {
       "skill": "wc57-11",
       "name": "Toxic Companions",
+      "icon": "c-poison_bleed",
       "x": 4957,
       "y": 462.80005,
       "maxPoints": 5,
@@ -20243,6 +21022,7 @@
     "wc57-12": {
       "skill": "wc57-12",
       "name": "Juggernaut",
+      "icon": "c-Manifest-Armour-Vaguely-Suggestive",
       "x": 5892.6,
       "y": 596,
       "maxPoints": 1,
@@ -20268,6 +21048,7 @@
     "wc57-13": {
       "skill": "wc57-13",
       "name": "Breath of Eterra",
+      "icon": "c-Health Regeneration Buff (generic)",
       "x": 5157,
       "y": 1036,
       "maxPoints": 3,
@@ -20297,6 +21078,7 @@
     "wc57-14": {
       "skill": "wc57-14",
       "name": "Whirlpool",
+      "icon": "c-tornado1",
       "x": 4057,
       "y": 836,
       "maxPoints": 4,
@@ -20321,6 +21103,7 @@
     "wc57-15": {
       "skill": "wc57-15",
       "name": "Purging Shout",
+      "icon": "Healing Wind",
       "x": 4625,
       "y": 1236,
       "maxPoints": 1,
@@ -20343,6 +21126,7 @@
     "wc57-16": {
       "skill": "wc57-16",
       "name": "Invigorate",
+      "icon": "c-wolf howl",
       "x": 5692.6,
       "y": 1236,
       "maxPoints": 1,
@@ -20365,6 +21149,7 @@
     "wc57-17": {
       "skill": "wc57-17",
       "name": "Hastily Advance",
+      "icon": "c-haste",
       "x": 7733,
       "y": 540,
       "maxPoints": 1,
@@ -20389,6 +21174,7 @@
     "wc57-18": {
       "skill": "wc57-18",
       "name": "Energized Charge",
+      "icon": "c-flurry3 - orange",
       "x": 7869,
       "y": 1065.6,
       "maxPoints": 5,
@@ -20415,6 +21201,7 @@
     "wc57-19": {
       "skill": "wc57-19",
       "name": "Raging Frenzy",
+      "icon": "c-Frenzy",
       "x": 8469,
       "y": 662.8,
       "maxPoints": 1,
@@ -20437,6 +21224,7 @@
     "wc57-20": {
       "skill": "wc57-20",
       "name": "Frightful Presence",
+      "icon": "c-Dread Shade",
       "x": 8469,
       "y": 1236,
       "maxPoints": 1,
@@ -20464,6 +21252,7 @@
     "wc57-21": {
       "skill": "wc57-21",
       "name": "Horrifying Cry",
+      "icon": "desecrate",
       "x": 9085,
       "y": 1065.6,
       "maxPoints": 2,
@@ -20487,6 +21276,7 @@
     "wc57-22": {
       "skill": "wc57-22",
       "name": "Berserker",
+      "icon": "c-Bear Swipe_5",
       "x": 6581,
       "y": 596,
       "maxPoints": 1,
@@ -20517,6 +21307,7 @@
     "wc57-24": {
       "skill": "wc57-24",
       "name": "Brutality",
+      "icon": "c-melee damage buff",
       "x": 7055.8,
       "y": 1265.6,
       "maxPoints": 5,
@@ -20546,6 +21337,7 @@
     "wc57-25": {
       "skill": "wc57-25",
       "name": "Bloodthirst",
+      "icon": "c-Bear Ravage",
       "x": 7164.5996,
       "y": 662.8,
       "maxPoints": 1,
@@ -20571,6 +21363,7 @@
     "wc57-26": {
       "skill": "wc57-26",
       "name": "Fury Strikes",
+      "icon": "c-claws-blood",
       "x": 6425.8,
       "y": 1132.8,
       "maxPoints": 3,
@@ -20597,6 +21390,7 @@
     "wc57-27": {
       "skill": "wc57-27",
       "name": "Staggering Roar",
+      "icon": "c-shield-bash",
       "x": 6960.2,
       "y": -452,
       "maxPoints": 4,
@@ -20622,6 +21416,7 @@
     "wc57-28": {
       "skill": "wc57-28",
       "name": "Apprehend",
+      "icon": "c-flanking-strike-new-3",
       "x": 7657.8,
       "y": -919.19995,
       "maxPoints": 1,
@@ -20649,6 +21444,7 @@
     "wc57-29": {
       "skill": "wc57-29",
       "name": "Challenging Might",
+      "icon": "c-bear roar",
       "x": 8557,
       "y": -1040,
       "maxPoints": 2,
@@ -20674,6 +21470,7 @@
     "wc57-30": {
       "skill": "wc57-30",
       "name": "Kinetic Scream",
+      "icon": "c-forge-strike",
       "x": 7364.5996,
       "y": -0,
       "maxPoints": 1,
@@ -20702,6 +21499,7 @@
     "wc57-31": {
       "skill": "wc57-31",
       "name": "Eviscerating Howl",
+      "icon": "c-Laceration_sq",
       "x": 8237,
       "y": 124,
       "maxPoints": 5,
@@ -20728,6 +21526,7 @@
     "wc57-32": {
       "skill": "wc57-32",
       "name": "Shallow Breath",
+      "icon": "c-Ward Generation Debuff (generic)",
       "x": 7889,
       "y": -383.59985,
       "maxPoints": 1,
@@ -20759,6 +21558,7 @@
     "wc57-33": {
       "skill": "wc57-33",
       "name": "Totemic Heart",
+      "icon": "c-frenzy-totem-new",
       "x": 8781,
       "y": -383.6,
       "maxPoints": 1,
@@ -20807,6 +21607,7 @@
     "wo42-2": {
       "skill": "wo42-2",
       "name": "Canine Agility",
+      "icon": "Birds of Prey-yellow",
       "x": 7005,
       "y": 556,
       "maxPoints": 4,
@@ -20833,6 +21634,7 @@
     "wo42-3": {
       "skill": "wo42-3",
       "name": "Leap Attack",
+      "icon": "c-Falcon",
       "x": 7909,
       "y": -20,
       "maxPoints": 1,
@@ -20855,6 +21657,7 @@
     "wo42-4": {
       "skill": "wo42-4",
       "name": "Victory Howl",
+      "icon": "c-wolf howl alt",
       "x": 6197,
       "y": -740,
       "maxPoints": 3,
@@ -20882,6 +21685,7 @@
     "wo42-5": {
       "skill": "wo42-5",
       "name": "Serrated Claws",
+      "icon": "c-Bear Swipe_5",
       "x": 7721,
       "y": 664,
       "maxPoints": 4,
@@ -20909,6 +21713,7 @@
     "wo42-6": {
       "skill": "wo42-6",
       "name": "Patient Hunters",
+      "icon": "rip blood",
       "x": 8233,
       "y": 1072,
       "maxPoints": 4,
@@ -20932,6 +21737,7 @@
     "wo42-7": {
       "skill": "wo42-7",
       "name": "Snarl",
+      "icon": "c-flanking-strike-new-2",
       "x": 5617,
       "y": -924,
       "maxPoints": 2,
@@ -20956,6 +21762,7 @@
     "wo42-8": {
       "skill": "wo42-8",
       "name": "On the Hunt",
+      "icon": "c-Swiftness",
       "x": 7145,
       "y": -360,
       "maxPoints": 5,
@@ -20983,6 +21790,7 @@
     "wo42-9": {
       "skill": "wo42-9",
       "name": "Savage Hunters",
+      "icon": "c-Ravage",
       "x": 5817,
       "y": -360,
       "maxPoints": 5,
@@ -21009,6 +21817,7 @@
     "wo42-10": {
       "skill": "wo42-10",
       "name": "Legendary Bite",
+      "icon": "c-Bear Ravage",
       "x": 5729,
       "y": 112,
       "maxPoints": 1,
@@ -21034,6 +21843,7 @@
     "wo42-11": {
       "skill": "wo42-11",
       "name": "Permanent Bond",
+      "icon": "Charm animal-blue",
       "x": 4104.2,
       "y": 342.80005,
       "maxPoints": 1,
@@ -21064,6 +21874,7 @@
     "wo42-12": {
       "skill": "wo42-12",
       "name": "Earthborn",
+      "icon": "aura of decay",
       "x": 4677,
       "y": 720,
       "maxPoints": 3,
@@ -21092,6 +21903,7 @@
     "wo42-13": {
       "skill": "wo42-13",
       "name": "Winterborn",
+      "icon": "c-snap freeze",
       "x": 4553,
       "y": -228,
       "maxPoints": 4,
@@ -21119,6 +21931,7 @@
     "wo42-14": {
       "skill": "wo42-14",
       "name": "Tundra Stalkers",
+      "icon": "c-thorn-totem-new ice",
       "x": 5189,
       "y": -428,
       "maxPoints": 5,
@@ -21150,6 +21963,7 @@
     "wo42-16": {
       "skill": "wo42-16",
       "name": "Wolfen Recovery",
+      "icon": "NaturalBlessing",
       "x": 5345,
       "y": 720,
       "maxPoints": 4,
@@ -21180,6 +21994,7 @@
     "wo42-17": {
       "skill": "wo42-17",
       "name": "Safety In Numbers",
+      "icon": "Charm animal-green",
       "x": 8877,
       "y": -220,
       "maxPoints": 1,
@@ -21210,6 +22025,7 @@
     "wo42-18": {
       "skill": "wo42-18",
       "name": "Stormborn",
+      "icon": "c-storm-totem-new",
       "x": 4993,
       "y": 196,
       "maxPoints": 5,
@@ -21244,6 +22060,7 @@
     "wo42-19": {
       "skill": "wo42-19",
       "name": "Lupine Endurance",
+      "icon": "c-harden",
       "x": 5957,
       "y": 556,
       "maxPoints": 5,
@@ -21269,6 +22086,7 @@
     "wo42-20": {
       "skill": "wo42-20",
       "name": "Storm Caller's Reprisal",
+      "icon": "Storm Call",
       "x": 5765,
       "y": 1132,
       "maxPoints": 1,
@@ -21297,6 +22115,7 @@
     "wo42-21": {
       "skill": "wo42-21",
       "name": "Cloud Runners",
+      "icon": "Static",
       "x": 6481,
       "y": 1244,
       "maxPoints": 5,
@@ -21322,6 +22141,7 @@
     "wo42-22": {
       "skill": "wo42-22",
       "name": "Storm Jaws",
+      "icon": "chain lightning",
       "x": 7193,
       "y": 1136,
       "maxPoints": 4,
@@ -21344,6 +22164,7 @@
     "wo42-23": {
       "skill": "wo42-23",
       "name": "Shaman's Bond",
+      "icon": "c-tempest",
       "x": 6483.4,
       "y": 772.4,
       "maxPoints": 1,
@@ -21370,6 +22191,7 @@
     "wo42-24": {
       "skill": "wo42-24",
       "name": "Howl of Might",
+      "icon": "bear roar",
       "x": 7981,
       "y": -560,
       "maxPoints": 4,
@@ -21403,6 +22225,7 @@
     "wo42-25": {
       "skill": "wo42-25",
       "name": "Relentless",
+      "icon": "c-Spellpower 1 Buff (generic)",
       "x": 7225,
       "y": 100,
       "maxPoints": 1,
@@ -21427,6 +22250,7 @@
     "wo42-26": {
       "skill": "wo42-26",
       "name": "Battlecry",
+      "icon": "PrimalRoar",
       "x": 7345,
       "y": -924,
       "maxPoints": 2,
@@ -21450,6 +22274,7 @@
     "wo42-27": {
       "skill": "wo42-27",
       "name": "Call of the Wind",
+      "icon": "c-haste",
       "x": 6765,
       "y": -740,
       "maxPoints": 3,
@@ -21477,6 +22302,7 @@
     "wo42-28": {
       "skill": "wo42-28",
       "name": "Crippling Wounds",
+      "icon": "c-Laceration_sq",
       "x": 8385,
       "y": 452,
       "maxPoints": 4,
@@ -21506,6 +22332,7 @@
     "wo42-29": {
       "skill": "wo42-29",
       "name": "Frozen Fangs",
+      "icon": "c-glyph-ice-flower",
       "x": 4726.2,
       "y": -873.2,
       "maxPoints": 1,

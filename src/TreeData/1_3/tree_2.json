@@ -138,6 +138,7 @@
     "Sentinel-0": {
       "skill": "Sentinel-0",
       "name": "Juggernaut",
+      "icon": "rebuke",
       "x": -1777.8,
       "y": 6.1035156E-05,
       "maxPoints": 8,
@@ -162,6 +163,7 @@
     "Sentinel-1": {
       "skill": "Sentinel-1",
       "name": "Stalwart",
+      "icon": "shield-block",
       "x": -1115.8,
       "y": 615.2001,
       "maxPoints": 5,
@@ -191,6 +193,7 @@
     "Sentinel-2": {
       "skill": "Sentinel-2",
       "name": "Armour Clad",
+      "icon": "c-Manifest-Armour",
       "x": -1115.8,
       "y": 307.6001,
       "maxPoints": 5,
@@ -216,6 +219,7 @@
     "Sentinel-3": {
       "skill": "Sentinel-3",
       "name": "Aegis of Renewal",
+      "icon": "holy-shield",
       "x": 208.19995,
       "y": 615.2001,
       "maxPoints": 5,
@@ -238,6 +242,7 @@
     "Sentinel-4": {
       "skill": "Sentinel-4",
       "name": "Relentless",
+      "icon": "vengeance",
       "x": -1115.8,
       "y": -307.59998,
       "maxPoints": 10,
@@ -265,6 +270,7 @@
     "Sentinel-5": {
       "skill": "Sentinel-5",
       "name": "Overwhelm",
+      "icon": "sword-to-sky",
       "x": -1777.8,
       "y": -307.59998,
       "maxPoints": 5,
@@ -290,6 +296,7 @@
     "Sentinel-6": {
       "skill": "Sentinel-6",
       "name": "Gladiator",
+      "icon": "c-blood-swords",
       "x": 870.19995,
       "y": -307.59998,
       "maxPoints": 1,
@@ -314,6 +321,7 @@
     "Sentinel-7": {
       "skill": "Sentinel-7",
       "name": "Axe Thrower",
+      "icon": "c-Axe Throw",
       "x": 870.19995,
       "y": 307.6001,
       "maxPoints": 5,
@@ -339,6 +347,7 @@
     "Sentinel-8": {
       "skill": "Sentinel-8",
       "name": "Valiant Charge",
+      "icon": "Future strike",
       "x": -453.80005,
       "y": 6.1035156E-05,
       "maxPoints": 5,
@@ -364,6 +373,7 @@
     "Sentinel-10": {
       "skill": "Sentinel-10",
       "name": "Devouring Blade",
+      "icon": "Spirit_Plague",
       "x": -1777.8,
       "y": 1907.6001,
       "maxPoints": 10,
@@ -388,6 +398,7 @@
     "Sentinel-11": {
       "skill": "Sentinel-11",
       "name": "Abyssal Endurance",
+      "icon": "void-shield",
       "x": -1777.8,
       "y": 984.80005,
       "maxPoints": 10,
@@ -411,6 +422,7 @@
     "Sentinel-12": {
       "skill": "Sentinel-12",
       "name": "World Eater",
+      "icon": "void-symbol",
       "x": -1387.4,
       "y": 2215.2002,
       "maxPoints": 6,
@@ -438,6 +450,7 @@
     "Sentinel-13": {
       "skill": "Sentinel-13",
       "name": "Sorrow and Steel",
+      "icon": "Sword slash Void",
       "x": -1387.4,
       "y": 984.80005,
       "maxPoints": 10,
@@ -460,6 +473,7 @@
     "Sentinel-14": {
       "skill": "Sentinel-14",
       "name": "Patient Doom",
+      "icon": "void-eruption",
       "x": -216.20007,
       "y": 1600,
       "maxPoints": 6,
@@ -480,6 +494,7 @@
     "Sentinel-15": {
       "skill": "Sentinel-15",
       "name": "Void Blades",
+      "icon": "Sword slash double void",
       "x": -997,
       "y": 1907.6001,
       "maxPoints": 8,
@@ -499,6 +514,7 @@
     "Sentinel-16": {
       "skill": "Sentinel-16",
       "name": "Dark Maw",
+      "icon": "Void Decay",
       "x": -997,
       "y": 1600,
       "maxPoints": 5,
@@ -522,6 +538,7 @@
     "Sentinel-17": {
       "skill": "Sentinel-17",
       "name": "Renouncement",
+      "icon": "c-void essence",
       "x": 174.19995,
       "y": 984.80005,
       "maxPoints": 8,
@@ -548,6 +565,7 @@
     "Sentinel-18": {
       "skill": "Sentinel-18",
       "name": "Finality",
+      "icon": "Fear",
       "x": -216.20007,
       "y": 2215.2002,
       "maxPoints": 5,
@@ -571,6 +589,7 @@
     "Sentinel-19": {
       "skill": "Sentinel-19",
       "name": "Chaotic Reverb",
+      "icon": "Future strike",
       "x": -606.6001,
       "y": 1907.6001,
       "maxPoints": 10,
@@ -593,6 +612,7 @@
     "Sentinel-20": {
       "skill": "Sentinel-20",
       "name": "Unending Hunger",
+      "icon": "terror",
       "x": -606.6001,
       "y": 2215.2002,
       "maxPoints": 5,
@@ -613,6 +633,7 @@
     "Sentinel-22": {
       "skill": "Sentinel-22",
       "name": "Eternal Form",
+      "icon": "rebuke",
       "x": 955,
       "y": 1600,
       "maxPoints": 10,
@@ -635,6 +656,7 @@
     "Sentinel-23": {
       "skill": "Sentinel-23",
       "name": "Future Mind",
+      "icon": "c-Arcane Ascendance",
       "x": 564.59985,
       "y": 1292.4,
       "maxPoints": 8,
@@ -657,6 +679,7 @@
     "Sentinel-24": {
       "skill": "Sentinel-24",
       "name": "Void Aegis",
+      "icon": "void-helmet",
       "x": 955,
       "y": 1907.6001,
       "maxPoints": 5,
@@ -680,6 +703,7 @@
     "Sentinel-25": {
       "skill": "Sentinel-25",
       "name": "Essence of the End",
+      "icon": "void-eruption",
       "x": 564.59985,
       "y": 2215.2002,
       "maxPoints": 5,
@@ -706,6 +730,7 @@
     "Sentinel-26": {
       "skill": "Sentinel-26",
       "name": "Dread Form",
+      "icon": "void-symbol-3",
       "x": 1345.3999,
       "y": 1600,
       "maxPoints": 10,
@@ -731,6 +756,7 @@
     "Sentinel-27": {
       "skill": "Sentinel-27",
       "name": "Steel Aegis",
+      "icon": "holy-shield",
       "x": -1777.8,
       "y": 3815.2002,
       "maxPoints": 5,
@@ -758,6 +784,7 @@
     "Sentinel-28": {
       "skill": "Sentinel-28",
       "name": "Battle Hardened",
+      "icon": "vengeance",
       "x": -1777.8,
       "y": 2584.8,
       "maxPoints": 10,
@@ -784,6 +811,7 @@
     "Sentinel-29": {
       "skill": "Sentinel-29",
       "name": "Rallying Block",
+      "icon": "Shieldwall",
       "x": -997,
       "y": 3815.2002,
       "maxPoints": 8,
@@ -808,6 +836,7 @@
     "Sentinel-30": {
       "skill": "Sentinel-30",
       "name": "Peltast",
+      "icon": "hammer-throw",
       "x": -1387.4,
       "y": 3507.6,
       "maxPoints": 10,
@@ -831,6 +860,7 @@
     "Sentinel-31": {
       "skill": "Sentinel-31",
       "name": "Might",
+      "icon": "lunge",
       "x": 174.19995,
       "y": 3507.6,
       "maxPoints": 6,
@@ -853,6 +883,7 @@
     "Sentinel-32": {
       "skill": "Sentinel-32",
       "name": "Unflinching",
+      "icon": "rebuke",
       "x": -1387.4,
       "y": 2584.8,
       "maxPoints": 5,
@@ -876,6 +907,7 @@
     "Sentinel-33": {
       "skill": "Sentinel-33",
       "name": "Guardian",
+      "icon": "holy-mace",
       "x": -997,
       "y": 2584.8,
       "maxPoints": 10,
@@ -897,6 +929,7 @@
     "Sentinel-34": {
       "skill": "Sentinel-34",
       "name": "Thornmail",
+      "icon": "Thorn_Shield-red",
       "x": -606.6001,
       "y": 2584.8,
       "maxPoints": 8,
@@ -919,6 +952,7 @@
     "Sentinel-35": {
       "skill": "Sentinel-35",
       "name": "Shield Crafter",
+      "icon": "ring-of-shields",
       "x": 1735.7998,
       "y": 3200,
       "maxPoints": 5,
@@ -947,6 +981,7 @@
     "Sentinel-36": {
       "skill": "Sentinel-36",
       "name": "Crushing Blows",
+      "icon": "physical_bolt",
       "x": -216.20007,
       "y": 2584.8,
       "maxPoints": 5,
@@ -973,6 +1008,7 @@
     "Sentinel-37": {
       "skill": "Sentinel-37",
       "name": "Smelter's Might",
+      "icon": "Sword slash double",
       "x": -606.6001,
       "y": 3815.2002,
       "maxPoints": 10,
@@ -998,6 +1034,7 @@
     "Sentinel-38": {
       "skill": "Sentinel-38",
       "name": "Infinite Bulwark",
+      "icon": "c-red flask",
       "x": 564.59985,
       "y": 2892.4,
       "maxPoints": 5,
@@ -1025,6 +1062,7 @@
     "Sentinel-39": {
       "skill": "Sentinel-39",
       "name": "Hammer and Anvil",
+      "icon": "forge-strike",
       "x": -216.20007,
       "y": 3200,
       "maxPoints": 5,
@@ -1047,6 +1085,7 @@
     "Sentinel-40": {
       "skill": "Sentinel-40",
       "name": "Echoing Strikes",
+      "icon": "c-dagger dance - purple",
       "x": 564.59985,
       "y": 984.80005,
       "maxPoints": 5,
@@ -1074,6 +1113,7 @@
     "Sentinel-41": {
       "skill": "Sentinel-41",
       "name": "Flawless Defender",
+      "icon": "c-Stun Susceptibility Debuff (generic)",
       "x": 564.59985,
       "y": 3507.6,
       "maxPoints": 4,
@@ -1099,6 +1139,7 @@
     "Sentinel-42": {
       "skill": "Sentinel-42",
       "name": "Iron Reflexes",
+      "icon": "c-synchronized-strike-temp",
       "x": 174.19995,
       "y": 2892.4,
       "maxPoints": 10,
@@ -1129,6 +1170,7 @@
     "Sentinel-43": {
       "skill": "Sentinel-43",
       "name": "Duelist",
+      "icon": "forge-hammer",
       "x": 564.59985,
       "y": 3815.2002,
       "maxPoints": 8,
@@ -1150,6 +1192,7 @@
     "Sentinel-44": {
       "skill": "Sentinel-44",
       "name": "Crusader",
+      "icon": "Javelin",
       "x": 564.59985,
       "y": 2584.8,
       "maxPoints": 8,
@@ -1171,6 +1214,7 @@
     "Sentinel-45": {
       "skill": "Sentinel-45",
       "name": "Lethal Strikes",
+      "icon": "Rive 2",
       "x": 1345.3999,
       "y": 3815.2002,
       "maxPoints": 6,
@@ -1193,6 +1237,7 @@
     "Sentinel-46": {
       "skill": "Sentinel-46",
       "name": "Javelineer",
+      "icon": "Spear stab",
       "x": 1345.3999,
       "y": 2584.8,
       "maxPoints": 6,
@@ -1214,6 +1259,7 @@
     "Sentinel-47": {
       "skill": "Sentinel-47",
       "name": "Osprixbane",
+      "icon": "fire-shield",
       "x": 1345.3999,
       "y": 3507.6,
       "maxPoints": 8,
@@ -1243,6 +1289,7 @@
     "Sentinel-48": {
       "skill": "Sentinel-48",
       "name": "Walls of Solarum",
+      "icon": "shield-block",
       "x": 955,
       "y": 3200,
       "maxPoints": 5,
@@ -1270,6 +1317,7 @@
     "Sentinel-49": {
       "skill": "Sentinel-49",
       "name": "Fearless",
+      "icon": "c-armor buff_2",
       "x": -1777.8,
       "y": 307.6001,
       "maxPoints": 8,
@@ -1295,6 +1343,7 @@
     "Sentinel-50": {
       "skill": "Sentinel-50",
       "name": "Counter Attack",
+      "icon": "Warpath",
       "x": -1115.8,
       "y": -615.19995,
       "maxPoints": 5,
@@ -1322,6 +1371,7 @@
     "Sentinel-51": {
       "skill": "Sentinel-51",
       "name": "Void Waves",
+      "icon": "void-shield-throw",
       "x": -997,
       "y": 1292.4,
       "maxPoints": 8,
@@ -1342,6 +1392,7 @@
     "Sentinel-52": {
       "skill": "Sentinel-52",
       "name": "Shield Breaker",
+      "icon": "mace-hit",
       "x": -997,
       "y": 3200,
       "maxPoints": 6,
@@ -1366,6 +1417,7 @@
     "Sentinel-53": {
       "skill": "Sentinel-53",
       "name": "Fresh from the Forge",
+      "icon": "smelter-swrath",
       "x": -1387.4,
       "y": 2892.4,
       "maxPoints": 10,
@@ -1396,6 +1448,7 @@
     "Sentinel-54": {
       "skill": "Sentinel-54",
       "name": "Void Well",
+      "icon": "c-corrupted-standard",
       "x": 1345.3999,
       "y": 2215.2002,
       "maxPoints": 1,
@@ -1418,6 +1471,7 @@
     "Sentinel-55": {
       "skill": "Sentinel-55",
       "name": "Banish",
+      "icon": "c-dagger dance - red",
       "x": 208.19995,
       "y": -615.19995,
       "maxPoints": 4,
@@ -1444,6 +1498,7 @@
     "Sentinel-56": {
       "skill": "Sentinel-56",
       "name": "Void Corruption",
+      "icon": "Void Explosion",
       "x": -997,
       "y": 984.80005,
       "maxPoints": 8,
@@ -1471,6 +1526,7 @@
     "Sentinel-57": {
       "skill": "Sentinel-57",
       "name": "Rot Ripples",
+      "icon": "c-time rot",
       "x": -216.20007,
       "y": 984.80005,
       "maxPoints": 6,
@@ -1496,6 +1552,7 @@
     "Sentinel-58": {
       "skill": "Sentinel-58",
       "name": "Temporal Corruption",
+      "icon": "Void Bolt",
       "x": -1777.8,
       "y": 1600,
       "maxPoints": 6,
@@ -1521,6 +1578,7 @@
     "Sentinel-59": {
       "skill": "Sentinel-59",
       "name": "Temporal Velocity",
+      "icon": "throwing_axe",
       "x": 174.19995,
       "y": 2215.2002,
       "maxPoints": 8,
@@ -1543,6 +1601,7 @@
     "Sentinel-60": {
       "skill": "Sentinel-60",
       "name": "Rot Grip",
+      "icon": "c-void damage buff",
       "x": 174.19995,
       "y": 1292.4,
       "maxPoints": 5,
@@ -1570,6 +1629,7 @@
     "Sentinel-61": {
       "skill": "Sentinel-61",
       "name": "Singular Purpose",
+      "icon": "void-shieldwall",
       "x": 564.59985,
       "y": 1600,
       "maxPoints": 5,
@@ -1597,6 +1657,7 @@
     "Sentinel-62": {
       "skill": "Sentinel-62",
       "name": "Doom Knight",
+      "icon": "void-lunge",
       "x": -606.6001,
       "y": 1292.4,
       "maxPoints": 8,
@@ -1619,6 +1680,7 @@
     "Sentinel-63": {
       "skill": "Sentinel-63",
       "name": "Woe",
+      "icon": "evil-symbol-2",
       "x": 174.19995,
       "y": 1907.6001,
       "maxPoints": 8,
@@ -1644,6 +1706,7 @@
     "Sentinel-64": {
       "skill": "Sentinel-64",
       "name": "Abyssal Fluctuation",
+      "icon": "anomaly",
       "x": 1735.7998,
       "y": 2215.2002,
       "maxPoints": 5,
@@ -1664,6 +1727,7 @@
     "Sentinel-65": {
       "skill": "Sentinel-65",
       "name": "Weapons Master",
+      "icon": "fire-gauntlet",
       "x": -1777.8,
       "y": 3200,
       "maxPoints": 10,
@@ -1691,6 +1755,7 @@
     "Sentinel-66": {
       "skill": "Sentinel-66",
       "name": "Iron Attunement",
+      "icon": "c-flurry3 - blue",
       "x": -216.20007,
       "y": 3815.2002,
       "maxPoints": 8,
@@ -1717,6 +1782,7 @@
     "Sentinel-67": {
       "skill": "Sentinel-67",
       "name": "Liquid Iron",
+      "icon": "c-Oil Trap",
       "x": 1345.3999,
       "y": 2892.4,
       "maxPoints": 5,
@@ -1741,6 +1807,7 @@
     "Sentinel-68": {
       "skill": "Sentinel-68",
       "name": "Master of Arms",
+      "icon": "weapon-arsenal",
       "x": 1735.7998,
       "y": 3507.6,
       "maxPoints": 8,
@@ -1767,6 +1834,7 @@
     "Sentinel-69": {
       "skill": "Sentinel-69",
       "name": "Valor",
+      "icon": "Stacking holy",
       "x": -1387.4,
       "y": 4800,
       "maxPoints": 10,
@@ -1791,6 +1859,7 @@
     "Sentinel-70": {
       "skill": "Sentinel-70",
       "name": "Dedication",
+      "icon": "c-Holy Aura Temp",
       "x": 174.19995,
       "y": 5415.2,
       "maxPoints": 10,
@@ -1816,6 +1885,7 @@
     "Sentinel-71": {
       "skill": "Sentinel-71",
       "name": "Defiance",
+      "icon": "battle_standard",
       "x": -1777.8,
       "y": 4800,
       "maxPoints": 8,
@@ -1841,6 +1911,7 @@
     "Sentinel-72": {
       "skill": "Sentinel-72",
       "name": "Honor",
+      "icon": "shield-block",
       "x": -1777.8,
       "y": 5107.6,
       "maxPoints": 5,
@@ -1869,6 +1940,7 @@
     "Sentinel-73": {
       "skill": "Sentinel-73",
       "name": "Rahyeh's Strength",
+      "icon": "smelter-swrath",
       "x": -606.6001,
       "y": 4184.8,
       "maxPoints": 8,
@@ -1895,6 +1967,7 @@
     "Sentinel-74": {
       "skill": "Sentinel-74",
       "name": "Divine Bolt",
+      "icon": "c-sky bolt",
       "x": -1387.4,
       "y": 4492.4,
       "maxPoints": 4,
@@ -1921,6 +1994,7 @@
     "Sentinel-75": {
       "skill": "Sentinel-75",
       "name": "Force of Devotion",
+      "icon": "holy-mace",
       "x": -216.20007,
       "y": 4184.8,
       "maxPoints": 6,
@@ -1942,6 +2016,7 @@
     "Sentinel-76": {
       "skill": "Sentinel-76",
       "name": "Holy Symbol",
+      "icon": "holy-symbol-2",
       "x": -1387.4,
       "y": 5415.2,
       "maxPoints": 6,
@@ -1972,6 +2047,7 @@
     "Sentinel-77": {
       "skill": "Sentinel-77",
       "name": "Conviction",
+      "icon": "holy-bolt",
       "x": -1777.8,
       "y": 4492.4,
       "maxPoints": 8,
@@ -1999,6 +2075,7 @@
     "Sentinel-78": {
       "skill": "Sentinel-78",
       "name": "Holy Nova",
+      "icon": "holy-symbol-3",
       "x": -606.6001,
       "y": 5415.2,
       "maxPoints": 1,
@@ -2021,6 +2098,7 @@
     "Sentinel-79": {
       "skill": "Sentinel-79",
       "name": "Time Legion",
+      "icon": "void-symbol-4",
       "x": 1345.3999,
       "y": 984.80005,
       "maxPoints": 10,
@@ -2049,6 +2127,7 @@
     "Sentinel-80": {
       "skill": "Sentinel-80",
       "name": "Shared Divinity",
+      "icon": "c-static-holy",
       "x": -606.6001,
       "y": 4492.4,
       "maxPoints": 6,
@@ -2073,6 +2152,7 @@
     "Sentinel-81": {
       "skill": "Sentinel-81",
       "name": "Penance",
+      "icon": "c-Laceration",
       "x": 564.59985,
       "y": 5415.2,
       "maxPoints": 8,
@@ -2101,6 +2181,7 @@
     "Sentinel-82": {
       "skill": "Sentinel-82",
       "name": "Piety",
+      "icon": "fire-lightning-trail",
       "x": -216.20007,
       "y": 4800,
       "maxPoints": 6,
@@ -2123,6 +2204,7 @@
     "Sentinel-83": {
       "skill": "Sentinel-83",
       "name": "Holy Icon",
+      "icon": "c-holy aura",
       "x": -606.6001,
       "y": 5107.6,
       "maxPoints": 7,
@@ -2149,6 +2231,7 @@
     "Sentinel-84": {
       "skill": "Sentinel-84",
       "name": "Phoenix Strike",
+      "icon": "holy-fire-sword",
       "x": -1387.4,
       "y": 4184.8,
       "maxPoints": 10,
@@ -2175,6 +2258,7 @@
     "Sentinel-86": {
       "skill": "Sentinel-86",
       "name": "Holy Precision",
+      "icon": "c-Consecration 3",
       "x": 564.59985,
       "y": 5107.6,
       "maxPoints": 10,
@@ -2200,6 +2284,7 @@
     "Sentinel-87": {
       "skill": "Sentinel-87",
       "name": "Redemption",
+      "icon": "leechlife",
       "x": 1345.3999,
       "y": 5415.2,
       "maxPoints": 7,
@@ -2224,6 +2309,7 @@
     "Sentinel-88": {
       "skill": "Sentinel-88",
       "name": "Righteous Firebrand",
+      "icon": "c-Flame Reave",
       "x": 955,
       "y": 4184.8,
       "maxPoints": 5,
@@ -2246,6 +2332,7 @@
     "Sentinel-89": {
       "skill": "Sentinel-89",
       "name": "Shield Wall",
+      "icon": "Shieldwall",
       "x": 564.59985,
       "y": 4492.4,
       "maxPoints": 4,
@@ -2272,6 +2359,7 @@
     "Sentinel-90": {
       "skill": "Sentinel-90",
       "name": "Sanctuary Guardian",
+      "icon": "rebuke",
       "x": 174.19995,
       "y": 4184.8,
       "maxPoints": 8,
@@ -2296,6 +2384,7 @@
     "Sentinel-91": {
       "skill": "Sentinel-91",
       "name": "Prayer Aegis",
+      "icon": "c-Damage Mitigation Debuff (generic)",
       "x": 955,
       "y": 4800,
       "maxPoints": 8,
@@ -2325,6 +2414,7 @@
     "Sentinel-92": {
       "skill": "Sentinel-92",
       "name": "Sword of Rahyeh",
+      "icon": "Warpath fire",
       "x": 1735.7998,
       "y": 4184.8,
       "maxPoints": 7,
@@ -2346,6 +2436,7 @@
     "Sentinel-93": {
       "skill": "Sentinel-93",
       "name": "Covenant of Dominion",
+      "icon": "Spear stab",
       "x": 1735.7998,
       "y": 4492.4,
       "maxPoints": 7,
@@ -2370,6 +2461,7 @@
     "Sentinel-94": {
       "skill": "Sentinel-94",
       "name": "Blinding Light",
+      "icon": "Blinding",
       "x": -997,
       "y": 4800,
       "maxPoints": 7,
@@ -2393,6 +2485,7 @@
     "Sentinel-95": {
       "skill": "Sentinel-95",
       "name": "Covenant of Protection",
+      "icon": "Divine bolt",
       "x": 1735.7998,
       "y": 5107.6,
       "maxPoints": 7,
@@ -2415,6 +2508,7 @@
     "Sentinel-96": {
       "skill": "Sentinel-96",
       "name": "Divine Essence",
+      "icon": "holy-symbol-1",
       "x": 1345.3999,
       "y": 5107.6,
       "maxPoints": 5,
@@ -2441,6 +2535,7 @@
     "Sentinel-97": {
       "skill": "Sentinel-97",
       "name": "Alignment",
+      "icon": "c-Health Regeneration Debuff (generic)",
       "x": -216.20007,
       "y": 5415.2,
       "maxPoints": 8,
@@ -2462,6 +2557,7 @@
     "Sentinel-98": {
       "skill": "Sentinel-98",
       "name": "Reverence of Duality",
+      "icon": "sword-in-ground",
       "x": 1345.3999,
       "y": 4492.4,
       "maxPoints": 12,
@@ -2484,6 +2580,7 @@
     "Sentinel-100": {
       "skill": "Sentinel-100",
       "name": "Folded Steel",
+      "icon": "c-Manifest-Armour",
       "x": 174.19995,
       "y": 3200,
       "maxPoints": 10,
@@ -2513,6 +2610,7 @@
     "Sentinel-102": {
       "skill": "Sentinel-102",
       "name": "Avatar of Regret",
+      "icon": "Warpath void",
       "x": 1735.7998,
       "y": 1292.4,
       "maxPoints": 1,
@@ -2543,6 +2641,7 @@
     "Sentinel-104": {
       "skill": "Sentinel-104",
       "name": "Faith Armour",
+      "icon": "c-armor debuff_3",
       "x": 174.19995,
       "y": 4800,
       "maxPoints": 8,
@@ -2567,6 +2666,7 @@
     "Sentinel-106": {
       "skill": "Sentinel-106",
       "name": "Time and Faith",
+      "icon": "c-double-strike",
       "x": 208.19995,
       "y": 6.1035156E-05,
       "maxPoints": 5,
@@ -2590,6 +2690,7 @@
     "Sentinel-107": {
       "skill": "Sentinel-107",
       "name": "Mail Crusher",
+      "icon": "hammer-throw",
       "x": 1532.2,
       "y": 615.2001,
       "maxPoints": 10,
@@ -2613,6 +2714,7 @@
     "Sentinel-108": {
       "skill": "Sentinel-108",
       "name": "Blademaster",
+      "icon": "sword-in-ground",
       "x": 1532.2,
       "y": -615.19995,
       "maxPoints": 5,
@@ -2639,6 +2741,7 @@
     "Sentinel-110": {
       "skill": "Sentinel-110",
       "name": "Siege Captain",
+      "icon": "shield-throw",
       "x": -606.6001,
       "y": 3507.6,
       "maxPoints": 8,
@@ -2662,6 +2765,7 @@
     "Sentinel-111": {
       "skill": "Sentinel-111",
       "name": "Champion of the Forge",
+      "icon": "sword-in-ground",
       "x": -606.6001,
       "y": 2892.4,
       "maxPoints": 8,
@@ -2686,6 +2790,7 @@
     "Sentinel-112": {
       "skill": "Sentinel-112",
       "name": "Avatar of War",
+      "icon": "fire-helmet",
       "x": 1735.7998,
       "y": 2892.4,
       "maxPoints": 8,
@@ -2714,6 +2819,7 @@
     "Sentinel-114": {
       "skill": "Sentinel-114",
       "name": "Heaven's Bulwark",
+      "icon": "holy-shield",
       "x": -997,
       "y": 5107.6,
       "maxPoints": 10,
@@ -2738,6 +2844,7 @@
     "Sentinel-116": {
       "skill": "Sentinel-116",
       "name": "Mortal Cleave",
+      "icon": "void-gauntlet",
       "x": 1735.7998,
       "y": 1907.6001,
       "maxPoints": 5,
@@ -2760,6 +2867,7 @@
     "Sentinel-118": {
       "skill": "Sentinel-118",
       "name": "Judgement of the Storm",
+      "icon": "c-detonating-arrow-yellow",
       "x": 955,
       "y": 5107.6,
       "maxPoints": 8,
@@ -2783,6 +2891,7 @@
     "Sentinel-119": {
       "skill": "Sentinel-119",
       "name": "Covenant of Light",
+      "icon": "c-Healing Hands",
       "x": 1345.3999,
       "y": 4800,
       "maxPoints": 5,
@@ -2808,6 +2917,7 @@
     "Sentinel-120": {
       "skill": "Sentinel-120",
       "name": "Forgemaster's Might",
+      "icon": "fire-gauntlet",
       "x": 1735.7998,
       "y": 2584.8,
       "maxPoints": 1,
@@ -2868,6 +2978,7 @@
     "ab0lh-2": {
       "skill": "ab0lh-2",
       "name": "Vorpal Reverberation",
+      "icon": "c-void damage buff",
       "x": 5765.4,
       "y": -160,
       "maxPoints": 5,
@@ -2894,6 +3005,7 @@
     "ab0lh-3": {
       "skill": "ab0lh-3",
       "name": "Rippling Corrosion",
+      "icon": "Armor Shred",
       "x": 4843,
       "y": -360,
       "maxPoints": 5,
@@ -2919,6 +3031,7 @@
     "ab0lh-4": {
       "skill": "ab0lh-4",
       "name": "Tides of Rust",
+      "icon": "c-armor debuff",
       "x": 4561,
       "y": 262.8,
       "maxPoints": 5,
@@ -2944,6 +3057,7 @@
     "ab0lh-5": {
       "skill": "ab0lh-5",
       "name": "Time Compression",
+      "icon": "volatile-reversal",
       "x": 3871.8,
       "y": 134.8,
       "maxPoints": 1,
@@ -2969,6 +3083,7 @@
     "ab0lh-6": {
       "skill": "ab0lh-6",
       "name": "Abyssal Dispersion",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 3790.6,
       "y": -545.2,
       "maxPoints": 3,
@@ -2991,6 +3106,7 @@
     "ab0lh-7": {
       "skill": "ab0lh-7",
       "name": "Nether Breach",
+      "icon": "devouring-orb",
       "x": 4281.4,
       "y": -252,
       "maxPoints": 4,
@@ -3013,6 +3129,7 @@
     "ab0lh-8": {
       "skill": "ab0lh-8",
       "name": "Dark Torrent",
+      "icon": "c-corrupted-standard",
       "x": 4340.2,
       "y": -808,
       "maxPoints": 1,
@@ -3035,6 +3152,7 @@
     "ab0lh-9": {
       "skill": "ab0lh-9",
       "name": "Turbulence",
+      "icon": "anomaly",
       "x": 5144.6,
       "y": 134.8,
       "maxPoints": 4,
@@ -3059,6 +3177,7 @@
     "ab0lh-10": {
       "skill": "ab0lh-10",
       "name": "Myopia",
+      "icon": "c-red-eye",
       "x": 4993.8,
       "y": 661.2,
       "maxPoints": 1,
@@ -3083,6 +3202,7 @@
     "ab0lh-11": {
       "skill": "ab0lh-11",
       "name": "Fragility",
+      "icon": "c-Stun Susceptibility Debuff (generic)",
       "x": 4993.8,
       "y": 1233.6,
       "maxPoints": 1,
@@ -3109,6 +3229,7 @@
     "ab0lh-12": {
       "skill": "ab0lh-12",
       "name": "Crumbling",
+      "icon": "c-void essence",
       "x": 4511,
       "y": 810.8,
       "maxPoints": 3,
@@ -3131,6 +3252,7 @@
     "ab0lh-13": {
       "skill": "ab0lh-13",
       "name": "Impair the Weak",
+      "icon": "c-dagger dance - purple",
       "x": 4260.2,
       "y": 1233.6,
       "maxPoints": 1,
@@ -3154,6 +3276,7 @@
     "ab0lh-14": {
       "skill": "ab0lh-14",
       "name": "Embrace the Darkness",
+      "icon": "void-symbol-3",
       "x": 5476.2,
       "y": 810.8,
       "maxPoints": 4,
@@ -3182,6 +3305,7 @@
     "ab0lh-15": {
       "skill": "ab0lh-15",
       "name": "Abyssal Tendrils",
+      "icon": "c-time rot",
       "x": 5727,
       "y": 1233.6,
       "maxPoints": 3,
@@ -3204,6 +3328,7 @@
     "ab0lh-16": {
       "skill": "ab0lh-16",
       "name": "Sanguine Eruption",
+      "icon": "c-Laceration_sq",
       "x": 6107.8,
       "y": 588,
       "maxPoints": 1,
@@ -3231,6 +3356,7 @@
     "ab0lh-17": {
       "skill": "ab0lh-17",
       "name": "Crippling Waves",
+      "icon": "c-slow",
       "x": 6774.2,
       "y": 588,
       "maxPoints": 3,
@@ -3257,6 +3383,7 @@
     "ab0lh-18": {
       "skill": "ab0lh-18",
       "name": "Freedom of Movement",
+      "icon": "c-haste-blue",
       "x": 6427,
       "y": 1233.6,
       "maxPoints": 1,
@@ -3279,6 +3406,7 @@
     "ab0lh-19": {
       "skill": "ab0lh-19",
       "name": "Void Supremacy",
+      "icon": "c-erasing_strike",
       "x": 7459,
       "y": 1033.6,
       "maxPoints": 4,
@@ -3302,6 +3430,7 @@
     "ab0lh-20": {
       "skill": "ab0lh-20",
       "name": "Deep Expanse",
+      "icon": "Warpath void",
       "x": 7088.6,
       "y": -160,
       "maxPoints": 5,
@@ -3328,6 +3457,7 @@
     "ab0lh-21": {
       "skill": "ab0lh-21",
       "name": "Fiery Chasm",
+      "icon": "c-ignite",
       "x": 7586.6,
       "y": 369.2,
       "maxPoints": 4,
@@ -3352,6 +3482,7 @@
     "ab0lh-22": {
       "skill": "ab0lh-22",
       "name": "Potent Corruption",
+      "icon": "void-symbol",
       "x": 8395,
       "y": 434,
       "maxPoints": 1,
@@ -3377,6 +3508,7 @@
     "ab0lh-23": {
       "skill": "ab0lh-23",
       "name": "Void Purifier",
+      "icon": "c-fire damage buff",
       "x": 8195,
       "y": 1168,
       "maxPoints": 1,
@@ -3403,6 +3535,7 @@
     "ab0lh-24": {
       "skill": "ab0lh-24",
       "name": "Heavenly Gift",
+      "icon": "c-Health Regeneration Debuff (generic)",
       "x": 8939,
       "y": 1091.6,
       "maxPoints": 1,
@@ -3426,6 +3559,7 @@
     "ab0lh-25": {
       "skill": "ab0lh-25",
       "name": "Vorpal Explosion",
+      "icon": "c-damage buff",
       "x": 7993.4,
       "y": -213.2,
       "maxPoints": 1,
@@ -3452,6 +3586,7 @@
     "ab0lh-26": {
       "skill": "ab0lh-26",
       "name": "Spreading Chaos",
+      "icon": "Void Explosion",
       "x": 8713,
       "y": -652,
       "maxPoints": 1,
@@ -3477,6 +3612,7 @@
     "ab0lh-27": {
       "skill": "ab0lh-27",
       "name": "Overwhelming Doom",
+      "icon": "Spirit_Plague",
       "x": 9100.6,
       "y": 96,
       "maxPoints": 1,
@@ -3500,6 +3636,7 @@
     "ab0lh-28": {
       "skill": "ab0lh-28",
       "name": "Shrieking Echoes",
+      "icon": "c-Spellpower 1 Buff (generic)",
       "x": 8164.6,
       "y": -960,
       "maxPoints": 2,
@@ -3522,6 +3659,7 @@
     "ab0lh-29": {
       "skill": "ab0lh-29",
       "name": "Screaming Rifts",
+      "icon": "c-Stagger",
       "x": 7586.6,
       "y": -674,
       "maxPoints": 1,
@@ -3547,6 +3685,7 @@
     "ab0lh-31": {
       "skill": "ab0lh-31",
       "name": "Corrupting Harness",
+      "icon": "Rive 3 void",
       "x": 6427,
       "y": -700,
       "maxPoints": 5,
@@ -3571,6 +3710,7 @@
     "ab0lh-32": {
       "skill": "ab0lh-32",
       "name": "Resounding Abyss",
+      "icon": "Rive 2 void",
       "x": 5625.4,
       "y": -808,
       "maxPoints": 5,
@@ -3615,6 +3755,7 @@
     "ah443-2": {
       "skill": "ah443-2",
       "name": "Flame Burst",
+      "icon": "Glyph of Fire alt",
       "x": 8151,
       "y": -752,
       "maxPoints": 1,
@@ -3643,6 +3784,7 @@
     "ah443-3": {
       "skill": "ah443-3",
       "name": "Improved Flame Burst",
+      "icon": "Glyph of Fire",
       "x": 8915,
       "y": -880,
       "maxPoints": 4,
@@ -3668,6 +3810,7 @@
     "ah443-4": {
       "skill": "ah443-4",
       "name": "Fanaticism",
+      "icon": "sword-to-sky",
       "x": 7515,
       "y": 3.05176E-05,
       "maxPoints": 3,
@@ -3697,6 +3840,7 @@
     "ah443-5": {
       "skill": "ah443-5",
       "name": "True Strike",
+      "icon": "Spear stab",
       "x": 8499,
       "y": 4,
       "maxPoints": 4,
@@ -3725,6 +3869,7 @@
     "ah443-6": {
       "skill": "ah443-6",
       "name": "Extreme Zeal",
+      "icon": "c-crossed-swords",
       "x": 8143,
       "y": 380,
       "maxPoints": 3,
@@ -3747,6 +3892,7 @@
     "ah443-7": {
       "skill": "ah443-7",
       "name": "Firestorm",
+      "icon": "c-fire damage buff",
       "x": 7515,
       "y": -636,
       "maxPoints": 5,
@@ -3772,6 +3918,7 @@
     "ah443-8": {
       "skill": "ah443-8",
       "name": "Rahyeh's Devotion",
+      "icon": "c-ignite",
       "x": 6991,
       "y": -524,
       "maxPoints": 3,
@@ -3799,6 +3946,7 @@
     "ah443-9": {
       "skill": "ah443-9",
       "name": "Rahyeh's Fury",
+      "icon": "Nova",
       "x": 6427,
       "y": -776,
       "maxPoints": 2,
@@ -3822,6 +3970,7 @@
     "ah443-10": {
       "skill": "ah443-10",
       "name": "Call To Arms",
+      "icon": "c-physical damage buff",
       "x": 6991,
       "y": 500,
       "maxPoints": 5,
@@ -3848,6 +3997,7 @@
     "ah443-11": {
       "skill": "ah443-11",
       "name": "Strength From Afar",
+      "icon": "throwing_hammer",
       "x": 7515,
       "y": 812,
       "maxPoints": 4,
@@ -3875,6 +4025,7 @@
     "ah443-12": {
       "skill": "ah443-12",
       "name": "Shelter from the Storm",
+      "icon": "Elemental-Nova-Temp",
       "x": 5863,
       "y": 500,
       "maxPoints": 5,
@@ -3901,6 +4052,7 @@
     "ah443-13": {
       "skill": "ah443-13",
       "name": "Swiftness",
+      "icon": "c-Swiftness",
       "x": 6427,
       "y": 700.00006,
       "maxPoints": 3,
@@ -3923,6 +4075,7 @@
     "ah443-14": {
       "skill": "ah443-14",
       "name": "Redemption",
+      "icon": "battle_standard",
       "x": 5163,
       "y": -680,
       "maxPoints": 4,
@@ -3947,6 +4100,7 @@
     "ah443-15": {
       "skill": "ah443-15",
       "name": "Concentration",
+      "icon": "CooldownSpeedUp",
       "x": 8915,
       "y": 812,
       "maxPoints": 1,
@@ -3976,6 +4130,7 @@
     "ah443-16": {
       "skill": "ah443-16",
       "name": "Purification",
+      "icon": "c-poison",
       "x": 5907,
       "y": -788,
       "maxPoints": 1,
@@ -3999,6 +4154,7 @@
     "ah443-17": {
       "skill": "ah443-17",
       "name": "Demoralizing Aura",
+      "icon": "c-slow",
       "x": 6427,
       "y": 1212,
       "maxPoints": 2,
@@ -4025,6 +4181,7 @@
     "ah443-18": {
       "skill": "ah443-18",
       "name": "Expedite",
+      "icon": "hammer-throw-multiple",
       "x": 8151,
       "y": 812,
       "maxPoints": 3,
@@ -4053,6 +4210,7 @@
     "ah443-19": {
       "skill": "ah443-19",
       "name": "Vital Boon",
+      "icon": "holy-symbol-1",
       "x": 5799,
       "y": -332,
       "maxPoints": 4,
@@ -4079,6 +4237,7 @@
     "ah443-20": {
       "skill": "ah443-20",
       "name": "Faith",
+      "icon": "evil-symbol-1",
       "x": 5339,
       "y": -0,
       "maxPoints": 5,
@@ -4105,6 +4264,7 @@
     "ah443-21": {
       "skill": "ah443-21",
       "name": "Shielded By Faith",
+      "icon": "c-Ward Generation Buff (generic)",
       "x": 4703,
       "y": -3.0517578E-05,
       "maxPoints": 4,
@@ -4133,6 +4293,7 @@
     "ah443-22": {
       "skill": "ah443-22",
       "name": "Faith's Reward",
+      "icon": "rebuke",
       "x": 4015,
       "y": -240,
       "maxPoints": 1,
@@ -4156,6 +4317,7 @@
     "ah443-23": {
       "skill": "ah443-23",
       "name": "Mighty Shield",
+      "icon": "c-Stun Susceptibility Debuff (generic)",
       "x": 5107.8,
       "y": 652,
       "maxPoints": 4,
@@ -4183,6 +4345,7 @@
     "ah443-24": {
       "skill": "ah443-24",
       "name": "Against The Odds",
+      "icon": "c-Stun Susceptibility Buff (generic)",
       "x": 4165.4,
       "y": 652,
       "maxPoints": 3,
@@ -4210,6 +4373,7 @@
     "ah443-26": {
       "skill": "ah443-26",
       "name": "Hope",
+      "icon": "c-Consecration 3",
       "x": 4503,
       "y": -700.0001,
       "maxPoints": 1,
@@ -4235,6 +4399,7 @@
     "ah443-28": {
       "skill": "ah443-28",
       "name": "Inner Flame",
+      "icon": "firebolt",
       "x": 8799,
       "y": -388,
       "maxPoints": 2,
@@ -4282,6 +4447,7 @@
     "an0my-1": {
       "skill": "an0my-1",
       "name": "Emission",
+      "icon": "Void Explosion",
       "x": 5682.2,
       "y": -0,
       "maxPoints": 5,
@@ -4309,6 +4475,7 @@
     "an0my-2": {
       "skill": "an0my-2",
       "name": "Red Shift",
+      "icon": "duration",
       "x": 6427,
       "y": -748,
       "maxPoints": 5,
@@ -4331,6 +4498,7 @@
     "an0my-3": {
       "skill": "an0my-3",
       "name": "Borrowed Time",
+      "icon": "Tornado Temp",
       "x": 5232.6797,
       "y": -661.92,
       "maxPoints": 1,
@@ -4354,6 +4522,7 @@
     "an0my-4": {
       "skill": "an0my-4",
       "name": "Time Wave",
+      "icon": "Void_Cleave2",
       "x": 4877.08,
       "y": -145.19995,
       "maxPoints": 1,
@@ -4378,6 +4547,7 @@
     "an0my-5": {
       "skill": "an0my-5",
       "name": "Temporal Expanse",
+      "icon": "Abyssal_Echoes",
       "x": 4448.1997,
       "y": -413.99997,
       "maxPoints": 5,
@@ -4403,6 +4573,7 @@
     "an0my-6": {
       "skill": "an0my-6",
       "name": "Tides of Time",
+      "icon": "Rive 2 void",
       "x": 4104.6,
       "y": -785.2,
       "maxPoints": 1,
@@ -4425,6 +4596,7 @@
     "an0my-7": {
       "skill": "an0my-7",
       "name": "Anticipation",
+      "icon": "c-light swirl",
       "x": 5315,
       "y": 412,
       "maxPoints": 3,
@@ -4452,6 +4624,7 @@
     "an0my-8": {
       "skill": "an0my-8",
       "name": "Reflection",
+      "icon": "Future strike",
       "x": 4604.84,
       "y": 336,
       "maxPoints": 1,
@@ -4476,6 +4649,7 @@
     "an0my-9": {
       "skill": "an0my-9",
       "name": "Resonate",
+      "icon": "c-time rot",
       "x": 4075,
       "y": 584,
       "maxPoints": 5,
@@ -4498,6 +4672,7 @@
     "an0my-10": {
       "skill": "an0my-10",
       "name": "Quicksand",
+      "icon": "Warpath void",
       "x": 5682.2,
       "y": 1222,
       "maxPoints": 5,
@@ -4529,6 +4704,7 @@
     "an0my-11": {
       "skill": "an0my-11",
       "name": "Cycle of Decay",
+      "icon": "Void Bolt",
       "x": 4832.6797,
       "y": 1132.8004,
       "maxPoints": 1,
@@ -4551,6 +4727,7 @@
     "an0my-12": {
       "skill": "an0my-12",
       "name": "Void Touched",
+      "icon": "c-void essence",
       "x": 7015,
       "y": 388,
       "maxPoints": 1,
@@ -4578,6 +4755,7 @@
     "an0my-13": {
       "skill": "an0my-13",
       "name": "Exacerbate",
+      "icon": "c-erasing_strike",
       "x": 6427,
       "y": 700,
       "maxPoints": 5,
@@ -4606,6 +4784,7 @@
     "an0my-14": {
       "skill": "an0my-14",
       "name": "Mark of Rot",
+      "icon": "void-symbol-2",
       "x": 6588.2,
       "y": 1200,
       "maxPoints": 5,
@@ -4630,6 +4809,7 @@
     "an0my-15": {
       "skill": "an0my-15",
       "name": "Voidfire",
+      "icon": "c-ignite",
       "x": 7185.4,
       "y": 984,
       "maxPoints": 1,
@@ -4654,6 +4834,7 @@
     "an0my-16": {
       "skill": "an0my-16",
       "name": "Hour of Flame",
+      "icon": "Hungering Soul Fire",
       "x": 7586.2,
       "y": 1244,
       "maxPoints": 3,
@@ -4676,6 +4857,7 @@
     "an0my-17": {
       "skill": "an0my-17",
       "name": "Time Bubble",
+      "icon": "rebuke",
       "x": 8003.8,
       "y": 820,
       "maxPoints": 1,
@@ -4704,6 +4886,7 @@
     "an0my-18": {
       "skill": "an0my-18",
       "name": "Decimation",
+      "icon": "c-blood-swords",
       "x": 8503.8,
       "y": 1132.8004,
       "maxPoints": 5,
@@ -4726,6 +4909,7 @@
     "an0my-19": {
       "skill": "an0my-19",
       "name": "Temporal Mastery",
+      "icon": "c-Spellpower  1 debuff (generic)",
       "x": 8503.8,
       "y": 536,
       "maxPoints": 5,
@@ -4751,6 +4935,7 @@
     "an0my-20": {
       "skill": "an0my-20",
       "name": "Time Lord",
+      "icon": "c-despair",
       "x": 9026.601,
       "y": 277.59995,
       "maxPoints": 1,
@@ -4774,6 +4959,7 @@
     "an0my-22": {
       "skill": "an0my-22",
       "name": "Manipulation",
+      "icon": "c-Attack Speed Debuff (generic)_3",
       "x": 8003.8,
       "y": 277.6,
       "maxPoints": 2,
@@ -4800,6 +4986,7 @@
     "an0my-23": {
       "skill": "an0my-23",
       "name": "Swiftrest",
+      "icon": "c-mana storm",
       "x": 8503.8,
       "y": 16.4,
       "maxPoints": 3,
@@ -4822,6 +5009,7 @@
     "an0my-24": {
       "skill": "an0my-24",
       "name": "Time Eater",
+      "icon": "c-ferocity_1",
       "x": 8146.6006,
       "y": -383.59985,
       "maxPoints": 4,
@@ -4848,6 +5036,7 @@
     "an0my-25": {
       "skill": "an0my-25",
       "name": "Void Maw",
+      "icon": "rip blood",
       "x": 8614.6,
       "y": -640,
       "maxPoints": 4,
@@ -4870,6 +5059,7 @@
     "an0my-26": {
       "skill": "an0my-26",
       "name": "Immediacy",
+      "icon": "void-symbol",
       "x": 7603,
       "y": -0,
       "maxPoints": 1,
@@ -4895,6 +5085,7 @@
     "an0my-27": {
       "skill": "an0my-27",
       "name": "Time Lock",
+      "icon": "Circle of bones",
       "x": 7015,
       "y": -448,
       "maxPoints": 1,
@@ -4925,6 +5116,7 @@
     "an0my-28": {
       "skill": "an0my-28",
       "name": "Temporal Prison",
+      "icon": "Freeze buff",
       "x": 7307,
       "y": -861.92,
       "maxPoints": 4,
@@ -4949,6 +5141,7 @@
     "an0my-29": {
       "skill": "an0my-29",
       "name": "Stasis",
+      "icon": "Stacking cold buff",
       "x": 7927,
       "y": -948,
       "maxPoints": 1,
@@ -4971,6 +5164,7 @@
     "an0my-30": {
       "skill": "an0my-30",
       "name": "Lingering Memory",
+      "icon": "Drain_Life",
       "x": 9026.601,
       "y": 820,
       "maxPoints": 1,
@@ -5014,6 +5208,7 @@
     "do5vr-2": {
       "skill": "do5vr-2",
       "name": "Dark Moon",
+      "icon": "BlackHole",
       "x": 6427,
       "y": 602,
       "maxPoints": 1,
@@ -5040,6 +5235,7 @@
     "do5vr-3": {
       "skill": "do5vr-3",
       "name": "Distant Satellite",
+      "icon": "Void_Cleave",
       "x": 5727,
       "y": 800,
       "maxPoints": 4,
@@ -5065,6 +5261,7 @@
     "do5vr-4": {
       "skill": "do5vr-4",
       "name": "Abyssal Rush",
+      "icon": "Birds of Prey",
       "x": 7127,
       "y": 800,
       "maxPoints": 1,
@@ -5091,6 +5288,7 @@
     "do5vr-5": {
       "skill": "do5vr-5",
       "name": "Cosmic Impact",
+      "icon": "Void Explosion",
       "x": 6427,
       "y": 1196,
       "maxPoints": 1,
@@ -5120,6 +5318,7 @@
     "do5vr-6": {
       "skill": "do5vr-6",
       "name": "Extinction",
+      "icon": "Warpath void",
       "x": 5573.8,
       "y": 1196,
       "maxPoints": 5,
@@ -5142,6 +5341,7 @@
     "do5vr-7": {
       "skill": "do5vr-7",
       "name": "Void Adept",
+      "icon": "void-armor",
       "x": 7219,
       "y": -364,
       "maxPoints": 5,
@@ -5171,6 +5371,7 @@
     "do5vr-8": {
       "skill": "do5vr-8",
       "name": "Hollow Orb",
+      "icon": "Void Bolt",
       "x": 7799,
       "y": -844,
       "maxPoints": 1,
@@ -5200,6 +5401,7 @@
     "do5vr-9": {
       "skill": "do5vr-9",
       "name": "Abyssal Emission",
+      "icon": "c-umbral-blades-recall",
       "x": 8506.6,
       "y": -700,
       "maxPoints": 1,
@@ -5228,6 +5430,7 @@
     "do5vr-10": {
       "skill": "do5vr-10",
       "name": "Chaotic Torrent",
+      "icon": "c-umbral-blades-3",
       "x": 9023,
       "y": -320.8,
       "maxPoints": 4,
@@ -5251,6 +5454,7 @@
     "do5vr-11": {
       "skill": "do5vr-11",
       "name": "Cataclysm",
+      "icon": "c-time rot",
       "x": 8255,
       "y": -76,
       "maxPoints": 1,
@@ -5280,6 +5484,7 @@
     "do5vr-12": {
       "skill": "do5vr-12",
       "name": "Fleeting Orb",
+      "icon": "arcane ascendance",
       "x": 8255,
       "y": 484,
       "maxPoints": 4,
@@ -5305,6 +5510,7 @@
     "do5vr-13": {
       "skill": "do5vr-13",
       "name": "Dust Channeller",
+      "icon": "ice bolt",
       "x": 8247,
       "y": 1248,
       "maxPoints": 4,
@@ -5328,6 +5534,7 @@
     "do5vr-14": {
       "skill": "do5vr-14",
       "name": "Orb Master",
+      "icon": "Static_Orb",
       "x": 8823,
       "y": 484,
       "maxPoints": 5,
@@ -5351,6 +5558,7 @@
     "do5vr-15": {
       "skill": "do5vr-15",
       "name": "Rift Caller",
+      "icon": "Abyssal_Echoes",
       "x": 5626.2,
       "y": -364,
       "maxPoints": 5,
@@ -5378,6 +5586,7 @@
     "do5vr-16": {
       "skill": "do5vr-16",
       "name": "Soul Eater",
+      "icon": "void-gauntlet",
       "x": 4712.6,
       "y": -192,
       "maxPoints": 2,
@@ -5406,6 +5615,7 @@
     "do5vr-17": {
       "skill": "do5vr-17",
       "name": "Soul Gorger",
+      "icon": "void-lunge",
       "x": 3998.2,
       "y": -392,
       "maxPoints": 2,
@@ -5428,6 +5638,7 @@
     "do5vr-18": {
       "skill": "do5vr-18",
       "name": "Abyssal Expanse",
+      "icon": "void-shield-throw",
       "x": 6039,
       "y": -804,
       "maxPoints": 4,
@@ -5450,6 +5661,7 @@
     "do5vr-19": {
       "skill": "do5vr-19",
       "name": "All Consuming",
+      "icon": "sword-in-ground",
       "x": 4791,
       "y": -762,
       "maxPoints": 1,
@@ -5477,6 +5689,7 @@
     "do5vr-20": {
       "skill": "do5vr-20",
       "name": "World Rot",
+      "icon": "Abyssal-Echoes",
       "x": 5195,
       "y": 336,
       "maxPoints": 4,
@@ -5506,6 +5719,7 @@
     "do5vr-21": {
       "skill": "do5vr-21",
       "name": "Rotting Prey",
+      "icon": "c-physical damage debuff",
       "x": 4263,
       "y": 460,
       "maxPoints": 4,
@@ -5528,6 +5742,7 @@
     "do5vr-22": {
       "skill": "do5vr-22",
       "name": "Eldritch Bloom",
+      "icon": "Rive 3 void",
       "x": 4931,
       "y": 996,
       "maxPoints": 3,
@@ -5554,6 +5769,7 @@
     "do5vr-23": {
       "skill": "do5vr-23",
       "name": "Eternal Decay",
+      "icon": "void-symbol",
       "x": 4123,
       "y": 1128,
       "maxPoints": 4,
@@ -5577,6 +5793,7 @@
     "do5vr-24": {
       "skill": "do5vr-24",
       "name": "Sightless Star",
+      "icon": "aura of decay blue",
       "x": 7551.4,
       "y": 1196,
       "maxPoints": 4,
@@ -5599,6 +5816,7 @@
     "do5vr-25": {
       "skill": "do5vr-25",
       "name": "Patient Hunger",
+      "icon": "c-mana storm",
       "x": 7675,
       "y": 220,
       "maxPoints": 2,
@@ -5622,6 +5840,7 @@
     "do5vr-26": {
       "skill": "do5vr-26",
       "name": "Abyssal Juggernaut",
+      "icon": "void-symbol-2",
       "x": 6835,
       "y": -804,
       "maxPoints": 4,
@@ -5644,6 +5863,7 @@
     "do5vr-28": {
       "skill": "do5vr-28",
       "name": "The Rending Maw",
+      "icon": "void-symbol-4",
       "x": 9023,
       "y": -1043.9999,
       "maxPoints": 4,
@@ -5689,6 +5909,7 @@
     "es6ai-2": {
       "skill": "es6ai-2",
       "name": "Dust To Wind",
+      "icon": "Void_Cleave",
       "x": 5827,
       "y": -392,
       "maxPoints": 3,
@@ -5716,6 +5937,7 @@
     "es6ai-3": {
       "skill": "es6ai-3",
       "name": "Rifts of Decay",
+      "icon": "c-time rot",
       "x": 4927,
       "y": -743.9999,
       "maxPoints": 4,
@@ -5744,6 +5966,7 @@
     "es6ai-4": {
       "skill": "es6ai-4",
       "name": "Regicide",
+      "icon": "c-Summon Skeleton Death Knight Purple",
       "x": 7704.6,
       "y": 739.2,
       "maxPoints": 4,
@@ -5769,6 +5992,7 @@
     "es6ai-5": {
       "skill": "es6ai-5",
       "name": "Dematerialize",
+      "icon": "Abyssal_Echoes",
       "x": 4151.8,
       "y": 240.00003,
       "maxPoints": 5,
@@ -5796,6 +6020,7 @@
     "es6ai-6": {
       "skill": "es6ai-6",
       "name": "Iriesha's Fall",
+      "icon": "void-symbol-4",
       "x": 3857.8,
       "y": 759.2,
       "maxPoints": 1,
@@ -5818,6 +6043,7 @@
     "es6ai-7": {
       "skill": "es6ai-7",
       "name": "Mark of the End",
+      "icon": "void shred",
       "x": 5085,
       "y": -57.599976,
       "maxPoints": 4,
@@ -5843,6 +6069,7 @@
     "es6ai-8": {
       "skill": "es6ai-8",
       "name": "Void Pyre",
+      "icon": "purple-beam",
       "x": 7227,
       "y": 1200,
       "maxPoints": 2,
@@ -5874,6 +6101,7 @@
     "es6ai-9": {
       "skill": "es6ai-9",
       "name": "Merciful",
+      "icon": "Rive void",
       "x": 5827,
       "y": 400,
       "maxPoints": 4,
@@ -5899,6 +6127,7 @@
     "es6ai-10": {
       "skill": "es6ai-10",
       "name": "Ruthless",
+      "icon": "c-despair",
       "x": 7027,
       "y": 400,
       "maxPoints": 4,
@@ -5923,6 +6152,7 @@
     "es6ai-11": {
       "skill": "es6ai-11",
       "name": "Erasure of the Living",
+      "icon": "void-symbol",
       "x": 6427,
       "y": 800,
       "maxPoints": 5,
@@ -5956,6 +6186,7 @@
     "es6ai-12": {
       "skill": "es6ai-12",
       "name": "Void Lens",
+      "icon": "purple-lightning",
       "x": 8071,
       "y": 1200,
       "maxPoints": 2,
@@ -5986,6 +6217,7 @@
     "es6ai-13": {
       "skill": "es6ai-13",
       "name": "Time Loop",
+      "icon": "BlackHole",
       "x": 5627,
       "y": 1200,
       "maxPoints": 3,
@@ -6013,6 +6245,7 @@
     "es6ai-14": {
       "skill": "es6ai-14",
       "name": "Shattered Continuity",
+      "icon": "volatile-reversal",
       "x": 5225.4,
       "y": 573.19995,
       "maxPoints": 1,
@@ -6036,6 +6269,7 @@
     "es6ai-15": {
       "skill": "es6ai-15",
       "name": "Chamber of Fate",
+      "icon": "c-slow",
       "x": 4571,
       "y": 1200,
       "maxPoints": 2,
@@ -6059,6 +6293,7 @@
     "es6ai-16": {
       "skill": "es6ai-16",
       "name": "Obliteration",
+      "icon": "c-Spellpower  1 debuff (generic)",
       "x": 7027,
       "y": -392,
       "maxPoints": 5,
@@ -6086,6 +6321,7 @@
     "es6ai-17": {
       "skill": "es6ai-17",
       "name": "Prophet's Onslaught",
+      "icon": "c-Attack Speed Buff (generic)_3",
       "x": 7961.8,
       "y": -700,
       "maxPoints": 3,
@@ -6114,6 +6350,7 @@
     "es6ai-18": {
       "skill": "es6ai-18",
       "name": "Essence of the End",
+      "icon": "evil-symbol-2",
       "x": 8651,
       "y": 4.5776E-05,
       "maxPoints": 3,
@@ -6136,6 +6373,7 @@
     "es6ai-19": {
       "skill": "es6ai-19",
       "name": "Certain Erasure",
+      "icon": "c-descent",
       "x": 9071.8,
       "y": -454.8,
       "maxPoints": 2,
@@ -6158,6 +6396,7 @@
     "es6ai-20": {
       "skill": "es6ai-20",
       "name": "Absorb the Remains",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 7572.2,
       "y": -57.599976,
       "maxPoints": 3,
@@ -6185,6 +6424,7 @@
     "es6ai-21": {
       "skill": "es6ai-21",
       "name": "Moments Stolen",
+      "icon": "c-haste",
       "x": 8071,
       "y": 258.8,
       "maxPoints": 3,
@@ -6215,6 +6455,7 @@
     "es6ai-22": {
       "skill": "es6ai-22",
       "name": "Ravenous Void",
+      "icon": "Void Bolt",
       "x": 8491,
       "y": 739.2,
       "maxPoints": 1,
@@ -6247,6 +6488,7 @@
     "es6ai-23": {
       "skill": "es6ai-23",
       "name": "Void Bringer",
+      "icon": "devouring-orb",
       "x": 8937,
       "y": 1200,
       "maxPoints": 2,
@@ -6270,6 +6512,7 @@
     "es6ai-24": {
       "skill": "es6ai-24",
       "name": "Implements of Destruction",
+      "icon": "Warpath void",
       "x": 6427,
       "y": -794.4,
       "maxPoints": 4,
@@ -6296,6 +6539,7 @@
     "es6ai-26": {
       "skill": "es6ai-26",
       "name": "Final Hour",
+      "icon": "Void Decay",
       "x": 4151.8,
       "y": -392,
       "maxPoints": 1,
@@ -6319,6 +6563,7 @@
     "es6ai-27": {
       "skill": "es6ai-27",
       "name": "Twin Cataclysms",
+      "icon": "void-symbol-2",
       "x": 4686.6,
       "y": 573.2,
       "maxPoints": 1,
@@ -6341,6 +6586,7 @@
     "es6ai-28": {
       "skill": "es6ai-28",
       "name": "Hastened Cataclysm",
+      "icon": "c-penta-swirl",
       "x": 8851,
       "y": -1023.2,
       "maxPoints": 3,
@@ -6386,6 +6632,7 @@
     "fs3e3-1": {
       "skill": "fs3e3-1",
       "name": "Ironbound",
+      "icon": "forge-hammer",
       "x": 5697.8,
       "y": -209.59998,
       "maxPoints": 3,
@@ -6411,6 +6658,7 @@
     "fs3e3-2": {
       "skill": "fs3e3-2",
       "name": "Lightforge",
+      "icon": "holy-mace",
       "x": 6835,
       "y": -700.0001,
       "maxPoints": 4,
@@ -6438,6 +6686,7 @@
     "fs3e3-3": {
       "skill": "fs3e3-3",
       "name": "Arcane Welding",
+      "icon": "c-Ward Generation Buff (generic)",
       "x": 7599.4004,
       "y": -900.0001,
       "maxPoints": 3,
@@ -6465,6 +6714,7 @@
     "fs3e3-4": {
       "skill": "fs3e3-4",
       "name": "Rewarding Craft",
+      "icon": "c-Ward Retention Buff (generic)",
       "x": 8336.6,
       "y": -900,
       "maxPoints": 1,
@@ -6490,6 +6740,7 @@
     "fs3e3-5": {
       "skill": "fs3e3-5",
       "name": "Singular Craft",
+      "icon": "Rive 2",
       "x": 5187,
       "y": -661.6,
       "maxPoints": 1,
@@ -6520,6 +6771,7 @@
     "fs3e3-6": {
       "skill": "fs3e3-6",
       "name": "Put to the Sword",
+      "icon": "sword-in-ground",
       "x": 4346.6,
       "y": -661.6,
       "maxPoints": 1,
@@ -6547,6 +6799,7 @@
     "fs3e3-7": {
       "skill": "fs3e3-7",
       "name": "Spear Forge",
+      "icon": "throwing_spear",
       "x": 4787,
       "y": -209.59998,
       "maxPoints": 1,
@@ -6571,6 +6824,7 @@
     "fs3e3-8": {
       "skill": "fs3e3-8",
       "name": "Heavy Strike",
+      "icon": "mace-hit",
       "x": 6427,
       "y": 580,
       "maxPoints": 5,
@@ -6603,6 +6857,7 @@
     "fs3e3-9": {
       "skill": "fs3e3-9",
       "name": "Rending Descent",
+      "icon": "Armor Shred",
       "x": 5697.8,
       "y": 1232.8,
       "maxPoints": 5,
@@ -6630,6 +6885,7 @@
     "fs3e3-10": {
       "skill": "fs3e3-10",
       "name": "Eagle Strike",
+      "icon": "c-Dive Bomb",
       "x": 4987,
       "y": 700,
       "maxPoints": 1,
@@ -6652,6 +6908,7 @@
     "fs3e3-11": {
       "skill": "fs3e3-11",
       "name": "Reinforce Weapon",
+      "icon": "c-rive-2",
       "x": 4739,
       "y": 1232.8,
       "maxPoints": 3,
@@ -6677,6 +6934,7 @@
     "fs3e3-12": {
       "skill": "fs3e3-12",
       "name": "Reinforce Armor",
+      "icon": "c-Manifest-Armour",
       "x": 4283,
       "y": 600,
       "maxPoints": 4,
@@ -6699,6 +6957,7 @@
     "fs3e3-14": {
       "skill": "fs3e3-14",
       "name": "Goliath Strike",
+      "icon": "c-melee damage buff",
       "x": 5697.8,
       "y": 400.00003,
       "maxPoints": 1,
@@ -6721,6 +6980,7 @@
     "fs3e3-15": {
       "skill": "fs3e3-15",
       "name": "Engines of War",
+      "icon": "c-cinder-strike-1",
       "x": 7327,
       "y": 755.6,
       "maxPoints": 5,
@@ -6746,6 +7006,7 @@
     "fs3e3-16": {
       "skill": "fs3e3-16",
       "name": "Anvil Blow",
+      "icon": "hammer-throw",
       "x": 7035,
       "y": 1232.8,
       "maxPoints": 1,
@@ -6775,6 +7036,7 @@
     "fs3e3-17": {
       "skill": "fs3e3-17",
       "name": "Temper",
+      "icon": "Phoenix Strike",
       "x": 7771,
       "y": 1232.8,
       "maxPoints": 5,
@@ -6800,6 +7062,7 @@
     "fs3e3-18": {
       "skill": "fs3e3-18",
       "name": "Detonating Ground",
+      "icon": "c-ball_of_fire",
       "x": 8511.8,
       "y": 1232.8,
       "maxPoints": 1,
@@ -6826,6 +7089,7 @@
     "fs3e3-19": {
       "skill": "fs3e3-19",
       "name": "Lava Burn",
+      "icon": "smelter-swrath",
       "x": 9159.8,
       "y": 928.4,
       "maxPoints": 4,
@@ -6848,6 +7112,7 @@
     "fs3e3-20": {
       "skill": "fs3e3-20",
       "name": "Ignited Grounds",
+      "icon": "Glyph of Fire",
       "x": 8699,
       "y": 522,
       "maxPoints": 3,
@@ -6871,6 +7136,7 @@
     "fs3e3-21": {
       "skill": "fs3e3-21",
       "name": "Forged by Fire",
+      "icon": "c-double-strike2",
       "x": 7399.4,
       "y": -0,
       "maxPoints": 4,
@@ -6900,6 +7166,7 @@
     "fs3e3-22": {
       "skill": "fs3e3-22",
       "name": "Well Forged Weapons",
+      "icon": "c-flurry2 - orange",
       "x": 7957.8,
       "y": 580,
       "maxPoints": 4,
@@ -6928,6 +7195,7 @@
     "fs3e3-23": {
       "skill": "fs3e3-23",
       "name": "Forgemaster",
+      "icon": "c-Axe Throw",
       "x": 8517.8,
       "y": -0,
       "maxPoints": 1,
@@ -6958,6 +7226,7 @@
     "fs3e3-24": {
       "skill": "fs3e3-24",
       "name": "Mass Production",
+      "icon": "Multistrike",
       "x": 7957.8,
       "y": -560,
       "maxPoints": 3,
@@ -6986,6 +7255,7 @@
     "fs3e3-25": {
       "skill": "fs3e3-25",
       "name": "Shrapnel",
+      "icon": "c-Flame Reave",
       "x": 7957.8,
       "y": -0,
       "maxPoints": 1,
@@ -7013,6 +7283,7 @@
     "fs3e3-26": {
       "skill": "fs3e3-26",
       "name": "Serrated Blade",
+      "icon": "c-bleed",
       "x": 3958.6,
       "y": -209.6,
       "maxPoints": 4,
@@ -7036,6 +7307,7 @@
     "fs3e3-28": {
       "skill": "fs3e3-28",
       "name": "Beneath Solarum",
+      "icon": "holy-symbol-2",
       "x": 6029.4,
       "y": -700,
       "maxPoints": 1,
@@ -7059,6 +7331,7 @@
     "fs3e3-29": {
       "skill": "fs3e3-29",
       "name": "Bellows",
+      "icon": "c-lethal_mirage",
       "x": 6427,
       "y": 1232.8,
       "maxPoints": 1,
@@ -7084,6 +7357,7 @@
     "fs3e3-30": {
       "skill": "fs3e3-30",
       "name": "Fan The Flames",
+      "icon": "holy-fire-sword",
       "x": 3953.8,
       "y": 1049.2,
       "maxPoints": 2,
@@ -7128,6 +7402,7 @@
     "gs15de-2": {
       "skill": "gs15de-2",
       "name": "Double Riposte",
+      "icon": "Sword slash double",
       "x": 6427,
       "y": -699.9999,
       "maxPoints": 1,
@@ -7154,6 +7429,7 @@
     "gs15de-3": {
       "skill": "gs15de-3",
       "name": "Dark Duellist",
+      "icon": "c-Axe Throw",
       "x": 7225,
       "y": -804,
       "maxPoints": 5,
@@ -7178,6 +7454,7 @@
     "gs15de-4": {
       "skill": "gs15de-4",
       "name": "Zealot's Technique",
+      "icon": "Rive 3",
       "x": 7960.6,
       "y": -1004,
       "maxPoints": 1,
@@ -7200,6 +7477,7 @@
     "gs15de-5": {
       "skill": "gs15de-5",
       "name": "Rapid Strikes",
+      "icon": "Multistrike",
       "x": 5627,
       "y": -804,
       "maxPoints": 5,
@@ -7226,6 +7504,7 @@
     "gs15de-6": {
       "skill": "gs15de-6",
       "name": "Vengeful Fighter",
+      "icon": "hammer-throw",
       "x": 7425,
       "y": -156,
       "maxPoints": 5,
@@ -7252,6 +7531,7 @@
     "gs15de-7": {
       "skill": "gs15de-7",
       "name": "Blade Assault",
+      "icon": "sword-in-ground",
       "x": 5827,
       "y": 720,
       "maxPoints": 1,
@@ -7281,6 +7561,7 @@
     "gs15de-8": {
       "skill": "gs15de-8",
       "name": "Flaming Sword",
+      "icon": "holy-fire-sword",
       "x": 4199,
       "y": 376.00003,
       "maxPoints": 1,
@@ -7311,6 +7592,7 @@
     "gs15de-9": {
       "skill": "gs15de-9",
       "name": "Vital Puncture",
+      "icon": "holy-mace",
       "x": 4403.4,
       "y": 1187.6,
       "maxPoints": 3,
@@ -7333,6 +7615,7 @@
     "gs15de-10": {
       "skill": "gs15de-10",
       "name": "Shattering Blade",
+      "icon": "Spear stab",
       "x": 5410.12,
       "y": 1176,
       "maxPoints": 2,
@@ -7355,6 +7638,7 @@
     "gs15de-11": {
       "skill": "gs15de-11",
       "name": "Winged Steel",
+      "icon": "throwing_hammer",
       "x": 4770.2,
       "y": 795.6,
       "maxPoints": 2,
@@ -7382,6 +7666,7 @@
     "gs15de-12": {
       "skill": "gs15de-12",
       "name": "Precision Strike",
+      "icon": "mace-hit",
       "x": 4328.2,
       "y": -746.8,
       "maxPoints": 3,
@@ -7404,6 +7689,7 @@
     "gs15de-13": {
       "skill": "gs15de-13",
       "name": "Gladiator's Arsenal",
+      "icon": "weapon-arsenal",
       "x": 6867,
       "y": 576,
       "maxPoints": 3,
@@ -7432,6 +7718,7 @@
     "gs15de-14": {
       "skill": "gs15de-14",
       "name": "Weaponsmith's Reprisal",
+      "icon": "forge-hammer-multiple",
       "x": 6330.12,
       "y": 1176,
       "maxPoints": 4,
@@ -7456,6 +7743,7 @@
     "gs15de-15": {
       "skill": "gs15de-15",
       "name": "Bladewall",
+      "icon": "forge-strike",
       "x": 7026.12,
       "y": 1176,
       "maxPoints": 1,
@@ -7478,6 +7766,7 @@
     "gs15de-16": {
       "skill": "gs15de-16",
       "name": "Executioner",
+      "icon": "Javelin",
       "x": 5707,
       "y": -0,
       "maxPoints": 5,
@@ -7505,6 +7794,7 @@
     "gs15de-17": {
       "skill": "gs15de-17",
       "name": "Disarming Strike",
+      "icon": "sword-to-sky",
       "x": 5007,
       "y": 220,
       "maxPoints": 3,
@@ -7533,6 +7823,7 @@
     "gs15de-18": {
       "skill": "gs15de-18",
       "name": "Blade of Darkness",
+      "icon": "void-gauntlet",
       "x": 7663,
       "y": 520,
       "maxPoints": 1,
@@ -7560,6 +7851,7 @@
     "gs15de-19": {
       "skill": "gs15de-19",
       "name": "Bolster",
+      "icon": "shield-block",
       "x": 5131.8,
       "y": -332.40002,
       "maxPoints": 2,
@@ -7587,6 +7879,7 @@
     "gs15de-20": {
       "skill": "gs15de-20",
       "name": "Essence of Revenge",
+      "icon": "void-symbol-4",
       "x": 8363,
       "y": 336,
       "maxPoints": 2,
@@ -7611,6 +7904,7 @@
     "gs15de-21": {
       "skill": "gs15de-21",
       "name": "Abyssal Retribution",
+      "icon": "Void_Cleave2",
       "x": 8987,
       "y": 4.5776E-05,
       "maxPoints": 3,
@@ -7634,6 +7928,7 @@
     "gs15de-22": {
       "skill": "gs15de-22",
       "name": "Smelter's Vengeance",
+      "icon": "Armor Shred",
       "x": 4199,
       "y": -311.99985,
       "maxPoints": 4,
@@ -7660,6 +7955,7 @@
     "gs15de-23": {
       "skill": "gs15de-23",
       "name": "Woundcarver",
+      "icon": "c-bleed",
       "x": 8215,
       "y": -432,
       "maxPoints": 4,
@@ -7684,6 +7980,7 @@
     "gs15de-24": {
       "skill": "gs15de-24",
       "name": "Eviscerating Blades",
+      "icon": "armor-sundering",
       "x": 3775,
       "y": -660,
       "maxPoints": 4,
@@ -7706,6 +8003,7 @@
     "gs15de-26": {
       "skill": "gs15de-26",
       "name": "Blade Paladin",
+      "icon": "c-Ravage",
       "x": 8883,
       "y": -900,
       "maxPoints": 1,
@@ -7728,6 +8026,7 @@
     "gs15de-28": {
       "skill": "gs15de-28",
       "name": "Molten Riposte",
+      "icon": "Warpath fire",
       "x": 3775,
       "y": 740,
       "maxPoints": 4,
@@ -7751,6 +8050,7 @@
     "gs15de-30": {
       "skill": "gs15de-30",
       "name": "Perfect Riposte",
+      "icon": "c-Manifest-Armour",
       "x": 4931.8,
       "y": -862.4,
       "maxPoints": 1,
@@ -7783,6 +8083,7 @@
     "gs15de-32": {
       "skill": "gs15de-32",
       "name": "Endless Dark",
+      "icon": "void-symbol",
       "x": 8160.6,
       "y": 1032,
       "maxPoints": 3,
@@ -7808,6 +8109,7 @@
     "gs15de-33": {
       "skill": "gs15de-33",
       "name": "Vengeful Echoes",
+      "icon": "Rive 2 void",
       "x": 8883,
       "y": 880,
       "maxPoints": 4,
@@ -7833,6 +8135,7 @@
     "gs15de-34": {
       "skill": "gs15de-34",
       "name": "Fiery Frenzy",
+      "icon": "Fireball explosion",
       "x": 3743.8,
       "y": 40,
       "maxPoints": 4,
@@ -7879,6 +8182,7 @@
     "hh7pa3-1": {
       "skill": "hh7pa3-1",
       "name": "Searing Light",
+      "icon": "holy-mace",
       "x": 7423,
       "y": -0,
       "maxPoints": 1,
@@ -7905,6 +8209,7 @@
     "hh7pa3-2": {
       "skill": "hh7pa3-2",
       "name": "Bane of Evil",
+      "icon": "chaos-bolt-minion-hit",
       "x": 8303,
       "y": -228,
       "maxPoints": 2,
@@ -7930,6 +8235,7 @@
     "hh7pa3-3": {
       "skill": "hh7pa3-3",
       "name": "Halted Scourge",
+      "icon": "void-eruption",
       "x": 8019,
       "y": -920,
       "maxPoints": 1,
@@ -7957,6 +8263,7 @@
     "hh7pa3-4": {
       "skill": "hh7pa3-4",
       "name": "Turn Undead",
+      "icon": "skeleton-archer",
       "x": 8611,
       "y": -936,
       "maxPoints": 1,
@@ -7984,6 +8291,7 @@
     "hh7pa3-5": {
       "skill": "hh7pa3-5",
       "name": "Cleric's Wrath",
+      "icon": "Spellbook Fire",
       "x": 8055,
       "y": 436,
       "maxPoints": 2,
@@ -8012,6 +8320,7 @@
     "hh7pa3-6": {
       "skill": "hh7pa3-6",
       "name": "Consecrated Storm",
+      "icon": "c-detonating-arrow-yellow",
       "x": 8571,
       "y": 444,
       "maxPoints": 4,
@@ -8036,6 +8345,7 @@
     "hh7pa3-7": {
       "skill": "hh7pa3-7",
       "name": "Holy Winds",
+      "icon": "c-static-holy",
       "x": 8979,
       "y": 24,
       "maxPoints": 4,
@@ -8059,6 +8369,7 @@
     "hh7pa3-8": {
       "skill": "hh7pa3-8",
       "name": "Seraph Blade",
+      "icon": "holy-fire-sword",
       "x": 8687,
       "y": 988,
       "maxPoints": 1,
@@ -8081,6 +8392,7 @@
     "hh7pa3-9": {
       "skill": "hh7pa3-9",
       "name": "Prayer of the Fallen",
+      "icon": "sword-in-ground",
       "x": 5816.2,
       "y": 612,
       "maxPoints": 4,
@@ -8110,6 +8422,7 @@
     "hh7pa3-10": {
       "skill": "hh7pa3-10",
       "name": "Blessed Parish",
+      "icon": "holy-symbol-3",
       "x": 6427,
       "y": 1096,
       "maxPoints": 3,
@@ -8138,6 +8451,7 @@
     "hh7pa3-11": {
       "skill": "hh7pa3-11",
       "name": "Purity of Thought",
+      "icon": "rebuke",
       "x": 7045.4,
       "y": 612,
       "maxPoints": 1,
@@ -8165,6 +8479,7 @@
     "hh7pa3-12": {
       "skill": "hh7pa3-12",
       "name": "Divine Catalyst",
+      "icon": "holy-bolt",
       "x": 7327,
       "y": 1220,
       "maxPoints": 5,
@@ -8187,6 +8502,7 @@
     "hh7pa3-13": {
       "skill": "hh7pa3-13",
       "name": "Divine Barrier",
+      "icon": "shield-block",
       "x": 5427,
       "y": -0,
       "maxPoints": 1,
@@ -8217,6 +8533,7 @@
     "hh7pa3-14": {
       "skill": "hh7pa3-14",
       "name": "Homeward",
+      "icon": "anomaly",
       "x": 4939,
       "y": -576,
       "maxPoints": 1,
@@ -8240,6 +8557,7 @@
     "hh7pa3-15": {
       "skill": "hh7pa3-15",
       "name": "Synthesis of Light",
+      "icon": "ring-of-shields",
       "x": 4519.4,
       "y": -154.8,
       "maxPoints": 3,
@@ -8268,6 +8586,7 @@
     "hh7pa3-16": {
       "skill": "hh7pa3-16",
       "name": "Unbroken Prayer",
+      "icon": "c-Holy Aura Temp",
       "x": 4159,
       "y": -676,
       "maxPoints": 1,
@@ -8297,6 +8616,7 @@
     "hh7pa3-17": {
       "skill": "hh7pa3-17",
       "name": "Guardian's Chant",
+      "icon": "spell-reflect",
       "x": 4159,
       "y": 252,
       "maxPoints": 3,
@@ -8324,6 +8644,7 @@
     "hh7pa3-18": {
       "skill": "hh7pa3-18",
       "name": "Urgent Healing",
+      "icon": "c-Consecration 3",
       "x": 5263.8,
       "y": 1069.2,
       "maxPoints": 4,
@@ -8348,6 +8669,7 @@
     "hh7pa3-19": {
       "skill": "hh7pa3-19",
       "name": "Vow of Restoration",
+      "icon": "holy-symbol-1",
       "x": 5139,
       "y": 443.99994,
       "maxPoints": 4,
@@ -8372,6 +8694,7 @@
     "hh7pa3-20": {
       "skill": "hh7pa3-20",
       "name": "Cleric's Hammer",
+      "icon": "throwing_hammer",
       "x": 5871,
       "y": -420,
       "maxPoints": 4,
@@ -8399,6 +8722,7 @@
     "hh7pa3-21": {
       "skill": "hh7pa3-21",
       "name": "Hand of Aurelus",
+      "icon": "holy-gauntlet",
       "x": 6981,
       "y": -420,
       "maxPoints": 4,
@@ -8423,6 +8747,7 @@
     "hh7pa3-22": {
       "skill": "hh7pa3-22",
       "name": "Rahyeh's Chariot",
+      "icon": "fire-shield-throw",
       "x": 6427,
       "y": -771.2,
       "maxPoints": 1,
@@ -8455,6 +8780,7 @@
     "hh7pa3-23": {
       "skill": "hh7pa3-23",
       "name": "Cloud Voyager",
+      "icon": "falconry",
       "x": 5569.8,
       "y": -844,
       "maxPoints": 1,
@@ -8477,6 +8803,7 @@
     "hh7pa3-24": {
       "skill": "hh7pa3-24",
       "name": "Sacred Gift",
+      "icon": "aura of decay_sand",
       "x": 4447.8,
       "y": 612,
       "maxPoints": 4,
@@ -8499,6 +8826,7 @@
     "hh7pa3-26": {
       "skill": "hh7pa3-26",
       "name": "Sun Shroud",
+      "icon": "fire-wall",
       "x": 7284.2,
       "y": -844,
       "maxPoints": 1,
@@ -8521,6 +8849,7 @@
     "hh7pa3-28": {
       "skill": "hh7pa3-28",
       "name": "Virtue of Patience",
+      "icon": "duration-yellow",
       "x": 7939,
       "y": 988,
       "maxPoints": 2,
@@ -8551,6 +8880,7 @@
     "hh7pa3-30": {
       "skill": "hh7pa3-30",
       "name": "Font of Salvation",
+      "icon": "c-Consecration 1",
       "x": 4700.6,
       "y": 1220,
       "maxPoints": 1,
@@ -8575,6 +8905,7 @@
     "hh7pa3-32": {
       "skill": "hh7pa3-32",
       "name": "Skyfall",
+      "icon": "fire-beam",
       "x": 3809.8,
       "y": -154.8,
       "maxPoints": 1,
@@ -8619,6 +8950,7 @@
     "ht16aw-2": {
       "skill": "ht16aw-2",
       "name": "Rapid Throw",
+      "icon": "Rive 2 silver",
       "x": 7020.6,
       "y": 448,
       "maxPoints": 5,
@@ -8646,6 +8978,7 @@
     "ht16aw-3": {
       "skill": "ht16aw-3",
       "name": "Weighted Hammers",
+      "icon": "throwing_hammer",
       "x": 7899,
       "y": 364,
       "maxPoints": 5,
@@ -8671,6 +9004,7 @@
     "ht16aw-4": {
       "skill": "ht16aw-4",
       "name": "Enra's Technique",
+      "icon": "weapon-arsenal",
       "x": 7760.04,
       "y": 916,
       "maxPoints": 1,
@@ -8698,6 +9032,7 @@
     "ht16aw-5": {
       "skill": "ht16aw-5",
       "name": "Mana Starved Forging",
+      "icon": "Focus",
       "x": 8459,
       "y": 752,
       "maxPoints": 1,
@@ -8720,6 +9055,7 @@
     "ht16aw-6": {
       "skill": "ht16aw-6",
       "name": "Shattering Force",
+      "icon": "Armor Shred",
       "x": 7159,
       "y": 1064,
       "maxPoints": 5,
@@ -8742,6 +9078,7 @@
     "ht16aw-7": {
       "skill": "ht16aw-7",
       "name": "Disintegrating Aura",
+      "icon": "Abyssal_Echoes",
       "x": 8527,
       "y": 32,
       "maxPoints": 1,
@@ -8771,6 +9108,7 @@
     "ht16aw-8": {
       "skill": "ht16aw-8",
       "name": "Rapid Disintegration",
+      "icon": "Rive void",
       "x": 8619,
       "y": -480,
       "maxPoints": 4,
@@ -8794,6 +9132,7 @@
     "ht16aw-9": {
       "skill": "ht16aw-9",
       "name": "Force of Impact",
+      "icon": "mace-hit",
       "x": 5833.4,
       "y": 448,
       "maxPoints": 5,
@@ -8822,6 +9161,7 @@
     "ht16aw-10": {
       "skill": "ht16aw-10",
       "name": "Collision",
+      "icon": "Javelin",
       "x": 4955,
       "y": 364,
       "maxPoints": 1,
@@ -8849,6 +9189,7 @@
     "ht16aw-11": {
       "skill": "ht16aw-11",
       "name": "Ricochet",
+      "icon": "chain lightning",
       "x": 4327,
       "y": 32,
       "maxPoints": 1,
@@ -8879,6 +9220,7 @@
     "ht16aw-12": {
       "skill": "ht16aw-12",
       "name": "Chaining Hammers",
+      "icon": "Volcanic-Orb-blue",
       "x": 4235,
       "y": -480,
       "maxPoints": 2,
@@ -8901,6 +9243,7 @@
     "ht16aw-13": {
       "skill": "ht16aw-13",
       "name": "Overwhelm",
+      "icon": "sword-in-ground",
       "x": 5695,
       "y": 1064,
       "maxPoints": 5,
@@ -8924,6 +9267,7 @@
     "ht16aw-14": {
       "skill": "ht16aw-14",
       "name": "Battle Rouse",
+      "icon": "c-Health Regeneration Debuff (generic)",
       "x": 5093.9717,
       "y": 916,
       "maxPoints": 5,
@@ -8950,6 +9294,7 @@
     "ht16aw-15": {
       "skill": "ht16aw-15",
       "name": "Hammer of Want",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 4395,
       "y": 752,
       "maxPoints": 1,
@@ -8975,6 +9320,7 @@
     "ht16aw-16": {
       "skill": "ht16aw-16",
       "name": "Winged Hammers",
+      "icon": "c-puncture",
       "x": 6427,
       "y": -458.8,
       "maxPoints": 3,
@@ -8999,6 +9345,7 @@
     "ht16aw-17": {
       "skill": "ht16aw-17",
       "name": "Steadfast Path",
+      "icon": "c-detonating-arrow",
       "x": 6427,
       "y": -886.28,
       "maxPoints": 1,
@@ -9025,6 +9372,7 @@
     "ht16aw-18": {
       "skill": "ht16aw-18",
       "name": "Catapult",
+      "icon": "hammer-throw-multiple",
       "x": 7107,
       "y": -664,
       "maxPoints": 2,
@@ -9051,6 +9399,7 @@
     "ht16aw-19": {
       "skill": "ht16aw-19",
       "name": "Avatar of the Spire",
+      "icon": "Bone Nova",
       "x": 7805.8,
       "y": -546.80005,
       "maxPoints": 1,
@@ -9075,6 +9424,7 @@
     "ht16aw-20": {
       "skill": "ht16aw-20",
       "name": "Iron Spiral",
+      "icon": "Warpath void",
       "x": 5747,
       "y": -664,
       "maxPoints": 1,
@@ -9105,6 +9455,7 @@
     "ht16aw-21": {
       "skill": "ht16aw-21",
       "name": "Hammer Vortex",
+      "icon": "BlackHole",
       "x": 5048.2,
       "y": -546.80005,
       "maxPoints": 1,
@@ -9128,6 +9479,7 @@
     "ht16aw-22": {
       "skill": "ht16aw-22",
       "name": "Ballista",
+      "icon": "battle_standard",
       "x": 7427,
       "y": -104,
       "maxPoints": 6,
@@ -9151,6 +9503,7 @@
     "ht16aw-23": {
       "skill": "ht16aw-23",
       "name": "Zealot's Conviction",
+      "icon": "Axe slash double",
       "x": 5427,
       "y": -104,
       "maxPoints": 5,
@@ -9173,6 +9526,7 @@
     "ht16aw-24": {
       "skill": "ht16aw-24",
       "name": "Guardian's Zeal",
+      "icon": "c-Manifest-Armour",
       "x": 6427,
       "y": 736,
       "maxPoints": 3,
@@ -9205,6 +9559,7 @@
     "ht16aw-25": {
       "skill": "ht16aw-25",
       "name": "Rahyeh's Legacy",
+      "icon": "Sword slash double fire",
       "x": 6427,
       "y": 1204,
       "maxPoints": 3,
@@ -9248,6 +9603,7 @@
     "javeli-2": {
       "skill": "javeli-2",
       "name": "Go for the Legs",
+      "icon": "c-Ravage",
       "x": 5882.2,
       "y": -352.4,
       "maxPoints": 4,
@@ -9275,6 +9631,7 @@
     "javeli-4": {
       "skill": "javeli-4",
       "name": "Keen Outlook",
+      "icon": "throwing_spear",
       "x": 7127,
       "y": 784,
       "maxPoints": 4,
@@ -9298,6 +9655,7 @@
     "javeli-5": {
       "skill": "javeli-5",
       "name": "Forceful Hurl",
+      "icon": "c-warcry",
       "x": 5259,
       "y": -500,
       "maxPoints": 5,
@@ -9328,6 +9686,7 @@
     "javeli-6": {
       "skill": "javeli-6",
       "name": "Strategic Patience",
+      "icon": "Spear stab",
       "x": 4599,
       "y": -700,
       "maxPoints": 1,
@@ -9351,6 +9710,7 @@
     "javeli-7": {
       "skill": "javeli-7",
       "name": "Holy Spears",
+      "icon": "c-shock-holy",
       "x": 5867,
       "y": 360,
       "maxPoints": 5,
@@ -9377,6 +9737,7 @@
     "javeli-8": {
       "skill": "javeli-8",
       "name": "Warrior's Mark",
+      "icon": "armor-sundering",
       "x": 6951,
       "y": -352.40002,
       "maxPoints": 3,
@@ -9405,6 +9766,7 @@
     "javeli-9": {
       "skill": "javeli-9",
       "name": "Divine Throws",
+      "icon": "c-detonating-arrow-yellow",
       "x": 4991,
       "y": 433.6,
       "maxPoints": 1,
@@ -9431,6 +9793,7 @@
     "javeli-10": {
       "skill": "javeli-10",
       "name": "Purifying Lightning",
+      "icon": "charged ground-yellow",
       "x": 4167,
       "y": 520,
       "maxPoints": 4,
@@ -9456,6 +9819,7 @@
     "javeli-11": {
       "skill": "javeli-11",
       "name": "Divine Fury",
+      "icon": "c-static-holy",
       "x": 4516.6,
       "y": -54.8,
       "maxPoints": 4,
@@ -9483,6 +9847,7 @@
     "javeli-12": {
       "skill": "javeli-12",
       "name": "Monster Piercer",
+      "icon": "c-Ward Generation Debuff (generic)",
       "x": 4683.8,
       "y": 1194.4,
       "maxPoints": 4,
@@ -9512,6 +9877,7 @@
     "javeli-13": {
       "skill": "javeli-13",
       "name": "Horde Spiker",
+      "icon": "c-puncture_red",
       "x": 3983.8,
       "y": 1064,
       "maxPoints": 3,
@@ -9535,6 +9901,7 @@
     "javeli-14": {
       "skill": "javeli-14",
       "name": "Beast Ender",
+      "icon": "c-flurry-1",
       "x": 5631,
       "y": 1036,
       "maxPoints": 4,
@@ -9563,6 +9930,7 @@
     "javeli-15": {
       "skill": "javeli-15",
       "name": "Serrated Javelin",
+      "icon": "Armor Shred",
       "x": 6435,
       "y": 1264,
       "maxPoints": 5,
@@ -9588,6 +9956,7 @@
     "javeli-16": {
       "skill": "javeli-16",
       "name": "Excellent Balance",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 6435,
       "y": 700,
       "maxPoints": 3,
@@ -9615,6 +9984,7 @@
     "javeli-17": {
       "skill": "javeli-17",
       "name": "Perfect Setup",
+      "icon": "sword-to-sky",
       "x": 7853,
       "y": 1064,
       "maxPoints": 2,
@@ -9637,6 +10007,7 @@
     "javeli-18": {
       "skill": "javeli-18",
       "name": "Sacred Forge",
+      "icon": "c-judgement2",
       "x": 7151,
       "y": 1168,
       "maxPoints": 4,
@@ -9662,6 +10033,7 @@
     "javeli-19": {
       "skill": "javeli-19",
       "name": "Mighty Delivery",
+      "icon": "c-Attack Speed Buff (generic)_3",
       "x": 6951,
       "y": 360,
       "maxPoints": 4,
@@ -9689,6 +10061,7 @@
     "javeli-20": {
       "skill": "javeli-20",
       "name": "Burning Strength",
+      "icon": "c-ignite",
       "x": 6435,
       "y": -700,
       "maxPoints": 4,
@@ -9719,6 +10092,7 @@
     "javeli-21": {
       "skill": "javeli-21",
       "name": "Siege Barrage",
+      "icon": "c-barrage_red",
       "x": 7631,
       "y": -0,
       "maxPoints": 1,
@@ -9745,6 +10119,7 @@
     "javeli-22": {
       "skill": "javeli-22",
       "name": "Battle Standard",
+      "icon": "battle_standard",
       "x": 8424.2,
       "y": 66.19995,
       "maxPoints": 1,
@@ -9777,6 +10152,7 @@
     "javeli-23": {
       "skill": "javeli-23",
       "name": "Banner of Restoration",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 8178.6,
       "y": 561.39996,
       "maxPoints": 4,
@@ -9799,6 +10175,7 @@
     "javeli-24": {
       "skill": "javeli-24",
       "name": "Ardent Symbol",
+      "icon": "c-flurry2 - orange",
       "x": 8889,
       "y": 414.99994,
       "maxPoints": 4,
@@ -9824,6 +10201,7 @@
     "javeli-25": {
       "skill": "javeli-25",
       "name": "Capture the Flag",
+      "icon": "c-harpoon elemental",
       "x": 8587.4,
       "y": 761.39996,
       "maxPoints": 1,
@@ -9849,6 +10227,7 @@
     "javeli-26": {
       "skill": "javeli-26",
       "name": "Divine Intervention",
+      "icon": "c-sky bolt2",
       "x": 9012.2,
       "y": 1068.2,
       "maxPoints": 1,
@@ -9873,6 +10252,7 @@
     "javeli-27": {
       "skill": "javeli-27",
       "name": "Righteous Descend",
+      "icon": "c-sky bolt",
       "x": 8331,
       "y": 1212.2,
       "maxPoints": 5,
@@ -9896,6 +10276,7 @@
     "javeli-28": {
       "skill": "javeli-28",
       "name": "Surprise Initiative",
+      "icon": "c-lunge",
       "x": 8761.8,
       "y": -591.2,
       "maxPoints": 1,
@@ -9922,6 +10303,7 @@
     "javeli-29": {
       "skill": "javeli-29",
       "name": "Spiked Bombardment",
+      "icon": "c-multishot 1",
       "x": 7527,
       "y": 561.4,
       "maxPoints": 2,
@@ -9945,6 +10327,7 @@
     "javeli-31": {
       "skill": "javeli-31",
       "name": "Holy Trail",
+      "icon": "Divine bolt",
       "x": 7429.8,
       "y": -700,
       "maxPoints": 1,
@@ -9975,6 +10358,7 @@
     "javeli-32": {
       "skill": "javeli-32",
       "name": "Pilgrimage",
+      "icon": "c-double-strike",
       "x": 8141,
       "y": -954.4,
       "maxPoints": 3,
@@ -10000,6 +10384,7 @@
     "javeli-33": {
       "skill": "javeli-33",
       "name": "Spear to the Thigh",
+      "icon": "c-Laceration",
       "x": 5831,
       "y": -856,
       "maxPoints": 4,
@@ -10026,6 +10411,7 @@
     "javeli-35": {
       "skill": "javeli-35",
       "name": "Path of Judgement",
+      "icon": "holy-symbol-2",
       "x": 8141,
       "y": -391.1999,
       "maxPoints": 1,
@@ -10069,6 +10455,7 @@
     "lu25ng-2": {
       "skill": "lu25ng-2",
       "name": "Dawn Charge",
+      "icon": "holy-symbol-1",
       "x": 5707,
       "y": -0,
       "maxPoints": 5,
@@ -10094,6 +10481,7 @@
     "lu25ng-3": {
       "skill": "lu25ng-3",
       "name": "Broadside",
+      "icon": "Rive",
       "x": 4164.6,
       "y": 221.6,
       "maxPoints": 3,
@@ -10119,6 +10507,7 @@
     "lu25ng-4": {
       "skill": "lu25ng-4",
       "name": "Double Strike",
+      "icon": "c-double-strike",
       "x": 8251,
       "y": -900,
       "maxPoints": 1,
@@ -10144,6 +10533,7 @@
     "lu25ng-6": {
       "skill": "lu25ng-6",
       "name": "Slipstream",
+      "icon": "c-haste",
       "x": 3995.4,
       "y": 884.4,
       "maxPoints": 2,
@@ -10168,6 +10558,7 @@
     "lu25ng-7": {
       "skill": "lu25ng-7",
       "name": "To Your Aid",
+      "icon": "c-synchronized-strike",
       "x": 4643,
       "y": 1230.8,
       "maxPoints": 1,
@@ -10195,6 +10586,7 @@
     "lu25ng-8": {
       "skill": "lu25ng-8",
       "name": "Healing Rush",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 5303,
       "y": 1230.8,
       "maxPoints": 5,
@@ -10219,6 +10611,7 @@
     "lu25ng-9": {
       "skill": "lu25ng-9",
       "name": "Blade Stream",
+      "icon": "c-puncture",
       "x": 4760.5996,
       "y": 2.2888E-05,
       "maxPoints": 1,
@@ -10247,6 +10640,7 @@
     "lu25ng-11": {
       "skill": "lu25ng-11",
       "name": "Rough Cuts",
+      "icon": "c-bleed",
       "x": 4399.8,
       "y": -860.4,
       "maxPoints": 4,
@@ -10271,6 +10665,7 @@
     "lu25ng-12": {
       "skill": "lu25ng-12",
       "name": "Visceral Path",
+      "icon": "c-Attack Speed Debuff (generic)_3",
       "x": 4815.4,
       "y": -519.99994,
       "maxPoints": 4,
@@ -10295,6 +10690,7 @@
     "lu25ng-14": {
       "skill": "lu25ng-14",
       "name": "Torchbearer",
+      "icon": "c-ignite",
       "x": 3859.8,
       "y": -686.4,
       "maxPoints": 1,
@@ -10318,6 +10714,7 @@
     "lu25ng-15": {
       "skill": "lu25ng-15",
       "name": "Juggernaut Dash",
+      "icon": "shield-block",
       "x": 6067,
       "y": 640,
       "maxPoints": 2,
@@ -10342,6 +10739,7 @@
     "lu25ng-16": {
       "skill": "lu25ng-16",
       "name": "Disarming Blow",
+      "icon": "c-red-eye",
       "x": 6787,
       "y": 640,
       "maxPoints": 3,
@@ -10369,6 +10767,7 @@
     "lu25ng-17": {
       "skill": "lu25ng-17",
       "name": "Impairing Strike",
+      "icon": "Entangling roots",
       "x": 6427,
       "y": 1165.6,
       "maxPoints": 5,
@@ -10391,6 +10790,7 @@
     "lu25ng-18": {
       "skill": "lu25ng-18",
       "name": "Deadly Stab",
+      "icon": "throwing_spear",
       "x": 8491,
       "y": -102.400024,
       "maxPoints": 3,
@@ -10415,6 +10815,7 @@
     "lu25ng-20": {
       "skill": "lu25ng-20",
       "name": "Initiate's Onslaught",
+      "icon": "vengeance",
       "x": 7147,
       "y": -0,
       "maxPoints": 5,
@@ -10445,6 +10846,7 @@
     "lu25ng-21": {
       "skill": "lu25ng-21",
       "name": "Cull the Weak",
+      "icon": "c-maul",
       "x": 7639,
       "y": 647.2,
       "maxPoints": 3,
@@ -10472,6 +10874,7 @@
     "lu25ng-22": {
       "skill": "lu25ng-22",
       "name": "Crusader's Fury",
+      "icon": "c-flurry-1",
       "x": 3735.8,
       "y": -159.2,
       "maxPoints": 5,
@@ -10497,6 +10900,7 @@
     "lu25ng-24": {
       "skill": "lu25ng-24",
       "name": "Holy Incursion",
+      "icon": "c-sky bolt2",
       "x": 7162.6,
       "y": 1210.4,
       "maxPoints": 2,
@@ -10524,6 +10928,7 @@
     "lu25ng-25": {
       "skill": "lu25ng-25",
       "name": "Unstoppable",
+      "icon": "c-Damage Mitigation Buff (generic)",
       "x": 5303,
       "y": 640,
       "maxPoints": 1,
@@ -10546,6 +10951,7 @@
     "lu25ng-27": {
       "skill": "lu25ng-27",
       "name": "Reckless Skirmish",
+      "icon": "c-Frenzy",
       "x": 8067,
       "y": 1210.4,
       "maxPoints": 4,
@@ -10571,6 +10977,7 @@
     "lu25ng-28": {
       "skill": "lu25ng-28",
       "name": "Voidbringer",
+      "icon": "void-symbol",
       "x": 8528.6,
       "y": 647.2,
       "maxPoints": 1,
@@ -10594,6 +11001,7 @@
     "lu25ng-29": {
       "skill": "lu25ng-29",
       "name": "Ready or Not",
+      "icon": "c-Ward Generation Debuff (generic)",
       "x": 8976.6,
       "y": 1210.4,
       "maxPoints": 1,
@@ -10619,6 +11027,7 @@
     "lu25ng-30": {
       "skill": "lu25ng-30",
       "name": "Art of the Spear",
+      "icon": "Spear stab",
       "x": 7912.6,
       "y": 137.59998,
       "maxPoints": 1,
@@ -10643,6 +11052,7 @@
     "lu25ng-31": {
       "skill": "lu25ng-31",
       "name": "Pilum Assault",
+      "icon": "Javelin",
       "x": 9053.8,
       "y": 137.6,
       "maxPoints": 1,
@@ -10665,6 +11075,7 @@
     "lu25ng-32": {
       "skill": "lu25ng-32",
       "name": "Warrior's Renewal",
+      "icon": "Multistrike",
       "x": 6787,
       "y": -640,
       "maxPoints": 3,
@@ -10692,6 +11103,7 @@
     "lu25ng-33": {
       "skill": "lu25ng-33",
       "name": "Ambuscade",
+      "icon": "c-Smelters-Wrath",
       "x": 7530.6,
       "y": -736,
       "maxPoints": 5,
@@ -10719,6 +11131,7 @@
     "lu25ng-34": {
       "skill": "lu25ng-34",
       "name": "Lead the Charge",
+      "icon": "c-haste-blue",
       "x": 8956.6,
       "y": -736,
       "maxPoints": 1,
@@ -10746,6 +11159,7 @@
     "lu25ng-35": {
       "skill": "lu25ng-35",
       "name": "Endless Will",
+      "icon": "c-Health Regeneration Debuff (generic)",
       "x": 6067,
       "y": -640,
       "maxPoints": 2,
@@ -10791,6 +11205,7 @@
     "ma6hdr-1": {
       "skill": "ma6hdr-1",
       "name": "Platemail",
+      "icon": "c-armor buff",
       "x": 5827,
       "y": -420,
       "maxPoints": 4,
@@ -10817,6 +11232,7 @@
     "ma6hdr-2": {
       "skill": "ma6hdr-2",
       "name": "Force of Impact",
+      "icon": "c-Elemental Damage Buff (generic)",
       "x": 6131,
       "y": -792,
       "maxPoints": 1,
@@ -10839,6 +11255,7 @@
     "ma6hdr-3": {
       "skill": "ma6hdr-3",
       "name": "Bulwark",
+      "icon": "ring-of-shields",
       "x": 4451,
       "y": -672,
       "maxPoints": 4,
@@ -10863,6 +11280,7 @@
     "ma6hdr-4": {
       "skill": "ma6hdr-4",
       "name": "Shield-Bearer",
+      "icon": "shield-block",
       "x": 3888.2,
       "y": -435.19995,
       "maxPoints": 1,
@@ -10885,6 +11303,7 @@
     "ma6hdr-5": {
       "skill": "ma6hdr-5",
       "name": "Self Repair",
+      "icon": "c-Health Regeneration Buff (generic)_2",
       "x": 4899,
       "y": -420,
       "maxPoints": 5,
@@ -10910,6 +11329,7 @@
     "ma6hdr-6": {
       "skill": "ma6hdr-6",
       "name": "Lambent Metal",
+      "icon": "c-Health Regeneration Debuff (generic)",
       "x": 5223,
       "y": -868,
       "maxPoints": 1,
@@ -10932,6 +11352,7 @@
     "ma6hdr-7": {
       "skill": "ma6hdr-7",
       "name": "Vengeful Guardian",
+      "icon": "Thorn_Shield-silver",
       "x": 4827,
       "y": 68,
       "maxPoints": 4,
@@ -10956,6 +11377,7 @@
     "ma6hdr-8": {
       "skill": "ma6hdr-8",
       "name": "Thornmail",
+      "icon": "Bone Nova",
       "x": 4381.8,
       "y": 310.40015,
       "maxPoints": 1,
@@ -10978,6 +11400,7 @@
     "ma6hdr-9": {
       "skill": "ma6hdr-9",
       "name": "Great Helm",
+      "icon": "Juggernaut-Stance-Temp",
       "x": 5811,
       "y": 356,
       "maxPoints": 4,
@@ -11003,6 +11426,7 @@
     "ma6hdr-10": {
       "skill": "ma6hdr-10",
       "name": "Burning Armor",
+      "icon": "Sword slash double fire",
       "x": 5203,
       "y": 700,
       "maxPoints": 5,
@@ -11029,6 +11453,7 @@
     "ma6hdr-11": {
       "skill": "ma6hdr-11",
       "name": "Blast Forge",
+      "icon": "smelter-swrath",
       "x": 4463,
       "y": 1076,
       "maxPoints": 1,
@@ -11054,6 +11479,7 @@
     "ma6hdr-12": {
       "skill": "ma6hdr-12",
       "name": "Bellow",
+      "icon": "c-Flame Reave",
       "x": 5003,
       "y": 1292,
       "maxPoints": 5,
@@ -11080,6 +11506,7 @@
     "ma6hdr-13": {
       "skill": "ma6hdr-13",
       "name": "Forged Fire",
+      "icon": "Glyph of Fire",
       "x": 3947,
       "y": 1292,
       "maxPoints": 2,
@@ -11103,6 +11530,7 @@
     "ma6hdr-14": {
       "skill": "ma6hdr-14",
       "name": "Heated Metal",
+      "icon": "c-ignite",
       "x": 5562.6,
       "y": 1132.8,
       "maxPoints": 5,
@@ -11125,6 +11553,7 @@
     "ma6hdr-15": {
       "skill": "ma6hdr-15",
       "name": "Whirlwind",
+      "icon": "Warpath",
       "x": 6123.4,
       "y": 1132.8,
       "maxPoints": 1,
@@ -11147,6 +11576,7 @@
     "ma6hdr-16": {
       "skill": "ma6hdr-16",
       "name": "Steel Greaves",
+      "icon": "c-shift",
       "x": 7027,
       "y": 420,
       "maxPoints": 4,
@@ -11173,6 +11603,7 @@
     "ma6hdr-17": {
       "skill": "ma6hdr-17",
       "name": "Warstomp",
+      "icon": "c-decoy",
       "x": 6800.6,
       "y": 1132.8,
       "maxPoints": 3,
@@ -11195,6 +11626,7 @@
     "ma6hdr-18": {
       "skill": "ma6hdr-18",
       "name": "Thick Padding",
+      "icon": "c-shadow assault",
       "x": 7940.8,
       "y": 1118.6799,
       "maxPoints": 1,
@@ -11217,6 +11649,7 @@
     "ma6hdr-19": {
       "skill": "ma6hdr-19",
       "name": "Dash Boots",
+      "icon": "c-lunge",
       "x": 8720.4,
       "y": 822.67993,
       "maxPoints": 1,
@@ -11239,6 +11672,7 @@
     "ma6hdr-20": {
       "skill": "ma6hdr-20",
       "name": "Lethargy",
+      "icon": "c-slow",
       "x": 8303,
       "y": 418.67993,
       "maxPoints": 2,
@@ -11263,6 +11697,7 @@
     "ma6hdr-21": {
       "skill": "ma6hdr-21",
       "name": "Iron Grasp",
+      "icon": "Void-Grasp",
       "x": 7027,
       "y": -420,
       "maxPoints": 4,
@@ -11289,6 +11724,7 @@
     "ma6hdr-22": {
       "skill": "ma6hdr-22",
       "name": "Sharpened Metal",
+      "icon": "c-bleed",
       "x": 7695,
       "y": -144,
       "maxPoints": 5,
@@ -11313,6 +11749,7 @@
     "ma6hdr-23": {
       "skill": "ma6hdr-23",
       "name": "Sharper Metal",
+      "icon": "c-physical damage buff",
       "x": 8303,
       "y": -144,
       "maxPoints": 5,
@@ -11335,6 +11772,7 @@
     "ma6hdr-24": {
       "skill": "ma6hdr-24",
       "name": "Bladed Armour",
+      "icon": "Armor Shred",
       "x": 6723,
       "y": -792.00006,
       "maxPoints": 5,
@@ -11357,6 +11795,7 @@
     "ma6hdr-25": {
       "skill": "ma6hdr-25",
       "name": "Redistributed Steel",
+      "icon": "c-Attack Speed Debuff (generic)_3",
       "x": 7803.8,
       "y": -822.3999,
       "maxPoints": 4,
@@ -11382,6 +11821,7 @@
     "ma6hdr-26": {
       "skill": "ma6hdr-26",
       "name": "Titan Sword",
+      "icon": "sword-to-sky",
       "x": 8583.4,
       "y": -822.3999,
       "maxPoints": 1,
@@ -11424,6 +11864,7 @@
     "multis-2": {
       "skill": "multis-2",
       "name": "Way of the Sword",
+      "icon": "Sword slash double",
       "x": 5747,
       "y": -0,
       "maxPoints": 5,
@@ -11451,6 +11892,7 @@
     "multis-3": {
       "skill": "multis-3",
       "name": "Guarding Stance",
+      "icon": "Shield-Rush",
       "x": 4838.5996,
       "y": -172.40015,
       "maxPoints": 5,
@@ -11477,6 +11919,7 @@
     "multis-4": {
       "skill": "multis-4",
       "name": "Bladed Focus",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 4575.4,
       "y": -803.60016,
       "maxPoints": 2,
@@ -11499,6 +11942,7 @@
     "multis-5": {
       "skill": "multis-5",
       "name": "Flanking Strikes",
+      "icon": "c-double-strike",
       "x": 4297.8,
       "y": -306.80014,
       "maxPoints": 1,
@@ -11525,6 +11969,7 @@
     "multis-6": {
       "skill": "multis-6",
       "name": "Hallowed Arsenal",
+      "icon": "c-sky bolt2",
       "x": 3927.4,
       "y": -708.4,
       "maxPoints": 1,
@@ -11547,6 +11992,7 @@
     "multis-7": {
       "skill": "multis-7",
       "name": "Vengeful",
+      "icon": "shield-block",
       "x": 4401,
       "y": 240.39984,
       "maxPoints": 3,
@@ -11569,6 +12015,7 @@
     "multis-8": {
       "skill": "multis-8",
       "name": "Echoed Warfare",
+      "icon": "Rive void",
       "x": 3798.2,
       "y": -72.40015,
       "maxPoints": 2,
@@ -11594,6 +12041,7 @@
     "multis-9": {
       "skill": "multis-9",
       "name": "Initiate",
+      "icon": "sword-in-ground",
       "x": 6427,
       "y": 680,
       "maxPoints": 5,
@@ -11621,6 +12069,7 @@
     "multis-10": {
       "skill": "multis-10",
       "name": "Path of the Knight",
+      "icon": "c-Manifest-Armour",
       "x": 5280.2,
       "y": 1207.2,
       "maxPoints": 5,
@@ -11649,6 +12098,7 @@
     "multis-11": {
       "skill": "multis-11",
       "name": "Heated Forge",
+      "icon": "mace-hit",
       "x": 4709.4,
       "y": 820,
       "maxPoints": 1,
@@ -11673,6 +12123,7 @@
     "multis-12": {
       "skill": "multis-12",
       "name": "Forgemastery",
+      "icon": "vengeance",
       "x": 4151,
       "y": 1207.2,
       "maxPoints": 2,
@@ -11695,6 +12146,7 @@
     "multis-13": {
       "skill": "multis-13",
       "name": "Hack and Slash",
+      "icon": "Axe slash double",
       "x": 5371,
       "y": 680,
       "maxPoints": 1,
@@ -11721,6 +12173,7 @@
     "multis-14": {
       "skill": "multis-14",
       "name": "Alpha Cuts",
+      "icon": "c-shield-bash",
       "x": 6427,
       "y": 1235.2,
       "maxPoints": 3,
@@ -11745,6 +12198,7 @@
     "multis-15": {
       "skill": "multis-15",
       "name": "Bladestorm",
+      "icon": "c-mana storm",
       "x": 7259,
       "y": 834.4,
       "maxPoints": 1,
@@ -11770,6 +12224,7 @@
     "multis-16": {
       "skill": "multis-16",
       "name": "Relentless Advance",
+      "icon": "Rive 2 silver",
       "x": 7107,
       "y": -0,
       "maxPoints": 3,
@@ -11796,6 +12251,7 @@
     "multis-17": {
       "skill": "multis-17",
       "name": "Determination",
+      "icon": "c-dancing-strikes",
       "x": 7929,
       "y": 60.80005,
       "maxPoints": 4,
@@ -11822,6 +12278,7 @@
     "multis-18": {
       "skill": "multis-18",
       "name": "Blitz",
+      "icon": "c-puncture_red",
       "x": 8318.6,
       "y": 581.2001,
       "maxPoints": 5,
@@ -11846,6 +12303,7 @@
     "multis-19": {
       "skill": "multis-19",
       "name": "Decimate",
+      "icon": "c-bleed",
       "x": 7929,
       "y": 1090.8,
       "maxPoints": 5,
@@ -11870,6 +12328,7 @@
     "multis-20": {
       "skill": "multis-20",
       "name": "Guillotine",
+      "icon": "c-flurry-2",
       "x": 8757,
       "y": 1090.8,
       "maxPoints": 3,
@@ -11893,6 +12352,7 @@
     "multis-21": {
       "skill": "multis-21",
       "name": "Jousting",
+      "icon": "throwing_spear",
       "x": 8757,
       "y": 60.80005,
       "maxPoints": 1,
@@ -11916,6 +12376,7 @@
     "multis-22": {
       "skill": "multis-22",
       "name": "Sweeping Blows",
+      "icon": "c-tremor2",
       "x": 8318.6,
       "y": -555.99994,
       "maxPoints": 4,
@@ -11940,6 +12401,7 @@
     "multis-23": {
       "skill": "multis-23",
       "name": "Victory Strikes",
+      "icon": "c-flurry-1",
       "x": 8883,
       "y": -858.8,
       "maxPoints": 1,
@@ -11962,6 +12424,7 @@
     "multis-24": {
       "skill": "multis-24",
       "name": "Perfect Steel",
+      "icon": "c-light swirl",
       "x": 6427,
       "y": -680,
       "maxPoints": 1,
@@ -11989,6 +12452,7 @@
     "multis-25": {
       "skill": "multis-25",
       "name": "Doctrine of the Anvil",
+      "icon": "c-double-strike2",
       "x": 7287.4,
       "y": -535.6,
       "maxPoints": 1,
@@ -12014,6 +12478,7 @@
     "multis-26": {
       "skill": "multis-26",
       "name": "Fiery Justice",
+      "icon": "forge-strike",
       "x": 7819.8,
       "y": -937.6,
       "maxPoints": 1,
@@ -12038,6 +12503,7 @@
     "multis-27": {
       "skill": "multis-27",
       "name": "Aggressive Cadence",
+      "icon": "c-blood-swords",
       "x": 5684.2,
       "y": -831.6,
       "maxPoints": 1,
@@ -12062,6 +12528,7 @@
     "multis-28": {
       "skill": "multis-28",
       "name": "Nullifying Carve",
+      "icon": "Void_Cleave",
       "x": 5270.2,
       "y": -476.7998,
       "maxPoints": 1,
@@ -12108,6 +12575,7 @@
     "pa67ju-1": {
       "skill": "pa67ju-1",
       "name": "Sanctified Serenity",
+      "icon": "c-Healing Hands",
       "x": 5867,
       "y": -400,
       "maxPoints": 4,
@@ -12136,6 +12604,7 @@
     "pa67ju-2": {
       "skill": "pa67ju-2",
       "name": "Lingering Force",
+      "icon": "c-holy aura",
       "x": 5207,
       "y": -732,
       "maxPoints": 5,
@@ -12160,6 +12629,7 @@
     "pa67ju-3": {
       "skill": "pa67ju-3",
       "name": "Anointed",
+      "icon": "holy-symbol-3",
       "x": 4408.2,
       "y": -732.00006,
       "maxPoints": 1,
@@ -12188,6 +12658,7 @@
     "pa67ju-4": {
       "skill": "pa67ju-4",
       "name": "Destructive Impact",
+      "icon": "battle_standard",
       "x": 5867,
       "y": 400,
       "maxPoints": 4,
@@ -12214,6 +12685,7 @@
     "pa67ju-5": {
       "skill": "pa67ju-5",
       "name": "Holy Eruption",
+      "icon": "c-sigils of hope",
       "x": 4873.4,
       "y": -0,
       "maxPoints": 1,
@@ -12241,6 +12713,7 @@
     "pa67ju-6": {
       "skill": "pa67ju-6",
       "name": "Holy Blast",
+      "icon": "c-sky bolt",
       "x": 4115.4,
       "y": 500,
       "maxPoints": 4,
@@ -12264,6 +12737,7 @@
     "pa67ju-7": {
       "skill": "pa67ju-7",
       "name": "Cleansing Light",
+      "icon": "holy-symbol-2",
       "x": 3993,
       "y": -77.6,
       "maxPoints": 1,
@@ -12292,6 +12766,7 @@
     "pa67ju-8": {
       "skill": "pa67ju-8",
       "name": "Expedite",
+      "icon": "Healing Wind Yellow",
       "x": 3759,
       "y": -591.2,
       "maxPoints": 4,
@@ -12315,6 +12790,7 @@
     "pa67ju-9": {
       "skill": "pa67ju-9",
       "name": "Sanctification",
+      "icon": "c-detonating-arrow-yellow",
       "x": 7447,
       "y": 932.8005,
       "maxPoints": 1,
@@ -12339,6 +12815,7 @@
     "pa67ju-10": {
       "skill": "pa67ju-10",
       "name": "Flaming Soul",
+      "icon": "smelter-swrath",
       "x": 6867,
       "y": 1160,
       "maxPoints": 4,
@@ -12363,6 +12840,7 @@
     "pa67ju-11": {
       "skill": "pa67ju-11",
       "name": "Ashes To Dust",
+      "icon": "Armor Shred",
       "x": 5487,
       "y": 768,
       "maxPoints": 4,
@@ -12385,6 +12863,7 @@
     "pa67ju-12": {
       "skill": "pa67ju-12",
       "name": "Divine Destruction",
+      "icon": "weapon-arsenal",
       "x": 6987,
       "y": -400,
       "maxPoints": 4,
@@ -12415,6 +12894,7 @@
     "pa67ju-13": {
       "skill": "pa67ju-13",
       "name": "Scourgebane",
+      "icon": "vengeance",
       "x": 7647,
       "y": -732,
       "maxPoints": 4,
@@ -12437,6 +12917,7 @@
     "pa67ju-14": {
       "skill": "pa67ju-14",
       "name": "Symbol of Sacrifice",
+      "icon": "holy-gauntlet",
       "x": 6427,
       "y": -764.3999,
       "maxPoints": 2,
@@ -12464,6 +12945,7 @@
     "pa67ju-15": {
       "skill": "pa67ju-15",
       "name": "Pious Offering",
+      "icon": "c-double-strike",
       "x": 7787,
       "y": -0,
       "maxPoints": 5,
@@ -12492,6 +12974,7 @@
     "pa67ju-16": {
       "skill": "pa67ju-16",
       "name": "Ascendant Liturgy",
+      "icon": "Warpath fire",
       "x": 5105,
       "y": 1235.6,
       "maxPoints": 1,
@@ -12518,6 +13001,7 @@
     "pa67ju-17": {
       "skill": "pa67ju-17",
       "name": "Proclamation",
+      "icon": "mace-hit",
       "x": 4292.201,
       "y": 1160,
       "maxPoints": 5,
@@ -12541,6 +13025,7 @@
     "pa67ju-18": {
       "skill": "pa67ju-18",
       "name": "Righteous Decree",
+      "icon": "c-sky bolt2",
       "x": 4873.4,
       "y": 668,
       "maxPoints": 4,
@@ -12565,6 +13050,7 @@
     "pa67ju-19": {
       "skill": "pa67ju-19",
       "name": "Sacred Sword",
+      "icon": "c-ignite",
       "x": 6987,
       "y": 400,
       "maxPoints": 4,
@@ -12592,6 +13078,7 @@
     "pa67ju-20": {
       "skill": "pa67ju-20",
       "name": "Warrior's Tithe",
+      "icon": "holy-mace",
       "x": 8519,
       "y": 240,
       "maxPoints": 4,
@@ -12619,6 +13106,7 @@
     "pa67ju-21": {
       "skill": "pa67ju-21",
       "name": "Purifying Flame",
+      "icon": "holy-fire-sword",
       "x": 7963.4,
       "y": 613.6,
       "maxPoints": 4,
@@ -12645,6 +13133,7 @@
     "pa67ju-22": {
       "skill": "pa67ju-22",
       "name": "Fervent Impact",
+      "icon": "Fireball explosion",
       "x": 8120.2,
       "y": 1235.6,
       "maxPoints": 4,
@@ -12669,6 +13158,7 @@
     "pa67ju-23": {
       "skill": "pa67ju-23",
       "name": "Punish",
+      "icon": "forge-strike",
       "x": 8876.2,
       "y": 1235.6,
       "maxPoints": 4,
@@ -12691,6 +13181,7 @@
     "pa67ju-24": {
       "skill": "pa67ju-24",
       "name": "Swift Verdict",
+      "icon": "duration-yellow",
       "x": 6427,
       "y": 700,
       "maxPoints": 3,
@@ -12719,6 +13210,7 @@
     "pa67ju-25": {
       "skill": "pa67ju-25",
       "name": "Prophesied Immolation",
+      "icon": "sword-in-ground",
       "x": 9025,
       "y": 613.6,
       "maxPoints": 1,
@@ -12745,6 +13237,7 @@
     "pa67ju-26": {
       "skill": "pa67ju-26",
       "name": "Ensuing Fervour",
+      "icon": "c-Frenzy",
       "x": 5987,
       "y": 1160,
       "maxPoints": 4,
@@ -12769,6 +13262,7 @@
     "pa67ju-27": {
       "skill": "pa67ju-27",
       "name": "Deliverance",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 8303,
       "y": -477.5999,
       "maxPoints": 4,
@@ -12797,6 +13291,7 @@
     "pa67ju-28": {
       "skill": "pa67ju-28",
       "name": "Holy War",
+      "icon": "c-lunge",
       "x": 8977,
       "y": -277.59998,
       "maxPoints": 1,
@@ -12821,6 +13316,7 @@
     "pa67ju-29": {
       "skill": "pa67ju-29",
       "name": "Urgent Inquisition",
+      "icon": "c-fire-lightning-blade",
       "x": 8809.8,
       "y": -964.4,
       "maxPoints": 1,
@@ -12870,6 +13366,7 @@
     "re82ke-2": {
       "skill": "re82ke-2",
       "name": "Regenerative Shell",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 5607,
       "y": -0,
       "maxPoints": 4,
@@ -12896,6 +13393,7 @@
     "re82ke-3": {
       "skill": "re82ke-3",
       "name": "Mystic Aegis",
+      "icon": "Anamoly",
       "x": 6079,
       "y": -620,
       "maxPoints": 3,
@@ -12924,6 +13422,7 @@
     "re82ke-4": {
       "skill": "re82ke-4",
       "name": "Brave the Elements",
+      "icon": "Nova",
       "x": 5167,
       "y": -404,
       "maxPoints": 4,
@@ -12948,6 +13447,7 @@
     "re82ke-5": {
       "skill": "re82ke-5",
       "name": "Augmented Plating",
+      "icon": "c-Manifest-Armour",
       "x": 5167,
       "y": 404,
       "maxPoints": 5,
@@ -12972,6 +13472,7 @@
     "re82ke-6": {
       "skill": "re82ke-6",
       "name": "Bide",
+      "icon": "Shieldwall",
       "x": 7247,
       "y": -0,
       "maxPoints": 2,
@@ -12999,6 +13500,7 @@
     "re82ke-7": {
       "skill": "re82ke-7",
       "name": "Burst of Speed",
+      "icon": "c-haste-blue",
       "x": 3907,
       "y": -0,
       "maxPoints": 1,
@@ -13025,6 +13527,7 @@
     "re82ke-8": {
       "skill": "re82ke-8",
       "name": "Redemption",
+      "icon": "battle_standard",
       "x": 5167,
       "y": 940,
       "maxPoints": 4,
@@ -13050,6 +13553,7 @@
     "re82ke-9": {
       "skill": "re82ke-9",
       "name": "Solemn Vow",
+      "icon": "holy-shield",
       "x": 4289.8,
       "y": -404,
       "maxPoints": 2,
@@ -13072,6 +13576,7 @@
     "re82ke-10": {
       "skill": "re82ke-10",
       "name": "Battle Meditation",
+      "icon": "c-Mana Regeneration Buff (generic)",
       "x": 6027,
       "y": 640,
       "maxPoints": 4,
@@ -13096,6 +13601,7 @@
     "re82ke-11": {
       "skill": "re82ke-11",
       "name": "Retaliation",
+      "icon": "Void_Cleave2",
       "x": 6827,
       "y": 640,
       "maxPoints": 5,
@@ -13122,6 +13628,7 @@
     "re82ke-12": {
       "skill": "re82ke-12",
       "name": "Wildfire Shell",
+      "icon": "Glyph of Fire",
       "x": 7907,
       "y": -0,
       "maxPoints": 2,
@@ -13149,6 +13656,7 @@
     "re82ke-13": {
       "skill": "re82ke-13",
       "name": "Singed Shield",
+      "icon": "c-ignite",
       "x": 7907,
       "y": -700,
       "maxPoints": 5,
@@ -13173,6 +13681,7 @@
     "re82ke-14": {
       "skill": "re82ke-14",
       "name": "Unforge",
+      "icon": "Armor Shred",
       "x": 7907,
       "y": 700,
       "maxPoints": 5,
@@ -13197,6 +13706,7 @@
     "re82ke-15": {
       "skill": "re82ke-15",
       "name": "Lingering Ailments",
+      "icon": "c-void essence",
       "x": 8567,
       "y": -0,
       "maxPoints": 5,
@@ -13223,6 +13733,7 @@
     "re82ke-16": {
       "skill": "re82ke-16",
       "name": "Dark Thoughts",
+      "icon": "Warpath void",
       "x": 7427,
       "y": 1192,
       "maxPoints": 3,
@@ -13247,6 +13758,7 @@
     "re82ke-17": {
       "skill": "re82ke-17",
       "name": "Voidfused Barrier",
+      "icon": "Void Explosion",
       "x": 8443,
       "y": 1192,
       "maxPoints": 1,
@@ -13269,6 +13781,7 @@
     "re82ke-18": {
       "skill": "re82ke-18",
       "name": "Infinite Guardian",
+      "icon": "c-sky bolt2",
       "x": 6795,
       "y": -620,
       "maxPoints": 5,
@@ -13297,6 +13810,7 @@
     "re82ke-19": {
       "skill": "re82ke-19",
       "name": "Accelerated Healing",
+      "icon": "holy-symbol-2",
       "x": 4575,
       "y": 1172,
       "maxPoints": 4,
@@ -13319,6 +13833,7 @@
     "re82ke-20": {
       "skill": "re82ke-20",
       "name": "War Priest",
+      "icon": "holy-symbol-3",
       "x": 5758.6,
       "y": 1172,
       "maxPoints": 1,
@@ -13341,6 +13856,7 @@
     "re82ke-21": {
       "skill": "re82ke-21",
       "name": "Protective Legacy",
+      "icon": "ring-of-shields",
       "x": 4727,
       "y": -0,
       "maxPoints": 1,
@@ -13367,6 +13883,7 @@
     "re82ke-22": {
       "skill": "re82ke-22",
       "name": "Inner Focus",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 7359,
       "y": -900,
       "maxPoints": 3,
@@ -13389,6 +13906,7 @@
     "re82ke-24": {
       "skill": "re82ke-24",
       "name": "Reclaimed Refuge",
+      "icon": "Future strike",
       "x": 6427,
       "y": 1140,
       "maxPoints": 3,
@@ -13414,6 +13932,7 @@
     "re82ke-25": {
       "skill": "re82ke-25",
       "name": "Stoic Challenge",
+      "icon": "c-Ring-of-Shields",
       "x": 5491,
       "y": -900,
       "maxPoints": 1,
@@ -13458,6 +13977,7 @@
     "rs31hi-1": {
       "skill": "rs31hi-1",
       "name": "Reinforcement",
+      "icon": "Shieldwall",
       "x": 5778.6,
       "y": -443.2,
       "maxPoints": 2,
@@ -13483,6 +14003,7 @@
     "rs31hi-2": {
       "skill": "rs31hi-2",
       "name": "Healing Shields",
+      "icon": "c-Healing Hands",
       "x": 5041.4,
       "y": -443.1999,
       "maxPoints": 4,
@@ -13510,6 +14031,7 @@
     "rs31hi-3": {
       "skill": "rs31hi-3",
       "name": "Phalanx",
+      "icon": "holy-symbol-3",
       "x": 4559,
       "y": -816,
       "maxPoints": 5,
@@ -13534,6 +14056,7 @@
     "rs31hi-4": {
       "skill": "rs31hi-4",
       "name": "Sturdy Shields",
+      "icon": "c-penta-green",
       "x": 4143,
       "y": -444,
       "maxPoints": 5,
@@ -13559,6 +14082,7 @@
     "rs31hi-5": {
       "skill": "rs31hi-5",
       "name": "On the Path",
+      "icon": "c-Warpath",
       "x": 6427,
       "y": -700,
       "maxPoints": 3,
@@ -13582,6 +14106,7 @@
     "rs31hi-6": {
       "skill": "rs31hi-6",
       "name": "Aegis of Life",
+      "icon": "c-Heal over time",
       "x": 4599,
       "y": -68,
       "maxPoints": 4,
@@ -13609,6 +14134,7 @@
     "rs31hi-7": {
       "skill": "rs31hi-7",
       "name": "Tempered Steel",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 5727,
       "y": 276,
       "maxPoints": 5,
@@ -13636,6 +14162,7 @@
     "rs31hi-8": {
       "skill": "rs31hi-8",
       "name": "Martyr Shields",
+      "icon": "c-sigils of hope",
       "x": 5041.4,
       "y": 276,
       "maxPoints": 4,
@@ -13663,6 +14190,7 @@
     "rs31hi-9": {
       "skill": "rs31hi-9",
       "name": "Collateral Damage",
+      "icon": "Bone Nova",
       "x": 4673.4004,
       "y": 632.80005,
       "maxPoints": 1,
@@ -13687,6 +14215,7 @@
     "rs31hi-10": {
       "skill": "rs31hi-10",
       "name": "Heavy Shrapnel",
+      "icon": "c-rebuke-alternate",
       "x": 4087,
       "y": 632.80005,
       "maxPoints": 3,
@@ -13712,6 +14241,7 @@
     "rs31hi-11": {
       "skill": "rs31hi-11",
       "name": "Defensive Shields",
+      "icon": "shield-throw",
       "x": 5038.6,
       "y": 992.4,
       "maxPoints": 5,
@@ -13738,6 +14268,7 @@
     "rs31hi-12": {
       "skill": "rs31hi-12",
       "name": "Iron Form",
+      "icon": "Rebuke",
       "x": 5624.6,
       "y": 1260,
       "maxPoints": 1,
@@ -13761,6 +14292,7 @@
     "rs31hi-13": {
       "skill": "rs31hi-13",
       "name": "Rush Wall",
+      "icon": "Shield-Rush",
       "x": 4430.6,
       "y": 1260,
       "maxPoints": 1,
@@ -13783,6 +14315,7 @@
     "rs31hi-14": {
       "skill": "rs31hi-14",
       "name": "Heavy Burden",
+      "icon": "c-slow",
       "x": 6427,
       "y": 700,
       "maxPoints": 3,
@@ -13809,6 +14342,7 @@
     "rs31hi-15": {
       "skill": "rs31hi-15",
       "name": "Pulsing Shields",
+      "icon": "c-shield-bash",
       "x": 6427,
       "y": 1260,
       "maxPoints": 1,
@@ -13831,6 +14365,7 @@
     "rs31hi-16": {
       "skill": "rs31hi-16",
       "name": "Banding",
+      "icon": "rebuke",
       "x": 7127,
       "y": 276,
       "maxPoints": 5,
@@ -13858,6 +14393,7 @@
     "rs31hi-17": {
       "skill": "rs31hi-17",
       "name": "Enduring Defense",
+      "icon": "duration",
       "x": 7836.6,
       "y": 992.4,
       "maxPoints": 3,
@@ -13883,6 +14419,7 @@
     "rs31hi-18": {
       "skill": "rs31hi-18",
       "name": "Coating",
+      "icon": "c-orange-swirl",
       "x": 7219.4,
       "y": 1260,
       "maxPoints": 1,
@@ -13905,6 +14442,7 @@
     "rs31hi-19": {
       "skill": "rs31hi-19",
       "name": "Shield Spike",
+      "icon": "shield-block",
       "x": 8463.8,
       "y": 1260,
       "maxPoints": 1,
@@ -13927,6 +14465,7 @@
     "rs31hi-20": {
       "skill": "rs31hi-20",
       "name": "Molten Shields",
+      "icon": "smelter-swrath",
       "x": 8011.8,
       "y": 276,
       "maxPoints": 1,
@@ -13957,6 +14496,7 @@
     "rs31hi-21": {
       "skill": "rs31hi-21",
       "name": "Immolation",
+      "icon": "Fire Shield",
       "x": 8355,
       "y": -244,
       "maxPoints": 1,
@@ -13984,6 +14524,7 @@
     "rs31hi-22": {
       "skill": "rs31hi-22",
       "name": "Fire Spin",
+      "icon": "c-Flame Reave",
       "x": 8967,
       "y": -152,
       "maxPoints": 4,
@@ -14007,6 +14548,7 @@
     "rs31hi-23": {
       "skill": "rs31hi-23",
       "name": "Touched by Fire",
+      "icon": "homing-fireballs",
       "x": 8355,
       "y": 800,
       "maxPoints": 5,
@@ -14031,6 +14573,7 @@
     "rs31hi-24": {
       "skill": "rs31hi-24",
       "name": "Bastion",
+      "icon": "Nova-yellow",
       "x": 7075,
       "y": -443.2,
       "maxPoints": 5,
@@ -14056,6 +14599,7 @@
     "rs31hi-26": {
       "skill": "rs31hi-26",
       "name": "Amass",
+      "icon": "holy-shield",
       "x": 7836.6,
       "y": -443.2,
       "maxPoints": 3,
@@ -14079,6 +14623,7 @@
     "rs31hi-27": {
       "skill": "rs31hi-27",
       "name": "Displacement",
+      "icon": "holy-symbol-2",
       "x": 7615,
       "y": -816,
       "maxPoints": 1,
@@ -14107,6 +14652,7 @@
     "rs31hi-28": {
       "skill": "rs31hi-28",
       "name": "Wreathed in Flame",
+      "icon": "holy-fire-sword",
       "x": 8967,
       "y": 700,
       "maxPoints": 3,
@@ -14154,6 +14700,7 @@
     "sb4h-1": {
       "skill": "sb4h-1",
       "name": "Dazed",
+      "icon": "c-stun",
       "x": 5707,
       "y": -360,
       "maxPoints": 5,
@@ -14180,6 +14727,7 @@
     "sb4h-2": {
       "skill": "sb4h-2",
       "name": "Wall of Shields",
+      "icon": "Shieldwall",
       "x": 5051,
       "y": -200,
       "maxPoints": 1,
@@ -14205,6 +14753,7 @@
     "sb4h-3": {
       "skill": "sb4h-3",
       "name": "Refreshing Smash",
+      "icon": "c-Health Regeneration Buff (generic)_2",
       "x": 6131,
       "y": -692,
       "maxPoints": 3,
@@ -14230,6 +14779,7 @@
     "sb4h-4": {
       "skill": "sb4h-4",
       "name": "Splintering Blow",
+      "icon": "c-Flame Reave",
       "x": 5691,
       "y": -916,
       "maxPoints": 1,
@@ -14256,6 +14806,7 @@
     "sb4h-5": {
       "skill": "sb4h-5",
       "name": "Survival of the Fittest",
+      "icon": "c-Health Regeneration Buff (generic)",
       "x": 6723,
       "y": -688,
       "maxPoints": 1,
@@ -14278,6 +14829,7 @@
     "sb4h-6": {
       "skill": "sb4h-6",
       "name": "Broadened Shield",
+      "icon": "c-tremor2",
       "x": 4795,
       "y": -560,
       "maxPoints": 3,
@@ -14303,6 +14855,7 @@
     "sb4h-7": {
       "skill": "sb4h-7",
       "name": "Disarming Blows",
+      "icon": "c-despair",
       "x": 5099,
       "y": -916,
       "maxPoints": 3,
@@ -14325,6 +14878,7 @@
     "sb4h-8": {
       "skill": "sb4h-8",
       "name": "Flame Coating",
+      "icon": "fire-shield-throw",
       "x": 4295,
       "y": -224,
       "maxPoints": 4,
@@ -14352,6 +14906,7 @@
     "sb4h-9": {
       "skill": "sb4h-9",
       "name": "Kindling",
+      "icon": "c-ignite",
       "x": 3967,
       "y": 392,
       "maxPoints": 4,
@@ -14377,6 +14932,7 @@
     "sb4h-10": {
       "skill": "sb4h-10",
       "name": "Incinerating Blows",
+      "icon": "Glyph of Fire",
       "x": 3967,
       "y": -804,
       "maxPoints": 1,
@@ -14401,6 +14957,7 @@
     "sb4h-11": {
       "skill": "sb4h-11",
       "name": "Protective Impact",
+      "icon": "shield-block",
       "x": 5587.4,
       "y": 392,
       "maxPoints": 5,
@@ -14430,6 +14987,7 @@
     "sb4h-12": {
       "skill": "sb4h-12",
       "name": "Power Rush",
+      "icon": "c-lunge",
       "x": 4875,
       "y": 260,
       "maxPoints": 1,
@@ -14452,6 +15010,7 @@
     "sb4h-13": {
       "skill": "sb4h-13",
       "name": "Perfect Bulwark",
+      "icon": "ring-of-shields",
       "x": 4675,
       "y": 700,
       "maxPoints": 3,
@@ -14476,6 +15035,7 @@
     "sb4h-14": {
       "skill": "sb4h-14",
       "name": "Block Out",
+      "icon": "c-slit-eye",
       "x": 3967,
       "y": 1020,
       "maxPoints": 1,
@@ -14498,6 +15058,7 @@
     "sb4h-15": {
       "skill": "sb4h-15",
       "name": "Rebounding",
+      "icon": "Rive 2 silver",
       "x": 5479,
       "y": 980,
       "maxPoints": 1,
@@ -14524,6 +15085,7 @@
     "sb4h-16": {
       "skill": "sb4h-16",
       "name": "Hindrance",
+      "icon": "c-slow",
       "x": 6427,
       "y": 524,
       "maxPoints": 3,
@@ -14550,6 +15112,7 @@
     "sb4h-17": {
       "skill": "sb4h-17",
       "name": "Breadth",
+      "icon": "c-disintegrate_2",
       "x": 6187,
       "y": 1004,
       "maxPoints": 3,
@@ -14577,6 +15140,7 @@
     "sb4h-18": {
       "skill": "sb4h-18",
       "name": "Conjurer",
+      "icon": "c-red flask",
       "x": 5787.4,
       "y": 1256,
       "maxPoints": 1,
@@ -14599,6 +15163,7 @@
     "sb4h-19": {
       "skill": "sb4h-19",
       "name": "Impeded Movement",
+      "icon": "Future strike",
       "x": 6667,
       "y": 1004,
       "maxPoints": 2,
@@ -14623,6 +15188,7 @@
     "sb4h-20": {
       "skill": "sb4h-20",
       "name": "Staggering Punch",
+      "icon": "Roll-temp",
       "x": 7042.6,
       "y": 1284,
       "maxPoints": 3,
@@ -14645,6 +15211,7 @@
     "sb4h-21": {
       "skill": "sb4h-21",
       "name": "Double Bash",
+      "icon": "c-light swirl",
       "x": 7267,
       "y": 772,
       "maxPoints": 1,
@@ -14673,6 +15240,7 @@
     "sb4h-22": {
       "skill": "sb4h-22",
       "name": "Fusillade",
+      "icon": "c-Ravage",
       "x": 7671,
       "y": 1100,
       "maxPoints": 1,
@@ -14696,6 +15264,7 @@
     "sb4h-23": {
       "skill": "sb4h-23",
       "name": "Steel Coating",
+      "icon": "c-physical damage buff",
       "x": 8135,
       "y": 520,
       "maxPoints": 5,
@@ -14726,6 +15295,7 @@
     "sb4h-24": {
       "skill": "sb4h-24",
       "name": "Juggernaut",
+      "icon": "c-Attack Speed Buff (generic)_3",
       "x": 8571,
       "y": 1132.8,
       "maxPoints": 1,
@@ -14749,6 +15319,7 @@
     "sb4h-25": {
       "skill": "sb4h-25",
       "name": "Cutting Edge",
+      "icon": "Armor Shred",
       "x": 7063,
       "y": -0,
       "maxPoints": 3,
@@ -14776,6 +15347,7 @@
     "sb4h-26": {
       "skill": "sb4h-26",
       "name": "Serrating Strikes",
+      "icon": "c-bleed",
       "x": 8135,
       "y": -0,
       "maxPoints": 5,
@@ -14803,6 +15375,7 @@
     "sb4h-27": {
       "skill": "sb4h-27",
       "name": "Iron Arms",
+      "icon": "c-melee damage buff",
       "x": 8843,
       "y": 260,
       "maxPoints": 1,
@@ -14830,6 +15403,7 @@
     "sb4h-28": {
       "skill": "sb4h-28",
       "name": "Flurry of Blows",
+      "icon": "volatile-reversal",
       "x": 8095.8,
       "y": -669.59985,
       "maxPoints": 1,
@@ -14858,6 +15432,7 @@
     "sb4h-29": {
       "skill": "sb4h-29",
       "name": "High Impact",
+      "icon": "c-melee damage buff",
       "x": 8323,
       "y": -1231.9999,
       "maxPoints": 5,
@@ -14880,6 +15455,7 @@
     "sb4h-30": {
       "skill": "sb4h-30",
       "name": "Concussive Attacks",
+      "icon": "mace-hit",
       "x": 8803.4,
       "y": -1002.3999,
       "maxPoints": 3,
@@ -14903,6 +15479,7 @@
     "sb4h-32": {
       "skill": "sb4h-32",
       "name": "Indomitable Force",
+      "icon": "kinetic-bolt",
       "x": 7467,
       "y": -492,
       "maxPoints": 2,
@@ -14927,6 +15504,7 @@
     "sb4h-34": {
       "skill": "sb4h-34",
       "name": "Shieldstorm",
+      "icon": "void-shield-throw",
       "x": 8684.6,
       "y": -492.39984,
       "maxPoints": 1,
@@ -14971,6 +15549,7 @@
     "si4lgl-2": {
       "skill": "si4lgl-2",
       "name": "Celestial Concentration",
+      "icon": "c-flurry2 - blue",
       "x": 4559,
       "y": -0,
       "maxPoints": 4,
@@ -14997,6 +15576,7 @@
     "si4lgl-4": {
       "skill": "si4lgl-4",
       "name": "Zeal of Storms",
+      "icon": "c-static-holy",
       "x": 4439,
       "y": -524,
       "maxPoints": 5,
@@ -15024,6 +15604,7 @@
     "si4lgl-5": {
       "skill": "si4lgl-5",
       "name": "Burning Sign",
+      "icon": "c-ignite",
       "x": 4983,
       "y": -888,
       "maxPoints": 5,
@@ -15051,6 +15632,7 @@
     "si4lgl-6": {
       "skill": "si4lgl-6",
       "name": "Heavenly Justice",
+      "icon": "holy-mace",
       "x": 4983,
       "y": -420,
       "maxPoints": 5,
@@ -15073,6 +15655,7 @@
     "si4lgl-7": {
       "skill": "si4lgl-7",
       "name": "Invigorate",
+      "icon": "c-Healing Hands",
       "x": 4907,
       "y": 740,
       "maxPoints": 5,
@@ -15097,6 +15680,7 @@
     "si4lgl-8": {
       "skill": "si4lgl-8",
       "name": "Quiet Mind",
+      "icon": "c-Mana Regeneration Buff (generic)",
       "x": 5787,
       "y": 464,
       "maxPoints": 3,
@@ -15123,6 +15707,7 @@
     "si4lgl-9": {
       "skill": "si4lgl-9",
       "name": "Polygram",
+      "icon": "c-Sigils of Hope Temp",
       "x": 4055.4,
       "y": 740,
       "maxPoints": 1,
@@ -15145,6 +15730,7 @@
     "si4lgl-10": {
       "skill": "si4lgl-10",
       "name": "Faith",
+      "icon": "c-Consecration 3",
       "x": 6427,
       "y": 739.6,
       "maxPoints": 3,
@@ -15173,6 +15759,7 @@
     "si4lgl-11": {
       "skill": "si4lgl-11",
       "name": "Renewed Hope",
+      "icon": "holy-symbol-2",
       "x": 5811,
       "y": 1028,
       "maxPoints": 3,
@@ -15197,6 +15784,7 @@
     "si4lgl-12": {
       "skill": "si4lgl-12",
       "name": "Healing Rites",
+      "icon": "c-Health Regeneration Buff (generic)",
       "x": 5107,
       "y": 1208,
       "maxPoints": 5,
@@ -15219,6 +15807,7 @@
     "si4lgl-13": {
       "skill": "si4lgl-13",
       "name": "Fervor",
+      "icon": "c-Swiftness",
       "x": 7043,
       "y": 1024,
       "maxPoints": 1,
@@ -15241,6 +15830,7 @@
     "si4lgl-14": {
       "skill": "si4lgl-14",
       "name": "Unwavering Faith",
+      "icon": "c-Heal over time",
       "x": 6431,
       "y": 1232,
       "maxPoints": 2,
@@ -15263,6 +15853,7 @@
     "si4lgl-15": {
       "skill": "si4lgl-15",
       "name": "Iron Symbols",
+      "icon": "holy-shield",
       "x": 7127,
       "y": -0,
       "maxPoints": 5,
@@ -15289,6 +15880,7 @@
     "si4lgl-16": {
       "skill": "si4lgl-16",
       "name": "Holy Revelation",
+      "icon": "battle_standard",
       "x": 7703,
       "y": -0,
       "maxPoints": 3,
@@ -15313,6 +15905,7 @@
     "si4lgl-17": {
       "skill": "si4lgl-17",
       "name": "Divine Flare",
+      "icon": "holy-symbol-3",
       "x": 8403,
       "y": 212.80005,
       "maxPoints": 1,
@@ -15345,6 +15938,7 @@
     "si4lgl-18": {
       "skill": "si4lgl-18",
       "name": "Waves of Light",
+      "icon": "c-static-holy",
       "x": 7883,
       "y": 556.00006,
       "maxPoints": 4,
@@ -15370,6 +15964,7 @@
     "si4lgl-20": {
       "skill": "si4lgl-20",
       "name": "Well of Light",
+      "icon": "holy-fire-sword",
       "x": 8774.6,
       "y": 1192.8,
       "maxPoints": 4,
@@ -15395,6 +15990,7 @@
     "si4lgl-21": {
       "skill": "si4lgl-21",
       "name": "Cleansing Light",
+      "icon": "holy-helmet",
       "x": 8045,
       "y": 1199.4,
       "maxPoints": 4,
@@ -15418,6 +16014,7 @@
     "si4lgl-22": {
       "skill": "si4lgl-22",
       "name": "Energized Flare",
+      "icon": "holy-gauntlet",
       "x": 8931,
       "y": 556,
       "maxPoints": 1,
@@ -15441,6 +16038,7 @@
     "si4lgl-23": {
       "skill": "si4lgl-23",
       "name": "Enduring Hope",
+      "icon": "c-judgement",
       "x": 7411,
       "y": -524,
       "maxPoints": 2,
@@ -15467,6 +16065,7 @@
     "si4lgl-24": {
       "skill": "si4lgl-24",
       "name": "Meditation",
+      "icon": "c-despair",
       "x": 8245,
       "y": -420,
       "maxPoints": 1,
@@ -15492,6 +16091,7 @@
     "si4lgl-25": {
       "skill": "si4lgl-25",
       "name": "Inspire Hope",
+      "icon": "holy-armor",
       "x": 8775,
       "y": -996,
       "maxPoints": 1,
@@ -15514,6 +16114,7 @@
     "si4lgl-26": {
       "skill": "si4lgl-26",
       "name": "Sign of the Guardian",
+      "icon": "shield-block",
       "x": 9011,
       "y": -324,
       "maxPoints": 3,
@@ -15537,6 +16138,7 @@
     "si4lgl-28": {
       "skill": "si4lgl-28",
       "name": "Tetragram",
+      "icon": "c-holy aura (2)",
       "x": 6771,
       "y": -796,
       "maxPoints": 1,
@@ -15559,6 +16161,7 @@
     "si4lgl-29": {
       "skill": "si4lgl-29",
       "name": "Decree of Flame",
+      "icon": "c-orange-swirl",
       "x": 5527,
       "y": -524,
       "maxPoints": 3,
@@ -15586,6 +16189,7 @@
     "si4lgl-30": {
       "skill": "si4lgl-30",
       "name": "Symbols of Despair",
+      "icon": "void-symbol",
       "x": 6079,
       "y": -796,
       "maxPoints": 1,
@@ -15610,6 +16214,7 @@
     "si4lgl-32": {
       "skill": "si4lgl-32",
       "name": "Empowering Symbols",
+      "icon": "c-fire-lightning-blade",
       "x": 5407,
       "y": -0,
       "maxPoints": 5,
@@ -15636,6 +16241,7 @@
     "si4lgl-34": {
       "skill": "si4lgl-34",
       "name": "Symbol of Righteousness",
+      "icon": "holy-symbol-1",
       "x": 7935,
       "y": -888,
       "maxPoints": 3,
@@ -15686,6 +16292,7 @@
     "sm87r4-2": {
       "skill": "sm87r4-2",
       "name": "Fissure",
+      "icon": "Glyph of Fire alt",
       "x": 6427,
       "y": 654,
       "maxPoints": 1,
@@ -15716,6 +16323,7 @@
     "sm87r4-3": {
       "skill": "sm87r4-3",
       "name": "Epicenter",
+      "icon": "c-Explosive Trap",
       "x": 6427,
       "y": 1271.6,
       "maxPoints": 2,
@@ -15741,6 +16349,7 @@
     "sm87r4-4": {
       "skill": "sm87r4-4",
       "name": "Heavy Impact",
+      "icon": "c-cinder-strike-1",
       "x": 7067,
       "y": 1104.4,
       "maxPoints": 4,
@@ -15768,6 +16377,7 @@
     "sm87r4-5": {
       "skill": "sm87r4-5",
       "name": "Six Feet Under",
+      "icon": "Sacrifice",
       "x": 7803.8,
       "y": 1174,
       "maxPoints": 3,
@@ -15793,6 +16403,7 @@
     "sm87r4-6": {
       "skill": "sm87r4-6",
       "name": "Aftershock",
+      "icon": "Phoenix Strike",
       "x": 5786.2,
       "y": 1104.4,
       "maxPoints": 2,
@@ -15822,6 +16433,7 @@
     "sm87r4-7": {
       "skill": "sm87r4-7",
       "name": "Descend",
+      "icon": "c-sky bolt",
       "x": 4860.2,
       "y": 1209.6,
       "maxPoints": 1,
@@ -15857,6 +16469,7 @@
     "sm87r4-8": {
       "skill": "sm87r4-8",
       "name": "Forceful Impact",
+      "icon": "c-wave-of-light",
       "x": 3976.6,
       "y": 1057.2,
       "maxPoints": 5,
@@ -15879,6 +16492,7 @@
     "sm87r4-9": {
       "skill": "sm87r4-9",
       "name": "Holy Wave",
+      "icon": "battle_standard",
       "x": 5727,
       "y": -400,
       "maxPoints": 4,
@@ -15905,6 +16519,7 @@
     "sm87r4-10": {
       "skill": "sm87r4-10",
       "name": "Righteous Fury",
+      "icon": "holy-fire-sword",
       "x": 4734.2,
       "y": -258.40002,
       "maxPoints": 5,
@@ -15931,6 +16546,7 @@
     "sm87r4-11": {
       "skill": "sm87r4-11",
       "name": "Righteous Flurry",
+      "icon": "c-cinder-strike-2",
       "x": 4143.8,
       "y": 454,
       "maxPoints": 4,
@@ -15958,6 +16574,7 @@
     "sm87r4-12": {
       "skill": "sm87r4-12",
       "name": "Panacea",
+      "icon": "c-Consecration 3",
       "x": 5099.8,
       "y": -732,
       "maxPoints": 5,
@@ -15982,6 +16599,7 @@
     "sm87r4-13": {
       "skill": "sm87r4-13",
       "name": "Desperate Measures",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 4284.6,
       "y": -732,
       "maxPoints": 1,
@@ -16006,6 +16624,7 @@
     "sm87r4-14": {
       "skill": "sm87r4-14",
       "name": "Soothing Balm",
+      "icon": "c-Heal over time",
       "x": 6127,
       "y": -811.2,
       "maxPoints": 3,
@@ -16031,6 +16650,7 @@
     "sm87r4-15": {
       "skill": "sm87r4-15",
       "name": "Pillars of Light",
+      "icon": "c-judgement",
       "x": 7127,
       "y": 400,
       "maxPoints": 3,
@@ -16055,6 +16675,7 @@
     "sm87r4-16": {
       "skill": "sm87r4-16",
       "name": "Holy Fire",
+      "icon": "c-ignite",
       "x": 5727,
       "y": 400,
       "maxPoints": 5,
@@ -16080,6 +16701,7 @@
     "sm87r4-17": {
       "skill": "sm87r4-17",
       "name": "Conflagration",
+      "icon": "Divine bolt",
       "x": 5314.2,
       "y": 26,
       "maxPoints": 5,
@@ -16109,6 +16731,7 @@
     "sm87r4-18": {
       "skill": "sm87r4-18",
       "name": "Immolate",
+      "icon": "Volcanic-Orb",
       "x": 5314.1997,
       "y": 777.6,
       "maxPoints": 2,
@@ -16134,6 +16757,7 @@
     "sm87r4-19": {
       "skill": "sm87r4-19",
       "name": "Righteous Overload",
+      "icon": "Fireball explosion",
       "x": 4934.2,
       "y": 400.00003,
       "maxPoints": 5,
@@ -16160,6 +16784,7 @@
     "sm87r4-20": {
       "skill": "sm87r4-20",
       "name": "Blinding Flash",
+      "icon": "Blinding",
       "x": 7127,
       "y": -400,
       "maxPoints": 5,
@@ -16186,6 +16811,7 @@
     "sm87r4-21": {
       "skill": "sm87r4-21",
       "name": "Order of Lagon",
+      "icon": "charged ground",
       "x": 8405.4,
       "y": -552.40015,
       "maxPoints": 1,
@@ -16215,6 +16841,7 @@
     "sm87r4-22": {
       "skill": "sm87r4-22",
       "name": "Unbalanced Scale",
+      "icon": "chain lightning",
       "x": 8823,
       "y": -180.80014,
       "maxPoints": 1,
@@ -16240,6 +16867,7 @@
     "sm87r4-23": {
       "skill": "sm87r4-23",
       "name": "Charged Hand",
+      "icon": "Lightning Bolt",
       "x": 8823,
       "y": -964.00024,
       "maxPoints": 5,
@@ -16263,6 +16891,7 @@
     "sm87r4-24": {
       "skill": "sm87r4-24",
       "name": "Wandering Bolts",
+      "icon": "Static_Orb",
       "x": 7983,
       "y": -180.80017,
       "maxPoints": 3,
@@ -16285,6 +16914,7 @@
     "sm87r4-25": {
       "skill": "sm87r4-25",
       "name": "Conviction",
+      "icon": "c-judgement2",
       "x": 9114.6,
       "y": 932.8004,
       "maxPoints": 4,
@@ -16307,6 +16937,7 @@
     "sm87r4-26": {
       "skill": "sm87r4-26",
       "name": "Deep Impact",
+      "icon": "c-Consecration 3",
       "x": 9114.601,
       "y": 340,
       "maxPoints": 4,
@@ -16329,6 +16960,7 @@
     "sm87r4-27": {
       "skill": "sm87r4-27",
       "name": "Grace",
+      "icon": "holy-symbol-1",
       "x": 6727,
       "y": -811.2,
       "maxPoints": 5,
@@ -16351,6 +16983,7 @@
     "sm87r4-28": {
       "skill": "sm87r4-28",
       "name": "Atonement",
+      "icon": "holy-symbol-3",
       "x": 8418.6,
       "y": 454,
       "maxPoints": 5,
@@ -16376,6 +17009,7 @@
     "sm87r4-30": {
       "skill": "sm87r4-30",
       "name": "Sacrifice",
+      "icon": "rip blood",
       "x": 7783,
       "y": 496,
       "maxPoints": 5,
@@ -16404,6 +17038,7 @@
     "sm87r4-31": {
       "skill": "sm87r4-31",
       "name": "Piety",
+      "icon": "c-detonating-arrow",
       "x": 7983,
       "y": -964,
       "maxPoints": 4,
@@ -16428,6 +17063,7 @@
     "sm87r4-32": {
       "skill": "sm87r4-32",
       "name": "Fallen from Grace",
+      "icon": "Void Bolt",
       "x": 8418.6,
       "y": 1057.2,
       "maxPoints": 1,
@@ -16474,6 +17110,7 @@
     "sndr1-2": {
       "skill": "sndr1-2",
       "name": "Champion",
+      "icon": "Rive 2 silver",
       "x": 5863,
       "y": -480,
       "maxPoints": 4,
@@ -16501,6 +17138,7 @@
     "sndr1-3": {
       "skill": "sndr1-3",
       "name": "Bound Weapon",
+      "icon": "Sword slash",
       "x": 5667,
       "y": -0,
       "maxPoints": 4,
@@ -16528,6 +17166,7 @@
     "sndr1-4": {
       "skill": "sndr1-4",
       "name": "Laceration",
+      "icon": "c-Laceration",
       "x": 7127,
       "y": -848,
       "maxPoints": 1,
@@ -16553,6 +17192,7 @@
     "sndr1-5": {
       "skill": "sndr1-5",
       "name": "Temporal Warrior",
+      "icon": "Warpath void",
       "x": 3935,
       "y": -648,
       "maxPoints": 1,
@@ -16580,6 +17220,7 @@
     "sndr1-6": {
       "skill": "sndr1-6",
       "name": "Weapon Specialist",
+      "icon": "throwing_axe",
       "x": 5223,
       "y": -592,
       "maxPoints": 1,
@@ -16606,6 +17247,7 @@
     "sndr1-7": {
       "skill": "sndr1-7",
       "name": "Azure Crescendo",
+      "icon": "c-flurry2 - blue",
       "x": 8363,
       "y": 272,
       "maxPoints": 3,
@@ -16629,6 +17271,7 @@
     "sndr1-8": {
       "skill": "sndr1-8",
       "name": "Ripples of Oblivion",
+      "icon": "Rive 3 void",
       "x": 4563.8,
       "y": -828,
       "maxPoints": 5,
@@ -16657,6 +17300,7 @@
     "sndr1-9": {
       "skill": "sndr1-9",
       "name": "Sever",
+      "icon": "holy-fire-sword",
       "x": 5863,
       "y": 480,
       "maxPoints": 3,
@@ -16682,6 +17326,7 @@
     "sndr1-10": {
       "skill": "sndr1-10",
       "name": "Twisting Fangs",
+      "icon": "c-Flame Reave",
       "x": 4851,
       "y": 720,
       "maxPoints": 3,
@@ -16707,6 +17352,7 @@
     "sndr1-11": {
       "skill": "sndr1-11",
       "name": "Flame Drinker's Blade",
+      "icon": "cremate2",
       "x": 4363.8,
       "y": 1186,
       "maxPoints": 1,
@@ -16736,6 +17382,7 @@
     "sndr1-12": {
       "skill": "sndr1-12",
       "name": "Assassin's Sustenance",
+      "icon": "summon blood wraith",
       "x": 3864.6,
       "y": 888,
       "maxPoints": 1,
@@ -16759,6 +17406,7 @@
     "sndr1-13": {
       "skill": "sndr1-13",
       "name": "Savagery",
+      "icon": "smelter-swrath",
       "x": 4367.8,
       "y": 217.2,
       "maxPoints": 3,
@@ -16781,6 +17429,7 @@
     "sndr1-14": {
       "skill": "sndr1-14",
       "name": "Scrap Metal",
+      "icon": "fire-gloves",
       "x": 4523,
       "y": -300,
       "maxPoints": 1,
@@ -16808,6 +17457,7 @@
     "sndr1-15": {
       "skill": "sndr1-15",
       "name": "Flurry",
+      "icon": "Sword slash double",
       "x": 6991,
       "y": 480,
       "maxPoints": 4,
@@ -16834,6 +17484,7 @@
     "sndr1-16": {
       "skill": "sndr1-16",
       "name": "Concentration",
+      "icon": "Spear stab",
       "x": 6427,
       "y": 760,
       "maxPoints": 4,
@@ -16860,6 +17511,7 @@
     "sndr1-17": {
       "skill": "sndr1-17",
       "name": "Adrenaline",
+      "icon": "Axe slash double",
       "x": 5847.4,
       "y": 1200,
       "maxPoints": 4,
@@ -16882,6 +17534,7 @@
     "sndr1-18": {
       "skill": "sndr1-18",
       "name": "Focused Strike",
+      "icon": "Javelin",
       "x": 7003,
       "y": 1200,
       "maxPoints": 1,
@@ -16906,6 +17559,7 @@
     "sndr1-19": {
       "skill": "sndr1-19",
       "name": "Rending",
+      "icon": "Armor Shred",
       "x": 7799,
       "y": 784,
       "maxPoints": 2,
@@ -16931,6 +17585,7 @@
     "sndr1-20": {
       "skill": "sndr1-20",
       "name": "Projection of War",
+      "icon": "Armblade_Slashes1",
       "x": 7503,
       "y": 1200,
       "maxPoints": 1,
@@ -16954,6 +17609,7 @@
     "sndr1-21": {
       "skill": "sndr1-21",
       "name": "Cadence",
+      "icon": "c-double-strike2",
       "x": 8615,
       "y": 784,
       "maxPoints": 1,
@@ -16980,6 +17636,7 @@
     "sndr1-22": {
       "skill": "sndr1-22",
       "name": "Triple Threat",
+      "icon": "Rive 3 silver",
       "x": 9023,
       "y": 424,
       "maxPoints": 1,
@@ -17004,6 +17661,7 @@
     "sndr1-23": {
       "skill": "sndr1-23",
       "name": "Double Slash",
+      "icon": "Rive 2",
       "x": 8947,
       "y": 1200,
       "maxPoints": 1,
@@ -17026,6 +17684,7 @@
     "sndr1-24": {
       "skill": "sndr1-24",
       "name": "Foe Cleaver",
+      "icon": "holy-fire-sword",
       "x": 5039,
       "y": -0,
       "maxPoints": 1,
@@ -17051,6 +17710,7 @@
     "sndr1-26": {
       "skill": "sndr1-26",
       "name": "Iron Reach",
+      "icon": "c-double-strike",
       "x": 7479,
       "y": 272,
       "maxPoints": 4,
@@ -17078,6 +17738,7 @@
     "sndr1-27": {
       "skill": "sndr1-27",
       "name": "Challenge",
+      "icon": "BlackHole",
       "x": 7903,
       "y": -40,
       "maxPoints": 1,
@@ -17109,6 +17770,7 @@
     "sndr1-28": {
       "skill": "sndr1-28",
       "name": "Outburst",
+      "icon": "Warpath",
       "x": 7047,
       "y": -200,
       "maxPoints": 3,
@@ -17134,6 +17796,7 @@
     "sndr1-29": {
       "skill": "sndr1-29",
       "name": "Reclamation",
+      "icon": "Bone Pile Blood",
       "x": 7631,
       "y": -592,
       "maxPoints": 2,
@@ -17160,6 +17823,7 @@
     "sndr1-30": {
       "skill": "sndr1-30",
       "name": "Brutality",
+      "icon": "Rive 3",
       "x": 8363,
       "y": -628,
       "maxPoints": 3,
@@ -17188,6 +17852,7 @@
     "sndr1-31": {
       "skill": "sndr1-31",
       "name": "Massacre",
+      "icon": "c-bleed",
       "x": 6435,
       "y": -699.9999,
       "maxPoints": 4,
@@ -17215,6 +17880,7 @@
     "sndr1-32": {
       "skill": "sndr1-32",
       "name": "Coup de Grace",
+      "icon": "c-flurry2 - orange",
       "x": 9023,
       "y": -792,
       "maxPoints": 1,
@@ -17261,6 +17927,7 @@
     "sr31hu-2": {
       "skill": "sr31hu-2",
       "name": "Consuming Path",
+      "icon": "shield-throw",
       "x": 6827,
       "y": 640,
       "maxPoints": 5,
@@ -17287,6 +17954,7 @@
     "sr31hu-3": {
       "skill": "sr31hu-3",
       "name": "Will Breaker",
+      "icon": "mace-hit",
       "x": 6427,
       "y": 1200,
       "maxPoints": 4,
@@ -17309,6 +17977,7 @@
     "sr31hu-4": {
       "skill": "sr31hu-4",
       "name": "Descent of the Void",
+      "icon": "purple-beam",
       "x": 6027,
       "y": 640,
       "maxPoints": 1,
@@ -17334,6 +18003,7 @@
     "sr31hu-5": {
       "skill": "sr31hu-5",
       "name": "Dark Regression",
+      "icon": "purple-beam",
       "x": 5627,
       "y": 1200,
       "maxPoints": 1,
@@ -17360,6 +18030,7 @@
     "sr31hu-6": {
       "skill": "sr31hu-6",
       "name": "Dark Rush",
+      "icon": "c-melee damage buff",
       "x": 7627,
       "y": 640,
       "maxPoints": 1,
@@ -17387,6 +18058,7 @@
     "sr31hu-7": {
       "skill": "sr31hu-7",
       "name": "Void Breaker",
+      "icon": "Void Explosion",
       "x": 7227,
       "y": 1200,
       "maxPoints": 2,
@@ -17409,6 +18081,7 @@
     "sr31hu-8": {
       "skill": "sr31hu-8",
       "name": "Temporal Strike",
+      "icon": "Void_Cleave2",
       "x": 8027,
       "y": 1200,
       "maxPoints": 4,
@@ -17433,6 +18106,7 @@
     "sr31hu-9": {
       "skill": "sr31hu-9",
       "name": "Rush Mastery",
+      "icon": "Focus",
       "x": 7227,
       "y": -0,
       "maxPoints": 6,
@@ -17458,6 +18132,7 @@
     "sr31hu-10": {
       "skill": "sr31hu-10",
       "name": "Protective Speed",
+      "icon": "Shieldwall",
       "x": 7027,
       "y": -480,
       "maxPoints": 2,
@@ -17482,6 +18157,7 @@
     "sr31hu-11": {
       "skill": "sr31hu-11",
       "name": "Unstoppable Charge",
+      "icon": "c-shield-bash",
       "x": 6427,
       "y": -744,
       "maxPoints": 5,
@@ -17504,6 +18180,7 @@
     "sr31hu-12": {
       "skill": "sr31hu-12",
       "name": "Desynchronous Charge",
+      "icon": "volatile-reversal",
       "x": 8027,
       "y": -0,
       "maxPoints": 1,
@@ -17528,6 +18205,7 @@
     "sr31hu-13": {
       "skill": "sr31hu-13",
       "name": "Mana Memory",
+      "icon": "Mana Strike",
       "x": 8827,
       "y": -0,
       "maxPoints": 1,
@@ -17554,6 +18232,7 @@
     "sr31hu-14": {
       "skill": "sr31hu-14",
       "name": "Endless Cycle",
+      "icon": "SummonValeSpirit",
       "x": 8427,
       "y": 400,
       "maxPoints": 4,
@@ -17577,6 +18256,7 @@
     "sr31hu-15": {
       "skill": "sr31hu-15",
       "name": "The Rush of Sacrifice",
+      "icon": "Void Bolt",
       "x": 8427,
       "y": -400,
       "maxPoints": 1,
@@ -17600,6 +18280,7 @@
     "sr31hu-16": {
       "skill": "sr31hu-16",
       "name": "Warrior's Entrance",
+      "icon": "Rive 3",
       "x": 5627,
       "y": -0,
       "maxPoints": 4,
@@ -17627,6 +18308,7 @@
     "sr31hu-17": {
       "skill": "sr31hu-17",
       "name": "Splintering Impact",
+      "icon": "Warpath",
       "x": 5827,
       "y": -480,
       "maxPoints": 5,
@@ -17649,6 +18331,7 @@
     "sr31hu-18": {
       "skill": "sr31hu-18",
       "name": "Critical Rush",
+      "icon": "c-tremor2",
       "x": 5107,
       "y": -480,
       "maxPoints": 2,
@@ -17673,6 +18356,7 @@
     "sr31hu-19": {
       "skill": "sr31hu-19",
       "name": "Obliterating Rush",
+      "icon": "Armblade_Slashes1",
       "x": 4427,
       "y": -744,
       "maxPoints": 2,
@@ -17695,6 +18379,7 @@
     "sr31hu-20": {
       "skill": "sr31hu-20",
       "name": "Echoes of the Charge",
+      "icon": "Thorn_Shield-silver",
       "x": 4827,
       "y": -0,
       "maxPoints": 1,
@@ -17721,6 +18406,7 @@
     "sr31hu-21": {
       "skill": "sr31hu-21",
       "name": "Stretched Time",
+      "icon": "Rive 2 void",
       "x": 4427,
       "y": -400,
       "maxPoints": 5,
@@ -17744,6 +18430,7 @@
     "sr31hu-22": {
       "skill": "sr31hu-22",
       "name": "Critical Echo",
+      "icon": "Rive 3 silver",
       "x": 4427,
       "y": 400,
       "maxPoints": 2,
@@ -17768,6 +18455,7 @@
     "sr31hu-23": {
       "skill": "sr31hu-23",
       "name": "Obliterating Echo",
+      "icon": "fault_line",
       "x": 4027,
       "y": -0,
       "maxPoints": 2,
@@ -17811,6 +18499,7 @@
     "st4th-2": {
       "skill": "st4th-2",
       "name": "Blacksmith's Breadth",
+      "icon": "Anamoly",
       "x": 5715,
       "y": -240,
       "maxPoints": 5,
@@ -17841,6 +18530,7 @@
     "st4th-3": {
       "skill": "st4th-3",
       "name": "Soldering Strike",
+      "icon": "Glyph of Fire",
       "x": 6427,
       "y": -864,
       "maxPoints": 5,
@@ -17868,6 +18558,7 @@
     "st4th-4": {
       "skill": "st4th-4",
       "name": "Stinging Steel",
+      "icon": "holy-fire-sword",
       "x": 5175,
       "y": -836.00006,
       "maxPoints": 3,
@@ -17893,6 +18584,7 @@
     "st4th-5": {
       "skill": "st4th-5",
       "name": "Vulcanic Mastery",
+      "icon": "forge-strike",
       "x": 4327,
       "y": -836,
       "maxPoints": 1,
@@ -17916,6 +18608,7 @@
     "st4th-6": {
       "skill": "st4th-6",
       "name": "Backdraft",
+      "icon": "c-double-strike2",
       "x": 4832.6797,
       "y": -305.19995,
       "maxPoints": 1,
@@ -17941,6 +18634,7 @@
     "st4th-7": {
       "skill": "st4th-7",
       "name": "Heavy Strike",
+      "icon": "Stacking fire",
       "x": 4832.6797,
       "y": 239.79993,
       "maxPoints": 5,
@@ -17967,6 +18661,7 @@
     "st4th-8": {
       "skill": "st4th-8",
       "name": "Bolster",
+      "icon": "Shieldwall",
       "x": 6427,
       "y": 700,
       "maxPoints": 5,
@@ -17994,6 +18689,7 @@
     "st4th-9": {
       "skill": "st4th-9",
       "name": "Whetstone",
+      "icon": "weapon-arsenal",
       "x": 7127,
       "y": -236,
       "maxPoints": 5,
@@ -18026,6 +18722,7 @@
     "st4th-10": {
       "skill": "st4th-10",
       "name": "Tempered Blows",
+      "icon": "c-Attack Speed Debuff (generic)_3",
       "x": 3979,
       "y": 65.2,
       "maxPoints": 3,
@@ -18052,6 +18749,7 @@
     "st4th-11": {
       "skill": "st4th-11",
       "name": "Stoked Flames",
+      "icon": "c-Flame Reave",
       "x": 3979,
       "y": 537.2,
       "maxPoints": 1,
@@ -18074,6 +18772,7 @@
     "st4th-12": {
       "skill": "st4th-12",
       "name": "Furnace",
+      "icon": "flamethrower",
       "x": 5527,
       "y": 832,
       "maxPoints": 1,
@@ -18105,6 +18804,7 @@
     "st4th-13": {
       "skill": "st4th-13",
       "name": "Bellows",
+      "icon": "homing-fireballs",
       "x": 4591,
       "y": 700,
       "maxPoints": 5,
@@ -18129,6 +18829,7 @@
     "st4th-14": {
       "skill": "st4th-14",
       "name": "Forged By Fire",
+      "icon": "Phoenix Strike",
       "x": 3979,
       "y": 1108.8,
       "maxPoints": 3,
@@ -18151,6 +18852,7 @@
     "st4th-15": {
       "skill": "st4th-15",
       "name": "Quench",
+      "icon": "c-slow",
       "x": 4895,
       "y": 1172.2,
       "maxPoints": 5,
@@ -18173,6 +18875,7 @@
     "st4th-16": {
       "skill": "st4th-16",
       "name": "Liquefy",
+      "icon": "Armor Shred",
       "x": 6143,
       "y": 1172.2,
       "maxPoints": 3,
@@ -18195,6 +18898,7 @@
     "st4th-17": {
       "skill": "st4th-17",
       "name": "Ferrous Smash",
+      "icon": "c-Stun Susceptibility Debuff (generic)",
       "x": 7039,
       "y": 1184.2,
       "maxPoints": 5,
@@ -18219,6 +18923,7 @@
     "st4th-18": {
       "skill": "st4th-18",
       "name": "Rebuff",
+      "icon": "c-Ravage",
       "x": 8346.601,
       "y": 1184.2,
       "maxPoints": 3,
@@ -18243,6 +18948,7 @@
     "st4th-19": {
       "skill": "st4th-19",
       "name": "Axe Volley",
+      "icon": "c-Axe Throw",
       "x": 7607.5596,
       "y": 614.4,
       "maxPoints": 1,
@@ -18270,6 +18976,7 @@
     "st4th-20": {
       "skill": "st4th-20",
       "name": "Bury The Hatchet",
+      "icon": "Axe slash double",
       "x": 8234.2,
       "y": 565.2,
       "maxPoints": 5,
@@ -18292,6 +18999,7 @@
     "st4th-21": {
       "skill": "st4th-21",
       "name": "Brightsmith",
+      "icon": "c-ShadowCascade",
       "x": 7655,
       "y": -40,
       "maxPoints": 1,
@@ -18320,6 +19028,7 @@
     "st4th-22": {
       "skill": "st4th-22",
       "name": "Valiance",
+      "icon": "aura of decay_red",
       "x": 8283,
       "y": -322.4,
       "maxPoints": 3,
@@ -18342,6 +19051,7 @@
     "st4th-23": {
       "skill": "st4th-23",
       "name": "Final Strike",
+      "icon": "fire-harvest",
       "x": 8651.8,
       "y": 160,
       "maxPoints": 1,
@@ -18367,6 +19077,7 @@
     "st4th-24": {
       "skill": "st4th-24",
       "name": "Forge Scale",
+      "icon": "Bone Armor",
       "x": 7259,
       "y": -776,
       "maxPoints": 5,
@@ -18391,6 +19102,7 @@
     "st4th-25": {
       "skill": "st4th-25",
       "name": "Detonation",
+      "icon": "Warpath fire",
       "x": 8083,
       "y": -836,
       "maxPoints": 1,
@@ -18416,6 +19128,7 @@
     "st4th-26": {
       "skill": "st4th-26",
       "name": "Crucible",
+      "icon": "Glyph of Fire alt",
       "x": 8835.8,
       "y": -650.80005,
       "maxPoints": 1,
@@ -18439,6 +19152,7 @@
     "st4th-28": {
       "skill": "st4th-28",
       "name": "Sulphurous Sublimation",
+      "icon": "Fireball explosion",
       "x": 6427,
       "y": -412,
       "maxPoints": 1,
@@ -18489,6 +19203,7 @@
     "st31io-2": {
       "skill": "st31io-2",
       "name": "Siege Breaker",
+      "icon": "Javelin",
       "x": 6427,
       "y": 700,
       "maxPoints": 1,
@@ -18515,6 +19230,7 @@
     "st31io-3": {
       "skill": "st31io-3",
       "name": "Steel Defender",
+      "icon": "Shieldwall",
       "x": 4831,
       "y": -700,
       "maxPoints": 4,
@@ -18543,6 +19259,7 @@
     "st31io-4": {
       "skill": "st31io-4",
       "name": "Manifest Inspiration",
+      "icon": "Rive 3",
       "x": 3995,
       "y": -700,
       "maxPoints": 1,
@@ -18568,6 +19285,7 @@
     "st31io-5": {
       "skill": "st31io-5",
       "name": "Faithguard",
+      "icon": "shield-block",
       "x": 4831,
       "y": -183.59985,
       "maxPoints": 1,
@@ -18595,6 +19313,7 @@
     "st31io-6": {
       "skill": "st31io-6",
       "name": "Testament of Light",
+      "icon": "c-Ward Generation Buff (generic)",
       "x": 3995,
       "y": -183.59985,
       "maxPoints": 1,
@@ -18617,6 +19336,7 @@
     "st31io-7": {
       "skill": "st31io-7",
       "name": "Eruption of Coals",
+      "icon": "Fireball explosion",
       "x": 4831,
       "y": 496,
       "maxPoints": 1,
@@ -18646,6 +19366,7 @@
     "st31io-8": {
       "skill": "st31io-8",
       "name": "Forceful Breaking",
+      "icon": "Warpath fire",
       "x": 3995,
       "y": 296,
       "maxPoints": 2,
@@ -18669,6 +19390,7 @@
     "st31io-9": {
       "skill": "st31io-9",
       "name": "Magma Rage",
+      "icon": "smelter-swrath",
       "x": 3995,
       "y": 756,
       "maxPoints": 5,
@@ -18691,6 +19413,7 @@
     "st31io-10": {
       "skill": "st31io-10",
       "name": "Forgeborn",
+      "icon": "spreading flames",
       "x": 5823,
       "y": 472.40015,
       "maxPoints": 4,
@@ -18716,6 +19439,7 @@
     "st31io-11": {
       "skill": "st31io-11",
       "name": "Molten Shield",
+      "icon": "fire-shield",
       "x": 5379,
       "y": 932.80005,
       "maxPoints": 1,
@@ -18745,6 +19469,7 @@
     "st31io-12": {
       "skill": "st31io-12",
       "name": "Molten Toss",
+      "icon": "Volcanic-orb2",
       "x": 4831,
       "y": 1208,
       "maxPoints": 3,
@@ -18769,6 +19494,7 @@
     "st31io-13": {
       "skill": "st31io-13",
       "name": "Burning Crusade",
+      "icon": "c-ignite",
       "x": 3995,
       "y": 1208,
       "maxPoints": 4,
@@ -18792,6 +19518,7 @@
     "st31io-14": {
       "skill": "st31io-14",
       "name": "Sleek Buckler",
+      "icon": "throwing_hammer",
       "x": 5527,
       "y": -0,
       "maxPoints": 3,
@@ -18820,6 +19547,7 @@
     "st31io-15": {
       "skill": "st31io-15",
       "name": "Ricochet",
+      "icon": "Rive 2 silver",
       "x": 5253.4,
       "y": -760,
       "maxPoints": 2,
@@ -18843,6 +19571,7 @@
     "st31io-16": {
       "skill": "st31io-16",
       "name": "Aeroplates",
+      "icon": "holy-bolt",
       "x": 7031,
       "y": 472.4,
       "maxPoints": 3,
@@ -18868,6 +19597,7 @@
     "st31io-17": {
       "skill": "st31io-17",
       "name": "Colossus",
+      "icon": "holy-helmet",
       "x": 7031,
       "y": 1208,
       "maxPoints": 4,
@@ -18896,6 +19626,7 @@
     "st31io-18": {
       "skill": "st31io-18",
       "name": "Vampiric Steel",
+      "icon": "health-leech",
       "x": 7691,
       "y": 872,
       "maxPoints": 4,
@@ -18922,6 +19653,7 @@
     "st31io-19": {
       "skill": "st31io-19",
       "name": "Iron Monger",
+      "icon": "Armor Shred",
       "x": 7691,
       "y": 272.40015,
       "maxPoints": 4,
@@ -18946,6 +19678,7 @@
     "st31io-20": {
       "skill": "st31io-20",
       "name": "Hemrin's Technique",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 8659,
       "y": 1072,
       "maxPoints": 2,
@@ -18969,6 +19702,7 @@
     "st31io-21": {
       "skill": "st31io-21",
       "name": "Heavy Shield",
+      "icon": "forge-hammer",
       "x": 7231,
       "y": -0,
       "maxPoints": 5,
@@ -18997,6 +19731,7 @@
     "st31io-22": {
       "skill": "st31io-22",
       "name": "Sharpened Rim",
+      "icon": "c-shield-bash",
       "x": 8023,
       "y": -103.999985,
       "maxPoints": 3,
@@ -19021,6 +19756,7 @@
     "st31io-23": {
       "skill": "st31io-23",
       "name": "Spiked Plates",
+      "icon": "Shield-Rush",
       "x": 8023,
       "y": -817.6001,
       "maxPoints": 1,
@@ -19045,6 +19781,7 @@
     "st31io-24": {
       "skill": "st31io-24",
       "name": "Rygar's Fury",
+      "icon": "sword-in-ground",
       "x": 8859,
       "y": -817.59985,
       "maxPoints": 1,
@@ -19071,6 +19808,7 @@
     "st31io-25": {
       "skill": "st31io-25",
       "name": "Crippling Throw",
+      "icon": "c-Stagger",
       "x": 7127,
       "y": -760,
       "maxPoints": 4,
@@ -19098,6 +19836,7 @@
     "st31io-26": {
       "skill": "st31io-26",
       "name": "Shredding Edge",
+      "icon": "c-bleed",
       "x": 6427,
       "y": -900,
       "maxPoints": 4,
@@ -19126,6 +19865,7 @@
     "st31io-27": {
       "skill": "st31io-27",
       "name": "Fleet of Foot",
+      "icon": "c-haste",
       "x": 8587,
       "y": 524,
       "maxPoints": 4,
@@ -19148,6 +19888,7 @@
     "st31io-28": {
       "skill": "st31io-28",
       "name": "Defender's Rage",
+      "icon": "lunge",
       "x": 5823,
       "y": 1208,
       "maxPoints": 2,
@@ -19170,6 +19911,7 @@
     "st31io-29": {
       "skill": "st31io-29",
       "name": "Avenger's Wrath",
+      "icon": "c-sky bolt",
       "x": 8859,
       "y": -104,
       "maxPoints": 1,
@@ -19192,6 +19934,7 @@
     "st31io-30": {
       "skill": "st31io-30",
       "name": "Disarming Blow",
+      "icon": "block-arrow",
       "x": 5727,
       "y": -760,
       "maxPoints": 4,
@@ -19218,6 +19961,7 @@
     "st31io-31": {
       "skill": "st31io-31",
       "name": "Throwing Arm",
+      "icon": "c-flurry-2",
       "x": 6427,
       "y": 1264,
       "maxPoints": 1,
@@ -19243,6 +19987,7 @@
     "st31io-33": {
       "skill": "st31io-33",
       "name": "Shield Barrage",
+      "icon": "mace-hit",
       "x": 6427,
       "y": -560,
       "maxPoints": 1,
@@ -19289,6 +20034,7 @@
     "v01cv-2": {
       "skill": "v01cv-2",
       "name": "Riftflame",
+      "icon": "c-ignite",
       "x": 5907,
       "y": -440,
       "maxPoints": 3,
@@ -19321,6 +20067,7 @@
     "v01cv-3": {
       "skill": "v01cv-3",
       "name": "Hellish Chasm",
+      "icon": "smelter-swrath",
       "x": 4882.6,
       "y": -656.4,
       "maxPoints": 1,
@@ -19348,6 +20095,7 @@
     "v01cv-4": {
       "skill": "v01cv-4",
       "name": "Molten Blades",
+      "icon": "holy-fire-sword",
       "x": 4215,
       "y": -656.40015,
       "maxPoints": 5,
@@ -19375,6 +20123,7 @@
     "v01cv-5": {
       "skill": "v01cv-5",
       "name": "Scorching Path",
+      "icon": "c-Manifest-Armour",
       "x": 3806.5999,
       "y": -249.20013,
       "maxPoints": 1,
@@ -19398,6 +20147,7 @@
     "v01cv-6": {
       "skill": "v01cv-6",
       "name": "Abyssal Walker",
+      "icon": "Rive void",
       "x": 5907,
       "y": 320,
       "maxPoints": 4,
@@ -19426,6 +20176,7 @@
     "v01cv-7": {
       "skill": "v01cv-7",
       "name": "Momentum",
+      "icon": "Warpath void",
       "x": 5307.4,
       "y": -0,
       "maxPoints": 4,
@@ -19448,6 +20199,7 @@
     "v01cv-8": {
       "skill": "v01cv-8",
       "name": "Into the Depths",
+      "icon": "Rive 3 void",
       "x": 6427,
       "y": 640,
       "maxPoints": 5,
@@ -19474,6 +20226,7 @@
     "v01cv-9": {
       "skill": "v01cv-9",
       "name": "Precognition",
+      "icon": "c-flurry-1",
       "x": 5507.4,
       "y": 1251.6,
       "maxPoints": 1,
@@ -19500,6 +20253,7 @@
     "v01cv-10": {
       "skill": "v01cv-10",
       "name": "Deadly Omen",
+      "icon": "aura of decay_purple",
       "x": 7483,
       "y": -416,
       "maxPoints": 5,
@@ -19525,6 +20279,7 @@
     "v01cv-11": {
       "skill": "v01cv-11",
       "name": "Rift Maker",
+      "icon": "c-puncture",
       "x": 4566.2,
       "y": 984.8,
       "maxPoints": 3,
@@ -19550,6 +20305,7 @@
     "v01cv-12": {
       "skill": "v01cv-12",
       "name": "Champion of the Void",
+      "icon": "c-flurry3 - blue",
       "x": 4068.2,
       "y": 485.60004,
       "maxPoints": 4,
@@ -19575,6 +20331,7 @@
     "v01cv-13": {
       "skill": "v01cv-13",
       "name": "Obliterator",
+      "icon": "c-erasing_strike",
       "x": 3958.5999,
       "y": 1212,
       "maxPoints": 1,
@@ -19597,6 +20354,7 @@
     "v01cv-14": {
       "skill": "v01cv-14",
       "name": "Crushing Echo",
+      "icon": "Sword slash Void",
       "x": 6427,
       "y": 1251.6,
       "maxPoints": 5,
@@ -19624,6 +20382,7 @@
     "v01cv-15": {
       "skill": "v01cv-15",
       "name": "Abolisher",
+      "icon": "c-void damage buff",
       "x": 7304.2,
       "y": 1251.6,
       "maxPoints": 3,
@@ -19649,6 +20408,7 @@
     "v01cv-16": {
       "skill": "v01cv-16",
       "name": "Ruining Sweep",
+      "icon": "c-Stagger",
       "x": 7434.2,
       "y": 771.2,
       "maxPoints": 3,
@@ -19673,6 +20433,7 @@
     "v01cv-17": {
       "skill": "v01cv-17",
       "name": "Dark Pathway",
+      "icon": "Volatile-Reversal",
       "x": 6947,
       "y": -440,
       "maxPoints": 3,
@@ -19699,6 +20460,7 @@
     "v01cv-18": {
       "skill": "v01cv-18",
       "name": "Fraying Strikes",
+      "icon": "Void Explosion",
       "x": 7483,
       "y": -0,
       "maxPoints": 5,
@@ -19724,6 +20486,7 @@
     "v01cv-19": {
       "skill": "v01cv-19",
       "name": "Resonating Cleave",
+      "icon": "Abyssal_Echoes",
       "x": 6947,
       "y": 320,
       "maxPoints": 1,
@@ -19746,6 +20509,7 @@
     "v01cv-20": {
       "skill": "v01cv-20",
       "name": "Warped Decay",
+      "icon": "c-time rot",
       "x": 8276.6,
       "y": 260.4,
       "maxPoints": 5,
@@ -19773,6 +20537,7 @@
     "v01cv-21": {
       "skill": "v01cv-21",
       "name": "Ravager",
+      "icon": "void-symbol-3",
       "x": 8076.6,
       "y": 1012,
       "maxPoints": 3,
@@ -19799,6 +20564,7 @@
     "v01cv-22": {
       "skill": "v01cv-22",
       "name": "Annuling Presence",
+      "icon": "devouring-orb",
       "x": 8873.8,
       "y": 1212,
       "maxPoints": 5,
@@ -19824,6 +20590,7 @@
     "v01cv-23": {
       "skill": "v01cv-23",
       "name": "Endless Hunger",
+      "icon": "void-symbol",
       "x": 9061,
       "y": 485.6,
       "maxPoints": 3,
@@ -19846,6 +20613,7 @@
     "v01cv-24": {
       "skill": "v01cv-24",
       "name": "Dismantling Throws",
+      "icon": "throwing_axe",
       "x": 8821.8,
       "y": -163.6,
       "maxPoints": 5,
@@ -19874,6 +20642,7 @@
     "v01cv-25": {
       "skill": "v01cv-25",
       "name": "Entropic Blows",
+      "icon": "c-rive-purple-3",
       "x": 8821.8,
       "y": -812,
       "maxPoints": 5,
@@ -19896,6 +20665,7 @@
     "v01cv-26": {
       "skill": "v01cv-26",
       "name": "Armor Sunderer",
+      "icon": "Armor Shred",
       "x": 7483,
       "y": -862.8,
       "maxPoints": 5,
@@ -19924,6 +20694,7 @@
     "v01cv-27": {
       "skill": "v01cv-27",
       "name": "Voidfused Projectiles",
+      "icon": "c-Axe Throw",
       "x": 8047,
       "y": -388,
       "maxPoints": 5,
@@ -19950,6 +20721,7 @@
     "v01cv-28": {
       "skill": "v01cv-28",
       "name": "Nether Charge",
+      "icon": "c-mana storm",
       "x": 8177.8,
       "y": -979.2,
       "maxPoints": 1,
@@ -19973,6 +20745,7 @@
     "v01cv-29": {
       "skill": "v01cv-29",
       "name": "Vorpal Force",
+      "icon": "c-Attack Speed Debuff (generic)_3",
       "x": 6427,
       "y": -760,
       "maxPoints": 4,
@@ -20001,6 +20774,7 @@
     "v01cv-30": {
       "skill": "v01cv-30",
       "name": "Blazing Steel",
+      "icon": "forge-strike",
       "x": 4539.8,
       "y": -49.20015,
       "maxPoints": 1,
@@ -20023,6 +20797,7 @@
     "v01cv-32": {
       "skill": "v01cv-32",
       "name": "Gravity's Edge",
+      "icon": "c-lunge",
       "x": 5219,
       "y": 684,
       "maxPoints": 1,
@@ -20072,6 +20847,7 @@
     "va53st-2": {
       "skill": "va53st-2",
       "name": "Void Spiral",
+      "icon": "Void_Cleave2",
       "x": 7027,
       "y": -440,
       "maxPoints": 5,
@@ -20099,6 +20875,7 @@
     "va53st-4": {
       "skill": "va53st-4",
       "name": "Apocalypse Whirl",
+      "icon": "void-symbol",
       "x": 8439.4,
       "y": -144.00005,
       "maxPoints": 1,
@@ -20128,6 +20905,7 @@
     "va53st-5": {
       "skill": "va53st-5",
       "name": "Maw of the Deep",
+      "icon": "c-void essence",
       "x": 8845,
       "y": -572.80005,
       "maxPoints": 3,
@@ -20152,6 +20930,7 @@
     "va53st-6": {
       "skill": "va53st-6",
       "name": "Juggernaut Stance",
+      "icon": "shield-block",
       "x": 6427,
       "y": -780,
       "maxPoints": 5,
@@ -20178,6 +20957,7 @@
     "va53st-7": {
       "skill": "va53st-7",
       "name": "Battlemaster's Blade",
+      "icon": "Spear stab",
       "x": 4437.8,
       "y": -440,
       "maxPoints": 2,
@@ -20202,6 +20982,7 @@
     "va53st-8": {
       "skill": "va53st-8",
       "name": "Dark Nexus",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 3777.8,
       "y": -734.8,
       "maxPoints": 5,
@@ -20224,6 +21005,7 @@
     "va53st-9": {
       "skill": "va53st-9",
       "name": "Gorebringer",
+      "icon": "c-Laceration",
       "x": 5406.2,
       "y": 966.4,
       "maxPoints": 3,
@@ -20252,6 +21034,7 @@
     "va53st-10": {
       "skill": "va53st-10",
       "name": "Earthscorcher",
+      "icon": "c-ignite",
       "x": 4851,
       "y": 700,
       "maxPoints": 1,
@@ -20282,6 +21065,7 @@
     "va53st-11": {
       "skill": "va53st-11",
       "name": "Path of Fire",
+      "icon": "smelter-swrath",
       "x": 4531,
       "y": 196,
       "maxPoints": 1,
@@ -20308,6 +21092,7 @@
     "va53st-12": {
       "skill": "va53st-12",
       "name": "Iron Reach",
+      "icon": "Rive 2",
       "x": 5827,
       "y": -440,
       "maxPoints": 3,
@@ -20333,6 +21118,7 @@
     "va53st-13": {
       "skill": "va53st-13",
       "name": "Quicksilver Wind",
+      "icon": "c-haste",
       "x": 5827,
       "y": 440,
       "maxPoints": 3,
@@ -20358,6 +21144,7 @@
     "va53st-14": {
       "skill": "va53st-14",
       "name": "Whirling Steel",
+      "icon": "Axe slash double",
       "x": 5137.4,
       "y": -734.8,
       "maxPoints": 5,
@@ -20386,6 +21173,7 @@
     "va53st-16": {
       "skill": "va53st-16",
       "name": "Path of Heavens",
+      "icon": "c-Spellpower 1 Buff (generic)",
       "x": 4285.8,
       "y": 700,
       "maxPoints": 5,
@@ -20411,6 +21199,7 @@
     "va53st-17": {
       "skill": "va53st-17",
       "name": "Way of the Cleric",
+      "icon": "holy-symbol-2",
       "x": 3855,
       "y": 349.6,
       "maxPoints": 5,
@@ -20433,6 +21222,7 @@
     "va53st-18": {
       "skill": "va53st-18",
       "name": "Winds of Justice",
+      "icon": "c-sky bolt",
       "x": 3855,
       "y": 1040,
       "maxPoints": 4,
@@ -20455,6 +21245,7 @@
     "va53st-19": {
       "skill": "va53st-19",
       "name": "Arsenal of Flame",
+      "icon": "holy-fire-sword",
       "x": 4531,
       "y": 1212,
       "maxPoints": 3,
@@ -20478,6 +21269,7 @@
     "va53st-20": {
       "skill": "va53st-20",
       "name": "Warrior's Fury",
+      "icon": "c-double-strike",
       "x": 6107,
       "y": 1123.2,
       "maxPoints": 5,
@@ -20505,6 +21297,7 @@
     "va53st-21": {
       "skill": "va53st-21",
       "name": "Giant Splitter",
+      "icon": "c-dancing-strikes",
       "x": 7523.8,
       "y": 900,
       "maxPoints": 5,
@@ -20531,6 +21324,7 @@
     "va53st-22": {
       "skill": "va53st-22",
       "name": "Way of the Executioner",
+      "icon": "c-flurry-1",
       "x": 8253.4,
       "y": 515.2,
       "maxPoints": 5,
@@ -20558,6 +21352,7 @@
     "va53st-23": {
       "skill": "va53st-23",
       "name": "Unchained",
+      "icon": "Focus",
       "x": 7027,
       "y": 440,
       "maxPoints": 5,
@@ -20583,6 +21378,7 @@
     "va53st-25": {
       "skill": "va53st-25",
       "name": "Cyclone of War",
+      "icon": "weapon-arsenal",
       "x": 5243.8,
       "y": -0,
       "maxPoints": 5,
@@ -20608,6 +21404,7 @@
     "va53st-27": {
       "skill": "va53st-27",
       "name": "Reckless Spin",
+      "icon": "rebuke",
       "x": 6747,
       "y": 1123.2,
       "maxPoints": 1,
@@ -20634,6 +21431,7 @@
     "va53st-28": {
       "skill": "va53st-28",
       "name": "Molten Path",
+      "icon": "c-armor debuff_3",
       "x": 7523.8,
       "y": -0,
       "maxPoints": 5,
@@ -20666,6 +21464,7 @@
     "va53st-29": {
       "skill": "va53st-29",
       "name": "Forgemaster Stance",
+      "icon": "Sword slash",
       "x": 8397,
       "y": 1192,
       "maxPoints": 1,
@@ -20690,6 +21489,7 @@
     "va53st-30": {
       "skill": "va53st-30",
       "name": "Moving Forge",
+      "icon": "Sword slash double",
       "x": 8940.2,
       "y": 715.2,
       "maxPoints": 5,
@@ -20712,6 +21512,7 @@
     "va53st-31": {
       "skill": "va53st-31",
       "name": "Echo Knight",
+      "icon": "Warpath void",
       "x": 8031.4004,
       "y": -572.80005,
       "maxPoints": 1,
@@ -20740,6 +21541,7 @@
     "va53st-32": {
       "skill": "va53st-32",
       "name": "Abyssal Tempest",
+      "icon": "Abyssal_Echoes",
       "x": 8431,
       "y": -964,
       "maxPoints": 1,
@@ -20784,6 +21586,7 @@
     "vr53sl-2": {
       "skill": "vr53sl-2",
       "name": "Swift Echoes",
+      "icon": "duration-purple",
       "x": 6427,
       "y": -804,
       "maxPoints": 4,
@@ -20810,6 +21613,7 @@
     "vr53sl-3": {
       "skill": "vr53sl-3",
       "name": "Anchored Timeline",
+      "icon": "c-void essence",
       "x": 5727,
       "y": -248,
       "maxPoints": 1,
@@ -20837,6 +21641,7 @@
     "vr53sl-4": {
       "skill": "vr53sl-4",
       "name": "Rending Maw",
+      "icon": "Void_Cleave2",
       "x": 5527,
       "y": -700,
       "maxPoints": 3,
@@ -20864,6 +21669,7 @@
     "vr53sl-5": {
       "skill": "vr53sl-5",
       "name": "Voidstep Siphon",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 4937,
       "y": -834,
       "maxPoints": 3,
@@ -20889,6 +21695,7 @@
     "vr53sl-6": {
       "skill": "vr53sl-6",
       "name": "Catching Up",
+      "icon": "void-lunge",
       "x": 4864.2,
       "y": -319.6,
       "maxPoints": 3,
@@ -20917,6 +21724,7 @@
     "vr53sl-7": {
       "skill": "vr53sl-7",
       "name": "Phased Reality",
+      "icon": "void-symbol-3",
       "x": 4255.4,
       "y": -834,
       "maxPoints": 4,
@@ -20939,6 +21747,7 @@
     "vr53sl-8": {
       "skill": "vr53sl-8",
       "name": "Warped Time",
+      "icon": "void-symbol",
       "x": 4255.4,
       "y": -319.59998,
       "maxPoints": 1,
@@ -20961,6 +21770,7 @@
     "vr53sl-9": {
       "skill": "vr53sl-9",
       "name": "Temporal Dilation",
+      "icon": "Rive 2 void",
       "x": 5431,
       "y": 356,
       "maxPoints": 2,
@@ -20989,6 +21799,7 @@
     "vr53sl-10": {
       "skill": "vr53sl-10",
       "name": "Accelerationist",
+      "icon": "Void Explosion",
       "x": 4511,
       "y": 240,
       "maxPoints": 3,
@@ -21013,6 +21824,7 @@
     "vr53sl-11": {
       "skill": "vr53sl-11",
       "name": "Chrono-Devourer",
+      "icon": "void-symbol-2",
       "x": 3918.2,
       "y": 588,
       "maxPoints": 2,
@@ -21035,6 +21847,7 @@
     "vr53sl-12": {
       "skill": "vr53sl-12",
       "name": "Nether Convergence",
+      "icon": "devouring-orb",
       "x": 5231,
       "y": 1116,
       "maxPoints": 1,
@@ -21058,6 +21871,7 @@
     "vr53sl-13": {
       "skill": "vr53sl-13",
       "name": "Eternal Banquet",
+      "icon": "void-eruption",
       "x": 4511,
       "y": 967.2,
       "maxPoints": 2,
@@ -21080,6 +21894,7 @@
     "vr53sl-14": {
       "skill": "vr53sl-14",
       "name": "Immutable Past",
+      "icon": "void-helmet",
       "x": 6119,
       "y": 788,
       "maxPoints": 1,
@@ -21104,6 +21919,7 @@
     "vr53sl-15": {
       "skill": "vr53sl-15",
       "name": "Termination",
+      "icon": "void-gauntlet",
       "x": 7191,
       "y": 556,
       "maxPoints": 5,
@@ -21129,6 +21945,7 @@
     "vr53sl-16": {
       "skill": "vr53sl-16",
       "name": "Future Focus",
+      "icon": "anomaly",
       "x": 6719,
       "y": 1116,
       "maxPoints": 1,
@@ -21152,6 +21969,7 @@
     "vr53sl-17": {
       "skill": "vr53sl-17",
       "name": "Dark Expanse",
+      "icon": "Warpath void",
       "x": 8707,
       "y": 588,
       "maxPoints": 4,
@@ -21178,6 +21996,7 @@
     "vr53sl-18": {
       "skill": "vr53sl-18",
       "name": "Hellfire Rifts",
+      "icon": "smelter-swrath",
       "x": 8255,
       "y": 1184,
       "maxPoints": 1,
@@ -21201,6 +22020,7 @@
     "vr53sl-19": {
       "skill": "vr53sl-19",
       "name": "Volatile Power",
+      "icon": "magical-threads",
       "x": 9115,
       "y": 1184,
       "maxPoints": 3,
@@ -21225,6 +22045,7 @@
     "vr53sl-20": {
       "skill": "vr53sl-20",
       "name": "Dissipation",
+      "icon": "c-slow",
       "x": 7855,
       "y": 96,
       "maxPoints": 4,
@@ -21255,6 +22076,7 @@
     "vr53sl-21": {
       "skill": "vr53sl-21",
       "name": "Reclaimed Action",
+      "icon": "Void Decay",
       "x": 7699,
       "y": 944,
       "maxPoints": 1,
@@ -21277,6 +22099,7 @@
     "vr53sl-22": {
       "skill": "vr53sl-22",
       "name": "Voidbound Momentum",
+      "icon": "c-void damage buff",
       "x": 7191,
       "y": -80,
       "maxPoints": 3,
@@ -21303,6 +22126,7 @@
     "vr53sl-23": {
       "skill": "vr53sl-23",
       "name": "Eldritch Infusion",
+      "icon": "void-symbol-4",
       "x": 9115,
       "y": 76,
       "maxPoints": 3,
@@ -21325,6 +22149,7 @@
     "vr53sl-24": {
       "skill": "vr53sl-24",
       "name": "Incipient Void Bolt",
+      "icon": "Void Bolt",
       "x": 7327,
       "y": -700,
       "maxPoints": 1,
@@ -21354,6 +22179,7 @@
     "vr53sl-25": {
       "skill": "vr53sl-25",
       "name": "Food for Wyrms",
+      "icon": "c-time rot",
       "x": 8223,
       "y": -856,
       "maxPoints": 4,
@@ -21379,6 +22205,7 @@
     "vr53sl-26": {
       "skill": "vr53sl-26",
       "name": "Time Rifts",
+      "icon": "terror",
       "x": 8707,
       "y": -1104,
       "maxPoints": 4,
@@ -21403,6 +22230,7 @@
     "vr53sl-27": {
       "skill": "vr53sl-27",
       "name": "Returning Corruption",
+      "icon": "void shred",
       "x": 8975,
       "y": -700,
       "maxPoints": 1,
@@ -21427,6 +22255,7 @@
     "vr53sl-28": {
       "skill": "vr53sl-28",
       "name": "Terminal Void Bolt",
+      "icon": "void-shield-throw",
       "x": 8055,
       "y": -412,
       "maxPoints": 1,
@@ -21452,6 +22281,7 @@
     "vr53sl-29": {
       "skill": "vr53sl-29",
       "name": "Hollow Cascade",
+      "icon": "Abyssal_Echoes",
       "x": 8663,
       "y": -280,
       "maxPoints": 1,

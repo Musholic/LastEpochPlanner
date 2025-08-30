@@ -113,6 +113,7 @@
     "Acolyte-0": {
       "skill": "Acolyte-0",
       "name": "Bone Aura",
+      "icon": "Bone Armor",
       "x": -1777.8,
       "y": 6.1035156E-05,
       "maxPoints": 8,
@@ -133,6 +134,7 @@
     "Acolyte-1": {
       "skill": "Acolyte-1",
       "name": "Forbidden Knowledge",
+      "icon": "aura of decay necrotic",
       "x": -1777.8,
       "y": 615.2001,
       "maxPoints": 8,
@@ -156,6 +158,7 @@
     "Acolyte-2": {
       "skill": "Acolyte-2",
       "name": "Blood Aura",
+      "icon": "c-Bone Curse",
       "x": -1777.8,
       "y": -615.19995,
       "maxPoints": 8,
@@ -178,6 +181,7 @@
     "Acolyte-3": {
       "skill": "Acolyte-3",
       "name": "Mania of Mortality",
+      "icon": "c- drain life teal",
       "x": -1115.8,
       "y": 615.2001,
       "maxPoints": 10,
@@ -208,6 +212,7 @@
     "Acolyte-4": {
       "skill": "Acolyte-4",
       "name": "Stolen Vitality",
+      "icon": "summon-wraith-multiple",
       "x": -1115.8,
       "y": -307.59998,
       "maxPoints": 8,
@@ -233,6 +238,7 @@
     "Acolyte-5": {
       "skill": "Acolyte-5",
       "name": "Ethereal Revenant",
+      "icon": "summon wraith ice",
       "x": -453.80005,
       "y": 307.6001,
       "maxPoints": 6,
@@ -261,6 +267,7 @@
     "Acolyte-6": {
       "skill": "Acolyte-6",
       "name": "Blood Pact",
+      "icon": "c-leechlife",
       "x": -453.80005,
       "y": -615.19995,
       "maxPoints": 5,
@@ -286,6 +293,7 @@
     "Acolyte-7": {
       "skill": "Acolyte-7",
       "name": "Unnatural Preservation",
+      "icon": "necrotic-bone-prison",
       "x": 208.19995,
       "y": 615.2001,
       "maxPoints": 5,
@@ -307,6 +315,7 @@
     "Acolyte-8": {
       "skill": "Acolyte-8",
       "name": "Putrid Demise",
+      "icon": "poison-skele-warrior",
       "x": 208.19995,
       "y": 307.6001,
       "maxPoints": 5,
@@ -332,6 +341,7 @@
     "Acolyte-10": {
       "skill": "Acolyte-10",
       "name": "Elixir of Hunger",
+      "icon": "blood-pool",
       "x": -1777.8,
       "y": 984.80005,
       "maxPoints": 8,
@@ -354,6 +364,7 @@
     "Acolyte-11": {
       "skill": "Acolyte-11",
       "name": "Risen Army",
+      "icon": "summon blood wraith",
       "x": -1777.8,
       "y": 1600,
       "maxPoints": 8,
@@ -375,6 +386,7 @@
     "Acolyte-12": {
       "skill": "Acolyte-12",
       "name": "Unbound Necromancy",
+      "icon": "skeleton-warrior",
       "x": -216.20007,
       "y": 1907.6001,
       "maxPoints": 5,
@@ -402,6 +414,7 @@
     "Acolyte-13": {
       "skill": "Acolyte-13",
       "name": "Soul Conduits",
+      "icon": "Skull Necrotic",
       "x": -997,
       "y": 1292.4,
       "maxPoints": 5,
@@ -424,6 +437,7 @@
     "Acolyte-14": {
       "skill": "Acolyte-14",
       "name": "Cursed Blood",
+      "icon": "harvest",
       "x": -1387.4,
       "y": 1600,
       "maxPoints": 10,
@@ -451,6 +465,7 @@
     "Acolyte-15": {
       "skill": "Acolyte-15",
       "name": "Reclamation of Souls",
+      "icon": "necrotic-bone-curse",
       "x": -1387.4,
       "y": 984.80005,
       "maxPoints": 5,
@@ -476,6 +491,7 @@
     "Acolyte-16": {
       "skill": "Acolyte-16",
       "name": "Mortal Tether",
+      "icon": "wanderingspirits",
       "x": -997,
       "y": 1907.6001,
       "maxPoints": 10,
@@ -498,6 +514,7 @@
     "Acolyte-17": {
       "skill": "Acolyte-17",
       "name": "Wisp Weaver",
+      "icon": "Freeze buff",
       "x": -606.6001,
       "y": 2215.2002,
       "maxPoints": 8,
@@ -518,6 +535,7 @@
     "Acolyte-18": {
       "skill": "Acolyte-18",
       "name": "Sharpened Bones",
+      "icon": "skeleton-rogue",
       "x": -216.20007,
       "y": 1292.4,
       "maxPoints": 5,
@@ -540,6 +558,7 @@
     "Acolyte-19": {
       "skill": "Acolyte-19",
       "name": "Towering Death",
+      "icon": "bonegolem-red",
       "x": -606.6001,
       "y": 984.80005,
       "maxPoints": 10,
@@ -564,6 +583,7 @@
     "Acolyte-20": {
       "skill": "Acolyte-20",
       "name": "Invigorated Dead",
+      "icon": "summon-skeleton-multiple",
       "x": -216.20007,
       "y": 984.80005,
       "maxPoints": 5,
@@ -589,6 +609,7 @@
     "Acolyte-21": {
       "skill": "Acolyte-21",
       "name": "Blood Armor",
+      "icon": "Bone Pile",
       "x": -1387.4,
       "y": 2215.2002,
       "maxPoints": 8,
@@ -611,6 +632,7 @@
     "Acolyte-22": {
       "skill": "Acolyte-22",
       "name": "Scornful Blood",
+      "icon": "c-striped-eye",
       "x": -997,
       "y": 3200,
       "maxPoints": 1,
@@ -638,6 +660,7 @@
     "Acolyte-23": {
       "skill": "Acolyte-23",
       "name": "Tyrant",
+      "icon": "c-descent",
       "x": 174.19995,
       "y": 1907.6001,
       "maxPoints": 8,
@@ -661,6 +684,7 @@
     "Acolyte-24": {
       "skill": "Acolyte-24",
       "name": "Cling To Life",
+      "icon": "c-leechlife",
       "x": 564.59985,
       "y": 2215.2002,
       "maxPoints": 6,
@@ -685,6 +709,7 @@
     "Acolyte-25": {
       "skill": "Acolyte-25",
       "name": "Rite of Undeath",
+      "icon": "Death_Seal_3",
       "x": 1345.3999,
       "y": 1600,
       "maxPoints": 10,
@@ -712,6 +737,7 @@
     "Acolyte-26": {
       "skill": "Acolyte-26",
       "name": "Rotting Army",
+      "icon": "Hungering Souls Poison",
       "x": 955,
       "y": 1292.4,
       "maxPoints": 10,
@@ -732,6 +758,7 @@
     "Acolyte-27": {
       "skill": "Acolyte-27",
       "name": "Blades of the Forlorn",
+      "icon": "reaper-form-new",
       "x": 1345.3999,
       "y": 984.80005,
       "maxPoints": 10,
@@ -753,6 +780,7 @@
     "Acolyte-28": {
       "skill": "Acolyte-28",
       "name": "Forbidden Teachings",
+      "icon": "summon-wraith-multiple",
       "x": 1735.7998,
       "y": 1292.4,
       "maxPoints": 5,
@@ -776,6 +804,7 @@
     "Acolyte-29": {
       "skill": "Acolyte-29",
       "name": "Dance with Death",
+      "icon": "necrotic-reaper-form-new",
       "x": -1777.8,
       "y": 3815.2002,
       "maxPoints": 8,
@@ -803,6 +832,7 @@
     "Acolyte-30": {
       "skill": "Acolyte-30",
       "name": "Survival of the Cruel",
+      "icon": "c-leechlife",
       "x": -1777.8,
       "y": 3200,
       "maxPoints": 8,
@@ -825,6 +855,7 @@
     "Acolyte-31": {
       "skill": "Acolyte-31",
       "name": "Ethereal Menace",
+      "icon": "summon-skeleton-multiple",
       "x": -1387.4,
       "y": 3815.2002,
       "maxPoints": 5,
@@ -847,6 +878,7 @@
     "Acolyte-32": {
       "skill": "Acolyte-32",
       "name": "Biting Frost",
+      "icon": "Frozen_Heart_Acolyte",
       "x": -1387.4,
       "y": 3507.6,
       "maxPoints": 8,
@@ -870,6 +902,7 @@
     "Acolyte-33": {
       "skill": "Acolyte-33",
       "name": "Deadened Nerves",
+      "icon": "evil-symbol-8",
       "x": -1387.4,
       "y": 2584.8,
       "maxPoints": 8,
@@ -893,6 +926,7 @@
     "Acolyte-34": {
       "skill": "Acolyte-34",
       "name": "Desolation",
+      "icon": "wanderingspirits poison",
       "x": -997,
       "y": 3507.6,
       "maxPoints": 8,
@@ -918,6 +952,7 @@
     "Acolyte-35": {
       "skill": "Acolyte-35",
       "name": "Reaper",
+      "icon": "harvest",
       "x": -606.6001,
       "y": 3815.2002,
       "maxPoints": 5,
@@ -946,6 +981,7 @@
     "Acolyte-36": {
       "skill": "Acolyte-36",
       "name": "Soul Barrier",
+      "icon": "Death_Seal_3",
       "x": -997,
       "y": 2892.4,
       "maxPoints": 5,
@@ -968,6 +1004,7 @@
     "Acolyte-37": {
       "skill": "Acolyte-37",
       "name": "Spirit Ward",
+      "icon": "necrotic-bone-prison",
       "x": -606.6001,
       "y": 2584.8,
       "maxPoints": 5,
@@ -989,6 +1026,7 @@
     "Acolyte-38": {
       "skill": "Acolyte-38",
       "name": "Excoriating Insight",
+      "icon": "leech life Teal",
       "x": -216.20007,
       "y": 3507.6,
       "maxPoints": 8,
@@ -1017,6 +1055,7 @@
     "Acolyte-39": {
       "skill": "Acolyte-39",
       "name": "Bed of Souls",
+      "icon": "necrotic-armor",
       "x": -606.6001,
       "y": 2892.4,
       "maxPoints": 8,
@@ -1045,6 +1084,7 @@
     "Acolyte-40": {
       "skill": "Acolyte-40",
       "name": "Mental Cacophony",
+      "icon": "evil-symbol-1",
       "x": -216.20007,
       "y": 2584.8,
       "maxPoints": 5,
@@ -1065,6 +1105,7 @@
     "Acolyte-42": {
       "skill": "Acolyte-42",
       "name": "Necrotic Energy",
+      "icon": "necrotic-bone-curse",
       "x": 564.59985,
       "y": 3200,
       "maxPoints": 10,
@@ -1088,6 +1129,7 @@
     "Acolyte-43": {
       "skill": "Acolyte-43",
       "name": "Executioner",
+      "icon": "Dual_Wield_Acolyte",
       "x": 174.19995,
       "y": 3200,
       "maxPoints": 1,
@@ -1112,6 +1154,7 @@
     "Acolyte-44": {
       "skill": "Acolyte-44",
       "name": "Impact Ward",
+      "icon": "evil-symbol-2",
       "x": 955,
       "y": 2892.4,
       "maxPoints": 5,
@@ -1136,6 +1179,7 @@
     "Acolyte-45": {
       "skill": "Acolyte-45",
       "name": "Instruments of Death",
+      "icon": "Triple_Wield_Acolyte",
       "x": 955,
       "y": 3200,
       "maxPoints": 5,
@@ -1160,6 +1204,7 @@
     "Acolyte-46": {
       "skill": "Acolyte-46",
       "name": "Decaying Form",
+      "icon": "poison explosion",
       "x": 1345.3999,
       "y": 2584.8,
       "maxPoints": 10,
@@ -1185,6 +1230,7 @@
     "Acolyte-47": {
       "skill": "Acolyte-47",
       "name": "Wands of the Fallen",
+      "icon": "c-Plague",
       "x": 1345.3999,
       "y": 3815.2002,
       "maxPoints": 5,
@@ -1209,6 +1255,7 @@
     "Acolyte-48": {
       "skill": "Acolyte-48",
       "name": "Mind Over Body",
+      "icon": "evil-symbol-2",
       "x": 1735.7998,
       "y": 3200,
       "maxPoints": 10,
@@ -1231,6 +1278,7 @@
     "Acolyte-49": {
       "skill": "Acolyte-49",
       "name": "Reaper's Malice",
+      "icon": "reaper-ward-dash",
       "x": 1735.7998,
       "y": 3507.6,
       "maxPoints": 5,
@@ -1252,6 +1300,7 @@
     "Acolyte-50": {
       "skill": "Acolyte-50",
       "name": "Soul Stealer",
+      "icon": "evil-symbol-1",
       "x": -1777.8,
       "y": 5415.2,
       "maxPoints": 8,
@@ -1274,6 +1323,7 @@
     "Acolyte-52": {
       "skill": "Acolyte-52",
       "name": "Chaos Flames",
+      "icon": "ghost-flame",
       "x": -1777.8,
       "y": 4800,
       "maxPoints": 8,
@@ -1301,6 +1351,7 @@
     "Acolyte-53": {
       "skill": "Acolyte-53",
       "name": "Spiteful Decay",
+      "icon": "evil-symbol-5",
       "x": -1777.8,
       "y": 4184.8,
       "maxPoints": 8,
@@ -1325,6 +1376,7 @@
     "Acolyte-54": {
       "skill": "Acolyte-54",
       "name": "Harrowing Armor",
+      "icon": "burning-sigil",
       "x": -997,
       "y": 5415.2,
       "maxPoints": 8,
@@ -1349,6 +1401,7 @@
     "Acolyte-55": {
       "skill": "Acolyte-55",
       "name": "Dark Rituals",
+      "icon": "c-Dread Shade",
       "x": -1115.8,
       "y": 6.1035156E-05,
       "maxPoints": 5,
@@ -1377,6 +1430,7 @@
     "Acolyte-56": {
       "skill": "Acolyte-56",
       "name": "Crimson Gluttony",
+      "icon": "evil-symbol-3",
       "x": 208.19995,
       "y": -307.59998,
       "maxPoints": 5,
@@ -1402,6 +1456,7 @@
     "Acolyte-57": {
       "skill": "Acolyte-57",
       "name": "Unclosing Wounds",
+      "icon": "Drain_Life",
       "x": -216.20007,
       "y": 2892.4,
       "maxPoints": 8,
@@ -1422,6 +1477,7 @@
     "Acolyte-58": {
       "skill": "Acolyte-58",
       "name": "Apocrypha",
+      "icon": "Spellbook Arcane",
       "x": -1777.8,
       "y": 2892.4,
       "maxPoints": 10,
@@ -1444,6 +1500,7 @@
     "Acolyte-59": {
       "skill": "Acolyte-59",
       "name": "Grave Thorns",
+      "icon": "bonegolem",
       "x": -1777.8,
       "y": 2215.2002,
       "maxPoints": 5,
@@ -1471,6 +1528,7 @@
     "Acolyte-60": {
       "skill": "Acolyte-60",
       "name": "Blood Feast",
+      "icon": "c-Bone Curse",
       "x": -216.20007,
       "y": 2215.2002,
       "maxPoints": 8,
@@ -1494,6 +1552,7 @@
     "Acolyte-61": {
       "skill": "Acolyte-61",
       "name": "Tyrant's Legion",
+      "icon": "skeleton-rogue",
       "x": 955,
       "y": 1907.6001,
       "maxPoints": 5,
@@ -1519,6 +1578,7 @@
     "Acolyte-62": {
       "skill": "Acolyte-62",
       "name": "Frantic Summons",
+      "icon": "Bolt Necrotic",
       "x": 174.19995,
       "y": 1292.4,
       "maxPoints": 5,
@@ -1545,6 +1605,7 @@
     "Acolyte-63": {
       "skill": "Acolyte-63",
       "name": "River of Bones",
+      "icon": "evil-symbol-1",
       "x": 564.59985,
       "y": 984.80005,
       "maxPoints": 5,
@@ -1570,6 +1631,7 @@
     "Acolyte-64": {
       "skill": "Acolyte-64",
       "name": "Empty The Graves",
+      "icon": "Circle of bones",
       "x": 1345.3999,
       "y": 2215.2002,
       "maxPoints": 4,
@@ -1593,6 +1655,7 @@
     "Acolyte-65": {
       "skill": "Acolyte-65",
       "name": "Disciples of Necromancy",
+      "icon": "skeletal-mage",
       "x": 1735.7998,
       "y": 1907.6001,
       "maxPoints": 5,
@@ -1618,6 +1681,7 @@
     "Acolyte-66": {
       "skill": "Acolyte-66",
       "name": "Grasp of Fate",
+      "icon": "evil-symbol-4",
       "x": -1387.4,
       "y": 2892.4,
       "maxPoints": 5,
@@ -1638,6 +1702,7 @@
     "Acolyte-67": {
       "skill": "Acolyte-67",
       "name": "Three Plagues",
+      "icon": "Poison_Spread",
       "x": 174.19995,
       "y": 2584.8,
       "maxPoints": 8,
@@ -1661,6 +1726,7 @@
     "Acolyte-68": {
       "skill": "Acolyte-68",
       "name": "Deathbringer",
+      "icon": "Slash Necrotic",
       "x": 174.19995,
       "y": 3815.2002,
       "maxPoints": 5,
@@ -1684,6 +1750,7 @@
     "Acolyte-69": {
       "skill": "Acolyte-69",
       "name": "Spectral Wounds",
+      "icon": "Skull Necrotic",
       "x": 564.59985,
       "y": 2584.8,
       "maxPoints": 5,
@@ -1710,6 +1777,7 @@
     "Acolyte-70": {
       "skill": "Acolyte-70",
       "name": "Essence Devourer",
+      "icon": "zombie-explosion-teal",
       "x": 564.59985,
       "y": 3507.6,
       "maxPoints": 8,
@@ -1732,6 +1800,7 @@
     "Acolyte-71": {
       "skill": "Acolyte-71",
       "name": "Ageless Ascetic",
+      "icon": "summon wraith",
       "x": 1345.3999,
       "y": 3507.6,
       "maxPoints": 5,
@@ -1757,6 +1826,7 @@
     "Acolyte-72": {
       "skill": "Acolyte-72",
       "name": "Lasting Stench",
+      "icon": "Hungering Soul Poison",
       "x": -606.6001,
       "y": 3507.6,
       "maxPoints": 8,
@@ -1777,6 +1847,7 @@
     "Acolyte-73": {
       "skill": "Acolyte-73",
       "name": "Clairvoyant Insight",
+      "icon": "Bolt Necrotic",
       "x": 955,
       "y": 3815.2002,
       "maxPoints": 5,
@@ -1801,6 +1872,7 @@
     "Acolyte-74": {
       "skill": "Acolyte-74",
       "name": "Effigies",
+      "icon": "fire-skele-archer",
       "x": 174.19995,
       "y": 1600,
       "maxPoints": 5,
@@ -1825,6 +1897,7 @@
     "Acolyte-75": {
       "skill": "Acolyte-75",
       "name": "Aegisfall",
+      "icon": "Armor Shred",
       "x": -606.6001,
       "y": 1600,
       "maxPoints": 8,
@@ -1850,6 +1923,7 @@
     "Acolyte-76": {
       "skill": "Acolyte-76",
       "name": "Moonlight Pyre",
+      "icon": "Drain_Life",
       "x": 564.59985,
       "y": 1600,
       "maxPoints": 10,
@@ -1877,6 +1951,7 @@
     "Acolyte-77": {
       "skill": "Acolyte-77",
       "name": "Veins of Malice",
+      "icon": "Zombie Bite",
       "x": 1735.7998,
       "y": 1600,
       "maxPoints": 5,
@@ -1902,6 +1977,7 @@
     "Acolyte-78": {
       "skill": "Acolyte-78",
       "name": "Accursed Feast",
+      "icon": "Blood_Rain",
       "x": 1735.7998,
       "y": 2892.4,
       "maxPoints": 1,
@@ -1927,6 +2003,7 @@
     "Acolyte-79": {
       "skill": "Acolyte-79",
       "name": "Unholy Torment",
+      "icon": "chaos-casting-2",
       "x": -1387.4,
       "y": 4800,
       "maxPoints": 6,
@@ -1947,6 +2024,7 @@
     "Acolyte-80": {
       "skill": "Acolyte-80",
       "name": "Soul Aegis",
+      "icon": "Bone Pile",
       "x": 870.19995,
       "y": 6.1035156E-05,
       "maxPoints": 1,
@@ -1972,6 +2050,7 @@
     "Acolyte-82": {
       "skill": "Acolyte-82",
       "name": "Eye of Damnation",
+      "icon": "evil-symbol-5",
       "x": 870.19995,
       "y": 615.2001,
       "maxPoints": 6,
@@ -1999,6 +2078,7 @@
     "Acolyte-83": {
       "skill": "Acolyte-83",
       "name": "Dominion of Rot",
+      "icon": "Spirit_Plague_spread",
       "x": 1532.2,
       "y": 307.6001,
       "maxPoints": 6,
@@ -2022,6 +2102,7 @@
     "Acolyte-84": {
       "skill": "Acolyte-84",
       "name": "Veins of Power",
+      "icon": "c-Laceration",
       "x": 1532.2,
       "y": -307.59998,
       "maxPoints": 6,
@@ -2045,6 +2126,7 @@
     "Acolyte-86": {
       "skill": "Acolyte-86",
       "name": "Cauldron of Blood",
+      "icon": "physical-profane-orb",
       "x": -1387.4,
       "y": 4492.4,
       "maxPoints": 8,
@@ -2069,6 +2151,7 @@
     "Acolyte-87": {
       "skill": "Acolyte-87",
       "name": "Dark Protections",
+      "icon": "evil-symbol-4",
       "x": -216.20007,
       "y": 5415.2,
       "maxPoints": 7,
@@ -2090,6 +2173,7 @@
     "Acolyte-88": {
       "skill": "Acolyte-88",
       "name": "Vile Tide",
+      "icon": "aura of decay",
       "x": -997,
       "y": 4492.4,
       "maxPoints": 8,
@@ -2113,6 +2197,7 @@
     "Acolyte-89": {
       "skill": "Acolyte-89",
       "name": "Ward of Malevolence",
+      "icon": "reaper-ward-dash",
       "x": -997,
       "y": 5107.6,
       "maxPoints": 5,
@@ -2140,6 +2225,7 @@
     "Acolyte-90": {
       "skill": "Acolyte-90",
       "name": "Crimson Favors",
+      "icon": "rip blood",
       "x": -997,
       "y": 4184.8,
       "maxPoints": 6,
@@ -2165,6 +2251,7 @@
     "Acolyte-91": {
       "skill": "Acolyte-91",
       "name": "Imperishable",
+      "icon": "c-Bone Curse",
       "x": -606.6001,
       "y": 4800,
       "maxPoints": 5,
@@ -2186,6 +2273,7 @@
     "Acolyte-92": {
       "skill": "Acolyte-92",
       "name": "Doom Herald",
+      "icon": "Drain_Life",
       "x": -216.20007,
       "y": 5107.6,
       "maxPoints": 8,
@@ -2209,6 +2297,7 @@
     "Acolyte-93": {
       "skill": "Acolyte-93",
       "name": "Spirit Leech",
+      "icon": "health-leech",
       "x": -606.6001,
       "y": 4184.8,
       "maxPoints": 6,
@@ -2232,6 +2321,7 @@
     "Acolyte-94": {
       "skill": "Acolyte-94",
       "name": "Rancid Concoction",
+      "icon": "mana-potion",
       "x": -216.20007,
       "y": 4492.4,
       "maxPoints": 6,
@@ -2258,6 +2348,7 @@
     "Acolyte-96": {
       "skill": "Acolyte-96",
       "name": "Wither",
+      "icon": "evil-symbol-2",
       "x": 174.19995,
       "y": 5415.2,
       "maxPoints": 5,
@@ -2279,6 +2370,7 @@
     "Acolyte-97": {
       "skill": "Acolyte-97",
       "name": "Infernal Lash",
+      "icon": "aura of decay_red",
       "x": 174.19995,
       "y": 5107.6,
       "maxPoints": 8,
@@ -2305,6 +2397,7 @@
     "Acolyte-98": {
       "skill": "Acolyte-98",
       "name": "Chains of Ruin",
+      "icon": "aura of decay necrotic",
       "x": 174.19995,
       "y": 4492.4,
       "maxPoints": 8,
@@ -2333,6 +2426,7 @@
     "Acolyte-99": {
       "skill": "Acolyte-99",
       "name": "Malefic Body",
+      "icon": "evil-symbol-8",
       "x": 174.19995,
       "y": 4184.8,
       "maxPoints": 10,
@@ -2353,6 +2447,7 @@
     "Acolyte-100": {
       "skill": "Acolyte-100",
       "name": "Encroaching Darkness",
+      "icon": "chaos-skull-circle",
       "x": 564.59985,
       "y": 5415.2,
       "maxPoints": 5,
@@ -2377,6 +2472,7 @@
     "Acolyte-101": {
       "skill": "Acolyte-101",
       "name": "The Ashen One",
+      "icon": "chaos-bolt-minion-hit",
       "x": 564.59985,
       "y": 4800,
       "maxPoints": 8,
@@ -2403,6 +2499,7 @@
     "Acolyte-102": {
       "skill": "Acolyte-102",
       "name": "Chaotic Strikes",
+      "icon": "chaos-casting",
       "x": 564.59985,
       "y": 4184.8,
       "maxPoints": 5,
@@ -2428,6 +2525,7 @@
     "Acolyte-103": {
       "skill": "Acolyte-103",
       "name": "Scorched Reach",
+      "icon": "fire-harvest",
       "x": 955,
       "y": 5107.6,
       "maxPoints": 7,
@@ -2449,6 +2547,7 @@
     "Acolyte-104": {
       "skill": "Acolyte-104",
       "name": "Grasping Damnation",
+      "icon": "necrotic-control",
       "x": 955,
       "y": 4492.4,
       "maxPoints": 6,
@@ -2474,6 +2573,7 @@
     "Acolyte-105": {
       "skill": "Acolyte-105",
       "name": "Duskbringer",
+      "icon": "cursed-armor",
       "x": 1735.7998,
       "y": 5415.2,
       "maxPoints": 6,
@@ -2495,6 +2595,7 @@
     "Acolyte-106": {
       "skill": "Acolyte-106",
       "name": "Fleeting Crone",
+      "icon": "chthonic-fissure-move",
       "x": 1345.3999,
       "y": 5107.6,
       "maxPoints": 5,
@@ -2519,6 +2620,7 @@
     "Acolyte-107": {
       "skill": "Acolyte-107",
       "name": "Vessel of Chaos",
+      "icon": "ghost-flame",
       "x": 1345.3999,
       "y": 4492.4,
       "maxPoints": 7,
@@ -2543,6 +2645,7 @@
     "Acolyte-108": {
       "skill": "Acolyte-108",
       "name": "Wreak Havoc",
+      "icon": "chaos-beams-3",
       "x": 1345.3999,
       "y": 4184.8,
       "maxPoints": 5,
@@ -2564,6 +2667,7 @@
     "Acolyte-109": {
       "skill": "Acolyte-109",
       "name": "Accursed Seer",
+      "icon": "possess-damage",
       "x": 1735.7998,
       "y": 4800,
       "maxPoints": 5,
@@ -2587,6 +2691,7 @@
     "Acolyte-110": {
       "skill": "Acolyte-110",
       "name": "Grimhilde's Domain",
+      "icon": "chaos-bolts",
       "x": 1345.3999,
       "y": 4800,
       "maxPoints": 5,
@@ -2616,6 +2721,7 @@
     "Acolyte-111": {
       "skill": "Acolyte-111",
       "name": "Aspect of Death",
+      "icon": "chaos-leech-mana",
       "x": 1735.7998,
       "y": 4184.8,
       "maxPoints": 5,
@@ -2642,6 +2748,7 @@
     "Acolyte-112": {
       "skill": "Acolyte-112",
       "name": "Occultist's Mind",
+      "icon": "cold-skele-mage",
       "x": -1387.4,
       "y": 5107.6,
       "maxPoints": 8,
@@ -2663,6 +2770,7 @@
     "Acolyte-114": {
       "skill": "Acolyte-114",
       "name": "Hollow Lich",
+      "icon": "leechlife",
       "x": -216.20007,
       "y": 3200,
       "maxPoints": 3,
@@ -2688,6 +2796,7 @@
     "Acolyte-115": {
       "skill": "Acolyte-115",
       "name": "Corrupted Form",
+      "icon": "aura of decay_purple",
       "x": 174.19995,
       "y": 2892.4,
       "maxPoints": 5,
@@ -2783,6 +2892,7 @@
     "aa710-2": {
       "skill": "aa710-2",
       "name": "Sharpened Bones",
+      "icon": "summon-skeleton-multiple",
       "x": 5795.8,
       "y": -0,
       "maxPoints": 4,
@@ -2815,6 +2925,7 @@
     "aa710-3": {
       "skill": "aa710-3",
       "name": "Cruel Monstrosity",
+      "icon": "battle_standard",
       "x": 4795.8,
       "y": 680,
       "maxPoints": 3,
@@ -2844,6 +2955,7 @@
     "aa710-4": {
       "skill": "aa710-4",
       "name": "Noxious Stench",
+      "icon": "aura of decay necrotic",
       "x": 7671.8,
       "y": 344,
       "maxPoints": 1,
@@ -2870,6 +2982,7 @@
     "aa710-5": {
       "skill": "aa710-5",
       "name": "Shattered Limbs",
+      "icon": "c-blood-swords",
       "x": 3835.7998,
       "y": 680,
       "maxPoints": 1,
@@ -2898,6 +3011,7 @@
     "aa710-6": {
       "skill": "aa710-6",
       "name": "Spoils of War",
+      "icon": "Sword slash double",
       "x": 4795.8,
       "y": -132.8,
       "maxPoints": 1,
@@ -2928,6 +3042,7 @@
     "aa710-7": {
       "skill": "aa710-7",
       "name": "Flesh and Blood",
+      "icon": "Rive 2",
       "x": 4107.8,
       "y": 96,
       "maxPoints": 2,
@@ -2955,6 +3070,7 @@
     "aa710-9": {
       "skill": "aa710-9",
       "name": "Age of Undeath",
+      "icon": "bonegolem-red",
       "x": 6083.8,
       "y": 600,
       "maxPoints": 1,
@@ -2978,6 +3094,7 @@
     "aa710-11": {
       "skill": "aa710-11",
       "name": "Repugnant Mass",
+      "icon": "Circle of bones",
       "x": 7075.8,
       "y": -0,
       "maxPoints": 4,
@@ -3005,6 +3122,7 @@
     "aa710-12": {
       "skill": "aa710-12",
       "name": "Fractured End",
+      "icon": "Bone Nova",
       "x": 6905,
       "y": -480,
       "maxPoints": 3,
@@ -3028,6 +3146,7 @@
     "aa710-13": {
       "skill": "aa710-13",
       "name": "Domination",
+      "icon": "boneprojectile",
       "x": 6772.1997,
       "y": 600,
       "maxPoints": 4,
@@ -3054,6 +3173,7 @@
     "aa710-14": {
       "skill": "aa710-14",
       "name": "Terrible Might",
+      "icon": "unearth-red",
       "x": 7812.5996,
       "y": -240,
       "maxPoints": 4,
@@ -3083,6 +3203,7 @@
     "aa710-15": {
       "skill": "aa710-15",
       "name": "Contaminated Dreams",
+      "icon": "Drain_Life",
       "x": 9086.6,
       "y": 97.19995,
       "maxPoints": 1,
@@ -3106,6 +3227,7 @@
     "aa710-16": {
       "skill": "aa710-16",
       "name": "Consume",
+      "icon": "leech life",
       "x": 7135.8,
       "y": -900,
       "maxPoints": 3,
@@ -3134,6 +3256,7 @@
     "aa710-17": {
       "skill": "aa710-17",
       "name": "Unholy Reach",
+      "icon": "Slash Necrotic",
       "x": 7715.8,
       "y": 760,
       "maxPoints": 5,
@@ -3160,6 +3283,7 @@
     "aa710-18": {
       "skill": "aa710-18",
       "name": "Reap The Damned",
+      "icon": "summon wraith",
       "x": 8151.8,
       "y": 1248,
       "maxPoints": 1,
@@ -3182,6 +3306,7 @@
     "aa710-19": {
       "skill": "aa710-19",
       "name": "Shattered Simulacrum",
+      "icon": "bonegolem",
       "x": 8539.8,
       "y": 712,
       "maxPoints": 1,
@@ -3208,6 +3333,7 @@
     "aa710-20": {
       "skill": "aa710-20",
       "name": "Meat Grinder",
+      "icon": "c-ferocity_1",
       "x": 7391.8,
       "y": 1256,
       "maxPoints": 1,
@@ -3234,6 +3360,7 @@
     "aa710-21": {
       "skill": "aa710-21",
       "name": "Stitched Flesh",
+      "icon": "c-Ravage",
       "x": 6435.8,
       "y": -680,
       "maxPoints": 4,
@@ -3263,6 +3390,7 @@
     "aa710-22": {
       "skill": "aa710-22",
       "name": "Cadaverous Carapace",
+      "icon": "Bone Pile",
       "x": 5639.8,
       "y": -588,
       "maxPoints": 1,
@@ -3289,6 +3417,7 @@
     "aa710-23": {
       "skill": "aa710-23",
       "name": "Dead Eye",
+      "icon": "fire-skele-archer",
       "x": 5072.5996,
       "y": -697.2,
       "maxPoints": 1,
@@ -3314,6 +3443,7 @@
     "aa710-24": {
       "skill": "aa710-24",
       "name": "Horrific Volley",
+      "icon": "physical-arrow-sequence",
       "x": 4201,
       "y": -697.19995,
       "maxPoints": 4,
@@ -3340,6 +3470,7 @@
     "aa710-25": {
       "skill": "aa710-25",
       "name": "Picky Eater",
+      "icon": "zombies_multiple",
       "x": 8535.8,
       "y": -920,
       "maxPoints": 1,
@@ -3362,6 +3493,7 @@
     "aa710-26": {
       "skill": "aa710-26",
       "name": "Engorgement",
+      "icon": "unearth",
       "x": 6083.8,
       "y": 1225.6,
       "maxPoints": 5,
@@ -3390,6 +3522,7 @@
     "aa710-28": {
       "skill": "aa710-28",
       "name": "Death in the Family",
+      "icon": "chaos-infused-minions",
       "x": 5475.8,
       "y": 908,
       "maxPoints": 3,
@@ -3417,6 +3550,7 @@
     "aa710-29": {
       "skill": "aa710-29",
       "name": "Corrupt Palate",
+      "icon": "Hungering Soul Necro",
       "x": 8492.199,
       "y": -440,
       "maxPoints": 1,
@@ -3441,6 +3575,7 @@
     "aa710-30": {
       "skill": "aa710-30",
       "name": "Frightful Feast",
+      "icon": "hungering soul",
       "x": 9086.6,
       "y": -580,
       "maxPoints": 3,
@@ -3466,6 +3601,7 @@
     "aa710-31": {
       "skill": "aa710-31",
       "name": "Necrosage",
+      "icon": "Spirit_Plague",
       "x": 8492.199,
       "y": 97.2,
       "maxPoints": 4,
@@ -3491,6 +3627,7 @@
     "aa710-32": {
       "skill": "aa710-32",
       "name": "Bloated Corpse",
+      "icon": "Zombie Bite",
       "x": 7871.8,
       "y": -897.1999,
       "maxPoints": 1,
@@ -3515,6 +3652,7 @@
     "aa710-33": {
       "skill": "aa710-33",
       "name": "Tower of Bones",
+      "icon": "c-Bone Curse",
       "x": 8919.8,
       "y": 1248,
       "maxPoints": 3,
@@ -3541,6 +3679,7 @@
     "aa710-34": {
       "skill": "aa710-34",
       "name": "Destruction Engine",
+      "icon": "Sacrifice",
       "x": 5895.8,
       "y": -880,
       "maxPoints": 1,
@@ -3590,6 +3729,7 @@
     "ad0ry-2": {
       "skill": "ad0ry-2",
       "name": "Rot Weaver",
+      "icon": "evil-symbol-3",
       "x": 7131.8,
       "y": 332,
       "maxPoints": 3,
@@ -3615,6 +3755,7 @@
     "ad0ry-3": {
       "skill": "ad0ry-3",
       "name": "Cold Death",
+      "icon": "cold-glyph",
       "x": 8043.8,
       "y": 760,
       "maxPoints": 1,
@@ -3648,6 +3789,7 @@
     "ad0ry-4": {
       "skill": "ad0ry-4",
       "name": "Frozen Touch",
+      "icon": "Freeze buff",
       "x": 8763.8,
       "y": 1056,
       "maxPoints": 3,
@@ -3670,6 +3812,7 @@
     "ad0ry-5": {
       "skill": "ad0ry-5",
       "name": "Mana Blight",
+      "icon": "Spirit_Plague",
       "x": 8579,
       "y": 332,
       "maxPoints": 3,
@@ -3697,6 +3840,7 @@
     "ad0ry-6": {
       "skill": "ad0ry-6",
       "name": "Poisoned Soul",
+      "icon": "mark of death",
       "x": 9074.6,
       "y": 332,
       "maxPoints": 1,
@@ -3720,6 +3864,7 @@
     "ad0ry-7": {
       "skill": "ad0ry-7",
       "name": "Unending Sickness",
+      "icon": "c-Plague",
       "x": 8043.8,
       "y": -50.4,
       "maxPoints": 3,
@@ -3745,6 +3890,7 @@
     "ad0ry-8": {
       "skill": "ad0ry-8",
       "name": "Blood Font",
+      "icon": "Aura_Of_Decay_Blood",
       "x": 8435.8,
       "y": -616,
       "maxPoints": 1,
@@ -3774,6 +3920,7 @@
     "ad0ry-9": {
       "skill": "ad0ry-9",
       "name": "Corrosive Aura",
+      "icon": "c-Manifest-Armour",
       "x": 7701,
       "y": -616,
       "maxPoints": 4,
@@ -3802,6 +3949,7 @@
     "ad0ry-10": {
       "skill": "ad0ry-10",
       "name": "Undertow",
+      "icon": "Entangling roots-blue",
       "x": 7131.8,
       "y": -332,
       "maxPoints": 4,
@@ -3827,6 +3975,7 @@
     "ad0ry-11": {
       "skill": "ad0ry-11",
       "name": "Putrid Bombs",
+      "icon": "poison_bolt",
       "x": 6715.8,
       "y": -692,
       "maxPoints": 1,
@@ -3853,6 +4002,7 @@
     "ad0ry-12": {
       "skill": "ad0ry-12",
       "name": "Poison Skin",
+      "icon": "c-poison-alt",
       "x": 6155.8,
       "y": -692,
       "maxPoints": 3,
@@ -3880,6 +4030,7 @@
     "ad0ry-13": {
       "skill": "ad0ry-13",
       "name": "Absence of Life",
+      "icon": "c-Healing Hands",
       "x": 5739.8,
       "y": -332,
       "maxPoints": 4,
@@ -3911,6 +4062,7 @@
     "ad0ry-14": {
       "skill": "ad0ry-14",
       "name": "Plague Bearers",
+      "icon": "Bolt Poison",
       "x": 5363.8,
       "y": -744,
       "maxPoints": 1,
@@ -3936,6 +4088,7 @@
     "ad0ry-15": {
       "skill": "ad0ry-15",
       "name": "Infectious Bones",
+      "icon": "c-putrid wraith",
       "x": 4855.8,
       "y": -856,
       "maxPoints": 3,
@@ -3961,6 +4114,7 @@
     "ad0ry-16": {
       "skill": "ad0ry-16",
       "name": "Virulence",
+      "icon": "Spirit_Plague-poison",
       "x": 4423.8,
       "y": -216,
       "maxPoints": 2,
@@ -3983,6 +4137,7 @@
     "ad0ry-17": {
       "skill": "ad0ry-17",
       "name": "Fester",
+      "icon": "Zombie Poison Bite",
       "x": 5255.8,
       "y": -4,
       "maxPoints": 3,
@@ -4017,6 +4172,7 @@
     "ad0ry-18": {
       "skill": "ad0ry-18",
       "name": "Poison Bolt",
+      "icon": "Bolt Poison",
       "x": 4855.8,
       "y": -468,
       "maxPoints": 1,
@@ -4042,6 +4198,7 @@
     "ad0ry-19": {
       "skill": "ad0ry-19",
       "name": "Rotten Core",
+      "icon": "Stacking poison",
       "x": 4411.8,
       "y": 192,
       "maxPoints": 2,
@@ -4065,6 +4222,7 @@
     "ad0ry-20": {
       "skill": "ad0ry-20",
       "name": "Inoculation",
+      "icon": "Summon_healing_totem",
       "x": 5739.8,
       "y": 332,
       "maxPoints": 4,
@@ -4091,6 +4249,7 @@
     "ad0ry-21": {
       "skill": "ad0ry-21",
       "name": "Vulnerability",
+      "icon": "beetle_mandible",
       "x": 4791.8,
       "y": 564,
       "maxPoints": 3,
@@ -4118,6 +4277,7 @@
     "ad0ry-22": {
       "skill": "ad0ry-22",
       "name": "Fume Weaver",
+      "icon": "Poison shred",
       "x": 4011.7998,
       "y": 764,
       "maxPoints": 1,
@@ -4141,6 +4301,7 @@
     "ad0ry-24": {
       "skill": "ad0ry-24",
       "name": "Unchecked Growth",
+      "icon": "blinding_poison",
       "x": 4171.8,
       "y": -568,
       "maxPoints": 3,
@@ -4164,6 +4325,7 @@
     "ad0ry-25": {
       "skill": "ad0ry-25",
       "name": "Corruption",
+      "icon": "poison explosion",
       "x": 5223.8,
       "y": 844,
       "maxPoints": 3,
@@ -4193,6 +4355,7 @@
     "ad0ry-26": {
       "skill": "ad0ry-26",
       "name": "Death Bloom",
+      "icon": "c-arrow storm",
       "x": 4759.8,
       "y": 1156,
       "maxPoints": 2,
@@ -4215,6 +4378,7 @@
     "ad0ry-27": {
       "skill": "ad0ry-27",
       "name": "Bubonic Aura",
+      "icon": "plague",
       "x": 5831.8,
       "y": 938.4,
       "maxPoints": 3,
@@ -4242,6 +4406,7 @@
     "ad0ry-28": {
       "skill": "ad0ry-28",
       "name": "Plague Rat",
+      "icon": "poison-pool",
       "x": 6435.8,
       "y": 740,
       "maxPoints": 3,
@@ -4267,6 +4432,7 @@
     "ad0ry-29": {
       "skill": "ad0ry-29",
       "name": "Chill to the Bone",
+      "icon": "Glyph of Ice",
       "x": 7591.8,
       "y": 1148,
       "maxPoints": 4,
@@ -4294,6 +4460,7 @@
     "ad0ry-30": {
       "skill": "ad0ry-30",
       "name": "Respite",
+      "icon": "c-Heal over time",
       "x": 7039.8,
       "y": 938.4,
       "maxPoints": 4,
@@ -4322,6 +4489,7 @@
     "ad0ry-31": {
       "skill": "ad0ry-31",
       "name": "Incipient Decay",
+      "icon": "Poison_Spread",
       "x": 6435.8,
       "y": 1148,
       "maxPoints": 3,
@@ -4374,6 +4542,7 @@
     "bc53-1": {
       "skill": "bc53-1",
       "name": "Iron Maiden",
+      "icon": "c- drain life teal",
       "x": 5563.8,
       "y": -84,
       "maxPoints": 5,
@@ -4401,6 +4570,7 @@
     "bc53-2": {
       "skill": "bc53-2",
       "name": "Brittle Bones",
+      "icon": "reaper-form-new",
       "x": 5235.8,
       "y": -920,
       "maxPoints": 3,
@@ -4430,6 +4600,7 @@
     "bc53-3": {
       "skill": "bc53-3",
       "name": "Ruptured Corpse",
+      "icon": "Sacrifice",
       "x": 5847.8,
       "y": -425.6,
       "maxPoints": 1,
@@ -4453,6 +4624,7 @@
     "bc53-4": {
       "skill": "bc53-4",
       "name": "Entreat the Damned",
+      "icon": "skeleton-warrior",
       "x": 4419.8,
       "y": -792,
       "maxPoints": 1,
@@ -4476,6 +4648,7 @@
     "bc53-5": {
       "skill": "bc53-5",
       "name": "Bone Eruption",
+      "icon": "Bone Nova",
       "x": 4875.8,
       "y": 85.599976,
       "maxPoints": 1,
@@ -4499,6 +4672,7 @@
     "bc53-6": {
       "skill": "bc53-6",
       "name": "Acute Infliction",
+      "icon": "Death_Seal_2",
       "x": 4783.8,
       "y": -464,
       "maxPoints": 1,
@@ -4524,6 +4698,7 @@
     "bc53-7": {
       "skill": "bc53-7",
       "name": "Signet of Agony",
+      "icon": "aura of decay",
       "x": 8071.8,
       "y": 240,
       "maxPoints": 1,
@@ -4554,6 +4729,7 @@
     "bc53-8": {
       "skill": "bc53-8",
       "name": "Illusion of Pain",
+      "icon": "necrotic-bone-curse",
       "x": 4047.7998,
       "y": -232,
       "maxPoints": 1,
@@ -4580,6 +4756,7 @@
     "bc53-9": {
       "skill": "bc53-9",
       "name": "Defile Defenses",
+      "icon": "Armor Shred",
       "x": 5819.8,
       "y": 752,
       "maxPoints": 5,
@@ -4607,6 +4784,7 @@
     "bc53-10": {
       "skill": "bc53-10",
       "name": "Marrow Thief",
+      "icon": "Bone Armor",
       "x": 5391.8,
       "y": 1000,
       "maxPoints": 3,
@@ -4631,6 +4809,7 @@
     "bc53-11": {
       "skill": "bc53-11",
       "name": "Bone Feast",
+      "icon": "leech life",
       "x": 4855.8,
       "y": 1168,
       "maxPoints": 2,
@@ -4653,6 +4832,7 @@
     "bc53-12": {
       "skill": "bc53-12",
       "name": "Cloven Flesh",
+      "icon": "c-bleed",
       "x": 4819.8,
       "y": 596,
       "maxPoints": 5,
@@ -4678,6 +4858,7 @@
     "bc53-13": {
       "skill": "bc53-13",
       "name": "Crimson Enlightenment",
+      "icon": "rip blood",
       "x": 4091.7998,
       "y": 352,
       "maxPoints": 1,
@@ -4703,6 +4884,7 @@
     "bc53-14": {
       "skill": "bc53-14",
       "name": "Cursed Ground",
+      "icon": "evil-symbol-3",
       "x": 4311.8,
       "y": 984,
       "maxPoints": 5,
@@ -4726,6 +4908,7 @@
     "bc53-15": {
       "skill": "bc53-15",
       "name": "Conflation",
+      "icon": "c-tremor2",
       "x": 6435.8,
       "y": 480,
       "maxPoints": 5,
@@ -4752,6 +4935,7 @@
     "bc53-16": {
       "skill": "bc53-16",
       "name": "Bone Prison",
+      "icon": "Bone Wall",
       "x": 6435.8,
       "y": 1020,
       "maxPoints": 1,
@@ -4779,6 +4963,7 @@
     "bc53-17": {
       "skill": "bc53-17",
       "name": "Shattered Prison",
+      "icon": "Circle of bones",
       "x": 5955.8,
       "y": 1220,
       "maxPoints": 1,
@@ -4802,6 +4987,7 @@
     "bc53-18": {
       "skill": "bc53-18",
       "name": "Ossify",
+      "icon": "bonegolem",
       "x": 6915.8,
       "y": 1220,
       "maxPoints": 4,
@@ -4824,6 +5010,7 @@
     "bc53-19": {
       "skill": "bc53-19",
       "name": "Sigil of Mortality",
+      "icon": "markfordeath",
       "x": 7083.8,
       "y": 752,
       "maxPoints": 1,
@@ -4855,6 +5042,7 @@
     "bc53-20": {
       "skill": "bc53-20",
       "name": "Reaper's Mark",
+      "icon": "Anomaly-End_teal",
       "x": 7507.8,
       "y": 1148,
       "maxPoints": 4,
@@ -4877,6 +5065,7 @@
     "bc53-21": {
       "skill": "bc53-21",
       "name": "Misery",
+      "icon": "Drain_Life",
       "x": 7871.8,
       "y": 820,
       "maxPoints": 1,
@@ -4899,6 +5088,7 @@
     "bc53-22": {
       "skill": "bc53-22",
       "name": "Oppressive Gaze",
+      "icon": "c-despair",
       "x": 7507.8,
       "y": 356,
       "maxPoints": 1,
@@ -4923,6 +5113,7 @@
     "bc53-23": {
       "skill": "bc53-23",
       "name": "Crippling Anguish",
+      "icon": "c-slow",
       "x": 7307.8,
       "y": -84,
       "maxPoints": 4,
@@ -4948,6 +5139,7 @@
     "bc53-24": {
       "skill": "bc53-24",
       "name": "Swift Release",
+      "icon": "c-Dread Shade",
       "x": 8479.8,
       "y": 660,
       "maxPoints": 3,
@@ -4974,6 +5166,7 @@
     "bc53-25": {
       "skill": "bc53-25",
       "name": "Cultist's Fervor",
+      "icon": "Spellbook Arcane",
       "x": 7635.8,
       "y": -920,
       "maxPoints": 4,
@@ -5003,6 +5196,7 @@
     "bc53-26": {
       "skill": "bc53-26",
       "name": "Chilblains",
+      "icon": "c-chill",
       "x": 8451.8,
       "y": -792,
       "maxPoints": 3,
@@ -5027,6 +5221,7 @@
     "bc53-27": {
       "skill": "bc53-27",
       "name": "Bitter Winter",
+      "icon": "c-freeze",
       "x": 8959.8,
       "y": -496,
       "maxPoints": 5,
@@ -5049,6 +5244,7 @@
     "bc53-28": {
       "skill": "bc53-28",
       "name": "Merciless",
+      "icon": "unearth",
       "x": 7955.8,
       "y": -464,
       "maxPoints": 5,
@@ -5076,6 +5272,7 @@
     "bc53-29": {
       "skill": "bc53-29",
       "name": "Spiked Bones",
+      "icon": "c-Assemble Abomination",
       "x": 8415.8,
       "y": -128,
       "maxPoints": 4,
@@ -5102,6 +5299,7 @@
     "bc53-30": {
       "skill": "bc53-30",
       "name": "Barbed Construct",
+      "icon": "bonegolem",
       "x": 9039.8,
       "y": 36,
       "maxPoints": 1,
@@ -5124,6 +5322,7 @@
     "bc53-31": {
       "skill": "bc53-31",
       "name": "Cursed Limbs",
+      "icon": "harvest",
       "x": 6435.8,
       "y": -640,
       "maxPoints": 5,
@@ -5179,6 +5378,7 @@
     "bg36nl-2": {
       "skill": "bg36nl-2",
       "name": "Amalgam of Rogues",
+      "icon": "c-flurry3 - orange",
       "x": 7335.8,
       "y": -0,
       "maxPoints": 5,
@@ -5207,6 +5407,7 @@
     "bg36nl-3": {
       "skill": "bg36nl-3",
       "name": "Twinned Golems",
+      "icon": "summon-skeleton-multiple",
       "x": 6796.1997,
       "y": -620,
       "maxPoints": 1,
@@ -5240,6 +5441,7 @@
     "bg36nl-4": {
       "skill": "bg36nl-4",
       "name": "Ivory Twin",
+      "icon": "bonegolem-multiple",
       "x": 7435.4,
       "y": -797.2,
       "maxPoints": 1,
@@ -5263,6 +5465,7 @@
     "bg36nl-5": {
       "skill": "bg36nl-5",
       "name": "Burning Bones",
+      "icon": "Fire Shield",
       "x": 8111,
       "y": -859.2,
       "maxPoints": 5,
@@ -5289,6 +5492,7 @@
     "bg36nl-6": {
       "skill": "bg36nl-6",
       "name": "Charred Bones",
+      "icon": "fire-harvest",
       "x": 8111,
       "y": -121.6,
       "maxPoints": 5,
@@ -5314,6 +5518,7 @@
     "bg36nl-7": {
       "skill": "bg36nl-7",
       "name": "Pyre Golem",
+      "icon": "bonegolem-fire",
       "x": 8531.4,
       "y": -489.2,
       "maxPoints": 1,
@@ -5346,6 +5551,7 @@
     "bg36nl-8": {
       "skill": "bg36nl-8",
       "name": "World Pyre",
+      "icon": "Glyph of Fire",
       "x": 8966.199,
       "y": -121.6,
       "maxPoints": 5,
@@ -5369,6 +5575,7 @@
     "bg36nl-9": {
       "skill": "bg36nl-9",
       "name": "Unnatural Speed",
+      "icon": "c-silver-shroud",
       "x": 7503.8,
       "y": 662.8,
       "maxPoints": 4,
@@ -5397,6 +5604,7 @@
     "bg36nl-10": {
       "skill": "bg36nl-10",
       "name": "Infected Remains",
+      "icon": "c-poison",
       "x": 8287.8,
       "y": 532,
       "maxPoints": 5,
@@ -5421,6 +5629,7 @@
     "bg36nl-11": {
       "skill": "bg36nl-11",
       "name": "Cold Vengeance",
+      "icon": "summon wraith ice",
       "x": 5141,
       "y": 1210,
       "maxPoints": 5,
@@ -5450,6 +5659,7 @@
     "bg36nl-12": {
       "skill": "bg36nl-12",
       "name": "Deathchill Golem",
+      "icon": "bonegolem-blue",
       "x": 4611.8,
       "y": 920,
       "maxPoints": 1,
@@ -5479,6 +5689,7 @@
     "bg36nl-13": {
       "skill": "bg36nl-13",
       "name": "Amalgam of Sentinels",
+      "icon": "Bone Armor",
       "x": 6796.1997,
       "y": 662.8,
       "maxPoints": 5,
@@ -5506,6 +5717,7 @@
     "bg36nl-14": {
       "skill": "bg36nl-14",
       "name": "Bladed Fists",
+      "icon": "Maul",
       "x": 7161.8,
       "y": 1210,
       "maxPoints": 5,
@@ -5529,6 +5741,7 @@
     "bg36nl-15": {
       "skill": "bg36nl-15",
       "name": "Tower of Bones",
+      "icon": "c-warcry",
       "x": 6435.8,
       "y": 1210,
       "maxPoints": 4,
@@ -5557,6 +5770,7 @@
     "bg36nl-16": {
       "skill": "bg36nl-16",
       "name": "Fragments of the Fallen",
+      "icon": "c-descent",
       "x": 6077.8,
       "y": 662.8,
       "maxPoints": 1,
@@ -5581,6 +5795,7 @@
     "bg36nl-17": {
       "skill": "bg36nl-17",
       "name": "Amalgam of Primalists",
+      "icon": "battle_standard",
       "x": 5401.4,
       "y": 662.8,
       "maxPoints": 5,
@@ -5605,6 +5820,7 @@
     "bg36nl-18": {
       "skill": "bg36nl-18",
       "name": "Hunger",
+      "icon": "c-Health Regeneration Debuff Red",
       "x": 8069.8,
       "y": 1210,
       "maxPoints": 5,
@@ -5631,6 +5847,7 @@
     "bg36nl-19": {
       "skill": "bg36nl-19",
       "name": "Blood Golem",
+      "icon": "bonegolem-red",
       "x": 8766.199,
       "y": 1210,
       "maxPoints": 1,
@@ -5657,6 +5874,7 @@
     "bg36nl-20": {
       "skill": "bg36nl-20",
       "name": "Amalgam of Mages",
+      "icon": "c-stun",
       "x": 5535.8,
       "y": -0,
       "maxPoints": 5,
@@ -5683,6 +5901,7 @@
     "bg36nl-21": {
       "skill": "bg36nl-21",
       "name": "Bone Hail",
+      "icon": "Bone Nova",
       "x": 4783,
       "y": -178.8,
       "maxPoints": 5,
@@ -5709,6 +5928,7 @@
     "bg36nl-22": {
       "skill": "bg36nl-22",
       "name": "Flight of the Femurs",
+      "icon": "Spirit_Thorns-red",
       "x": 4102.1997,
       "y": -540.8,
       "maxPoints": 1,
@@ -5732,6 +5952,7 @@
     "bg36nl-23": {
       "skill": "bg36nl-23",
       "name": "Bone Growth",
+      "icon": "c-Health Regeneration Buff (generic)",
       "x": 6077.8,
       "y": -620.0001,
       "maxPoints": 5,
@@ -5759,6 +5980,7 @@
     "bg36nl-24": {
       "skill": "bg36nl-24",
       "name": "Marrow Eater",
+      "icon": "Bone Pile",
       "x": 5436.5996,
       "y": -797.2,
       "maxPoints": 5,
@@ -5781,6 +6003,7 @@
     "bg36nl-25": {
       "skill": "bg36nl-25",
       "name": "Betrayal",
+      "icon": "c-Featherstorm",
       "x": 4102.1997,
       "y": 147.6,
       "maxPoints": 1,
@@ -5806,6 +6029,7 @@
     "bg36nl-26": {
       "skill": "bg36nl-26",
       "name": "Breath of Formosus",
+      "icon": "cold-skele-mage",
       "x": 4080.1997,
       "y": 1210,
       "maxPoints": 1,
@@ -5829,6 +6053,7 @@
     "bg36nl-28": {
       "skill": "bg36nl-28",
       "name": "Bone Kindling",
+      "icon": "c-ignite",
       "x": 8966.199,
       "y": -859.2,
       "maxPoints": 1,
@@ -5874,6 +6099,7 @@
     "bp2nk-2": {
       "skill": "bp2nk-2",
       "name": "Bone Knives",
+      "icon": "Bone Armor",
       "x": 6943.8,
       "y": -548,
       "maxPoints": 1,
@@ -5902,6 +6128,7 @@
     "bp2nk-3": {
       "skill": "bp2nk-3",
       "name": "Marrow Hunger",
+      "icon": "leech life",
       "x": 6435.8,
       "y": -768,
       "maxPoints": 3,
@@ -5924,6 +6151,7 @@
     "bp2nk-4": {
       "skill": "bp2nk-4",
       "name": "Splintering Impact",
+      "icon": "Bone Nova",
       "x": 7515.8,
       "y": -600,
       "maxPoints": 1,
@@ -5956,6 +6184,7 @@
     "bp2nk-5": {
       "skill": "bp2nk-5",
       "name": "Carving",
+      "icon": "Bone Pile Blood",
       "x": 8035.8,
       "y": -0,
       "maxPoints": 5,
@@ -5986,6 +6215,7 @@
     "bp2nk-6": {
       "skill": "bp2nk-6",
       "name": "Ghost Splinters",
+      "icon": "c-flurry-1",
       "x": 7235.8,
       "y": -0,
       "maxPoints": 6,
@@ -6011,6 +6241,7 @@
     "bp2nk-7": {
       "skill": "bp2nk-7",
       "name": "Gouging Splinters",
+      "icon": "c-bleed",
       "x": 9028.6,
       "y": -240,
       "maxPoints": 4,
@@ -6035,6 +6266,7 @@
     "bp2nk-8": {
       "skill": "bp2nk-8",
       "name": "Crimson Ivory",
+      "icon": "c-multishot - red",
       "x": 8677.399,
       "y": -720,
       "maxPoints": 4,
@@ -6057,6 +6289,7 @@
     "bp2nk-9": {
       "skill": "bp2nk-9",
       "name": "Dark Precision",
+      "icon": "exorcise_boney",
       "x": 9028.6,
       "y": 240,
       "maxPoints": 3,
@@ -6081,6 +6314,7 @@
     "bp2nk-10": {
       "skill": "bp2nk-10",
       "name": "Ivory Obliteration",
+      "icon": "c-puncture_red",
       "x": 8677.4,
       "y": 720,
       "maxPoints": 1,
@@ -6103,6 +6337,7 @@
     "bp2nk-11": {
       "skill": "bp2nk-11",
       "name": "Dead Weight",
+      "icon": "c-barrage_red",
       "x": 6943.8,
       "y": 548,
       "maxPoints": 5,
@@ -6129,6 +6364,7 @@
     "bp2nk-12": {
       "skill": "bp2nk-12",
       "name": "Blood Assassin",
+      "icon": "harvest",
       "x": 6435.8,
       "y": 744,
       "maxPoints": 3,
@@ -6157,6 +6393,7 @@
     "bp2nk-13": {
       "skill": "bp2nk-13",
       "name": "Marrow Death",
+      "icon": "Slash Necrotic",
       "x": 6955.8,
       "y": 1168,
       "maxPoints": 2,
@@ -6181,6 +6418,7 @@
     "bp2nk-14": {
       "skill": "bp2nk-14",
       "name": "Femoral Offering",
+      "icon": "Zombie Bite",
       "x": 7575.8,
       "y": 1244,
       "maxPoints": 1,
@@ -6205,6 +6443,7 @@
     "bp2nk-16": {
       "skill": "bp2nk-16",
       "name": "Bone Splinters",
+      "icon": "Circle of bones",
       "x": 7515.8,
       "y": 600,
       "maxPoints": 1,
@@ -6238,6 +6477,7 @@
     "bp2nk-17": {
       "skill": "bp2nk-17",
       "name": "Marrow Caster",
+      "icon": "Spear stab",
       "x": 8147.8,
       "y": 888,
       "maxPoints": 1,
@@ -6261,6 +6501,7 @@
     "bp2nk-18": {
       "skill": "bp2nk-18",
       "name": "Ossumancy",
+      "icon": "Sword slash double",
       "x": 5927.8,
       "y": -548,
       "maxPoints": 7,
@@ -6286,6 +6527,7 @@
     "bp2nk-19": {
       "skill": "bp2nk-19",
       "name": "Shredding Bones",
+      "icon": "Armor Shred",
       "x": 5295.8,
       "y": -779.9999,
       "maxPoints": 5,
@@ -6308,6 +6550,7 @@
     "bp2nk-20": {
       "skill": "bp2nk-20",
       "name": "Apathy",
+      "icon": "zombie-explosion",
       "x": 4959.8,
       "y": -280,
       "maxPoints": 1,
@@ -6333,6 +6576,7 @@
     "bp2nk-21": {
       "skill": "bp2nk-21",
       "name": "Treachery",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 4387.8,
       "y": -279.99994,
       "maxPoints": 7,
@@ -6358,6 +6602,7 @@
     "bp2nk-22": {
       "skill": "bp2nk-22",
       "name": "Dark Reverie",
+      "icon": "evil-symbol-3",
       "x": 4107.8,
       "y": -779.99994,
       "maxPoints": 2,
@@ -6383,6 +6628,7 @@
     "bp2nk-23": {
       "skill": "bp2nk-23",
       "name": "Blood Reverie",
+      "icon": "c-Ravage",
       "x": 4107.8,
       "y": 200,
       "maxPoints": 2,
@@ -6405,6 +6651,7 @@
     "bp2nk-24": {
       "skill": "bp2nk-24",
       "name": "Soul Blood",
+      "icon": "rip blood",
       "x": 5927.8,
       "y": 548,
       "maxPoints": 4,
@@ -6433,6 +6680,7 @@
     "bp2nk-25": {
       "skill": "bp2nk-25",
       "name": "Bones Of The Follower",
+      "icon": "summon blood wraith",
       "x": 5199.8,
       "y": 308,
       "maxPoints": 1,
@@ -6459,6 +6707,7 @@
     "bp2nk-26": {
       "skill": "bp2nk-26",
       "name": "Rip Marrow",
+      "icon": "Orb Blood",
       "x": 5199.8,
       "y": 956,
       "maxPoints": 1,
@@ -6488,6 +6737,7 @@
     "bp2nk-27": {
       "skill": "bp2nk-27",
       "name": "Marrow Eater",
+      "icon": "leechlife",
       "x": 4611.8,
       "y": 1192,
       "maxPoints": 3,
@@ -6513,6 +6763,7 @@
     "bp2nk-28": {
       "skill": "bp2nk-28",
       "name": "Life Blood",
+      "icon": "Volcanic-Orb",
       "x": 4611.8,
       "y": 684,
       "maxPoints": 2,
@@ -6540,6 +6791,7 @@
     "bp2nk-29": {
       "skill": "bp2nk-29",
       "name": "Spirit Feast",
+      "icon": "soul feast",
       "x": 4031.7998,
       "y": 956,
       "maxPoints": 1,
@@ -6567,6 +6819,7 @@
     "bp2nk-30": {
       "skill": "bp2nk-30",
       "name": "Demise",
+      "icon": "c-Bone Curse",
       "x": 5635.8,
       "y": -0,
       "maxPoints": 5,
@@ -6589,6 +6842,7 @@
     "bp2nk-32": {
       "skill": "bp2nk-32",
       "name": "Frigid Shards",
+      "icon": "Frozen_Skull_Acolyte",
       "x": 5871.4,
       "y": 1234.4,
       "maxPoints": 1,
@@ -6641,6 +6895,7 @@
     "ch0fs-2": {
       "skill": "ch0fs-2",
       "name": "Fragile Crust",
+      "icon": "evil-symbol-1",
       "x": 5630.1997,
       "y": 100,
       "maxPoints": 3,
@@ -6668,6 +6923,7 @@
     "ch0fs-3": {
       "skill": "ch0fs-3",
       "name": "Fell Fire",
+      "icon": "ignite-spreading",
       "x": 5524.1997,
       "y": -460,
       "maxPoints": 4,
@@ -6702,6 +6958,7 @@
     "ch0fs-4": {
       "skill": "ch0fs-4",
       "name": "Stygian Current",
+      "icon": "chthonic-spirits",
       "x": 4646.1997,
       "y": -500,
       "maxPoints": 5,
@@ -6730,6 +6987,7 @@
     "ch0fs-5": {
       "skill": "ch0fs-5",
       "name": "Of Gloom and Flames",
+      "icon": "chthonic-fissure-opposite",
       "x": 3932.9998,
       "y": -763.2,
       "maxPoints": 1,
@@ -6756,6 +7014,7 @@
     "ch0fs-6": {
       "skill": "ch0fs-6",
       "name": "Chaotic Rupture",
+      "icon": "chaos-bolts",
       "x": 3932.9998,
       "y": -231.6,
       "maxPoints": 3,
@@ -6781,6 +7040,7 @@
     "ch0fs-7": {
       "skill": "ch0fs-7",
       "name": "Spirit Gale",
+      "icon": "necrotic-screech",
       "x": 5030.1997,
       "y": 240,
       "maxPoints": 2,
@@ -6808,6 +7068,7 @@
     "ch0fs-8": {
       "skill": "ch0fs-8",
       "name": "Severed Wards",
+      "icon": "c-necrotic_protection_debuff",
       "x": 4377.4,
       "y": 240.00005,
       "maxPoints": 3,
@@ -6836,6 +7097,7 @@
     "ch0fs-9": {
       "skill": "ch0fs-9",
       "name": "Singed by Terror",
+      "icon": "fire-resist-debuff",
       "x": 3997.4,
       "y": 580.8,
       "maxPoints": 3,
@@ -6860,6 +7122,7 @@
     "ch0fs-10": {
       "skill": "ch0fs-10",
       "name": "Return Below",
+      "icon": "cremate2",
       "x": 3878.5999,
       "y": 1133.2,
       "maxPoints": 1,
@@ -6884,6 +7147,7 @@
     "ch0fs-11": {
       "skill": "ch0fs-11",
       "name": "Damned Waters",
+      "icon": "Skull Necrotic",
       "x": 4969.8,
       "y": 780.8,
       "maxPoints": 3,
@@ -6909,6 +7173,7 @@
     "ch0fs-12": {
       "skill": "ch0fs-12",
       "name": "Grim Tide",
+      "icon": "necrotic-beams-3",
       "x": 4709.8,
       "y": 1223.2,
       "maxPoints": 1,
@@ -6934,6 +7199,7 @@
     "ch0fs-13": {
       "skill": "ch0fs-13",
       "name": "Twisted Waves",
+      "icon": "zombie-explosion-teal",
       "x": 5230.1997,
       "y": 1223.2,
       "maxPoints": 3,
@@ -6956,6 +7222,7 @@
     "ch0fs-14": {
       "skill": "ch0fs-14",
       "name": "Eradication",
+      "icon": "necrotic-bone-curse",
       "x": 6035,
       "y": 700,
       "maxPoints": 3,
@@ -6985,6 +7252,7 @@
     "ch0fs-15": {
       "skill": "ch0fs-15",
       "name": "Beacon of Torment",
+      "icon": "soul-feast-new",
       "x": 5830.1997,
       "y": 1208,
       "maxPoints": 1,
@@ -7008,6 +7276,7 @@
     "ch0fs-16": {
       "skill": "ch0fs-16",
       "name": "Grasp of the Undying",
+      "icon": "chaos-skull-circle",
       "x": 6843.8,
       "y": 700,
       "maxPoints": 4,
@@ -7039,6 +7308,7 @@
     "ch0fs-17": {
       "skill": "ch0fs-17",
       "name": "The Sunderer's Domain",
+      "icon": "Bone Pile",
       "x": 7135.8,
       "y": 1208,
       "maxPoints": 1,
@@ -7068,6 +7338,7 @@
     "ch0fs-18": {
       "skill": "ch0fs-18",
       "name": "Deepest Ravine",
+      "icon": "Sacrifice",
       "x": 6435.8,
       "y": 1208,
       "maxPoints": 1,
@@ -7091,6 +7362,7 @@
     "ch0fs-19": {
       "skill": "ch0fs-19",
       "name": "Rekindled Graves",
+      "icon": "Zombie Bite",
       "x": 7811.8,
       "y": 1114.8,
       "maxPoints": 1,
@@ -7114,6 +7386,7 @@
     "ch0fs-20": {
       "skill": "ch0fs-20",
       "name": "Death from Below",
+      "icon": "burning-sigil",
       "x": 7235,
       "y": 100,
       "maxPoints": 2,
@@ -7142,6 +7415,7 @@
     "ch0fs-21": {
       "skill": "ch0fs-21",
       "name": "Pyrochasm",
+      "icon": "burning-head",
       "x": 8165.8,
       "y": -145.6,
       "maxPoints": 1,
@@ -7171,6 +7445,7 @@
     "ch0fs-22": {
       "skill": "ch0fs-22",
       "name": "Fissure of Wrath",
+      "icon": "Hungering Soul Fire",
       "x": 7935.8,
       "y": 496,
       "maxPoints": 1,
@@ -7199,6 +7474,7 @@
     "ch0fs-23": {
       "skill": "ch0fs-23",
       "name": "Forbidden Chasm",
+      "icon": "poison-reaper-form-new",
       "x": 8447.8,
       "y": 780.8,
       "maxPoints": 1,
@@ -7224,6 +7500,7 @@
     "ch0fs-24": {
       "skill": "ch0fs-24",
       "name": "Acidbane",
+      "icon": "poison-skele-archer",
       "x": 8832.6,
       "y": 1154.4,
       "maxPoints": 1,
@@ -7246,6 +7523,7 @@
     "ch0fs-25": {
       "skill": "ch0fs-25",
       "name": "Ash Cloud",
+      "icon": "spreading flames",
       "x": 8739,
       "y": 196,
       "maxPoints": 3,
@@ -7269,6 +7547,7 @@
     "ch0fs-26": {
       "skill": "ch0fs-26",
       "name": "Chthonic Passage",
+      "icon": "chthonic-fissure-move",
       "x": 8791.8,
       "y": -800,
       "maxPoints": 1,
@@ -7293,6 +7572,7 @@
     "ch0fs-27": {
       "skill": "ch0fs-27",
       "name": "Mantle of Flames",
+      "icon": "c-ignite",
       "x": 7345.8,
       "y": -460,
       "maxPoints": 4,
@@ -7327,6 +7607,7 @@
     "ch0fs-28": {
       "skill": "ch0fs-28",
       "name": "Blood Gulch",
+      "icon": "physical-fissure",
       "x": 7945.4,
       "y": -780.4,
       "maxPoints": 1,
@@ -7350,6 +7631,7 @@
     "ch0fs-29": {
       "skill": "ch0fs-29",
       "name": "Chronicles of Ruin",
+      "icon": "Fear",
       "x": 6935.8,
       "y": -872,
       "maxPoints": 4,
@@ -7378,6 +7660,7 @@
     "ch0fs-30": {
       "skill": "ch0fs-30",
       "name": "Tombgorger",
+      "icon": "Necrotic shred",
       "x": 5935.4,
       "y": -872,
       "maxPoints": 3,
@@ -7405,6 +7688,7 @@
     "ch0fs-31": {
       "skill": "ch0fs-31",
       "name": "Valley of Defilement",
+      "icon": "poison-fissure",
       "x": 6435.8,
       "y": -536,
       "maxPoints": 1,
@@ -7457,6 +7741,7 @@
     "ch4bo-1": {
       "skill": "ch4bo-1",
       "name": "Abrupt Chaos",
+      "icon": "chaos-casting",
       "x": 7219.8,
       "y": -616,
       "maxPoints": 3,
@@ -7484,6 +7769,7 @@
     "ch4bo-2": {
       "skill": "ch4bo-2",
       "name": "Sanguine Reverie",
+      "icon": "physical-fire-bolts",
       "x": 5471.8,
       "y": 1238,
       "maxPoints": 1,
@@ -7515,6 +7801,7 @@
     "ch4bo-4": {
       "skill": "ch4bo-4",
       "name": "Scatter",
+      "icon": "possess-damage",
       "x": 8779.8,
       "y": -944,
       "maxPoints": 4,
@@ -7538,6 +7825,7 @@
     "ch4bo-6": {
       "skill": "ch4bo-6",
       "name": "Condemned to Chaos",
+      "icon": "aura of decay necrotic",
       "x": 5671.8,
       "y": 564.80005,
       "maxPoints": 5,
@@ -7564,6 +7852,7 @@
     "ch4bo-7": {
       "skill": "ch4bo-7",
       "name": "Blood Tithe",
+      "icon": "physical-banshee",
       "x": 4466.1997,
       "y": 1142,
       "maxPoints": 3,
@@ -7588,6 +7877,7 @@
     "ch4bo-8": {
       "skill": "ch4bo-8",
       "name": "A Grave for Two",
+      "icon": "evil-symbol-3",
       "x": 4835.8,
       "y": -0,
       "maxPoints": 1,
@@ -7615,6 +7905,7 @@
     "ch4bo-9": {
       "skill": "ch4bo-9",
       "name": "The Gate",
+      "icon": "chaos-infused-minions",
       "x": 4019.7998,
       "y": 564.8,
       "maxPoints": 1,
@@ -7637,6 +7928,7 @@
     "ch4bo-10": {
       "skill": "ch4bo-10",
       "name": "The Burn",
+      "icon": "cthonic-fissure",
       "x": 4946.1997,
       "y": 739.2,
       "maxPoints": 1,
@@ -7660,6 +7952,7 @@
     "ch4bo-11": {
       "skill": "ch4bo-11",
       "name": "Exult in Misery",
+      "icon": "evil-symbol-7",
       "x": 5535.8,
       "y": -0,
       "maxPoints": 3,
@@ -7690,6 +7983,7 @@
     "ch4bo-12": {
       "skill": "ch4bo-12",
       "name": "Mania in Flames",
+      "icon": "cremate2",
       "x": 5671.8,
       "y": -616,
       "maxPoints": 5,
@@ -7716,6 +8010,7 @@
     "ch4bo-13": {
       "skill": "ch4bo-13",
       "name": "Call of Morditas",
+      "icon": "cold-necrotic-chaos-bolts",
       "x": 4691.8,
       "y": -616,
       "maxPoints": 1,
@@ -7743,6 +8038,7 @@
     "ch4bo-14": {
       "skill": "ch4bo-14",
       "name": "Chance of Snow",
+      "icon": "cold-buff",
       "x": 3999.7998,
       "y": -717.6,
       "maxPoints": 5,
@@ -7767,6 +8063,7 @@
     "ch4bo-15": {
       "skill": "ch4bo-15",
       "name": "Torment of the Red Tundra",
+      "icon": "ice bolt",
       "x": 4163.4,
       "y": -126.4,
       "maxPoints": 1,
@@ -7790,6 +8087,7 @@
     "ch4bo-16": {
       "skill": "ch4bo-16",
       "name": "Pandemonium",
+      "icon": "evil-symbol-5",
       "x": 8019.8,
       "y": -840,
       "maxPoints": 3,
@@ -7817,6 +8115,7 @@
     "ch4bo-17": {
       "skill": "ch4bo-17",
       "name": "Cthonic Aurora",
+      "icon": "chaos-bolts-many",
       "x": 7819.8,
       "y": -300,
       "maxPoints": 4,
@@ -7843,6 +8142,7 @@
     "ch4bo-18": {
       "skill": "ch4bo-18",
       "name": "Mana Anarchy",
+      "icon": "evil-symbol-1",
       "x": 8415.8,
       "y": -160,
       "maxPoints": 3,
@@ -7871,6 +8171,7 @@
     "ch4bo-19": {
       "skill": "ch4bo-19",
       "name": "Revolution",
+      "icon": "wanderingspirits-blue",
       "x": 8910.199,
       "y": -424.4,
       "maxPoints": 1,
@@ -7894,6 +8195,7 @@
     "ch4bo-20": {
       "skill": "ch4bo-20",
       "name": "Chains of the Betrayer",
+      "icon": "chaos-bolt-big",
       "x": 8910.199,
       "y": 134,
       "maxPoints": 1,
@@ -7918,6 +8220,7 @@
     "ch4bo-21": {
       "skill": "ch4bo-21",
       "name": "Volatile Kindling",
+      "icon": "chaos-bolt-minion-hit",
       "x": 7934.1997,
       "y": 240,
       "maxPoints": 1,
@@ -7943,6 +8246,7 @@
     "ch4bo-22": {
       "skill": "ch4bo-22",
       "name": "Sudden Putrescence ",
+      "icon": "Zombie Poison Bite",
       "x": 8485.4,
       "y": 539.2,
       "maxPoints": 3,
@@ -7967,6 +8271,7 @@
     "ch4bo-23": {
       "skill": "ch4bo-23",
       "name": "Destructive Intensity",
+      "icon": "unearth",
       "x": 6435.8,
       "y": -744,
       "maxPoints": 4,
@@ -7992,6 +8297,7 @@
     "ch4bo-24": {
       "skill": "ch4bo-24",
       "name": "Doom's Vindication",
+      "icon": "burning-sigil",
       "x": 7219.8,
       "y": 215.6,
       "maxPoints": 4,
@@ -8023,6 +8329,7 @@
     "ch4bo-25": {
       "skill": "ch4bo-25",
       "name": "Reaper of Mayhem",
+      "icon": "chaos-bolt-harvest",
       "x": 7101,
       "y": 800,
       "maxPoints": 1,
@@ -8045,6 +8352,7 @@
     "ch4bo-26": {
       "skill": "ch4bo-26",
       "name": "Devour the Damned",
+      "icon": "chaos-leech-mana",
       "x": 7872.1997,
       "y": 856.4,
       "maxPoints": 2,
@@ -8074,6 +8382,7 @@
     "ch4bo-27": {
       "skill": "ch4bo-27",
       "name": "Seed of Chaos ",
+      "icon": "chaos-bolts-sequence",
       "x": 8446.6,
       "y": 1142,
       "maxPoints": 1,
@@ -8097,6 +8406,7 @@
     "ch4bo-28": {
       "skill": "ch4bo-28",
       "name": "Exacted Libation",
+      "icon": "rip blood",
       "x": 6435.8,
       "y": 700,
       "maxPoints": 2,
@@ -8125,6 +8435,7 @@
     "ch4bo-29": {
       "skill": "ch4bo-29",
       "name": "Cursed Blood",
+      "icon": "chaos-casting-2",
       "x": 7395.8,
       "y": 1238,
       "maxPoints": 1,
@@ -8153,6 +8464,7 @@
     "ch4bo-30": {
       "skill": "ch4bo-30",
       "name": "Another Affliction",
+      "icon": "c-Bone Curse",
       "x": 6435.8,
       "y": 1238,
       "maxPoints": 1,
@@ -8201,6 +8513,7 @@
     "dl73-2": {
       "skill": "dl73-2",
       "name": "Empowered Drain",
+      "icon": "soul feast",
       "x": 5695.8,
       "y": -183.6,
       "maxPoints": 5,
@@ -8227,6 +8540,7 @@
     "dl73-3": {
       "skill": "dl73-3",
       "name": "Soul Blast",
+      "icon": "aura of decay necrotic",
       "x": 5079.8,
       "y": -88.40015,
       "maxPoints": 1,
@@ -8253,6 +8567,7 @@
     "dl73-4": {
       "skill": "dl73-4",
       "name": "Malignant Discharge",
+      "icon": "necrotic-cone",
       "x": 4731.8,
       "y": -704.40015,
       "maxPoints": 5,
@@ -8276,6 +8591,7 @@
     "dl73-6": {
       "skill": "dl73-6",
       "name": "Hecatomb",
+      "icon": "Skull Necrotic",
       "x": 4331.8,
       "y": -88.400024,
       "maxPoints": 1,
@@ -8301,6 +8617,7 @@
     "dl73-7": {
       "skill": "dl73-7",
       "name": "Necrotic Feast",
+      "icon": "skeleton-rogue",
       "x": 3820.1997,
       "y": 343.8,
       "maxPoints": 1,
@@ -8324,6 +8641,7 @@
     "dl73-8": {
       "skill": "dl73-8",
       "name": "Lay Waste",
+      "icon": "Slash Necrotic",
       "x": 5219.8,
       "y": 608,
       "maxPoints": 1,
@@ -8354,6 +8672,7 @@
     "dl73-9": {
       "skill": "dl73-9",
       "name": "Soul Bond",
+      "icon": "Summon Vale Spirit",
       "x": 4463.8,
       "y": 528,
       "maxPoints": 2,
@@ -8376,6 +8695,7 @@
     "dl73-10": {
       "skill": "dl73-10",
       "name": "Virulence",
+      "icon": "Swarm_Strike",
       "x": 5327.8,
       "y": 1224,
       "maxPoints": 1,
@@ -8401,6 +8721,7 @@
     "dl73-11": {
       "skill": "dl73-11",
       "name": "Blood Pact",
+      "icon": "rip blood",
       "x": 4675.8,
       "y": 1044,
       "maxPoints": 1,
@@ -8429,6 +8750,7 @@
     "dl73-12": {
       "skill": "dl73-12",
       "name": "Death's Barrier",
+      "icon": "c-Ward Generation Buff (generic)",
       "x": 4031.7998,
       "y": 1112,
       "maxPoints": 1,
@@ -8451,6 +8773,7 @@
     "dl73-13": {
       "skill": "dl73-13",
       "name": "Horrify",
+      "icon": "c-Dread Shade",
       "x": 6711.8,
       "y": 668,
       "maxPoints": 4,
@@ -8478,6 +8801,7 @@
     "dl73-14": {
       "skill": "dl73-14",
       "name": "Shadowy Tendril",
+      "icon": "hungering soul",
       "x": 6007.8,
       "y": 420,
       "maxPoints": 1,
@@ -8500,6 +8824,7 @@
     "dl73-15": {
       "skill": "dl73-15",
       "name": "Contempt",
+      "icon": "elementalProtection",
       "x": 7427.8,
       "y": 1112,
       "maxPoints": 1,
@@ -8533,6 +8858,7 @@
     "dl73-16": {
       "skill": "dl73-16",
       "name": "Enduring Contempt",
+      "icon": "Anamoly",
       "x": 7977.48,
       "y": 1260,
       "maxPoints": 4,
@@ -8555,6 +8881,7 @@
     "dl73-17": {
       "skill": "dl73-17",
       "name": "Stagger",
+      "icon": "c-stun",
       "x": 7977.48,
       "y": 760,
       "maxPoints": 1,
@@ -8581,6 +8908,7 @@
     "dl73-18": {
       "skill": "dl73-18",
       "name": "Stupefy",
+      "icon": "c-Stun Susceptibility Debuff (generic)",
       "x": 8471.8,
       "y": 1112,
       "maxPoints": 2,
@@ -8604,6 +8932,7 @@
     "dl73-19": {
       "skill": "dl73-19",
       "name": "Thoughtsteal",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 7135.8,
       "y": -216.80005,
       "maxPoints": 3,
@@ -8629,6 +8958,7 @@
     "dl73-20": {
       "skill": "dl73-20",
       "name": "Condemnation",
+      "icon": "markfordeath",
       "x": 7535,
       "y": 240,
       "maxPoints": 4,
@@ -8657,6 +8987,7 @@
     "dl73-21": {
       "skill": "dl73-21",
       "name": "Word Of Conviction",
+      "icon": "Volatile-Reversal",
       "x": 8451.8,
       "y": 240,
       "maxPoints": 3,
@@ -8681,6 +9012,7 @@
     "dl73-22": {
       "skill": "dl73-22",
       "name": "Eternal Servitude",
+      "icon": "wanderingspirits",
       "x": 9035.4,
       "y": 560,
       "maxPoints": 1,
@@ -8706,6 +9038,7 @@
     "dl73-23": {
       "skill": "dl73-23",
       "name": "Ravenous",
+      "icon": "leechlife",
       "x": 6435.8,
       "y": -760.00024,
       "maxPoints": 4,
@@ -8736,6 +9069,7 @@
     "dl73-24": {
       "skill": "dl73-24",
       "name": "Insatiable",
+      "icon": "leech life",
       "x": 7135.8,
       "y": -828,
       "maxPoints": 3,
@@ -8761,6 +9095,7 @@
     "dl73-25": {
       "skill": "dl73-25",
       "name": "Dark Shackles",
+      "icon": "evil-symbol-1",
       "x": 7871.8,
       "y": -828,
       "maxPoints": 1,
@@ -8787,6 +9122,7 @@
     "dl73-26": {
       "skill": "dl73-26",
       "name": "Enduring Night",
+      "icon": "evil-symbol-3",
       "x": 8599.8,
       "y": -828,
       "maxPoints": 2,
@@ -8812,6 +9148,7 @@
     "dl73-27": {
       "skill": "dl73-27",
       "name": "Grasp Of The Damned",
+      "icon": "evil-symbol-2",
       "x": 8943.8,
       "y": -308,
       "maxPoints": 1,
@@ -8836,6 +9173,7 @@
     "dl73-28": {
       "skill": "dl73-28",
       "name": "Chilling Demise",
+      "icon": "c-cold damage buff",
       "x": 5431.8,
       "y": -700,
       "maxPoints": 5,
@@ -8858,6 +9196,7 @@
     "dl73-30": {
       "skill": "dl73-30",
       "name": "Unholy Mass",
+      "icon": "c-critical strike damage buff",
       "x": 8043.8,
       "y": -240,
       "maxPoints": 3,
@@ -8882,6 +9221,7 @@
     "dl73-32": {
       "skill": "dl73-32",
       "name": "Circle of Sacrifice",
+      "icon": "Spirit_Plague",
       "x": 5875.8,
       "y": 912,
       "maxPoints": 3,
@@ -8910,6 +9250,7 @@
     "dl73-33": {
       "skill": "dl73-33",
       "name": "Cloak of Solitude",
+      "icon": "c-Ward Generation Buff (generic)",
       "x": 6471.8,
       "y": 1208,
       "maxPoints": 1,
@@ -8958,6 +9299,7 @@
     "ds4d3-2": {
       "skill": "ds4d3-2",
       "name": "Wisdom of the Dead",
+      "icon": "c-light swirl",
       "x": 5835.8,
       "y": -320,
       "maxPoints": 3,
@@ -8984,6 +9326,7 @@
     "ds4d3-3": {
       "skill": "ds4d3-3",
       "name": "Martyrdom",
+      "icon": "necrotic-armor",
       "x": 6115.8,
       "y": -836,
       "maxPoints": 1,
@@ -9011,6 +9354,7 @@
     "ds4d3-4": {
       "skill": "ds4d3-4",
       "name": "Congregation of Shades",
+      "icon": "wanderingspirits",
       "x": 5262.1997,
       "y": -520,
       "maxPoints": 1,
@@ -9036,6 +9380,7 @@
     "ds4d3-6": {
       "skill": "ds4d3-6",
       "name": "Frenzied Phantom",
+      "icon": "Bone Pile Blood",
       "x": 4652.5996,
       "y": -237.2,
       "maxPoints": 5,
@@ -9061,6 +9406,7 @@
     "ds4d3-7": {
       "skill": "ds4d3-7",
       "name": "Scorching Brand",
+      "icon": "fire-skele-rogue",
       "x": 3888.2,
       "y": 73.60007,
       "maxPoints": 1,
@@ -9084,6 +9430,7 @@
     "ds4d3-8": {
       "skill": "ds4d3-8",
       "name": "Lingering Doom",
+      "icon": "bonegolem",
       "x": 5995.8,
       "y": 500,
       "maxPoints": 4,
@@ -9112,6 +9459,7 @@
     "ds4d3-9": {
       "skill": "ds4d3-9",
       "name": "Spectral Distance",
+      "icon": "c-Spellpower 1 Buff (generic)",
       "x": 5382.5996,
       "y": -0,
       "maxPoints": 1,
@@ -9135,6 +9483,7 @@
     "ds4d3-10": {
       "skill": "ds4d3-10",
       "name": "Pernicious Pact",
+      "icon": "poison-pool",
       "x": 5248.5996,
       "y": 942,
       "maxPoints": 1,
@@ -9161,6 +9510,7 @@
     "ds4d3-12": {
       "skill": "ds4d3-12",
       "name": "Egoism",
+      "icon": "c-putrid wraith",
       "x": 4392.5996,
       "y": 1236,
       "maxPoints": 2,
@@ -9189,6 +9539,7 @@
     "ds4d3-13": {
       "skill": "ds4d3-13",
       "name": "Deadlock",
+      "icon": "Circle of bones",
       "x": 3784.1997,
       "y": 888,
       "maxPoints": 1,
@@ -9212,6 +9563,7 @@
     "ds4d3-14": {
       "skill": "ds4d3-14",
       "name": "All For One",
+      "icon": "c-Bone Curse",
       "x": 5759.8,
       "y": 1236,
       "maxPoints": 1,
@@ -9237,6 +9589,7 @@
     "ds4d3-15": {
       "skill": "ds4d3-15",
       "name": "Blind Fury",
+      "icon": "c-yellow eye",
       "x": 6435.8,
       "y": 932.8004,
       "maxPoints": 1,
@@ -9265,6 +9618,7 @@
     "ds4d3-16": {
       "skill": "ds4d3-16",
       "name": "Dying Coven",
+      "icon": "c- drain life teal",
       "x": 7171.8,
       "y": 1236,
       "maxPoints": 3,
@@ -9294,6 +9648,7 @@
     "ds4d3-17": {
       "skill": "ds4d3-17",
       "name": "Duskheart",
+      "icon": "Bolt Necrotic",
       "x": 7988.1997,
       "y": 1236,
       "maxPoints": 4,
@@ -9318,6 +9673,7 @@
     "ds4d3-18": {
       "skill": "ds4d3-18",
       "name": "Dying Light",
+      "icon": "aura of decay necrotic",
       "x": 8803.8,
       "y": 1236,
       "maxPoints": 3,
@@ -9340,6 +9696,7 @@
     "ds4d3-19": {
       "skill": "ds4d3-19",
       "name": "Spectral Presence",
+      "icon": "Swarm_Strike",
       "x": 6875.8,
       "y": 500,
       "maxPoints": 4,
@@ -9365,6 +9722,7 @@
     "ds4d3-20": {
       "skill": "ds4d3-20",
       "name": "Grim Fate",
+      "icon": "Bone Pile",
       "x": 7866.1997,
       "y": 554.4,
       "maxPoints": 4,
@@ -9393,6 +9751,7 @@
     "ds4d3-21": {
       "skill": "ds4d3-21",
       "name": "Bane of Death",
+      "icon": "markfordeath",
       "x": 8051.8,
       "y": -104,
       "maxPoints": 3,
@@ -9417,6 +9776,7 @@
     "ds4d3-22": {
       "skill": "ds4d3-22",
       "name": "Final Grasp",
+      "icon": "Sacrifice",
       "x": 8679.8,
       "y": -640.4,
       "maxPoints": 3,
@@ -9441,6 +9801,7 @@
     "ds4d3-23": {
       "skill": "ds4d3-23",
       "name": "Enemy of My Enemies",
+      "icon": "battle_standard",
       "x": 8623.8,
       "y": 496.00006,
       "maxPoints": 1,
@@ -9464,6 +9825,7 @@
     "ds4d3-24": {
       "skill": "ds4d3-24",
       "name": "Symbiotic Apparition",
+      "icon": "Death_Seal_2",
       "x": 8553.4,
       "y": -0,
       "maxPoints": 1,
@@ -9489,6 +9851,7 @@
     "ds4d3-25": {
       "skill": "ds4d3-25",
       "name": "Doom Brand",
+      "icon": "evil-symbol-4",
       "x": 7693,
       "y": -591.2,
       "maxPoints": 1,
@@ -9516,6 +9879,7 @@
     "ds4d3-26": {
       "skill": "ds4d3-26",
       "name": "Dark Binding",
+      "icon": "evil-symbol-5",
       "x": 8137,
       "y": -991.2,
       "maxPoints": 5,
@@ -9538,6 +9902,7 @@
     "ds4d3-27": {
       "skill": "ds4d3-27",
       "name": "Flesh Harvest",
+      "icon": "red_thorny_vines",
       "x": 7035.8,
       "y": -319.99997,
       "maxPoints": 3,
@@ -9566,6 +9931,7 @@
     "ds4d3-28": {
       "skill": "ds4d3-28",
       "name": "Infernal Dread",
+      "icon": "cremate2",
       "x": 4652.5996,
       "y": -791.2,
       "maxPoints": 1,
@@ -9589,6 +9955,7 @@
     "ds4d3-29": {
       "skill": "ds4d3-29",
       "name": "Dread Plague",
+      "icon": "Spirit_Plague_spread",
       "x": 6755.8,
       "y": -836,
       "maxPoints": 1,
@@ -9615,6 +9982,7 @@
     "ds4d3-30": {
       "skill": "ds4d3-30",
       "name": "Beyond Death",
+      "icon": "Zombie Bite",
       "x": 3888.2,
       "y": -556.7999,
       "maxPoints": 4,
@@ -9637,6 +10005,7 @@
     "ds4d3-31": {
       "skill": "ds4d3-31",
       "name": "Lone Watcher",
+      "icon": "c-Vale Spirit Bolt_2",
       "x": 7371.8,
       "y": 68,
       "maxPoints": 1,
@@ -9664,6 +10033,7 @@
     "ds4d3-32": {
       "skill": "ds4d3-32",
       "name": "Vile Ghast",
+      "icon": "Orb Poison",
       "x": 4581.4,
       "y": 694,
       "maxPoints": 1,
@@ -9690,6 +10060,7 @@
     "ds4d3-34": {
       "skill": "ds4d3-34",
       "name": "Wasting Essence",
+      "icon": "evil-symbol-5",
       "x": 5287,
       "y": 528,
       "maxPoints": 3,
@@ -9739,6 +10110,7 @@
     "ds34l-2": {
       "skill": "ds34l-2",
       "name": "Glimpse of Pain",
+      "icon": "evil-symbol-6",
       "x": 6435.8,
       "y": -572.00006,
       "maxPoints": 3,
@@ -9764,6 +10136,7 @@
     "ds34l-3": {
       "skill": "ds34l-3",
       "name": "Radiated Suffering",
+      "icon": "cold-waves",
       "x": 6988.5996,
       "y": -772,
       "maxPoints": 4,
@@ -9789,6 +10162,7 @@
     "ds34l-4": {
       "skill": "ds34l-4",
       "name": "Entreat The Damned",
+      "icon": "wanderingspirits-blue",
       "x": 5870.1997,
       "y": -772,
       "maxPoints": 3,
@@ -9814,6 +10188,7 @@
     "ds34l-5": {
       "skill": "ds34l-5",
       "name": "Corrupted Consciousness",
+      "icon": "c-Spellpower 1 Buff (generic)",
       "x": 5875.8,
       "y": -148,
       "maxPoints": 5,
@@ -9839,6 +10214,7 @@
     "ds34l-6": {
       "skill": "ds34l-6",
       "name": "Mortal Pulse",
+      "icon": "necrotic-cone",
       "x": 5358.5996,
       "y": -572,
       "maxPoints": 1,
@@ -9864,6 +10240,7 @@
     "ds34l-7": {
       "skill": "ds34l-7",
       "name": "Tachycardia",
+      "icon": "necrotic-bone-prison",
       "x": 4819.8,
       "y": -790.4,
       "maxPoints": 1,
@@ -9889,6 +10266,7 @@
     "ds34l-8": {
       "skill": "ds34l-8",
       "name": "Desperate Shroud",
+      "icon": "necrotic-armor",
       "x": 5045.4,
       "y": 96.00006,
       "maxPoints": 3,
@@ -9917,6 +10295,7 @@
     "ds34l-9": {
       "skill": "ds34l-9",
       "name": "Life Tap",
+      "icon": "necrotic-bone-curse",
       "x": 4335.8,
       "y": -147.2,
       "maxPoints": 1,
@@ -9942,6 +10321,7 @@
     "ds34l-11": {
       "skill": "ds34l-11",
       "name": "Deadlock",
+      "icon": "c-Ward Generation Debuff (generic)",
       "x": 4099.8,
       "y": 364,
       "maxPoints": 1,
@@ -9964,6 +10344,7 @@
     "ds34l-12": {
       "skill": "ds34l-12",
       "name": "Pustulent Presence",
+      "icon": "c-poison",
       "x": 4819.8,
       "y": 651.6,
       "maxPoints": 4,
@@ -9991,6 +10372,7 @@
     "ds34l-13": {
       "skill": "ds34l-13",
       "name": "Cycle of Decay",
+      "icon": "poison-harvest",
       "x": 4819.8,
       "y": 1132.8004,
       "maxPoints": 3,
@@ -10018,6 +10400,7 @@
     "ds34l-14": {
       "skill": "ds34l-14",
       "name": "Curdled Flesh",
+      "icon": "poison explosion",
       "x": 3987.7998,
       "y": 1132.8,
       "maxPoints": 1,
@@ -10045,6 +10428,7 @@
     "ds34l-15": {
       "skill": "ds34l-15",
       "name": "Carrion Breath",
+      "icon": "aura of decay blue",
       "x": 6435.8,
       "y": 587.2,
       "maxPoints": 4,
@@ -10072,6 +10456,7 @@
     "ds34l-16": {
       "skill": "ds34l-16",
       "name": "Lethal Release",
+      "icon": "c-striped-eye",
       "x": 5901,
       "y": 1132.8,
       "maxPoints": 5,
@@ -10098,6 +10483,7 @@
     "ds34l-17": {
       "skill": "ds34l-17",
       "name": "Sanguine Wave",
+      "icon": "leech life",
       "x": 5443,
       "y": 700,
       "maxPoints": 3,
@@ -10120,6 +10506,7 @@
     "ds34l-18": {
       "skill": "ds34l-18",
       "name": "Corporeal Cascade",
+      "icon": "Sacrifice",
       "x": 6948.5996,
       "y": 1132.8,
       "maxPoints": 1,
@@ -10147,6 +10534,7 @@
     "ds34l-19": {
       "skill": "ds34l-19",
       "name": "Skeletal Sheath",
+      "icon": "Circle of bones",
       "x": 8390.6,
       "y": 1132.8,
       "maxPoints": 1,
@@ -10169,6 +10557,7 @@
     "ds34l-20": {
       "skill": "ds34l-20",
       "name": "Condemnation",
+      "icon": "harvest",
       "x": 7787.8,
       "y": 851.6,
       "maxPoints": 2,
@@ -10191,6 +10580,7 @@
     "ds34l-21": {
       "skill": "ds34l-21",
       "name": "Blood Bond",
+      "icon": "unearth",
       "x": 5875.8,
       "y": 387.20004,
       "maxPoints": 5,
@@ -10213,6 +10603,7 @@
     "ds34l-22": {
       "skill": "ds34l-22",
       "name": "Soul Stability",
+      "icon": "Bone Pile Blood",
       "x": 7399.8,
       "y": 100,
       "maxPoints": 1,
@@ -10242,6 +10633,7 @@
     "ds34l-23": {
       "skill": "ds34l-23",
       "name": "The Quick And The Dead",
+      "icon": "c-haste",
       "x": 7322.1997,
       "y": 587.2,
       "maxPoints": 1,
@@ -10270,6 +10662,7 @@
     "ds34l-24": {
       "skill": "ds34l-24",
       "name": "Flesh Pact",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 8511.4,
       "y": 587.2,
       "maxPoints": 1,
@@ -10292,6 +10685,7 @@
     "ds34l-25": {
       "skill": "ds34l-25",
       "name": "Doomcall",
+      "icon": "summon wraith",
       "x": 7987.8,
       "y": 239.99995,
       "maxPoints": 5,
@@ -10321,6 +10715,7 @@
     "ds34l-26": {
       "skill": "ds34l-26",
       "name": "Moratorium",
+      "icon": "Anomaly-End",
       "x": 6995.8,
       "y": -148,
       "maxPoints": 3,
@@ -10347,6 +10742,7 @@
     "ds34l-27": {
       "skill": "ds34l-27",
       "name": "Seal of Servitude",
+      "icon": "summon-skeleton-multiple",
       "x": 7787.8,
       "y": -433.11987,
       "maxPoints": 1,
@@ -10371,6 +10767,7 @@
     "ds34l-28": {
       "skill": "ds34l-28",
       "name": "Frenzied Accord",
+      "icon": "Skull Necrotic",
       "x": 8289,
       "y": -72,
       "maxPoints": 5,
@@ -10396,6 +10793,7 @@
     "ds34l-29": {
       "skill": "ds34l-29",
       "name": "Death Stranded",
+      "icon": "Spirit_Plague",
       "x": 8811.399,
       "y": -433.11987,
       "maxPoints": 1,
@@ -10419,6 +10817,7 @@
     "ds34l-30": {
       "skill": "ds34l-30",
       "name": "Devouring Release",
+      "icon": "Hungering Soul Necro",
       "x": 7483.8,
       "y": -772,
       "maxPoints": 1,
@@ -10444,6 +10843,7 @@
     "ds34l-31": {
       "skill": "ds34l-31",
       "name": "Insatiable Soul",
+      "icon": "hungering soul",
       "x": 8311.4,
       "y": -866.4,
       "maxPoints": 3,
@@ -10470,6 +10870,7 @@
     "ds34l-32": {
       "skill": "ds34l-32",
       "name": "Frozen Form",
+      "icon": "cold-nova",
       "x": 4815.8,
       "y": -358.8,
       "maxPoints": 1,
@@ -10518,6 +10919,7 @@
     "fe8at-1": {
       "skill": "fe8at-1",
       "name": "Hunger",
+      "icon": "soul feast",
       "x": 5677.4,
       "y": 6.1036E-05,
       "maxPoints": 4,
@@ -10547,6 +10949,7 @@
     "fe8at-2": {
       "skill": "fe8at-2",
       "name": "Grand Imprint",
+      "icon": "necrotic-cone",
       "x": 4944.5996,
       "y": -614,
       "maxPoints": 1,
@@ -10572,6 +10975,7 @@
     "fe8at-3": {
       "skill": "fe8at-3",
       "name": "Winds of Affliction",
+      "icon": "c-striped-eye",
       "x": 4444.5996,
       "y": -778,
       "maxPoints": 5,
@@ -10595,6 +10999,7 @@
     "fe8at-4": {
       "skill": "fe8at-4",
       "name": "Grim Affliction",
+      "icon": "harvest",
       "x": 6435.8,
       "y": 1227.6,
       "maxPoints": 1,
@@ -10624,6 +11029,7 @@
     "fe8at-5": {
       "skill": "fe8at-5",
       "name": "Infernal Hunger",
+      "icon": "Zombie Bite",
       "x": 5791.8,
       "y": 916.4,
       "maxPoints": 3,
@@ -10652,6 +11058,7 @@
     "fe8at-6": {
       "skill": "fe8at-6",
       "name": "Waning Life",
+      "icon": "c-necrotic damage buff",
       "x": 4139,
       "y": -199.99997,
       "maxPoints": 4,
@@ -10679,6 +11086,7 @@
     "fe8at-7": {
       "skill": "fe8at-7",
       "name": "Sharpened Influence",
+      "icon": "summon-skeleton-multiple",
       "x": 7335.8,
       "y": 1227.6,
       "maxPoints": 3,
@@ -10704,6 +11112,7 @@
     "fe8at-8": {
       "skill": "fe8at-8",
       "name": "Poisoned Husks",
+      "icon": "poison-skele-rogue",
       "x": 5207.8,
       "y": 452,
       "maxPoints": 4,
@@ -10729,6 +11138,7 @@
     "fe8at-9": {
       "skill": "fe8at-9",
       "name": "Diseased Soul",
+      "icon": "aura of decay",
       "x": 4759.4,
       "y": 830,
       "maxPoints": 3,
@@ -10758,6 +11168,7 @@
     "fe8at-10": {
       "skill": "fe8at-10",
       "name": "Toxic Craving",
+      "icon": "evil-symbol-5",
       "x": 4339,
       "y": 452,
       "maxPoints": 1,
@@ -10786,6 +11197,7 @@
     "fe8at-11": {
       "skill": "fe8at-11",
       "name": "Soul Seeker",
+      "icon": "evil-symbol-7",
       "x": 7195.4,
       "y": -0,
       "maxPoints": 3,
@@ -10817,6 +11229,7 @@
     "fe8at-12": {
       "skill": "fe8at-12",
       "name": "Blood Feast",
+      "icon": "leech life",
       "x": 7975.8,
       "y": 266.8,
       "maxPoints": 1,
@@ -10842,6 +11255,7 @@
     "fe8at-13": {
       "skill": "fe8at-13",
       "name": "Incision",
+      "icon": "blood-harvest",
       "x": 8477,
       "y": 549.2,
       "maxPoints": 5,
@@ -10868,6 +11282,7 @@
     "fe8at-14": {
       "skill": "fe8at-14",
       "name": "Blood Tethers",
+      "icon": "leechlife",
       "x": 8962.199,
       "y": 266.8,
       "maxPoints": 3,
@@ -10893,6 +11308,7 @@
     "fe8at-15": {
       "skill": "fe8at-15",
       "name": "Blood from Souls",
+      "icon": "blood-eplosion",
       "x": 8477,
       "y": 1080.4,
       "maxPoints": 2,
@@ -10917,6 +11333,7 @@
     "fe8at-16": {
       "skill": "fe8at-16",
       "name": "Hellmind",
+      "icon": "Skull Necrotic",
       "x": 4759.4,
       "y": -0,
       "maxPoints": 3,
@@ -10941,6 +11358,7 @@
     "fe8at-17": {
       "skill": "fe8at-17",
       "name": "No Rest for the Wicked",
+      "icon": "summon-wraith-multiple",
       "x": 3735.7998,
       "y": 240,
       "maxPoints": 2,
@@ -10963,6 +11381,7 @@
     "fe8at-18": {
       "skill": "fe8at-18",
       "name": "Original Sin",
+      "icon": "markfordeath",
       "x": 6435.8,
       "y": 630,
       "maxPoints": 5,
@@ -10991,6 +11410,7 @@
     "fe8at-19": {
       "skill": "fe8at-19",
       "name": "Bones of the Accursed",
+      "icon": "Bone Pile",
       "x": 7195.4,
       "y": 630,
       "maxPoints": 5,
@@ -11019,6 +11439,7 @@
     "fe8at-20": {
       "skill": "fe8at-20",
       "name": "Wrest",
+      "icon": "possess-damage",
       "x": 7751.4,
       "y": -849.2,
       "maxPoints": 4,
@@ -11043,6 +11464,7 @@
     "fe8at-21": {
       "skill": "fe8at-21",
       "name": "Usurp",
+      "icon": "c-Mana Regeneration Buff (generic)",
       "x": 8377.8,
       "y": -849.19995,
       "maxPoints": 1,
@@ -11065,6 +11487,7 @@
     "fe8at-22": {
       "skill": "fe8at-22",
       "name": "Queen of Flies",
+      "icon": "poison-spreading",
       "x": 5207.8,
       "y": 1191.2,
       "maxPoints": 3,
@@ -11087,6 +11510,7 @@
     "fe8at-23": {
       "skill": "fe8at-23",
       "name": "Engorged",
+      "icon": "profane-form",
       "x": 7049.8,
       "y": -614,
       "maxPoints": 3,
@@ -11117,6 +11541,7 @@
     "fe8at-24": {
       "skill": "fe8at-24",
       "name": "Another Strife",
+      "icon": "physical-profane-orb",
       "x": 8133.4,
       "y": -334.8,
       "maxPoints": 3,
@@ -11146,6 +11571,7 @@
     "fe8at-25": {
       "skill": "fe8at-25",
       "name": "Celerity",
+      "icon": "reaper-ward-dash",
       "x": 5822.5996,
       "y": -614,
       "maxPoints": 4,
@@ -11174,6 +11600,7 @@
     "fe8at-26": {
       "skill": "fe8at-26",
       "name": "Crimson Bounty",
+      "icon": "rip blood",
       "x": 7933.4,
       "y": 1227.6,
       "maxPoints": 3,
@@ -11196,6 +11623,7 @@
     "fe8at-27": {
       "skill": "fe8at-27",
       "name": "Withering Maw",
+      "icon": "evil-symbol-5",
       "x": 6435.8,
       "y": -757.2,
       "maxPoints": 3,
@@ -11223,6 +11651,7 @@
     "fe8at-28": {
       "skill": "fe8at-28",
       "name": "Thought Corrosion",
+      "icon": "control",
       "x": 4339,
       "y": 1191.2,
       "maxPoints": 1,
@@ -11268,6 +11697,7 @@
     "fl44-1": {
       "skill": "fl44-1",
       "name": "Gravecrawler",
+      "icon": "c-skeleton-blue",
       "x": 7223.8,
       "y": 72,
       "maxPoints": 4,
@@ -11296,6 +11726,7 @@
     "fl44-2": {
       "skill": "fl44-2",
       "name": "Plasma Fountain",
+      "icon": "Orb Blood",
       "x": 5867.8,
       "y": -400,
       "maxPoints": 3,
@@ -11324,6 +11755,7 @@
     "fl44-3": {
       "skill": "fl44-3",
       "name": "Decree of Slaughter",
+      "icon": "reaper form",
       "x": 6123.8,
       "y": 656,
       "maxPoints": 4,
@@ -11354,6 +11786,7 @@
     "fl44-4": {
       "skill": "fl44-4",
       "name": "Scent of Death",
+      "icon": "Curse-Mark-for-Death",
       "x": 6635.8,
       "y": -600,
       "maxPoints": 4,
@@ -11383,6 +11816,7 @@
     "fl44-5": {
       "skill": "fl44-5",
       "name": "Trepidation Blade",
+      "icon": "c-dagger dance - red",
       "x": 5223.8,
       "y": -380,
       "maxPoints": 3,
@@ -11405,6 +11839,7 @@
     "fl44-6": {
       "skill": "fl44-6",
       "name": "Spirit Stride",
+      "icon": "Spirit_Plague",
       "x": 4767.8,
       "y": -184,
       "maxPoints": 3,
@@ -11435,6 +11870,7 @@
     "fl44-8": {
       "skill": "fl44-8",
       "name": "Open Wounds",
+      "icon": "aura of decay necrotic",
       "x": 4027.7998,
       "y": -492,
       "maxPoints": 3,
@@ -11461,6 +11897,7 @@
     "fl44-9": {
       "skill": "fl44-9",
       "name": "Transference",
+      "icon": "c-penta-green",
       "x": 4391.8,
       "y": -676,
       "maxPoints": 1,
@@ -11486,6 +11923,7 @@
     "fl44-10": {
       "skill": "fl44-10",
       "name": "Thirst of Dread",
+      "icon": "blood-cone",
       "x": 5355.8,
       "y": 28,
       "maxPoints": 3,
@@ -11519,6 +11957,7 @@
     "fl44-11": {
       "skill": "fl44-11",
       "name": "Bloodsoaked Blade",
+      "icon": "1h axe",
       "x": 5107.8,
       "y": 520,
       "maxPoints": 2,
@@ -11550,6 +11989,7 @@
     "fl44-12": {
       "skill": "fl44-12",
       "name": "Deadly Plot",
+      "icon": "c-mana storm",
       "x": 4483.8,
       "y": 548,
       "maxPoints": 4,
@@ -11578,6 +12018,7 @@
     "fl44-13": {
       "skill": "fl44-13",
       "name": "Chaos Rip",
+      "icon": "chaos-bolts-many",
       "x": 3963.7998,
       "y": 704,
       "maxPoints": 2,
@@ -11605,6 +12046,7 @@
     "fl44-14": {
       "skill": "fl44-14",
       "name": "Go For The Throat",
+      "icon": "BasicMeleeTemp",
       "x": 5495.8,
       "y": 1068,
       "maxPoints": 3,
@@ -11633,6 +12075,7 @@
     "fl44-15": {
       "skill": "fl44-15",
       "name": "Marrow Gnawer",
+      "icon": "boneprojectile",
       "x": 4603.8,
       "y": 1096,
       "maxPoints": 4,
@@ -11659,6 +12102,7 @@
     "fl44-16": {
       "skill": "fl44-16",
       "name": "Corrosive Slash",
+      "icon": "Frozen_Heart_Acolyte",
       "x": 7723.8,
       "y": 500,
       "maxPoints": 1,
@@ -11681,6 +12125,7 @@
     "fl44-17": {
       "skill": "fl44-17",
       "name": "Misfortune",
+      "icon": "blood-eplosion",
       "x": 6599.8,
       "y": 1016,
       "maxPoints": 4,
@@ -11709,6 +12154,7 @@
     "fl44-18": {
       "skill": "fl44-18",
       "name": "Spirit Geyser",
+      "icon": "wanderingspirits",
       "x": 7175.8,
       "y": 1268,
       "maxPoints": 3,
@@ -11736,6 +12182,7 @@
     "fl44-20": {
       "skill": "fl44-20",
       "name": "Blood Waltz",
+      "icon": "bleed-spreading",
       "x": 7083.8,
       "y": 576,
       "maxPoints": 3,
@@ -11765,6 +12212,7 @@
     "fl44-22": {
       "skill": "fl44-22",
       "name": "Spirit Leap",
+      "icon": "evil-symbol-8",
       "x": 4115.8,
       "y": 108,
       "maxPoints": 1,
@@ -11789,6 +12237,7 @@
     "fl44-23": {
       "skill": "fl44-23",
       "name": "Hemorrhage",
+      "icon": "bleed-overload",
       "x": 8127.8,
       "y": 248,
       "maxPoints": 3,
@@ -11818,6 +12267,7 @@
     "fl44-24": {
       "skill": "fl44-24",
       "name": "Dismember",
+      "icon": "Axe slash double",
       "x": 8707.8,
       "y": 176,
       "maxPoints": 4,
@@ -11842,6 +12292,7 @@
     "fl44-25": {
       "skill": "fl44-25",
       "name": "Doom Whisperer",
+      "icon": "evil-symbol-2",
       "x": 7603.8,
       "y": 960,
       "maxPoints": 1,
@@ -11871,6 +12322,7 @@
     "fl44-26": {
       "skill": "fl44-26",
       "name": "Exquisite Blood",
+      "icon": "blood-pool",
       "x": 8163.8,
       "y": 1176,
       "maxPoints": 1,
@@ -11898,6 +12350,7 @@
     "fl44-27": {
       "skill": "fl44-27",
       "name": "Chill of the Grave",
+      "icon": "ice_crash",
       "x": 8763.8,
       "y": -212,
       "maxPoints": 4,
@@ -11924,6 +12377,7 @@
     "fl44-28": {
       "skill": "fl44-28",
       "name": "Prince of Pain",
+      "icon": "summon blood wraith",
       "x": 7355.8,
       "y": -368,
       "maxPoints": 1,
@@ -11950,6 +12404,7 @@
     "fl44-29": {
       "skill": "fl44-29",
       "name": "Spectral Nightmare",
+      "icon": "summon wraith",
       "x": 7715.8,
       "y": -800,
       "maxPoints": 3,
@@ -11976,6 +12431,7 @@
     "fl44-30": {
       "skill": "fl44-30",
       "name": "Occult Offerings",
+      "icon": "evil-symbol-3",
       "x": 8075.8,
       "y": -600,
       "maxPoints": 4,
@@ -12002,6 +12458,7 @@
     "fl44-32": {
       "skill": "fl44-32",
       "name": "Macabre Dance",
+      "icon": "reaper-form-new",
       "x": 6995.8,
       "y": -800,
       "maxPoints": 2,
@@ -12026,6 +12483,7 @@
     "fl44-33": {
       "skill": "fl44-33",
       "name": "Frostblight",
+      "icon": "Frozen_Skull_Acolyte",
       "x": 8163.8,
       "y": -164,
       "maxPoints": 1,
@@ -12052,6 +12510,7 @@
     "fl44-34": {
       "skill": "fl44-34",
       "name": "Soul Ripper",
+      "icon": "Skull Necrotic",
       "x": 6091.8,
       "y": -768,
       "maxPoints": 1,
@@ -12075,6 +12534,7 @@
     "fl44-35": {
       "skill": "fl44-35",
       "name": "Corrupted Blood",
+      "icon": "c-bleed_poison",
       "x": 8875.8,
       "y": 692,
       "maxPoints": 1,
@@ -12097,6 +12557,7 @@
     "fl44-36": {
       "skill": "fl44-36",
       "name": "Blood Revelry",
+      "icon": "c-skeleton-red",
       "x": 5735.8,
       "y": 400,
       "maxPoints": 4,
@@ -12126,6 +12587,7 @@
     "fl44-38": {
       "skill": "fl44-38",
       "name": "Hew",
+      "icon": "Armblade_Slashes2",
       "x": 5471.8,
       "y": -800,
       "maxPoints": 3,
@@ -12171,6 +12633,7 @@
     "gh0fl-1": {
       "skill": "gh0fl-1",
       "name": "Dread Furnace",
+      "icon": "ignite-damned",
       "x": 5745,
       "y": -0,
       "maxPoints": 5,
@@ -12198,6 +12661,7 @@
     "gh0fl-2": {
       "skill": "gh0fl-2",
       "name": "Arteries of Malice",
+      "icon": "physical-screech",
       "x": 5097.8,
       "y": -724,
       "maxPoints": 1,
@@ -12225,6 +12689,7 @@
     "gh0fl-3": {
       "skill": "gh0fl-3",
       "name": "Phantom Transfusion",
+      "icon": "control",
       "x": 4796.1997,
       "y": -336,
       "maxPoints": 5,
@@ -12248,6 +12713,7 @@
     "gh0fl-4": {
       "skill": "gh0fl-4",
       "name": "Feast of Bones",
+      "icon": "boneprojectile",
       "x": 4347.4,
       "y": -664.4,
       "maxPoints": 1,
@@ -12273,6 +12739,7 @@
     "gh0fl-5": {
       "skill": "gh0fl-5",
       "name": "Fuel of Anguish",
+      "icon": "Bone Nova",
       "x": 3947.7998,
       "y": -336,
       "maxPoints": 3,
@@ -12296,6 +12763,7 @@
     "gh0fl-6": {
       "skill": "gh0fl-6",
       "name": "Occult Embers",
+      "icon": "chaos-casting-2",
       "x": 5063.4,
       "y": 359.6,
       "maxPoints": 1,
@@ -12323,6 +12791,7 @@
     "gh0fl-7": {
       "skill": "gh0fl-7",
       "name": "Flames of Misery",
+      "icon": "c-flame wraith",
       "x": 4423.4,
       "y": 140,
       "maxPoints": 5,
@@ -12346,6 +12815,7 @@
     "gh0fl-8": {
       "skill": "gh0fl-8",
       "name": "Decrepit Mortals",
+      "icon": "physical-banshee",
       "x": 4483.4,
       "y": 680,
       "maxPoints": 1,
@@ -12370,6 +12840,7 @@
     "gh0fl-9": {
       "skill": "gh0fl-9",
       "name": "Horrifying Shriek",
+      "icon": "evil-symbol-6",
       "x": 3947.7998,
       "y": 559.6,
       "maxPoints": 2,
@@ -12395,6 +12866,7 @@
     "gh0fl-10": {
       "skill": "gh0fl-10",
       "name": "Banshee",
+      "icon": "banshee",
       "x": 3792.9998,
       "y": 1080,
       "maxPoints": 3,
@@ -12421,6 +12893,7 @@
     "gh0fl-11": {
       "skill": "gh0fl-11",
       "name": "Atrocity",
+      "icon": "evil-symbol-8",
       "x": 4942.5996,
       "y": 1080,
       "maxPoints": 4,
@@ -12444,6 +12917,7 @@
     "gh0fl-12": {
       "skill": "gh0fl-12",
       "name": "Disdain",
+      "icon": "evil-symbol-2",
       "x": 5853,
       "y": -646.40015,
       "maxPoints": 4,
@@ -12467,6 +12941,7 @@
     "gh0fl-13": {
       "skill": "gh0fl-13",
       "name": "Domain of Torment",
+      "icon": "evil-symbol-7",
       "x": 7319,
       "y": 240,
       "maxPoints": 5,
@@ -12494,6 +12969,7 @@
     "gh0fl-14": {
       "skill": "gh0fl-14",
       "name": "Enfeebled Prey",
+      "icon": "evil-symbol-3",
       "x": 6843.8,
       "y": 612,
       "maxPoints": 2,
@@ -12519,6 +12995,7 @@
     "gh0fl-15": {
       "skill": "gh0fl-15",
       "name": "Lingering Warmth",
+      "icon": "reaper-ward-dash",
       "x": 6937.4,
       "y": 1212.8,
       "maxPoints": 3,
@@ -12547,6 +13024,7 @@
     "gh0fl-16": {
       "skill": "gh0fl-16",
       "name": "Memorial of Flames",
+      "icon": "Skull Necrotic",
       "x": 6359,
       "y": 959.6,
       "maxPoints": 5,
@@ -12572,6 +13050,7 @@
     "gh0fl-17": {
       "skill": "gh0fl-17",
       "name": "Unending Ruin",
+      "icon": "necrotic-control",
       "x": 5681,
       "y": 639.2,
       "maxPoints": 3,
@@ -12595,6 +13074,7 @@
     "gh0fl-18": {
       "skill": "gh0fl-18",
       "name": "The Burning Skull",
+      "icon": "burning-head",
       "x": 5681,
       "y": 1212.8,
       "maxPoints": 1,
@@ -12617,6 +13097,7 @@
     "gh0fl-19": {
       "skill": "gh0fl-19",
       "name": "Silver Oblation",
+      "icon": "soul feast",
       "x": 7795.4,
       "y": 980.8,
       "maxPoints": 1,
@@ -12648,6 +13129,7 @@
     "gh0fl-20": {
       "skill": "gh0fl-20",
       "name": "Stygian Beams",
+      "icon": "necrotic-beams-3",
       "x": 8688.6,
       "y": 1212.8,
       "maxPoints": 1,
@@ -12670,6 +13152,7 @@
     "gh0fl-21": {
       "skill": "gh0fl-21",
       "name": "Spirit Kindling",
+      "icon": "unearth",
       "x": 8770.6,
       "y": 680,
       "maxPoints": 1,
@@ -12695,6 +13178,7 @@
     "gh0fl-22": {
       "skill": "gh0fl-22",
       "name": "Fiery Desecration",
+      "icon": "chaos-skull-circle",
       "x": 8081.8,
       "y": 165.59998,
       "maxPoints": 1,
@@ -12722,6 +13206,7 @@
     "gh0fl-23": {
       "skill": "gh0fl-23",
       "name": "Spirit of Dread",
+      "icon": "chaos-bolt-big",
       "x": 8637.8,
       "y": -471.99988,
       "maxPoints": 1,
@@ -12752,6 +13237,7 @@
     "gh0fl-24": {
       "skill": "gh0fl-24",
       "name": "Harrowing Path",
+      "icon": "Bone Pile",
       "x": 9124.199,
       "y": -194.3999,
       "maxPoints": 2,
@@ -12775,6 +13261,7 @@
     "gh0fl-25": {
       "skill": "gh0fl-25",
       "name": "Doom Surge",
+      "icon": "soul-feast-new",
       "x": 9124.199,
       "y": -758.8,
       "maxPoints": 3,
@@ -12797,6 +13284,7 @@
     "gh0fl-26": {
       "skill": "gh0fl-26",
       "name": "Domain of Agony",
+      "icon": "chaos-casting",
       "x": 8149.4,
       "y": -864.4,
       "maxPoints": 5,
@@ -12828,6 +13316,7 @@
     "gh0fl-27": {
       "skill": "gh0fl-27",
       "name": "Spectral Menace",
+      "icon": "evil-symbol-4",
       "x": 7662.5996,
       "y": -260,
       "maxPoints": 5,
@@ -12856,6 +13345,7 @@
     "gh0fl-28": {
       "skill": "gh0fl-28",
       "name": "Wraith Form",
+      "icon": "wanderingspirits copper",
       "x": 6970.1997,
       "y": -536,
       "maxPoints": 4,
@@ -12884,6 +13374,7 @@
     "gh0fl-29": {
       "skill": "gh0fl-29",
       "name": "Ethereal Blockade",
+      "icon": "Bone Armor",
       "x": 7478.5996,
       "y": -766.8,
       "maxPoints": 1,
@@ -12929,6 +13420,7 @@
     "ha84-2": {
       "skill": "ha84-2",
       "name": "Harrowing Blade",
+      "icon": "necrotic-armor",
       "x": 6435.8,
       "y": 740,
       "maxPoints": 4,
@@ -12957,6 +13449,7 @@
     "ha84-3": {
       "skill": "ha84-3",
       "name": "Life Eater",
+      "icon": "leech life",
       "x": 6919.8,
       "y": 576,
       "maxPoints": 1,
@@ -12979,6 +13472,7 @@
     "ha84-4": {
       "skill": "ha84-4",
       "name": "Mark of the Locust",
+      "icon": "Spirit_Plague",
       "x": 6435.8,
       "y": 1256,
       "maxPoints": 1,
@@ -13002,6 +13496,7 @@
     "ha84-5": {
       "skill": "ha84-5",
       "name": "Great Scythe",
+      "icon": "necrotic-cone",
       "x": 5799.8,
       "y": 452,
       "maxPoints": 4,
@@ -13031,6 +13526,7 @@
     "ha84-6": {
       "skill": "ha84-6",
       "name": "Spectral Whetstone",
+      "icon": "Slash Necrotic",
       "x": 5239.8,
       "y": 820,
       "maxPoints": 3,
@@ -13063,6 +13559,7 @@
     "ha84-7": {
       "skill": "ha84-7",
       "name": "Learned Weakness",
+      "icon": "summon wraith",
       "x": 4579.8,
       "y": 984,
       "maxPoints": 4,
@@ -13088,6 +13585,7 @@
     "ha84-8": {
       "skill": "ha84-8",
       "name": "Steal Youth",
+      "icon": "c-flurry2 - blue",
       "x": 4015.7998,
       "y": 656,
       "maxPoints": 2,
@@ -13110,6 +13608,7 @@
     "ha84-9": {
       "skill": "ha84-9",
       "name": "Symbol of Loss",
+      "icon": "markfordeath",
       "x": 5089.4,
       "y": 305.59985,
       "maxPoints": 4,
@@ -13139,6 +13638,7 @@
     "ha84-10": {
       "skill": "ha84-10",
       "name": "Mind Harvest",
+      "icon": "c-Ward Retention Buff (generic)",
       "x": 5639,
       "y": -114.40015,
       "maxPoints": 3,
@@ -13169,6 +13669,7 @@
     "ha84-12": {
       "skill": "ha84-12",
       "name": "Ghost Conduit",
+      "icon": "wanderingspirits-blue",
       "x": 4740.5996,
       "y": -288,
       "maxPoints": 2,
@@ -13194,6 +13695,7 @@
     "ha84-13": {
       "skill": "ha84-13",
       "name": "Agonizing Siphon",
+      "icon": "Spellbook Arcane",
       "x": 4112.5996,
       "y": -32,
       "maxPoints": 4,
@@ -13219,6 +13721,7 @@
     "ha84-14": {
       "skill": "ha84-14",
       "name": "Putrid Reaper",
+      "icon": "c-poison",
       "x": 5955.8,
       "y": -624,
       "maxPoints": 4,
@@ -13243,6 +13746,7 @@
     "ha84-15": {
       "skill": "ha84-15",
       "name": "Death Inside",
+      "icon": "Death_Seal_3",
       "x": 6435.8,
       "y": -836,
       "maxPoints": 3,
@@ -13268,6 +13772,7 @@
     "ha84-16": {
       "skill": "ha84-16",
       "name": "Crimson Death",
+      "icon": "Armblade_Slashes2",
       "x": 7435.8,
       "y": -508,
       "maxPoints": 1,
@@ -13292,6 +13797,7 @@
     "ha84-17": {
       "skill": "ha84-17",
       "name": "Blood Bringer",
+      "icon": "c-bleed",
       "x": 6915.8,
       "y": -624,
       "maxPoints": 4,
@@ -13318,6 +13824,7 @@
     "ha84-18": {
       "skill": "ha84-18",
       "name": "Double Edged Scythe",
+      "icon": "blood-eplosion",
       "x": 7327.8,
       "y": -968,
       "maxPoints": 1,
@@ -13346,6 +13853,7 @@
     "ha84-19": {
       "skill": "ha84-19",
       "name": "Wraith Skin",
+      "icon": "soul feast",
       "x": 7951.8,
       "y": -924,
       "maxPoints": 1,
@@ -13373,6 +13881,7 @@
     "ha84-20": {
       "skill": "ha84-20",
       "name": "Iron Mouths",
+      "icon": "boneprojectile",
       "x": 8319.8,
       "y": -584,
       "maxPoints": 5,
@@ -13402,6 +13911,7 @@
     "ha84-21": {
       "skill": "ha84-21",
       "name": "Legion of the Lich",
+      "icon": "summon-wraith-multiple",
       "x": 7926.2,
       "y": -228.40009,
       "maxPoints": 5,
@@ -13429,6 +13939,7 @@
     "ha84-22": {
       "skill": "ha84-22",
       "name": "Finality",
+      "icon": "c-Axe Throw",
       "x": 7201.8,
       "y": 156,
       "maxPoints": 3,
@@ -13458,6 +13969,7 @@
     "ha84-23": {
       "skill": "ha84-23",
       "name": "Seeds of Undeath",
+      "icon": "zombie-explosion",
       "x": 7602.5996,
       "y": 857.6,
       "maxPoints": 5,
@@ -13486,6 +13998,7 @@
     "ha84-24": {
       "skill": "ha84-24",
       "name": "Undead Harvest",
+      "icon": "Zombie Poison Bite",
       "x": 7763.7993,
       "y": 316.3998,
       "maxPoints": 1,
@@ -13511,6 +14024,7 @@
     "ha84-25": {
       "skill": "ha84-25",
       "name": "Blood Sculptor",
+      "icon": "summon blood wraith",
       "x": 8320.6,
       "y": 458.40002,
       "maxPoints": 4,
@@ -13539,6 +14053,7 @@
     "ha84-26": {
       "skill": "ha84-26",
       "name": "Red Reapers",
+      "icon": "Warpath",
       "x": 8855,
       "y": 130,
       "maxPoints": 3,
@@ -13566,6 +14081,7 @@
     "ha84-27": {
       "skill": "ha84-27",
       "name": "Spectral Feast",
+      "icon": "Orb Blood",
       "x": 9177.399,
       "y": 598,
       "maxPoints": 2,
@@ -13593,6 +14109,7 @@
     "ha84-28": {
       "skill": "ha84-28",
       "name": "Necrotic Blood",
+      "icon": "Skull Necrotic",
       "x": 8588.6,
       "y": 916,
       "maxPoints": 5,
@@ -13620,6 +14137,7 @@
     "ha84-29": {
       "skill": "ha84-29",
       "name": "Shatter",
+      "icon": "cold-explosion",
       "x": 5352.5996,
       "y": -602.4,
       "maxPoints": 1,
@@ -13648,6 +14166,7 @@
     "ha84-30": {
       "skill": "ha84-30",
       "name": "Morbid Fury",
+      "icon": "c-dagger dance - red",
       "x": 5799.8,
       "y": 1020,
       "maxPoints": 4,
@@ -13697,6 +14216,7 @@
     "hs18gu-2": {
       "skill": "hs18gu-2",
       "name": "Forbidden Pact",
+      "icon": "Spellbook Arcane",
       "x": 7059.8,
       "y": 432,
       "maxPoints": 1,
@@ -13724,6 +14244,7 @@
     "hs18gu-3": {
       "skill": "hs18gu-3",
       "name": "Isolation",
+      "icon": "Hungering Soul Necro",
       "x": 7771.8,
       "y": 464,
       "maxPoints": 1,
@@ -13752,6 +14273,7 @@
     "hs18gu-4": {
       "skill": "hs18gu-4",
       "name": "Piercing Gaze",
+      "icon": "harvest",
       "x": 8043.8,
       "y": 1176,
       "maxPoints": 5,
@@ -13776,6 +14298,7 @@
     "hs18gu-5": {
       "skill": "hs18gu-5",
       "name": "Hungering Eyes",
+      "icon": "Mana Strike",
       "x": 8768.6,
       "y": 1176,
       "maxPoints": 2,
@@ -13798,6 +14321,7 @@
     "hs18gu-6": {
       "skill": "hs18gu-6",
       "name": "Great Soul",
+      "icon": "bonegolem",
       "x": 8175.8,
       "y": -16,
       "maxPoints": 4,
@@ -13824,6 +14348,7 @@
     "hs18gu-7": {
       "skill": "hs18gu-7",
       "name": "Soul Drain",
+      "icon": "Focus",
       "x": 8407.8,
       "y": 616,
       "maxPoints": 1,
@@ -13849,6 +14374,7 @@
     "hs18gu-8": {
       "skill": "hs18gu-8",
       "name": "Mind Harvest",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 9055.8,
       "y": 440,
       "maxPoints": 5,
@@ -13871,6 +14397,7 @@
     "hs18gu-9": {
       "skill": "hs18gu-9",
       "name": "Focused Wrath",
+      "icon": "Disintegrate-green",
       "x": 7172.5996,
       "y": -114,
       "maxPoints": 2,
@@ -13897,6 +14424,7 @@
     "hs18gu-10": {
       "skill": "hs18gu-10",
       "name": "Caustic Wretches",
+      "icon": "c-poison",
       "x": 6893,
       "y": -601.6,
       "maxPoints": 5,
@@ -13924,6 +14452,7 @@
     "hs18gu-11": {
       "skill": "hs18gu-11",
       "name": "Decayed Mind",
+      "icon": "aura of decay",
       "x": 7611.8,
       "y": -812,
       "maxPoints": 5,
@@ -13947,6 +14476,7 @@
     "hs18gu-12": {
       "skill": "hs18gu-12",
       "name": "Inspired Hunger",
+      "icon": "evil-symbol-2",
       "x": 6241.8,
       "y": -730.4,
       "maxPoints": 5,
@@ -13977,6 +14507,7 @@
     "hs18gu-13": {
       "skill": "hs18gu-13",
       "name": "Risen Cemetery",
+      "icon": "wanderingspirits",
       "x": 5572.5996,
       "y": -652,
       "maxPoints": 2,
@@ -14006,6 +14537,7 @@
     "hs18gu-14": {
       "skill": "hs18gu-14",
       "name": "Soul Swarm",
+      "icon": "Volcanic-orb2",
       "x": 5690.5996,
       "y": -161.19995,
       "maxPoints": 2,
@@ -14031,6 +14563,7 @@
     "hs18gu-15": {
       "skill": "hs18gu-15",
       "name": "Dominion Of Undeath",
+      "icon": "Bone Nova",
       "x": 4871.8,
       "y": -340,
       "maxPoints": 4,
@@ -14062,6 +14595,7 @@
     "hs18gu-16": {
       "skill": "hs18gu-16",
       "name": "Life Hunt",
+      "icon": "leech life Teal",
       "x": 4111.8,
       "y": -292,
       "maxPoints": 4,
@@ -14085,6 +14619,7 @@
     "hs18gu-17": {
       "skill": "hs18gu-17",
       "name": "Reaper's Gaze",
+      "icon": "c-Frenzy",
       "x": 5279.8,
       "y": 128,
       "maxPoints": 3,
@@ -14112,6 +14647,7 @@
     "hs18gu-18": {
       "skill": "hs18gu-18",
       "name": "Ravenous",
+      "icon": "Bolt Necrotic",
       "x": 5835.8,
       "y": 440,
       "maxPoints": 5,
@@ -14138,6 +14674,7 @@
     "hs18gu-19": {
       "skill": "hs18gu-19",
       "name": "Vengeful Souls",
+      "icon": "Bone Armor",
       "x": 4979.8,
       "y": 802.4,
       "maxPoints": 1,
@@ -14164,6 +14701,7 @@
     "hs18gu-20": {
       "skill": "hs18gu-20",
       "name": "Soul Catcher",
+      "icon": "c-Ward Generation Debuff (generic)",
       "x": 4319.8,
       "y": 360,
       "maxPoints": 3,
@@ -14189,6 +14727,7 @@
     "hs18gu-21": {
       "skill": "hs18gu-21",
       "name": "Lament",
+      "icon": "skeletal-mage",
       "x": 4355.8,
       "y": 1216,
       "maxPoints": 3,
@@ -14212,6 +14751,7 @@
     "hs18gu-22": {
       "skill": "hs18gu-22",
       "name": "Risen Hatred",
+      "icon": "summon-wraith-multiple",
       "x": 5603.8,
       "y": 1185.6,
       "maxPoints": 3,
@@ -14235,6 +14775,7 @@
     "hs18gu-23": {
       "skill": "hs18gu-23",
       "name": "Grave Bond",
+      "icon": "Bone Pile",
       "x": 6435.8,
       "y": 739.2,
       "maxPoints": 4,
@@ -14262,6 +14803,7 @@
     "hs18gu-24": {
       "skill": "hs18gu-24",
       "name": "Necromantic Emanation",
+      "icon": "unearth",
       "x": 6731.4,
       "y": 1228.8,
       "maxPoints": 3,
@@ -14284,6 +14826,7 @@
     "hs18gu-25": {
       "skill": "hs18gu-25",
       "name": "Unholy Trinity",
+      "icon": "wanderingspirits-blue",
       "x": 7383.8,
       "y": 1080,
       "maxPoints": 3,
@@ -14306,6 +14849,7 @@
     "hs18gu-27": {
       "skill": "hs18gu-27",
       "name": "Fire Skull",
+      "icon": "c-ignite",
       "x": 8727.8,
       "y": -292,
       "maxPoints": 1,
@@ -14333,6 +14877,7 @@
     "hs18gu-28": {
       "skill": "hs18gu-28",
       "name": "Eternal Pyre",
+      "icon": "cremate2",
       "x": 9051.8,
       "y": -784,
       "maxPoints": 5,
@@ -14356,6 +14901,7 @@
     "hs18gu-29": {
       "skill": "hs18gu-29",
       "name": "Descent Into Madness",
+      "icon": "c-Plague",
       "x": 4671.8,
       "y": -812,
       "maxPoints": 5,
@@ -14405,6 +14951,7 @@
     "is40-1": {
       "skill": "is40-1",
       "name": "Ignition",
+      "icon": "arcane ascendance",
       "x": 5759.8,
       "y": 296,
       "maxPoints": 5,
@@ -14431,6 +14978,7 @@
     "is40-2": {
       "skill": "is40-2",
       "name": "Blaze Shade",
+      "icon": "c-flame wraith",
       "x": 5223.8,
       "y": -40,
       "maxPoints": 1,
@@ -14463,6 +15011,7 @@
     "is40-3": {
       "skill": "is40-3",
       "name": "Fleeting Shade",
+      "icon": "aura of decay_red",
       "x": 4588.5996,
       "y": -183.59985,
       "maxPoints": 1,
@@ -14486,6 +15035,7 @@
     "is40-4": {
       "skill": "is40-4",
       "name": "Fanning the Flames",
+      "icon": "Volcanic-orb2",
       "x": 5559.8,
       "y": -456,
       "maxPoints": 5,
@@ -14514,6 +15064,7 @@
     "is40-5": {
       "skill": "is40-5",
       "name": "Lingering Flames",
+      "icon": "Glyph of Fire alt",
       "x": 4707.8,
       "y": -728,
       "maxPoints": 1,
@@ -14541,6 +15092,7 @@
     "is40-6": {
       "skill": "is40-6",
       "name": "Purgatory",
+      "icon": "c-despair",
       "x": 3987.7998,
       "y": -456,
       "maxPoints": 1,
@@ -14566,6 +15118,7 @@
     "is40-7": {
       "skill": "is40-7",
       "name": "Legion",
+      "icon": "wanderingspirits copper",
       "x": 5047.8,
       "y": 500,
       "maxPoints": 2,
@@ -14594,6 +15147,7 @@
     "is40-8": {
       "skill": "is40-8",
       "name": "Wildfires",
+      "icon": "zombie-explosion",
       "x": 5559.8,
       "y": 884,
       "maxPoints": 5,
@@ -14625,6 +15179,7 @@
     "is40-9": {
       "skill": "is40-9",
       "name": "Combustion",
+      "icon": "Fireball explosion",
       "x": 4627.4,
       "y": 1020.12,
       "maxPoints": 1,
@@ -14649,6 +15204,7 @@
     "is40-10": {
       "skill": "is40-10",
       "name": "Fiery Conclusion",
+      "icon": "Glyph of Fire",
       "x": 3932.9998,
       "y": 1234.92,
       "maxPoints": 5,
@@ -14674,6 +15230,7 @@
     "is40-11": {
       "skill": "is40-11",
       "name": "Flame Burst",
+      "icon": "c-crossed-swords",
       "x": 4157.8,
       "y": 562.52,
       "maxPoints": 1,
@@ -14700,6 +15257,7 @@
     "is40-12": {
       "skill": "is40-12",
       "name": "Heart of Fire",
+      "icon": "Circle of bones",
       "x": 6263.8,
       "y": 772,
       "maxPoints": 4,
@@ -14727,6 +15285,7 @@
     "is40-13": {
       "skill": "is40-13",
       "name": "Cackling Flames",
+      "icon": "evil-symbol-2",
       "x": 6959.8,
       "y": 544,
       "maxPoints": 5,
@@ -14754,6 +15313,7 @@
     "is40-14": {
       "skill": "is40-14",
       "name": "Brimstone",
+      "icon": "c-slow",
       "x": 7663.8,
       "y": 772,
       "maxPoints": 4,
@@ -14778,6 +15338,7 @@
     "is40-15": {
       "skill": "is40-15",
       "name": "Hellfire",
+      "icon": "spreading flames",
       "x": 8263.68,
       "y": 972,
       "maxPoints": 1,
@@ -14805,6 +15366,7 @@
     "is40-16": {
       "skill": "is40-16",
       "name": "Fiend Hunter",
+      "icon": "c-Bone Curse",
       "x": 8767.8,
       "y": 700,
       "maxPoints": 2,
@@ -14827,6 +15389,7 @@
     "is40-17": {
       "skill": "is40-17",
       "name": "Flight of Fire",
+      "icon": "Hungering Souls Fire",
       "x": 7387.8,
       "y": 1156,
       "maxPoints": 1,
@@ -14849,6 +15412,7 @@
     "is40-18": {
       "skill": "is40-18",
       "name": "Shifting Doom",
+      "icon": "unearth",
       "x": 6643.8,
       "y": 1172,
       "maxPoints": 4,
@@ -14871,6 +15435,7 @@
     "is40-19": {
       "skill": "is40-19",
       "name": "Influence",
+      "icon": "c-tremor2",
       "x": 6435.8,
       "y": -504,
       "maxPoints": 3,
@@ -14897,6 +15462,7 @@
     "is40-20": {
       "skill": "is40-20",
       "name": "Devour in Flames",
+      "icon": "fire-skele-archer",
       "x": 7095.8,
       "y": -100,
       "maxPoints": 1,
@@ -14922,6 +15488,7 @@
     "is40-21": {
       "skill": "is40-21",
       "name": "Burn Trail",
+      "icon": "c-haste",
       "x": 7723.6797,
       "y": 240,
       "maxPoints": 1,
@@ -14944,6 +15511,7 @@
     "is40-22": {
       "skill": "is40-22",
       "name": "Subjugation",
+      "icon": "fire-harvest",
       "x": 7902.5996,
       "y": -132.4,
       "maxPoints": 1,
@@ -14970,6 +15538,7 @@
     "is40-23": {
       "skill": "is40-23",
       "name": "Soulfire",
+      "icon": "c-Frenzy",
       "x": 8463.68,
       "y": 262,
       "maxPoints": 1,
@@ -14992,6 +15561,7 @@
     "is40-24": {
       "skill": "is40-24",
       "name": "Manic Pyre",
+      "icon": "bonegolem-fire",
       "x": 8531.4,
       "y": -468,
       "maxPoints": 3,
@@ -15018,6 +15588,7 @@
     "is40-25": {
       "skill": "is40-25",
       "name": "Torment Beacon",
+      "icon": "c-ignite",
       "x": 5975.8,
       "y": -816,
       "maxPoints": 5,
@@ -15042,6 +15613,7 @@
     "is40-26": {
       "skill": "is40-26",
       "name": "Baneful",
+      "icon": "c-fire damage buff",
       "x": 6895.8,
       "y": -816,
       "maxPoints": 2,
@@ -15066,6 +15638,7 @@
     "is40-27": {
       "skill": "is40-27",
       "name": "Blood Shade",
+      "icon": "rip blood",
       "x": 7523.6797,
       "y": -633.1199,
       "maxPoints": 1,
@@ -15091,6 +15664,7 @@
     "is40-28": {
       "skill": "is40-28",
       "name": "Corrosion",
+      "icon": "Armor Shred",
       "x": 8195.8,
       "y": -816,
       "maxPoints": 4,
@@ -15135,6 +15709,7 @@
     "pr5fm-2": {
       "skill": "pr5fm-2",
       "name": "Discourage",
+      "icon": "c-slow",
       "x": 5417,
       "y": -0,
       "maxPoints": 4,
@@ -15162,6 +15737,7 @@
     "pr5fm-3": {
       "skill": "pr5fm-3",
       "name": "Heretic's Flame",
+      "icon": "fire-profane-orb",
       "x": 5735.8,
       "y": -597.6,
       "maxPoints": 1,
@@ -15190,6 +15766,7 @@
     "pr5fm-4": {
       "skill": "pr5fm-4",
       "name": "Hell Fire",
+      "icon": "c-ignite",
       "x": 4851.4,
       "y": -538.4,
       "maxPoints": 3,
@@ -15215,6 +15792,7 @@
     "pr5fm-5": {
       "skill": "pr5fm-5",
       "name": "Propane Form",
+      "icon": "Stacking fire",
       "x": 4149.8,
       "y": -818,
       "maxPoints": 1,
@@ -15239,6 +15817,7 @@
     "pr5fm-6": {
       "skill": "pr5fm-6",
       "name": "Infernal Deliverance",
+      "icon": "cremate2",
       "x": 4149.8,
       "y": -251.6,
       "maxPoints": 4,
@@ -15262,6 +15841,7 @@
     "pr5fm-7": {
       "skill": "pr5fm-7",
       "name": "Mire of Words",
+      "icon": "necrotic-control",
       "x": 4893.4,
       "y": 707.2,
       "maxPoints": 3,
@@ -15285,6 +15865,7 @@
     "pr5fm-8": {
       "skill": "pr5fm-8",
       "name": "Scorn",
+      "icon": "possess-damage",
       "x": 4715.4,
       "y": 169.6,
       "maxPoints": 5,
@@ -15312,6 +15893,7 @@
     "pr5fm-9": {
       "skill": "pr5fm-9",
       "name": "Stream of Profanity",
+      "icon": "necrotic-cone",
       "x": 4138.5996,
       "y": 418,
       "maxPoints": 5,
@@ -15336,6 +15918,7 @@
     "pr5fm-10": {
       "skill": "pr5fm-10",
       "name": "Sable Inquisition",
+      "icon": "evil-symbol-4",
       "x": 4362.5996,
       "y": 888,
       "maxPoints": 3,
@@ -15364,6 +15947,7 @@
     "pr5fm-11": {
       "skill": "pr5fm-11",
       "name": "Profane Instruments",
+      "icon": "harvest",
       "x": 3858.5999,
       "y": 1193.2,
       "maxPoints": 3,
@@ -15390,6 +15974,7 @@
     "pr5fm-12": {
       "skill": "pr5fm-12",
       "name": "Visage of Terror",
+      "icon": "c-Dread Shade",
       "x": 5217,
       "y": 1240,
       "maxPoints": 4,
@@ -15417,6 +16002,7 @@
     "pr5fm-13": {
       "skill": "pr5fm-13",
       "name": "Spirit Plate",
+      "icon": "burning-sigil",
       "x": 5751,
       "y": 559.2,
       "maxPoints": 1,
@@ -15443,6 +16029,7 @@
     "pr5fm-14": {
       "skill": "pr5fm-14",
       "name": "Seance",
+      "icon": "wanderingspirits",
       "x": 5951,
       "y": 1240,
       "maxPoints": 3,
@@ -15467,6 +16054,7 @@
     "pr5fm-15": {
       "skill": "pr5fm-15",
       "name": "Derision",
+      "icon": "necrotic-reaper-form-new",
       "x": 6435.8,
       "y": 832,
       "maxPoints": 1,
@@ -15489,6 +16077,7 @@
     "pr5fm-16": {
       "skill": "pr5fm-16",
       "name": "Eternal Blasphemy",
+      "icon": "evil-symbol-7",
       "x": 7110.5996,
       "y": 559.2,
       "maxPoints": 3,
@@ -15517,6 +16106,7 @@
     "pr5fm-17": {
       "skill": "pr5fm-17",
       "name": "Singleminded",
+      "icon": "cthonic-fissure",
       "x": 6918.5996,
       "y": 1240,
       "maxPoints": 1,
@@ -15542,6 +16132,7 @@
     "pr5fm-18": {
       "skill": "pr5fm-18",
       "name": "Vampiric Pool",
+      "icon": "blood-pool",
       "x": 7682.5996,
       "y": 1240,
       "maxPoints": 5,
@@ -15569,6 +16160,7 @@
     "pr5fm-19": {
       "skill": "pr5fm-19",
       "name": "Apocalypse",
+      "icon": "zombies_multiple",
       "x": 8285.8,
       "y": 1147.2,
       "maxPoints": 5,
@@ -15595,6 +16187,7 @@
     "pr5fm-20": {
       "skill": "pr5fm-20",
       "name": "Omnivore",
+      "icon": "Zombie Bite",
       "x": 8865.8,
       "y": 1240,
       "maxPoints": 1,
@@ -15617,6 +16210,7 @@
     "pr5fm-21": {
       "skill": "pr5fm-21",
       "name": "Lake of Blood",
+      "icon": "physical-profane-orb",
       "x": 7987.8,
       "y": 664,
       "maxPoints": 1,
@@ -15644,6 +16238,7 @@
     "pr5fm-22": {
       "skill": "pr5fm-22",
       "name": "Desecrated Graves",
+      "icon": "c-Bone Curse",
       "x": 8701.4,
       "y": 586.39996,
       "maxPoints": 1,
@@ -15675,6 +16270,7 @@
     "pr5fm-23": {
       "skill": "pr5fm-23",
       "name": "Forked Tongue",
+      "icon": "evil-symbol-2",
       "x": 8701.4,
       "y": -44.8,
       "maxPoints": 1,
@@ -15708,6 +16304,7 @@
     "pr5fm-24": {
       "skill": "pr5fm-24",
       "name": "Second Rites",
+      "icon": "Sacrifice",
       "x": 8027.8,
       "y": -6.1036E-05,
       "maxPoints": 1,
@@ -15731,6 +16328,7 @@
     "pr5fm-25": {
       "skill": "pr5fm-25",
       "name": "Harsh Words",
+      "icon": "c- drain life teal",
       "x": 8027.8,
       "y": -538.40015,
       "maxPoints": 3,
@@ -15760,6 +16358,7 @@
     "pr5fm-26": {
       "skill": "pr5fm-26",
       "name": "Grave Circle",
+      "icon": "markfordeath",
       "x": 8681,
       "y": -616.8,
       "maxPoints": 1,
@@ -15785,6 +16384,7 @@
     "pr5fm-27": {
       "skill": "pr5fm-27",
       "name": "Mark of the Rat",
+      "icon": "poison-spreading",
       "x": 9063,
       "y": -908.00006,
       "maxPoints": 5,
@@ -15810,6 +16410,7 @@
     "pr5fm-28": {
       "skill": "pr5fm-28",
       "name": "Profane Orbs",
+      "icon": "profane-orb",
       "x": 7737.8,
       "y": -968,
       "maxPoints": 1,
@@ -15838,6 +16439,7 @@
     "pr5fm-29": {
       "skill": "pr5fm-29",
       "name": "Hex Flurry",
+      "icon": "profane-orb-many",
       "x": 8317.8,
       "y": -968,
       "maxPoints": 4,
@@ -15864,6 +16466,7 @@
     "pr5fm-30": {
       "skill": "pr5fm-30",
       "name": "Loose Tongue",
+      "icon": "aura of decay blue",
       "x": 7135.8,
       "y": -597.6001,
       "maxPoints": 3,
@@ -15890,6 +16493,7 @@
     "pr5fm-31": {
       "skill": "pr5fm-31",
       "name": "Penitent Tangent",
+      "icon": "bonegolem-fire",
       "x": 6435.8,
       "y": -783.2,
       "maxPoints": 1,
@@ -15917,6 +16521,7 @@
     "pr5fm-32": {
       "skill": "pr5fm-32",
       "name": "Unholy Renewal",
+      "icon": "soul-feast-new",
       "x": 7461.8,
       "y": -0,
       "maxPoints": 1,
@@ -15966,6 +16571,7 @@
     "rb31pl-2": {
       "skill": "rb31pl-2",
       "name": "Splatter",
+      "icon": "blood-pool",
       "x": 6287.8,
       "y": 600,
       "maxPoints": 4,
@@ -15996,6 +16602,7 @@
     "rb31pl-3": {
       "skill": "rb31pl-3",
       "name": "Blood Bond",
+      "icon": "blood-eplosion",
       "x": 7911.8,
       "y": 652,
       "maxPoints": 1,
@@ -16021,6 +16628,7 @@
     "rb31pl-4": {
       "skill": "rb31pl-4",
       "name": "Crimson Flood",
+      "icon": "blood-cone",
       "x": 6703.8,
       "y": 1120,
       "maxPoints": 4,
@@ -16046,6 +16654,7 @@
     "rb31pl-5": {
       "skill": "rb31pl-5",
       "name": "Revile",
+      "icon": "blood-harvest",
       "x": 7431.8,
       "y": 1104,
       "maxPoints": 4,
@@ -16068,6 +16677,7 @@
     "rb31pl-6": {
       "skill": "rb31pl-6",
       "name": "Coagulation",
+      "icon": "Orb Blood",
       "x": 3919.7998,
       "y": 600,
       "maxPoints": 1,
@@ -16098,6 +16708,7 @@
     "rb31pl-8": {
       "skill": "rb31pl-8",
       "name": "Varicose Veins",
+      "icon": "c-Laceration_sq",
       "x": 4495.8,
       "y": 496,
       "maxPoints": 3,
@@ -16121,6 +16732,7 @@
     "rb31pl-10": {
       "skill": "rb31pl-10",
       "name": "Gushing Wound",
+      "icon": "c-bleed",
       "x": 7159.8,
       "y": 420,
       "maxPoints": 4,
@@ -16146,6 +16758,7 @@
     "rb31pl-12": {
       "skill": "rb31pl-12",
       "name": "Blood Infusion",
+      "icon": "summon blood wraith",
       "x": 5755.8,
       "y": 1080,
       "maxPoints": 1,
@@ -16170,6 +16783,7 @@
     "rb31pl-13": {
       "skill": "rb31pl-13",
       "name": "Necrotic Unity",
+      "icon": "unearth",
       "x": 4967.8,
       "y": 560,
       "maxPoints": 1,
@@ -16193,6 +16807,7 @@
     "rb31pl-14": {
       "skill": "rb31pl-14",
       "name": "Infused Frenzy",
+      "icon": "summon wraith",
       "x": 4967.8,
       "y": 1260,
       "maxPoints": 3,
@@ -16222,6 +16837,7 @@
     "rb31pl-15": {
       "skill": "rb31pl-15",
       "name": "Hemophagy",
+      "icon": "leech life",
       "x": 4195.8,
       "y": 1076,
       "maxPoints": 3,
@@ -16247,6 +16863,7 @@
     "rb31pl-16": {
       "skill": "rb31pl-16",
       "name": "Hemomancer",
+      "icon": "c-Spellpower  1 debuff (generic)",
       "x": 6035.8,
       "y": -400,
       "maxPoints": 5,
@@ -16274,6 +16891,7 @@
     "rb31pl-17": {
       "skill": "rb31pl-17",
       "name": "Thirst",
+      "icon": "Focus",
       "x": 5674.1997,
       "y": -746.4,
       "maxPoints": 3,
@@ -16299,6 +16917,7 @@
     "rb31pl-18": {
       "skill": "rb31pl-18",
       "name": "Carrion Hunger",
+      "icon": "Spellbook Arcane",
       "x": 5096.5996,
       "y": -783.6,
       "maxPoints": 1,
@@ -16321,6 +16940,7 @@
     "rb31pl-19": {
       "skill": "rb31pl-19",
       "name": "Quenching",
+      "icon": "c-Health Regeneration Debuff Red",
       "x": 4891,
       "y": -304,
       "maxPoints": 5,
@@ -16348,6 +16968,7 @@
     "rb31pl-20": {
       "skill": "rb31pl-20",
       "name": "Hematology",
+      "icon": "c-Ward Generation Debuff (generic)",
       "x": 4339.8,
       "y": -700,
       "maxPoints": 1,
@@ -16370,6 +16991,7 @@
     "rb31pl-21": {
       "skill": "rb31pl-21",
       "name": "Mana Feast",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 4375.8,
       "y": 164,
       "maxPoints": 3,
@@ -16396,6 +17018,7 @@
     "rb31pl-22": {
       "skill": "rb31pl-22",
       "name": "Marrow Drinker",
+      "icon": "evil-symbol-2",
       "x": 3919.7998,
       "y": -256,
       "maxPoints": 1,
@@ -16419,6 +17042,7 @@
     "rb31pl-23": {
       "skill": "rb31pl-23",
       "name": "Volatility",
+      "icon": "blood-harvest",
       "x": 5635.8,
       "y": -0,
       "maxPoints": 3,
@@ -16443,6 +17067,7 @@
     "rb31pl-24": {
       "skill": "rb31pl-24",
       "name": "Carnage",
+      "icon": "Rip_Blood_Marrow_Shards",
       "x": 5039.8,
       "y": 116,
       "maxPoints": 1,
@@ -16465,6 +17090,7 @@
     "rb31pl-26": {
       "skill": "rb31pl-26",
       "name": "Arcane Absorption",
+      "icon": "Skull Necrotic",
       "x": 6835.8,
       "y": -400,
       "maxPoints": 4,
@@ -16493,6 +17119,7 @@
     "rb31pl-27": {
       "skill": "rb31pl-27",
       "name": "Run Dry",
+      "icon": "c-Spellpower 1 Buff (generic)",
       "x": 7235.8,
       "y": -0,
       "maxPoints": 5,
@@ -16518,6 +17145,7 @@
     "rb31pl-28": {
       "skill": "rb31pl-28",
       "name": "Necrotic Inspiration",
+      "icon": "summon-wraith-multiple",
       "x": 8347.8,
       "y": 364,
       "maxPoints": 2,
@@ -16541,6 +17169,7 @@
     "rb31pl-29": {
       "skill": "rb31pl-29",
       "name": "Blood Catalyst",
+      "icon": "evil-symbol-3",
       "x": 8835.8,
       "y": -168,
       "maxPoints": 1,
@@ -16566,6 +17195,7 @@
     "rb31pl-30": {
       "skill": "rb31pl-30",
       "name": "Rip Spirit",
+      "icon": "hungering soul",
       "x": 7799.8,
       "y": -460.00012,
       "maxPoints": 1,
@@ -16592,6 +17222,7 @@
     "rb31pl-31": {
       "skill": "rb31pl-31",
       "name": "Arcane Fortress",
+      "icon": "Drain_Life",
       "x": 8635.8,
       "y": -660.00006,
       "maxPoints": 1,
@@ -16617,6 +17248,7 @@
     "rb31pl-32": {
       "skill": "rb31pl-32",
       "name": "Stench of Blood",
+      "icon": "Bone Pile Blood",
       "x": 6435.8,
       "y": -800.0001,
       "maxPoints": 1,
@@ -16662,6 +17294,7 @@
     "rf1azz-2": {
       "skill": "rf1azz-2",
       "name": "Soul for a Soul",
+      "icon": "Sacrifice",
       "x": 5903.8,
       "y": -456,
       "maxPoints": 4,
@@ -16687,6 +17320,7 @@
     "rf1azz-3": {
       "skill": "rf1azz-3",
       "name": "Ghastly Flow",
+      "icon": "c-shift - azure",
       "x": 5675.8,
       "y": -104,
       "maxPoints": 4,
@@ -16712,6 +17346,7 @@
     "rf1azz-4": {
       "skill": "rf1azz-4",
       "name": "Sanguine Reaper",
+      "icon": "blood-harvest",
       "x": 5208.5996,
       "y": 738.8,
       "maxPoints": 3,
@@ -16740,6 +17375,7 @@
     "rf1azz-5": {
       "skill": "rf1azz-5",
       "name": "Ravenous Doom",
+      "icon": "leech life",
       "x": 4833,
       "y": 375.2,
       "maxPoints": 3,
@@ -16767,6 +17403,7 @@
     "rf1azz-6": {
       "skill": "rf1azz-6",
       "name": "Reaper's Curse",
+      "icon": "evil-symbol-2",
       "x": 5115.8,
       "y": -504,
       "maxPoints": 4,
@@ -16799,6 +17436,7 @@
     "rf1azz-7": {
       "skill": "rf1azz-7",
       "name": "Death's Door",
+      "icon": "c-Bone Curse",
       "x": 4819.8,
       "y": -84,
       "maxPoints": 4,
@@ -16830,6 +17468,7 @@
     "rf1azz-8": {
       "skill": "rf1azz-8",
       "name": "Dark Harvest",
+      "icon": "harvest",
       "x": 7099.8,
       "y": 844,
       "maxPoints": 3,
@@ -16859,6 +17498,7 @@
     "rf1azz-9": {
       "skill": "rf1azz-9",
       "name": "Gravechill",
+      "icon": "summon wraith ice",
       "x": 3970.5999,
       "y": 428,
       "maxPoints": 1,
@@ -16884,6 +17524,7 @@
     "rf1azz-10": {
       "skill": "rf1azz-10",
       "name": "Deathtouch Scythe",
+      "icon": "aura of decay necrotic",
       "x": 6435.8,
       "y": 700,
       "maxPoints": 4,
@@ -16912,6 +17553,7 @@
     "rf1azz-11": {
       "skill": "rf1azz-11",
       "name": "Executioner",
+      "icon": "Slash Necrotic",
       "x": 6435.8,
       "y": 1172,
       "maxPoints": 5,
@@ -16934,6 +17576,7 @@
     "rf1azz-12": {
       "skill": "rf1azz-12",
       "name": "Bloodmoon Reaver",
+      "icon": "physical-fissure",
       "x": 6435.8,
       "y": -768,
       "maxPoints": 1,
@@ -16961,6 +17604,7 @@
     "rf1azz-13": {
       "skill": "rf1azz-13",
       "name": "Sweeping Scythes",
+      "icon": "c-silver-shroud",
       "x": 5791.8,
       "y": 400,
       "maxPoints": 2,
@@ -16985,6 +17629,7 @@
     "rf1azz-14": {
       "skill": "rf1azz-14",
       "name": "Pestilence",
+      "icon": "c-poison",
       "x": 5057,
       "y": 1144,
       "maxPoints": 1,
@@ -17012,6 +17657,7 @@
     "rf1azz-15": {
       "skill": "rf1azz-15",
       "name": "Venomous Coating",
+      "icon": "c-poison_protection_buff",
       "x": 4463.8,
       "y": 895.19995,
       "maxPoints": 3,
@@ -17038,6 +17684,7 @@
     "rf1azz-16": {
       "skill": "rf1azz-16",
       "name": "Herald of Rot",
+      "icon": "Blinding poison",
       "x": 3887.7998,
       "y": 1144,
       "maxPoints": 5,
@@ -17061,6 +17708,7 @@
     "rf1azz-17": {
       "skill": "rf1azz-17",
       "name": "Haunting",
+      "icon": "markfordeath",
       "x": 5771.8,
       "y": 844,
       "maxPoints": 3,
@@ -17088,6 +17736,7 @@
     "rf1azz-18": {
       "skill": "rf1azz-18",
       "name": "Rapid Destruction",
+      "icon": "Mana Strike",
       "x": 5703.8,
       "y": -824,
       "maxPoints": 3,
@@ -17114,6 +17763,7 @@
     "rf1azz-19": {
       "skill": "rf1azz-19",
       "name": "Reaper's Ascendance",
+      "icon": "c- drain life teal",
       "x": 8407.8,
       "y": 895.2,
       "maxPoints": 4,
@@ -17144,6 +17794,7 @@
     "rf1azz-20": {
       "skill": "rf1azz-20",
       "name": "Reaper's Supremacy",
+      "icon": "Bolt Necrotic",
       "x": 8983.8,
       "y": 1144,
       "maxPoints": 3,
@@ -17166,6 +17817,7 @@
     "rf1azz-21": {
       "skill": "rf1azz-21",
       "name": "Mistress of Decay",
+      "icon": "Bone Pile Blood",
       "x": 7195.8,
       "y": -104,
       "maxPoints": 4,
@@ -17194,6 +17846,7 @@
     "rf1azz-22": {
       "skill": "rf1azz-22",
       "name": "Soul Shroud",
+      "icon": "Bone Armor",
       "x": 7713,
       "y": -530.39984,
       "maxPoints": 4,
@@ -17219,6 +17872,7 @@
     "rf1azz-23": {
       "skill": "rf1azz-23",
       "name": "Elixir of Death",
+      "icon": "c-red flask",
       "x": 8281.8,
       "y": -576.7998,
       "maxPoints": 1,
@@ -17241,6 +17895,7 @@
     "rf1azz-24": {
       "skill": "rf1azz-24",
       "name": "Vile Shroud",
+      "icon": "c-Stun Susceptibility Buff (generic)",
       "x": 7531.8,
       "y": -1052,
       "maxPoints": 1,
@@ -17264,6 +17919,7 @@
     "rf1azz-25": {
       "skill": "rf1azz-25",
       "name": "Phantom Restoration",
+      "icon": "c-flurry2 - blue",
       "x": 8515,
       "y": -191.59998,
       "maxPoints": 5,
@@ -17287,6 +17943,7 @@
     "rf1azz-26": {
       "skill": "rf1azz-26",
       "name": "Protective Spirit",
+      "icon": "summon wraith",
       "x": 3875.7998,
       "y": -716,
       "maxPoints": 1,
@@ -17309,6 +17966,7 @@
     "rf1azz-27": {
       "skill": "rf1azz-27",
       "name": "From the Grave",
+      "icon": "skeleton-warrior",
       "x": 3847.7998,
       "y": -48,
       "maxPoints": 3,
@@ -17334,6 +17992,7 @@
     "rf1azz-28": {
       "skill": "rf1azz-28",
       "name": "Reaper's Blessing",
+      "icon": "necrotic-bone-prison",
       "x": 4519.8,
       "y": -420,
       "maxPoints": 4,
@@ -17359,6 +18018,7 @@
     "rf1azz-29": {
       "skill": "rf1azz-29",
       "name": "Mercy in Undeath",
+      "icon": "bonegolem-multiple",
       "x": 8811,
       "y": 244.40002,
       "maxPoints": 1,
@@ -17381,6 +18041,7 @@
     "rf1azz-30": {
       "skill": "rf1azz-30",
       "name": "Soul Release",
+      "icon": "hungering soul",
       "x": 7815.8,
       "y": 1144,
       "maxPoints": 3,
@@ -17408,6 +18069,7 @@
     "rf1azz-31": {
       "skill": "rf1azz-31",
       "name": "Harbinger of Blood",
+      "icon": "c-dagger dance - red",
       "x": 8079,
       "y": 376.40002,
       "maxPoints": 4,
@@ -17438,6 +18100,7 @@
     "rf1azz-32": {
       "skill": "rf1azz-32",
       "name": "Unholy Dominion",
+      "icon": "wanderingspirits",
       "x": 7583.8,
       "y": 628,
       "maxPoints": 1,
@@ -17461,6 +18124,7 @@
     "rf1azz-33": {
       "skill": "rf1azz-33",
       "name": "Swift Harbinger",
+      "icon": "c-Dread Shade",
       "x": 7079.8,
       "y": 400,
       "maxPoints": 3,
@@ -17487,6 +18151,7 @@
     "rf1azz-34": {
       "skill": "rf1azz-34",
       "name": "Blood Tethers",
+      "icon": "leechlife",
       "x": 6971.8,
       "y": -568,
       "maxPoints": 3,
@@ -17531,6 +18196,7 @@
     "sf31rc-2": {
       "skill": "sf31rc-2",
       "name": "Soul Shatter",
+      "icon": "c- drain life teal",
       "x": 5735.8,
       "y": -0,
       "maxPoints": 5,
@@ -17561,6 +18227,7 @@
     "sf31rc-3": {
       "skill": "sf31rc-3",
       "name": "Great Sacrifice",
+      "icon": "bonegolem",
       "x": 6147.8,
       "y": -586.3103,
       "maxPoints": 4,
@@ -17586,6 +18253,7 @@
     "sf31rc-4": {
       "skill": "sf31rc-4",
       "name": "Last Sacrifice",
+      "icon": "Hungering Soul Necro",
       "x": 5307.8,
       "y": -584,
       "maxPoints": 2,
@@ -17608,6 +18276,7 @@
     "sf31rc-5": {
       "skill": "sf31rc-5",
       "name": "Altar of Flames",
+      "icon": "smelter-swrath",
       "x": 5385.8,
       "y": 600,
       "maxPoints": 4,
@@ -17636,6 +18305,7 @@
     "sf31rc-6": {
       "skill": "sf31rc-6",
       "name": "Infernal Vindication",
+      "icon": "evil-symbol-2",
       "x": 4763.8,
       "y": 144,
       "maxPoints": 3,
@@ -17662,6 +18332,7 @@
     "sf31rc-7": {
       "skill": "sf31rc-7",
       "name": "Burning Offering",
+      "icon": "Hungering Soul Fire",
       "x": 4763.8,
       "y": 848,
       "maxPoints": 4,
@@ -17687,6 +18358,7 @@
     "sf31rc-8": {
       "skill": "sf31rc-8",
       "name": "Punishment",
+      "icon": "rip blood",
       "x": 5735.8,
       "y": -752,
       "maxPoints": 3,
@@ -17709,6 +18381,7 @@
     "sf31rc-9": {
       "skill": "sf31rc-9",
       "name": "Pontifex",
+      "icon": "wanderingspirits copper",
       "x": 6085.8,
       "y": 600,
       "maxPoints": 3,
@@ -17741,6 +18414,7 @@
     "sf31rc-10": {
       "skill": "sf31rc-10",
       "name": "Blood Spectre",
+      "icon": "summon blood wraith",
       "x": 6785.8,
       "y": 900,
       "maxPoints": 1,
@@ -17771,6 +18445,7 @@
     "sf31rc-11": {
       "skill": "sf31rc-11",
       "name": "Blood Weaver",
+      "icon": "c-bleed",
       "x": 7485.8,
       "y": 1200,
       "maxPoints": 5,
@@ -17797,6 +18472,7 @@
     "sf31rc-12": {
       "skill": "sf31rc-12",
       "name": "From Blood",
+      "icon": "c-Laceration",
       "x": 6085.8,
       "y": 1200,
       "maxPoints": 4,
@@ -17825,6 +18501,7 @@
     "sf31rc-13": {
       "skill": "sf31rc-13",
       "name": "Crimson Horror",
+      "icon": "bonegolem-red",
       "x": 5385.8,
       "y": 1200,
       "maxPoints": 1,
@@ -17851,6 +18528,7 @@
     "sf31rc-14": {
       "skill": "sf31rc-14",
       "name": "Hemophage",
+      "icon": "leech life",
       "x": 7485.8,
       "y": 600,
       "maxPoints": 3,
@@ -17877,6 +18555,7 @@
     "sf31rc-15": {
       "skill": "sf31rc-15",
       "name": "Bone Nova",
+      "icon": "Bone Nova",
       "x": 7135.8,
       "y": -300,
       "maxPoints": 1,
@@ -17903,6 +18582,7 @@
     "sf31rc-16": {
       "skill": "sf31rc-16",
       "name": "Bone Missiles",
+      "icon": "boneprojectile",
       "x": 7707.8,
       "y": -508.00006,
       "maxPoints": 4,
@@ -17928,6 +18608,7 @@
     "sf31rc-17": {
       "skill": "sf31rc-17",
       "name": "Impaling",
+      "icon": "Rive 3",
       "x": 8111.8,
       "y": -100,
       "maxPoints": 4,
@@ -17950,6 +18631,7 @@
     "sf31rc-18": {
       "skill": "sf31rc-18",
       "name": "Ivory Ballista",
+      "icon": "Javelin",
       "x": 8259.8,
       "y": -684,
       "maxPoints": 1,
@@ -17972,6 +18654,7 @@
     "sf31rc-19": {
       "skill": "sf31rc-19",
       "name": "Lacerating Bones",
+      "icon": "Bone Pile Blood",
       "x": 7287.8,
       "y": -900,
       "maxPoints": 4,
@@ -17996,6 +18679,7 @@
     "sf31rc-20": {
       "skill": "sf31rc-20",
       "name": "Avatar of Decay",
+      "icon": "aura of decay",
       "x": 7879.8,
       "y": -1080,
       "maxPoints": 3,
@@ -18018,6 +18702,7 @@
     "sf31rc-21": {
       "skill": "sf31rc-21",
       "name": "Temple of Awe",
+      "icon": "unearth",
       "x": 7135.8,
       "y": 300,
       "maxPoints": 4,
@@ -18043,6 +18728,7 @@
     "sf31rc-22": {
       "skill": "sf31rc-22",
       "name": "Necrotic Audience",
+      "icon": "hungering soul",
       "x": 7935.8,
       "y": 300,
       "maxPoints": 3,
@@ -18068,6 +18754,7 @@
     "sf31rc-23": {
       "skill": "sf31rc-23",
       "name": "Catalyst of Horror",
+      "icon": "chain lightning",
       "x": 8535.8,
       "y": 616,
       "maxPoints": 1,
@@ -18093,6 +18780,7 @@
     "sf31rc-24": {
       "skill": "sf31rc-24",
       "name": "Sanguine Libation",
+      "icon": "red_thorny_vines",
       "x": 8535.8,
       "y": 1208,
       "maxPoints": 5,
@@ -18116,6 +18804,7 @@
     "sf31rc-25": {
       "skill": "sf31rc-25",
       "name": "Flickering Shadows",
+      "icon": "cremate2",
       "x": 4141.8,
       "y": 392,
       "maxPoints": 1,
@@ -18165,6 +18854,7 @@
     "sm4g-1": {
       "skill": "sm4g-1",
       "name": "Gravetide",
+      "icon": "c- drain life teal",
       "x": 7050.5996,
       "y": -442.8,
       "maxPoints": 5,
@@ -18191,6 +18881,7 @@
     "sm4g-2": {
       "skill": "sm4g-2",
       "name": "Macabre Waltz",
+      "icon": "summon wraith",
       "x": 6243.8,
       "y": -752,
       "maxPoints": 1,
@@ -18217,6 +18908,7 @@
     "sm4g-3": {
       "skill": "sm4g-3",
       "name": "Underlings",
+      "icon": "skeleton-warrior",
       "x": 7105.8,
       "y": -928,
       "maxPoints": 1,
@@ -18241,6 +18933,7 @@
     "sm4g-4": {
       "skill": "sm4g-4",
       "name": "Cryomancers",
+      "icon": "cold-hungering-souls",
       "x": 7691.8,
       "y": -688,
       "maxPoints": 1,
@@ -18270,6 +18963,7 @@
     "sm4g-5": {
       "skill": "sm4g-5",
       "name": "Frost Lich",
+      "icon": "summon wraith ice",
       "x": 8395.8,
       "y": -892,
       "maxPoints": 1,
@@ -18294,6 +18988,7 @@
     "sm4g-6": {
       "skill": "sm4g-6",
       "name": "Frozen Tomb",
+      "icon": "ice_crash",
       "x": 8391.8,
       "y": -400,
       "maxPoints": 4,
@@ -18317,6 +19012,7 @@
     "sm4g-7": {
       "skill": "sm4g-7",
       "name": "Putrid Essence",
+      "icon": "Bolt Poison",
       "x": 5703.8,
       "y": 274.4,
       "maxPoints": 4,
@@ -18342,6 +19038,7 @@
     "sm4g-8": {
       "skill": "sm4g-8",
       "name": "Ossein Frenzy",
+      "icon": "lion_roar",
       "x": 4715.8,
       "y": -236,
       "maxPoints": 3,
@@ -18368,6 +19065,7 @@
     "sm4g-9": {
       "skill": "sm4g-9",
       "name": "Pyromancers",
+      "icon": "Hungering Soul Fire",
       "x": 5231.8,
       "y": 876,
       "maxPoints": 1,
@@ -18400,6 +19098,7 @@
     "sm4g-10": {
       "skill": "sm4g-10",
       "name": "Inferno",
+      "icon": "c-flame wraith",
       "x": 4607.8,
       "y": 1200,
       "maxPoints": 1,
@@ -18423,6 +19122,7 @@
     "sm4g-11": {
       "skill": "sm4g-11",
       "name": "Flame Rot",
+      "icon": "cremate2",
       "x": 4567.8,
       "y": 628,
       "maxPoints": 4,
@@ -18448,6 +19148,7 @@
     "sm4g-12": {
       "skill": "sm4g-12",
       "name": "Celer Mortis",
+      "icon": "Circle of bones",
       "x": 6435.8,
       "y": 724,
       "maxPoints": 5,
@@ -18475,6 +19176,7 @@
     "sm4g-13": {
       "skill": "sm4g-13",
       "name": "Grey Merchant",
+      "icon": "boneprojectile",
       "x": 5875.8,
       "y": 972,
       "maxPoints": 3,
@@ -18503,6 +19205,7 @@
     "sm4g-14": {
       "skill": "sm4g-14",
       "name": "Order of Death",
+      "icon": "summon-mages-multiple",
       "x": 6435.8,
       "y": 1240,
       "maxPoints": 1,
@@ -18529,6 +19232,7 @@
     "sm4g-15": {
       "skill": "sm4g-15",
       "name": "Leech Life",
+      "icon": "leechlife",
       "x": 7167.8,
       "y": 274.4,
       "maxPoints": 5,
@@ -18555,6 +19259,7 @@
     "sm4g-16": {
       "skill": "sm4g-16",
       "name": "Death Knights",
+      "icon": "summon-skeleton-multiple",
       "x": 7639.8,
       "y": 876,
       "maxPoints": 1,
@@ -18587,6 +19292,7 @@
     "sm4g-17": {
       "skill": "sm4g-17",
       "name": "Flaming Attacks",
+      "icon": "bonegolem-fire",
       "x": 8267.8,
       "y": 596,
       "maxPoints": 5,
@@ -18609,6 +19315,7 @@
     "sm4g-18": {
       "skill": "sm4g-18",
       "name": "Death Blossom",
+      "icon": "hungering soul",
       "x": 8279.8,
       "y": 1216,
       "maxPoints": 1,
@@ -18632,6 +19339,7 @@
     "sm4g-19": {
       "skill": "sm4g-19",
       "name": "Undead Mortars",
+      "icon": "Slash Necrotic",
       "x": 7983.8,
       "y": 64.80005,
       "maxPoints": 1,
@@ -18659,6 +19367,7 @@
     "sm4g-20": {
       "skill": "sm4g-20",
       "name": "Battle Hardened",
+      "icon": "cooldown-reduction",
       "x": 8679.8,
       "y": 176,
       "maxPoints": 3,
@@ -18681,6 +19390,7 @@
     "sm4g-21": {
       "skill": "sm4g-21",
       "name": "Splintered Dominion",
+      "icon": "c-multishot - red",
       "x": 5821,
       "y": -442.8,
       "maxPoints": 4,
@@ -18707,6 +19417,7 @@
     "sm4g-22": {
       "skill": "sm4g-22",
       "name": "Archmage",
+      "icon": "c-Dread Shade",
       "x": 5095.8,
       "y": -728,
       "maxPoints": 1,
@@ -18740,6 +19451,7 @@
     "sm4g-23": {
       "skill": "sm4g-23",
       "name": "Argonautic Speed",
+      "icon": "c-rive-3",
       "x": 5311.8,
       "y": -112,
       "maxPoints": 4,
@@ -18767,6 +19479,7 @@
     "sm4g-24": {
       "skill": "sm4g-24",
       "name": "Shadow Wardens",
+      "icon": "c-Damage Mitigation Buff (generic)",
       "x": 6995.8,
       "y": 972,
       "maxPoints": 4,
@@ -18795,6 +19508,7 @@
     "sm4g-26": {
       "skill": "sm4g-26",
       "name": "Forbidden Arcana",
+      "icon": "Spellbook Arcane",
       "x": 4295.8,
       "y": -672,
       "maxPoints": 5,
@@ -18823,6 +19537,7 @@
     "sm4g-27": {
       "skill": "sm4g-27",
       "name": "Grave Passage",
+      "icon": "Static-blue",
       "x": 3907.7998,
       "y": -232,
       "maxPoints": 1,
@@ -18852,6 +19567,7 @@
     "sm4g-28": {
       "skill": "sm4g-28",
       "name": "Death's Cavalry",
+      "icon": "unearth",
       "x": 3907.7998,
       "y": 400,
       "maxPoints": 3,
@@ -18901,6 +19617,7 @@
     "sp5g2-2": {
       "skill": "sp5g2-2",
       "name": "Hindering Affliction",
+      "icon": "c-slow",
       "x": 5873.4,
       "y": 478,
       "maxPoints": 3,
@@ -18928,6 +19645,7 @@
     "sp5g2-3": {
       "skill": "sp5g2-3",
       "name": "Plague Burst",
+      "icon": "Bolt Poison",
       "x": 5873.4,
       "y": -494,
       "maxPoints": 3,
@@ -18956,6 +19674,7 @@
     "sp5g2-4": {
       "skill": "sp5g2-4",
       "name": "Putrid Recovery",
+      "icon": "summon wraith",
       "x": 4967.8,
       "y": -661.9199,
       "maxPoints": 3,
@@ -18980,6 +19699,7 @@
     "sp5g2-5": {
       "skill": "sp5g2-5",
       "name": "Agonizing Expanse",
+      "icon": "Slash Necrotic",
       "x": 5028.1997,
       "y": -236,
       "maxPoints": 1,
@@ -19002,6 +19722,7 @@
     "sp5g2-6": {
       "skill": "sp5g2-6",
       "name": "Enfeeblement",
+      "icon": "c-despair_teal",
       "x": 4967.8,
       "y": 312,
       "maxPoints": 3,
@@ -19027,6 +19748,7 @@
     "sp5g2-7": {
       "skill": "sp5g2-7",
       "name": "Contagion",
+      "icon": "aura of decay necrotic",
       "x": 3847.4,
       "y": 478,
       "maxPoints": 1,
@@ -19052,6 +19774,7 @@
     "sp5g2-8": {
       "skill": "sp5g2-8",
       "name": "Plague's Purview",
+      "icon": "necrotic-cone",
       "x": 4256.5996,
       "y": -136,
       "maxPoints": 5,
@@ -19076,6 +19799,7 @@
     "sp5g2-9": {
       "skill": "sp5g2-9",
       "name": "Scourge",
+      "icon": "c-striped-eye",
       "x": 3847.4,
       "y": -694.00006,
       "maxPoints": 1,
@@ -19099,6 +19823,7 @@
     "sp5g2-10": {
       "skill": "sp5g2-10",
       "name": "Plague of Eyes",
+      "icon": "Skull Necrotic",
       "x": 4407.8,
       "y": 956,
       "maxPoints": 1,
@@ -19121,6 +19846,7 @@
     "sp5g2-11": {
       "skill": "sp5g2-11",
       "name": "Toxic Transmission",
+      "icon": "c-poison",
       "x": 5535.8,
       "y": 1200,
       "maxPoints": 3,
@@ -19145,6 +19871,7 @@
     "sp5g2-12": {
       "skill": "sp5g2-12",
       "name": "Gift of Death",
+      "icon": "SummonValeSpirit",
       "x": 5262.1997,
       "y": 786.8,
       "maxPoints": 1,
@@ -19167,6 +19894,7 @@
     "sp5g2-13": {
       "skill": "sp5g2-13",
       "name": "Efficacious Application",
+      "icon": "arcane ascendance",
       "x": 6435.8,
       "y": 732.8004,
       "maxPoints": 5,
@@ -19194,6 +19922,7 @@
     "sp5g2-14": {
       "skill": "sp5g2-14",
       "name": "Discharge",
+      "icon": "wanderingspirits",
       "x": 6439.8,
       "y": 1214,
       "maxPoints": 1,
@@ -19216,6 +19945,7 @@
     "sp5g2-15": {
       "skill": "sp5g2-15",
       "name": "Perpetuity",
+      "icon": "Anamoly",
       "x": 7335.8,
       "y": 1214,
       "maxPoints": 3,
@@ -19242,6 +19972,7 @@
     "sp5g2-16": {
       "skill": "sp5g2-16",
       "name": "Spooked",
+      "icon": "c-Dread Shade",
       "x": 7612.5996,
       "y": 786.8,
       "maxPoints": 2,
@@ -19264,6 +19995,7 @@
     "sp5g2-17": {
       "skill": "sp5g2-17",
       "name": "Conductor of Plagues",
+      "icon": "c- drain life teal",
       "x": 8155.4004,
       "y": 1214,
       "maxPoints": 1,
@@ -19286,6 +20018,7 @@
     "sp5g2-18": {
       "skill": "sp5g2-18",
       "name": "Pestilence",
+      "icon": "evil-symbol-2",
       "x": 6993.4,
       "y": 478,
       "maxPoints": 3,
@@ -19314,6 +20047,7 @@
     "sp5g2-19": {
       "skill": "sp5g2-19",
       "name": "Plague Bearer",
+      "icon": "c-Plague",
       "x": 7875.8,
       "y": 239.80005,
       "maxPoints": 1,
@@ -19338,6 +20072,7 @@
     "sp5g2-20": {
       "skill": "sp5g2-20",
       "name": "Queen of Plagues",
+      "icon": "Orb Poison",
       "x": 8624.6,
       "y": 584.19995,
       "maxPoints": 3,
@@ -19362,6 +20097,7 @@
     "sp5g2-21": {
       "skill": "sp5g2-21",
       "name": "Endless Decay",
+      "icon": "Death_Seal_3",
       "x": 8879.8,
       "y": 1064,
       "maxPoints": 3,
@@ -19386,6 +20122,7 @@
     "sp5g2-22": {
       "skill": "sp5g2-22",
       "name": "Rotten to the Core",
+      "icon": "Hungering Soul Necro",
       "x": 7812.5996,
       "y": -336.00006,
       "maxPoints": 5,
@@ -19410,6 +20147,7 @@
     "sp5g2-23": {
       "skill": "sp5g2-23",
       "name": "Concentrated Rot",
+      "icon": "Drain_Life",
       "x": 8551,
       "y": -294,
       "maxPoints": 2,
@@ -19435,6 +20173,7 @@
     "sp5g2-24": {
       "skill": "sp5g2-24",
       "name": "Calamitous",
+      "icon": "unearth",
       "x": 9035.4,
       "y": 216,
       "maxPoints": 3,
@@ -19458,6 +20197,7 @@
     "sp5g2-25": {
       "skill": "sp5g2-25",
       "name": "Hemorrhage",
+      "icon": "c-bleed",
       "x": 6993.4,
       "y": -494,
       "maxPoints": 3,
@@ -19486,6 +20226,7 @@
     "sp5g2-26": {
       "skill": "sp5g2-26",
       "name": "Exsanguination",
+      "icon": "c-Laceration_sq",
       "x": 7812.5996,
       "y": -848.80005,
       "maxPoints": 5,
@@ -19511,6 +20252,7 @@
     "sp5g2-27": {
       "skill": "sp5g2-27",
       "name": "Defilement",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 8699.12,
       "y": -777.2,
       "maxPoints": 2,
@@ -19533,6 +20275,7 @@
     "sp5g2-28": {
       "skill": "sp5g2-28",
       "name": "Laceration",
+      "icon": "c-Ravage",
       "x": 6435.8,
       "y": -848.8,
       "maxPoints": 5,
@@ -19580,6 +20323,7 @@
     "ss37kl-2": {
       "skill": "ss37kl-2",
       "name": "Necrotic Conviction",
+      "icon": "summon wraith",
       "x": 6435.8,
       "y": 716.4,
       "maxPoints": 5,
@@ -19609,6 +20353,7 @@
     "ss37kl-3": {
       "skill": "ss37kl-3",
       "name": "Aegis of Death",
+      "icon": "Bone Pile",
       "x": 6929.8,
       "y": 1184,
       "maxPoints": 1,
@@ -19634,6 +20379,7 @@
     "ss37kl-4": {
       "skill": "ss37kl-4",
       "name": "Unbound Necromancy",
+      "icon": "Spellbook Arcane",
       "x": 7203.8,
       "y": -200.00012,
       "maxPoints": 4,
@@ -19665,6 +20411,7 @@
     "ss37kl-5": {
       "skill": "ss37kl-5",
       "name": "Soul Catcher",
+      "icon": "Skull Necrotic",
       "x": 8011.8,
       "y": -156,
       "maxPoints": 4,
@@ -19693,6 +20440,7 @@
     "ss37kl-6": {
       "skill": "ss37kl-6",
       "name": "Mind Catcher",
+      "icon": "aura of decay blue",
       "x": 8655.8,
       "y": 44,
       "maxPoints": 3,
@@ -19718,6 +20466,7 @@
     "ss37kl-7": {
       "skill": "ss37kl-7",
       "name": "Memory Catcher",
+      "icon": "soul feast",
       "x": 8579,
       "y": -644,
       "maxPoints": 4,
@@ -19743,6 +20492,7 @@
     "ss37kl-8": {
       "skill": "ss37kl-8",
       "name": "Unholy Rage",
+      "icon": "boneprojectile",
       "x": 5685.4,
       "y": 160,
       "maxPoints": 5,
@@ -19774,6 +20524,7 @@
     "ss37kl-9": {
       "skill": "ss37kl-9",
       "name": "Lone Guardian",
+      "icon": "c-Plague",
       "x": 4902.5996,
       "y": -0,
       "maxPoints": 1,
@@ -19802,6 +20553,7 @@
     "ss37kl-10": {
       "skill": "ss37kl-10",
       "name": "Mightier than the Sword",
+      "icon": "skeleton-archer",
       "x": 4151.8,
       "y": -130.80005,
       "maxPoints": 1,
@@ -19824,6 +20576,7 @@
     "ss37kl-11": {
       "skill": "ss37kl-11",
       "name": "Marrow Walkers",
+      "icon": "summon-skeleton-multiple",
       "x": 5425.4,
       "y": 700,
       "maxPoints": 1,
@@ -19849,6 +20602,7 @@
     "ss37kl-12": {
       "skill": "ss37kl-12",
       "name": "Hollow Walkers",
+      "icon": "bonegolem-multiple",
       "x": 5819.4,
       "y": 900,
       "maxPoints": 1,
@@ -19877,6 +20631,7 @@
     "ss37kl-13": {
       "skill": "ss37kl-13",
       "name": "Grave Walkers",
+      "icon": "summon-mages-multiple",
       "x": 7807.4,
       "y": -755.9999,
       "maxPoints": 1,
@@ -19902,6 +20657,7 @@
     "ss37kl-14": {
       "skill": "ss37kl-14",
       "name": "Shambling Steel",
+      "icon": "harvest",
       "x": 6298.1997,
       "y": 1248,
       "maxPoints": 1,
@@ -19924,6 +20680,7 @@
     "ss37kl-15": {
       "skill": "ss37kl-15",
       "name": "Fire Arrow",
+      "icon": "c-multishot - red 1",
       "x": 4875.8,
       "y": 516.3999,
       "maxPoints": 1,
@@ -19949,6 +20706,7 @@
     "ss37kl-16": {
       "skill": "ss37kl-16",
       "name": "Multishot",
+      "icon": "c-multishot 1",
       "x": 4127.8,
       "y": 468,
       "maxPoints": 3,
@@ -19976,6 +20734,7 @@
     "ss37kl-17": {
       "skill": "ss37kl-17",
       "name": "Ice Arrow",
+      "icon": "c-cold-arrow",
       "x": 4415.8,
       "y": 1076,
       "maxPoints": 1,
@@ -20002,6 +20761,7 @@
     "ss37kl-18": {
       "skill": "ss37kl-18",
       "name": "Dread Phalanx",
+      "icon": "skeletal-mage",
       "x": 5207.8,
       "y": 1184,
       "maxPoints": 1,
@@ -20030,6 +20790,7 @@
     "ss37kl-19": {
       "skill": "ss37kl-19",
       "name": "Bone Armor",
+      "icon": "Bone Armor",
       "x": 7631.8,
       "y": 1076,
       "maxPoints": 1,
@@ -20054,6 +20815,7 @@
     "ss37kl-21": {
       "skill": "ss37kl-21",
       "name": "Bone Share",
+      "icon": "Death_Seal_2",
       "x": 8655.8,
       "y": 1076,
       "maxPoints": 1,
@@ -20079,6 +20841,7 @@
     "ss37kl-22": {
       "skill": "ss37kl-22",
       "name": "Marrow Tap",
+      "icon": "leech life",
       "x": 7087.8,
       "y": 388,
       "maxPoints": 5,
@@ -20109,6 +20872,7 @@
     "ss37kl-23": {
       "skill": "ss37kl-23",
       "name": "Empty the Graves",
+      "icon": "Bone Wall",
       "x": 7875.8,
       "y": 500,
       "maxPoints": 2,
@@ -20135,6 +20899,7 @@
     "ss37kl-24": {
       "skill": "ss37kl-24",
       "name": "Sweeping Strikes",
+      "icon": "c-Bone Curse",
       "x": 6435.8,
       "y": -756,
       "maxPoints": 5,
@@ -20164,6 +20929,7 @@
     "ss37kl-25": {
       "skill": "ss37kl-25",
       "name": "Skeleton Rogue",
+      "icon": "skeleton-rogue",
       "x": 5845,
       "y": -555.9999,
       "maxPoints": 1,
@@ -20192,6 +20958,7 @@
     "ss37kl-26": {
       "skill": "ss37kl-26",
       "name": "Immortal",
+      "icon": "unearth",
       "x": 6927.8,
       "y": -628,
       "maxPoints": 4,
@@ -20219,6 +20986,7 @@
     "ss37kl-27": {
       "skill": "ss37kl-27",
       "name": "Vile Flask",
+      "icon": "c-acid flask 1",
       "x": 5278.5996,
       "y": -400,
       "maxPoints": 1,
@@ -20244,6 +21012,7 @@
     "ss37kl-28": {
       "skill": "ss37kl-28",
       "name": "Individual Operator",
+      "icon": "exorcise-yellow-green",
       "x": 5047.8,
       "y": -836,
       "maxPoints": 4,
@@ -20295,6 +21064,7 @@
     "svz81-1": {
       "skill": "svz81-1",
       "name": "Leap Attack",
+      "icon": "FuryLeap",
       "x": 7491.8,
       "y": 70,
       "maxPoints": 4,
@@ -20319,6 +21089,7 @@
     "svz81-2": {
       "skill": "svz81-2",
       "name": "Fervor",
+      "icon": "bonegolem-fire",
       "x": 6955.8,
       "y": -440,
       "maxPoints": 5,
@@ -20345,6 +21116,7 @@
     "svz81-3": {
       "skill": "svz81-3",
       "name": "Grave Attunement",
+      "icon": "bonegolem",
       "x": 4807.8,
       "y": -71.999954,
       "maxPoints": 3,
@@ -20371,6 +21143,7 @@
     "svz81-4": {
       "skill": "svz81-4",
       "name": "Giant Zombie",
+      "icon": "c-Assemble Abomination",
       "x": 3952.5999,
       "y": -71.999954,
       "maxPoints": 1,
@@ -20400,6 +21173,7 @@
     "svz81-6": {
       "skill": "svz81-6",
       "name": "Corrosive Guts",
+      "icon": "Armor Shred",
       "x": 4378.9995,
       "y": 327.99994,
       "maxPoints": 4,
@@ -20422,6 +21196,7 @@
     "svz81-7": {
       "skill": "svz81-7",
       "name": "Bone Pact",
+      "icon": "boneprojectile",
       "x": 5355.8,
       "y": 196,
       "maxPoints": 3,
@@ -20446,6 +21221,7 @@
     "svz81-8": {
       "skill": "svz81-8",
       "name": "Repulsive Vomit",
+      "icon": "Zombie Poison Bite",
       "x": 4834.5996,
       "y": 778.4,
       "maxPoints": 1,
@@ -20475,6 +21251,7 @@
     "svz81-9": {
       "skill": "svz81-9",
       "name": "Corpse Bane",
+      "icon": "markfordeath",
       "x": 8540.199,
       "y": -452,
       "maxPoints": 1,
@@ -20498,6 +21275,7 @@
     "svz81-10": {
       "skill": "svz81-10",
       "name": "Dreadful Horde",
+      "icon": "zombies_multiple",
       "x": 4807.8,
       "y": -880,
       "maxPoints": 2,
@@ -20526,6 +21304,7 @@
     "svz81-11": {
       "skill": "svz81-11",
       "name": "Wretched Innards",
+      "icon": "poison-cone",
       "x": 4378.9995,
       "y": 1212,
       "maxPoints": 4,
@@ -20550,6 +21329,7 @@
     "svz81-12": {
       "skill": "svz81-12",
       "name": "Army of Rot",
+      "icon": "c-poison",
       "x": 5915.8,
       "y": 440,
       "maxPoints": 5,
@@ -20577,6 +21357,7 @@
     "svz81-14": {
       "skill": "svz81-14",
       "name": "Path of Destruction",
+      "icon": "Glyph of Fire",
       "x": 6955.8,
       "y": 440,
       "maxPoints": 5,
@@ -20603,6 +21384,7 @@
     "svz81-15": {
       "skill": "svz81-15",
       "name": "Shepherd of Thralls",
+      "icon": "summon-skeleton-multiple",
       "x": 8815.8,
       "y": 70,
       "maxPoints": 1,
@@ -20627,6 +21409,7 @@
     "svz81-16": {
       "skill": "svz81-16",
       "name": "Putridity",
+      "icon": "poison explosion",
       "x": 3928.5999,
       "y": 778.4,
       "maxPoints": 4,
@@ -20649,6 +21432,7 @@
     "svz81-17": {
       "skill": "svz81-17",
       "name": "Vile Force",
+      "icon": "unearth",
       "x": 3952.5999,
       "y": -880,
       "maxPoints": 2,
@@ -20672,6 +21456,7 @@
     "svz81-18": {
       "skill": "svz81-18",
       "name": "Rite of the Grave",
+      "icon": "Fireball explosion",
       "x": 6435.8,
       "y": 1212,
       "maxPoints": 1,
@@ -20696,6 +21481,7 @@
     "svz81-19": {
       "skill": "svz81-19",
       "name": "Grand Sacrifice",
+      "icon": "Sacrifice",
       "x": 8371.399,
       "y": 423.6,
       "maxPoints": 4,
@@ -20720,6 +21506,7 @@
     "svz81-20": {
       "skill": "svz81-20",
       "name": "Forceful Commander",
+      "icon": "wanderingspirits-blue",
       "x": 5915.8,
       "y": -440,
       "maxPoints": 5,
@@ -20748,6 +21535,7 @@
     "svz81-21": {
       "skill": "svz81-21",
       "name": "Necromantic Fervor",
+      "icon": "Drain_Life",
       "x": 7747.8,
       "y": 718,
       "maxPoints": 2,
@@ -20777,6 +21565,7 @@
     "svz81-22": {
       "skill": "svz81-22",
       "name": "Flammable Vitae",
+      "icon": "c-ignite",
       "x": 5596.1997,
       "y": 1212,
       "maxPoints": 1,
@@ -20803,6 +21592,7 @@
     "svz81-23": {
       "skill": "svz81-23",
       "name": "Horrific Vessels",
+      "icon": "c-Plague",
       "x": 8235,
       "y": -980,
       "maxPoints": 1,
@@ -20828,6 +21618,7 @@
     "svz81-24": {
       "skill": "svz81-24",
       "name": "Pull of the Grave",
+      "icon": "zombie-explosion",
       "x": 7291.8,
       "y": -880,
       "maxPoints": 2,
@@ -20852,6 +21643,7 @@
     "svz81-25": {
       "skill": "svz81-25",
       "name": "Army of Nightmares",
+      "icon": "c-Dread Shade",
       "x": 8988.199,
       "y": -859.2,
       "maxPoints": 3,
@@ -20877,6 +21669,7 @@
     "svz81-26": {
       "skill": "svz81-26",
       "name": "Effigy of Combustion",
+      "icon": "cremate2",
       "x": 8095,
       "y": 1212,
       "maxPoints": 4,
@@ -20904,6 +21697,7 @@
     "svz81-27": {
       "skill": "svz81-27",
       "name": "Ferocious Horde",
+      "icon": "MinionBloodInfusion",
       "x": 7895,
       "y": -357.6,
       "maxPoints": 1,
@@ -20929,6 +21723,7 @@
     "svz81-28": {
       "skill": "svz81-28",
       "name": "Ravenous ",
+      "icon": "Zombie Bite",
       "x": 6443.8,
       "y": -780,
       "maxPoints": 2,
@@ -20953,6 +21748,7 @@
     "svz81-29": {
       "skill": "svz81-29",
       "name": "Daunting Blast",
+      "icon": "zombie-explosion-blue",
       "x": 5579.8,
       "y": -880,
       "maxPoints": 4,
@@ -20978,6 +21774,7 @@
     "svz81-31": {
       "skill": "svz81-31",
       "name": "Awakening Presence",
+      "icon": "Bone Pile Blood",
       "x": 7231,
       "y": 1212,
       "maxPoints": 3,
@@ -21003,6 +21800,7 @@
     "svz81-32": {
       "skill": "svz81-32",
       "name": "Vital Ward",
+      "icon": "necrotic-armor",
       "x": 8740.199,
       "y": 1056.4,
       "maxPoints": 1,
@@ -21046,6 +21844,7 @@
     "sw42ih-2": {
       "skill": "sw42ih-2",
       "name": "Locus Of Resurrection",
+      "icon": "Focus",
       "x": 7035.8,
       "y": -400,
       "maxPoints": 1,
@@ -21073,6 +21872,7 @@
     "sw42ih-3": {
       "skill": "sw42ih-3",
       "name": "Locus Of Death",
+      "icon": "Spirit_Plague",
       "x": 6435.8,
       "y": -744,
       "maxPoints": 1,
@@ -21097,6 +21897,7 @@
     "sw42ih-4": {
       "skill": "sw42ih-4",
       "name": "Dark Scythe",
+      "icon": "Slash Necrotic",
       "x": 7696.1997,
       "y": -744,
       "maxPoints": 3,
@@ -21121,6 +21922,7 @@
     "sw42ih-5": {
       "skill": "sw42ih-5",
       "name": "Echoes Inside",
+      "icon": "unearth",
       "x": 8460.2,
       "y": -615.99994,
       "maxPoints": 1,
@@ -21149,6 +21951,7 @@
     "sw42ih-6": {
       "skill": "sw42ih-6",
       "name": "Stygian River",
+      "icon": "Summon Vale Spirit",
       "x": 9046.2,
       "y": -68.8,
       "maxPoints": 5,
@@ -21172,6 +21975,7 @@
     "sw42ih-7": {
       "skill": "sw42ih-7",
       "name": "Army of Wraiths",
+      "icon": "summon-wraith-multiple",
       "x": 7877,
       "y": -68.8,
       "maxPoints": 3,
@@ -21197,6 +22001,7 @@
     "sw42ih-8": {
       "skill": "sw42ih-8",
       "name": "Spectral Ambush",
+      "icon": "exorcise",
       "x": 8460.2,
       "y": 496,
       "maxPoints": 1,
@@ -21220,6 +22025,7 @@
     "sw42ih-9": {
       "skill": "sw42ih-9",
       "name": "Haunting",
+      "icon": "Bone Armor",
       "x": 7035.8,
       "y": 400,
       "maxPoints": 5,
@@ -21245,6 +22051,7 @@
     "sw42ih-10": {
       "skill": "sw42ih-10",
       "name": "Twin Spirits",
+      "icon": "evil-symbol-7",
       "x": 7644.5996,
       "y": 920,
       "maxPoints": 1,
@@ -21273,6 +22080,7 @@
     "sw42ih-11": {
       "skill": "sw42ih-11",
       "name": "Sanguine Spirits",
+      "icon": "c-Laceration",
       "x": 7035.8,
       "y": 1265.6,
       "maxPoints": 1,
@@ -21299,6 +22107,7 @@
     "sw42ih-12": {
       "skill": "sw42ih-12",
       "name": "Sequel of Avarice",
+      "icon": "skeletal-mage",
       "x": 8126.1997,
       "y": 1172,
       "maxPoints": 3,
@@ -21324,6 +22133,7 @@
     "sw42ih-13": {
       "skill": "sw42ih-13",
       "name": "Covenant of Souls",
+      "icon": "hungering soul",
       "x": 3851.7998,
       "y": -658,
       "maxPoints": 2,
@@ -21349,6 +22159,7 @@
     "sw42ih-14": {
       "skill": "sw42ih-14",
       "name": "Reapers",
+      "icon": "harvest",
       "x": 5835.8,
       "y": -400,
       "maxPoints": 5,
@@ -21374,6 +22185,7 @@
     "sw42ih-15": {
       "skill": "sw42ih-15",
       "name": "Wraith Bringer",
+      "icon": "wanderingspirits-blue",
       "x": 4907.8,
       "y": -399.99988,
       "maxPoints": 4,
@@ -21404,6 +22216,7 @@
     "sw42ih-16": {
       "skill": "sw42ih-16",
       "name": "Fallen Reclamation",
+      "icon": "markfordeath",
       "x": 4447.8,
       "y": -792,
       "maxPoints": 2,
@@ -21428,6 +22241,7 @@
     "sw42ih-17": {
       "skill": "sw42ih-17",
       "name": "Flame Wraith",
+      "icon": "c-flame wraith",
       "x": 3943.7998,
       "y": -40,
       "maxPoints": 2,
@@ -21451,6 +22265,7 @@
     "sw42ih-18": {
       "skill": "sw42ih-18",
       "name": "Spirit Link",
+      "icon": "Mana Strike",
       "x": 4472.5996,
       "y": 456.4,
       "maxPoints": 1,
@@ -21480,6 +22295,7 @@
     "sw42ih-19": {
       "skill": "sw42ih-19",
       "name": "Dawn of the Fall",
+      "icon": "Rive 2 silver",
       "x": 3819.7998,
       "y": 764.4,
       "maxPoints": 3,
@@ -21505,6 +22321,7 @@
     "sw42ih-20": {
       "skill": "sw42ih-20",
       "name": "Dusk of the Living",
+      "icon": "Bolt Necrotic",
       "x": 4398.5996,
       "y": 1204,
       "maxPoints": 3,
@@ -21527,6 +22344,7 @@
     "sw42ih-21": {
       "skill": "sw42ih-21",
       "name": "Necrotic Hunger",
+      "icon": "c- drain life teal",
       "x": 5451.8,
       "y": -858,
       "maxPoints": 3,
@@ -21550,6 +22368,7 @@
     "sw42ih-22": {
       "skill": "sw42ih-22",
       "name": "Grave Reality",
+      "icon": "bonegolem",
       "x": 5835.8,
       "y": 400,
       "maxPoints": 2,
@@ -21580,6 +22399,7 @@
     "sw42ih-23": {
       "skill": "sw42ih-23",
       "name": "Noxious Blades",
+      "icon": "aura of decay",
       "x": 6215.8,
       "y": 860.8,
       "maxPoints": 5,
@@ -21605,6 +22425,7 @@
     "sw42ih-24": {
       "skill": "sw42ih-24",
       "name": "Putrid Wraith",
+      "icon": "c-putrid wraith",
       "x": 5853.8,
       "y": 1265.6,
       "maxPoints": 2,
@@ -21628,6 +22449,7 @@
     "sw42ih-25": {
       "skill": "sw42ih-25",
       "name": "Delay the End",
+      "icon": "Bone Pile Blood",
       "x": 5165.4,
       "y": 628,
       "maxPoints": 4,
@@ -21655,6 +22477,7 @@
     "sw42ih-26": {
       "skill": "sw42ih-26",
       "name": "Wraith Feast",
+      "icon": "leech life",
       "x": 5072.1997,
       "y": 1204,
       "maxPoints": 3,
@@ -21677,6 +22500,7 @@
     "sw42ih-28": {
       "skill": "sw42ih-28",
       "name": "Serrated Scythes",
+      "icon": "c-bleed",
       "x": 6655.8,
       "y": 860.8,
       "maxPoints": 5,
@@ -21701,6 +22525,7 @@
     "sw42ih-29": {
       "skill": "sw42ih-29",
       "name": "Spectre of Death",
+      "icon": "Skull Necrotic",
       "x": 9046.199,
       "y": -924,
       "maxPoints": 3,
@@ -21726,6 +22551,7 @@
     "sw42ih-30": {
       "skill": "sw42ih-30",
       "name": "One Foot in the Grave",
+      "icon": "Drain_Life",
       "x": 5251.8,
       "y": 56,
       "maxPoints": 3,
@@ -21770,6 +22596,7 @@
     "ts50pl-2": {
       "skill": "ts50pl-2",
       "name": "Bone Armor",
+      "icon": "Bone Armor",
       "x": 5283.8,
       "y": -464,
       "maxPoints": 1,
@@ -21798,6 +22625,7 @@
     "ts50pl-4": {
       "skill": "ts50pl-4",
       "name": "Fleeting Form",
+      "icon": "possession",
       "x": 5911.8,
       "y": -136,
       "maxPoints": 3,
@@ -21824,6 +22652,7 @@
     "ts50pl-5": {
       "skill": "ts50pl-5",
       "name": "Apostasy",
+      "icon": "Circle of bones",
       "x": 4603.8,
       "y": -336,
       "maxPoints": 3,
@@ -21848,6 +22677,7 @@
     "ts50pl-6": {
       "skill": "ts50pl-6",
       "name": "Drink Deep",
+      "icon": "boneprojectile",
       "x": 4059.4,
       "y": -437.19983,
       "maxPoints": 1,
@@ -21871,6 +22701,7 @@
     "ts50pl-7": {
       "skill": "ts50pl-7",
       "name": "Marrow Blades",
+      "icon": "Armblade_SlashesMain",
       "x": 5411.8,
       "y": 192,
       "maxPoints": 3,
@@ -21899,6 +22730,7 @@
     "ts50pl-8": {
       "skill": "ts50pl-8",
       "name": "Simulacrum",
+      "icon": "Bone Wall",
       "x": 4755.8,
       "y": 320,
       "maxPoints": 1,
@@ -21931,6 +22763,7 @@
     "ts50pl-9": {
       "skill": "ts50pl-9",
       "name": "Transfusion",
+      "icon": "Sacrifice",
       "x": 4113.4,
       "y": 556,
       "maxPoints": 1,
@@ -21955,6 +22788,7 @@
     "ts50pl-10": {
       "skill": "ts50pl-10",
       "name": "Purgatory",
+      "icon": "Bone Pile",
       "x": 5155.8,
       "y": 952.8,
       "maxPoints": 1,
@@ -21984,6 +22818,7 @@
     "ts50pl-11": {
       "skill": "ts50pl-11",
       "name": "Ivory Court",
+      "icon": "unearth",
       "x": 4237.4,
       "y": 1197.2,
       "maxPoints": 3,
@@ -22009,6 +22844,7 @@
     "ts50pl-12": {
       "skill": "ts50pl-12",
       "name": "Scarlet Rain",
+      "icon": "Glyph of Fire alt",
       "x": 6947.8,
       "y": 576,
       "maxPoints": 4,
@@ -22035,6 +22871,7 @@
     "ts50pl-13": {
       "skill": "ts50pl-13",
       "name": "Cursed Exile",
+      "icon": "markfordeath",
       "x": 7547.8,
       "y": 1220,
       "maxPoints": 5,
@@ -22063,6 +22900,7 @@
     "ts50pl-14": {
       "skill": "ts50pl-14",
       "name": "Ethereal Body",
+      "icon": "aura of decay necrotic",
       "x": 6803.8,
       "y": 1256,
       "maxPoints": 1,
@@ -22087,6 +22925,7 @@
     "ts50pl-15": {
       "skill": "ts50pl-15",
       "name": "Squeamish",
+      "icon": "Skull Necrotic",
       "x": 6335.8,
       "y": 1076,
       "maxPoints": 1,
@@ -22111,6 +22950,7 @@
     "ts50pl-16": {
       "skill": "ts50pl-16",
       "name": "Thanatophobia",
+      "icon": "Death_Seal_2",
       "x": 5847.8,
       "y": 1256,
       "maxPoints": 1,
@@ -22133,6 +22973,7 @@
     "ts50pl-17": {
       "skill": "ts50pl-17",
       "name": "Reign of Blood",
+      "icon": "evil-symbol-3",
       "x": 7812.5996,
       "y": 424,
       "maxPoints": 1,
@@ -22163,6 +23004,7 @@
     "ts50pl-18": {
       "skill": "ts50pl-18",
       "name": "Acolyte's Fervor",
+      "icon": "Zombie Bite",
       "x": 7147.8,
       "y": -0,
       "maxPoints": 3,
@@ -22191,6 +23033,7 @@
     "ts50pl-19": {
       "skill": "ts50pl-19",
       "name": "Doom Bringer",
+      "icon": "c-Bone Curse",
       "x": 7995.8,
       "y": 1080,
       "maxPoints": 1,
@@ -22218,6 +23061,7 @@
     "ts50pl-20": {
       "skill": "ts50pl-20",
       "name": "Hemophilia",
+      "icon": "c-bleed",
       "x": 8839.8,
       "y": 1008,
       "maxPoints": 4,
@@ -22242,6 +23086,7 @@
     "ts50pl-21": {
       "skill": "ts50pl-21",
       "name": "Sticky Blood",
+      "icon": "blood-pool",
       "x": 6947.8,
       "y": -560,
       "maxPoints": 1,
@@ -22272,6 +23117,7 @@
     "ts50pl-22": {
       "skill": "ts50pl-22",
       "name": "Anemia",
+      "icon": "c-Health Regeneration Debuff (generic)_2",
       "x": 6151.8,
       "y": -708,
       "maxPoints": 4,
@@ -22301,6 +23147,7 @@
     "ts50pl-23": {
       "skill": "ts50pl-23",
       "name": "Siphon",
+      "icon": "blood-eplosion",
       "x": 7707.8,
       "y": -931.2,
       "maxPoints": 3,
@@ -22326,6 +23173,7 @@
     "ts50pl-24": {
       "skill": "ts50pl-24",
       "name": "Dance of Blood",
+      "icon": "rip blood",
       "x": 8136.1997,
       "y": 55.200012,
       "maxPoints": 3,
@@ -22352,6 +23200,7 @@
     "ts50pl-25": {
       "skill": "ts50pl-25",
       "name": "Azure Veins",
+      "icon": "aura of decay blue",
       "x": 8189.8,
       "y": -525.20013,
       "maxPoints": 2,
@@ -22379,6 +23228,7 @@
     "ts50pl-26": {
       "skill": "ts50pl-26",
       "name": "Pale Blood",
+      "icon": "c-Mana Regeneration Debuff (generic)",
       "x": 8839.8,
       "y": -865.2,
       "maxPoints": 3,
@@ -22402,6 +23252,7 @@
     "ts50pl-27": {
       "skill": "ts50pl-27",
       "name": "Flesh Marquis",
+      "icon": "bonegolem-red",
       "x": 8839.8,
       "y": -185.2,
       "maxPoints": 3,
@@ -22428,6 +23279,7 @@
     "ts50pl-28": {
       "skill": "ts50pl-28",
       "name": "Forced Fruition",
+      "icon": "leech life",
       "x": 8999.8,
       "y": 424,
       "maxPoints": 3,
@@ -22450,6 +23302,7 @@
     "ts50pl-30": {
       "skill": "ts50pl-30",
       "name": "Violent Emergence",
+      "icon": "blood-harvest",
       "x": 8455,
       "y": 424,
       "maxPoints": 3,
@@ -22496,6 +23349,7 @@
     "ws54hm-2": {
       "skill": "ws54hm-2",
       "name": "Thin Veil",
+      "icon": "summon-wraith-multiple",
       "x": 5715.8,
       "y": 800,
       "maxPoints": 5,
@@ -22523,6 +23377,7 @@
     "ws54hm-3": {
       "skill": "ws54hm-3",
       "name": "Tethered Existence",
+      "icon": "Entangling roots-blue",
       "x": 7807.8,
       "y": 1188,
       "maxPoints": 5,
@@ -22546,6 +23401,7 @@
     "ws54hm-4": {
       "skill": "ws54hm-4",
       "name": "Drifting Spirits",
+      "icon": "unearth",
       "x": 5063.8,
       "y": 1188,
       "maxPoints": 4,
@@ -22568,6 +23424,7 @@
     "ws54hm-5": {
       "skill": "ws54hm-5",
       "name": "Infectious Dead",
+      "icon": "c-poison",
       "x": 6435.8,
       "y": 1120,
       "maxPoints": 1,
@@ -22592,6 +23449,7 @@
     "ws54hm-6": {
       "skill": "ws54hm-6",
       "name": "Familiar Souls",
+      "icon": "c-Ward Generation Debuff (generic)",
       "x": 6435.8,
       "y": 480,
       "maxPoints": 3,
@@ -22617,6 +23475,7 @@
     "ws54hm-7": {
       "skill": "ws54hm-7",
       "name": "Lingering Souls",
+      "icon": "possess",
       "x": 7155.8,
       "y": 800,
       "maxPoints": 3,
@@ -22644,6 +23503,7 @@
     "ws54hm-8": {
       "skill": "ws54hm-8",
       "name": "Drained Will",
+      "icon": "c-necrotic_protection_debuff",
       "x": 5099.8,
       "y": 292,
       "maxPoints": 5,
@@ -22668,6 +23528,7 @@
     "ws54hm-9": {
       "skill": "ws54hm-9",
       "name": "Terrifying Presence",
+      "icon": "c-Dread Shade",
       "x": 4947.8,
       "y": -288,
       "maxPoints": 1,
@@ -22697,6 +23558,7 @@
     "ws54hm-10": {
       "skill": "ws54hm-10",
       "name": "Harrowing Aura",
+      "icon": "desecrate",
       "x": 4475.8,
       "y": 192,
       "maxPoints": 3,
@@ -22720,6 +23582,7 @@
     "ws54hm-11": {
       "skill": "ws54hm-11",
       "name": "False Courage",
+      "icon": "Hungering Soul Necro",
       "x": 4011.7998,
       "y": 80,
       "maxPoints": 5,
@@ -22743,6 +23606,7 @@
     "ws54hm-12": {
       "skill": "ws54hm-12",
       "name": "Haunting",
+      "icon": "Death_Seal_3",
       "x": 4279.8,
       "y": -340.00003,
       "maxPoints": 5,
@@ -22767,6 +23631,7 @@
     "ws54hm-13": {
       "skill": "ws54hm-13",
       "name": "Prey On Fear",
+      "icon": "aura of decay blue",
       "x": 4539.8,
       "y": -760.3999,
       "maxPoints": 5,
@@ -22793,6 +23658,7 @@
     "ws54hm-14": {
       "skill": "ws54hm-14",
       "name": "Medium",
+      "icon": "Death_Seal_2",
       "x": 6880.1997,
       "y": -608.8,
       "maxPoints": 4,
@@ -22822,6 +23688,7 @@
     "ws54hm-15": {
       "skill": "ws54hm-15",
       "name": "Eternal Haunt",
+      "icon": "Bone Pile",
       "x": 6161.4,
       "y": -720.4,
       "maxPoints": 5,
@@ -22847,6 +23714,7 @@
     "ws54hm-16": {
       "skill": "ws54hm-16",
       "name": "Daunting Presence",
+      "icon": "bonegolem",
       "x": 5367.8,
       "y": -760.4,
       "maxPoints": 5,
@@ -22874,6 +23742,7 @@
     "ws54hm-17": {
       "skill": "ws54hm-17",
       "name": "Sheltering Spirits",
+      "icon": "Spellbook Arcane",
       "x": 7435,
       "y": -776,
       "maxPoints": 2,
@@ -22898,6 +23767,7 @@
     "ws54hm-18": {
       "skill": "ws54hm-18",
       "name": "Infusing Souls",
+      "icon": "Focus",
       "x": 7979.8,
       "y": -776,
       "maxPoints": 2,
@@ -22924,6 +23794,7 @@
     "ws54hm-19": {
       "skill": "ws54hm-19",
       "name": "Souls of Rage",
+      "icon": "c-ice barrage green",
       "x": 7179.8,
       "y": -120,
       "maxPoints": 5,
@@ -22950,6 +23821,7 @@
     "ws54hm-20": {
       "skill": "ws54hm-20",
       "name": "Poisoned Minds",
+      "icon": "poison_tipped_blade",
       "x": 7699.8,
       "y": 112,
       "maxPoints": 3,
@@ -22974,6 +23846,7 @@
     "ws54hm-21": {
       "skill": "ws54hm-21",
       "name": "Spectral Putrescence",
+      "icon": "poison_bolt",
       "x": 8287.8,
       "y": 252,
       "maxPoints": 1,
@@ -22999,6 +23872,7 @@
     "ws54hm-22": {
       "skill": "ws54hm-22",
       "name": "Spectral Scorn",
+      "icon": "Bolt Poison",
       "x": 8935.8,
       "y": -68,
       "maxPoints": 4,
@@ -23024,6 +23898,7 @@
     "ws54hm-23": {
       "skill": "ws54hm-23",
       "name": "Soul Of Filth",
+      "icon": "Hungering Souls Poison",
       "x": 8935.8,
       "y": 588,
       "maxPoints": 2,
@@ -23049,6 +23924,7 @@
     "ws54hm-24": {
       "skill": "ws54hm-24",
       "name": "Locus Mortis",
+      "icon": "c- drain life teal",
       "x": 4799.8,
       "y": 896,
       "maxPoints": 1,
@@ -23075,6 +23951,7 @@
     "ws54hm-26": {
       "skill": "ws54hm-26",
       "name": "Reap the Damned",
+      "icon": "reaper form",
       "x": 8071.8,
       "y": 888,
       "maxPoints": 5,
@@ -23098,6 +23975,7 @@
     "ws54hm-28": {
       "skill": "ws54hm-28",
       "name": "Song of the Lost Chantry",
+      "icon": "aura of decay necrotic",
       "x": 8659.8,
       "y": -896,
       "maxPoints": 1,
@@ -23125,6 +24003,7 @@
     "ws54hm-30": {
       "skill": "ws54hm-30",
       "name": "Spirit Swarm",
+      "icon": "Teleport",
       "x": 5691.8,
       "y": -120,
       "maxPoints": 3,
@@ -23150,6 +24029,7 @@
     "ws54hm-31": {
       "skill": "ws54hm-31",
       "name": "Sins of the Forgotten",
+      "icon": "Drain_Life",
       "x": 4339.8,
       "y": 668,
       "maxPoints": 3,
