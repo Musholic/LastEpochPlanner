@@ -266,6 +266,15 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
     local nodeMap = { }
     for _, node in pairs(self.nodes) do
         node.alloc = 0
+        -- Fix coordinates (avoid overlaps of masteries and skills
+        node.x = node.x * 2
+        node.y = node.y * 2
+        if node.mastery then
+            node.y = node.y + node.mastery * 1000
+        end
+        if node.skillId then
+            node.x = node.x + 3000
+        end
         -- Migration...
         -- To old format
         node.id = node.skill

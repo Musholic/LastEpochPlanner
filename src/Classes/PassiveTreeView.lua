@@ -549,8 +549,10 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 					-- Both have or both have not, use white
 					SetDrawColor(1, 1, 1)
 				end
-			else
+			elseif isAlloc then
 				SetDrawColor(1, 1, 1)
+			else
+				SetDrawColor(0.3, 0.3, 0.3)
 			end
 		end
 
@@ -565,7 +567,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		if base then
 			self:DrawAsset(base, scrX, scrY, scale)
 			-- Draw the allocated number
-			DrawString(scrX - 48 * scale, scrY + 32 * scale, "LEFT", round(90 * scale), "VAR", "^7" .. node.alloc .. "/" .. node.maxPoints)
+			DrawString(scrX - 32 * scale, scrY + 48 * scale, "LEFT", round(50 * scale), "VAR", "^7" .. node.alloc .. "/" .. node.maxPoints)
 		end
 
 		if overlay then
