@@ -15,7 +15,8 @@ local band = bit.band
 local b_rshift = bit.rshift
 
 local PassiveTreeViewClass = newClass("PassiveTreeView", function(self)
-	self.ring = NewImageHandle()
+    -- TODO: add exception when loading a non-existing image
+    self.ring = NewImageHandle()
 	self.ring:Load("Assets/ring.png", "CLAMP")
 	self.highlightRing = NewImageHandle()
 	self.highlightRing:Load("Assets/small_ring.png", "CLAMP")
@@ -290,7 +291,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			end
 		end
 	elseif treeClick == "RIGHT" then
-		if hoverNode then
+		if hoverNode and hoverNode.maxPoints > 0 then
 			-- User right-clicked on a node
 			if hoverNode.alloc > 1 then
 				hoverNode.alloc = hoverNode.alloc - 1
@@ -451,28 +452,19 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		local base, overlay, effect
 		local isAlloc = node.alloc > 0 or build.calcsTab.mainEnv.grantedPassives[nodeId] or (compareNode and compareNode.alloc)
 		SetDrawLayer(nil, 25)
-		if node.type == "ClassStart" then
-			overlay = isAlloc and node.startArt or "PSStartNodeBackgroundInactive"
-		elseif node.type == "AscendClassStart" then
-			overlay = treeVersions[tree.treeVersion].num >= 3.10 and "AscendancyMiddle" or "PassiveSkillScreenAscendancyMiddle"
-			if node.ascendancyName and tree.secondaryAscendNameMap and tree.secondaryAscendNameMap[node.ascendancyName] then
-				overlay = "Azmeri"..overlay
-			end
+
+		local state
+		if self.showHeatMap or isAlloc or node == hoverNode or (self.traceMode and node == self.tracePath[#self.tracePath])then
+			-- Show node as allocated if it is being hovered over
+			-- Also if the heat map is turned on (makes the nodes more visible)
+			state = "alloc"
+		elseif hoverPath and hoverPath[node] then
+			state = "path"
 		else
-			local state
-			if self.showHeatMap or isAlloc or node == hoverNode or (self.traceMode and node == self.tracePath[#self.tracePath])then
-				-- Show node as allocated if it is being hovered over
-				-- Also if the heat map is turned on (makes the nodes more visible)
-				state = "alloc"
-			elseif hoverPath and hoverPath[node] then
-				state = "path"
-			else
-				state = "unalloc"
-			end
-			-- Normal node (includes keystones and notables)
-			base = node.sprites
-			overlay = node.overlay[state .. (node.ascendancyName and "Ascend" or "") .. (node.isBlighted and "Blighted" or "")]
+			state = "unalloc"
 		end
+		-- Normal node (includes keystones and notables)
+		base = node.sprites
 
 		-- Convert node position to screen-space
 		local nodeY = node.y
@@ -549,7 +541,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 					-- Both have or both have not, use white
 					SetDrawColor(1, 1, 1)
 				end
-			elseif isAlloc then
+			elseif isAlloc or node.maxPoints == 0 then
 				SetDrawColor(1, 1, 1)
 			else
 				SetDrawColor(0.3, 0.3, 0.3)
@@ -567,7 +559,9 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		if base then
 			self:DrawAsset(base, scrX, scrY, scale)
 			-- Draw the allocated number
-			DrawString(scrX - 32 * scale, scrY + 48 * scale, "LEFT", round(50 * scale), "VAR", "^7" .. node.alloc .. "/" .. node.maxPoints)
+			if node.maxPoints > 0 then
+				DrawString(scrX - 32 * scale, scrY + 48 * scale, "LEFT", round(50 * scale), "VAR", "^7" .. node.alloc .. "/" .. node.maxPoints)
+			end
 		end
 
 		if overlay then
@@ -581,7 +575,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 					end
 				end
 			end
-			self:DrawAsset(tree.assets[overlay], scrX, scrY, scale)
+			self:DrawAsset(tree.spriteMap[overlay], scrX, scrY, scale)
 			SetDrawColor(1, 1, 1)
 		end
 		if self.searchStrResults[nodeId] then
@@ -602,9 +596,6 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			self.tooltip:Draw(m_floor(scrX - size), m_floor(scrY - size), size * 2, size * 2, viewPort)
 		end
 	end
-	
-	-- Draw ring overlays for jewel sockets
-	SetDrawLayer(nil, 25)
 end
 
 -- Draws the given asset at the given position
@@ -631,7 +622,7 @@ end
 -- Zoom the tree in or out
 function PassiveTreeViewClass:Zoom(level, viewPort)
 	-- Calculate new zoom level and zoom factor
-	self.zoomLevel = m_max(0, m_min(20, self.zoomLevel + level))
+	self.zoomLevel = m_max(0, m_min(30, self.zoomLevel + level))
 	local oldZoom = self.zoom
 	self.zoom = 1.2 ^ self.zoomLevel
 
@@ -819,14 +810,14 @@ function PassiveTreeViewClass:AddNodeTooltip(tooltip, node, build)
 		if not node.dependsOnIntuitiveLeapLike and pathLength > 1 and not isGranted then
 			count = count + build:AddStatComparesToTooltip(tooltip, calcBase, pathOutput, node.alloc > 0 and "^7Unallocating this node and all nodes depending on it will give you:" or "^7Allocating this node and all nodes leading to it will give you:", pathLength)
 		end
-		if count == 0 then
+		if node.maxPoints > 0 and count == 0 then
 			if isGranted then
 				tooltip:AddLine(14, string.format("^7This node is granted by an item. Removing it will cause no changes"))
 			else
 				tooltip:AddLine(14, string.format("^7No changes from %s this node%s.", node.alloc > 0 and "unallocating" or "allocating", not node.dependsOnIntuitiveLeapLike and pathLength > 1 and " or the nodes leading to it" or ""))
 			end
 		end
-		if node.alloc > 0 and node.alloc < node.maxPoints then
+		if node.alloc and node.alloc > 0 and node.alloc < node.maxPoints then
 			tooltip:AddSeparator(14)
 			node.alloc = node.alloc + 1
 			build.spec.tree:ProcessStats(node)

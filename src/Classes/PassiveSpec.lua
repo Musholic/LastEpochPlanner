@@ -643,11 +643,15 @@ end
 function PassiveSpecClass:BuildAllDependsAndPaths()
 	-- This table will keep track of which nodes have been visited during each path-finding attempt
 	local visited = { }
-	local attributes = { "Dexterity", "Intelligence", "Strength" }
 	self.visibleNodes = {}
 	for nodeId, node in pairs(self.nodes) do
 		if nodeId:match("^" .. self.curClassName) then
 			self.visibleNodes[nodeId] = node
+		end
+		for _, ascendancy in ipairs(self.curClass.classes) do
+			if nodeId == ascendancy.name then
+				self.visibleNodes[nodeId] = node
+			end
 		end
 		for _,ability in pairs(self.build.skillsTab.socketGroupList) do
 			if ability.skillId and nodeId:match("^" .. ability.skillId) then
