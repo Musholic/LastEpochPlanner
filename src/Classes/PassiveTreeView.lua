@@ -15,7 +15,6 @@ local band = bit.band
 local b_rshift = bit.rshift
 
 local PassiveTreeViewClass = newClass("PassiveTreeView", function(self)
-    -- TODO: add exception when loading a non-existing image
     self.ring = NewImageHandle()
 	self.ring:Load("Assets/ring.png", "CLAMP")
 	self.highlightRing = NewImageHandle()
@@ -336,6 +335,20 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 	elseif build.spec.curClassId == 6 then
 		local scrX, scrY = treeToScreen(2350, -1950)
 		self:DrawAsset(tree.assets.BackgroundDexInt, scrX, scrY, scale)
+	end
+
+	-- Draw classes background art for the main class and the three ascension classes
+	for i = 0, 3 do
+		local scrX, scrY = treeToScreen(-220, i * 1000)
+		self:DrawAsset(tree.assets.ClassBackground, scrX, scrY, scale)
+	end
+
+	-- Draw skills background art for all selected skills
+	for id,ability in pairs(build.skillsTab.socketGroupList) do
+		if ability.skillId then
+			local scrX, scrY = treeToScreen(3000, 150 + (id - 1) * (tree.decAbilityPosY + 1000))
+			self:DrawAsset(tree.assets.SkillBackground, scrX, scrY, scale)
+		end
 	end
 
 	local connectorColor = { 1, 1, 1 }

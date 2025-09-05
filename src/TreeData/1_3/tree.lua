@@ -9,6 +9,8 @@ return {
     ["max_x"]= 60000,
     ["max_y"]= 60000,
     ["assets"]= {
+        ["ClassBackground"]= {},
+        ["SkillBackground"]= {},
         ["PSSkillFrame"]= {
             [0.1246]= "https://web.poecdn.com/gen/image/WzIyLCJjOTk3MTkyODgzMjUyYWZlNzZkZGE3Yzc1MjNhNGMwOCIseyJ0IjowLCJzcCI6MC4xMjQ2fV0/b09afb1b33/Skill_Frame_Unallocated.png",
             [0.2109]= "https://web.poecdn.com/gen/image/WzIyLCJjOTk3MTkyODgzMjUyYWZlNzZkZGE3Yzc1MjNhNGMwOCIseyJ0IjowLCJzcCI6MC4yMTA5fV0/f5a8a049af/Skill_Frame_Unallocated.png",

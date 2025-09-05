@@ -173,7 +173,7 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
 
     ConPrintf("Loading passive tree assets...")
     for name, data in pairs(self.assets) do
-        self:LoadImage(name .. ".png", cdnRoot .. (data[0.3835] or data[1]), data, not name:match("[OL][ri][bn][ie][tC]") and "ASYNC" or nil)--, not name:match("[OL][ri][bn][ie][tC]") and "MIPMAP" or nil)
+        self:LoadImage(name .. ".png", cdnRoot .. (data[1] or ""), data, not name:match("[OL][ri][bn][ie][tC]") and "ASYNC" or nil)--, not name:match("[OL][ri][bn][ie][tC]") and "MIPMAP" or nil)
     end
 
     -- Load sprite sheets and build sprite map
