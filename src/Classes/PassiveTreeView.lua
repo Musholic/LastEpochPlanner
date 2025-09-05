@@ -573,7 +573,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			self:DrawAsset(base, scrX, scrY, scale)
 			-- Draw the allocated number
 			if node.maxPoints > 0 then
-				DrawString(scrX - 32 * scale, scrY + 48 * scale, "LEFT", round(50 * scale), "VAR", "^7" .. node.alloc .. "/" .. node.maxPoints)
+				DrawString(scrX, scrY + 48 * scale, "CENTER_X", round(50 * scale), "VAR", "^7" .. node.alloc .. "/" .. node.maxPoints)
 			end
 		end
 
