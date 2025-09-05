@@ -577,6 +577,15 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			end
 		end
 
+		-- Draw "not scaling stats" indicators
+		if node.noScalingPointThreshold and node.noScalingPointThreshold > 0 then
+			if node.alloc >= node.noScalingPointThreshold then
+		        self:DrawAsset(tree.assets.PassiveBonusFilled, scrX, scrY - 46 * scale, scale * 1.33)
+			else
+		        self:DrawAsset(tree.assets.PassiveBonusEmpty, scrX, scrY - 46 * scale, scale * 1.33)
+			end
+		end
+
 		if overlay then
 			-- Draw overlay
 			if node.type ~= "ClassStart" and node.type ~= "AscendClassStart" then
@@ -608,6 +617,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			end
 			self.tooltip:Draw(m_floor(scrX - size), m_floor(scrY - size), size * 2, size * 2, viewPort)
 		end
+
 	end
 end
 
