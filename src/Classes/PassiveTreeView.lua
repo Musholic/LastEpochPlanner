@@ -15,40 +15,6 @@ local band = bit.band
 local b_rshift = bit.rshift
 
 local PassiveTreeViewClass = newClass("PassiveTreeView", function(self)
-    self.ring = NewImageHandle()
-	self.ring:Load("Assets/ring.png", "CLAMP")
-	self.highlightRing = NewImageHandle()
-	self.highlightRing:Load("Assets/small_ring.png", "CLAMP")
-	self.jewelShadedOuterRing = NewImageHandle()
-	self.jewelShadedOuterRing:Load("Assets/ShadedOuterRing.png", "CLAMP")
-	self.jewelShadedOuterRingFlipped = NewImageHandle()
-	self.jewelShadedOuterRingFlipped:Load("Assets/ShadedOuterRingFlipped.png", "CLAMP")
-	self.jewelShadedInnerRing = NewImageHandle()
-	self.jewelShadedInnerRing:Load("Assets/ShadedInnerRing.png", "CLAMP")
-	self.jewelShadedInnerRingFlipped = NewImageHandle()
-	self.jewelShadedInnerRingFlipped:Load("Assets/ShadedInnerRingFlipped.png", "CLAMP")
-	
-	self.eternal1 = NewImageHandle()
-	self.eternal1:Load("TreeData/PassiveSkillScreenEternalEmpireJewelCircle1.png", "CLAMP")
-	self.eternal2 = NewImageHandle()
-	self.eternal2:Load("TreeData/PassiveSkillScreenEternalEmpireJewelCircle2.png", "CLAMP")
-	self.karui1 = NewImageHandle()
-	self.karui1:Load("TreeData/PassiveSkillScreenKaruiJewelCircle1.png", "CLAMP")
-	self.karui2 = NewImageHandle()
-	self.karui2:Load("TreeData/PassiveSkillScreenKaruiJewelCircle2.png", "CLAMP")
-	self.maraketh1 = NewImageHandle()
-	self.maraketh1:Load("TreeData/PassiveSkillScreenMarakethJewelCircle1.png", "CLAMP")
-	self.maraketh2 = NewImageHandle()
-	self.maraketh2:Load("TreeData/PassiveSkillScreenMarakethJewelCircle2.png", "CLAMP")
-	self.templar1 = NewImageHandle()
-	self.templar1:Load("TreeData/PassiveSkillScreenTemplarJewelCircle1.png", "CLAMP")
-	self.templar2 = NewImageHandle()
-	self.templar2:Load("TreeData/PassiveSkillScreenTemplarJewelCircle2.png", "CLAMP")
-	self.vaal1 = NewImageHandle()
-	self.vaal1:Load("TreeData/PassiveSkillScreenVaalJewelCircle1.png", "CLAMP")
-	self.vaal2 = NewImageHandle()
-	self.vaal2:Load("TreeData/PassiveSkillScreenVaalJewelCircle2.png", "CLAMP")
-
 	self.tooltip = new("Tooltip")
 
 	self.zoomLevel = 12
@@ -303,38 +269,6 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				build.buildFlag = true
 			end
 		end
-	end
-
-	-- Draw the background artwork
-	local bg = tree.assets.Background2 or tree.assets.Background1
-	if bg.width == 0 then
-		bg.width, bg.height = bg.handle:ImageSize()
-	end
-	if bg.width > 0 then
-		local bgSize = bg.width * scale * 1.33 * 2.5
-		SetDrawColor(1, 1, 1)
-		DrawImage(bg.handle, viewPort.x, viewPort.y, viewPort.width, viewPort.height, (self.zoomX + viewPort.width/2) / -bgSize, (self.zoomY + viewPort.height/2) / -bgSize, (viewPort.width/2 - self.zoomX) / bgSize, (viewPort.height/2 - self.zoomY) / bgSize)
-	end
-
-	-- Hack to draw class background art, the position data doesn't seem to be in the tree JSON yet
-	if build.spec.curClassId == 1 then
-		local scrX, scrY = treeToScreen(-2750, 1600)
-		self:DrawAsset(tree.assets.BackgroundStr, scrX, scrY, scale)
-	elseif build.spec.curClassId == 2 then
-		local scrX, scrY = treeToScreen(2550, 1600)
-		self:DrawAsset(tree.assets.BackgroundDex, scrX, scrY, scale)
-	elseif build.spec.curClassId == 3 then
-		local scrX, scrY = treeToScreen(-250, -2200)
-		self:DrawAsset(tree.assets.BackgroundInt, scrX, scrY, scale)
-	elseif build.spec.curClassId == 4 then
-		local scrX, scrY = treeToScreen(-150, 2350)
-		self:DrawAsset(tree.assets.BackgroundStrDex, scrX, scrY, scale)
-	elseif build.spec.curClassId == 5 then
-		local scrX, scrY = treeToScreen(-2100, -1500)
-		self:DrawAsset(tree.assets.BackgroundStrInt, scrX, scrY, scale)
-	elseif build.spec.curClassId == 6 then
-		local scrX, scrY = treeToScreen(2350, -1950)
-		self:DrawAsset(tree.assets.BackgroundDexInt, scrX, scrY, scale)
 	end
 
 	-- Draw classes background art for the main class and the three ascension classes
@@ -731,7 +665,6 @@ function PassiveTreeViewClass:DoesNodeMatchSearchParams(node)
 end
 
 function PassiveTreeViewClass:AddNodeName(tooltip, node, build)
-	tooltip:SetRecipe(node.recipe)
 	local customized = ""
 	if build.spec.hashOverrides[node.id] then
 		customized = colorCodes.WARNING .. " (CUSTOMIZED)"

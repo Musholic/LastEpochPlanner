@@ -15,30 +15,6 @@ local BORDER_WIDTH = 3
 local H_PAD	= 12
 local V_PAD = 10
 
--- All possible values for notable recipes (oils)
-local recipeNames = {
-	"AmberOil",
-	"AzureOil",
-	"BlackOil",
-	"ClearOil",
-	"CrimsonOil",
-	"GoldenOil",
-	"IndigoOil",
-	"OpalescentOil",
-	"SepiaOil",
-	"SilverOil",
-	"TealOil",
-	"VerdantOil",
-	"VioletOil",
-}
-
--- Preload all recipe images
-local recipeImages = { }
-for _, recipeName in pairs(recipeNames) do
-	recipeImages[recipeName] = NewImageHandle()
-	recipeImages[recipeName]:Load("TreeData/" .. recipeName .. ".png", "CLAMP")
-end
-
 local TooltipClass = newClass("Tooltip", function(self)
 	self.lines = { }
 	self.blocks = { }
@@ -51,7 +27,6 @@ function TooltipClass:Clear()
 	if self.updateParams then
 		wipeTable(self.updateParams)
 	end
-	self.recipe = nil
 	self.center = false
 	self.color = { 0.5, 0.3, 0 }
 	t_insert(self.blocks, { height = 0 })
@@ -94,10 +69,6 @@ function TooltipClass:AddLine(size, text)
 			end
 		end
 	end
-end
-
-function TooltipClass:SetRecipe(recipe)
-	self.recipe = recipe
 end
 
 function TooltipClass:AddSeparator(size)
@@ -218,7 +189,6 @@ function TooltipClass:Draw(x, y, w, h, viewPort)
 	SetDrawColor(1, 1, 1)
 
 	local columns, maxColumnHeight, drawStack = self:CalculateColumns(ttY, ttX, ttH, ttW, viewPort)
-
 	-- background shading currently must be drawn before text lines.  API change will allow something like the commented lines below
 	SetDrawColor(0, 0, 0, .85)
 	--SetDrawLayer(nil, GetDrawLayer() - 5)
