@@ -173,89 +173,44 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
 
     ConPrintf("Loading passive tree assets...")
     for name, data in pairs(self.assets) do
-        self:LoadImage(name .. ".png", cdnRoot .. (data[0.3835] or data[1]), data, not name:match("[OL][ri][bn][ie][tC]") and "ASYNC" or nil)--, not name:match("[OL][ri][bn][ie][tC]") and "MIPMAP" or nil)
+        self:LoadImage(name .. ".png", cdnRoot .. (data[1] or ""), data, not name:match("[OL][ri][bn][ie][tC]") and "ASYNC" or nil)--, not name:match("[OL][ri][bn][ie][tC]") and "MIPMAP" or nil)
     end
 
     -- Load sprite sheets and build sprite map
     self.spriteMap = { }
-    local spriteSheets = { }
-    for type, data in pairs(self.skillSprites) do
-        local maxZoom = data[#data]
-        maxZoom = data[0.3835] or data[1]
-        local sheet = spriteSheets[maxZoom.filename]
-        if not sheet then
-            sheet = { }
-            self:LoadImage(maxZoom.filename:gsub("%?%x+$", ""):gsub(".*/", "") or maxZoom.filename:gsub("%?%x+$", ""), maxZoom.filename or "https://web.poecdn.com" .. (self.imageRoot or "/image/") .. ("passive-skill/" or "build-gen/passive-skill-sprite/") .. maxZoom.filename, sheet, "CLAMP")--, "MIPMAP")
-            spriteSheets[maxZoom.filename] = sheet
-        end
-        for name, coords in pairs(maxZoom.coords) do
-            if not self.spriteMap[name] then
-                self.spriteMap[name] = { }
-            end
-            self.spriteMap[name][type] = {
-                handle = sheet.handle,
-                width = coords.w,
-                height = coords.h,
-                [1] = coords.x / sheet.width,
-                [2] = coords.y / sheet.height,
-                [3] = (coords.x + coords.w) / sheet.width,
-                [4] = (coords.y + coords.h) / sheet.height
-            }
+    local handle = NewFileSearch("TreeData/sprites/*.png")
+    while handle do
+        local imgName = handle:GetFileName()
+        local sheet = {}
+        sheet.handle = NewImageHandle()
+        sheet.handle:Load("TreeData/sprites/" .. imgName)
+        sheet.width, sheet.height = sheet.handle:ImageSize()
+
+        self.spriteMap[imgName:gsub(".png", "")] = {
+            handle = sheet.handle,
+            width = sheet.width,
+            height = sheet.height,
+            [1] = 0,
+            [2] = 0,
+            [3] = 1,
+            [4] = 1
+        }
+
+        if not handle:NextFile() then
+            break
         end
     end
 
-    local classArt = {
-        [0] = "centerscion",
-        [1] = "centermarauder",
-        [2] = "centerranger",
-        [3] = "centerwitch",
-        [4] = "centerduelist",
-        [5] = "centertemplar",
-        [6] = "centershadow"
-    }
     self.nodeOverlay = {
         Normal = {
             artWidth = 40,
-            alloc = "PSSkillFrameActive",
-            path = "PSSkillFrameHighlighted",
-            unalloc = "PSSkillFrame",
-            allocAscend = "AscendancyFrameSmallAllocated",
-            pathAscend = "AscendancyFrameSmallCanAllocate",
-            unallocAscend = "AscendancyFrameSmallNormal"
         },
-        Notable = {
-            artWidth = 58,
-            alloc = "NotableFrameAllocated",
-            path = "NotableFrameCanAllocate",
-            unalloc = "NotableFrameUnallocated",
-            allocAscend = "AscendancyFrameLargeAllocated",
-            pathAscend = "AscendancyFrameLargeCanAllocate",
-            unallocAscend = "AscendancyFrameLargeNormal",
-            allocBlighted = "BlightedNotableFrameAllocated",
-            pathBlighted = "BlightedNotableFrameCanAllocate",
-            unallocBlighted = "BlightedNotableFrameUnallocated",
+        ClassStart = {
+            artWidth = 80,
         },
-        Keystone = {
-            artWidth = 84,
-            alloc = "KeystoneFrameAllocated",
-            path = "KeystoneFrameCanAllocate",
-            unalloc = "KeystoneFrameUnallocated"
-        },
-        Socket = {
-            artWidth = 58,
-            alloc = "JewelFrameAllocated",
-            path = "JewelFrameCanAllocate",
-            unalloc = "JewelFrameUnallocated",
-            allocAlt = "JewelSocketAltActive",
-            pathAlt = "JewelSocketAltCanAllocate",
-            unallocAlt = "JewelSocketAltNormal",
-        },
-        Mastery = {
-            artWidth = 65,
-            alloc = "AscendancyFrameLargeAllocated",
-            path = "AscendancyFrameLargeCanAllocate",
-            unalloc = "AscendancyFrameLargeNormal"
-        },
+        AscendClassStart = {
+            artWidth = 80,
+        }
     }
     for type, data in pairs(self.nodeOverlay) do
         local size = data.artWidth * 1.33
@@ -276,6 +231,16 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
     local nodeMap = { }
     for _, node in pairs(self.nodes) do
         node.alloc = 0
+        node.maxPoints = node.maxPoints or 0
+        -- Fix coordinates (avoid overlaps of masteries and skills
+        node.x = node.x * 2
+        node.y = node.y * 2
+        if node.mastery then
+            node.y = node.y + node.mastery * 1000
+        end
+        if node.skillId then
+            node.x = node.x + 3000
+        end
         -- Migration...
         -- To old format
         node.id = node.skill
@@ -295,11 +260,12 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
             node.type = "ClassStart"
             local class = self.classes[node.classStartIndex]
             class.startNodeId = node.id
-            node.startArt = classArt[node.classStartIndex]
+            node.x = -1200
         elseif node.isAscendancyStart then
             node.type = "AscendClassStart"
             local ascendClass = self.ascendNameMap[node.ascendancyName].ascendClass
             ascendClass.startNodeId = node.id
+            node.x = -1200
         else
             node.type = "Normal"
         end
@@ -432,14 +398,12 @@ end
 
 -- Common processing code for nodes (used for both real tree nodes and subgraph nodes)
 function PassiveTreeClass:ProcessNode(node)
-    -- Assign node artwork assets
-    if node.type == "Mastery" and node.masteryEffects then
-        node.masterySprites = { activeIcon = self.spriteMap[node.activeIcon], inactiveIcon = self.spriteMap[node.inactiveIcon], activeEffectImage = self.spriteMap[node.activeEffectImage] }
-    else
+    if node.icon then
         node.sprites = self.spriteMap[node.icon]
     end
     if not node.sprites then
         --error("missing sprite "..node.icon)
+        -- TODO: do we need a default here?
         node.sprites = self.spriteMap["Art/2DArt/SkillIcons/passives/MasteryBlank.png"]
     end
     node.overlay = self.nodeOverlay[node.type]

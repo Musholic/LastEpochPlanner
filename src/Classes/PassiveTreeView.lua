@@ -15,40 +15,6 @@ local band = bit.band
 local b_rshift = bit.rshift
 
 local PassiveTreeViewClass = newClass("PassiveTreeView", function(self)
-	self.ring = NewImageHandle()
-	self.ring:Load("Assets/ring.png", "CLAMP")
-	self.highlightRing = NewImageHandle()
-	self.highlightRing:Load("Assets/small_ring.png", "CLAMP")
-	self.jewelShadedOuterRing = NewImageHandle()
-	self.jewelShadedOuterRing:Load("Assets/ShadedOuterRing.png", "CLAMP")
-	self.jewelShadedOuterRingFlipped = NewImageHandle()
-	self.jewelShadedOuterRingFlipped:Load("Assets/ShadedOuterRingFlipped.png", "CLAMP")
-	self.jewelShadedInnerRing = NewImageHandle()
-	self.jewelShadedInnerRing:Load("Assets/ShadedInnerRing.png", "CLAMP")
-	self.jewelShadedInnerRingFlipped = NewImageHandle()
-	self.jewelShadedInnerRingFlipped:Load("Assets/ShadedInnerRingFlipped.png", "CLAMP")
-	
-	self.eternal1 = NewImageHandle()
-	self.eternal1:Load("TreeData/PassiveSkillScreenEternalEmpireJewelCircle1.png", "CLAMP")
-	self.eternal2 = NewImageHandle()
-	self.eternal2:Load("TreeData/PassiveSkillScreenEternalEmpireJewelCircle2.png", "CLAMP")
-	self.karui1 = NewImageHandle()
-	self.karui1:Load("TreeData/PassiveSkillScreenKaruiJewelCircle1.png", "CLAMP")
-	self.karui2 = NewImageHandle()
-	self.karui2:Load("TreeData/PassiveSkillScreenKaruiJewelCircle2.png", "CLAMP")
-	self.maraketh1 = NewImageHandle()
-	self.maraketh1:Load("TreeData/PassiveSkillScreenMarakethJewelCircle1.png", "CLAMP")
-	self.maraketh2 = NewImageHandle()
-	self.maraketh2:Load("TreeData/PassiveSkillScreenMarakethJewelCircle2.png", "CLAMP")
-	self.templar1 = NewImageHandle()
-	self.templar1:Load("TreeData/PassiveSkillScreenTemplarJewelCircle1.png", "CLAMP")
-	self.templar2 = NewImageHandle()
-	self.templar2:Load("TreeData/PassiveSkillScreenTemplarJewelCircle2.png", "CLAMP")
-	self.vaal1 = NewImageHandle()
-	self.vaal1:Load("TreeData/PassiveSkillScreenVaalJewelCircle1.png", "CLAMP")
-	self.vaal2 = NewImageHandle()
-	self.vaal2:Load("TreeData/PassiveSkillScreenVaalJewelCircle2.png", "CLAMP")
-
 	self.tooltip = new("Tooltip")
 
 	self.zoomLevel = 12
@@ -290,7 +256,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			end
 		end
 	elseif treeClick == "RIGHT" then
-		if hoverNode then
+		if hoverNode and hoverNode.maxPoints > 0 then
 			-- User right-clicked on a node
 			if hoverNode.alloc > 1 then
 				hoverNode.alloc = hoverNode.alloc - 1
@@ -305,36 +271,18 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		end
 	end
 
-	-- Draw the background artwork
-	local bg = tree.assets.Background2 or tree.assets.Background1
-	if bg.width == 0 then
-		bg.width, bg.height = bg.handle:ImageSize()
-	end
-	if bg.width > 0 then
-		local bgSize = bg.width * scale * 1.33 * 2.5
-		SetDrawColor(1, 1, 1)
-		DrawImage(bg.handle, viewPort.x, viewPort.y, viewPort.width, viewPort.height, (self.zoomX + viewPort.width/2) / -bgSize, (self.zoomY + viewPort.height/2) / -bgSize, (viewPort.width/2 - self.zoomX) / bgSize, (viewPort.height/2 - self.zoomY) / bgSize)
+	-- Draw classes background art for the main class and the three ascension classes
+	for i = 0, 3 do
+		local scrX, scrY = treeToScreen(-220, i * 1000)
+		self:DrawAsset(tree.assets.ClassBackground, scrX, scrY, scale)
 	end
 
-	-- Hack to draw class background art, the position data doesn't seem to be in the tree JSON yet
-	if build.spec.curClassId == 1 then
-		local scrX, scrY = treeToScreen(-2750, 1600)
-		self:DrawAsset(tree.assets.BackgroundStr, scrX, scrY, scale)
-	elseif build.spec.curClassId == 2 then
-		local scrX, scrY = treeToScreen(2550, 1600)
-		self:DrawAsset(tree.assets.BackgroundDex, scrX, scrY, scale)
-	elseif build.spec.curClassId == 3 then
-		local scrX, scrY = treeToScreen(-250, -2200)
-		self:DrawAsset(tree.assets.BackgroundInt, scrX, scrY, scale)
-	elseif build.spec.curClassId == 4 then
-		local scrX, scrY = treeToScreen(-150, 2350)
-		self:DrawAsset(tree.assets.BackgroundStrDex, scrX, scrY, scale)
-	elseif build.spec.curClassId == 5 then
-		local scrX, scrY = treeToScreen(-2100, -1500)
-		self:DrawAsset(tree.assets.BackgroundStrInt, scrX, scrY, scale)
-	elseif build.spec.curClassId == 6 then
-		local scrX, scrY = treeToScreen(2350, -1950)
-		self:DrawAsset(tree.assets.BackgroundDexInt, scrX, scrY, scale)
+	-- Draw skills background art for all selected skills
+	for id,ability in pairs(build.skillsTab.socketGroupList) do
+		if ability.skillId then
+			local scrX, scrY = treeToScreen(3000, 150 + (id - 1) * (tree.decAbilityPosY + 1000))
+			self:DrawAsset(tree.assets.SkillBackground, scrX, scrY, scale)
+		end
 	end
 
 	local connectorColor = { 1, 1, 1 }
@@ -451,28 +399,19 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		local base, overlay, effect
 		local isAlloc = node.alloc > 0 or build.calcsTab.mainEnv.grantedPassives[nodeId] or (compareNode and compareNode.alloc)
 		SetDrawLayer(nil, 25)
-		if node.type == "ClassStart" then
-			overlay = isAlloc and node.startArt or "PSStartNodeBackgroundInactive"
-		elseif node.type == "AscendClassStart" then
-			overlay = treeVersions[tree.treeVersion].num >= 3.10 and "AscendancyMiddle" or "PassiveSkillScreenAscendancyMiddle"
-			if node.ascendancyName and tree.secondaryAscendNameMap and tree.secondaryAscendNameMap[node.ascendancyName] then
-				overlay = "Azmeri"..overlay
-			end
+
+		local state
+		if self.showHeatMap or isAlloc or node == hoverNode or (self.traceMode and node == self.tracePath[#self.tracePath])then
+			-- Show node as allocated if it is being hovered over
+			-- Also if the heat map is turned on (makes the nodes more visible)
+			state = "alloc"
+		elseif hoverPath and hoverPath[node] then
+			state = "path"
 		else
-			local state
-			if self.showHeatMap or isAlloc or node == hoverNode or (self.traceMode and node == self.tracePath[#self.tracePath])then
-				-- Show node as allocated if it is being hovered over
-				-- Also if the heat map is turned on (makes the nodes more visible)
-				state = "alloc"
-			elseif hoverPath and hoverPath[node] then
-				state = "path"
-			else
-				state = "unalloc"
-			end
-			-- Normal node (includes keystones and notables)
-			base = node.sprites[node.type:lower()..(isAlloc and "Active" or "Inactive")]
-			overlay = node.overlay[state .. (node.ascendancyName and "Ascend" or "") .. (node.isBlighted and "Blighted" or "")]
+			state = "unalloc"
 		end
+		-- Normal node (includes keystones and notables)
+		base = node.sprites
 
 		-- Convert node position to screen-space
 		local nodeY = node.y
@@ -549,8 +488,10 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 					-- Both have or both have not, use white
 					SetDrawColor(1, 1, 1)
 				end
-			else
+			elseif isAlloc or node.maxPoints == 0 then
 				SetDrawColor(1, 1, 1)
+			else
+				SetDrawColor(0.3, 0.3, 0.3)
 			end
 		end
 
@@ -565,7 +506,18 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		if base then
 			self:DrawAsset(base, scrX, scrY, scale)
 			-- Draw the allocated number
-			DrawString(scrX - 48 * scale, scrY + 32 * scale, "LEFT", round(90 * scale), "VAR", "^7" .. node.alloc .. "/" .. node.maxPoints)
+			if node.maxPoints > 0 then
+				DrawString(scrX, scrY + 48 * scale, "CENTER_X", round(50 * scale), "VAR", "^7" .. node.alloc .. "/" .. node.maxPoints)
+			end
+		end
+
+		-- Draw "not scaling stats" indicators
+		if node.noScalingPointThreshold and node.noScalingPointThreshold > 0 then
+			if node.alloc >= node.noScalingPointThreshold then
+		        self:DrawAsset(tree.assets.PassiveBonusFilled, scrX, scrY - 46 * scale, scale * 1.33)
+			else
+		        self:DrawAsset(tree.assets.PassiveBonusEmpty, scrX, scrY - 46 * scale, scale * 1.33)
+			end
 		end
 
 		if overlay then
@@ -579,7 +531,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 					end
 				end
 			end
-			self:DrawAsset(tree.assets[overlay], scrX, scrY, scale)
+			self:DrawAsset(tree.spriteMap[overlay], scrX, scrY, scale)
 			SetDrawColor(1, 1, 1)
 		end
 		if self.searchStrResults[nodeId] then
@@ -599,10 +551,8 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			end
 			self.tooltip:Draw(m_floor(scrX - size), m_floor(scrY - size), size * 2, size * 2, viewPort)
 		end
+
 	end
-	
-	-- Draw ring overlays for jewel sockets
-	SetDrawLayer(nil, 25)
 end
 
 -- Draws the given asset at the given position
@@ -629,7 +579,7 @@ end
 -- Zoom the tree in or out
 function PassiveTreeViewClass:Zoom(level, viewPort)
 	-- Calculate new zoom level and zoom factor
-	self.zoomLevel = m_max(0, m_min(20, self.zoomLevel + level))
+	self.zoomLevel = m_max(0, m_min(30, self.zoomLevel + level))
 	local oldZoom = self.zoom
 	self.zoom = 1.2 ^ self.zoomLevel
 
@@ -715,7 +665,6 @@ function PassiveTreeViewClass:DoesNodeMatchSearchParams(node)
 end
 
 function PassiveTreeViewClass:AddNodeName(tooltip, node, build)
-	tooltip:SetRecipe(node.recipe)
 	local customized = ""
 	if build.spec.hashOverrides[node.id] then
 		customized = colorCodes.WARNING .. " (CUSTOMIZED)"
@@ -817,14 +766,14 @@ function PassiveTreeViewClass:AddNodeTooltip(tooltip, node, build)
 		if not node.dependsOnIntuitiveLeapLike and pathLength > 1 and not isGranted then
 			count = count + build:AddStatComparesToTooltip(tooltip, calcBase, pathOutput, node.alloc > 0 and "^7Unallocating this node and all nodes depending on it will give you:" or "^7Allocating this node and all nodes leading to it will give you:", pathLength)
 		end
-		if count == 0 then
+		if node.maxPoints > 0 and count == 0 then
 			if isGranted then
 				tooltip:AddLine(14, string.format("^7This node is granted by an item. Removing it will cause no changes"))
 			else
 				tooltip:AddLine(14, string.format("^7No changes from %s this node%s.", node.alloc > 0 and "unallocating" or "allocating", not node.dependsOnIntuitiveLeapLike and pathLength > 1 and " or the nodes leading to it" or ""))
 			end
 		end
-		if node.alloc > 0 and node.alloc < node.maxPoints then
+		if node.alloc and node.alloc > 0 and node.alloc < node.maxPoints then
 			tooltip:AddSeparator(14)
 			node.alloc = node.alloc + 1
 			build.spec.tree:ProcessStats(node)
