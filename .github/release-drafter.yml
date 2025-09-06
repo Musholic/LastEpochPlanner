@@ -1,0 +1,35 @@
+name-template: Beta Release
+category-template: "### $TITLE"
+exclude-labels:
+  - technical
+  - invalid
+  - duplicate
+categories:
+  - title: New to Last Epoch Planner
+    labels:
+      - enhancement
+  - title: Fixed Crashes
+    labels:
+      - crash
+  - title: User Interface
+    labels:
+      - user-interface
+  - title: Fixed Calculations
+    labels:
+      - "bug: calculation"
+  - title: Fixed Behaviours
+    labels:
+      - "bug: behaviour"
+  - title: Accuracy Improvements
+    labels:
+      - "bug: accuracy"
+  - title: Fixed Bugs
+    labels:
+      - bug
+  - title: Other changes
+    labels:
+      - "*"
+template: |
+  ## What’s Changed
+
+  $CHANGES
