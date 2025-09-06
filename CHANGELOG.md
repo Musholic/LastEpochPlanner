@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.8.0](https://github.com/Musholic/PathOfBuildingForLastEpoch/tree/v0.8.0) (2025/08/22)
+## [v0.8.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.8.0) (2025/08/22)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.7.1...v0.8.0)
 
@@ -33,7 +33,7 @@
     * the unique modifiers (one for each mod of each unique)
     * the passive and skill trees (one for each mod of each node)
 
-## [v0.7.1](https://github.com/Musholic/PathOfBuildingForLastEpoch/tree/v0.7.1) (2025/08/08)
+## [v0.7.1](https://github.com/Musholic/LastEpochPlanner/tree/v0.7.1) (2025/08/08)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.7.0...v0.7.1)
 
@@ -47,7 +47,7 @@
 
 
 
-## [v0.7.0](https://github.com/Musholic/PathOfBuildingForLastEpoch/tree/v0.7.0) (2025/07/23)
+## [v0.7.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.7.0) (2025/07/23)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.6.0...v0.7.0)
 

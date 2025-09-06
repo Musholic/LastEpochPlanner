@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Debug" type="lua.emmy.debugger" factoryName="Emmy Debugger(NEW)">
-    <module name="PathOfBuildingForLastEpoch" />
+    <module name="LastEpochPlanner" />
     <option name="TYPE" value="0" />
     <option name="HOST" value="localhost" />
     <option name="PORT" value="9966" />
