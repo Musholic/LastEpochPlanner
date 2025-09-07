@@ -34,3 +34,5 @@ template: |
   ## What’s Changed
 
   $CHANGES
+  
+  **Full Changelog**: https://github.com/Musholic/LastEpochPlanner/compare/$PREVIOUS_TAG...beta

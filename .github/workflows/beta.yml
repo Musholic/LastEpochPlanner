@@ -23,9 +23,26 @@ jobs:
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
+      - name: Add beta suffix to manifest version
+        run: |
+          sed -i 's/<Version number="\([^"]*\)"/<Version number="\1-beta"/' manifest.xml
+      - name: Extract beta version
+        run: |
+          BETA_VERSION=$(sed -n 's/.*<Version number="\([^"]*\)".*/\1/p' manifest.xml)
+          echo "Beta version: $BETA_VERSION"
+          echo "BETA_VERSION=$BETA_VERSION" >> $GITHUB_ENV
+      - name: Generate Release notes
+        run: >
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token;
+          gh release view beta | tee temp_change.md
+      - name: Tweak changelogs
+        run: |
+          sed -i 's/\r$//' .github/tweak_changelogs.sh
+          chmod +x .github/tweak_changelogs.sh
+          .github/tweak_changelogs.sh $BETA_VERSION
       - name: Update manifest.xml
         run: python3 update_manifest.py --quiet --in-place
       - name: Push to beta branch
         run: |
-            git commit -am "Weekly beta release" --allow-empty --author="github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+            git commit -am "Beta release" --allow-empty --author="github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
             git push origin HEAD:beta --force
