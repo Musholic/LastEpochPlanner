@@ -1,4 +1,5 @@
 name-template: Beta Release
+tag-template: beta
 category-template: "### $TITLE"
 exclude-labels:
   - technical
