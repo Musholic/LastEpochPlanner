@@ -30,6 +30,7 @@ categories:
   - title: Other changes
     labels:
       - "*"
+change-template: "* $TITLE by @$AUTHOR in https://github.com/Musholic/LastEpochPlanner/pull/$NUMBER"
 template: |
   ## What’s Changed
 

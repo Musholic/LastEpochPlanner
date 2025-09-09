@@ -2,8 +2,8 @@
 
 RELEASE_VERSION="$1"
 
-# Delete the first 8 lines from temp_change.md
-sed -i '1,8d' temp_change.md
+# Delete until the first line containing "--"
+sed -i '1,/--/d' temp_change.md
 # Reverse the order of lines in the file (last line becomes first, etc.)
 sed -i '1h;1d;$!H;$!d;G' temp_change.md
 # Convert "**Full Changelog**: URL" format to markdown link format "[Full Changelog](URL)"
@@ -18,11 +18,11 @@ cp temp_change.md changelog_temp.txt
 # Append existing CHANGELOG.md content (excluding first line) to temp_change.md
 sed '1d' CHANGELOG.md >> temp_change.md
 # Create new CHANGELOG.md with header containing version and date, followed by processed changes
-printf "# Changelog\n\n## [v$RELEASE_VERSION](https://github.com/Musholic/LastEpochPlanner/tree/v$RELEASE_VERSION) ($(date +'%Y/%m/%d'))\n\n" | cat - temp_change.md > CHANGELOG.md
+printf "# Changelog\n\n## [$RELEASE_VERSION](https://github.com/Musholic/LastEpochPlanner/tree/$RELEASE_VERSION) ($(date +'%Y/%m/%d'))\n\n" | cat - temp_change.md > CHANGELOG.md
 # Convert changelog entries from markdown link format to simplified "* description (username)" format
 sed -i -re 's/^- (.*) \[.*\) \(\[(.*)\]\(.*/* \1 (\2)/' changelog_temp.txt
 # Create new changelog format: add version header, remove lines 2-3, format section headers, remove ## headers with following line, prepend to existing changelog
-echo "VERSION[$RELEASE_VERSION][\`$(date +'%Y/%m/%d')\`]" | cat - changelog_temp.txt | sed '2,3d' | sed -re 's/^### (.*)/\n--- \1 ---/' | sed -e '/^##.*/,+1 d' | cat - changelog.txt > changelog_new.txt
+echo "VERSION[${RELEASE_VERSION#v}][$(date +'%Y/%m/%d')]" | cat - changelog_temp.txt | sed '2,3d' | sed -re 's/^### (.*)/\n--- \1 ---/' | sed -e '/^##.*/,+1 d' | cat - changelog.txt > changelog_new.txt
 mv changelog_new.txt changelog.txt
 
 # Normalize line endings to CRLF for all output files to ensure consistent checksums with Windows
