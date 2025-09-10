@@ -114,7 +114,7 @@
     "Mage-0": {
       "skill": "Mage-0",
       "name": "Arcanist",
-      "icon": "_c-arcane-ascendance-hex",
+      "icon": "c-arcane-ascendance-hex",
       "x": -444.45,
       "y": 153.80002,
       "maxPoints": 8,
@@ -164,7 +164,7 @@
     "Mage-2": {
       "skill": "Mage-2",
       "name": "Elementalist",
-      "icon": "_c-nova-hex",
+      "icon": "c-nova-hex",
       "x": -444.45,
       "y": 1.5258789E-05,
       "maxPoints": 8,
@@ -197,7 +197,7 @@
     "Mage-3": {
       "skill": "Mage-3",
       "name": "Reactive Ward",
-      "icon": "_c-ward generation debuff (generic)-hex",
+      "icon": "c-ward_generation_debuff_(generic)-hex",
       "x": -278.95,
       "y": -153.79999,
       "maxPoints": 6,
@@ -279,7 +279,7 @@
     "Mage-6": {
       "skill": "Mage-6",
       "name": "Arcane Current",
-      "icon": "_c-charged-ground-hex",
+      "icon": "c-charged-ground-hex",
       "x": -113.45001,
       "y": -76.899994,
       "maxPoints": 6,
@@ -309,7 +309,7 @@
     "Mage-7": {
       "skill": "Mage-7",
       "name": "Arcane Flames",
-      "icon": "_c-glyph of fire-hex",
+      "icon": "c-glyph_of_fire-hex",
       "x": -113.45001,
       "y": 76.900024,
       "maxPoints": 6,
@@ -339,7 +339,7 @@
     "Mage-8": {
       "skill": "Mage-8",
       "name": "Warden",
-      "icon": "_c-ring-of-shields-hex",
+      "icon": "c-ring-of-shields-hex",
       "x": 52.049988,
       "y": -153.79999,
       "maxPoints": 5,
@@ -366,7 +366,7 @@
     "Mage-9": {
       "skill": "Mage-9",
       "name": "Knowledge of Destruction",
-      "icon": "_spellbook fire-hex",
+      "icon": "spellbook_fire-hex",
       "x": 52.049988,
       "y": 1.5258789E-05,
       "maxPoints": 10,
@@ -389,7 +389,7 @@
     "Mage-10": {
       "skill": "Mage-10",
       "name": "Spell Slinger",
-      "icon": "c-sky bolt-purple-hex",
+      "icon": "c-sky_bolt-purple-hex",
       "x": 238.75,
       "y": -76.899994,
       "maxPoints": 5,
@@ -440,7 +440,7 @@
     "Mage-12": {
       "skill": "Mage-12",
       "name": "Mana Shell",
-      "icon": "_c-ward generation buff (generic)-hex",
+      "icon": "c-ward_generation_buff_(generic)-hex",
       "x": -444.45,
       "y": 153.80002,
       "maxPoints": 8,
@@ -467,7 +467,7 @@
     "Mage-13": {
       "skill": "Mage-13",
       "name": "Arcane Momentum",
-      "icon": "_cold beam-hex",
+      "icon": "cold_beam-hex",
       "x": -444.45,
       "y": -153.79999,
       "maxPoints": 5,
@@ -499,7 +499,7 @@
     "Mage-14": {
       "skill": "Mage-14",
       "name": "Wisdom",
-      "icon": "_stacking cold-hex",
+      "icon": "stacking_cold-hex",
       "x": -346.85,
       "y": 76.900024,
       "maxPoints": 8,
@@ -527,7 +527,7 @@
     "Mage-15": {
       "skill": "Mage-15",
       "name": "Lost Knowledge",
-      "icon": "_spellbook fire-hex",
+      "icon": "spellbook_fire-hex",
       "x": -151.65002,
       "y": 76.900024,
       "maxPoints": 5,
@@ -555,7 +555,7 @@
     "Mage-16": {
       "skill": "Mage-16",
       "name": "Cryomancer",
-      "icon": "_c-ice bolt-hex",
+      "icon": "c-ice_bolt-hex",
       "x": -249.25,
       "y": 1.5258789E-05,
       "maxPoints": 8,
@@ -580,7 +580,7 @@
     "Mage-17": {
       "skill": "Mage-17",
       "name": "Ceraunomancer",
-      "icon": "_c-chain-lightning-hex",
+      "icon": "c-chain-lightning-hex",
       "x": -249.25,
       "y": 153.80002,
       "maxPoints": 8,
@@ -605,7 +605,7 @@
     "Mage-18": {
       "skill": "Mage-18",
       "name": "Pyromancer",
-      "icon": "_c-fireball-hex",
+      "icon": "c-fireball-hex",
       "x": -249.25,
       "y": -153.79999,
       "maxPoints": 8,
@@ -630,7 +630,7 @@
     "Mage-20": {
       "skill": "Mage-20",
       "name": "Calculated Destruction",
-      "icon": "_c-earthquake-hex",
+      "icon": "c-earthquake-hex",
       "x": -444.45,
       "y": 1.5258789E-05,
       "maxPoints": 8,
@@ -657,7 +657,7 @@
     "Mage-21": {
       "skill": "Mage-21",
       "name": "Arcane Avalanche",
-      "icon": "_c-glacier-hex",
+      "icon": "c-glacier-hex",
       "x": 43.549988,
       "y": 1.5258789E-05,
       "maxPoints": 8,
@@ -682,7 +682,7 @@
     "Mage-22": {
       "skill": "Mage-22",
       "name": "Crackling Precision",
-      "icon": "_c-storm-call-hex",
+      "icon": "c-storm-call-hex",
       "x": 43.549988,
       "y": 153.80002,
       "maxPoints": 8,
@@ -710,7 +710,7 @@
     "Mage-23": {
       "skill": "Mage-23",
       "name": "Inferno",
-      "icon": "_c-inferno-hex",
+      "icon": "c-inferno-hex",
       "x": 43.549988,
       "y": -153.79999,
       "maxPoints": 8,
@@ -735,7 +735,7 @@
     "Mage-24": {
       "skill": "Mage-24",
       "name": "Rune of Winter",
-      "icon": "_glyph of ice-hex",
+      "icon": "glyph_of_ice-hex",
       "x": 52.049988,
       "y": 153.80002,
       "maxPoints": 5,
@@ -765,7 +765,7 @@
     "Mage-25": {
       "skill": "Mage-25",
       "name": "Chronomancy",
-      "icon": "c-void essence-hex",
+      "icon": "c-void_essence-hex",
       "x": 141.14996,
       "y": -76.899994,
       "maxPoints": 8,
@@ -793,7 +793,7 @@
     "Mage-26": {
       "skill": "Mage-26",
       "name": "Arcane Obliteration",
-      "icon": "_c-static-hex",
+      "icon": "c-static-hex2",
       "x": 141.14996,
       "y": 76.900024,
       "maxPoints": 5,
@@ -815,7 +815,7 @@
     "Mage-27": {
       "skill": "Mage-27",
       "name": "Mana Bulwark",
-      "icon": "c-flurry2 - orange-hex",
+      "icon": "c-flurry2_-_orange-hex",
       "x": 336.34998,
       "y": -76.899994,
       "maxPoints": 10,
@@ -841,7 +841,7 @@
     "Mage-28": {
       "skill": "Mage-28",
       "name": "Warder",
-      "icon": "_c-mana regeneration debuff (generic)-hex",
+      "icon": "c-mana_regeneration_debuff_(generic)-hex",
       "x": 141.14996,
       "y": 1.5258789E-05,
       "maxPoints": 8,
@@ -868,7 +868,7 @@
     "Mage-29": {
       "skill": "Mage-29",
       "name": "Arcane Current",
-      "icon": "_c-charged-ground-hex",
+      "icon": "c-charged-ground-hex",
       "x": 336.34998,
       "y": 153.80002,
       "maxPoints": 5,
@@ -924,7 +924,7 @@
     "Mage-31": {
       "skill": "Mage-31",
       "name": "Dragon Breath",
-      "icon": "c-flurry2 - blue-hex",
+      "icon": "c-flurry2_-_blue-hex",
       "x": 336.34998,
       "y": 76.900024,
       "maxPoints": 10,
@@ -947,7 +947,7 @@
     "Mage-32": {
       "skill": "Mage-32",
       "name": "Arcane Warden",
-      "icon": "_c-stun susceptibility buff (generic)-hex",
+      "icon": "c-stun_susceptibility_buff_(generic)-hex",
       "x": -444.45,
       "y": 153.80002,
       "maxPoints": 8,
@@ -1084,7 +1084,7 @@
     "Mage-37": {
       "skill": "Mage-37",
       "name": "Arcane Shielding",
-      "icon": "_c-damage mitigation buff (generic)-hex",
+      "icon": "c-damage_mitigation_buff_(generic)-hex",
       "x": -249.25,
       "y": 76.900024,
       "maxPoints": 5,
@@ -1354,7 +1354,7 @@
     "Mage-46": {
       "skill": "Mage-46",
       "name": "Burden of Knowledge",
-      "icon": "animate tome-hex",
+      "icon": "animate_tome-hex",
       "x": 238.75,
       "y": -76.899994,
       "maxPoints": 5,
@@ -1411,7 +1411,7 @@
     "Mage-48": {
       "skill": "Mage-48",
       "name": "Volka's Razor",
-      "icon": "_manifest weapon temp-hex",
+      "icon": "manifest_weapon_temp-hex",
       "x": 141.14996,
       "y": 153.80002,
       "maxPoints": 6,
@@ -1438,7 +1438,7 @@
     "Mage-49": {
       "skill": "Mage-49",
       "name": "Mental Fortitude",
-      "icon": "_c-ward retention buff (generic)-hex",
+      "icon": "c-ward_retention_buff_(generic)-hex",
       "x": 238.75,
       "y": 76.900024,
       "maxPoints": 10,
@@ -1491,7 +1491,7 @@
     "Mage-51": {
       "skill": "Mage-51",
       "name": "Prodigy",
-      "icon": "_spellbook arcane-hex",
+      "icon": "spellbook_arcane-hex",
       "x": 433.94995,
       "y": 76.900024,
       "maxPoints": 5,
@@ -1521,7 +1521,7 @@
     "Mage-52": {
       "skill": "Mage-52",
       "name": "Blades of Fires",
-      "icon": "_phoenix strike-hex",
+      "icon": "phoenix_strike-hex",
       "x": 433.94995,
       "y": -76.899994,
       "maxPoints": 5,
@@ -1570,7 +1570,7 @@
     "Mage-55": {
       "skill": "Mage-55",
       "name": "Sphere of Protection",
-      "icon": "_c-ward generation debuff (generic)-hex",
+      "icon": "c-ward_generation_debuff_(generic)-hex",
       "x": -444.45,
       "y": 1.5258789E-05,
       "maxPoints": 8,
@@ -1601,7 +1601,7 @@
     "Mage-56": {
       "skill": "Mage-56",
       "name": "Unsealed Mana",
-      "icon": "_spellbook arcane-hex",
+      "icon": "spellbook_arcane-hex",
       "x": -444.45,
       "y": -153.79999,
       "maxPoints": 6,
@@ -1632,7 +1632,7 @@
     "Mage-57": {
       "skill": "Mage-57",
       "name": "Rune of Renewal",
-      "icon": "_c-mana regeneration debuff (generic)-hex",
+      "icon": "c-mana_regeneration_debuff_(generic)-hex",
       "x": -346.85,
       "y": 76.900024,
       "maxPoints": 6,
@@ -1657,7 +1657,7 @@
     "Mage-58": {
       "skill": "Mage-58",
       "name": "Arcane Wind",
-      "icon": "_tornado-hex",
+      "icon": "tornado-hex",
       "x": 383.05,
       "y": 153.80002,
       "maxPoints": 3,
@@ -1714,7 +1714,7 @@
     "Mage-60": {
       "skill": "Mage-60",
       "name": "Afterglow",
-      "icon": "_c-spellpower 1 buff (generic)-hex",
+      "icon": "c-spellpower_1_buff_(generic)-hex",
       "x": -346.85,
       "y": 1.5258789E-05,
       "maxPoints": 8,
@@ -1771,7 +1771,7 @@
     "Mage-62": {
       "skill": "Mage-62",
       "name": "Chill to the Bone",
-      "icon": "c-holy aura blue-hex",
+      "icon": "c-holy_aura_blue-hex",
       "x": -54.05002,
       "y": 1.5258789E-05,
       "maxPoints": 5,
@@ -1851,7 +1851,7 @@
     "Mage-65": {
       "skill": "Mage-65",
       "name": "Recollection",
-      "icon": "_c-spellpower  1 debuff (generic)-hex",
+      "icon": "c-spellpower__1_debuff_(generic)-hex",
       "x": 433.94995,
       "y": -153.79999,
       "maxPoints": 5,
@@ -1899,7 +1899,7 @@
     "Mage-67": {
       "skill": "Mage-67",
       "name": "Elemental Ascendance",
-      "icon": "c-tempest strike3-hex",
+      "icon": "c-tempest_strike3-hex",
       "x": 238.75,
       "y": 76.900024,
       "maxPoints": 8,
@@ -1923,7 +1923,7 @@
     "Mage-68": {
       "skill": "Mage-68",
       "name": "Mana Well",
-      "icon": "_c-blade wings-hex",
+      "icon": "c-blade_wings-hex",
       "x": 433.94995,
       "y": 1.5258789E-05,
       "maxPoints": 5,
@@ -2054,7 +2054,7 @@
     "Mage-73": {
       "skill": "Mage-73",
       "name": "Molten Edge",
-      "icon": "_sword slash double fire-hex",
+      "icon": "sword_slash_double_fire-hex",
       "x": 141.14996,
       "y": 1.5258789E-05,
       "maxPoints": 5,
@@ -2276,7 +2276,7 @@
     "Mage-82": {
       "skill": "Mage-82",
       "name": "Outrun and Outlast",
-      "icon": "_c-ward generation debuff (generic)-hex",
+      "icon": "c-ward_generation_debuff_(generic)-hex",
       "x": 336.34998,
       "y": 1.5258789E-05,
       "maxPoints": 10,
@@ -2331,7 +2331,7 @@
     "Mage-86": {
       "skill": "Mage-86",
       "name": "Arcane Focus",
-      "icon": "_c-ward retention buff (generic)-hex",
+      "icon": "c-ward_retention_buff_(generic)-hex",
       "x": -346.85,
       "y": -76.899994,
       "maxPoints": 8,
@@ -3124,7 +3124,7 @@
     "arcas-0": {
       "skill": "arcas-0",
       "name": "Arcane Ascendance",
-      "icon": "_c-arcane ascendance-root",
+      "icon": "c-arcane_ascendance-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -3149,7 +3149,7 @@
     "arcas-2": {
       "skill": "arcas-2",
       "name": "Higher Plane",
-      "icon": "_focus",
+      "icon": "focus",
       "x": -181.00002,
       "y": -77,
       "maxPoints": 5,
@@ -3210,7 +3210,7 @@
     "arcas-4": {
       "skill": "arcas-4",
       "name": "Power Overload",
-      "icon": "_mana strike",
+      "icon": "mana_strike",
       "x": -366,
       "y": -201,
       "maxPoints": 5,
@@ -3240,7 +3240,7 @@
     "arcas-5": {
       "skill": "arcas-5",
       "name": "Unstable Energy",
-      "icon": "_c-enchant weapon",
+      "icon": "c-enchant_weapon",
       "x": -562.5,
       "y": -201,
       "maxPoints": 1,
@@ -3265,7 +3265,7 @@
     "arcas-6": {
       "skill": "arcas-6",
       "name": "Chronoclasm",
-      "icon": "_c-stagger",
+      "icon": "c-stagger",
       "x": -360,
       "y": 76,
       "maxPoints": 4,
@@ -3300,7 +3300,7 @@
     "arcas-7": {
       "skill": "arcas-7",
       "name": "Mana Surge",
-      "icon": "_innervate",
+      "icon": "innervate",
       "x": -575.4,
       "y": 76,
       "maxPoints": 1,
@@ -3325,7 +3325,7 @@
     "arcas-8": {
       "skill": "arcas-8",
       "name": "Chains of Ice",
-      "icon": "c-snap freeze",
+      "icon": "c-snap_freeze",
       "x": 547,
       "y": 120,
       "maxPoints": 3,
@@ -3405,7 +3405,7 @@
     "arcas-11": {
       "skill": "arcas-11",
       "name": "Cosmic Insight",
-      "icon": "_c-ward retention buff (generic)",
+      "icon": "c-ward_retention_buff_(generic)",
       "x": 168,
       "y": 107,
       "maxPoints": 5,
@@ -3433,7 +3433,7 @@
     "arcas-12": {
       "skill": "arcas-12",
       "name": "Rebuff",
-      "icon": "_c-damage mitigation buff (generic)",
+      "icon": "c-damage_mitigation_buff_(generic)",
       "x": 0,
       "y": 188,
       "maxPoints": 5,
@@ -3462,7 +3462,7 @@
     "arcas-14": {
       "skill": "arcas-14",
       "name": "Frozen Monolith",
-      "icon": "_ice ward 1",
+      "icon": "ice_ward_1",
       "x": 361.2,
       "y": 185.29999,
       "maxPoints": 4,
@@ -3490,7 +3490,7 @@
     "arcas-15": {
       "skill": "arcas-15",
       "name": "Force Of Mind",
-      "icon": "_summonvalespirit",
+      "icon": "summonvalespirit",
       "x": -483.2,
       "y": 196,
       "maxPoints": 1,
@@ -3515,7 +3515,7 @@
     "arcas-16": {
       "skill": "arcas-16",
       "name": "Superconductor",
-      "icon": "_storm call-hex",
+      "icon": "storm_call-hex",
       "x": -394.19998,
       "y": -59.80005,
       "maxPoints": 1,
@@ -3543,7 +3543,7 @@
     "arcas-17": {
       "skill": "arcas-17",
       "name": "Closed Circuit",
-      "icon": "c-lightning damage buff",
+      "icon": "c-lightning_damage_buff",
       "x": -525.4,
       "y": -60,
       "maxPoints": 3,
@@ -3568,7 +3568,7 @@
     "arcas-18": {
       "skill": "arcas-18",
       "name": "Slow Breathing",
-      "icon": "arcane ascendance",
+      "icon": "arcane_ascendance",
       "x": 181,
       "y": -77,
       "maxPoints": 3,
@@ -3596,7 +3596,7 @@
     "arcas-19": {
       "skill": "arcas-19",
       "name": "Tranquility",
-      "icon": "c-mana storm",
+      "icon": "c-mana_storm",
       "x": 91,
       "y": -198.3,
       "maxPoints": 3,
@@ -3626,7 +3626,7 @@
     "arcas-21": {
       "skill": "arcas-21",
       "name": "Cold Front",
-      "icon": "ice bolt",
+      "icon": "ice_bolt2",
       "x": 547,
       "y": 285,
       "maxPoints": 4,
@@ -3708,7 +3708,7 @@
     "arcas-24": {
       "skill": "arcas-24",
       "name": "Acuity",
-      "icon": "_c-arcane ascendance gold-hex",
+      "icon": "c-arcane_ascendance_gold-hex",
       "x": -282,
       "y": 211,
       "maxPoints": 1,
@@ -3740,7 +3740,7 @@
     "arcas-25": {
       "skill": "arcas-25",
       "name": "Cunning",
-      "icon": "c-sky bolt",
+      "icon": "c-sky_bolt",
       "x": -167,
       "y": 291,
       "maxPoints": 3,
@@ -3766,7 +3766,7 @@
     "arcas-26": {
       "skill": "arcas-26",
       "name": "Glyph of Lightning",
-      "icon": "_charged ground temp",
+      "icon": "charged_ground_temp",
       "x": 568,
       "y": -8,
       "maxPoints": 4,
@@ -3791,7 +3791,7 @@
     "bh2-0": {
       "skill": "bh2-0",
       "name": "Black Hole",
-      "icon": "_blackhole-root",
+      "icon": "blackhole-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -3817,7 +3817,7 @@
     "bh2-2": {
       "skill": "bh2-2",
       "name": "Tidal Force",
-      "icon": "_c-enchant weapon",
+      "icon": "c-enchant_weapon",
       "x": 79,
       "y": 171,
       "maxPoints": 4,
@@ -3846,7 +3846,7 @@
     "bh2-3": {
       "skill": "bh2-3",
       "name": "Absolute Zero",
-      "icon": "_entangling roots-blue",
+      "icon": "entangling_roots-blue",
       "x": 183,
       "y": 32,
       "maxPoints": 4,
@@ -3873,7 +3873,7 @@
     "bh2-4": {
       "skill": "bh2-4",
       "name": "Red Giant",
-      "icon": "_glyph of fire-hex",
+      "icon": "glyph_of_fire-hex",
       "x": 206.20001,
       "y": 176.90001,
       "maxPoints": 1,
@@ -3903,7 +3903,7 @@
     "bh2-5": {
       "skill": "bh2-5",
       "name": "Scorching",
-      "icon": "_conflagrate",
+      "icon": "conflagrate",
       "x": 289.6,
       "y": 52.900005,
       "maxPoints": 5,
@@ -3992,7 +3992,7 @@
     "bh2-8": {
       "skill": "bh2-8",
       "name": "Infusion",
-      "icon": "_inferno",
+      "icon": "inferno",
       "x": 437.7,
       "y": 67.30001,
       "maxPoints": 5,
@@ -4021,7 +4021,7 @@
     "bh2-9": {
       "skill": "bh2-9",
       "name": "Binary System",
-      "icon": "_nova-hex",
+      "icon": "nova-hex",
       "x": 491.59998,
       "y": 196.8,
       "maxPoints": 1,
@@ -4052,7 +4052,7 @@
     "bh2-10": {
       "skill": "bh2-10",
       "name": "Umbral Core",
-      "icon": "chain lightning",
+      "icon": "chain_lightning",
       "x": -192,
       "y": -44,
       "maxPoints": 5,
@@ -4081,7 +4081,7 @@
     "bh2-11": {
       "skill": "bh2-11",
       "name": "Event Horizon",
-      "icon": "_ice ward 1",
+      "icon": "ice_ward_1",
       "x": -299.3,
       "y": 19,
       "maxPoints": 4,
@@ -4109,7 +4109,7 @@
     "bh2-12": {
       "skill": "bh2-12",
       "name": "Collapse",
-      "icon": "_ward-blast-hex",
+      "icon": "ward-blast-hex",
       "x": -347.1,
       "y": -161.39996,
       "maxPoints": 1,
@@ -4138,7 +4138,7 @@
     "bh2-13": {
       "skill": "bh2-13",
       "name": "Pulsar",
-      "icon": "_focus-hex",
+      "icon": "focus-hex",
       "x": -451.5,
       "y": -14.299988,
       "maxPoints": 1,
@@ -4167,7 +4167,7 @@
     "bh2-14": {
       "skill": "bh2-14",
       "name": "Deep Space",
-      "icon": "_glacier",
+      "icon": "glacier",
       "x": -528,
       "y": -161,
       "maxPoints": 5,
@@ -4196,7 +4196,7 @@
     "bh2-15": {
       "skill": "bh2-15",
       "name": "Time Dilation",
-      "icon": "hungering soul",
+      "icon": "hungering_soul",
       "x": 52,
       "y": -178,
       "maxPoints": 4,
@@ -4225,7 +4225,7 @@
     "bh2-16": {
       "skill": "bh2-16",
       "name": "Cascade Fracture",
-      "icon": "spectral army",
+      "icon": "spectral_army",
       "x": -106,
       "y": -158,
       "maxPoints": 3,
@@ -4255,7 +4255,7 @@
     "bh2-17": {
       "skill": "bh2-17",
       "name": "Recurrence",
-      "icon": "_frenzytotem",
+      "icon": "frenzytotem",
       "x": 193,
       "y": -221,
       "maxPoints": 4,
@@ -4286,7 +4286,7 @@
     "bh2-18": {
       "skill": "bh2-18",
       "name": "Intensity",
-      "icon": "_disintegrate-green",
+      "icon": "disintegrate-green",
       "x": 159,
       "y": -108,
       "maxPoints": 5,
@@ -4314,7 +4314,7 @@
     "bh2-19": {
       "skill": "bh2-19",
       "name": "Massive",
-      "icon": "_ice ward 1-green",
+      "icon": "ice_ward_1-green",
       "x": 340.6,
       "y": -171.1,
       "maxPoints": 4,
@@ -4339,7 +4339,7 @@
     "bh2-20": {
       "skill": "bh2-20",
       "name": "Drifting Singularity",
-      "icon": "_phoenix strike-green-hex",
+      "icon": "phoenix_strike-green-hex",
       "x": 425.1001,
       "y": -68,
       "maxPoints": 1,
@@ -4368,7 +4368,7 @@
     "bh2-21": {
       "skill": "bh2-21",
       "name": "Spacial Dilation",
-      "icon": "_c-vale spirit bolt_2",
+      "icon": "c-vale_spirit_bolt_2",
       "x": 562.9001,
       "y": -76.9,
       "maxPoints": 5,
@@ -4423,7 +4423,7 @@
     "bh2-23": {
       "skill": "bh2-23",
       "name": "Supermassive",
-      "icon": "_eterra's blessing",
+      "icon": "eterra's_blessing",
       "x": 675.50006,
       "y": -155,
       "maxPoints": 4,
@@ -4450,7 +4450,7 @@
     "bh2-24": {
       "skill": "bh2-24",
       "name": "Density",
-      "icon": "aura of decay_red",
+      "icon": "aura_of_decay_red",
       "x": -171,
       "y": 99,
       "maxPoints": 3,
@@ -4477,7 +4477,7 @@
     "bh2-25": {
       "skill": "bh2-25",
       "name": "Endless Maw",
-      "icon": "_anamoly",
+      "icon": "anamoly",
       "x": -241,
       "y": 228,
       "maxPoints": 3,
@@ -4506,7 +4506,7 @@
     "bh2-26": {
       "skill": "bh2-26",
       "name": "Scattered",
-      "icon": "wanderingspirits copper",
+      "icon": "wanderingspirits_copper",
       "x": -65,
       "y": 288,
       "maxPoints": 1,
@@ -4531,7 +4531,7 @@
     "bh2-27": {
       "skill": "bh2-27",
       "name": "Weakened Reality",
-      "icon": "mark of death",
+      "icon": "mark_of_death",
       "x": -435,
       "y": 242,
       "maxPoints": 3,
@@ -4561,7 +4561,7 @@
     "bh2-28": {
       "skill": "bh2-28",
       "name": "Singularity",
-      "icon": "_c-sky bolt temp",
+      "icon": "c-sky_bolt_temp",
       "x": -587,
       "y": 175,
       "maxPoints": 1,
@@ -4724,7 +4724,7 @@
     "dig5-6": {
       "skill": "dig5-6",
       "name": "Praesidium",
-      "icon": "_c-ward generation debuff (generic)",
+      "icon": "c-ward_generation_debuff_(generic)",
       "x": -406.9,
       "y": 112.4,
       "maxPoints": 3,
@@ -4751,7 +4751,7 @@
     "dig5-7": {
       "skill": "dig5-7",
       "name": "Cascade",
-      "icon": "_disintegrate-hex",
+      "icon": "disintegrate-hex",
       "x": -584.2,
       "y": 69.1,
       "maxPoints": 2,
@@ -4803,7 +4803,7 @@
     "dig5-10": {
       "skill": "dig5-10",
       "name": "Stored Power",
-      "icon": "_c-stagger-hex",
+      "icon": "c-stagger-hex",
       "x": -268,
       "y": -0,
       "maxPoints": 1,
@@ -4891,7 +4891,7 @@
     "dig5-13": {
       "skill": "dig5-13",
       "name": "Laser Focus",
-      "icon": "_focus-hex",
+      "icon": "focus-hex",
       "x": 447.00006,
       "y": 230,
       "maxPoints": 1,
@@ -4944,7 +4944,7 @@
     "dig5-15": {
       "skill": "dig5-15",
       "name": "Paralyze",
-      "icon": "c-lightning damage buff",
+      "icon": "c-lightning_damage_buff",
       "x": 130.8,
       "y": 307.6,
       "maxPoints": 3,
@@ -5172,7 +5172,7 @@
     "dig5-23": {
       "skill": "dig5-23",
       "name": "Infernal Ray",
-      "icon": "spreading flames-hex",
+      "icon": "spreading_flames-hex",
       "x": 294.19998,
       "y": -225.00002,
       "maxPoints": 1,
@@ -5256,7 +5256,7 @@
     "dig5-26": {
       "skill": "dig5-26",
       "name": "Lucomancer",
-      "icon": "c-mana storm",
+      "icon": "c-mana_storm",
       "x": 497,
       "y": -0,
       "maxPoints": 3,
@@ -5284,7 +5284,7 @@
     "dig5-28": {
       "skill": "dig5-28",
       "name": "Galvanized Defense",
-      "icon": "_c-damage mitigation buff (generic)",
+      "icon": "c-damage_mitigation_buff_(generic)",
       "x": -175,
       "y": 112.39999,
       "maxPoints": 4,
@@ -5510,7 +5510,7 @@
     "en6-2": {
       "skill": "en6-2",
       "name": "Ice Nova",
-      "icon": "_glacier",
+      "icon": "glacier",
       "x": -137,
       "y": -0,
       "maxPoints": 1,
@@ -5567,7 +5567,7 @@
     "en6-4": {
       "skill": "en6-4",
       "name": "Freezing Cascade",
-      "icon": "_glyph of ice-hex",
+      "icon": "glyph_of_ice-hex",
       "x": -474,
       "y": -0,
       "maxPoints": 1,
@@ -5622,7 +5622,7 @@
     "en6-6": {
       "skill": "en6-6",
       "name": "Protective Strikes",
-      "icon": "_spellbook arcane",
+      "icon": "spellbook_arcane",
       "x": -474,
       "y": 142,
       "maxPoints": 5,
@@ -5651,7 +5651,7 @@
     "en6-7": {
       "skill": "en6-7",
       "name": "Magical Barrier",
-      "icon": "_c-arcane ascendance",
+      "icon": "c-arcane_ascendance",
       "x": -600,
       "y": 70,
       "maxPoints": 4,
@@ -5676,7 +5676,7 @@
     "en6-8": {
       "skill": "en6-8",
       "name": "Lightning Nova",
-      "icon": "charged ground",
+      "icon": "charged_ground",
       "x": 137,
       "y": -0,
       "maxPoints": 1,
@@ -5706,7 +5706,7 @@
     "en6-9": {
       "skill": "en6-9",
       "name": "Charged Destruction",
-      "icon": "_storm call",
+      "icon": "storm_call",
       "x": 573,
       "y": -100,
       "maxPoints": 3,
@@ -5731,7 +5731,7 @@
     "en6-10": {
       "skill": "en6-10",
       "name": "Survival of the Victor",
-      "icon": "_blackhole",
+      "icon": "blackhole",
       "x": 375,
       "y": 100,
       "maxPoints": 3,
@@ -5760,7 +5760,7 @@
     "en6-11": {
       "skill": "en6-11",
       "name": "Arcane Protection",
-      "icon": "_static-blue",
+      "icon": "static-blue",
       "x": 570,
       "y": 100,
       "maxPoints": 5,
@@ -5785,7 +5785,7 @@
     "en6-12": {
       "skill": "en6-12",
       "name": "Fire Nova",
-      "icon": "_glyph of fire",
+      "icon": "glyph_of_fire",
       "x": 0,
       "y": 137,
       "maxPoints": 1,
@@ -5842,7 +5842,7 @@
     "en6-14": {
       "skill": "en6-14",
       "name": "Ash Frenzy",
-      "icon": "_phoenix strike",
+      "icon": "phoenix_strike",
       "x": -62,
       "y": 254,
       "maxPoints": 5,
@@ -5871,7 +5871,7 @@
     "en6-15": {
       "skill": "en6-15",
       "name": "Arcane Projection",
-      "icon": "_glyph of fire alt-hex",
+      "icon": "glyph_of_fire_alt-hex",
       "x": -255,
       "y": 255,
       "maxPoints": 1,
@@ -5898,7 +5898,7 @@
     "en6-16": {
       "skill": "en6-16",
       "name": "Infernal Nova",
-      "icon": "_fireball explosion-hex",
+      "icon": "fireball_explosion-hex",
       "x": 246,
       "y": 232,
       "maxPoints": 1,
@@ -5929,7 +5929,7 @@
     "en6-17": {
       "skill": "en6-17",
       "name": "Conflagrating Speed",
-      "icon": "_inferno",
+      "icon": "inferno",
       "x": 449,
       "y": 232,
       "maxPoints": 5,
@@ -5954,7 +5954,7 @@
     "en6-18": {
       "skill": "en6-18",
       "name": "Spark Charges",
-      "icon": "chain lightning",
+      "icon": "chain_lightning",
       "x": 336,
       "y": -0,
       "maxPoints": 5,
@@ -6037,7 +6037,7 @@
     "en6-21": {
       "skill": "en6-21",
       "name": "Elemental Expanse",
-      "icon": "_abyssal-echoes",
+      "icon": "abyssal-echoes",
       "x": 369,
       "y": -100,
       "maxPoints": 5,
@@ -6065,7 +6065,7 @@
     "en6-22": {
       "skill": "en6-22",
       "name": "Overcharge",
-      "icon": "_ward-blast-hex",
+      "icon": "ward-blast-hex",
       "x": 474,
       "y": -0,
       "maxPoints": 5,
@@ -6095,7 +6095,7 @@
     "en6-23": {
       "skill": "en6-23",
       "name": "Overload",
-      "icon": "_c-lightningball",
+      "icon": "c-lightningball",
       "x": 611,
       "y": -0,
       "maxPoints": 4,
@@ -6121,7 +6121,7 @@
     "en6-24": {
       "skill": "en6-24",
       "name": "Elemental Tranquillity",
-      "icon": "_leech life teal",
+      "icon": "leech_life_teal",
       "x": -350,
       "y": -70,
       "maxPoints": 6,
@@ -6177,7 +6177,7 @@
     "en6-26": {
       "skill": "en6-26",
       "name": "Arcana Elementorum",
-      "icon": "_c-arcane ascendance",
+      "icon": "c-arcane_ascendance",
       "x": 0,
       "y": -137,
       "maxPoints": 5,
@@ -6204,7 +6204,7 @@
     "en6-27": {
       "skill": "en6-27",
       "name": "Melting Nova",
-      "icon": "c-flurry2 - orange",
+      "icon": "c-flurry2_-_orange",
       "x": 82,
       "y": 308,
       "maxPoints": 5,
@@ -6235,7 +6235,7 @@
     "en6-28": {
       "skill": "en6-28",
       "name": "Luminaire",
-      "icon": "charged ground-yellow-hex",
+      "icon": "charged_ground-yellow-hex",
       "x": 241,
       "y": -210,
       "maxPoints": 1,
@@ -6269,7 +6269,7 @@
     "en6-29": {
       "skill": "en6-29",
       "name": "Star Prism",
-      "icon": "_static-yellow",
+      "icon": "static-yellow",
       "x": 107,
       "y": -210,
       "maxPoints": 3,
@@ -6294,7 +6294,7 @@
     "en6-30": {
       "skill": "en6-30",
       "name": "Silenced Spark",
-      "icon": "_c-ring-of-shields-alt",
+      "icon": "c-ring-of-shields-alt",
       "x": 357,
       "y": -280,
       "maxPoints": 1,
@@ -6320,7 +6320,7 @@
     "en6-32": {
       "skill": "en6-32",
       "name": "Shatter Nova",
-      "icon": "c-tempest strike",
+      "icon": "c-tempest_strike",
       "x": -600,
       "y": -70,
       "maxPoints": 3,
@@ -6429,7 +6429,7 @@
     "f1b4d-2": {
       "skill": "f1b4d-2",
       "name": "Charring",
-      "icon": "_rive 3",
+      "icon": "rive_3",
       "x": -278.7,
       "y": -217.1,
       "maxPoints": 3,
@@ -6483,7 +6483,7 @@
     "f1b4d-4": {
       "skill": "f1b4d-4",
       "name": "Hypothermia",
-      "icon": "_frostbite",
+      "icon": "frostbite",
       "x": 117.7,
       "y": 281.7,
       "maxPoints": 3,
@@ -6510,7 +6510,7 @@
     "f1b4d-5": {
       "skill": "f1b4d-5",
       "name": "Kindling",
-      "icon": "_sword slash double fire",
+      "icon": "sword_slash_double_fire",
       "x": -470.6,
       "y": -217.1,
       "maxPoints": 4,
@@ -6562,7 +6562,7 @@
     "f1b4d-7": {
       "skill": "f1b4d-7",
       "name": "Incineration",
-      "icon": "_warpath fire-hex",
+      "icon": "warpath_fire-hex",
       "x": -278.7,
       "y": -37.399994,
       "maxPoints": 1,
@@ -6593,7 +6593,7 @@
     "f1b4d-8": {
       "skill": "f1b4d-8",
       "name": "Illuminating Fire",
-      "icon": "_fireball explosion",
+      "icon": "fireball_explosion",
       "x": -470.6,
       "y": 40.6,
       "maxPoints": 3,
@@ -6619,7 +6619,7 @@
     "f1b4d-9": {
       "skill": "f1b4d-9",
       "name": "Wildfire",
-      "icon": "c-flurry2 - orange",
+      "icon": "c-flurry2_-_orange",
       "x": -278.70004,
       "y": 124,
       "maxPoints": 2,
@@ -6705,7 +6705,7 @@
     "f1b4d-12": {
       "skill": "f1b4d-12",
       "name": "Mana Shell",
-      "icon": "_c-stun susceptibility buff (generic)",
+      "icon": "c-stun_susceptibility_buff_(generic)",
       "x": -639.8,
       "y": 294.9,
       "maxPoints": 1,
@@ -6785,7 +6785,7 @@
     "f1b4d-15": {
       "skill": "f1b4d-15",
       "name": "Warding Flames",
-      "icon": "_c-ward retention buff (generic)",
+      "icon": "c-ward_retention_buff_(generic)",
       "x": -202,
       "y": 306.7,
       "maxPoints": 3,
@@ -6810,7 +6810,7 @@
     "f1b4d-16": {
       "skill": "f1b4d-16",
       "name": "Undying Fire",
-      "icon": "_spellbook fire",
+      "icon": "spellbook_fire",
       "x": 129,
       "y": 167,
       "maxPoints": 5,
@@ -6840,7 +6840,7 @@
     "f1b4d-17": {
       "skill": "f1b4d-17",
       "name": "Everflames",
-      "icon": "_phoenix strike",
+      "icon": "phoenix_strike",
       "x": 267.9,
       "y": 306.7,
       "maxPoints": 1,
@@ -6985,7 +6985,7 @@
     "f1b4d-22": {
       "skill": "f1b4d-22",
       "name": "Pyre",
-      "icon": "fireball multiple",
+      "icon": "fireball_multiple",
       "x": 595,
       "y": 97,
       "maxPoints": 1,
@@ -7041,7 +7041,7 @@
     "f1b4d-24": {
       "skill": "f1b4d-24",
       "name": "Inferno",
-      "icon": "_glyph of fire alt",
+      "icon": "glyph_of_fire_alt",
       "x": 475.0999,
       "y": -104.00001,
       "maxPoints": 3,
@@ -7097,7 +7097,7 @@
     "f1b4d-26": {
       "skill": "f1b4d-26",
       "name": "Exothermic",
-      "icon": "_c-flame reave",
+      "icon": "c-flame_reave",
       "x": 616.5,
       "y": -151,
       "maxPoints": 3,
@@ -7154,7 +7154,7 @@
     "f1b4d-28": {
       "skill": "f1b4d-28",
       "name": "Fading Flame",
-      "icon": "_spellbook arcane",
+      "icon": "spellbook_arcane",
       "x": -25.700012,
       "y": 281.7,
       "maxPoints": 3,
@@ -7240,7 +7240,7 @@
     "fb8fe-2": {
       "skill": "fb8fe-2",
       "name": "Cryomantic Bolt",
-      "icon": "ice bolt",
+      "icon": "ice_bolt2",
       "x": -292.8,
       "y": -146.8,
       "maxPoints": 3,
@@ -7268,7 +7268,7 @@
     "fb8fe-3": {
       "skill": "fb8fe-3",
       "name": "Frost Spikes",
-      "icon": "c-snap freeze-hex",
+      "icon": "c-snap_freeze-hex",
       "x": -157.80002,
       "y": -83.2,
       "maxPoints": 1,
@@ -7294,7 +7294,7 @@
     "fb8fe-4": {
       "skill": "fb8fe-4",
       "name": "Ice Shard",
-      "icon": "_cold beam-hex",
+      "icon": "cold_beam-hex",
       "x": -157.8,
       "y": -191.6,
       "maxPoints": 1,
@@ -7320,7 +7320,7 @@
     "fb8fe-5": {
       "skill": "fb8fe-5",
       "name": "Fulminating Bolt",
-      "icon": "_lightning bolt",
+      "icon": "lightning_bolt",
       "x": -467.6,
       "y": -146.8,
       "maxPoints": 3,
@@ -7348,7 +7348,7 @@
     "fb8fe-6": {
       "skill": "fb8fe-6",
       "name": "Lightning Spear",
-      "icon": "_static_orb-hex",
+      "icon": "static_orb-hex",
       "x": -606.8,
       "y": -191.6,
       "maxPoints": 1,
@@ -7374,7 +7374,7 @@
     "fb8fe-7": {
       "skill": "fb8fe-7",
       "name": "Jolting Spark",
-      "icon": "chain lightning-hex",
+      "icon": "chain_lightning-hex",
       "x": -606.8,
       "y": -83.20001,
       "maxPoints": 1,
@@ -7400,7 +7400,7 @@
     "fb8fe-8": {
       "skill": "fb8fe-8",
       "name": "Pyromantic Bolt",
-      "icon": "fireball alt",
+      "icon": "fireball_alt",
       "x": -467.6,
       "y": -0,
       "maxPoints": 3,
@@ -7428,7 +7428,7 @@
     "fb8fe-9": {
       "skill": "fb8fe-9",
       "name": "Blazing Flare",
-      "icon": "_fireball explosion-hex",
+      "icon": "fireball_explosion-hex",
       "x": -560.9,
       "y": 88.5,
       "maxPoints": 1,
@@ -7798,7 +7798,7 @@
     "fb8fe-22": {
       "skill": "fb8fe-22",
       "name": "Devastator",
-      "icon": "_sacrifice-hex",
+      "icon": "sacrifice-hex",
       "x": 250.00002,
       "y": 231.70001,
       "maxPoints": 1,
@@ -7967,7 +7967,7 @@
     "fb8fe-28": {
       "skill": "fb8fe-28",
       "name": "Orderly Conduit",
-      "icon": "_c-spellpower buff (generic)_2",
+      "icon": "c-spellpower_buff_(generic)_2",
       "x": -292.8,
       "y": 308,
       "maxPoints": 3,
@@ -8023,7 +8023,7 @@
     "fb8fe-30": {
       "skill": "fb8fe-30",
       "name": "Focused Runewords",
-      "icon": "c-time rot-hex",
+      "icon": "c-time_rot-hex",
       "x": -596.2,
       "y": 308,
       "maxPoints": 1,
@@ -8129,7 +8129,7 @@
     "fi9-2": {
       "skill": "fi9-2",
       "name": "Piercing Heat",
-      "icon": "c-disintegrate_combined ",
+      "icon": "c-disintegrate_combined_",
       "x": -147,
       "y": 129,
       "maxPoints": 4,
@@ -8158,7 +8158,7 @@
     "fi9-3": {
       "skill": "fi9-3",
       "name": "Immolated Core",
-      "icon": "fireball alt",
+      "icon": "fireball_alt",
       "x": -201,
       "y": 283,
       "maxPoints": 5,
@@ -8213,7 +8213,7 @@
     "fi9-5": {
       "skill": "fi9-5",
       "name": "Plasma Ball",
-      "icon": "_c-lightningball-hex",
+      "icon": "c-lightningball-hex",
       "x": -428.6,
       "y": 273.2,
       "maxPoints": 1,
@@ -8239,7 +8239,7 @@
     "fi9-6": {
       "skill": "fi9-6",
       "name": "Winged Fire",
-      "icon": "_phoenix strike",
+      "icon": "phoenix_strike",
       "x": -206,
       "y": 9,
       "maxPoints": 5,
@@ -8268,7 +8268,7 @@
     "fi9-7": {
       "skill": "fi9-7",
       "name": "Fire Spray",
-      "icon": "fireball multiple-hex",
+      "icon": "fireball_multiple-hex",
       "x": -340,
       "y": -79,
       "maxPoints": 1,
@@ -8300,7 +8300,7 @@
     "fi9-8": {
       "skill": "fi9-8",
       "name": "Skira's Gambit",
-      "icon": "_rod of power 1",
+      "icon": "rod_of_power_1",
       "x": -547,
       "y": -144,
       "maxPoints": 3,
@@ -8328,7 +8328,7 @@
     "fi9-9": {
       "skill": "fi9-9",
       "name": "Arcane Divergence",
-      "icon": "_c-flame reave",
+      "icon": "c-flame_reave",
       "x": -613.4,
       "y": -9,
       "maxPoints": 2,
@@ -8442,7 +8442,7 @@
     "fi9-13": {
       "skill": "fi9-13",
       "name": "Conflagration",
-      "icon": "_inferno",
+      "icon": "inferno",
       "x": 147,
       "y": 129,
       "maxPoints": 5,
@@ -8499,7 +8499,7 @@
     "fi9-15": {
       "skill": "fi9-15",
       "name": "Wildfire",
-      "icon": "_glyph of fire alt",
+      "icon": "glyph_of_fire_alt",
       "x": 7,
       "y": 311,
       "maxPoints": 5,
@@ -8524,7 +8524,7 @@
     "fi9-16": {
       "skill": "fi9-16",
       "name": "Burning Wounds",
-      "icon": "_c-detonating arrow-temp",
+      "icon": "c-detonating_arrow-temp",
       "x": 201,
       "y": 282.99994,
       "maxPoints": 4,
@@ -8549,7 +8549,7 @@
     "fi9-17": {
       "skill": "fi9-17",
       "name": "Adept",
-      "icon": "_c-arcane ascendance",
+      "icon": "c-arcane_ascendance",
       "x": 206,
       "y": 8.999939,
       "maxPoints": 4,
@@ -8578,7 +8578,7 @@
     "fi9-18": {
       "skill": "fi9-18",
       "name": "Flammability",
-      "icon": "c-flame wraith",
+      "icon": "c-flame_wraith",
       "x": 310,
       "y": 177,
       "maxPoints": 4,
@@ -8611,7 +8611,7 @@
     "fi9-19": {
       "skill": "fi9-19",
       "name": "Seeker's Ash",
-      "icon": "c-flanking strike-new-hex",
+      "icon": "c-flanking_strike-new-hex",
       "x": 428.59998,
       "y": 273.2,
       "maxPoints": 1,
@@ -8636,7 +8636,7 @@
     "fi9-20": {
       "skill": "fi9-20",
       "name": "Flame Burst",
-      "icon": "_fireball explosion-hex",
+      "icon": "fireball_explosion-hex",
       "x": 528,
       "y": 145,
       "maxPoints": 1,
@@ -8666,7 +8666,7 @@
     "fi9-21": {
       "skill": "fi9-21",
       "name": "Volatile flames",
-      "icon": "_glyph of fire",
+      "icon": "glyph_of_fire",
       "x": 623.3,
       "y": 41,
       "maxPoints": 2,
@@ -8694,7 +8694,7 @@
     "fi9-22": {
       "skill": "fi9-22",
       "name": "Mana Sphere",
-      "icon": "_focus",
+      "icon": "focus",
       "x": 404,
       "y": 54,
       "maxPoints": 3,
@@ -8720,7 +8720,7 @@
     "fi9-23": {
       "skill": "fi9-23",
       "name": "Unchained Fire",
-      "icon": "_hungering soul fire-hex",
+      "icon": "hungering_soul_fire-hex",
       "x": 340,
       "y": -79,
       "maxPoints": 1,
@@ -8810,7 +8810,7 @@
     "fi9-26": {
       "skill": "fi9-26",
       "name": "Eternal Fire",
-      "icon": "_spellbook fire",
+      "icon": "spellbook_fire",
       "x": 60,
       "y": -208,
       "maxPoints": 5,
@@ -8838,7 +8838,7 @@
     "fi9-27": {
       "skill": "fi9-27",
       "name": "Magma Shell",
-      "icon": "_fire shield",
+      "icon": "fire_shield",
       "x": 411.6,
       "y": -194,
       "maxPoints": 5,
@@ -8866,7 +8866,7 @@
     "fi9-28": {
       "skill": "fi9-28",
       "name": "Infernal Legacy",
-      "icon": "meteor rain",
+      "icon": "meteor_rain",
       "x": 537,
       "y": -80,
       "maxPoints": 4,
@@ -8916,7 +8916,7 @@
     "fl71ds-2": {
       "skill": "fl71ds-2",
       "name": "Blazing Flux",
-      "icon": "_spellbook fire",
+      "icon": "spellbook_fire",
       "x": -133.8,
       "y": -145.59998,
       "maxPoints": 3,
@@ -9008,7 +9008,7 @@
     "fl71ds-5": {
       "skill": "fl71ds-5",
       "name": "Magma Starter",
-      "icon": "_volcanic-orb2-hex",
+      "icon": "volcanic-orb2-hex",
       "x": -403.7,
       "y": 50.000008,
       "maxPoints": 1,
@@ -9102,7 +9102,7 @@
     "fl71ds-8": {
       "skill": "fl71ds-8",
       "name": "Lunar Protection",
-      "icon": "_c-ward retention buff (generic)",
+      "icon": "c-ward_retention_buff_(generic)",
       "x": -233.8,
       "y": 216.9,
       "maxPoints": 3,
@@ -9165,7 +9165,7 @@
     "fl71ds-10": {
       "skill": "fl71ds-10",
       "name": "Beta Decay",
-      "icon": "_static_orb-hex",
+      "icon": "static_orb-hex",
       "x": -625.7,
       "y": 292.6,
       "maxPoints": 1,
@@ -9191,7 +9191,7 @@
     "fl71ds-11": {
       "skill": "fl71ds-11",
       "name": "Snowballing",
-      "icon": "ice bolt-hex",
+      "icon": "ice_bolt-hex",
       "x": -570.7,
       "y": 129,
       "maxPoints": 1,
@@ -9219,7 +9219,7 @@
     "fl71ds-13": {
       "skill": "fl71ds-13",
       "name": "Branding Cold",
-      "icon": "_glyph of ice",
+      "icon": "glyph_of_ice",
       "x": -640.6,
       "y": -5.4,
       "maxPoints": 1,
@@ -9300,7 +9300,7 @@
     "fl71ds-16": {
       "skill": "fl71ds-16",
       "name": "Guidance of Flames",
-      "icon": "fireball alt-hex",
+      "icon": "fireball_alt-hex",
       "x": 220.8,
       "y": 234.29999,
       "maxPoints": 3,
@@ -9333,7 +9333,7 @@
     "fl71ds-17": {
       "skill": "fl71ds-17",
       "name": "Breath of Fire",
-      "icon": "_fireball explosion",
+      "icon": "fireball_explosion",
       "x": 102.000015,
       "y": 303.9,
       "maxPoints": 1,
@@ -9397,7 +9397,7 @@
     "fl71ds-19": {
       "skill": "fl71ds-19",
       "name": "Fire Eater",
-      "icon": "_stacking fire-hex",
+      "icon": "stacking_fire-hex",
       "x": 584.6,
       "y": 284.3,
       "maxPoints": 1,
@@ -9714,7 +9714,7 @@
     "fr4wl-1": {
       "skill": "fr4wl-1",
       "name": "Biting Limit",
-      "icon": "_freeze buff",
+      "icon": "freeze_buff",
       "x": 164.5,
       "y": -205.70004,
       "maxPoints": 4,
@@ -9925,7 +9925,7 @@
     "fr4wl-8": {
       "skill": "fr4wl-8",
       "name": "Crystals of Protection",
-      "icon": "_spellbook arcane",
+      "icon": "spellbook_arcane",
       "x": -120.5,
       "y": 199.29999,
       "maxPoints": 4,
@@ -10021,7 +10021,7 @@
     "fr4wl-11": {
       "skill": "fr4wl-11",
       "name": "Shattered to Pieces",
-      "icon": "c-snap freeze",
+      "icon": "c-snap_freeze",
       "x": -642.2,
       "y": 162,
       "maxPoints": 1,
@@ -10047,7 +10047,7 @@
     "fr4wl-12": {
       "skill": "fr4wl-12",
       "name": "Glyph of Direfrost",
-      "icon": "_cold beam",
+      "icon": "cold_beam",
       "x": -642.2001,
       "y": 304.5,
       "maxPoints": 1,
@@ -10100,7 +10100,7 @@
     "fr4wl-14": {
       "skill": "fr4wl-14",
       "name": "Heaping Cold",
-      "icon": "ice_wall",
+      "icon": "ice_wall2",
       "x": -158,
       "y": -0,
       "maxPoints": 5,
@@ -10127,7 +10127,7 @@
     "fr4wl-15": {
       "skill": "fr4wl-15",
       "name": "Marching Winter",
-      "icon": "_glyph of ice",
+      "icon": "glyph_of_ice",
       "x": 143.2,
       "y": 249.3,
       "maxPoints": 5,
@@ -10243,7 +10243,7 @@
     "fr4wl-19": {
       "skill": "fr4wl-19",
       "name": "Frigid Domination",
-      "icon": "_stacking cold buff",
+      "icon": "stacking_cold_buff",
       "x": 470.3,
       "y": -186.7,
       "maxPoints": 2,
@@ -10296,7 +10296,7 @@
     "fr4wl-21": {
       "skill": "fr4wl-21",
       "name": "Protection of the Apostate",
-      "icon": "_c-ward retention buff (generic)",
+      "icon": "c-ward_retention_buff_(generic)",
       "x": 410,
       "y": -74,
       "maxPoints": 3,
@@ -10327,7 +10327,7 @@
     "fr4wl-22": {
       "skill": "fr4wl-22",
       "name": "Shelter of the Chef",
-      "icon": "_c-ward generation buff (generic)",
+      "icon": "c-ward_generation_buff_(generic)",
       "x": 621.1,
       "y": -74,
       "maxPoints": 1,
@@ -10386,7 +10386,7 @@
     "fr4wl-24": {
       "skill": "fr4wl-24",
       "name": "Brand the Invaders",
-      "icon": "_glyph of fire alt-hex",
+      "icon": "glyph_of_fire_alt-hex",
       "x": 164.5,
       "y": 80.29999,
       "maxPoints": 1,
@@ -10529,7 +10529,7 @@
     "fr11mv-0": {
       "skill": "fr11mv-0",
       "name": "Flame Reave",
-      "icon": "_c-flame reave-root",
+      "icon": "c-flame_reave-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -10553,7 +10553,7 @@
     "fr11mv-2": {
       "skill": "fr11mv-2",
       "name": "Dancing Flames",
-      "icon": "_stacking cold",
+      "icon": "stacking_cold",
       "x": 132,
       "y": -80,
       "maxPoints": 5,
@@ -10648,7 +10648,7 @@
     "fr11mv-5": {
       "skill": "fr11mv-5",
       "name": "Engulfing Flames",
-      "icon": "_inferno",
+      "icon": "inferno",
       "x": 306,
       "y": -223,
       "maxPoints": 4,
@@ -10707,7 +10707,7 @@
     "fr11mv-7": {
       "skill": "fr11mv-7",
       "name": "Naurcrist",
-      "icon": "_sword slash double fire",
+      "icon": "sword_slash_double_fire",
       "x": -176,
       "y": -194,
       "maxPoints": 4,
@@ -10759,7 +10759,7 @@
     "fr11mv-9": {
       "skill": "fr11mv-9",
       "name": "Heat Wave",
-      "icon": "_glyph of fire alt",
+      "icon": "glyph_of_fire_alt",
       "x": -132,
       "y": -80,
       "maxPoints": 5,
@@ -10788,7 +10788,7 @@
     "fr11mv-10": {
       "skill": "fr11mv-10",
       "name": "Scorched Earth",
-      "icon": "_fireball explosion-hex",
+      "icon": "fireball_explosion-hex",
       "x": -343,
       "y": -146,
       "maxPoints": 3,
@@ -10818,7 +10818,7 @@
     "fr11mv-11": {
       "skill": "fr11mv-11",
       "name": "Volatile Strike",
-      "icon": "_rod of power 1",
+      "icon": "rod_of_power_1",
       "x": -489,
       "y": -146,
       "maxPoints": 2,
@@ -10844,7 +10844,7 @@
     "fr11mv-12": {
       "skill": "fr11mv-12",
       "name": "Arcane Severance",
-      "icon": "_rive 2",
+      "icon": "rive_2",
       "x": 80,
       "y": 122,
       "maxPoints": 4,
@@ -10929,7 +10929,7 @@
     "fr11mv-16": {
       "skill": "fr11mv-16",
       "name": "Firewalker",
-      "icon": "_birds of prey",
+      "icon": "birds_of_prey",
       "x": 409,
       "y": 173,
       "maxPoints": 1,
@@ -10957,7 +10957,7 @@
     "fr11mv-17": {
       "skill": "fr11mv-17",
       "name": "Kindling",
-      "icon": "arcane ascendance",
+      "icon": "arcane_ascendance",
       "x": 507,
       "y": 39,
       "maxPoints": 2,
@@ -11009,7 +11009,7 @@
     "fr11mv-19": {
       "skill": "fr11mv-19",
       "name": "Infernal Calling",
-      "icon": "c-melee damage debuff",
+      "icon": "c-melee_damage_debuff",
       "x": 590,
       "y": 197,
       "maxPoints": 1,
@@ -11035,7 +11035,7 @@
     "fr11mv-20": {
       "skill": "fr11mv-20",
       "name": "Precise Destruction",
-      "icon": "c-physical damage debuff",
+      "icon": "c-physical_damage_debuff",
       "x": 0,
       "y": 250,
       "maxPoints": 3,
@@ -11155,7 +11155,7 @@
     "fr11mv-24": {
       "skill": "fr11mv-24",
       "name": "Chaos Flare",
-      "icon": "c-damage buff",
+      "icon": "c-damage_buff",
       "x": -163,
       "y": 250,
       "maxPoints": 4,
@@ -11215,7 +11215,7 @@
     "fr11mv-26": {
       "skill": "fr11mv-26",
       "name": "Ashen Waste",
-      "icon": "_rive 3",
+      "icon": "rive_3",
       "x": -148,
       "y": 55,
       "maxPoints": 2,
@@ -11268,7 +11268,7 @@
     "fr11mv-28": {
       "skill": "fr11mv-28",
       "name": "Worldfire",
-      "icon": "_warpath fire-hex",
+      "icon": "warpath_fire-hex",
       "x": -616,
       "y": 19,
       "maxPoints": 1,
@@ -11295,7 +11295,7 @@
     "fr11mv-29": {
       "skill": "fr11mv-29",
       "name": "Lingering Embers",
-      "icon": "_glyph of fire-hex",
+      "icon": "glyph_of_fire-hex",
       "x": -581,
       "y": 237,
       "maxPoints": 2,
@@ -11324,7 +11324,7 @@
     "fr11mv-30": {
       "skill": "fr11mv-30",
       "name": "Accelerando",
-      "icon": "fireball multiple",
+      "icon": "fireball_multiple",
       "x": 652,
       "y": -151,
       "maxPoints": 3,
@@ -11557,7 +11557,7 @@
     "frc87w-7": {
       "skill": "frc87w-7",
       "name": "Fen of the Frozen",
-      "icon": "aura of decay blue",
+      "icon": "aura_of_decay_blue",
       "x": 284,
       "y": 67,
       "maxPoints": 3,
@@ -11650,7 +11650,7 @@
     "frc87w-10": {
       "skill": "frc87w-10",
       "name": "Frost Beyond Time",
-      "icon": "aura of decay blue",
+      "icon": "aura_of_decay_blue",
       "x": 81,
       "y": -213,
       "maxPoints": 1,
@@ -11730,7 +11730,7 @@
     "frc87w-13": {
       "skill": "frc87w-13",
       "name": "Kolheim Ballista",
-      "icon": "_c-ballista-hex",
+      "icon": "c-ballista-hex",
       "x": 600,
       "y": 161,
       "maxPoints": 1,
@@ -11759,7 +11759,7 @@
     "frc87w-14": {
       "skill": "frc87w-14",
       "name": "Power Word: Hail",
-      "icon": "c-arrow storm-hex",
+      "icon": "c-arrow_storm-hex",
       "x": 504,
       "y": 289,
       "maxPoints": 3,
@@ -11933,7 +11933,7 @@
     "frc87w-22": {
       "skill": "frc87w-22",
       "name": "Age of Vengeance",
-      "icon": "_freeze buff",
+      "icon": "freeze_buff",
       "x": -656,
       "y": -82,
       "maxPoints": 1,
@@ -12218,7 +12218,7 @@
     "fw3d-2": {
       "skill": "fw3d-2",
       "name": "Infusion",
-      "icon": "c-sky bolt-purple",
+      "icon": "c-sky_bolt-purple",
       "x": -170,
       "y": 102,
       "maxPoints": 5,
@@ -12247,7 +12247,7 @@
     "fw3d-3": {
       "skill": "fw3d-3",
       "name": "Retribution",
-      "icon": "_fireball explosion",
+      "icon": "fireball_explosion",
       "x": -151,
       "y": -121,
       "maxPoints": 5,
@@ -12277,7 +12277,7 @@
     "fw3d-4": {
       "skill": "fw3d-4",
       "name": "Telepyrosis",
-      "icon": "_disintegrate-hex",
+      "icon": "disintegrate-hex",
       "x": -359,
       "y": -189,
       "maxPoints": 1,
@@ -12329,7 +12329,7 @@
     "fw3d-6": {
       "skill": "fw3d-6",
       "name": "Frost Ward",
-      "icon": "_glyph of ice-hex",
+      "icon": "glyph_of_ice-hex",
       "x": -385,
       "y": -0,
       "maxPoints": 1,
@@ -12362,7 +12362,7 @@
     "fw3d-7": {
       "skill": "fw3d-7",
       "name": "Frostguard",
-      "icon": "ice wall",
+      "icon": "ice_wall",
       "x": -457,
       "y": 104,
       "maxPoints": 5,
@@ -12442,7 +12442,7 @@
     "fw3d-10": {
       "skill": "fw3d-10",
       "name": "Lightning Ward",
-      "icon": "_static_orb-hex",
+      "icon": "static_orb-hex",
       "x": -196,
       "y": -9,
       "maxPoints": 1,
@@ -12471,7 +12471,7 @@
     "fw3d-11": {
       "skill": "fw3d-11",
       "name": "Dilation",
-      "icon": "_volatile-reversal",
+      "icon": "volatile-reversal",
       "x": -75,
       "y": 175,
       "maxPoints": 3,
@@ -12502,7 +12502,7 @@
     "fw3d-12": {
       "skill": "fw3d-12",
       "name": "Fire Aura",
-      "icon": "_glyph of fire-hex",
+      "icon": "glyph_of_fire-hex",
       "x": -328,
       "y": 187,
       "maxPoints": 1,
@@ -12560,7 +12560,7 @@
     "fw3d-14": {
       "skill": "fw3d-14",
       "name": "Energize",
-      "icon": "_spellbook arcane",
+      "icon": "spellbook_arcane",
       "x": 34,
       "y": 297,
       "maxPoints": 3,
@@ -12590,7 +12590,7 @@
     "fw3d-15": {
       "skill": "fw3d-15",
       "name": "Recollection",
-      "icon": "_c-ward retention buff (generic)",
+      "icon": "c-ward_retention_buff_(generic)",
       "x": 115,
       "y": 199,
       "maxPoints": 2,
@@ -12615,7 +12615,7 @@
     "fw3d-16": {
       "skill": "fw3d-16",
       "name": "Through Flames",
-      "icon": "c-fire damage buff",
+      "icon": "c-fire_damage_buff",
       "x": -196,
       "y": 272,
       "maxPoints": 5,
@@ -12642,7 +12642,7 @@
     "fw3d-17": {
       "skill": "fw3d-17",
       "name": "Stalwart Defense",
-      "icon": "_c-ward generation buff (generic)",
+      "icon": "c-ward_generation_buff_(generic)",
       "x": 187,
       "y": -59,
       "maxPoints": 5,
@@ -12672,7 +12672,7 @@
     "fw3d-18": {
       "skill": "fw3d-18",
       "name": "Barrier",
-      "icon": "_c-damage mitigation buff (generic)",
+      "icon": "c-damage_mitigation_buff_(generic)",
       "x": 271,
       "y": 124,
       "maxPoints": 5,
@@ -12702,7 +12702,7 @@
     "fw3d-19": {
       "skill": "fw3d-19",
       "name": "Prismatic Buffer",
-      "icon": "_elementalprotection",
+      "icon": "elementalprotection",
       "x": 222,
       "y": 250,
       "maxPoints": 3,
@@ -12733,7 +12733,7 @@
     "fw3d-20": {
       "skill": "fw3d-20",
       "name": "Selfless Sorcery",
-      "icon": "_charm animal-hex",
+      "icon": "charm_animal-hex",
       "x": 363,
       "y": 300,
       "maxPoints": 1,
@@ -12758,7 +12758,7 @@
     "fw3d-21": {
       "skill": "fw3d-21",
       "name": "Shrewd Shielding",
-      "icon": "arcane ascendance",
+      "icon": "arcane_ascendance",
       "x": 409,
       "y": 149,
       "maxPoints": 3,
@@ -12812,7 +12812,7 @@
     "fw3d-23": {
       "skill": "fw3d-23",
       "name": "Warmth",
-      "icon": "_c-mana regeneration buff (generic)",
+      "icon": "c-mana_regeneration_buff_(generic)",
       "x": 628,
       "y": -11,
       "maxPoints": 4,
@@ -12837,7 +12837,7 @@
     "fw3d-25": {
       "skill": "fw3d-25",
       "name": "Concentrated Shielding",
-      "icon": "_c-spellpower  1 debuff (generic)",
+      "icon": "c-spellpower__1_debuff_(generic)",
       "x": 349,
       "y": 34,
       "maxPoints": 4,
@@ -12866,7 +12866,7 @@
     "fw3d-27": {
       "skill": "fw3d-27",
       "name": "Fortification",
-      "icon": "_c-damage mitigation debuff (generic)",
+      "icon": "c-damage_mitigation_debuff_(generic)",
       "x": 445,
       "y": -25,
       "maxPoints": 1,
@@ -12892,7 +12892,7 @@
     "fw3d-28": {
       "skill": "fw3d-28",
       "name": "Desperate Defense",
-      "icon": "_c-ward generation debuff (generic)",
+      "icon": "c-ward_generation_debuff_(generic)",
       "x": 210,
       "y": -196,
       "maxPoints": 3,
@@ -12950,7 +12950,7 @@
     "fw3d-30": {
       "skill": "fw3d-30",
       "name": "Dual Aegis",
-      "icon": "wanderingspirits copper-hex",
+      "icon": "wanderingspirits_copper-hex",
       "x": 463,
       "y": -144,
       "maxPoints": 1,
@@ -12975,7 +12975,7 @@
     "fw3d-31": {
       "skill": "fw3d-31",
       "name": "Astonish",
-      "icon": "_c-stun susceptibility debuff (generic)-hex",
+      "icon": "c-stun_susceptibility_debuff_(generic)-hex",
       "x": 57,
       "y": -184,
       "maxPoints": 1,
@@ -13000,7 +13000,7 @@
     "fw3d-33": {
       "skill": "fw3d-33",
       "name": "Flame Runner",
-      "icon": "c-shift - red",
+      "icon": "c-shift_-_red",
       "x": -357,
       "y": 309,
       "maxPoints": 1,
@@ -13028,7 +13028,7 @@
     "fw3d-34": {
       "skill": "fw3d-34",
       "name": "Warden Pulse",
-      "icon": "c-mana storm-hex",
+      "icon": "c-mana_storm-hex",
       "x": 158,
       "y": 90,
       "maxPoints": 1,
@@ -13053,7 +13053,7 @@
     "gl14-0": {
       "skill": "gl14-0",
       "name": "Glacier",
-      "icon": "_glacier-root",
+      "icon": "glacier-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -13140,7 +13140,7 @@
     "gl14-4": {
       "skill": "gl14-4",
       "name": "Moderate Destruction",
-      "icon": "_glyph of fire",
+      "icon": "glyph_of_fire",
       "x": 323,
       "y": -75,
       "maxPoints": 4,
@@ -13169,7 +13169,7 @@
     "gl14-5": {
       "skill": "gl14-5",
       "name": "Greater Destruction",
-      "icon": "_conflagrate",
+      "icon": "conflagrate",
       "x": 466,
       "y": -215,
       "maxPoints": 4,
@@ -13198,7 +13198,7 @@
     "gl14-6": {
       "skill": "gl14-6",
       "name": "Lesser Chilling",
-      "icon": "_entangling roots",
+      "icon": "entangling_roots",
       "x": -239,
       "y": 248,
       "maxPoints": 2,
@@ -13225,7 +13225,7 @@
     "gl14-7": {
       "skill": "gl14-7",
       "name": "Moderate Chilling",
-      "icon": "_frenzytotem",
+      "icon": "frenzytotem",
       "x": -307,
       "y": 155,
       "maxPoints": 2,
@@ -13253,7 +13253,7 @@
     "gl14-8": {
       "skill": "gl14-8",
       "name": "Greater Chilling",
-      "icon": "_naturalblessing",
+      "icon": "naturalblessing",
       "x": -375,
       "y": 61,
       "maxPoints": 2,
@@ -13281,7 +13281,7 @@
     "gl14-9": {
       "skill": "gl14-9",
       "name": "Lesser Vortex",
-      "icon": "_blackhole",
+      "icon": "blackhole",
       "x": -519,
       "y": 68,
       "maxPoints": 1,
@@ -13311,7 +13311,7 @@
     "gl14-10": {
       "skill": "gl14-10",
       "name": "Moderate Vortex",
-      "icon": "charged ground",
+      "icon": "charged_ground",
       "x": -519,
       "y": -97,
       "maxPoints": 2,
@@ -13342,7 +13342,7 @@
     "gl14-11": {
       "skill": "gl14-11",
       "name": "Greater Vortex",
-      "icon": "_rodofpower",
+      "icon": "rodofpower",
       "x": -519,
       "y": -215,
       "maxPoints": 2,
@@ -13404,7 +13404,7 @@
     "gl14-13": {
       "skill": "gl14-13",
       "name": "Rime Caster",
-      "icon": "ice wall",
+      "icon": "ice_wall",
       "x": -373,
       "y": -97,
       "maxPoints": 5,
@@ -13439,7 +13439,7 @@
     "gl14-14": {
       "skill": "gl14-14",
       "name": "Lesser Glacier",
-      "icon": "_devouring-orb-hex",
+      "icon": "devouring-orb-hex2",
       "x": 0,
       "y": -182.99997,
       "maxPoints": 1,
@@ -13469,7 +13469,7 @@
     "gl14-15": {
       "skill": "gl14-15",
       "name": "Cold Snap",
-      "icon": "_static",
+      "icon": "static",
       "x": 170,
       "y": -244,
       "maxPoints": 2,
@@ -13525,7 +13525,7 @@
     "gl14-17": {
       "skill": "gl14-17",
       "name": "Critical Rejuvenation",
-      "icon": "_teleport",
+      "icon": "teleport",
       "x": 90,
       "y": 301,
       "maxPoints": 1,
@@ -13553,7 +13553,7 @@
     "gl14-18": {
       "skill": "gl14-18",
       "name": "Cold Victory",
-      "icon": "_focus",
+      "icon": "focus",
       "x": -90,
       "y": 301,
       "maxPoints": 1,
@@ -13578,7 +13578,7 @@
     "gl14-19": {
       "skill": "gl14-19",
       "name": "Fading Echoes",
-      "icon": "ice wall-hex",
+      "icon": "ice_wall-hex2",
       "x": 340,
       "y": 150,
       "maxPoints": 1,
@@ -13603,7 +13603,7 @@
     "gl14-20": {
       "skill": "gl14-20",
       "name": "Resplendent Frost",
-      "icon": "chain lightning-green",
+      "icon": "chain_lightning-green",
       "x": 239,
       "y": 248,
       "maxPoints": 3,
@@ -13667,7 +13667,7 @@
     "gl14-22": {
       "skill": "gl14-22",
       "name": "Perma Frost",
-      "icon": "_tornado",
+      "icon": "tornado",
       "x": 0,
       "y": 183,
       "maxPoints": 4,
@@ -13695,7 +13695,7 @@
     "gl14-24": {
       "skill": "gl14-24",
       "name": "Breaking Point",
-      "icon": "c-flurry2 - orange",
+      "icon": "c-flurry2_-_orange",
       "x": 170,
       "y": -75,
       "maxPoints": 4,
@@ -13726,7 +13726,7 @@
     "gl14-25": {
       "skill": "gl14-25",
       "name": "Engulfing Vortex",
-      "icon": "_ward-blast-hex",
+      "icon": "ward-blast-hex",
       "x": -663,
       "y": -97,
       "maxPoints": 5,
@@ -13758,7 +13758,7 @@
     "gl14-26": {
       "skill": "gl14-26",
       "name": "Morditas' Bane",
-      "icon": "_c-frenzy-hex",
+      "icon": "c-frenzy-hex",
       "x": 603,
       "y": -75,
       "maxPoints": 4,
@@ -13791,7 +13791,7 @@
     "gl14-27": {
       "skill": "gl14-27",
       "name": "Endless Frost",
-      "icon": "_c-vale spirit bolt_5-hex",
+      "icon": "c-vale_spirit_bolt_5-hex",
       "x": -486,
       "y": 277,
       "maxPoints": 1,
@@ -13822,7 +13822,7 @@
     "gl14-28": {
       "skill": "gl14-28",
       "name": "Critical Barrier",
-      "icon": "c-dagger dance - blue",
+      "icon": "c-dagger_dance_-_blue",
       "x": 643,
       "y": 150,
       "maxPoints": 3,
@@ -13847,7 +13847,7 @@
     "gl14-30": {
       "skill": "gl14-30",
       "name": "Snow Blink",
-      "icon": "_cold beam-hex",
+      "icon": "cold_beam-hex",
       "x": 637,
       "y": 283,
       "maxPoints": 1,
@@ -13902,7 +13902,7 @@
     "gy2dm-1": {
       "skill": "gy2dm-1",
       "name": "Herald of Domination",
-      "icon": "_blackhole",
+      "icon": "blackhole",
       "x": -198.99998,
       "y": -96,
       "maxPoints": 4,
@@ -14167,7 +14167,7 @@
     "gy2dm-10": {
       "skill": "gy2dm-10",
       "name": "Perfect Design",
-      "icon": "c-mana storm",
+      "icon": "c-mana_storm",
       "x": -584.8,
       "y": 314.3,
       "maxPoints": 4,
@@ -14533,7 +14533,7 @@
     "gy2dm-23": {
       "skill": "gy2dm-23",
       "name": "Tendrils of the Invoker",
-      "icon": "chain lightning-hex",
+      "icon": "chain_lightning-hex",
       "x": 532,
       "y": 105,
       "maxPoints": 3,
@@ -14616,7 +14616,7 @@
     "gy2dm-26": {
       "skill": "gy2dm-26",
       "name": "Burning Symbol",
-      "icon": "_glyph of fire alt",
+      "icon": "glyph_of_fire_alt",
       "x": 486.4,
       "y": -257.3,
       "maxPoints": 3,
@@ -14643,7 +14643,7 @@
     "gy2dm-27": {
       "skill": "gy2dm-27",
       "name": "Fan the Inferno",
-      "icon": "_spellbook fire",
+      "icon": "spellbook_fire",
       "x": 588.4,
       "y": -142.5,
       "maxPoints": 1,
@@ -14668,7 +14668,7 @@
     "ib5g3-0": {
       "skill": "ib5g3-0",
       "name": "Ice Barrage",
-      "icon": "c-ice barrage-root",
+      "icon": "c-ice_barrage-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -14696,7 +14696,7 @@
     "ib5g3-2": {
       "skill": "ib5g3-2",
       "name": "Frigid Barrage",
-      "icon": "c-snap freeze",
+      "icon": "c-snap_freeze",
       "x": -135,
       "y": -125.1,
       "maxPoints": 5,
@@ -14726,7 +14726,7 @@
     "ib5g3-3": {
       "skill": "ib5g3-3",
       "name": "Subthermal Velocity",
-      "icon": "temp snap freeze",
+      "icon": "temp_snap_freeze",
       "x": -373,
       "y": -125.099976,
       "maxPoints": 3,
@@ -14753,7 +14753,7 @@
     "ib5g3-4": {
       "skill": "ib5g3-4",
       "name": "Intensifying Cold",
-      "icon": "_c-hail blade",
+      "icon": "c-hail_blade",
       "x": -185,
       "y": -0,
       "maxPoints": 3,
@@ -14784,7 +14784,7 @@
     "ib5g3-5": {
       "skill": "ib5g3-5",
       "name": "Frigid Doom",
-      "icon": "_ward-blast",
+      "icon": "ward-blast",
       "x": -415,
       "y": -0,
       "maxPoints": 1,
@@ -14809,7 +14809,7 @@
     "ib5g3-6": {
       "skill": "ib5g3-6",
       "name": "Hail Storm",
-      "icon": "ice bolt",
+      "icon": "ice_bolt2",
       "x": -135,
       "y": 129,
       "maxPoints": 5,
@@ -14839,7 +14839,7 @@
     "ib5g3-7": {
       "skill": "ib5g3-7",
       "name": "Warding Bolts",
-      "icon": "_ice ward 1",
+      "icon": "ice_ward_1",
       "x": -217,
       "y": 292,
       "maxPoints": 3,
@@ -14953,7 +14953,7 @@
     "ib5g3-11": {
       "skill": "ib5g3-11",
       "name": "Shattering Bulwark",
-      "icon": "_c-shatter strike-hex",
+      "icon": "c-shatter_strike-hex",
       "x": -642.2,
       "y": -81.79999,
       "maxPoints": 1,
@@ -14978,7 +14978,7 @@
     "ib5g3-12": {
       "skill": "ib5g3-12",
       "name": "Deep Shield",
-      "icon": "_anamoly",
+      "icon": "anamoly",
       "x": -642.2,
       "y": 175,
       "maxPoints": 1,
@@ -15006,7 +15006,7 @@
     "ib5g3-13": {
       "skill": "ib5g3-13",
       "name": "Frost Armor",
-      "icon": "c-cold damage buff",
+      "icon": "c-cold_damage_buff",
       "x": -563,
       "y": 291.2,
       "maxPoints": 2,
@@ -15032,7 +15032,7 @@
     "ib5g3-14": {
       "skill": "ib5g3-14",
       "name": "Looming Frost",
-      "icon": "c-flurry2 - blue",
+      "icon": "c-flurry2_-_blue",
       "x": 0,
       "y": 185,
       "maxPoints": 4,
@@ -15063,7 +15063,7 @@
     "ib5g3-15": {
       "skill": "ib5g3-15",
       "name": "Sleetfire",
-      "icon": "_c-ward retention debuff (generic)-hex",
+      "icon": "c-ward_retention_debuff_(generic)-hex",
       "x": 0,
       "y": 306.7,
       "maxPoints": 1,
@@ -15089,7 +15089,7 @@
     "ib5g3-16": {
       "skill": "ib5g3-16",
       "name": "Eternal Winter",
-      "icon": "_anomaly-end",
+      "icon": "anomaly-end",
       "x": 135,
       "y": 129,
       "maxPoints": 3,
@@ -15148,7 +15148,7 @@
     "ib5g3-19": {
       "skill": "ib5g3-19",
       "name": "Brightlance",
-      "icon": "ice bolt_bright-hex",
+      "icon": "ice_bolt_bright-hex",
       "x": 370.42993,
       "y": 224,
       "maxPoints": 1,
@@ -15232,7 +15232,7 @@
     "ib5g3-22": {
       "skill": "ib5g3-22",
       "name": "Nailed Shot",
-      "icon": "c-disintegrate_combined ",
+      "icon": "c-disintegrate_combined_",
       "x": 424,
       "y": 79,
       "maxPoints": 3,
@@ -15320,7 +15320,7 @@
     "ib5g3-25": {
       "skill": "ib5g3-25",
       "name": "Wintry Blast",
-      "icon": "c-multishot - blue",
+      "icon": "c-multishot_-_blue",
       "x": 450,
       "y": -122,
       "maxPoints": 1,
@@ -15352,7 +15352,7 @@
     "ib5g3-26": {
       "skill": "ib5g3-26",
       "name": "Yrun's Conquest",
-      "icon": "_glacier",
+      "icon": "glacier",
       "x": 602,
       "y": -219,
       "maxPoints": 3,
@@ -15377,7 +15377,7 @@
     "ib5g3-27": {
       "skill": "ib5g3-27",
       "name": "Brittle Fragments",
-      "icon": "c-ice thorns 2",
+      "icon": "c-ice_thorns_2",
       "x": 189.6,
       "y": -225,
       "maxPoints": 1,
@@ -15402,7 +15402,7 @@
     "ib5g3-28": {
       "skill": "ib5g3-28",
       "name": "Frozen Ballista",
-      "icon": "c-multishot - blue 1 sequence-hex",
+      "icon": "c-multishot_-_blue_1_sequence-hex",
       "x": 373.57007,
       "y": -225,
       "maxPoints": 1,
@@ -15462,7 +15462,7 @@
     "ib5g3-30": {
       "skill": "ib5g3-30",
       "name": "Shattered Skin",
-      "icon": "c-flurry3 - blue",
+      "icon": "c-flurry3_-_blue",
       "x": 0,
       "y": -185,
       "maxPoints": 3,
@@ -15491,7 +15491,7 @@
     "ib5g3-31": {
       "skill": "ib5g3-31",
       "name": "Ice Burst",
-      "icon": "_c-featherstorm-hex",
+      "icon": "c-featherstorm-hex",
       "x": -217,
       "y": -225,
       "maxPoints": 1,
@@ -15518,7 +15518,7 @@
     "ib5g3-32": {
       "skill": "ib5g3-32",
       "name": "Arctic Storm",
-      "icon": "_c-enchant weapon",
+      "icon": "c-enchant_weapon",
       "x": -475,
       "y": -225,
       "maxPoints": 3,
@@ -15544,7 +15544,7 @@
     "lb23il-0": {
       "skill": "lb23il-0",
       "name": "Lightning Blast",
-      "icon": "chain lightning-root",
+      "icon": "chain_lightning-root",
       "x": 0,
       "y": 6.1035156E-05,
       "maxPoints": 0,
@@ -15569,7 +15569,7 @@
     "lb23il-2": {
       "skill": "lb23il-2",
       "name": "Arcing Power",
-      "icon": "_charged ground temp-yellow-hex",
+      "icon": "charged_ground_temp-yellow-hex",
       "x": -206,
       "y": -70,
       "maxPoints": 4,
@@ -15603,7 +15603,7 @@
     "lb23il-3": {
       "skill": "lb23il-3",
       "name": "Surging Influence",
-      "icon": "_c-ravage",
+      "icon": "c-ravage",
       "x": -175,
       "y": -210,
       "maxPoints": 1,
@@ -15628,7 +15628,7 @@
     "lb23il-4": {
       "skill": "lb23il-4",
       "name": "Crackling Speed",
-      "icon": "_c-attack speed buff (generic)_3",
+      "icon": "c-attack_speed_buff_(generic)_3",
       "x": -394,
       "y": -0,
       "maxPoints": 4,
@@ -15658,7 +15658,7 @@
     "lb23il-5": {
       "skill": "lb23il-5",
       "name": "Shattershock",
-      "icon": "_shatter strike",
+      "icon": "shatter_strike",
       "x": -569,
       "y": 43,
       "maxPoints": 3,
@@ -15687,7 +15687,7 @@
     "lb23il-6": {
       "skill": "lb23il-6",
       "name": "Closed Circuit",
-      "icon": "_c-arcane ascendance gold-hex",
+      "icon": "c-arcane_ascendance_gold-hex",
       "x": -364.2,
       "y": -153.7,
       "maxPoints": 1,
@@ -15714,7 +15714,7 @@
     "lb23il-7": {
       "skill": "lb23il-7",
       "name": "Blinding Light",
-      "icon": "c-yellow eye",
+      "icon": "c-yellow_eye",
       "x": -519,
       "y": -103.70001,
       "maxPoints": 3,
@@ -15741,7 +15741,7 @@
     "lb23il-8": {
       "skill": "lb23il-8",
       "name": "Halo Effect",
-      "icon": "_tornado temp",
+      "icon": "tornado_temp",
       "x": -637.7,
       "y": -175,
       "maxPoints": 4,
@@ -15766,7 +15766,7 @@
     "lb23il-9": {
       "skill": "lb23il-9",
       "name": "Volatile Lightning",
-      "icon": "c-warding blade",
+      "icon": "c-warding_blade",
       "x": -165.5,
       "y": 100,
       "maxPoints": 4,
@@ -15824,7 +15824,7 @@
     "lb23il-11": {
       "skill": "lb23il-11",
       "name": "Bitter Burst",
-      "icon": "c-snap freeze",
+      "icon": "c-snap_freeze",
       "x": -546,
       "y": 255,
       "maxPoints": 5,
@@ -15909,7 +15909,7 @@
     "lb23il-14": {
       "skill": "lb23il-14",
       "name": "Effluent Defense",
-      "icon": "_c-ward generation buff (generic)",
+      "icon": "c-ward_generation_buff_(generic)",
       "x": -32,
       "y": 294,
       "maxPoints": 2,
@@ -15934,7 +15934,7 @@
     "lb23il-15": {
       "skill": "lb23il-15",
       "name": "Storm Razor",
-      "icon": "c-sky bolt-purple",
+      "icon": "c-sky_bolt-purple",
       "x": 197.79999,
       "y": 131,
       "maxPoints": 3,
@@ -15964,7 +15964,7 @@
     "lb23il-16": {
       "skill": "lb23il-16",
       "name": "Chain Lightning",
-      "icon": "_storm call-hex",
+      "icon": "storm_call-hex",
       "x": 457,
       "y": 229,
       "maxPoints": 4,
@@ -16019,7 +16019,7 @@
     "lb23il-18": {
       "skill": "lb23il-18",
       "name": "Convergence",
-      "icon": "c-flurry2 - blue-hex",
+      "icon": "c-flurry2_-_blue-hex",
       "x": 294,
       "y": 307,
       "maxPoints": 1,
@@ -16048,7 +16048,7 @@
     "lb23il-19": {
       "skill": "lb23il-19",
       "name": "Divergence",
-      "icon": "c-flurry3 - blue",
+      "icon": "c-flurry3_-_blue",
       "x": 614,
       "y": 303,
       "maxPoints": 1,
@@ -16077,7 +16077,7 @@
     "lb23il-21": {
       "skill": "lb23il-21",
       "name": "Lightning Attunement",
-      "icon": "_c-sigils of hope temp",
+      "icon": "c-sigils_of_hope_temp",
       "x": 0,
       "y": 181,
       "maxPoints": 2,
@@ -16102,7 +16102,7 @@
     "lb23il-22": {
       "skill": "lb23il-22",
       "name": "Overcharge",
-      "icon": "_mirror-image",
+      "icon": "mirror-image",
       "x": 336.0998,
       "y": -0,
       "maxPoints": 4,
@@ -16132,7 +16132,7 @@
     "lb23il-24": {
       "skill": "lb23il-24",
       "name": "Frontloaded",
-      "icon": "_enchant-weapon",
+      "icon": "enchant-weapon",
       "x": 197.8,
       "y": -131,
       "maxPoints": 5,
@@ -16166,7 +16166,7 @@
     "lb23il-25": {
       "skill": "lb23il-25",
       "name": "Cloud Answer",
-      "icon": "_static",
+      "icon": "static",
       "x": 430,
       "y": -114,
       "maxPoints": 3,
@@ -16194,7 +16194,7 @@
     "lb23il-26": {
       "skill": "lb23il-26",
       "name": "Mortal Capacitor",
-      "icon": "_rodofpower",
+      "icon": "rodofpower",
       "x": 598,
       "y": -40,
       "maxPoints": 5,
@@ -16219,7 +16219,7 @@
     "lb23il-27": {
       "skill": "lb23il-27",
       "name": "Final Spark",
-      "icon": "charged ground",
+      "icon": "charged_ground",
       "x": 598,
       "y": -200,
       "maxPoints": 1,
@@ -16244,7 +16244,7 @@
     "lb23il-28": {
       "skill": "lb23il-28",
       "name": "Innate Conduit",
-      "icon": "c-sky bolt-blue",
+      "icon": "c-sky_bolt-blue",
       "x": 77,
       "y": -195,
       "maxPoints": 1,
@@ -16295,7 +16295,7 @@
     "lb23il-32": {
       "skill": "lb23il-32",
       "name": "Countenance of Mana",
-      "icon": "_c-arcane ascendance",
+      "icon": "c-arcane_ascendance",
       "x": -435,
       "y": 305,
       "maxPoints": 2,
@@ -16347,7 +16347,7 @@
     "me27-2": {
       "skill": "me27-2",
       "name": "Infernal Descent",
-      "icon": "_fire shield",
+      "icon": "fire_shield",
       "x": -124,
       "y": -156,
       "maxPoints": 5,
@@ -16431,7 +16431,7 @@
     "me27-5": {
       "skill": "me27-5",
       "name": "Shattering Star",
-      "icon": "_volcanic-orb2-hex",
+      "icon": "volcanic-orb2-hex",
       "x": -506,
       "y": 183,
       "maxPoints": 2,
@@ -16463,7 +16463,7 @@
     "me27-6": {
       "skill": "me27-6",
       "name": "Jagged Fragments",
-      "icon": "c-flurry2 - orange",
+      "icon": "c-flurry2_-_orange",
       "x": -420,
       "y": 292,
       "maxPoints": 5,
@@ -16491,7 +16491,7 @@
     "me27-7": {
       "skill": "me27-7",
       "name": "Rapid Break Up",
-      "icon": "_c-flame reave",
+      "icon": "c-flame_reave",
       "x": -531,
       "y": 43.999992,
       "maxPoints": 3,
@@ -16519,7 +16519,7 @@
     "me27-8": {
       "skill": "me27-8",
       "name": "Piercing Remnants",
-      "icon": "_disintegrate",
+      "icon": "disintegrate",
       "x": -651.00006,
       "y": 156.99998,
       "maxPoints": 1,
@@ -16578,7 +16578,7 @@
     "me27-10": {
       "skill": "me27-10",
       "name": "Stardust",
-      "icon": "_ward-blast",
+      "icon": "ward-blast",
       "x": 0,
       "y": -189,
       "maxPoints": 4,
@@ -16606,7 +16606,7 @@
     "me27-11": {
       "skill": "me27-11",
       "name": "Rapid Descent",
-      "icon": "fireball alt",
+      "icon": "fireball_alt",
       "x": 309,
       "y": 211,
       "maxPoints": 5,
@@ -16633,7 +16633,7 @@
     "me27-12": {
       "skill": "me27-12",
       "name": "Twin Meteors",
-      "icon": "_flankingstrike-hex",
+      "icon": "flankingstrike-hex",
       "x": 523,
       "y": 236,
       "maxPoints": 1,
@@ -16665,7 +16665,7 @@
     "me27-13": {
       "skill": "me27-13",
       "name": "Distant Craters",
-      "icon": "_glyph of fire",
+      "icon": "glyph_of_fire",
       "x": 366,
       "y": 79,
       "maxPoints": 5,
@@ -16693,7 +16693,7 @@
     "me27-14": {
       "skill": "me27-14",
       "name": "Meteor Shower",
-      "icon": "meteor rain",
+      "icon": "meteor_rain",
       "x": 554,
       "y": 70,
       "maxPoints": 3,
@@ -16722,7 +16722,7 @@
     "me27-15": {
       "skill": "me27-15",
       "name": "Rapid Impacts",
-      "icon": "fireball multiple",
+      "icon": "fireball_multiple",
       "x": 534,
       "y": -89,
       "maxPoints": 3,
@@ -16775,7 +16775,7 @@
     "me27-17": {
       "skill": "me27-17",
       "name": "Mana Fall",
-      "icon": "_focus",
+      "icon": "focus",
       "x": 304,
       "y": -39,
       "maxPoints": 4,
@@ -16800,7 +16800,7 @@
     "me27-18": {
       "skill": "me27-18",
       "name": "Apocalyptic Impact",
-      "icon": "_glyph of fire alt",
+      "icon": "glyph_of_fire_alt",
       "x": -252,
       "y": -211,
       "maxPoints": 5,
@@ -16825,7 +16825,7 @@
     "me27-19": {
       "skill": "me27-19",
       "name": "Extinction",
-      "icon": "_disintegrate",
+      "icon": "disintegrate",
       "x": 176,
       "y": -63,
       "maxPoints": 4,
@@ -16856,7 +16856,7 @@
     "me27-20": {
       "skill": "me27-20",
       "name": "Astral Cataclysm",
-      "icon": "_phoenix strike",
+      "icon": "phoenix_strike",
       "x": 115.1,
       "y": -239.7,
       "maxPoints": 3,
@@ -16881,7 +16881,7 @@
     "me27-22": {
       "skill": "me27-22",
       "name": "Rain of Fire",
-      "icon": "c-sky bolt",
+      "icon": "c-sky_bolt",
       "x": 515,
       "y": -230,
       "maxPoints": 1,
@@ -16906,7 +16906,7 @@
     "me27-23": {
       "skill": "me27-23",
       "name": "World Ender",
-      "icon": "_fireball explosion-hex",
+      "icon": "fireball_explosion-hex",
       "x": 245,
       "y": -208,
       "maxPoints": 1,
@@ -16931,7 +16931,7 @@
     "me27-24": {
       "skill": "me27-24",
       "name": "Aftermath",
-      "icon": "_spellbook arcane",
+      "icon": "spellbook_arcane",
       "x": 0,
       "y": 189,
       "maxPoints": 3,
@@ -16956,7 +16956,7 @@
     "me27-25": {
       "skill": "me27-25",
       "name": "Craterborn",
-      "icon": "_spellbook fire",
+      "icon": "spellbook_fire",
       "x": -280,
       "y": 96.2,
       "maxPoints": 5,
@@ -16988,7 +16988,7 @@
     "me27-26": {
       "skill": "me27-26",
       "name": "Cycle of Fire",
-      "icon": "_arcane bolt",
+      "icon": "arcane_bolt",
       "x": -229.8,
       "y": 225.9,
       "maxPoints": 3,
@@ -17014,7 +17014,7 @@
     "ms26-0": {
       "skill": "ms26-0",
       "name": "Mana Strike",
-      "icon": "_mana strike-root",
+      "icon": "mana_strike-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -17039,7 +17039,7 @@
     "ms26-2": {
       "skill": "ms26-2",
       "name": "Swift Sap",
-      "icon": "_swipe",
+      "icon": "swipe2",
       "x": 178,
       "y": -51,
       "maxPoints": 4,
@@ -17068,7 +17068,7 @@
     "ms26-3": {
       "skill": "ms26-3",
       "name": "Rage Sap",
-      "icon": "_rodofpower",
+      "icon": "rodofpower",
       "x": 322.3,
       "y": -133.5,
       "maxPoints": 5,
@@ -17096,7 +17096,7 @@
     "ms26-4": {
       "skill": "ms26-4",
       "name": "Rune Sap",
-      "icon": "_hammer-throw-purple",
+      "icon": "hammer-throw-purple",
       "x": 184.9,
       "y": -195.4,
       "maxPoints": 3,
@@ -17121,7 +17121,7 @@
     "ms26-5": {
       "skill": "ms26-5",
       "name": "Teleporting Strikes",
-      "icon": "_teleport-hex",
+      "icon": "teleport-hex",
       "x": 476,
       "y": -149,
       "maxPoints": 1,
@@ -17149,7 +17149,7 @@
     "ms26-6": {
       "skill": "ms26-6",
       "name": "Bountiful Victory",
-      "icon": "_kill command",
+      "icon": "kill_command",
       "x": -271,
       "y": 270,
       "maxPoints": 4,
@@ -17175,7 +17175,7 @@
     "ms26-7": {
       "skill": "ms26-7",
       "name": "Critical Mana",
-      "icon": "_dissolve",
+      "icon": "dissolve",
       "x": 227,
       "y": 309,
       "maxPoints": 5,
@@ -17206,7 +17206,7 @@
     "ms26-8": {
       "skill": "ms26-8",
       "name": "Critical Rejuvenation",
-      "icon": "_eterra's blessing",
+      "icon": "eterra's_blessing",
       "x": 429,
       "y": 294,
       "maxPoints": 1,
@@ -17232,7 +17232,7 @@
     "ms26-9": {
       "skill": "ms26-9",
       "name": "Mana Drain",
-      "icon": "_focus",
+      "icon": "focus",
       "x": 429,
       "y": 178,
       "maxPoints": 4,
@@ -17294,7 +17294,7 @@
     "ms26-11": {
       "skill": "ms26-11",
       "name": "Repulsing Strikes",
-      "icon": "_summonspriggan",
+      "icon": "summonspriggan",
       "x": 268,
       "y": 81,
       "maxPoints": 1,
@@ -17319,7 +17319,7 @@
     "ms26-12": {
       "skill": "ms26-12",
       "name": "Spark Charges",
-      "icon": "chain lightning-hex",
+      "icon": "chain_lightning-hex",
       "x": -352,
       "y": 149,
       "maxPoints": 4,
@@ -17344,7 +17344,7 @@
     "ms26-13": {
       "skill": "ms26-13",
       "name": "Celestial Precision",
-      "icon": "_summon vale spirit",
+      "icon": "summon_vale_spirit",
       "x": -23,
       "y": 271,
       "maxPoints": 1,
@@ -17374,7 +17374,7 @@
     "ms26-14": {
       "skill": "ms26-14",
       "name": "Mana Spark",
-      "icon": "reaper form",
+      "icon": "reaper_form",
       "x": -140,
       "y": 127,
       "maxPoints": 3,
@@ -17403,7 +17403,7 @@
     "ms26-15": {
       "skill": "ms26-15",
       "name": "Starved Strikes",
-      "icon": "hungering soul",
+      "icon": "hungering_soul",
       "x": 165,
       "y": 94,
       "maxPoints": 4,
@@ -17433,7 +17433,7 @@
     "ms26-16": {
       "skill": "ms26-16",
       "name": "Avatar of Hunger",
-      "icon": "_assemble abomination",
+      "icon": "assemble_abomination",
       "x": 56,
       "y": 177,
       "maxPoints": 5,
@@ -17490,7 +17490,7 @@
     "ms26-18": {
       "skill": "ms26-18",
       "name": "Explosive Flurry",
-      "icon": "_storm call",
+      "icon": "storm_call",
       "x": -614,
       "y": 52.00001,
       "maxPoints": 2,
@@ -17518,7 +17518,7 @@
     "ms26-19": {
       "skill": "ms26-19",
       "name": "Essence of Control",
-      "icon": "_innervate",
+      "icon": "innervate",
       "x": -540,
       "y": 178,
       "maxPoints": 3,
@@ -17573,7 +17573,7 @@
     "ms26-21": {
       "skill": "ms26-21",
       "name": "Reclamation",
-      "icon": "leech life",
+      "icon": "leech_life",
       "x": 257,
       "y": 175,
       "maxPoints": 3,
@@ -17603,7 +17603,7 @@
     "ms26-22": {
       "skill": "ms26-22",
       "name": "Arcanist's Blade",
-      "icon": "_c-enchant weapon",
+      "icon": "c-enchant_weapon",
       "x": -187,
       "y": -8,
       "maxPoints": 3,
@@ -17631,7 +17631,7 @@
     "ms26-23": {
       "skill": "ms26-23",
       "name": "Ward Strike",
-      "icon": "_c-ring-of-shields",
+      "icon": "c-ring-of-shields",
       "x": -175,
       "y": -149,
       "maxPoints": 3,
@@ -17659,7 +17659,7 @@
     "ms26-24": {
       "skill": "ms26-24",
       "name": "Transfusion",
-      "icon": "_c-shatter strike",
+      "icon": "c-shatter_strike",
       "x": -333,
       "y": -128,
       "maxPoints": 4,
@@ -17688,7 +17688,7 @@
     "ms26-25": {
       "skill": "ms26-25",
       "name": "Mind Warden",
-      "icon": "_c-sigils of hope temp",
+      "icon": "c-sigils_of_hope_temp",
       "x": -490,
       "y": -199,
       "maxPoints": 2,
@@ -17713,7 +17713,7 @@
     "ms26-26": {
       "skill": "ms26-26",
       "name": "Star Guide",
-      "icon": "c-sky bolt-blue",
+      "icon": "c-sky_bolt-blue",
       "x": 661,
       "y": -78,
       "maxPoints": 1,
@@ -18667,7 +18667,7 @@
     "sb44eQ-0": {
       "skill": "sb44eQ-0",
       "name": "Enchant Weapon",
-      "icon": "_c-enchant weapon 1-root",
+      "icon": "c-enchant_weapon_1-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -18692,7 +18692,7 @@
     "sb44eQ-1": {
       "skill": "sb44eQ-1",
       "name": "Celerity",
-      "icon": "_c-enchant weapon",
+      "icon": "c-enchant_weapon",
       "x": -141,
       "y": -110,
       "maxPoints": 5,
@@ -18752,7 +18752,7 @@
     "sb44eQ-3": {
       "skill": "sb44eQ-3",
       "name": "Thundering",
-      "icon": "c-lightning damage buff",
+      "icon": "c-lightning_damage_buff",
       "x": -411,
       "y": -195,
       "maxPoints": 5,
@@ -18778,7 +18778,7 @@
     "sb44eQ-4": {
       "skill": "sb44eQ-4",
       "name": "Conduit",
-      "icon": "chain lightning-hex",
+      "icon": "chain_lightning-hex",
       "x": -499,
       "y": -110,
       "maxPoints": 1,
@@ -18808,7 +18808,7 @@
     "sb44eQ-5": {
       "skill": "sb44eQ-5",
       "name": "Capacitance",
-      "icon": "charged ground",
+      "icon": "charged_ground",
       "x": -629,
       "y": -175,
       "maxPoints": 4,
@@ -18862,7 +18862,7 @@
     "sb44eQ-7": {
       "skill": "sb44eQ-7",
       "name": "Molten Steel",
-      "icon": "_flame reave temp",
+      "icon": "flame_reave_temp",
       "x": -282,
       "y": 4.1,
       "maxPoints": 5,
@@ -18924,7 +18924,7 @@
     "sb44eQ-9": {
       "skill": "sb44eQ-9",
       "name": "Eternal Flames",
-      "icon": "c-fire damage buff",
+      "icon": "c-fire_damage_buff",
       "x": -402.3,
       "y": 181.3,
       "maxPoints": 5,
@@ -18951,7 +18951,7 @@
     "sb44eQ-10": {
       "skill": "sb44eQ-10",
       "name": "Conflagrate",
-      "icon": "_c-flame reave-hex",
+      "icon": "c-flame_reave-hex",
       "x": -537.6,
       "y": 303.40002,
       "maxPoints": 1,
@@ -18978,7 +18978,7 @@
     "sb44eQ-11": {
       "skill": "sb44eQ-11",
       "name": "Searing Conflagration",
-      "icon": "_conflagrate",
+      "icon": "conflagrate",
       "x": -592.69995,
       "y": 122.799995,
       "maxPoints": 4,
@@ -19034,7 +19034,7 @@
     "sb44eQ-13": {
       "skill": "sb44eQ-13",
       "name": "Flameblast",
-      "icon": "_volcanic orb temp",
+      "icon": "volcanic_orb_temp",
       "x": 0,
       "y": 295,
       "maxPoints": 3,
@@ -19063,7 +19063,7 @@
     "sb44eQ-14": {
       "skill": "sb44eQ-14",
       "name": "Concentration",
-      "icon": "_c-arcane ascendance",
+      "icon": "c-arcane_ascendance",
       "x": 141,
       "y": 110,
       "maxPoints": 4,
@@ -19092,7 +19092,7 @@
     "sb44eQ-15": {
       "skill": "sb44eQ-15",
       "name": "Desperation",
-      "icon": "_c-elemental damage buff (generic)-hex",
+      "icon": "c-elemental_damage_buff_(generic)-hex",
       "x": 221,
       "y": 295,
       "maxPoints": 1,
@@ -19145,7 +19145,7 @@
     "sb44eQ-17": {
       "skill": "sb44eQ-17",
       "name": "Kindling Blade",
-      "icon": "_c-ward retention buff (generic)-hex",
+      "icon": "c-ward_retention_buff_(generic)-hex",
       "x": 477.19995,
       "y": 199,
       "maxPoints": 1,
@@ -19231,7 +19231,7 @@
     "sb44eQ-21": {
       "skill": "sb44eQ-21",
       "name": "Icicle Strike",
-      "icon": "ice bolt",
+      "icon": "ice_bolt2",
       "x": 381,
       "y": -37,
       "maxPoints": 4,
@@ -19261,7 +19261,7 @@
     "sb44eQ-22": {
       "skill": "sb44eQ-22",
       "name": "To The Bone",
-      "icon": "ice wall-hex",
+      "icon": "ice_wall-hex2",
       "x": 562.80005,
       "y": -37,
       "maxPoints": 1,
@@ -19289,7 +19289,7 @@
     "sb44eQ-23": {
       "skill": "sb44eQ-23",
       "name": "Frostbrand",
-      "icon": "c-cold damage buff",
+      "icon": "c-cold_damage_buff",
       "x": 381,
       "y": -175,
       "maxPoints": 5,
@@ -19317,7 +19317,7 @@
     "sb44eQ-24": {
       "skill": "sb44eQ-24",
       "name": "Overloaded",
-      "icon": "_focus-hex",
+      "icon": "focus-hex",
       "x": 562.80005,
       "y": -175,
       "maxPoints": 1,
@@ -19342,7 +19342,7 @@
     "sb44eQ-25": {
       "skill": "sb44eQ-25",
       "name": "Cleansed by the Elements",
-      "icon": "_c-health regeneration buff (generic)_2",
+      "icon": "c-health_regeneration_buff_(generic)_2",
       "x": 0,
       "y": -175,
       "maxPoints": 1,
@@ -19372,7 +19372,7 @@
     "sb44eQ-26": {
       "skill": "sb44eQ-26",
       "name": "Unstable Enchantment",
-      "icon": "_nova-hex",
+      "icon": "nova-hex",
       "x": 175,
       "y": -221.10004,
       "maxPoints": 1,
@@ -19397,7 +19397,7 @@
     "so35a-0": {
       "skill": "so35a-0",
       "name": "Static Orb",
-      "icon": "_static_orb-root",
+      "icon": "static_orb-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -19420,7 +19420,7 @@
     "so35a-2": {
       "skill": "so35a-2",
       "name": "Shocking Conduit",
-      "icon": "c-lightning damage buff",
+      "icon": "c-lightning_damage_buff",
       "x": -160,
       "y": -0,
       "maxPoints": 5,
@@ -19449,7 +19449,7 @@
     "so35a-3": {
       "skill": "so35a-3",
       "name": "Manacharged",
-      "icon": "_c-mana regeneration debuff (generic)",
+      "icon": "c-mana_regeneration_debuff_(generic)",
       "x": -204,
       "y": -182,
       "maxPoints": 5,
@@ -19479,7 +19479,7 @@
     "so35a-4": {
       "skill": "so35a-4",
       "name": "Static Ground",
-      "icon": "charged ground-hex",
+      "icon": "charged_ground-hex",
       "x": -441.9,
       "y": -146,
       "maxPoints": 1,
@@ -19559,7 +19559,7 @@
     "so35a-7": {
       "skill": "so35a-7",
       "name": "Insidious Focus",
-      "icon": "_c-mana regeneration buff (generic)",
+      "icon": "c-mana_regeneration_buff_(generic)",
       "x": -377.3,
       "y": 60,
       "maxPoints": 1,
@@ -19589,7 +19589,7 @@
     "so35a-8": {
       "skill": "so35a-8",
       "name": "Ball Lightning",
-      "icon": "_c-lightningball-hex",
+      "icon": "c-lightningball-hex",
       "x": -547.2,
       "y": 29.5,
       "maxPoints": 1,
@@ -19675,7 +19675,7 @@
     "so35a-11": {
       "skill": "so35a-11",
       "name": "Wintry Power",
-      "icon": "c-cold damage buff",
+      "icon": "c-cold_damage_buff",
       "x": -547.2,
       "y": 295.9,
       "maxPoints": 5,
@@ -19703,7 +19703,7 @@
     "so35a-12": {
       "skill": "so35a-12",
       "name": "Glacial Orb",
-      "icon": "ice bolt",
+      "icon": "ice_bolt2",
       "x": -404.6,
       "y": 295.9,
       "maxPoints": 1,
@@ -19730,7 +19730,7 @@
     "so35a-13": {
       "skill": "so35a-13",
       "name": "Orbital Fulmination",
-      "icon": "c-flurry2 - blue-hex",
+      "icon": "c-flurry2_-_blue-hex",
       "x": -318.8,
       "y": -63,
       "maxPoints": 5,
@@ -19757,7 +19757,7 @@
     "so35a-14": {
       "skill": "so35a-14",
       "name": "Storm Conductor",
-      "icon": "_c-spellpower  1 debuff (generic)",
+      "icon": "c-spellpower__1_debuff_(generic)",
       "x": -279.4,
       "y": 180.3,
       "maxPoints": 5,
@@ -19787,7 +19787,7 @@
     "so35a-15": {
       "skill": "so35a-15",
       "name": "Arcane Current",
-      "icon": "_black hole temp-hex",
+      "icon": "black_hole_temp-hex",
       "x": -90,
       "y": 150,
       "maxPoints": 4,
@@ -19847,7 +19847,7 @@
     "so35a-17": {
       "skill": "so35a-17",
       "name": "Critical Trajectory",
-      "icon": "_c-ward generation debuff (generic)",
+      "icon": "c-ward_generation_debuff_(generic)",
       "x": 128,
       "y": 304.3,
       "maxPoints": 4,
@@ -19906,7 +19906,7 @@
     "so35a-19": {
       "skill": "so35a-19",
       "name": "Static Armor",
-      "icon": "_c-damage mitigation buff (generic)",
+      "icon": "c-damage_mitigation_buff_(generic)",
       "x": 337,
       "y": 242.1,
       "maxPoints": 4,
@@ -19936,7 +19936,7 @@
     "so35a-20": {
       "skill": "so35a-20",
       "name": "Storm Burst",
-      "icon": "_c-spellpower buff (generic)_2-hex",
+      "icon": "c-spellpower_buff_(generic)_2-hex",
       "x": 537.2,
       "y": 304.3,
       "maxPoints": 1,
@@ -20023,7 +20023,7 @@
     "so35a-23": {
       "skill": "so35a-23",
       "name": "Fusionblast",
-      "icon": "chain lightning-hex",
+      "icon": "chain_lightning-hex",
       "x": 419.4,
       "y": -41.59999,
       "maxPoints": 5,
@@ -20054,7 +20054,7 @@
     "so35a-24": {
       "skill": "so35a-24",
       "name": "Atomic Manipulation",
-      "icon": "_teleport",
+      "icon": "teleport",
       "x": 631.4,
       "y": -75.5,
       "maxPoints": 3,
@@ -20109,7 +20109,7 @@
     "so35a-26": {
       "skill": "so35a-26",
       "name": "Overcharged Detonation",
-      "icon": "_focus",
+      "icon": "focus",
       "x": 190.8,
       "y": -182,
       "maxPoints": 1,
@@ -20138,7 +20138,7 @@
     "so35a-27": {
       "skill": "so35a-27",
       "name": "Auxiliary Capacity",
-      "icon": "c-multishot - blue 1 sequence-hex",
+      "icon": "c-multishot_-_blue_1_sequence-hex",
       "x": 0,
       "y": -160,
       "maxPoints": 1,
@@ -20164,7 +20164,7 @@
     "so35a-28": {
       "skill": "so35a-28",
       "name": "Scatter Blast",
-      "icon": "_volcanic-orb-blue-hex",
+      "icon": "volcanic-orb-blue-hex",
       "x": 362.3,
       "y": -196,
       "maxPoints": 4,
@@ -20192,7 +20192,7 @@
     "ss3tre-0": {
       "skill": "ss3tre-0",
       "name": "Shatter Strike",
-      "icon": "_c-shatter strike-root",
+      "icon": "c-shatter_strike-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -20250,7 +20250,7 @@
     "ss3tre-3": {
       "skill": "ss3tre-3",
       "name": "Frostbitten",
-      "icon": "_freeze buff",
+      "icon": "freeze_buff",
       "x": 125,
       "y": -175,
       "maxPoints": 4,
@@ -20277,7 +20277,7 @@
     "ss3tre-4": {
       "skill": "ss3tre-4",
       "name": "Razor Ice",
-      "icon": "_frostbite",
+      "icon": "frostbite",
       "x": 333.6,
       "y": -220.8,
       "maxPoints": 5,
@@ -20391,7 +20391,7 @@
     "ss3tre-8": {
       "skill": "ss3tre-8",
       "name": "Shiver",
-      "icon": "c-snap freeze",
+      "icon": "c-snap_freeze",
       "x": -214.9,
       "y": -1.2159E-05,
       "maxPoints": 5,
@@ -20420,7 +20420,7 @@
     "ss3tre-9": {
       "skill": "ss3tre-9",
       "name": "Cold Steel",
-      "icon": "_mana strike",
+      "icon": "mana_strike",
       "x": -405.5,
       "y": 40,
       "maxPoints": 4,
@@ -20445,7 +20445,7 @@
     "ss3tre-10": {
       "skill": "ss3tre-10",
       "name": "Obliteration",
-      "icon": "_c-enchant weapon",
+      "icon": "c-enchant_weapon",
       "x": -126.5,
       "y": 144,
       "maxPoints": 2,
@@ -20473,7 +20473,7 @@
     "ss3tre-11": {
       "skill": "ss3tre-11",
       "name": "Winter's Boon",
-      "icon": "_ice ward 1",
+      "icon": "ice_ward_1",
       "x": -349.3,
       "y": 207.5,
       "maxPoints": 1,
@@ -20500,7 +20500,7 @@
     "ss3tre-12": {
       "skill": "ss3tre-12",
       "name": "Arctic Blast",
-      "icon": "_rive 2 silver-hex",
+      "icon": "rive_2_silver-hex",
       "x": -581,
       "y": 68,
       "maxPoints": 1,
@@ -20550,7 +20550,7 @@
     "ss3tre-14": {
       "skill": "ss3tre-14",
       "name": "Frigid Zephyr",
-      "icon": "c-shift - cyan-hex",
+      "icon": "c-shift_-_cyan-hex",
       "x": -500.4,
       "y": 291.2,
       "maxPoints": 1,
@@ -20658,7 +20658,7 @@
     "ss3tre-18": {
       "skill": "ss3tre-18",
       "name": "Lingering Chill",
-      "icon": "aura of decay blue",
+      "icon": "aura_of_decay_blue",
       "x": 119.5,
       "y": 144,
       "maxPoints": 4,
@@ -20717,7 +20717,7 @@
     "ss3tre-20": {
       "skill": "ss3tre-20",
       "name": "Acclimated",
-      "icon": "_c-stun susceptibility buff (generic)",
+      "icon": "c-stun_susceptibility_buff_(generic)",
       "x": 530.8,
       "y": 308.1,
       "maxPoints": 2,
@@ -20744,7 +20744,7 @@
     "ss3tre-21": {
       "skill": "ss3tre-21",
       "name": "Hoarfrost",
-      "icon": "_c-ward generation buff (generic)",
+      "icon": "c-ward_generation_buff_(generic)",
       "x": 584.9001,
       "y": 175,
       "maxPoints": 4,
@@ -20774,7 +20774,7 @@
     "ss3tre-22": {
       "skill": "ss3tre-22",
       "name": "Frozen Shrapnel",
-      "icon": "ice bolt-hex",
+      "icon": "ice_bolt-hex",
       "x": 406.2,
       "y": 28,
       "maxPoints": 1,
@@ -20893,7 +20893,7 @@
     "ss3tre-26": {
       "skill": "ss3tre-26",
       "name": "Unrelenting Winter",
-      "icon": "_glyph of ice-hex",
+      "icon": "glyph_of_ice-hex",
       "x": 584.90015,
       "y": -96.49999,
       "maxPoints": 1,
@@ -20944,7 +20944,7 @@
     "st47ic-2": {
       "skill": "st47ic-2",
       "name": "High Voltage",
-      "icon": "c-shift - azure",
+      "icon": "c-shift_-_azure",
       "x": -142.2,
       "y": -123.1,
       "maxPoints": 4,
@@ -21024,7 +21024,7 @@
     "st47ic-5": {
       "skill": "st47ic-5",
       "name": "Overcharge",
-      "icon": "_static",
+      "icon": "static",
       "x": -175,
       "y": -0,
       "maxPoints": 4,
@@ -21082,7 +21082,7 @@
     "st47ic-7": {
       "skill": "st47ic-7",
       "name": "Arcblast",
-      "icon": "_c-vale spirit bolt-hex",
+      "icon": "c-vale_spirit_bolt-hex",
       "x": -576,
       "y": -168,
       "maxPoints": 1,
@@ -21108,7 +21108,7 @@
     "st47ic-8": {
       "skill": "st47ic-8",
       "name": "Reach",
-      "icon": "_rodofpower",
+      "icon": "rodofpower",
       "x": -512,
       "y": -0,
       "maxPoints": 2,
@@ -21133,7 +21133,7 @@
     "st47ic-9": {
       "skill": "st47ic-9",
       "name": "Critical Mass",
-      "icon": "_charged ground temp",
+      "icon": "charged_ground_temp",
       "x": -420.4,
       "y": 139,
       "maxPoints": 4,
@@ -21160,7 +21160,7 @@
     "st47ic-10": {
       "skill": "st47ic-10",
       "name": "Surge",
-      "icon": "c-warding blade-hex",
+      "icon": "c-warding_blade-hex",
       "x": -599.5,
       "y": 139,
       "maxPoints": 1,
@@ -21187,7 +21187,7 @@
     "st47ic-11": {
       "skill": "st47ic-11",
       "name": "Empower",
-      "icon": "_c-enchant weapon",
+      "icon": "c-enchant_weapon",
       "x": -110.4,
       "y": 150,
       "maxPoints": 5,
@@ -21215,7 +21215,7 @@
     "st47ic-12": {
       "skill": "st47ic-12",
       "name": "Electrify",
-      "icon": "c-flurry3 - blue",
+      "icon": "c-flurry3_-_blue",
       "x": -420.4,
       "y": 283.2001,
       "maxPoints": 3,
@@ -21243,7 +21243,7 @@
     "st47ic-13": {
       "skill": "st47ic-13",
       "name": "Lightning Cleave",
-      "icon": "_mirror-image",
+      "icon": "mirror-image",
       "x": -599.5,
       "y": 283.2001,
       "maxPoints": 1,
@@ -21268,7 +21268,7 @@
     "st47ic-14": {
       "skill": "st47ic-14",
       "name": "Power Surge",
-      "icon": "_mana strike",
+      "icon": "mana_strike",
       "x": 0,
       "y": 283.20007,
       "maxPoints": 1,
@@ -21294,7 +21294,7 @@
     "st47ic-15": {
       "skill": "st47ic-15",
       "name": "Reverberation",
-      "icon": "c-shadow assault - blue",
+      "icon": "c-shadow_assault_-_blue",
       "x": 175,
       "y": -0,
       "maxPoints": 5,
@@ -21324,7 +21324,7 @@
     "st47ic-16": {
       "skill": "st47ic-16",
       "name": "Insulation",
-      "icon": "_c-ward generation buff (generic)",
+      "icon": "c-ward_generation_buff_(generic)",
       "x": 265,
       "y": 150,
       "maxPoints": 4,
@@ -21353,7 +21353,7 @@
     "st47ic-17": {
       "skill": "st47ic-17",
       "name": "Forked Lightning",
-      "icon": "c-ice barrage green",
+      "icon": "c-ice_barrage_green",
       "x": 175,
       "y": 283.20004,
       "maxPoints": 3,
@@ -21378,7 +21378,7 @@
     "st47ic-18": {
       "skill": "st47ic-18",
       "name": "Kickstart",
-      "icon": "_c-ward retention buff (generic)-hex",
+      "icon": "c-ward_retention_buff_(generic)-hex",
       "x": 365,
       "y": 283.20004,
       "maxPoints": 1,
@@ -21403,7 +21403,7 @@
     "st47ic-19": {
       "skill": "st47ic-19",
       "name": "Overload",
-      "icon": "charged ground-hex",
+      "icon": "charged_ground-hex",
       "x": 430,
       "y": -0,
       "maxPoints": 1,
@@ -21433,7 +21433,7 @@
     "st47ic-20": {
       "skill": "st47ic-20",
       "name": "Stabilizing Current",
-      "icon": "_rodofpower",
+      "icon": "rodofpower",
       "x": 665,
       "y": 50,
       "maxPoints": 4,
@@ -21461,7 +21461,7 @@
     "st47ic-21": {
       "skill": "st47ic-21",
       "name": "Diode",
-      "icon": "_ring of shields temp",
+      "icon": "ring_of_shields_temp",
       "x": 430,
       "y": 158.20001,
       "maxPoints": 5,
@@ -21489,7 +21489,7 @@
     "st47ic-22": {
       "skill": "st47ic-22",
       "name": "Unlimited Power",
-      "icon": "chain lightning-hex",
+      "icon": "chain_lightning-hex",
       "x": 636,
       "y": 208.2,
       "maxPoints": 2,
@@ -21545,7 +21545,7 @@
     "st47ic-24": {
       "skill": "st47ic-24",
       "name": "Imbued Lightning",
-      "icon": "c-lightning damage buff",
+      "icon": "c-lightning_damage_buff",
       "x": 528,
       "y": -123.1,
       "maxPoints": 5,
@@ -21597,7 +21597,7 @@
     "st47ic-26": {
       "skill": "st47ic-26",
       "name": "Oscillate",
-      "icon": "_c-stagger",
+      "icon": "c-stagger",
       "x": 615,
       "y": -230,
       "maxPoints": 1,
@@ -21622,7 +21622,7 @@
     "st47ic-27": {
       "skill": "st47ic-27",
       "name": "Fulminating Blows",
-      "icon": "_enchant-weapon",
+      "icon": "enchant-weapon",
       "x": 175,
       "y": -185,
       "maxPoints": 3,
@@ -21704,7 +21704,7 @@
     "su5g3-2": {
       "skill": "su5g3-2",
       "name": "Expanse",
-      "icon": "_static_orb",
+      "icon": "static_orb",
       "x": -145,
       "y": -90,
       "maxPoints": 5,
@@ -21732,7 +21732,7 @@
     "su5g3-3": {
       "skill": "su5g3-3",
       "name": "Stagnant",
-      "icon": "_c-stagger-hex",
+      "icon": "c-stagger-hex",
       "x": -417.5,
       "y": -101,
       "maxPoints": 3,
@@ -21757,7 +21757,7 @@
     "su5g3-4": {
       "skill": "su5g3-4",
       "name": "Charged Movement",
-      "icon": "charged ground",
+      "icon": "charged_ground",
       "x": -319.7,
       "y": -206.3,
       "maxPoints": 4,
@@ -21784,7 +21784,7 @@
     "su5g3-5": {
       "skill": "su5g3-5",
       "name": "Crackling Blades",
-      "icon": "_static-blue",
+      "icon": "static-blue",
       "x": -513,
       "y": -206.29999,
       "maxPoints": 2,
@@ -21813,7 +21813,7 @@
     "su5g3-6": {
       "skill": "su5g3-6",
       "name": "Shocking Blows",
-      "icon": "c-lightning damage buff",
+      "icon": "c-lightning_damage_buff",
       "x": -145,
       "y": 99,
       "maxPoints": 5,
@@ -21897,7 +21897,7 @@
     "su5g3-9": {
       "skill": "su5g3-9",
       "name": "Dynamics",
-      "icon": "_anamoly",
+      "icon": "anamoly",
       "x": -637.9,
       "y": -101,
       "maxPoints": 2,
@@ -21925,7 +21925,7 @@
     "su5g3-10": {
       "skill": "su5g3-10",
       "name": "Conduit",
-      "icon": "_static_orb",
+      "icon": "static_orb",
       "x": -319.7,
       "y": 209.6,
       "maxPoints": 3,
@@ -21952,7 +21952,7 @@
     "su5g3-11": {
       "skill": "su5g3-11",
       "name": "Static Buildup",
-      "icon": "_lightning bolt",
+      "icon": "lightning_bolt",
       "x": -477.4,
       "y": 209.6,
       "maxPoints": 5,
@@ -22030,7 +22030,7 @@
     "su5g3-14": {
       "skill": "su5g3-14",
       "name": "Effluence",
-      "icon": "_spellbook arcane",
+      "icon": "spellbook_arcane",
       "x": -171.2,
       "y": 301,
       "maxPoints": 5,
@@ -22061,7 +22061,7 @@
     "su5g3-15": {
       "skill": "su5g3-15",
       "name": "Longstrider",
-      "icon": "_teleport-hex",
+      "icon": "teleport-hex",
       "x": 0,
       "y": 178.2,
       "maxPoints": 5,
@@ -22088,7 +22088,7 @@
     "su5g3-16": {
       "skill": "su5g3-16",
       "name": "Storm Aegis",
-      "icon": "_c-ward generation buff (generic)",
+      "icon": "c-ward_generation_buff_(generic)",
       "x": 145,
       "y": 99,
       "maxPoints": 5,
@@ -22116,7 +22116,7 @@
     "su5g3-17": {
       "skill": "su5g3-17",
       "name": "Shielding Efflux",
-      "icon": "_c-ward retention buff (generic)",
+      "icon": "c-ward_retention_buff_(generic)",
       "x": 171.9,
       "y": 301,
       "maxPoints": 5,
@@ -22175,7 +22175,7 @@
     "su5g3-19": {
       "skill": "su5g3-19",
       "name": "Coldfront",
-      "icon": "_cold beam",
+      "icon": "cold_beam",
       "x": 467.5,
       "y": 241.9,
       "maxPoints": 1,
@@ -22203,7 +22203,7 @@
     "su5g3-20": {
       "skill": "su5g3-20",
       "name": "Cryomantic Path",
-      "icon": "c-snap freeze",
+      "icon": "c-snap_freeze",
       "x": 620.7,
       "y": 277.3,
       "maxPoints": 5,
@@ -22283,7 +22283,7 @@
     "su5g3-23": {
       "skill": "su5g3-23",
       "name": "Ride the Lightning",
-      "icon": "chain lightning-hex",
+      "icon": "chain_lightning-hex",
       "x": 554.6,
       "y": 74,
       "maxPoints": 1,
@@ -22309,7 +22309,7 @@
     "su5g3-24": {
       "skill": "su5g3-24",
       "name": "Storm Battery",
-      "icon": "c-warding blade",
+      "icon": "c-warding_blade",
       "x": 243,
       "y": -195.89996,
       "maxPoints": 5,
@@ -22369,7 +22369,7 @@
     "su5g3-26": {
       "skill": "su5g3-26",
       "name": "Fulmination",
-      "icon": "_glyph of fire",
+      "icon": "glyph_of_fire",
       "x": 625.6,
       "y": -95.9,
       "maxPoints": 4,
@@ -22422,7 +22422,7 @@
     "su5g3-28": {
       "skill": "su5g3-28",
       "name": "Pyroclasm",
-      "icon": "_c-flame reave",
+      "icon": "c-flame_reave",
       "x": 625.6,
       "y": -235.20001,
       "maxPoints": 1,
@@ -22447,7 +22447,7 @@
     "su5g3-30": {
       "skill": "su5g3-30",
       "name": "Concentrated Current",
-      "icon": "c-flurry2 - blue",
+      "icon": "c-flurry2_-_blue",
       "x": -390.8,
       "y": 112.8,
       "maxPoints": 2,
@@ -22473,7 +22473,7 @@
     "sw31a-0": {
       "skill": "sw31a-0",
       "name": "Snap Freeze",
-      "icon": "c-snap freeze-root",
+      "icon": "c-snap_freeze-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -22498,7 +22498,7 @@
     "sw31a-2": {
       "skill": "sw31a-2",
       "name": "Adept",
-      "icon": "chain lightning-green",
+      "icon": "chain_lightning-green",
       "x": -132,
       "y": 137,
       "maxPoints": 8,
@@ -22552,7 +22552,7 @@
     "sw31a-4": {
       "skill": "sw31a-4",
       "name": "Gale Force",
-      "icon": "_frenzy totem2-hex",
+      "icon": "frenzy_totem2-hex",
       "x": -283,
       "y": 283,
       "maxPoints": 5,
@@ -22577,7 +22577,7 @@
     "sw31a-5": {
       "skill": "sw31a-5",
       "name": "Lasting Cold",
-      "icon": "_entangling roots-blue",
+      "icon": "entangling_roots-blue",
       "x": -142,
       "y": -123,
       "maxPoints": 4,
@@ -22605,7 +22605,7 @@
     "sw31a-6": {
       "skill": "sw31a-6",
       "name": "Permafrost",
-      "icon": "_c-arcane ascendance",
+      "icon": "c-arcane_ascendance",
       "x": 0,
       "y": -185,
       "maxPoints": 5,
@@ -22665,7 +22665,7 @@
     "sw31a-8": {
       "skill": "sw31a-8",
       "name": "Deathly cold",
-      "icon": "c-ice barrage",
+      "icon": "c-ice_barrage",
       "x": -350,
       "y": 48,
       "maxPoints": 5,
@@ -22692,7 +22692,7 @@
     "sw31a-9": {
       "skill": "sw31a-9",
       "name": "Snap Shock",
-      "icon": "_charged ground temp-yellow-hex",
+      "icon": "charged_ground_temp-yellow-hex",
       "x": -501,
       "y": -35,
       "maxPoints": 1,
@@ -22725,7 +22725,7 @@
     "sw31a-10": {
       "skill": "sw31a-10",
       "name": "Focused Current",
-      "icon": "_static-yellow",
+      "icon": "static-yellow",
       "x": -483,
       "y": 171,
       "maxPoints": 5,
@@ -22752,7 +22752,7 @@
     "sw31a-11": {
       "skill": "sw31a-11",
       "name": "Electrocute",
-      "icon": "charged ground-yellow",
+      "icon": "charged_ground-yellow",
       "x": -601,
       "y": 289,
       "maxPoints": 5,
@@ -22777,7 +22777,7 @@
     "sw31a-12": {
       "skill": "sw31a-12",
       "name": "Spark Surge",
-      "icon": "chain lightning-yellow",
+      "icon": "chain_lightning-yellow",
       "x": -616,
       "y": -132,
       "maxPoints": 5,
@@ -22802,7 +22802,7 @@
     "sw31a-13": {
       "skill": "sw31a-13",
       "name": "Snow Flurry",
-      "icon": "_c-arcane ascendance",
+      "icon": "c-arcane_ascendance",
       "x": 169,
       "y": -71,
       "maxPoints": 4,
@@ -22831,7 +22831,7 @@
     "sw31a-14": {
       "skill": "sw31a-14",
       "name": "Frostbite",
-      "icon": "_teleport",
+      "icon": "teleport",
       "x": 324,
       "y": -121,
       "maxPoints": 1,
@@ -22859,7 +22859,7 @@
     "sw31a-15": {
       "skill": "sw31a-15",
       "name": "Deadly Aurora",
-      "icon": "_summonvalespirit",
+      "icon": "summonvalespirit",
       "x": 455,
       "y": -4,
       "maxPoints": 6,
@@ -22884,7 +22884,7 @@
     "sw31a-16": {
       "skill": "sw31a-16",
       "name": "Frozen Ground",
-      "icon": "_ice ward 1-hex",
+      "icon": "ice_ward_1-hex",
       "x": 503,
       "y": -162,
       "maxPoints": 1,
@@ -22910,7 +22910,7 @@
     "sw31a-17": {
       "skill": "sw31a-17",
       "name": "Focused Frost",
-      "icon": "ice bolt",
+      "icon": "ice_bolt2",
       "x": 301,
       "y": 45,
       "maxPoints": 3,
@@ -22968,7 +22968,7 @@
     "sw31a-19": {
       "skill": "sw31a-19",
       "name": "Freezing Mist",
-      "icon": "_eterra's blessing-blue",
+      "icon": "eterra's_blessing-blue",
       "x": 662.5,
       "y": 134.5,
       "maxPoints": 1,
@@ -22994,7 +22994,7 @@
     "sw31a-20": {
       "skill": "sw31a-20",
       "name": "Shiver Armor",
-      "icon": "_c-ring-of-shields",
+      "icon": "c-ring-of-shields",
       "x": 214.5,
       "y": 134.6,
       "maxPoints": 5,
@@ -23025,7 +23025,7 @@
     "sw31a-21": {
       "skill": "sw31a-21",
       "name": "Cryomancy",
-      "icon": "_glacier",
+      "icon": "glacier",
       "x": 50,
       "y": 180,
       "maxPoints": 4,
@@ -23135,7 +23135,7 @@
     "te44-0": {
       "skill": "te44-0",
       "name": "Teleport",
-      "icon": "_teleport-root",
+      "icon": "teleport-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -23160,7 +23160,7 @@
     "te44-2": {
       "skill": "te44-2",
       "name": "Unstable Arrival",
-      "icon": "_frenzytotem-hex",
+      "icon": "frenzytotem-hex",
       "x": -230,
       "y": -122,
       "maxPoints": 1,
@@ -23187,7 +23187,7 @@
     "te44-3": {
       "skill": "te44-3",
       "name": "Frigid Departure",
-      "icon": "c-snap freeze-hex",
+      "icon": "c-snap_freeze-hex",
       "x": -480,
       "y": -158,
       "maxPoints": 4,
@@ -23212,7 +23212,7 @@
     "te44-4": {
       "skill": "te44-4",
       "name": "Mana Tunnel",
-      "icon": "arcane ascendance-hex",
+      "icon": "arcane_ascendance-hex",
       "x": -505,
       "y": -10,
       "maxPoints": 1,
@@ -23241,7 +23241,7 @@
     "te44-5": {
       "skill": "te44-5",
       "name": "Tunnel Finder",
-      "icon": "_anamoly",
+      "icon": "anamoly",
       "x": -626,
       "y": 93,
       "maxPoints": 5,
@@ -23297,7 +23297,7 @@
     "te44-7": {
       "skill": "te44-7",
       "name": "Time Dilation",
-      "icon": "_volatile-reversal",
+      "icon": "volatile-reversal",
       "x": -403,
       "y": 108,
       "maxPoints": 5,
@@ -23324,7 +23324,7 @@
     "te44-8": {
       "skill": "te44-8",
       "name": "Decoy Position",
-      "icon": "_mirror-image2-hex",
+      "icon": "mirror-image2-hex",
       "x": 368,
       "y": 52,
       "maxPoints": 1,
@@ -23355,7 +23355,7 @@
     "te44-9": {
       "skill": "te44-9",
       "name": "Unexpected Copy",
-      "icon": "_mirror-image-hex",
+      "icon": "mirror-image-hex",
       "x": 337,
       "y": -190,
       "maxPoints": 1,
@@ -23387,7 +23387,7 @@
     "te44-10": {
       "skill": "te44-10",
       "name": "Uncontrolled Duplication",
-      "icon": "_birds of prey-yellow",
+      "icon": "birds_of_prey-yellow",
       "x": 354,
       "y": -70,
       "maxPoints": 2,
@@ -23416,7 +23416,7 @@
     "te44-11": {
       "skill": "te44-11",
       "name": "Stable Duplicants",
-      "icon": "_anamoly",
+      "icon": "anamoly",
       "x": 566,
       "y": -89,
       "maxPoints": 5,
@@ -23446,7 +23446,7 @@
     "te44-12": {
       "skill": "te44-12",
       "name": "Ether Barrier",
-      "icon": "_black hole temp",
+      "icon": "black_hole_temp",
       "x": 0,
       "y": 182,
       "maxPoints": 5,
@@ -23476,7 +23476,7 @@
     "te44-13": {
       "skill": "te44-13",
       "name": "Out of Mind",
-      "icon": "_ring of shields temp",
+      "icon": "ring_of_shields_temp",
       "x": 145,
       "y": 278,
       "maxPoints": 1,
@@ -23501,7 +23501,7 @@
     "te44-14": {
       "skill": "te44-14",
       "name": "Stable Bubble",
-      "icon": "_static-blue",
+      "icon": "static-blue",
       "x": 0,
       "y": 307,
       "maxPoints": 5,
@@ -23529,7 +23529,7 @@
     "te44-15": {
       "skill": "te44-15",
       "name": "Resonant Plasma",
-      "icon": "_static",
+      "icon": "static",
       "x": 184,
       "y": -43,
       "maxPoints": 5,
@@ -23585,7 +23585,7 @@
     "te44-17": {
       "skill": "te44-17",
       "name": "Flicker",
-      "icon": "_eterra's blessing-blue",
+      "icon": "eterra's_blessing-blue",
       "x": -276,
       "y": 241,
       "maxPoints": 4,
@@ -23612,7 +23612,7 @@
     "te44-18": {
       "skill": "te44-18",
       "name": "Wormhole",
-      "icon": "_rebuke",
+      "icon": "rebuke",
       "x": -440,
       "y": 298,
       "maxPoints": 1,
@@ -23640,7 +23640,7 @@
     "te44-19": {
       "skill": "te44-19",
       "name": "Elemental Affinity",
-      "icon": "_c-flame reave",
+      "icon": "c-flame_reave",
       "x": 152.7,
       "y": 113.1,
       "maxPoints": 5,
@@ -23672,7 +23672,7 @@
     "te44-20": {
       "skill": "te44-20",
       "name": "Elemental Dawn",
-      "icon": "_nova-hex",
+      "icon": "nova-hex",
       "x": 298.5,
       "y": 212.4,
       "maxPoints": 1,
@@ -23699,7 +23699,7 @@
     "te44-21": {
       "skill": "te44-21",
       "name": "Elemental Dusk",
-      "icon": "_c-enchant weapon 1",
+      "icon": "c-enchant_weapon_1",
       "x": 467.4,
       "y": 261.6,
       "maxPoints": 1,
@@ -23726,7 +23726,7 @@
     "te44-22": {
       "skill": "te44-22",
       "name": "Elemental Midnight",
-      "icon": "c-disintegrate_combined ",
+      "icon": "c-disintegrate_combined_",
       "x": 620,
       "y": 223,
       "maxPoints": 1,
@@ -23751,7 +23751,7 @@
     "te44-23": {
       "skill": "te44-23",
       "name": "Out of Body",
-      "icon": "_c-manifest-armour",
+      "icon": "c-manifest-armour",
       "x": -139,
       "y": 275,
       "maxPoints": 3,
@@ -23804,7 +23804,7 @@
     "te44-26": {
       "skill": "te44-26",
       "name": "Comet Rush",
-      "icon": "_lightning bolt",
+      "icon": "lightning_bolt",
       "x": -112,
       "y": -59,
       "maxPoints": 4,
@@ -23835,7 +23835,7 @@
     "vm53dx-0": {
       "skill": "vm53dx-0",
       "name": "Focus",
-      "icon": "_focus-root",
+      "icon": "focus-root",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -23860,7 +23860,7 @@
     "vm53dx-2": {
       "skill": "vm53dx-2",
       "name": "Resolute Stance",
-      "icon": "rip blood",
+      "icon": "rip_blood",
       "x": 147,
       "y": 121,
       "maxPoints": 3,
@@ -23889,7 +23889,7 @@
     "vm53dx-3": {
       "skill": "vm53dx-3",
       "name": "Desperate Meditation",
-      "icon": "_innervate",
+      "icon": "innervate",
       "x": 355,
       "y": -219,
       "maxPoints": 1,
@@ -23947,7 +23947,7 @@
     "vm53dx-5": {
       "skill": "vm53dx-5",
       "name": "Null Infusion",
-      "icon": "c-holy aura",
+      "icon": "c-holy_aura",
       "x": 523,
       "y": -0,
       "maxPoints": 4,
@@ -23975,7 +23975,7 @@
     "vm53dx-6": {
       "skill": "vm53dx-6",
       "name": "Calm Mind",
-      "icon": "_c-consecration 3",
+      "icon": "c-consecration_3",
       "x": 605,
       "y": 146,
       "maxPoints": 1,
@@ -24001,7 +24001,7 @@
     "vm53dx-7": {
       "skill": "vm53dx-7",
       "name": "Mana Flooded",
-      "icon": "_c-arcane ascendance",
+      "icon": "c-arcane_ascendance",
       "x": 147,
       "y": -121,
       "maxPoints": 4,
@@ -24029,7 +24029,7 @@
     "vm53dx-8": {
       "skill": "vm53dx-8",
       "name": "Shocking Aura",
-      "icon": "chain lightning",
+      "icon": "chain_lightning",
       "x": 319,
       "y": -105,
       "maxPoints": 5,
@@ -24092,7 +24092,7 @@
     "vm53dx-10": {
       "skill": "vm53dx-10",
       "name": "Burning Aura",
-      "icon": "_glyph of fire",
+      "icon": "glyph_of_fire",
       "x": 323,
       "y": 105,
       "maxPoints": 5,
@@ -24122,7 +24122,7 @@
     "vm53dx-11": {
       "skill": "vm53dx-11",
       "name": "Iron Stance",
-      "icon": "_c-manifest-armour-green",
+      "icon": "c-manifest-armour-green",
       "x": -147,
       "y": 121,
       "maxPoints": 4,
@@ -24153,7 +24153,7 @@
     "vm53dx-12": {
       "skill": "vm53dx-12",
       "name": "Chilling Aura",
-      "icon": "_c-shatter strike-hex",
+      "icon": "c-shatter_strike-hex",
       "x": -90,
       "y": 260,
       "maxPoints": 5,
@@ -24183,7 +24183,7 @@
     "vm53dx-13": {
       "skill": "vm53dx-13",
       "name": "Prismatic Stance",
-      "icon": "_nova",
+      "icon": "nova",
       "x": 90,
       "y": 260,
       "maxPoints": 5,
@@ -24243,7 +24243,7 @@
     "vm53dx-15": {
       "skill": "vm53dx-15",
       "name": "Mind's Eye",
-      "icon": "animate tome-hex",
+      "icon": "animate_tome-hex",
       "x": 489,
       "y": 244.49997,
       "maxPoints": 1,
@@ -24323,7 +24323,7 @@
     "vm53dx-18": {
       "skill": "vm53dx-18",
       "name": "Friendly Focus",
-      "icon": "_charm animal-blue-hex",
+      "icon": "charm_animal-blue-hex",
       "x": -569,
       "y": 81,
       "maxPoints": 1,
@@ -24351,7 +24351,7 @@
     "vm53dx-19": {
       "skill": "vm53dx-19",
       "name": "Everward",
-      "icon": "_ward-blast",
+      "icon": "ward-blast",
       "x": -438,
       "y": -111,
       "maxPoints": 2,
@@ -24385,7 +24385,7 @@
     "vm53dx-20": {
       "skill": "vm53dx-20",
       "name": "Energy Battery",
-      "icon": "_static-blue",
+      "icon": "static-blue",
       "x": 202,
       "y": -0,
       "maxPoints": 5,
@@ -24463,7 +24463,7 @@
     "vm53dx-23": {
       "skill": "vm53dx-23",
       "name": "Energy Overflow",
-      "icon": "_storm call-green-hex",
+      "icon": "storm_call-green-hex",
       "x": -327,
       "y": 207,
       "maxPoints": 5,
@@ -24494,7 +24494,7 @@
     "vm53dx-24": {
       "skill": "vm53dx-24",
       "name": "Rapid Overflow",
-      "icon": "_innervate-green",
+      "icon": "innervate-green",
       "x": -608,
       "y": 300,
       "maxPoints": 3,
@@ -24519,7 +24519,7 @@
     "vm53dx-25": {
       "skill": "vm53dx-25",
       "name": "Unstable Energy",
-      "icon": "_nova-cyan",
+      "icon": "nova-cyan",
       "x": -255,
       "y": 311,
       "maxPoints": 5,
@@ -24544,7 +24544,7 @@
     "vm53dx-26": {
       "skill": "vm53dx-26",
       "name": "Mind Shell",
-      "icon": "_c-ward generation buff (generic)",
+      "icon": "c-ward_generation_buff_(generic)",
       "x": -281,
       "y": -150,
       "maxPoints": 4,
@@ -24573,7 +24573,7 @@
     "vm53dx-27": {
       "skill": "vm53dx-27",
       "name": "Revelation",
-      "icon": "_c-mana regeneration buff (generic)",
+      "icon": "c-mana_regeneration_buff_(generic)",
       "x": -147,
       "y": -121,
       "maxPoints": 4,
@@ -24602,7 +24602,7 @@
     "vm53dx-28": {
       "skill": "vm53dx-28",
       "name": "Unbound Thought",
-      "icon": "_cooldownspeedup",
+      "icon": "cooldownspeedup",
       "x": -511,
       "y": 204,
       "maxPoints": 1,
@@ -24689,7 +24689,7 @@
     "vo54-2": {
       "skill": "vo54-2",
       "name": "Volcanic Orb",
-      "icon": "_volcanic-orb2",
+      "icon": "volcanic-orb2",
       "x": 0,
       "y": -0,
       "maxPoints": 0,
@@ -24715,7 +24715,7 @@
     "vo54-3": {
       "skill": "vo54-3",
       "name": "Frozen Orb",
-      "icon": "ice bolt-hex",
+      "icon": "ice_bolt-hex",
       "x": -147,
       "y": 120,
       "maxPoints": 1,
@@ -24773,7 +24773,7 @@
     "vo54-5": {
       "skill": "vo54-5",
       "name": "Glacial Might",
-      "icon": "_cold beam",
+      "icon": "cold_beam",
       "x": -433,
       "y": 315,
       "maxPoints": 5,
@@ -24798,7 +24798,7 @@
     "vo54-6": {
       "skill": "vo54-6",
       "name": "Volatile Emission",
-      "icon": "_c-flame reave",
+      "icon": "c-flame_reave",
       "x": -191.2,
       "y": -18.3,
       "maxPoints": 5,
@@ -24827,7 +24827,7 @@
     "vo54-7": {
       "skill": "vo54-7",
       "name": "Orb of Speed",
-      "icon": "c-holy aura",
+      "icon": "c-holy_aura",
       "x": -136.6,
       "y": -137.1,
       "maxPoints": 1,
@@ -24863,7 +24863,7 @@
     "vo54-8": {
       "skill": "vo54-8",
       "name": "Pyroclastic Speed",
-      "icon": "c-sky bolt",
+      "icon": "c-sky_bolt",
       "x": -300,
       "y": -173,
       "maxPoints": 3,
@@ -24889,7 +24889,7 @@
     "vo54-9": {
       "skill": "vo54-9",
       "name": "Ash Pelting",
-      "icon": "_circle of bones",
+      "icon": "circle_of_bones",
       "x": -340.9,
       "y": -24.5,
       "maxPoints": 5,
@@ -24942,7 +24942,7 @@
     "vo54-11": {
       "skill": "vo54-11",
       "name": "Piercing Embers",
-      "icon": "_disintegrate",
+      "icon": "disintegrate",
       "x": 244,
       "y": 196,
       "maxPoints": 1,
@@ -24967,7 +24967,7 @@
     "vo54-12": {
       "skill": "vo54-12",
       "name": "Explosive Ground",
-      "icon": "_fireball explosion-hex",
+      "icon": "fireball_explosion-hex",
       "x": 475,
       "y": 21,
       "maxPoints": 1,
@@ -24998,7 +24998,7 @@
     "vo54-13": {
       "skill": "vo54-13",
       "name": "Tectonic Orb",
-      "icon": "_anamoly",
+      "icon": "anamoly",
       "x": 563,
       "y": 168,
       "maxPoints": 2,
@@ -25027,7 +25027,7 @@
     "vo54-14": {
       "skill": "vo54-14",
       "name": "Controlled Eruption",
-      "icon": "_focus",
+      "icon": "focus",
       "x": 2,
       "y": 181,
       "maxPoints": 1,
@@ -25063,7 +25063,7 @@
     "vo54-15": {
       "skill": "vo54-15",
       "name": "Explosive Orb",
-      "icon": "_glyph of fire-hex",
+      "icon": "glyph_of_fire-hex",
       "x": 117,
       "y": 276,
       "maxPoints": 1,
@@ -25096,7 +25096,7 @@
     "vo54-16": {
       "skill": "vo54-16",
       "name": "Glyph of Fire",
-      "icon": "_glyph of fire alt-hex",
+      "icon": "glyph_of_fire_alt-hex",
       "x": 344,
       "y": 102,
       "maxPoints": 1,
@@ -25128,7 +25128,7 @@
     "vo54-17": {
       "skill": "vo54-17",
       "name": "Fiery Runes",
-      "icon": "_phoenix strike",
+      "icon": "phoenix_strike",
       "x": 408,
       "y": 235,
       "maxPoints": 7,
@@ -25158,7 +25158,7 @@
     "vo54-18": {
       "skill": "vo54-18",
       "name": "Mark of the Inferno",
-      "icon": "_inferno",
+      "icon": "inferno",
       "x": 282,
       "y": 313,
       "maxPoints": 3,
@@ -25217,7 +25217,7 @@
     "vo54-20": {
       "skill": "vo54-20",
       "name": "Infernal Caster",
-      "icon": "meteor rain",
+      "icon": "meteor_rain",
       "x": 286,
       "y": -93,
       "maxPoints": 1,
@@ -25277,7 +25277,7 @@
     "vo54-22": {
       "skill": "vo54-22",
       "name": "Freezing Orb",
-      "icon": "ice wall",
+      "icon": "ice_wall",
       "x": -520,
       "y": 157,
       "maxPoints": 4,
@@ -25327,7 +25327,7 @@
     "vo54-24": {
       "skill": "vo54-24",
       "name": "Volcanic Acceleration",
-      "icon": "c-sky bolt2",
+      "icon": "c-sky_bolt2",
       "x": -1.8,
       "y": -188.4,
       "maxPoints": 4,
@@ -25357,7 +25357,7 @@
     "vo54-25": {
       "skill": "vo54-25",
       "name": "Volcanic Frenzy",
-      "icon": "_anamoly",
+      "icon": "anamoly",
       "x": 295,
       "y": -196,
       "maxPoints": 4,
@@ -25410,7 +25410,7 @@
     "vo54-27": {
       "skill": "vo54-27",
       "name": "Lava Flow",
-      "icon": "_spellbook arcane",
+      "icon": "spellbook_arcane",
       "x": 123,
       "y": 134,
       "maxPoints": 5,
