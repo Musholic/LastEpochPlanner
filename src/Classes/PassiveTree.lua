@@ -178,29 +178,6 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
 
     -- Load sprite sheets and build sprite map
     self.spriteMap = { }
-    local handle = NewFileSearch("TreeData/sprites/*.png")
-    while handle do
-        local imgName = handle:GetFileName()
-        local sheet = {}
-        sheet.handle = NewImageHandle()
-        sheet.handle:Load("TreeData/sprites/" .. imgName)
-        sheet.width, sheet.height = sheet.handle:ImageSize()
-
-        self.spriteMap[imgName:gsub(".png", "")] = {
-            handle = sheet.handle,
-            width = sheet.width,
-            height = sheet.height,
-            [1] = 0,
-            [2] = 0,
-            [3] = 1,
-            [4] = 1
-        }
-
-        if not handle:NextFile() then
-            break
-        end
-    end
-
     self.nodeOverlay = {
         Normal = {
             artWidth = 40,
@@ -398,14 +375,6 @@ end
 
 -- Common processing code for nodes (used for both real tree nodes and subgraph nodes)
 function PassiveTreeClass:ProcessNode(node)
-    if node.icon then
-        node.sprites = self.spriteMap[node.icon]
-    end
-    if not node.sprites then
-        --error("missing sprite "..node.icon)
-        -- TODO: do we need a default here?
-        node.sprites = self.spriteMap["Art/2DArt/SkillIcons/passives/MasteryBlank.png"]
-    end
     node.overlay = self.nodeOverlay[node.type]
     if node.overlay then
         node.rsq = node.overlay.rsq

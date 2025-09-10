@@ -411,6 +411,25 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			state = "unalloc"
 		end
 		-- Normal node (includes keystones and notables)
+		if node.icon and not node.sprites then
+			if not tree.spriteMap[node.icon] then
+				local sheet = {}
+				sheet.handle = NewImageHandle()
+				sheet.handle:Load("TreeData/sprites/" .. node.icon .. ".png")
+				sheet.width, sheet.height = sheet.handle:ImageSize()
+
+				tree.spriteMap[node.icon] = {
+					handle = sheet.handle,
+					width = sheet.width,
+					height = sheet.height,
+					[1] = 0,
+					[2] = 0,
+					[3] = 1,
+					[4] = 1
+				}
+			end
+			node.sprites = tree.spriteMap[node.icon]
+		end
 		base = node.sprites
 
 		-- Convert node position to screen-space
