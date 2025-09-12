@@ -30,7 +30,9 @@ jobs:
                 gh release view $(basename ${{ github.event.inputs.releaseNoteUrl }}) > temp_change.md
             - name: Tweak changelogs
               run: |
-                ./.github/tweak_changelogs.sh "${{ github.event.inputs.releaseVersion }}"
+                sed -i 's/\r$//' .github/tweak_changelogs.sh
+                chmod +x .github/tweak_changelogs.sh
+                ./.github/tweak_changelogs.sh "v${{ github.event.inputs.releaseVersion }}"
             - name: Create Pull Request
               uses: peter-evans/create-pull-request@v5
               with:
