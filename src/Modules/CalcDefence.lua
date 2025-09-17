@@ -28,17 +28,19 @@ local dmgTypeList = DamageTypes
 local resistTypeList = dmgTypeList
 
 -- Calculate damage reduction from armour, float
-function calcs.armourReductionF(armour, raw)
-	if armour == 0 and raw == 0 then
+function calcs.armourReductionF(armour, enemyLevel)
+	if armour == 0 then
 		return 0
 	end
-	-- TODO: Implement proper armour reduction calculation
-	return (armour / (armour + raw * 5) * 100)
+	local adjustedEnemyLevel = enemyLevel + 5
+	local firstPart = 1.2 * armour / ( (80 + 0.05 * adjustedEnemyLevel ^ 2) + 1.2 * armour) * 0.3
+	local secondPart = 0.0015 * armour ^ 2 / (180 * adjustedEnemyLevel + 0.0015 * armour ^ 2) * 0.55
+	return (firstPart + secondPart) * 100
 end
 
 -- Calculate damage reduction from armour, int
-function calcs.armourReduction(armour, raw)
-	return round(calcs.armourReductionF(armour, raw))
+function calcs.armourReduction(armour, enemyLevel)
+	return round(calcs.armourReductionF(armour, enemyLevel))
 end
 
 ---Calculates the taken damages from enemy outgoing damage
