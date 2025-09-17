@@ -254,8 +254,17 @@ function calcs.initEnv(build, mode, override, specEnv)
 		env = { }
 		env.build = build
 		env.data = build.data
-		env.configInput = build.configTab.input
-		env.configPlaceholder = build.configTab.placeholder
+		-- Combine configTab input and placeholder into env.config
+		env.config = {}
+		for k, v in pairs(build.configTab.input) do
+			env.config[k] = v
+		end
+		for k, v in pairs(build.configTab.placeholder) do
+			if env.config[k] == nil then
+				env.config[k] = v
+			end
+		end
+
 		env.calcsInput = build.calcsTab.input
 		env.mode = mode
 		env.spec = override.spec or build.spec
@@ -499,7 +508,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 			items[slotName] = item
 		end
 
-		if not env.configInput.ignoreItemDisablers then
+		if not env.config.ignoreItemDisablers then
 			local itemDisabled = {}
 			local itemDisablers = {}
 			if modDB:Flag(nil, "CanNotUseHelm") then
@@ -735,10 +744,10 @@ function calcs.initEnv(build, mode, override, specEnv)
 			end
 		end
 		-- Override empty socket calculation if set in config
-		env.itemModDB.multipliers.EmptyRedSocketsInAnySlot = (env.configInput.overrideEmptyRedSockets or env.itemModDB.multipliers.EmptyRedSocketsInAnySlot)
-		env.itemModDB.multipliers.EmptyGreenSocketsInAnySlot = (env.configInput.overrideEmptyGreenSockets or env.itemModDB.multipliers.EmptyGreenSocketsInAnySlot)
-		env.itemModDB.multipliers.EmptyBlueSocketsInAnySlot = (env.configInput.overrideEmptyBlueSockets or env.itemModDB.multipliers.EmptyBlueSocketsInAnySlot)
-		env.itemModDB.multipliers.EmptyWhiteSocketsInAnySlot = (env.configInput.overrideEmptyWhiteSockets or env.itemModDB.multipliers.EmptyWhiteSocketsInAnySlot)
+		env.itemModDB.multipliers.EmptyRedSocketsInAnySlot = (env.config.overrideEmptyRedSockets or env.itemModDB.multipliers.EmptyRedSocketsInAnySlot)
+		env.itemModDB.multipliers.EmptyGreenSocketsInAnySlot = (env.config.overrideEmptyGreenSockets or env.itemModDB.multipliers.EmptyGreenSocketsInAnySlot)
+		env.itemModDB.multipliers.EmptyBlueSocketsInAnySlot = (env.config.overrideEmptyBlueSockets or env.itemModDB.multipliers.EmptyBlueSocketsInAnySlot)
+		env.itemModDB.multipliers.EmptyWhiteSocketsInAnySlot = (env.config.overrideEmptyWhiteSockets or env.itemModDB.multipliers.EmptyWhiteSocketsInAnySlot)
 		if override.toggleFlask then
 			if env.flasks[override.toggleFlask] then
 				env.flasks[override.toggleFlask] = nil

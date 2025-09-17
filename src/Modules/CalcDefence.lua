@@ -615,11 +615,11 @@ function calcs.buildDefenceEstimations(env, actor)
 
 	local condList = modDB.conditions
 
-	local damageCategoryConfig = env.configInput.enemyDamageType or "Average"
+	local damageCategoryConfig = env.config.enemyDamageType or "Average"
 	
 	-- chance to not be hit calculations
 	do
-		local worstOf = env.configInput.EHPUnluckyWorstOf or 1
+		local worstOf = env.config.EHPUnluckyWorstOf or 1
 		output.MeleeNotHitChance = 100 - (1 - output.MeleeEvadeChance / 100) * (1 - output.EffectiveAttackDodgeChance / 100) * (1 - output.AvoidAllDamageFromHitsChance / 100) * 100
 		output.ProjectileNotHitChance = 100 - (1 - output.ProjectileEvadeChance / 100) * (1 - output.EffectiveAttackDodgeChance / 100) * (1 - output.AvoidAllDamageFromHitsChance / 100) * (1 - (output.specificTypeAvoidance and 0 or output.AvoidProjectilesChance) / 100) * 100
 		output.SpellNotHitChance = 100 - (1 - output.EffectiveSpellDodgeChance / 100) * (1 - output.AvoidAllDamageFromHitsChance / 100) * 100
@@ -659,28 +659,18 @@ function calcs.buildDefenceEstimations(env, actor)
 				},
 			}
 		end
-		local enemyCritChance = enemyDB:Flag(nil, "NeverCrit") and 0 or enemyDB:Flag(nil, "AlwaysCrit") and 100 or (m_max(m_min((modDB:Override(nil, "enemyCritChance") or env.configInput["enemyCritChance"] or env.configPlaceholder["enemyCritChance"] or 0) * (1 + modDB:Sum("INC", nil, "EnemyCritChance") / 100 + enemyDB:Sum("INC", nil, "CritChance") / 100) * (1 - output["ConfiguredEvadeChance"] / 100), 100), 0))
-		local enemyCritDamage = m_max((env.configInput["enemyCritDamage"] or env.configPlaceholder["enemyCritDamage"] or 0) + enemyDB:Sum("BASE", nil, "CritMultiplier"), 0)
+		local enemyCritChance = enemyDB:Flag(nil, "NeverCrit") and 0 or enemyDB:Flag(nil, "AlwaysCrit") and 100 or (m_max(m_min((modDB:Override(nil, "enemyCritChance") or env.config["enemyCritChance"] or 0) * (1 + modDB:Sum("INC", nil, "EnemyCritChance") / 100 + enemyDB:Sum("INC", nil, "CritChance") / 100) * (1 - output["ConfiguredEvadeChance"] / 100), 100), 0))
+		local enemyCritDamage = m_max((env.config["enemyCritDamage"] or 0) + enemyDB:Sum("BASE", nil, "CritMultiplier"), 0)
 		output["EnemyCritEffect"] = 1 + enemyCritChance / 100 * (enemyCritDamage / 100) * (1 - output.CritExtraDamageReduction / 100)
 		local enemyCfg = {keywordFlags = bit.bnot(KeywordFlag.MatchAll)} -- Match all keywordFlags parameter for enemy min-max damage mods
 		local enemyDamageConversion = {}
 		for _, damageType in ipairs(dmgTypeList) do
 			local enemyDamageMult = calcLib.mod(enemyDB, nil, "Damage", damageType.."Damage", isElemental[damageType] and "ElementalDamage" or nil) -- missing taunt from allies
-			local enemyDamage = tonumber(env.configInput["enemy"..damageType.."Damage"])
-			local enemyPen = tonumber(env.configInput["enemy"..damageType.."Pen"])
-			local enemyOverwhelm = tonumber(env.configInput["enemy"..damageType.."Overwhelm"])
+			local enemyDamage = tonumber(env.config["enemy"..damageType.."Damage"]) or 0
+			local enemyPen = tonumber(env.config["enemy"..damageType.."Pen"]) or 0
+			local enemyOverwhelm = tonumber(env.config["enemy"..damageType.."Overwhelm"]) or 0
 			local sourceStr = enemyDamage == nil and "Default" or "Config"
 
-			if enemyDamage == nil then
-				enemyDamage = tonumber(env.configPlaceholder["enemy"..damageType.."Damage"]) or 0
-			end
-			if enemyPen == nil then
-				enemyPen = tonumber(env.configPlaceholder["enemy"..damageType.."Pen"]) or 0
-			end
-			if enemyOverwhelm == nil then
-				enemyOverwhelm = tonumber(env.configPlaceholder["enemy"..damageType.."enemyOverwhelm"]) or 0
-			end
-			
 			-- Add enemy damage from mods
 			enemyDamage = enemyDamage + enemyDB:Sum("BASE", enemyCfg, (damageType.."Damage"))
 			
@@ -938,7 +928,7 @@ function calcs.buildDefenceEstimations(env, actor)
 		output[damageType.."takenFlat"] = takenFlat
 		if percentOfArmourApplies > 0 then
 		--TODO: debug damage value
-			armourReduct = calcs.armourReduction(effectiveAppliedArmour, damage * resMult)
+			armourReduct = calcs.armourReduction(effectiveAppliedArmour, env.config.enemyLevel)
 			armourReduct = m_min(output.DamageReductionMax, armourReduct)
 			if impaleDamage > 0 then
 				impaleArmourReduct = m_min(output.DamageReductionMax, calcs.armourReduction(effectiveAppliedArmour, impaleDamage * resMult))
@@ -1171,7 +1161,7 @@ function calcs.buildDefenceEstimations(env, actor)
 	
 	-- Life Recoverable
 	output.LifeRecoverable = output.Life
-	if env.configInput["conditionLowLife"] then
+	if env.config["conditionLowLife"] then
 		output.LifeRecoverable = m_min(output.Life * (output.LowLifePercentage or data.misc.LowPoolThreshold) / 100, output.Life)
 		if output.LifeRecoverable < output.Life then
 			output.CappingLife = true
@@ -1496,7 +1486,7 @@ function calcs.buildDefenceEstimations(env, actor)
 		local suppressionEffect = 1
 		local ExtraAvoidChance = 0
 		local averageAvoidChance = 0
-		local worstOf = env.configInput.EHPUnluckyWorstOf or 1
+		local worstOf = env.config.EHPUnluckyWorstOf or 1
 		-- block effect
 		if damageCategoryConfig == "Melee" then
 			BlockChance = output.BlockChance / 100
@@ -1512,7 +1502,7 @@ function calcs.buildDefenceEstimations(env, actor)
 			end
 		end
 		blockEffect = (1 - BlockChance * output.BlockEffect / 100)
-		if not env.configInput.DisableEHPGainOnBlock then
+		if not env.config.DisableEHPGainOnBlock then
 			DamageIn.LifeWhenHit = output.LifeOnBlock * BlockChance
 			DamageIn.ManaWhenHit = output.ManaOnBlock * BlockChance
 		end
@@ -1523,7 +1513,7 @@ function calcs.buildDefenceEstimations(env, actor)
 			ExtraAvoidChance = ExtraAvoidChance + output.AvoidProjectilesChance / 2
 		end
 		-- gain when hit (currently just gain on block/suppress)
-		if not env.configInput.DisableEHPGainOnBlock then
+		if not env.config.DisableEHPGainOnBlock then
 			if (DamageIn.LifeWhenHit or 0) ~= 0 or (DamageIn.ManaWhenHit or 0) ~= 0 then
 				DamageIn.GainWhenHit = true
 			end
@@ -1603,7 +1593,7 @@ function calcs.buildDefenceEstimations(env, actor)
 			if output.AvoidAllDamageFromHitsChance > 0 then
 				t_insert(breakdown["ConfiguredNotHitChance"], s_format("x %.2f ^8(chance for damage avoidance to fail)", 1 - output.AvoidAllDamageFromHitsChance / 100))
 			end
-			local worstOf = env.configInput.EHPUnluckyWorstOf or 1
+			local worstOf = env.config.EHPUnluckyWorstOf or 1
 			if worstOf > 1 then
 				t_insert(breakdown["ConfiguredNotHitChance"], s_format("unlucky worst of %d", worstOf))
 			end
@@ -1628,7 +1618,7 @@ function calcs.buildDefenceEstimations(env, actor)
 	
 	-- survival time
 	do
-		output.enemySkillTime = (env.configInput.enemySpeed or env.configPlaceholder.enemySpeed or 700) / (1 + enemyDB:Sum("INC", nil, "Speed") / 100)
+		output.enemySkillTime = (env.config.enemySpeed or 700) / (1 + enemyDB:Sum("INC", nil, "Speed") / 100)
 		local enemyActionSpeed = calcs.actionSpeedMod(actor.enemy)
 		output.enemySkillTime = output.enemySkillTime / 1000 / enemyActionSpeed
 		output["EHPsurvivalTime"] = output["TotalNumberOfHits"] * output.enemySkillTime
@@ -1642,9 +1632,9 @@ function calcs.buildDefenceEstimations(env, actor)
 	end
 	
 	-- pvp
-	if env.configInput.PvpScaling then
+	if env.config.PvpScaling then
 		local PvpTvalue = output.enemySkillTime
-		local PvpMultiplier = (env.configInput.enemyMultiplierPvpDamage or 100) / 100
+		local PvpMultiplier = (env.config.enemyMultiplierPvpDamage or 100) / 100
 		
 		local PvpNonElemental1 = data.misc.PvpNonElemental1
 		local PvpNonElemental2 = data.misc.PvpNonElemental2
