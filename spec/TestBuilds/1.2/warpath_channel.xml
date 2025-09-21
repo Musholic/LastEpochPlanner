@@ -1,18 +1,16 @@
 <LastEpochPlanner>
-	<Build ascendClassName="Paladin" bandit="None" characterLevelAutoMode="false" className="Sentinel" level="97" mainSocketGroup="5" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
-		<PlayerStat stat="AverageHit" value="863.39648"></PlayerStat>
-		<PlayerStat stat="AverageDamage" value="863.39648"></PlayerStat>
-		<PlayerStat stat="AverageBurstDamage" value="863.39648"></PlayerStat>
-		<PlayerStat stat="Speed" value="1.4373332950044"></PlayerStat>
+	<Build ascendClassName="Paladin" bandit="None" characterLevelAutoMode="false" className="Sentinel" level="97" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="5349.56308992"></PlayerStat>
+		<PlayerStat stat="AverageBurstDamage" value="5349.56308992"></PlayerStat>
+		<PlayerStat stat="Speed" value="1.4666666275556"></PlayerStat>
 		<PlayerStat stat="PreEffectiveCritChance" value="14.4"></PlayerStat>
 		<PlayerStat stat="CritChance" value="14.4"></PlayerStat>
-		<PlayerStat stat="CritMultiplier" value="2.36"></PlayerStat>
-		<PlayerStat stat="HitChance" value="100"></PlayerStat>
-		<PlayerStat stat="TotalDPS" value="1240.9885074936"></PlayerStat>
-		<PlayerStat stat="CombinedDPS" value="1240.9885074936"></PlayerStat>
-		<PlayerStat stat="ManaCost" value="10"></PlayerStat>
+		<PlayerStat stat="CritMultiplier" value="3.36"></PlayerStat>
+		<PlayerStat stat="TotalDPS" value="7846.0256559886"></PlayerStat>
+		<PlayerStat stat="CombinedDPS" value="7846.0256559886"></PlayerStat>
+		<PlayerStat stat="ManaCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPercentCost" value="0"></PlayerStat>
-		<PlayerStat stat="ManaPerSecondCost" value="14.373332950044"></PlayerStat>
+		<PlayerStat stat="ManaPerSecondCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPercentPerSecondCost" value="0"></PlayerStat>
 		<PlayerStat stat="Vit" value="13"></PlayerStat>
 		<PlayerStat stat="Str" value="20"></PlayerStat>
@@ -63,15 +61,14 @@
 		<PlayerStat stat="VoidResist" value="75"></PlayerStat>
 		<PlayerStat stat="VoidResistOverCap" value="1"></PlayerStat>
 		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.56"></PlayerStat>
-		<PlayerStat stat="FullDPS" value="1386.2759464326"></PlayerStat>
-		<FullDPSSkill skillPart="" source="" stat="Javelin" value="1240.9885074936"></FullDPSSkill>
-		<FullDPSSkill skillPart="" source="javeli" stat="Ignite" value="84.756669739822"></FullDPSSkill>
-		<FullDPSSkill skillPart="" source="javeli" stat="Bleed" value="40.981246907167"></FullDPSSkill>
-		<FullDPSSkill skillPart="" source="javeli" stat="Electrify" value="19.549522292013"></FullDPSSkill>
+		<PlayerStat stat="FullDPS" value="8730.4420627375"></PlayerStat>
+		<FullDPSSkill skillPart="" source="" stat="Smite" value="7846.0256559886"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="sm87r4" stat="Ignite" value="826.61037795706"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="sm87r4" stat="Electrify" value="57.806028791839"></FullDPSSkill>
 	</Build>
 	<Calcs>
 		<Input name="misc_buffMode" string="EFFECTIVE"></Input>
-		<Input name="skill_number" number="5"></Input>
+		<Input name="skill_number" number="1"></Input>
 		<Section collapsed="false" id="SkillSelect" subsection="ViewSkillDetails"></Section>
 		<Section collapsed="false" id="HitDamage" subsection="SkillDamage"></Section>
 		<Section collapsed="false" id="Speed" subsection="AttackCastRate"></Section>
@@ -834,29 +831,29 @@ Implicits: 1
 	<Party ShowAdvanceTools="false" append="false" destination="All"></Party>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showAltQualityGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
-			<Skill enabled="true" includeInFullDPS="false" index="1" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="sm87r4" slot="Skill 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="1" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="sm87r4" slot="Skill 1"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="2" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="va53st" slot="Skill 2"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="3" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ah443" slot="Skill 3"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="si4lgl" slot="Skill 4"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="5" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="javeli" slot="Skill 5"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="6" label="Shred Armor (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="7" label="Blind (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="8" label="Electrify (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="9" label="Ignite (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="10" label="Shock (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="11" label="Shred Armor (from Warpath)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="javeli" slot="Skill 5"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="6" label="Shred Armor (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="7" label="Blind (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="8" label="Electrify (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="9" label="Ignite (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="10" label="Shock (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="11" label="Shred Armor (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:va53st"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="12" label="Bleed (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:va53st"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="13" label="Blind (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:va53st"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="14" label="Electrify (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:va53st"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="15" label="Shock (from Warpath)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:va53st"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="16" label="Shred Armor (from Javelin)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="17" label="Bleed (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="18" label="Blind (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="19" label="Electrify (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="20" label="Frailty (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Frailty" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="21" label="Ignite (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="22" label="Shock (from Javelin)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:javeli"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="23" label="Slow (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="15" label="Shock (from Warpath)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:va53st"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="16" label="Shred Armor (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="17" label="Bleed (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="18" label="Blind (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="19" label="Electrify (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Electrify" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="20" label="Frailty (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Frailty" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="21" label="Ignite (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="22" label="Shock (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:javeli"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="23" label="Slow (from Javelin)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="SkillId:javeli"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">

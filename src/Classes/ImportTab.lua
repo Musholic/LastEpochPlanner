@@ -20,7 +20,7 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
     self.isOnlineMode = false
     self.charImportMode = "GETACCOUNTNAME"
     self.charImportStatus = "Idle"
-    self.controls.sectionCharImport = new("SectionControl", { "TOPLEFT", self, "TOPLEFT" }, 10, 18, 750, 260, "Character Import")
+    self.controls.sectionCharImport = new("SectionControl", { "TOPLEFT", self, "TOPLEFT" }, 10, 18, 750, 300, "Character Import")
     self.controls.charImportStatusLabel = new("LabelControl", { "TOPLEFT", self.controls.sectionCharImport, "TOPLEFT" }, 6, 14, 200, 16, function()
         return "^7Character import status: " .. self.charImportStatus
     end)
@@ -122,7 +122,20 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
         end
         return false
     end
-    self.controls.charImportTree = new("ButtonControl", { "LEFT", self.controls.charImportHeader, "RIGHT" }, 8, 0, 170, 20, "Passive Tree and Skills", function()
+    self.controls.charImportFull = new("ButtonControl", { "LEFT", self.controls.charImportHeader, "RIGHT" }, 8, 0, 80, 20, "Full Import", function()
+        if self.build.spec:CountAllocNodes() > 0 then
+            main:OpenConfirmPopup("Character Import", "Full import will overwrite your current passive tree and replace items/skills.", "Import", function()
+                self:DownloadFullImport()
+            end)
+        else
+            self:DownloadFullImport()
+        end
+    end)
+    self.controls.charImportFullOptions = new("LabelControl", { "LEFT", self.controls.charImportFull, "RIGHT" }, 8, 0, 200, 16, "(uses below options)")
+    self.controls.charImportFull.enabled = function()
+        return self.charImportMode == "SELECTCHAR"
+    end
+    self.controls.charImportTree = new("ButtonControl", { "LEFT", self.controls.charImportHeader, "LEFT" }, 8, 36, 200, 20, "Only Passive Tree and Skills", function()
         if self.build.spec:CountAllocNodes() > 0 then
             main:OpenConfirmPopup("Character Import", "Importing the passive tree will overwrite your current tree.", "Import", function()
                 self:DownloadPassiveTree()
@@ -134,7 +147,7 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
     self.controls.charImportTree.enabled = function()
         return self.charImportMode == "SELECTCHAR"
     end
-    self.controls.charImportItems = new("ButtonControl", { "LEFT", self.controls.charImportTree, "LEFT" }, 0, 36, 110, 20, "Items", function()
+    self.controls.charImportItems = new("ButtonControl", { "LEFT", self.controls.charImportTree, "LEFT" }, 0, 24, 140, 20, "Only Items", function()
         self:DownloadItems()
     end)
     self.controls.charImportItems.enabled = function()
@@ -143,7 +156,7 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
     self.controls.charImportItemsClearItems = new("CheckBoxControl", { "LEFT", self.controls.charImportItems, "RIGHT" }, 120, 0, 18, "Delete equipment:", nil, "Delete all equipped items when importing.", true)
     self.controls.charImportUnusedItemsClearItems = new("CheckBoxControl", { "LEFT", self.controls.charImportItems, "RIGHT" }, 280, 0, 18, "Delete unused items:", nil, "Delete all unused items when importing.", false)
 
-    self.controls.charClose = new("ButtonControl", { "TOPLEFT", self.controls.charSelect, "BOTTOMLEFT" }, 0, 106, 60, 20, "Close", function()
+    self.controls.charClose = new("ButtonControl", { "TOPLEFT", self.controls.charSelect, "BOTTOMLEFT" }, 0, 136, 60, 20, "Close", function()
         self.charImportMode = "GETACCOUNTNAME"
         self.charImportStatus = "Idle"
     end)
@@ -764,6 +777,12 @@ function ImportTabClass:DownloadItems()
     self:ImportItemsAndSkills(charData)
 end
 
+function ImportTabClass:DownloadFullImport()
+    self:DownloadPassiveTree()
+    self:DownloadItems()
+    self.charImportStatus = colorCodes.POSITIVE.."Full import successful."
+end
+
 function ImportTabClass:ImportPassiveTreeAndJewels(charData)
     self.build.spec:ImportFromNodeList(charData.classId, charData.ascendancy, charData.abilities, charData.hashes, charData.skill_overrides, latestTreeVersion)
     self.build.spec:AddUndoState()
@@ -776,13 +795,6 @@ function ImportTabClass:ImportPassiveTreeAndJewels(charData)
     self.build.configTab:BuildModList()
     self.build.configTab:UpdateControls()
     self.build.buildFlag = true
-
-    local mainSocketGroup = self:GuessMainSocketGroup()
-    if mainSocketGroup then
-        self.build.calcsTab.input.skill_number = mainSocketGroup
-        self.build.mainSocketGroup = mainSocketGroup
-        self.build.skillsTab.socketGroupList[mainSocketGroup].includeInFullDPS = true
-    end
 
     main:SetWindowTitleSubtext(string.format("%s (%s, %s, %s)", self.build.buildName, charData.name, charData.class, charData.league))
 
@@ -811,6 +823,24 @@ function ImportTabClass:ImportItemsAndSkills(charData)
     self.build.configTab:UpdateLevel()
     self.build.controls.characterLevel:SetText(charData.level)
     self.build.buildFlag = true
+
+
+    -- Guess main skill if there is no skill included in full DPS
+    local anySkillIncludedInFullDPS = false
+    for _, socketGroup in pairs(self.build.skillsTab.socketGroupList) do
+        if socketGroup.includeInFullDPS then
+            anySkillIncludedInFullDPS = true
+            break
+        end
+    end
+    if not anySkillIncludedInFullDPS then
+        local mainSocketGroup = self:GuessMainSocketGroup()
+        if mainSocketGroup then
+            self.build.calcsTab.input.skill_number = mainSocketGroup
+            self.build.mainSocketGroup = mainSocketGroup
+            self.build.skillsTab.socketGroupList[mainSocketGroup].includeInFullDPS = true
+        end
+    end
 
     self.charImportStatus = colorCodes.POSITIVE .. "Items and skills successfully imported."
     return charData -- For the wrapper
