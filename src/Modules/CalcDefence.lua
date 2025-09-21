@@ -50,24 +50,14 @@ end
 ---@return number, table sum of damages and a table of taken damage parts
 function calcs.takenHitFromDamage(rawDamage, damageType, actor)
 	local output = actor.output
-	local modDB = actor.modDB
-	local function damageMitigationMultiplierForType(damage, type)
-		local totalResistMult = output[type .."ResistTakenHitMulti"]
-		local effectiveAppliedArmour = output[type .."EffectiveAppliedArmour"]
-		local armourDRPercent = calcs.armourReductionF(effectiveAppliedArmour, damage * totalResistMult)
-		local flatDRPercent = modDB:Flag(nil, "SelfIgnore".."Base".. type .."DamageReduction") and 0 or output["Base".. type .."DamageReductionWhenHit"] or output["Base".. type .."DamageReduction"]
-		local totalDRPercent = m_min(output.DamageReductionMax, armourDRPercent + flatDRPercent)
-		local enemyOverwhelmPercent = modDB:Flag(nil, "SelfIgnore".. type .."DamageReduction") and 0 or output[type .."EnemyOverwhelm"]
-		local totalDRMulti = 1 - m_max(m_min(output.DamageReductionMax, totalDRPercent - enemyOverwhelmPercent), 0) / 100
-		return totalResistMult * totalDRMulti
-	end
 	local receivedDamageSum = 0
 	local damages = { }
 	for damageConvertedType, convertPercent in pairs(actor.damageShiftTable[damageType]) do
 		local takenFlat = output[damageConvertedType.."takenFlat"]
 		if convertPercent > 0 or takenFlat ~= 0 then
 			local convertedDamage = rawDamage * convertPercent / 100
-			local reducedDamage = round(m_max(convertedDamage * damageMitigationMultiplierForType(convertedDamage, damageConvertedType) + takenFlat, 0) * output[damageConvertedType .."AfterReductionTakenHitMulti"]) * (1 - output["VaalArcticArmourMitigation"])
+			local drMulti = output[damageConvertedType.."ResistTakenHitMulti"] * (1 - output[damageConvertedType.."DamageReduction"] / 100)
+			local reducedDamage = m_max(convertedDamage * drMulti + takenFlat, 0) * output[damageConvertedType .."AfterReductionTakenHitMulti"]
 			receivedDamageSum = receivedDamageSum + reducedDamage
 			damages[damageConvertedType] = (reducedDamage > 0 or convertPercent > 0) and reducedDamage or nil
 		end
@@ -98,7 +88,6 @@ function calcs.reducePoolsByDamage(poolTable, damageTable, actor)
 	local ward = poolTbl.Ward or output.Ward or 0
 	local restoreWard = modDB:Flag(nil, "WardNotBreak") and ward or 0
 	
-	local energyShield = poolTbl.EnergyShield or output.EnergyShieldRecoveryCap
 	local mana = poolTbl.Mana or output.Mana or 0
 	local life = poolTbl.Life or output.LifeRecoverable or 0
 	local LifeLossLostOverTime = poolTbl.LifeLossLostOverTime or 0
@@ -125,11 +114,8 @@ function calcs.reducePoolsByDamage(poolTable, damageTable, actor)
 
 	return {
 		AlliesTakenBeforeYou = alliesTakenBeforeYou,
-		Aegis = aegis,
-		Guard = guard,
 		PoolsLost = PoolsLost,
 		Ward = restoreWard,
-		EnergyShield = energyShield,
 		Mana = mana,
 		Life = life,
 		LifeLossLostOverTime = LifeLossLostOverTime,
@@ -678,40 +664,6 @@ function calcs.buildDefenceEstimations(env, actor)
 			
 			-- Conversion and Gain As Mods
 			local conversionTotal = 0
-			if damageType == "Physical" then
-				local conversions = {total = 0, totalSkill = 0}
-				for _, damageTypeTo in ipairs(dmgTypeList) do
-					conversions[damageTypeTo.."skill"] = enemyDB:Sum("BASE", enemyCfg, (damageType.."DamageSkillConvertTo"..damageTypeTo))
-					conversions[damageTypeTo] = enemyDB:Sum("BASE", enemyCfg, (damageType.."DamageConvertTo"..damageTypeTo))
-					conversions["totalSkill"] = conversions["totalSkill"] + conversions[damageTypeTo.."skill"]
-					conversions["total"] = conversions["total"] + conversions[damageTypeTo]
-				end
-				-- Cap the amount of conversion to 100%
-				if conversions["totalSkill"] > 100 then
-					local mult = 100 / conversions["totalSkill"]
-					conversions["totalSkill"] = conversions["totalSkill"] * mult
-					conversions["total"] = 0
-					for _, damageTypeTo in ipairs(dmgTypeList) do
-						conversions[damageTypeTo.."skill"] = conversions[damageTypeTo.."skill"] * mult
-						conversions[damageTypeTo] = 0
-					end
-				elseif conversions["total"] + conversions["totalSkill"] > 100 then
-					local mult = (100 - conversions["totalSkill"]) / conversions["total"]
-					conversions["total"] = conversions["total"] * mult
-					for _, damageTypeTo in ipairs(dmgTypeList) do
-						conversions[damageTypeTo] = conversions[damageTypeTo] * mult
-					end
-				end
-				conversionTotal = conversions["total"] + conversions["totalSkill"]
-				-- Calculate the amount converted/gained as
-				for _, damageTypeTo in ipairs(dmgTypeList) do
-					local gainAsPercent = (enemyDB:Sum("BASE", enemyCfg, (damageType.."DamageGainAs"..damageTypeTo)) + conversions[damageTypeTo.."skill"] + conversions[damageTypeTo]) / 100
-					if gainAsPercent > 0 then
-						enemyDamageConversion[damageTypeTo] = enemyDamageConversion[damageTypeTo] or { }
-						enemyDamageConversion[damageTypeTo][damageType] = enemyDamage * gainAsPercent
-					end
-				end
-			end
 			
 			enemyOverwhelm = enemyOverwhelm + enemyDB:Sum("BASE", nil, "PhysicalOverwhelm") + modDB:Sum("BASE", nil, "EnemyPhysicalOverwhelm")
 
@@ -916,9 +868,12 @@ function calcs.buildDefenceEstimations(env, actor)
 		local damage = output[damageType.."TakenDamage"]
 		local impaleDamage = enemyImpaleChance > 0 and (damageType == "Physical" and (damage * data.misc.ImpaleStoredDamageBase) or 0) or 0
 		local armourReduct = 0
-		local impaleArmourReduct = 0
-		local percentOfArmourApplies = m_min((not modDB:Flag(nil, "ArmourDoesNotApplyTo"..damageType.."DamageTaken") and modDB:Sum("BASE", nil, "ArmourAppliesTo"..damageType.."DamageTaken") or 0), 100)
-		local effectiveAppliedArmour = (output.Armour * percentOfArmourApplies / 100) * (1 + output.ArmourDefense)
+		local percentOfArmourApplies = 100
+		-- Only applies at 70% for non-physical damage
+		if damageType ~= "Physical" then
+			percentOfArmourApplies = 70
+		end
+		local effectiveAppliedArmour = output.Armour * (1 + output.ArmourDefense)
 		local resMult = 1 - (resist - enemyPen) / 100
 		local reductMult = 1
 		local takenFlat = modDB:Sum("BASE", nil, "DamageTaken", damageType.."DamageTaken", "DamageTakenWhenHit", damageType.."DamageTakenWhenHit")
@@ -929,21 +884,13 @@ function calcs.buildDefenceEstimations(env, actor)
 		end
 		output[damageType.."takenFlat"] = takenFlat
 		if percentOfArmourApplies > 0 then
-		--TODO: debug damage value
-			armourReduct = calcs.armourReduction(effectiveAppliedArmour, env.config.enemyLevel)
+			armourReduct = calcs.armourReductionF(effectiveAppliedArmour, env.config.enemyLevel)
+			armourReduct = armourReduct * percentOfArmourApplies / 100
 			armourReduct = m_min(output.DamageReductionMax, armourReduct)
-			if impaleDamage > 0 then
-				impaleArmourReduct = m_min(output.DamageReductionMax, calcs.armourReduction(effectiveAppliedArmour, impaleDamage * resMult))
-			end
 		end
 		local totalReduct = m_min(output.DamageReductionMax, armourReduct + reduction)
 		reductMult = 1 - m_max(m_min(output.DamageReductionMax, totalReduct - enemyOverwhelm), 0) / 100
 		output[damageType.."DamageReduction"] = 100 - reductMult * 100
-		if impaleDamage > 0 then
-			ConPrintTable({"A", impaleDamage, impaleArmourReduct, reduction, enemyOverwhelm, output[damageType.."TakenReflect"]})
-			impaleDamage = impaleDamage * resMult * (1 - m_max(m_min(output.DamageReductionMax, m_min(output.DamageReductionMax, impaleArmourReduct + reduction) - enemyOverwhelm), 0) / 100)
-			impaleDamage = impaleDamage * enemyImpaleChance / 100 * 5 * output[damageType.."TakenReflect"]
-		end
 		if breakdown then
 			breakdown[damageType.."DamageReduction"] = { }
 			if armourReduct ~= 0 then
@@ -1908,51 +1855,12 @@ function calcs.buildDefenceEstimations(env, actor)
 			local takenFlat = output[damageConvertedType.."takenFlat"]
 			if convertPercent > 0 or takenFlat ~= 0 then
 				local hitTaken = 0
-				local effectiveAppliedArmour = output[damageConvertedType.."EffectiveAppliedArmour"]
 				local damageConvertedMulti = convertPercent / 100
 				local totalHitPool = output[damageConvertedType.."TotalHitPool"]
 				local totalTakenMulti = output[damageConvertedType.."AfterReductionTakenHitMulti"] * (1 - output["VaalArcticArmourMitigation"])
 
-				if effectiveAppliedArmour == 0 and convertPercent == 100 then	-- use a simpler calculation for no armour DR
-					local drMulti = output[damageConvertedType.."ResistTakenHitMulti"] * (1 - output[damageConvertedType.."DamageReduction"] / 100)
-					hitTaken = m_max(totalHitPool / damageConvertedMulti / drMulti - takenFlat, 0) / totalTakenMulti
-				else
-					-- get relevant raw reductions and reduction modifiers
-					local totalResistMult = output[damageConvertedType.."ResistTakenHitMulti"]
-
-					local reductionPercent = modDB:Flag(nil, "SelfIgnore".."Base"..damageConvertedType.."DamageReduction") and 0 or output["Base"..damageConvertedType.."DamageReductionWhenHit"] or output["Base"..damageConvertedType.."DamageReduction"]
-					local flatDR = reductionPercent / 100
-					local enemyOverwhelmPercent = modDB:Flag(nil, "SelfIgnore"..damageConvertedType.."DamageReduction") and 0 or output[damageConvertedType.."EnemyOverwhelm"]
-
-					-- We know the damage and armour calculation chain. The important part for max hit calculations is:
-					-- 		dmgAfterRes = RAW * DamageConvertedMulti * ResistanceMulti
-					-- 		armourDR = AppliedArmour / (AppliedArmour + 5 * dmgAfterRes)
-					-- 		totalDR = max(min(armourDR + FlatDR, MaxReduction) - Overwhelm, 0)	-- min and max is complicated to actually math out so skip caps first and tack it on later. Result should be close enough
-					-- 		dmgReceived = dmgAfterRes * (1 - totalDR)
-					-- 		damageTaken = (dmgReceived + takenFlat) * TakenMulti
-					-- If we consider damageTaken to be the total hit pool of the actor, we can go backwards in the chain until we find the max hit - the RAW damage.
-					-- Unfortunately the above is slightly simplified and is missing a line that *really* complicates stuff for exact calculations:
-					--		damageTaken = damageTakenAsPhys + damageTakenAsFire + damageTakenAsCold + damageTakenAsLightning + damageTakenAsChaos
-					-- Trying to solve that for RAW might require solving a polynomial equation of 6th degree, so this solution settles for solving the parts independently and then approximating the final result
-					--
-					-- To solve only one part the above can be expressed as this:
-					--		5 * (1 - FlatDR + Overwhelm) * TakenMulti * ResistanceMulti * ResistanceMulti * DamageConvertedMulti * DamageConvertedMulti * RAW * RAW + ((Overwhelm - FlatDR) * AppliedArmour * TakenMulti - 5 * (damageTaken - takenFlat * TakenMulti)) * ResistanceMulti * DamageConvertedMulti * RAW - (damageTaken - takenFlat * TakenMulti) * AppliedArmour = 0
-					-- Which means that
-					-- 		RAW = [quadratic]
-
-					local resistXConvert = totalResistMult * damageConvertedMulti
-					local a = 5 * (1 - flatDR + enemyOverwhelmPercent / 100) * totalTakenMulti * resistXConvert * resistXConvert
-					local b = ((enemyOverwhelmPercent / 100 - flatDR) * effectiveAppliedArmour * totalTakenMulti - 5 * (totalHitPool - takenFlat * totalTakenMulti)) * resistXConvert
-					local c = -effectiveAppliedArmour * (totalHitPool - takenFlat * totalTakenMulti)
-
-					local RAW = (m_sqrt(b * b - 4 * a * c) - b) / (2 * a)
-
-					-- tack on some caps
-					local noDRMaxHit = totalHitPool / damageConvertedMulti / totalResistMult / totalTakenMulti * (1 - takenFlat * totalTakenMulti / totalHitPool)
-					local maxDRMaxHit = noDRMaxHit / (1 - (output.DamageReductionMax - enemyOverwhelmPercent) / 100)
-					hitTaken = m_floor(m_max(m_min(RAW, maxDRMaxHit), noDRMaxHit))
-					useConversionSmoothing = useConversionSmoothing or convertPercent ~= 100
-				end
+				local drMulti = output[damageConvertedType.."ResistTakenHitMulti"] * (1 - output[damageConvertedType.."DamageReduction"] / 100)
+				hitTaken = m_max(totalHitPool / damageConvertedMulti / drMulti - takenFlat, 0) / totalTakenMulti
 				poolMax = m_max(poolMax, totalHitPool)
 				partMin = m_min(partMin, hitTaken)
 			end
@@ -1960,33 +1868,7 @@ function calcs.buildDefenceEstimations(env, actor)
 
 		local enemyDamageMult = output[damageType .."EnemyDamageMult"]
 
-		local finalMaxHit
-		if partMin == m_huge then
-			finalMaxHit = m_huge
-		elseif useConversionSmoothing then
-			-- this just reduces deviation from what the result should be
-			local noSmoothing = partMin
-			-- this sqrt pass could be repeated multiple times and each time it would produce a more accurate result.
-			local noSmoothingFullTaken, noSmoothingDamages = calcs.takenHitFromDamage(noSmoothing, damageType, actor)
-			local firstPassRatio = noSmoothingFullTaken / poolMax
-			for partType, partTaken in pairs(noSmoothingDamages) do
-				firstPassRatio = m_max(firstPassRatio, partTaken / output[partType.."TotalHitPool"])
-			end
-			local onePass = noSmoothing / m_sqrt(firstPassRatio)
-			-- this finishing pass is special because it:
-			--	1) inverts the behaviour of misreporting - instead of over reporting it under reports, so players don't try to tank something they can't
-			--	2) near the worst case scenarios of previous smoothing ratios this *magically* makes calculations near exact. In average case scenarios it still helps.
-			local onePassFullTaken, onePassDamages = calcs.takenHitFromDamage(onePass, damageType, actor)
-			local finalPassRatio = onePassFullTaken / poolMax
-			for partType, partTaken in pairs(onePassDamages) do
-				finalPassRatio = m_max(finalPassRatio, partTaken / output[partType.."TotalHitPool"])
-			end
-			local finalPass = onePass / finalPassRatio
-			
-			finalMaxHit = round(finalPass / enemyDamageMult)
-		else
-			finalMaxHit = round(partMin / enemyDamageMult)
-		end
+		local finalMaxHit = partMin / enemyDamageMult
 		
 		local maxHitCurType = damageType.."MaximumHitTaken"
 		output[maxHitCurType] = finalMaxHit
@@ -2036,56 +1918,11 @@ function calcs.buildDefenceEstimations(env, actor)
 			local poolsRemaining = calcs.reducePoolsByDamage(nil, takenDamages, actor)
 			
 			t_insert(breakdown[maxHitCurType], s_format("^8Such a hit would drain the following:"))
-			if output.FrostShieldLife and output.FrostShieldLife > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.GEM.."Frost Shield Life ^7(%d remaining)", output.FrostShieldLife - poolsRemaining.AlliesTakenBeforeYou["frostShield"].remaining, poolsRemaining.AlliesTakenBeforeYou["frostShield"].remaining))
-			end
-			if output.TotalSpectreLife and output.TotalSpectreLife > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.GEM.."Total Spectre Life ^7(%d remaining)", output.TotalSpectreLife - poolsRemaining.AlliesTakenBeforeYou["specters"].remaining, poolsRemaining.AlliesTakenBeforeYou["specters"].remaining))
-			end
-			if output.TotalTotemLife and output.TotalTotemLife > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.GEM.."Total Totem Life ^7(%d remaining)", output.TotalTotemLife - poolsRemaining.AlliesTakenBeforeYou["totems"].remaining, poolsRemaining.AlliesTakenBeforeYou["totems"].remaining))
-			end
-			if output.TotalVaalRejuvenationTotemLife and output.TotalVaalRejuvenationTotemLife > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.GEM.."Total Vaal Rejuvenation Totem Life ^7(%d remaining)", output.TotalVaalRejuvenationTotemLife - poolsRemaining.AlliesTakenBeforeYou["vaalRejuvenationTotems"].remaining, poolsRemaining.AlliesTakenBeforeYou["vaalRejuvenationTotems"].remaining))
-			end
-			if output.TotalRadianceSentinelLife and output.TotalRadianceSentinelLife > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.GEM.."Total Sentinel of Radiance Life ^7(%d remaining)", output.TotalRadianceSentinelLife - poolsRemaining.AlliesTakenBeforeYou["radianceSentinel"].remaining, poolsRemaining.AlliesTakenBeforeYou["radianceSentinel"].remaining))
-			end
-			if output.AlliedEnergyShield and output.AlliedEnergyShield > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.GEM.."Total Allied Energy shield ^7(%d remaining)", output.AlliedEnergyShield - poolsRemaining.AlliesTakenBeforeYou["soulLink"].remaining, poolsRemaining.AlliesTakenBeforeYou["soulLink"].remaining))
-			end
-			if output.sharedAegis and output.sharedAegis > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.GEM.."Shared Aegis charge ^7(%d remaining)", output.sharedAegis - poolsRemaining.Aegis.shared, poolsRemaining.Aegis.shared))
-			end
-			local receivedElemental = false
-			for takenType in pairs(takenDamages) do
-				receivedElemental = receivedElemental or isElemental[takenType]
-				if output[takenType.."Aegis"] and output[takenType.."Aegis"] > 0 then
-					t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.GEM.."%s Aegis charge ^7(%d remaining)", output[takenType.."Aegis"] - poolsRemaining.Aegis[takenType], takenType, poolsRemaining.Aegis[takenType]))
-				end
-			end
-			if receivedElemental and output.sharedElementalAegis and output.sharedElementalAegis > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.GEM.."Elemental Aegis charge ^7(%d remaining)", output.sharedElementalAegis - poolsRemaining.Aegis.sharedElemental, poolsRemaining.Aegis.sharedElemental))
-			end
-			if output.sharedGuardAbsorb and output.sharedGuardAbsorb > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.SCOURGE.."Shared Guard charge ^7(%d remaining)", output.sharedGuardAbsorb - poolsRemaining.Guard.shared, poolsRemaining.Guard.shared))
-			end
-			for takenType in pairs(takenDamages) do
-				if  output[takenType.."GuardAbsorb"] and output[takenType.."GuardAbsorb"] > 0 then
-					t_insert(breakdown[maxHitCurType], s_format("\n\t%d "..colorCodes.SCOURGE.."%s Guard charge ^7(%d remaining)", output[takenType.."GuardAbsorb"] - poolsRemaining.Guard[takenType], takenType, poolsRemaining.Guard[takenType]))
-				end
-			end
 			if output.Ward and output.Ward > 0 then
 				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.WARD.."Ward", output.Ward))
 			end
-			if output.EnergyShieldRecoveryCap ~= poolsRemaining.EnergyShield and output.EnergyShieldRecoveryCap and output.EnergyShieldRecoveryCap > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.ES.."Energy Shield ^7(%d remaining)", output.EnergyShieldRecoveryCap - poolsRemaining.EnergyShield, poolsRemaining.EnergyShield))
-			end
 			if output.Mana ~= poolsRemaining.Mana and output.Mana and output.Mana > 0 then
 				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.MANA.."Mana ^7(%d remaining)", output.Mana - poolsRemaining.Mana, poolsRemaining.Mana))
-			end
-			if poolsRemaining.LifeLossLostOverTime + poolsRemaining.LifeBelowHalfLossLostOverTime > 0 then
-				t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.LIFE.."Life ^7Loss Prevented", poolsRemaining.LifeLossLostOverTime + poolsRemaining.LifeBelowHalfLossLostOverTime))
 			end
 			t_insert(breakdown[maxHitCurType], s_format("\t%d "..colorCodes.LIFE.."Life ^7(%d remaining)", output.LifeRecoverable - poolsRemaining.Life, poolsRemaining.Life))
 		end
