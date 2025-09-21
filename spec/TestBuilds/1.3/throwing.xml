@@ -788,10 +788,10 @@ Implicits: 1
 			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="hh7pa3" slot="Skill 5"></Skill>
 			<Skill enabled="true" includeInFullDPS="true" index="6" label="Bleed (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:ht16aw"></Skill>
 			<Skill enabled="true" includeInFullDPS="true" index="7" label="Ignite (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:ht16aw"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="8" label="Shock (from Hammer Throw)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:ht16aw"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="8" label="Shock (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:ht16aw"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="9" label="Blind (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:sm87r4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="10" label="Ignite (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:sm87r4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="11" label="Shock (from Smite)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:sm87r4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="11" label="Shock (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:sm87r4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="12" label="Healing Hands Lingering Warmth (from Healing Hands)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_HealingHandsHealOverTime" source="SkillId:hh7pa3"></Skill>
 		</SkillSet>
 	</Skills>

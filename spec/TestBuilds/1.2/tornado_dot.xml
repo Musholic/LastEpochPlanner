@@ -948,8 +948,8 @@ Implicits: 1
 			<Skill enabled="true" includeInFullDPS="true" index="3" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="to50" slot="Skill 3"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="wc57" slot="Skill 4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="sw43" slot="Skill 5"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="6" label="Shred Armor (from Gathering Storm)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:ga2st"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="7" label="Shred Armor (from Swipe)" mainActiveSkill="nil" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:sw43"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="6" label="Shred Armor (from Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:ga2st"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="7" label="Shred Armor (from Swipe)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:sw43"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
