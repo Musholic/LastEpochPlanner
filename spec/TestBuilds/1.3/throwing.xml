@@ -19,14 +19,14 @@
 		<PlayerStat stat="Dex" value="11"></PlayerStat>
 		<PlayerStat stat="Int" value="11"></PlayerStat>
 		<PlayerStat stat="Att" value="4"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="8268.6594039795"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="7783"></PlayerStat>
-		<PlayerStat stat="LightningMaximumHitTaken" value="5046"></PlayerStat>
-		<PlayerStat stat="ColdMaximumHitTaken" value="5046"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="21710"></PlayerStat>
-		<PlayerStat stat="PoisonMaximumHitTaken" value="6290"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="18368"></PlayerStat>
-		<PlayerStat stat="VoidMaximumHitTaken" value="11774"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="14429.798062978"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="13988.662162194"></PlayerStat>
+		<PlayerStat stat="LightningMaximumHitTaken" value="9069.5721710926"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="9069.5721710926"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="50150.012504509"></PlayerStat>
+		<PlayerStat stat="PoisonMaximumHitTaken" value="11305.905035198"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="33013.242702777"></PlayerStat>
+		<PlayerStat stat="VoidMaximumHitTaken" value="21162.335065883"></PlayerStat>
 		<PlayerStat stat="Life" value="4592"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="12"></PlayerStat>
 		<PlayerStat stat="LifeRegenRecovery" value="54.6"></PlayerStat>
@@ -43,7 +43,7 @@
 		<PlayerStat stat="ProjectileEvadeChance" value="0"></PlayerStat>
 		<PlayerStat stat="Armour" value="4938"></PlayerStat>
 		<PlayerStat stat="Spec:ArmourInc" value="40"></PlayerStat>
-		<PlayerStat stat="PhysicalDamageReduction" value="80"></PlayerStat>
+		<PlayerStat stat="PhysicalDamageReduction" value="63.373887497339"></PlayerStat>
 		<PlayerStat stat="BlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
@@ -104,6 +104,7 @@
 		<Placeholder name="enemyCritDamage" number="30"></Placeholder>
 		<Placeholder name="enemyDamageRollRange" number="70"></Placeholder>
 		<Placeholder name="enemyFireDamage" number="1000"></Placeholder>
+		<Placeholder name="enemyLevel" number="100"></Placeholder>
 		<Placeholder name="enemyLightningDamage" number="1000"></Placeholder>
 		<Placeholder name="enemyNecroticDamage" number="1000"></Placeholder>
 		<Placeholder name="enemyPhysicalDamage" number="1000"></Placeholder>

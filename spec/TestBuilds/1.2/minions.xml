@@ -17,14 +17,14 @@
 		<PlayerStat stat="Dex" value="14"></PlayerStat>
 		<PlayerStat stat="Int" value="97"></PlayerStat>
 		<PlayerStat stat="Att" value="1"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="7841.1377968603"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="6641"></PlayerStat>
-		<PlayerStat stat="LightningMaximumHitTaken" value="11688"></PlayerStat>
-		<PlayerStat stat="ColdMaximumHitTaken" value="5411"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="12552"></PlayerStat>
-		<PlayerStat stat="PoisonMaximumHitTaken" value="4174"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="11688"></PlayerStat>
-		<PlayerStat stat="VoidMaximumHitTaken" value="11238"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="16235.613342564"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="18018.050830113"></PlayerStat>
+		<PlayerStat stat="LightningMaximumHitTaken" value="31711.769460998"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="14681.374750462"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="35045.154330945"></PlayerStat>
+		<PlayerStat stat="PoisonMaximumHitTaken" value="11325.631950356"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="31711.769460998"></PlayerStat>
+		<PlayerStat stat="VoidMaximumHitTaken" value="30492.08602019"></PlayerStat>
 		<PlayerStat stat="Life" value="2922"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="24"></PlayerStat>
 		<PlayerStat stat="LifeRegenRecovery" value="22"></PlayerStat>
@@ -33,7 +33,7 @@
 		<PlayerStat stat="Spec:ManaInc" value="0"></PlayerStat>
 		<PlayerStat stat="ManaRegenRecovery" value="10.8"></PlayerStat>
 		<PlayerStat stat="ManaLeechGainRate" value="0"></PlayerStat>
-		<PlayerStat stat="Ward" value="0"></PlayerStat>
+		<PlayerStat stat="Ward" value="3566"></PlayerStat>
 		<PlayerStat stat="WardRetention" value="408"></PlayerStat>
 		<PlayerStat stat="Evasion" value="113"></PlayerStat>
 		<PlayerStat stat="Spec:EvasionInc" value="0"></PlayerStat>
@@ -41,7 +41,7 @@
 		<PlayerStat stat="ProjectileEvadeChance" value="0"></PlayerStat>
 		<PlayerStat stat="Armour" value="1160"></PlayerStat>
 		<PlayerStat stat="Spec:ArmourInc" value="0"></PlayerStat>
-		<PlayerStat stat="PhysicalDamageReduction" value="48"></PlayerStat>
+		<PlayerStat stat="PhysicalDamageReduction" value="25.946966148514"></PlayerStat>
 		<PlayerStat stat="BlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
@@ -100,6 +100,7 @@
 		<Placeholder name="enemyCritDamage" number="30"></Placeholder>
 		<Placeholder name="enemyDamageRollRange" number="70"></Placeholder>
 		<Placeholder name="enemyFireDamage" number="1000"></Placeholder>
+		<Placeholder name="enemyLevel" number="100"></Placeholder>
 		<Placeholder name="enemyLightningDamage" number="1000"></Placeholder>
 		<Placeholder name="enemyNecroticDamage" number="1000"></Placeholder>
 		<Placeholder name="enemyPhysicalDamage" number="1000"></Placeholder>

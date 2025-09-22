@@ -372,7 +372,7 @@ function calcs.offence(env, actor, activeSkill)
 
 	local function calcResistForType(damageType, cfg)
 		local resist = enemyDB:Override(cfg, damageType.."Resist")
-		local maxResist = enemyDB:Flag(nil, "DoNotChangeMaxResFromConfig") and data.misc.EnemyMaxResist or m_min(m_max(env.configInput["enemy"..damageType.."Resist"] or data.misc.EnemyMaxResist, data.misc.EnemyMaxResist), data.misc.MaxResistCap)
+		local maxResist = enemyDB:Flag(nil, "DoNotChangeMaxResFromConfig") and data.misc.EnemyMaxResist or m_min(m_max(env.config["enemy"..damageType.."Resist"] or data.misc.EnemyMaxResist, data.misc.EnemyMaxResist), data.misc.MaxResistCap)
 		if not resist then
 			if env.modDB:Flag(nil, "Enemy"..damageType.."ResistEqualToYours") then
 				resist = env.player.output[damageType.."Resist"]
@@ -657,11 +657,11 @@ function calcs.offence(env, actor, activeSkill)
 	if output.Repeats > 1 then
 		output.RepeatCount = output.Repeats
 		-- handle all the multipliers from Repeats
-		if env.configInput.repeatMode ~= "NONE" then
+		if env.config.repeatMode ~= "NONE" then
 			for i, value in ipairs(skillModList:Tabulate("INC", skillCfg, "RepeatFinalAreaOfEffect")) do
 				local mod = value.mod
 				local modValue = mod.value
-				if env.configInput.repeatMode == "AVERAGE" then
+				if env.config.repeatMode == "AVERAGE" then
 					modValue = modValue / output.Repeats
 				end
 				skillModList:NewMod("AreaOfEffect", "INC", modValue, mod.source, mod.flags, mod.keywordFlags, unpack(mod))
@@ -669,7 +669,7 @@ function calcs.offence(env, actor, activeSkill)
 			for i, value in ipairs(skillModList:Tabulate("INC", skillCfg, "RepeatPerRepeatAreaOfEffect")) do
 				local mod = value.mod
 				local modValue = mod.value * (output.Repeats - 1)
-				if env.configInput.repeatMode == "AVERAGE" then
+				if env.config.repeatMode == "AVERAGE" then
 					modValue = modValue / 2
 				end
 				skillModList:NewMod("AreaOfEffect", "INC", modValue, mod.source, mod.flags, mod.keywordFlags, unpack(mod))
@@ -677,7 +677,7 @@ function calcs.offence(env, actor, activeSkill)
 			for i, value in ipairs(skillModList:Tabulate("BASE", skillCfg, "RepeatFinalDoubleDamageChance")) do
 				local mod = value.mod
 				local modValue = mod.value
-				if env.configInput.repeatMode == "AVERAGE" then
+				if env.config.repeatMode == "AVERAGE" then
 					modValue = modValue / output.Repeats
 				end
 				skillModList:NewMod("DoubleDamageChance", "BASE", modValue, mod.source, mod.flags, mod.keywordFlags, unpack(mod))
@@ -689,7 +689,7 @@ function calcs.offence(env, actor, activeSkill)
 				local modValue = mod.value
 				DamageFinalMoreValueTotal = DamageFinalMoreValueTotal * (1 + modValue / 100)
 				DamageMoreValueTotal = DamageMoreValueTotal + modValue
-				if env.configInput.repeatMode == "AVERAGE" and not skillModList:Flag(nil, "OnlyFinalRepeat") then
+				if env.config.repeatMode == "AVERAGE" and not skillModList:Flag(nil, "OnlyFinalRepeat") then
 					modValue = modValue / output.Repeats
 				end
 				skillModList:NewMod("Damage", "MORE", modValue, mod.source, mod.flags, mod.keywordFlags, unpack(mod))
@@ -697,7 +697,7 @@ function calcs.offence(env, actor, activeSkill)
 			for i, value in ipairs(skillModList:Tabulate("MORE", skillCfg, "RepeatPerRepeatDamage")) do
 				local mod = value.mod
 				local modValue = mod.value * (output.Repeats - 1)
-				if env.configInput.repeatMode == "AVERAGE" then
+				if env.config.repeatMode == "AVERAGE" then
 					if DamageFinalMoreValueTotal ~= 1 then
 						-- sum from 0 to num Repeats the damage each one does, multiplied by the other repeat multipliers,
 						-- divide the total by the average other repeat multipliers and divide by number of repeats
@@ -715,7 +715,7 @@ function calcs.offence(env, actor, activeSkill)
 			for _, repeatCount in ipairs({{2, "One"}, {3, "Two"}, {4, "Three"}}) do
 				if repeatCount[1] > output.Repeats then
 					break
-				elseif env.configInput.repeatMode == "AVERAGE" then
+				elseif env.config.repeatMode == "AVERAGE" then
 					for i, value in ipairs(skillModList:Tabulate("MORE", skillCfg, "Repeat"..repeatCount[2].."Damage")) do
 						DamageMoreValueTotal = DamageMoreValueTotal + value.mod.value
 						lastMod = value.mod
@@ -726,7 +726,7 @@ function calcs.offence(env, actor, activeSkill)
 					end
 				end
 			end
-			if env.configInput.repeatMode == "AVERAGE" then
+			if env.config.repeatMode == "AVERAGE" then
 				if lastMod then
 					skillModList:NewMod("Damage", "MORE", (DamageMoreValueTotal / output.Repeats + 100) / (1 + DamageFinalMoreValueTotal / output.Repeats / 100) - 100, lastMod.source, lastMod.flags, lastMod.keywordFlags, unpack(lastMod))
 				end
@@ -817,7 +817,7 @@ function calcs.offence(env, actor, activeSkill)
 	end
 	if skillModList:Sum("BASE", skillCfg, "PhysicalDamageGainAsRandom", "PhysicalDamageConvertToRandom", "PhysicalDamageGainAsColdOrLightning") > 0 then
 		skillFlags.randomPhys = true
-		local physMode = env.configInput.physMode or "AVERAGE"
+		local physMode = env.config.physMode or "AVERAGE"
 		for i, value in ipairs(skillModList:Tabulate("BASE", skillCfg, "PhysicalDamageGainAsRandom")) do
 			local mod = value.mod
 			local effVal = mod.value / 3
@@ -1185,7 +1185,7 @@ function calcs.offence(env, actor, activeSkill)
 		output.TotemsSummoned = env.modDB:Override(nil, "TotemsSummoned") or output.ActiveTotemLimit
 		if breakdown then
 			breakdown.ActiveTotemLimit = {
-				"Totems Summoned: "..output.TotemsSummoned..(env.configInput.TotemsSummoned and " ^8(overridden from the Configuration tab)" or " ^8(can be overridden in the Configuration tab)"),
+				"Totems Summoned: "..output.TotemsSummoned..(env.config.TotemsSummoned and " ^8(overridden from the Configuration tab)" or " ^8(can be overridden in the Configuration tab)"),
 			}
 		end
 		output.TotemLifeMod = calcLib.mod(skillModList, skillCfg, "TotemLife")
@@ -1674,7 +1674,7 @@ function calcs.offence(env, actor, activeSkill)
 	end
 	-- Other Misc DPS multipliers (like custom source)
 	skillData.dpsMultiplier = ( skillData.dpsMultiplier or 1 ) * ( 1 + skillModList:Sum("INC", skillCfg, "DPS") / 100 ) * skillModList:More(skillCfg, "DPS")
-	if env.configInput.repeatMode == "FINAL" or skillModList:Flag(nil, "OnlyFinalRepeat") then
+	if env.config.repeatMode == "FINAL" or skillModList:Flag(nil, "OnlyFinalRepeat") then
 		skillData.dpsMultiplier = skillData.dpsMultiplier / (output.Repeats or 1)
 	end
 	if skillModList:Flag(nil, "TriggeredBySnipe") then
@@ -2033,7 +2033,7 @@ function calcs.offence(env, actor, activeSkill)
 		output.FistOfWarHitEffect = 1
 		output.FistOfWarAilmentEffect = 1
 		if env.mode_combat then
-			local ruthlessEffect = env.configInput.ruthlessSupportMode or "AVERAGE"
+			local ruthlessEffect = env.config.ruthlessSupportMode or "AVERAGE"
 			-- Calculate Ruthless Blow chance/multipliers + Fist of War multipliers
 			output.RuthlessBlowMaxCount = skillModList:Sum("BASE", cfg, "RuthlessBlowMaxCount")
 			if output.RuthlessBlowMaxCount > 0 and ( not skillCfg.skillCond["usedByMirage"] or (skillData.mirageUses or 0) > output.RuthlessBlowMaxCount ) then
@@ -2112,10 +2112,10 @@ function calcs.offence(env, actor, activeSkill)
 				output.BonusCritDotMultiplier = 0
 				output.CritEffect = 1
 			elseif skillModList:Flag(cfg, "SpellSkillsAlwaysDealCriticalStrikesOnFinalRepeat") then
-				if env.configInput.repeatMode == "None" then
+				if env.config.repeatMode == "None" then
 					output.PreEffectiveCritChance = 0
 					output.CritChance = 0
-				elseif env.configInput.repeatMode == "AVERAGE" then
+				elseif env.config.repeatMode == "AVERAGE" then
 					output.PreEffectiveCritChance = 100 / output.Repeats
 					output.CritChance = 100 / output.Repeats
 					if breakdown then
@@ -2529,7 +2529,7 @@ function calcs.offence(env, actor, activeSkill)
 		end
 		output.TotalAvg = totalHitAvg
 
-		if skillModList:Flag(skillCfg, "ElementalEquilibrium") and not env.configInput.EEIgnoreHitDamage and (output.FireHitAverage + output.ColdHitAverage + output.LightningHitAverage > 0) then
+		if skillModList:Flag(skillCfg, "ElementalEquilibrium") and not env.config.EEIgnoreHitDamage and (output.FireHitAverage + output.ColdHitAverage + output.LightningHitAverage > 0) then
 			-- Update enemy hit-by-damage-type conditions
 			enemyDB.conditions.HitByFireDamage = output.FireHitAverage > 0
 			enemyDB.conditions.HitByColdDamage = output.ColdHitAverage > 0
@@ -2687,14 +2687,14 @@ function calcs.offence(env, actor, activeSkill)
 		skillFlags.weapon2AttackPvP = false
 		skillFlags.notAveragePvP = false
 
-		if env.configInput.PvpScaling then
+		if env.config.PvpScaling then
 			skillFlags.isPvP = true
 			skillFlags.attackPvP = skillFlags.attack
 			skillFlags.notAttackPvP = not skillFlags.attack
 			skillFlags.weapon1AttackPvP = skillFlags.weapon1Attack
 			skillFlags.weapon2AttackPvP = skillFlags.weapon2Attack
 			skillFlags.notAveragePvP = skillFlags.notAverage
-			local PvpTvalue = env.configInput.multiplierPvpTvalueOverride or nil
+			local PvpTvalue = env.config.multiplierPvpTvalueOverride or nil
 			if PvpTvalue then
 				PvpTvalue = PvpTvalue / 1000
 			else
