@@ -275,14 +275,17 @@ function calcs.defence(env, actor)
 			breakdown.Armour = { slots = { } }
 			breakdown.Evasion = { slots = { } }
 		end
-		local armourBase, evasionBase, wardBase
-		wardBase = modDB:Sum("BASE", nil, "Ward")
+		local armourBase, evasionBase, wardPerSecond
+		wardPerSecond = modDB:Sum("BASE", nil, "WardPerSecond")
 
-		if wardBase > 0 then
-			ward = ward + wardBase * calcLib.mod(modDB, nil, "Ward", "Defences")
-			if breakdown then
-				breakdown.slot("Global", nil, nil, wardBase, nil, "Ward", "Defences")
-			end
+		-- Ward lost per second formula is (0.00005 * ( ward - wardDecayThreshold )^2 + 0.2 * (ward - wardDecayThreshold)) / (1 + 0.5 * wardRetention), we can deduce ward when this is equal to wardPerSecond:
+		-- ward = wardDecayThreshold + ((-0.2 + sqrt(0.04 + 0.0002 * wardPerSecond * (1 + 0.5 * wardRetention))) / 0.0001)
+
+		if wardPerSecond > 0 then
+		local wardDecayThreshold = modDB:Sum("BASE", nil, "WardDecayThreshold")
+		local wardRetention = modDB:Sum("BASE", nil, "WardRetention")
+		ward = wardDecayThreshold + ((-0.2 + math.sqrt(0.04 + 0.0002 * wardPerSecond * (1 + 0.5 * wardRetention / 100))) / 0.0001)
+		ward = ward + wardPerSecond * calcLib.mod(modDB, nil, "Ward", "Defences")
 		end
 		armourBase = modDB:Sum("BASE", nil, "Armour", "ArmourAndEvasion")
 		if armourBase > 0 then
