@@ -1,3 +1,17 @@
+VERSION[0.9.0][2025/09/24]
+
+--- New to Last Epoch Planner ---
+- Support for tree icons (Musholic)
+- Add a full import button and improve main skill guess (Musholic)
+- Support for armor reduction and ward calculation (Musholic)
+
+--- Fixed Crashes ---
+- Fix crash on offline import when importing items with wrong nbAffixes value (Musholic)
+
+--- Fixed Calculations ---
+- Fix throwing skills not taking throwing mods into account (Musholic)
+
+
 VERSION[0.8.0][2025/08/22]
 --
 
