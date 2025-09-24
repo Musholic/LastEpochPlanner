@@ -1,5 +1,22 @@
 # Changelog
 
+## [v0.9.0](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/v0.9.0) (2025/09/24)
+
+[Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.8.0...v0.9.0)
+
+
+## What's Changed
+### New to Last Epoch Planner
+- Support for tree icons [\#66](https://github.com/Musholic/LastEpochPlanner/pull/66) ([Musholic](https://github.com/Musholic))
+- Add a full import button and improve main skill guess [\#71](https://github.com/Musholic/LastEpochPlanner/pull/71) ([Musholic](https://github.com/Musholic))
+- Support for armor reduction and ward calculation [\#72](https://github.com/Musholic/LastEpochPlanner/pull/72) ([Musholic](https://github.com/Musholic))
+### Fixed Crashes
+- Fix crash on offline import when importing items with wrong nbAffixes value [\#65](https://github.com/Musholic/LastEpochPlanner/pull/65) ([Musholic](https://github.com/Musholic))
+### Fixed Calculations
+- Fix throwing skills not taking throwing mods into account [\#67](https://github.com/Musholic/LastEpochPlanner/pull/67) ([Musholic](https://github.com/Musholic))
+
+
+
 ## [v0.8.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.8.0) (2025/08/22)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.7.1...v0.8.0)
