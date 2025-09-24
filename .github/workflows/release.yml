@@ -64,10 +64,10 @@ jobs:
               with:
                   token: ${{ steps.app-token.outputs.token }}
                   draft: true
-                  title: Release $NEXT_VERSION
-                  branch: release-$NEXT_VERSION
+                  title: Release ${{ env.NEXT_VERSION }}
+                  branch: release-${{ env.NEXT_VERSION }}
                   body: |
-                      Draft release of $NEXT_VERSION
+                      Draft release of ${{ env.NEXT_VERSION }}
 
                       Edits will be made as necessary to prepare the codebase for release.
-                  commit-message: 'Prepare release $NEXT_VERSION'
+                  commit-message: 'Prepare release ${{ env.NEXT_VERSION }}'
