@@ -1,5 +1,16 @@
 # Changelog
 
+## [beta](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/beta) (2025/09/25)
+
+[Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.9.0...beta)
+
+
+## What's Changed
+### Fixed Crashes
+- Fix crash when selecting skills with triggered ailments in the web version [\#77](https://github.com/Musholic/LastEpochPlanner/pull/77) ([Musholic](https://github.com/Musholic))
+
+
+
 ## [v0.9.0](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/v0.9.0) (2025/09/24)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.8.0...v0.9.0)
