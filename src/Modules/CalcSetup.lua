@@ -862,7 +862,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 				if not group then
 					-- Create a new group for this skill
 					group = { label = "", enabled = true, source = grantedSkill.source, slot = grantedSkill.slotName }
-					t_insert(build.skillsTab.socketGroupList, 5 + grantedIndex, group)
+					build.skillsTab.socketGroupList[5 + grantedIndex] = group
 					markList[group] = true
 				end
 
