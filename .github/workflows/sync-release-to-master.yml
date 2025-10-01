@@ -32,4 +32,5 @@ jobs:
       - name: Publish release
         run: |
           VERSION=$(echo ${{ github.head_ref }} | sed 's/release-//')
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
           gh release edit v$VERSION --draft=false
