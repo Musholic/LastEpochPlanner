@@ -29,10 +29,12 @@ jobs:
           git merge ${{ github.sha }} --ff-only
           git push
 
+      - name: Connect with gh auth login
+        run: echo "${{ steps.app-token.outputs.token }}" | gh auth login --with-token;
+
       - name: Publish release
         run: |
           VERSION=$(echo ${{ github.head_ref }} | sed 's/release-//')
-          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
           gh release edit v$VERSION --draft=false
       - name: Change back branch rule to not require up-to-date branch
         run: |
