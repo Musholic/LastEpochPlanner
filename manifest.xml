@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <LEPVersion>
-	<Version number="0.9.0" />
+	<Version number="0.9.1" />
 	<Source part="default" url="https://raw.githubusercontent.com/Musholic/LastEpochPlanner/{branch}/" />
 	<Source part="runtime" platform="win32" url="https://raw.githubusercontent.com/Musholic/LastEpochPlanner/{branch}/runtime/" />
 	<Source part="program" url="https://raw.githubusercontent.com/Musholic/LastEpochPlanner/{branch}/src/" />
 	<Source part="tree" url="https://raw.githubusercontent.com/Musholic/LastEpochPlanner/{branch}/src/" />
-	<File name="changelog.txt" part="default" sha1="e2344833b9d80f22ef4eeffd66c06cd07433917f" />
+	<File name="changelog.txt" part="default" sha1="a90fa4688c2c685e725756bacf9310f9376de4eb" />
 	<File name="help.txt" part="default" sha1="4a2b7e81211770cbbf4e54dde2e7a5891a7287a4" />
 	<File name="LICENSE.md" part="default" sha1="3c49fd388eedac9877c4e383b1ed4e7e565da2cf" />
 	<File name="Assets/game_ui_small.png" part="program" sha1="3e3f01a7c21ffe5ee7dfb644e9f3b7188c319d4d" />
@@ -109,7 +109,7 @@
 	<File name="Modules/CalcPerform.lua" part="program" sha1="ab9880f2fee2a11c7941c2bd064e012d5555bff8" />
 	<File name="Modules/Calcs.lua" part="program" sha1="e5e89da883744f87dd664483a99fe55c75803a2a" />
 	<File name="Modules/CalcSections.lua" part="program" sha1="bab007a4a5c15845d682fd15d94b603b44bc8b62" />
-	<File name="Modules/CalcSetup.lua" part="program" sha1="0148e6c3bfe294192650f5071df8dd36eb872c0a" />
+	<File name="Modules/CalcSetup.lua" part="program" sha1="110f3e9719fa8874de24294d73122719d930086d" />
 	<File name="Modules/CalcTools.lua" part="program" sha1="a8f7c62d94cf12e843af181aebe0afdc40c92e81" />
 	<File name="Modules/CalcTriggers.lua" part="program" sha1="e8fced519e00236adff8dd60b86e22d2dc14f65b" />
 	<File name="Modules/Common.lua" part="program" sha1="de268f51ad6bc642632eb63d713e6f8350fff99d" />
