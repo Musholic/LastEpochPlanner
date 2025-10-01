@@ -34,3 +34,8 @@ jobs:
           VERSION=$(echo ${{ github.head_ref }} | sed 's/release-//')
           echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
           gh release edit v$VERSION --draft=false
+      - name: Change back branch rule to not require up-to-date branch
+        run: |
+          sed -i 's/\r$//' .github/set_ruleset_strict.sh
+          chmod +x .github/set_ruleset_strict.sh
+          ./.github/set_ruleset_strict.sh false
