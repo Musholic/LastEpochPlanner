@@ -63,7 +63,6 @@ jobs:
               uses: peter-evans/create-pull-request@v7
               with:
                   token: ${{ steps.app-token.outputs.token }}
-                  draft: true
                   title: Release ${{ env.NEXT_VERSION }}
                   branch: release-${{ env.NEXT_VERSION }}
                   body: |
