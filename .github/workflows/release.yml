@@ -59,11 +59,15 @@ jobs:
                 sed -ri "s/<Version number=\"([^\"]*)\"/<Version number=\"$NEXT_VERSION\"/g" manifest.xml
             - name: Update manifest.xml
               run: python3 update_manifest.py --quiet --in-place
+            - name: Change branch rule to require up-to-date branch
+              run: |
+                sed -i 's/\r$//' .github/set_ruleset_strict.sh
+                chmod +x .github/set_ruleset_strict.sh
+                ./.github/set_ruleset_strict.sh true
             - name: Create Pull Request
               uses: peter-evans/create-pull-request@v7
               with:
                   token: ${{ steps.app-token.outputs.token }}
-                  draft: true
                   title: Release ${{ env.NEXT_VERSION }}
                   branch: release-${{ env.NEXT_VERSION }}
                   body: |

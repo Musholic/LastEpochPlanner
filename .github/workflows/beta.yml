@@ -4,11 +4,14 @@ on:
     workflows: ["Run Tests"]
     branches: [dev]
     types: [completed]
+  push:
+    tags:
+      - v** 
   workflow_dispatch:
 jobs:
   push-beta:
     runs-on: ubuntu-22.04
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'push' }}
     steps:
       - name: Set line endings
         run: git config --global core.autocrlf true
