@@ -25946,110 +25946,137 @@
       "baseMoreDoTDamageTaken": -0.15,
       "skills": [
         {
+          "name": "AssembleAbomination",
           "label": "Assemble Abomination",
           "treeId": "aa710"
         },
         {
+          "name": "AuraOfDecay",
           "label": "Aura Of Decay",
           "treeId": "ad0ry"
         },
         {
+          "name": "BoneCurse",
           "label": "Bone Curse",
           "treeId": "bc53"
         },
         {
+          "name": "SummonBoneGolem",
           "label": "Summon Bone Golem",
           "treeId": "bg36nl"
         },
         {
+          "name": "MarrowShards",
           "label": "Marrow Shards",
           "treeId": "bp2nk"
         },
         {
+          "name": "Warlock 04 Chthonic Fissure",
           "label": "Chthonic Fissure",
           "treeId": "ch0fs"
         },
         {
+          "name": "Warlock 01 Chaos Bolts",
           "label": "Chaos Bolts",
           "treeId": "ch4bo"
         },
         {
+          "name": "DrainLife",
           "label": "Drain Life",
           "treeId": "dl73"
         },
         {
+          "name": "DreadShade",
           "label": "Dread Shade",
           "treeId": "ds4d3"
         },
         {
+          "name": "DeathSeal",
           "label": "Death Seal",
           "treeId": "ds34l"
         },
         {
+          "name": "Warlock 03 SoulFeast",
           "label": "Soul Feast",
           "treeId": "fe8at"
         },
         {
+          "name": "Flay 1",
           "label": "Flay",
           "treeId": "fl44"
         },
         {
+          "name": "Warlock 02 Ghostflame",
           "label": "Ghostflame",
           "treeId": "gh0fl"
         },
         {
+          "name": "Harvest",
           "label": "Harvest",
           "treeId": "ha84"
         },
         {
+          "name": "HungeringSouls",
           "label": "Hungering Souls",
           "treeId": "hs18gu"
         },
         {
+          "name": "InfernalShade",
           "label": "Infernal Shade",
           "treeId": "is40"
         },
         {
+          "name": "Warlock 05 Profane Veil",
           "label": "Profane Veil",
           "treeId": "pr5fm"
         },
         {
+          "name": "RipBlood",
           "label": "Rip Blood",
           "treeId": "rb31pl"
         },
         {
+          "name": "ReaperForm",
           "label": "Reaper Form",
           "treeId": "rf1azz"
         },
         {
+          "name": "Sacrifice",
           "label": "Sacrifice",
           "treeId": "sf31rc"
         },
         {
+          "name": "SummonMage",
           "label": "Summon Skeletal Mage",
           "treeId": "sm4g"
         },
         {
+          "name": "SpiritPlague",
           "label": "Spirit Plague",
           "treeId": "sp5g2"
         },
         {
+          "name": "SummonSkeleton",
           "label": "Summon Skeleton",
           "treeId": "ss37kl"
         },
         {
+          "name": "SummonVolatileZombie",
           "label": "Summon Volatile Zombie",
           "treeId": "svz81"
         },
         {
+          "name": "SummonWraith",
           "label": "Summon Wraith",
           "treeId": "sw42ih"
         },
         {
+          "name": "Transplant",
           "label": "Transplant",
           "treeId": "ts50pl"
         },
         {
+          "name": "WanderingSpirits",
           "label": "Wandering Spirits",
           "treeId": "ws54hm"
         }

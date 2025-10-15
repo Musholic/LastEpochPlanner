@@ -147,7 +147,7 @@ function SkillsTabClass:InitSkillControl(i)
     if i <= 5 then
 		self.controls['skillLabel-' .. i] = new("LabelControl", { "TOPLEFT", self.controls.skillsSection, "TOPLEFT" }, 20, 24 * i, 0, 16, "^7Skill " .. i .. ":")
 		self.controls['skill-' .. i] = new("DropDownControl", { "LEFT", self.controls['skillLabel-' .. i], "RIGHT" }, 10, 0, 140, 20, nil, function(index, value)
-			self:SelSkill(i, value.treeId)
+			self:SelSkill(i, value.name)
 			self.build.spec:BuildAllDependsAndPaths()
 		end)
 	else
@@ -352,7 +352,7 @@ function SkillsTabClass:Draw(viewPort, inputEvents)
 		end
 		if i <=5 then
 			self.controls['skill-' .. i].list = skillList
-			self.controls["skill-"..i]:SelByValue(socketGroup and socketGroup.skillId, "treeId")
+			self.controls["skill-"..i]:SelByValue(socketGroup and socketGroup.skillId, "name")
 		end
 		if socketGroup then
 			self.controls['groupEnabled-'..i].state = socketGroup.enabled

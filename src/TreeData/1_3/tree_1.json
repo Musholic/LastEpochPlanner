@@ -25471,114 +25471,142 @@
       "baseMoreDoTDamageTaken": -0.15,
       "skills": [
         {
+          "name": "ArcaneAscendance",
           "label": "Arcane Ascendance",
           "treeId": "arcas"
         },
         {
+          "name": "BlackHole",
           "label": "Black Hole",
           "treeId": "bh2"
         },
         {
+          "name": "Disintegrate",
           "label": "Disintegrate",
           "treeId": "dig5"
         },
         {
+          "name": "ElementalNova",
           "label": "Elemental Nova",
           "treeId": "en6"
         },
         {
+          "name": "Firebrand",
           "label": "Firebrand",
           "treeId": "f1b4d"
         },
         {
+          "name": "Runemaster 05c1 Runebolt Fire",
           "label": "Runebolt",
           "treeId": "fb8fe"
         },
         {
+          "name": "Fireball",
           "label": "Fireball",
           "treeId": "fi9"
         },
         {
+          "name": "Runemaster 06 Flame Rush",
           "label": "Flame Rush",
           "treeId": "fl71ds"
         },
         {
+          "name": "Runemaster 01 Frost Wall",
           "label": "Frost Wall",
           "treeId": "fr4wl"
         },
         {
+          "name": "FlameReave",
           "label": "Flame Reave",
           "treeId": "fr11mv"
         },
         {
+          "name": "Frost Claw",
           "label": "Frost Claw",
           "treeId": "frc87w"
         },
         {
+          "name": "FlameWard",
           "label": "Flame Ward",
           "treeId": "fw3d"
         },
         {
+          "name": "Glacier",
           "label": "Glacier",
           "treeId": "gl14"
         },
         {
+          "name": "Runemaster 02 Glyph of Dominion",
           "label": "Glyph of Dominion",
           "treeId": "gy2dm"
         },
         {
+          "name": "IceBarrage",
           "label": "Ice Barrage",
           "treeId": "ib5g3"
         },
         {
+          "name": "LightningBlast",
           "label": "Lightning Blast",
           "treeId": "lb23il"
         },
         {
+          "name": "Meteor",
           "label": "Meteor",
           "treeId": "me27"
         },
         {
+          "name": "ManaStrike",
           "label": "Mana Strike",
           "treeId": "ms26"
         },
         {
+          "name": "Runemaster 04 Runic Invocation",
           "label": "Runic Invocation",
           "treeId": "rn7iv"
         },
         {
+          "name": "EnchantWeapon",
           "label": "Enchant Weapon",
           "treeId": "sb44eQ"
         },
         {
+          "name": "StaticOrb",
           "label": "Static Orb",
           "treeId": "so35a"
         },
         {
+          "name": "ShatterStrike",
           "label": "Shatter Strike",
           "treeId": "ss3tre"
         },
         {
+          "name": "Static",
           "label": "Static",
           "treeId": "st47ic"
         },
         {
+          "name": "Surge",
           "label": "Surge",
           "treeId": "su5g3"
         },
         {
+          "name": "SnapFreeze",
           "label": "Snap Freeze",
           "treeId": "sw31a"
         },
         {
+          "name": "Teleport",
           "label": "Teleport",
           "treeId": "te44"
         },
         {
+          "name": "Focus",
           "label": "Focus",
           "treeId": "vm53dx"
         },
         {
+          "name": "VolcanicOrb",
           "label": "Volcanic Orb",
           "treeId": "vo54"
         }
