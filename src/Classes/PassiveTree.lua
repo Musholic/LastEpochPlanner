@@ -107,7 +107,14 @@ local PassiveTreeClass = newClass("PassiveTree", function(self, treeVersion)
                 if v.y and minAbilityPosY > v.y then
                     minAbilityPosY = v.y
                 end
-                self.nodes[k].skillId = k:match("^[^-]+")
+                -- Should match the skill id of the related skill
+                local skillList = treeData.classes[1].skills
+                local treeId = k:match("^[^-]+")
+                for _, skill in ipairs(skillList) do
+                    if skill.treeId == treeId then
+                        self.nodes[k].skillId = skill.name
+                    end
+                end
             end
         end
         for k,v in pairs(treeData["classes"]) do
