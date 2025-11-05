@@ -140,12 +140,12 @@ end
 for skillId, skill in pairs(data.skills) do
     -- The player cannot trigger a minion skill and cannot trigger "Stacking" variants of skills
     if not skill.fromMinion and not skillId:find("Stacking") then
-    	modNameList["chance to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-    	modNameList["to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-    	modNameList[skill.name:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-    	if skill.altName then
-    		modNameList[skill.altName:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-    	end
+      modNameList["to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
+      modNameList[skill.name:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
+      if skill.altName then
+        modNameList[skill.altName:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
+      end
+      modNameList["to cast " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
     end
 end
 
@@ -173,6 +173,8 @@ local modFlagList = {
 	["minion skills"] = { tag = { type = "SkillType", skillType = SkillType.Minion } },
 	["with elemental spells"] = { keywordFlags = bor(KeywordFlag.Lightning, KeywordFlag.Cold, KeywordFlag.Fire) },
 	["minion"] = { addToMinion = true },
+	-- can be ignored since the cooldown is already part of the triggered skill data
+	["%(%d+ second cooldown%)"] = {},
 	-- Other
 	["global"] = { tag = { type = "Global" } },
 }
@@ -180,6 +182,7 @@ local modFlagList = {
 for _, damageType in ipairs(DamageTypes) do
 	modFlagList["on " .. damageType:lower() .. " hit"] = { keywordFlags = KeywordFlag[damageType], flags = ModFlag.Hit }
 	modFlagList["with " .. damageType:lower() .. " skills"] = { keywordFlags = KeywordFlag[damageType] }
+	modFlagList["when you directly use a " .. damageType:lower() .. " spell"] = { keywordFlags = KeywordFlag[damageType] }
 end
 
 for _, damageSourceType in ipairs(DamageSourceTypes) do
@@ -445,7 +448,7 @@ local function parseMod(line, order)
 
 	-- Scan for flags
 	local modFlags
-	modFlags, line = scan(line, modFlagList, true, true)
+	modFlags, line = scan(line, modFlagList, false, true)
 	if #modFlags > 1 then
 		line = line:gsub(" And ", "")
 	end

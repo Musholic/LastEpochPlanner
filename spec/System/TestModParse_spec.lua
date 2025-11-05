@@ -191,4 +191,12 @@ describe("TestModParse", function()
 
         assert.are.equals(17, build.configTab.modList:Sum("BASE", {flags = ModFlag.Hit}, "ChanceToTriggerOnHit_Ailment_Bleed"))
     end)
+
+    it("decimate cast chance", function()
+        build.configTab.input.customMods = "17% Chance to cast Decimate when you directly use a Fire Spell (4 second cooldown)"
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
+
+        assert.are.equals(17, build.configTab.modList:Sum("BASE", {keywordFlags = KeywordFlag.Fire}, "ChanceToTriggerOnHit_GasparSetSwipe"))
+        end)
 end)
