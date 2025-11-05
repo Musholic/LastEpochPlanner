@@ -642,7 +642,12 @@ function buildMode:ReadLeToolsSave(saveContent)
 	end
 	for _, skillTree in pairs(saveContent["skillTrees"]) do
 		table.insert(char["hashes"], skillTree['treeID'] .. "-" .. 0 .. "#1")
-		table.insert(char["abilities"], skillTree['treeID'])
+		local skillList = self.latestTree.classes[classId].skills
+		for _, skill in ipairs(skillList) do
+			if skill.treeId == skillTree['treeID'] then
+				table.insert(char["abilities"], skill.name)
+			end
+		end
 		for skill, nbPoints in pairs(skillTree["selected"]) do
 			if nbPoints > 0 then
 				table.insert(char["hashes"], skillTree['treeID'] .. "-" .. skill .. "#" .. nbPoints)

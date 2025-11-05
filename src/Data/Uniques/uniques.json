@@ -9034,7 +9034,7 @@
     "baseTypeID": 33,
     "subTypeID": 0,
     "req": {
-      "level": 0
+      "level": 32
     },
     "mods": [
       "+4 Maximum Companions if this is your only equipped Unique Idol",

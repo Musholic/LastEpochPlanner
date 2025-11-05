@@ -134,7 +134,7 @@ describe("TestModParse", function()
         build.configTab.input.customMods = "+40% Increased fire damage. This effect is doubled if you have 300 or more maximum mana."
         build.configTab:BuildModList()
         runCallback("OnFrame")
-        build.skillsTab:SelSkill(1, "fi9")
+        build.skillsTab:SelSkill(1, "Fireball")
         runCallback("OnFrame")
 
         assert.are.equals(53, build.calcsTab.calcsOutput.Mana)

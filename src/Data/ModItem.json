@@ -49611,7 +49611,7 @@
   "797_1": {
     "affix": "The Invoker's Scorching Grasp Reforged",
     "1": "{rounding:Integer}(14-17)% increased Fire Damage Over Time",
-    "2": "+(8-100)% Chance to Ignite on Hit",
+    "2": "+(8-10)% Chance to Ignite on Hit",
     "level": 0,
     "statOrderKey": 797,
     "statOrder": [

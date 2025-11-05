@@ -24135,106 +24135,132 @@
       "baseMoreDoTDamageTaken": -0.15,
       "skills": [
         {
+          "name": "Avalanche",
           "label": "Avalanche",
           "treeId": "av75ch"
         },
         {
+          "name": "SummonBear",
           "label": "Summon Bear",
           "treeId": "be36ar"
         },
         {
+          "name": "Eterras Blessing",
           "label": "Eterra's Blessing",
           "treeId": "eb5656"
         },
         {
+          "name": "EarthquakeSlam",
           "label": "Earthquake",
           "treeId": "eq5s"
         },
         {
+          "name": "EntanglingRoots",
           "label": "Entangling Roots",
           "treeId": "er6no"
         },
         {
+          "name": "FuryLeap",
           "label": "Fury Leap",
           "treeId": "fl13"
         },
         {
+          "name": "GatheringStormMelee",
           "label": "Gathering Storm",
           "treeId": "ga2st"
         },
         {
+          "name": "Maelstrom",
           "label": "Maelstrom",
           "treeId": "mas54"
         },
         {
+          "name": "SummonSabertooth",
           "label": "Summon Sabertooth",
           "treeId": "sa36oh"
         },
         {
+          "name": "Swarmblade Form",
           "label": "Swarmblade Form",
           "treeId": "sbf4m"
         },
         {
+          "name": "SummonScorpion",
           "label": "Summon Scorpion",
           "treeId": "sc36pi"
         },
         {
+          "name": "SprigganForm",
           "label": "Spriggan Form",
           "treeId": "sf5rd"
         },
         {
+          "name": "SummonFrenzyTotem",
           "label": "Summon Frenzy Totem",
           "treeId": "sf37"
         },
         {
+          "name": "SummonSpriggan",
           "label": "Summon Spriggan",
           "treeId": "sp38"
         },
         {
+          "name": "SummonRaptor",
           "label": "Summon Raptor",
           "treeId": "srtor"
         },
         {
+          "name": "SummonStormCrow",
           "label": "Summon Storm Crows",
           "treeId": "ssc50"
         },
         {
+          "name": "SerpentStrike",
           "label": "Serpent Strike",
           "treeId": "st31et"
         },
         {
+          "name": "SummonStormTotem",
           "label": "Summon Storm Totem",
           "treeId": "st38ml"
         },
         {
+          "name": "Swipe",
           "label": "Swipe",
           "treeId": "sw43"
         },
         {
+          "name": "SummonThornTotem",
           "label": "Summon Thorn Totem",
           "treeId": "th39"
         },
         {
+          "name": "Tornado",
           "label": "Tornado",
           "treeId": "to50"
         },
         {
+          "name": "TempestStrike",
           "label": "Tempest Strike",
           "treeId": "ts85i"
         },
         {
+          "name": "Upheaval",
           "label": "Upheaval",
           "treeId": "uph41"
         },
         {
+          "name": "WerebearForm",
           "label": "Werebear Form",
           "treeId": "wb8fo"
         },
         {
+          "name": "Warcry",
           "label": "Warcry",
           "treeId": "wc57"
         },
         {
+          "name": "SummonWolf",
           "label": "Summon Wolf",
           "treeId": "wo42"
         }

@@ -14,7 +14,7 @@ describe("TestSkills #skills", function()
         build.itemsTab:AddDisplayItem()
 
         -- Use melee skill Lunge
-        build.skillsTab:SelSkill(1, "lu25ng")
+        build.skillsTab:SelSkill(1, "Lunge")
         runCallback("OnFrame")
 
         local castSpeed = 1 / build.calcsTab.mainEnv.player.mainSkill.activeEffect.grantedEffect.stats.cooldown
@@ -33,7 +33,7 @@ describe("TestSkills #skills", function()
         build.itemsTab:AddDisplayItem()
 
         -- Use fire skill Fireball with 25 base fire damage
-        build.skillsTab:SelSkill(1, "fi9")
+        build.skillsTab:SelSkill(1, "Fireball")
 
         runCallback("OnFrame")
 
@@ -51,7 +51,7 @@ describe("TestSkills #skills", function()
         build.itemsTab:AddDisplayItem()
 
         -- Use skill Wandering Spirits
-        build.skillsTab:SelSkill(1, "ws54hm")
+        build.skillsTab:SelSkill(1, "WanderingSpirits")
 
         runCallback("OnFrame")
 
@@ -67,7 +67,7 @@ describe("TestSkills #skills", function()
         build.itemsTab:AddDisplayItem()
 
         -- Use melee skill Rive
-        build.skillsTab:SelSkill(1, "sndr1")
+        build.skillsTab:SelSkill(1, "Rive1")
         runCallback("OnFrame")
 
         local castSpeed = 1 / build.calcsTab.mainEnv.player.mainSkill.activeEffect.grantedEffect.castTime
@@ -86,8 +86,8 @@ expose("test all skills #allSkills", function()
         local className = class.name
         local skillList = build.spec.curClass.skills
         for _, skill in ipairs(skillList) do
-            it(skill.label .. " for class ".. className .. " #" .. skill.treeId, function()
-                build.skillsTab:SelSkill(1, skill.treeId)
+            it(skill.label .. " for class ".. className .. " #" .. skill.name, function()
+                build.skillsTab:SelSkill(1, skill.name)
                 runCallback("OnFrame")
             end)
         end

@@ -657,11 +657,22 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
         table.insert(char["hashes"], className .. "-" .. passive .. "#" .. nbPoints)
     end
     for _, skillTree in pairs(saveContent["savedSkillTrees"]) do
-        table.insert(char["hashes"], skillTree['treeID'] .. "-" .. 0 .. "#1")
-        table.insert(char["abilities"], skillTree['treeID'])
-        for skillIdx, skill in pairs(skillTree["nodeIDs"]) do
-            local nbPoints = skillTree["nodePoints"][skillIdx]
-            table.insert(char["hashes"], skillTree['treeID'] .. "-" .. skill .. "#" .. nbPoints)
+        local skillName
+
+        local skillList = self.build.latestTree.classes[classId].skills
+        for _, skill in ipairs(skillList) do
+            if skill.treeId == skillTree['treeID'] then
+               skillName = skill.name
+            end
+        end
+
+        if skillName then
+            table.insert(char["hashes"], skillName .. "-" .. 0 .. "#1")
+            table.insert(char["abilities"], skillName)
+            for skillIdx, skill in pairs(skillTree["nodeIDs"]) do
+                local nbPoints = skillTree["nodePoints"][skillIdx]
+                table.insert(char["hashes"], skillName .. "-" .. skill .. "#" .. nbPoints)
+            end
         end
     end
     for _, itemData in pairsSortByKey(saveContent["savedItems"]) do

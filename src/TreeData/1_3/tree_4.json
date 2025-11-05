@@ -23132,98 +23132,122 @@
       "baseMoreDoTDamageTaken": -0.15,
       "skills": [
         {
+          "name": "Falconer 02 Aerial Assault",
           "label": "Aerial Assault",
           "treeId": "aa989"
         },
         {
+          "name": "AcidFlask",
           "label": "Acid Flask",
           "treeId": "aacfl"
         },
         {
+          "name": "SummonBallista",
           "label": "Ballista",
           "treeId": "ba1574"
         },
         {
+          "name": "CinderStrike",
           "label": "Cinder Strike",
           "treeId": "cstri"
         },
         {
+          "name": "DancingStrike1",
           "label": "Dancing Strikes",
           "treeId": "dacn33"
         },
         {
+          "name": "ShadowCascade",
           "label": "Shadow Cascade",
           "treeId": "dagg3"
         },
         {
+          "name": "Falconer 03 Dive Bomb",
           "label": "Dive Bomb",
           "treeId": "db992"
         },
         {
+          "name": "Decoy",
           "label": "Decoy",
           "treeId": "deeco"
         },
         {
+          "name": "DetonatingArrow",
           "label": "Detonating Arrow",
           "treeId": "detar"
         },
         {
+          "name": "DarkQuiver",
           "label": "Dark Quiver",
           "treeId": "dqv5"
         },
         {
+          "name": "Falconer 04 Explosive Trap",
           "label": "Explosive Trap",
           "treeId": "ex4tp"
         },
         {
+          "name": "HailOfArrows",
           "label": "Hail of Arrows",
           "treeId": "exvol8"
         },
         {
+          "name": "Falconer 00 Falconry",
           "label": "Falconry",
           "treeId": "falc0"
         },
         {
+          "name": "Flurry",
           "label": "Flurry",
           "treeId": "flur3"
         },
         {
+          "name": "Heartseeker",
           "label": "Heartseeker",
           "treeId": "htsk5"
         },
         {
+          "name": "Lethal Mirage",
           "label": "Lethal Mirage",
           "treeId": "mira59"
         },
         {
+          "name": "RogueMultishot",
           "label": "Multishot",
           "treeId": "mush9"
         },
         {
+          "name": "Falconer 05 Net",
           "label": "Net",
           "treeId": "ne01t"
         },
         {
+          "name": "Puncture",
           "label": "Puncture",
           "treeId": "pun22"
         },
         {
+          "name": "Shift",
           "label": "Shift",
           "treeId": "shiif"
         },
         {
+          "name": "Smoke Bomb",
           "label": "Smoke Bomb",
           "treeId": "smbmb"
         },
         {
+          "name": "Shurikens",
           "label": "Shurikens",
           "treeId": "srk21"
         },
         {
+          "name": "SynchronizedStrike",
           "label": "Synchronized Strike",
           "treeId": "sync5"
         },
         {
+          "name": "Umbral Blades 1",
           "label": "Umbral Blades",
           "treeId": "ub5d9"
         }

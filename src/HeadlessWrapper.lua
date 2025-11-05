@@ -133,14 +133,8 @@ function PLoadModule(fileName, ...)
 	end
 end
 function PCall(func, ...)
-	local ret = { pcall(func, ...) }
-	if ret[1] then
-		table.remove(ret, 1)
-		return nil, unpack(ret)
-	else
-		error("ERROR: " .. ret[2])
-		return ret[2]
-	end	
+    -- Do not protect the function call since we want to get the full stack trace caught by busted
+    return nil, func(...)
 end
 function ConPrintf(fmt, ...)
 	-- Optional

@@ -168,7 +168,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				local vX = curTreeX - node.x
 				local nodeY = node.y
 				for id,ability in pairs(build.skillsTab.socketGroupList) do
-					if ability.skillId and not ability.triggered and nodeId:match("^" .. ability.skillId) then
+					if ability.grantedEffect.treeId and not ability.triggered and nodeId:match("^" .. ability.grantedEffect.treeId) then
 						nodeY = nodeY + (id - 1) * (tree.decAbilityPosY + 1000)
 					end
 				end
@@ -279,7 +279,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 
 	-- Draw skills background art for all selected skills
 	for id,ability in pairs(build.skillsTab.socketGroupList) do
-		if ability.skillId then
+		if ability.grantedEffect.treeId then
 			local scrX, scrY = treeToScreen(3000, 150 + (id - 1) * (tree.decAbilityPosY + 1000))
 			self:DrawAsset(tree.assets.SkillBackground, scrX, scrY, scale)
 		end
@@ -324,7 +324,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		-- Convert vertex coordinates to screen-space and add them to the coordinate array
 		local decY = 0
 		for id,ability in pairs(build.skillsTab.socketGroupList) do
-			if ability.skillId and not ability.triggered and connector.nodeId1:match("^" .. ability.skillId) then
+			if ability.grantedEffect.treeId and not ability.triggered and connector.nodeId1:match("^" .. ability.grantedEffect.treeId) then
 				decY =  (id - 1) * (tree.decAbilityPosY + 1000)
 			end
 		end
@@ -352,7 +352,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			renderConnector(connector)
 		else
 			for _,ability in pairs(build.skillsTab.socketGroupList) do
-				if ability.skillId and not ability.triggered and connector.nodeId1:match("^" .. ability.skillId) then
+				if ability.grantedEffect.treeId and not ability.triggered and connector.nodeId1:match("^" .. ability.grantedEffect.treeId) then
 					renderConnector(connector)
 				end
 			end
@@ -435,7 +435,7 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		-- Convert node position to screen-space
 		local nodeY = node.y
 		for id,ability in pairs(build.skillsTab.socketGroupList) do
-			if ability.skillId and not ability.triggered and nodeId:match("^" .. ability.skillId) then
+			if ability.grantedEffect.treeId and not ability.triggered and nodeId:match("^" .. ability.grantedEffect.treeId) then
 				nodeY = nodeY + (id - 1) * (tree.decAbilityPosY + 1000)
 			end
 		end

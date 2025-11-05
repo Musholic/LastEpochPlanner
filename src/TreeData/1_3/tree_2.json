@@ -24087,106 +24087,132 @@
       "baseMoreDoTDamageTaken": -0.15,
       "skills": [
         {
+          "name": "AbyssalEchoes",
           "label": "Abyssal Echoes",
           "treeId": "ab0lh"
         },
         {
+          "name": "HolyAura",
           "label": "Holy Aura",
           "treeId": "ah443"
         },
         {
+          "name": "Anomaly",
           "label": "Anomaly",
           "treeId": "an0my"
         },
         {
+          "name": "DevouringOrb",
           "label": "Devouring Orb",
           "treeId": "do5vr"
         },
         {
+          "name": "ErasingStrike",
           "label": "Erasing Strike",
           "treeId": "es6ai"
         },
         {
+          "name": "ForgeStrike",
           "label": "Forge Strike",
           "treeId": "fs3e3"
         },
         {
+          "name": "Vengeance",
           "label": "Vengeance",
           "treeId": "gs15de"
         },
         {
+          "name": "HealingHands",
           "label": "Healing Hands",
           "treeId": "hh7pa3"
         },
         {
+          "name": "HammerThrow",
           "label": "Hammer Throw",
           "treeId": "ht16aw"
         },
         {
+          "name": "Javelin",
           "label": "Javelin",
           "treeId": "javeli"
         },
         {
+          "name": "Lunge",
           "label": "Lunge",
           "treeId": "lu25ng"
         },
         {
+          "name": "ManifestArmor",
           "label": "Manifest Armor",
           "treeId": "ma6hdr"
         },
         {
+          "name": "Multistrike",
           "label": "Multistrike",
           "treeId": "multis"
         },
         {
+          "name": "Judgement",
           "label": "Judgement",
           "treeId": "pa67ju"
         },
         {
+          "name": "Rebuke",
           "label": "Rebuke",
           "treeId": "re82ke"
         },
         {
+          "name": "Ring Of Shields",
           "label": "Ring Of Shields",
           "treeId": "rs31hi"
         },
         {
+          "name": "ShieldBash",
           "label": "Shield Bash",
           "treeId": "sb4h"
         },
         {
+          "name": "SigilsOfHope",
           "label": "Symbols of Hope",
           "treeId": "si4lgl"
         },
         {
+          "name": "Smite",
           "label": "Smite",
           "treeId": "sm87r4"
         },
         {
+          "name": "Rive1",
           "label": "Rive",
           "treeId": "sndr1"
         },
         {
+          "name": "ShieldRush",
           "label": "Shield Rush",
           "treeId": "sr31hu"
         },
         {
+          "name": "SmeltersWrath",
           "label": "Smelter's Wrath",
           "treeId": "st4th"
         },
         {
+          "name": "ShieldThrow",
           "label": "Shield Throw",
           "treeId": "st31io"
         },
         {
+          "name": "VoidCleave",
           "label": "Void Cleave",
           "treeId": "v01cv"
         },
         {
+          "name": "Warpath",
           "label": "Warpath",
           "treeId": "va53st"
         },
         {
+          "name": "VolatileReversal",
           "label": "Volatile Reversal",
           "treeId": "vr53sl"
         }

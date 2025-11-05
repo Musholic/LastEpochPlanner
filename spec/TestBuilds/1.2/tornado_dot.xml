@@ -944,13 +944,16 @@ Implicits: 1
 	<Party ShowAdvanceTools="false" append="false" destination="All"></Party>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showAltQualityGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
-			<Skill enabled="true" includeInFullDPS="false" index="1" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="ga2st" slot="Skill 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="2" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="wb8fo" slot="Skill 2"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="3" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="to50" slot="Skill 3"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="wc57" slot="Skill 4"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="sw43" slot="Skill 5"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="6" label="Shred Armor (from Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:ga2st"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="7" label="Shred Armor (from Swipe)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:sw43"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="1" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="GatheringStormMelee" slot="Skill 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="2" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="WerebearForm" slot="Skill 2"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="3" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="Tornado" slot="Skill 3"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Warcry" slot="Skill 4"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Swipe" slot="Skill 5"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="6" label="Shred Armor (from Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:GatheringStormMelee"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="7" label="Storm Bolt (from Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="PrimalLightning" source="SkillId:GatheringStormMelee"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="8" label="Shred Armor (from Swipe)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:Swipe"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="9" label="Shred Armor (from Storm Bolt)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:PrimalLightning"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="10" label="Storm Bolt (from Storm Bolt)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="PrimalLightning" source="SkillId:PrimalLightning"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
