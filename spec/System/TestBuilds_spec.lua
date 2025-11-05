@@ -2,8 +2,8 @@ local function fetchBuilds(path, buildList)
     buildList = buildList or {}
     for file in lfs.dir(path) do
         if file ~= "." and file ~= ".." then
-            local f = path..'/'..file
-            local attr = lfs.attributes (f)
+            local f = path .. '/' .. file
+            local attr = lfs.attributes(f)
             assert(type(attr) == "table")
             if attr.mode == "directory" then
                 fetchBuilds(f, buildList)
@@ -36,4 +36,13 @@ expose("test all builds #builds", function()
             end)
         end
     end
+end)
+
+describe("test offline build import", function()
+    it("should load a build from an offline save file", function()
+        local saveFile = io.open("../spec/offline_save.json", "r")
+        local saveFileContent = saveFile:read("*a")
+        saveFile:close()
+        loadBuildFromJSON(saveFileContent)
+    end)
 end)
