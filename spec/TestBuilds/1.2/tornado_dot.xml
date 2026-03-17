@@ -953,7 +953,6 @@ Implicits: 1
 			<Skill enabled="true" includeInFullDPS="false" index="7" label="Storm Bolt (from Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="PrimalLightning" source="SkillId:GatheringStormMelee"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="8" label="Shred Armor (from Swipe)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:Swipe"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="9" label="Shred Armor (from Storm Bolt)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="SkillId:PrimalLightning"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="10" label="Storm Bolt (from Storm Bolt)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="PrimalLightning" source="SkillId:PrimalLightning"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">

@@ -166,7 +166,7 @@ return {
 ["FistOfWarHitEffect"] = 1,
 ["FrostShieldDamageMitigation"] = 0,
 ["FrostShieldLife"] = 0,
-["FullDPS"] = 8795.7605,
+["FullDPS"] = 8794.8653,
 ["FullLifePercentage"] = 100,
 ["HitChance"] = 100,
 ["IgniteAvoidChance"] = 0,
