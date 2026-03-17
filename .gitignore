@@ -27,3 +27,7 @@ manifest-updated.xml
 devenv.lock
 
 runtime/imgui.ini
+runtime/emmy_core.dll
+
+# Devenv
+.devenv*

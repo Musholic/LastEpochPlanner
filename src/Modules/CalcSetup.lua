@@ -824,14 +824,17 @@ function calcs.initEnv(build, mode, override, specEnv)
 				cache = GlobalCache.cachedData["CACHE"][uuid]
 				local activeSkill = cache.ActiveSkill
 				for skillId, skill in pairsSortByKey(data.skills) do
-					local triggerChance = activeSkill.skillModList:Sum("BASE", activeSkill.skillCfg, "ChanceToTriggerOnHit_"..skillId)
-					if triggerChance > 0 then
-						t_insert(grantedTriggeredSkills, {
-							skillId = skillId,
-							source = "SkillId:"..activeSkill.activeEffect.grantedEffect.id,
-							triggered = true,
-							triggeredOnHit = activeSkill.activeEffect.grantedEffect.id
-						})
+					-- Skills that trigger itself is not supported
+					if skillId ~= activeSkill.activeEffect.grantedEffect.id then
+						local triggerChance = activeSkill.skillModList:Sum("BASE", activeSkill.skillCfg, "ChanceToTriggerOnHit_"..skillId)
+						if triggerChance > 0 then
+							t_insert(grantedTriggeredSkills, {
+								skillId = skillId,
+								source = "SkillId:"..activeSkill.activeEffect.grantedEffect.id,
+								triggered = true,
+								triggeredOnHit = activeSkill.activeEffect.grantedEffect.id
+							})
+						end
 					end
 				end
 			end
@@ -890,17 +893,29 @@ function calcs.initEnv(build, mode, override, specEnv)
 			end
 
 			-- Remove any socket groups that no longer have a matching item
-			local i = 1
-			while build.skillsTab.socketGroupList[i] do
-				local socketGroup = build.skillsTab.socketGroupList[i]
+			local lastIndex = 0
+			for i,socketGroup in pairs(build.skillsTab.socketGroupList) do
 				if socketGroup.source and not markList[socketGroup] then
-					t_remove(build.skillsTab.socketGroupList, i)
+					build.skillsTab.socketGroupList[i] = nil
 					if build.skillsTab.displayGroup == socketGroup then
 						build.skillsTab.displayGroup = nil
 					end
-				else
-					i = i + 1
 				end
+				lastIndex = i
+			end
+
+			-- Fix any gaps in the socket group list
+			local i = 5
+			while i < lastIndex do
+				if not build.skillsTab.socketGroupList[i] then
+				    --Shift socket groups down to fill the gap
+					for j = i, lastIndex - 1 do
+						build.skillsTab.socketGroupList[j] = build.skillsTab.socketGroupList[j + 1]
+					end
+					build.skillsTab.socketGroupList[lastIndex] = nil
+					lastIndex = lastIndex - 1
+				end
+				i = i + 1
 			end
 		end
 

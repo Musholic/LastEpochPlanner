@@ -592,6 +592,11 @@ local function defaultTriggerHandler(env, config)
 			local actionCooldownAdjusted = cooldownOverride or m_max(triggerCDAdjusted, triggeredCDAdjusted)
 
 			output.TriggerRateCap = source == actor.mainSkill and actor.mainSkill.skillData.triggerRateCapOverride or m_huge
+
+			if actionCooldownAdjusted ~= 0 then
+				output.TriggerRateCap = 1 / actionCooldownAdjusted
+			end
+
 			if actor.mainSkill.skillData.maxStacks and actor.mainSkill.skillData.maxStacks > 0 then
 				output.TriggerRateCap = actor.mainSkill.skillData.maxStacks / actor.mainSkill.skillData.duration
 			end
@@ -678,7 +683,7 @@ local function defaultTriggerHandler(env, config)
 						t_insert(breakdown.TriggerRateCap, "Assuming cast on every kill/attack/hit")
 					else
 						t_insert(breakdown.TriggerRateCap, "Trigger rate:")
-						t_insert(breakdown.TriggerRateCap, s_format("1 / %.3f", actionCooldownTickRounded))
+						t_insert(breakdown.TriggerRateCap, s_format("1 / %.3f", actionCooldownAdjusted))
 						t_insert(breakdown.TriggerRateCap, s_format("= %.2f ^8per second", output.TriggerRateCap))
 					end
 				end
@@ -809,7 +814,9 @@ local configTable = {
 	["cast on hit"] = function(env)
 		local source, trigRate, uuid
 		for _, skill in ipairs(env.player.activeSkillList) do
-			if skill.activeEffect.grantedEffect.id == env.player.mainSkill.activeEffect.srcInstance.triggeredOnHit then
+			if skill.activeEffect.grantedEffect.id == env.player.mainSkill.activeEffect.srcInstance.triggeredOnHit
+			-- Skills that trigger itself is not supported
+			and skill.activeEffect.grantedEffect.id ~= env.player.mainSkill.activeEffect.grantedEffect.id then
 				source, trigRate, uuid = findTriggerSkill(env, skill, source, trigRate)
 				break
 			end

@@ -798,6 +798,9 @@ function cacheSkillUUIDFromGroup(group, env)
 	local strName = group.grantedEffect.name:gsub("%s+", "") -- strip spaces
 	local strSlotName = (group.slot and group.slot:upper() or "NO_SLOT"):gsub("%s+", "") -- strip spaces
 	local groupIdx = 1
+	if group.triggered then
+		return strName .. "_" .. group.source
+	end
 
 	for i, groupOther in pairs(env.build.skillsTab.socketGroupList) do
 		if group == groupOther then
