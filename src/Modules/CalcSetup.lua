@@ -890,16 +890,12 @@ function calcs.initEnv(build, mode, override, specEnv)
 			end
 
 			-- Remove any socket groups that no longer have a matching item
-			local i = 1
-			while build.skillsTab.socketGroupList[i] do
-				local socketGroup = build.skillsTab.socketGroupList[i]
+			for i,socketGroup in pairs(build.skillsTab.socketGroupList) do
 				if socketGroup.source and not markList[socketGroup] then
-					t_remove(build.skillsTab.socketGroupList, i)
+					build.skillsTab.socketGroupList[i] = nil
 					if build.skillsTab.displayGroup == socketGroup then
 						build.skillsTab.displayGroup = nil
 					end
-				else
-					i = i + 1
 				end
 			end
 		end

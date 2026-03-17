@@ -71,9 +71,34 @@ describe("TestSkills #skills", function()
         runCallback("OnFrame")
 
         local castSpeed = 1 / build.calcsTab.mainEnv.player.mainSkill.activeEffect.grantedEffect.castTime
-        assert.are.equals(round((2 + 48 * 1.25) * (1 + 0.04 * 10) * 1.05 * 0.92 * castSpeed, 4), round(build.calcsTab.mainOutput.TotalDPS, 4))
+        assert.are.equals(round((2 + 48 * 1.25) * (1 + 0.04 * 10) * 1.05 * 0.92 * castSpeed, 4),
+            round(build.calcsTab.mainOutput.TotalDPS, 4))
     end)
-    
+
+    it("Test removal of triggered skill should not affect DPS", function()
+        -- Use skill Smite and includes it in full DPS
+        build.skillsTab:SelSkill(1, "Smite")
+        build.skillsTab.socketGroupList[1].includeInFullDPS = true
+        runCallback("OnFrame")
+        -- The original Full DPS
+        assert.are.equals(48.048, round(build.calcsTab.mainOutput.FullDPS, 4))
+
+        -- Add a mod that triggers the Axe Throw skill then remove it
+        build.configTab.input.customMods = "8% Chance To Cast Axe Throw On Hit"
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
+
+        build.configTab.input.customMods = "8% Chance To Cast Axe Throw On Hit\n10% chance to Ignite on Hit"
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
+
+        build.configTab.input.customMods = ""
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
+
+        -- The Full DPS value should not be affected by the removed mod
+        assert.are.equals(48.048, round(build.calcsTab.mainOutput.FullDPS, 4))
+    end)
 end)
 
 -- Check that at least all skills can load without crash
@@ -86,7 +111,7 @@ expose("test all skills #allSkills", function()
         local className = class.name
         local skillList = build.spec.curClass.skills
         for _, skill in ipairs(skillList) do
-            it(skill.label .. " for class ".. className .. " #" .. skill.name, function()
+            it(skill.label .. " for class " .. className .. " #" .. skill.name, function()
                 build.skillsTab:SelSkill(1, skill.name)
                 runCallback("OnFrame")
             end)

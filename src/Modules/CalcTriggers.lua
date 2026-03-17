@@ -814,7 +814,9 @@ local configTable = {
 	["cast on hit"] = function(env)
 		local source, trigRate, uuid
 		for _, skill in ipairs(env.player.activeSkillList) do
-			if skill.activeEffect.grantedEffect.id == env.player.mainSkill.activeEffect.srcInstance.triggeredOnHit then
+			if skill.activeEffect.grantedEffect.id == env.player.mainSkill.activeEffect.srcInstance.triggeredOnHit
+			-- Skills that trigger itself is not supported
+			and skill.activeEffect.grantedEffect.id ~= env.player.mainSkill.activeEffect.grantedEffect.id then
 				source, trigRate, uuid = findTriggerSkill(env, skill, source, trigRate)
 				break
 			end
