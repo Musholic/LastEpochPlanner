@@ -19,6 +19,21 @@ local function fetchBuilds(path, buildList)
     return buildList
 end
 
+local function roundValues(value, digits)
+    digits = digits or 4
+    if type(value) == "number" then
+        return "" .. round(value, digits)
+    elseif type(value) == "table" then
+        local result = {}
+        for k, v in pairs(value) do
+            result[k] = roundValues(v, digits)
+        end
+        return result
+    else
+        return value
+    end
+end
+
 expose("test all builds #builds", function()
     local buildList = fetchBuilds("../spec/TestBuilds")
     for buildName, testBuild in pairs(buildList) do
@@ -28,11 +43,7 @@ expose("test all builds #builds", function()
             -- Have to assign it to a temporary table here, as the tests will run later, when the 'build' isn't changing
             testBuild.result[key] = build.calcsTab.mainOutput[key]
             it("on build: " .. buildName .. ", key: " .. key, function()
-                if type(value) == "number" and type(testBuild.result[key]) == "number" then
-                    assert.are.same(round(value, 4), round(testBuild.result[key] or 0, 4))
-                else
-                    assert.are.same(value, testBuild.result[key])
-                end
+                assert.are.same(roundValues(value), roundValues(testBuild.result[key]))
             end)
         end
     end
