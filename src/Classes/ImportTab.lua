@@ -506,8 +506,12 @@ function ImportTabClass:DownloadCharacterList()
         while handle do
             local fileName = handle:GetFileName()
 
-            if fileName:sub(-4) ~= ".bak" then
-                table.insert(saves, localSaveFolder .. "\\" .. fileName)
+            -- The filename should not contain any extensions and should finish with a number
+            -- (avoid .bak or .zip files)
+            if not fileName:match("%.") then
+                if fileName:match("%d+$") then
+                    table.insert(saves, localSaveFolder .. "\\" .. fileName)
+                end
             end
 
             if not handle:NextFile() then
