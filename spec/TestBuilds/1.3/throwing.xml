@@ -787,13 +787,13 @@ Implicits: 1
 			<Skill enabled="true" includeInFullDPS="false" index="3" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="SigilsOfHope" slot="Skill 3"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Smite" slot="Skill 4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="HealingHands" slot="Skill 5"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="6" label="Bleed (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="SkillId:HammerThrow"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="7" label="Ignite (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:HammerThrow"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="8" label="Shock (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:HammerThrow"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="9" label="Blind (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="SkillId:Smite"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="10" label="Ignite (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="SkillId:Smite"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="11" label="Shock (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="SkillId:Smite"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="12" label="Healing Hands Lingering Warmth (from Healing Hands)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_HealingHandsHealOverTime" source="SkillId:HealingHands"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="6" label="Bleed (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="HammerThrow"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="7" label="Ignite (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="HammerThrow"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="8" label="Shock (from Hammer Throw)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="HammerThrow"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="9" label="Blind (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Blind" source="Smite"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="10" label="Ignite (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="Smite"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="11" label="Shock (from Smite)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="Smite"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="12" label="Healing Hands Lingering Warmth (from Healing Hands)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_HealingHandsHealOverTime" source="HealingHands"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
