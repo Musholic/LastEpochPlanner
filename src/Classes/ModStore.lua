@@ -691,7 +691,7 @@ function ModStoreClass:EvalMod(mod, cfg)
 				return
 			end
 		elseif tag.type == "SkillId" then
-			if not cfg or (not cfg.skillGrantedEffect or cfg.skillGrantedEffect.id ~= tag.skillId) and cfg.groupSource ~= "SkillId:" .. tag.skillId then
+			if not cfg or (not cfg.skillGrantedEffect or cfg.skillGrantedEffect.id ~= tag.skillId) and cfg.groupSource ~= tag.skillId then
 				return
 			end
 		elseif tag.type == "SkillPart" then

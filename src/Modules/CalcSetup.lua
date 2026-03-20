@@ -828,11 +828,15 @@ function calcs.initEnv(build, mode, override, specEnv)
 					if skillId ~= activeSkill.activeEffect.grantedEffect.id then
 						local triggerChance = activeSkill.skillModList:Sum("BASE", activeSkill.skillCfg, "ChanceToTriggerOnHit_"..skillId)
 						if triggerChance > 0 then
+							local source = activeSkill.activeEffect.grantedEffect.id
+							if group.source then
+								source = source .. "/" .. group.source
+							end
 							t_insert(grantedTriggeredSkills, {
 								skillId = skillId,
-								source = "SkillId:"..activeSkill.activeEffect.grantedEffect.id,
+								source = source,
 								triggered = true,
-								triggeredOnHit = activeSkill.activeEffect.grantedEffect.id
+								triggeredOnHit = true
 							})
 						end
 					end
@@ -879,10 +883,18 @@ function calcs.initEnv(build, mode, override, specEnv)
 				group.includeInFullDPS = grantedSkill.includeInFullDPS
 				if grantedSkill.triggeredOnHit then
 					group.triggeredOnHit = grantedSkill.triggeredOnHit
-					group.label = data.skills[grantedSkill.skillId].name .. " (from " .. data.skills[grantedSkill.triggeredOnHit].name ..")"
+					local sourceNames = {}
+					for sourceId in string.gmatch(grantedSkill.source, "[^/]+") do
+						t_insert(sourceNames, data.skills[sourceId].name)
+					end
+					group.label = data.skills[grantedSkill.skillId].name .. " (from " .. table.concat(sourceNames, "/") ..")"
 					for index, socketGroup in pairs(build.skillsTab.socketGroupList) do
 						-- find the source socket group and inherit the includeInFullDPS stats
-						if socketGroup.skillId == group.triggeredOnHit then
+						local source = socketGroup.skillId
+						if socketGroup.source then
+							source = source .. "/" .. socketGroup.source
+						end
+						if source == group.source then
 							group.includeInFullDPS = socketGroup.includeInFullDPS
 							break
 						end

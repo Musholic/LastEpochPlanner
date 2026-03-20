@@ -943,7 +943,7 @@ Implicits: 1
 			<Skill enabled="true" includeInFullDPS="true" index="3" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="InfernalShade" slot="Skill 3"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="DreadShade" slot="Skill 4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="AuraOfDecay" slot="Skill 5"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="6" label="Poison (from Aura Of Decay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="SkillId:AuraOfDecay"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="6" label="Poison (from Aura Of Decay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="AuraOfDecay"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
