@@ -698,6 +698,9 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
                 if posY == 4 then
                     idolPosition = idolPosition - 1
                 end
+                if idolPosition > 10 then
+                    idolPosition = idolPosition - 1
+                end
                 item["inventoryId"] = "Idol " .. idolPosition
             end
             for itemBaseName, itemBase in pairs(self.build.data.itemBases) do
