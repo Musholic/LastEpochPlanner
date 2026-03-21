@@ -53,7 +53,7 @@ c[" Also Applies to Forged Weapons"]={nil," Also Applies to Forged Weapons "}
 c[" Always Count As At Low Life"]={nil," Always Count As At Low Life "}
 c[" Always Crit With Next Non-Channelled Skill"]={nil," Always Crit With Next Non-Channelled Skill "}
 c[" Always Crits"]={nil," Always Crits "}
-c[" Always Crits When Above 400 Mana"]={nil," Always Crits When Above 400 Mana "}
+c[" Always Crits When Above 400 Mana"]={{[1]={[1]={stat="Mana",threshold=400,type="StatThreshold"},flags=0,keywordFlags=0,name="CritChance",type="OVERRIDE",value=100}},nil}
 c[" Always Crits With 4 Arrows"]={nil," Always Crits With 4 Arrows "}
 c[" Always Fire 1 Extra Thorn"]={nil," Always Fire 1 Extra Thorn "}
 c[" Always Freezes On Hit"]={nil," Always Freezes On Hit "}
@@ -1447,7 +1447,7 @@ c["+1 Mirages created by Lethal Mirage"]={{}," Mirages created by  "}
 c["+1 Mirror Images On Arrival"]={{}," Mirror Images On Arrival "}
 c["+1 Molten Infusion Stacks On Hit"]={{},"  Stacks  "}
 c["+1 Necrotic Res Stacks"]={{},"  Res Stacks "}
-c["+1 Number Of Meteors For Direct Casts"]={{}," Number Of s For Direct Casts "}
+c["+1 Number Of Meteors For Direct Casts"]={{[1]={[1]={skillName="Meteor",type="SkillName"},flags=0,keywordFlags=0,name="InstanceCountOnDirectCast",type="BASE",value=1}},nil}
 c["+1 Number Of Rip Bloods Cast"]={{}," Number Of s Cast "}
 c["+1 Once you have one Rune for Runic Invocation your runes cannot change until they are consumed"]={{}," Once you have one Rune for  your runes cannot change until they are consumed "}
 c["+1 Once you have three Runes for Runic Invocation your runes cannot change until they are consumed"]={{}," Once you have three Runes for  your runes cannot change until they are consumed "}

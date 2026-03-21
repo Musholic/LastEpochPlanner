@@ -102,7 +102,19 @@ local modNameList = {
 	["projectiles"] = "ProjectileCount",
 	["projectile speed"] = "ProjectileSpeed",
 	-- Explicitly cast (non-triggered) extra instances
-	["number of .* for direct casts"] = "InstanceCountOnDirectCast",
+	["number of (%a[%a ]*) for direct casts"] = function(cap1)
+		-- Using a static "number of .* for direct casts" pattern would consume the entire phrase (including the skill name) from `line`, because scan() removes matched text.
+		-- The subsequent skillNameList scan would then find nothing and attach no SkillName tag.
+		-- Instead, we capture the skill name here via regex and attach the tag ourselves.
+		local lowerCap = cap1:lower():gsub("%s+$", "")
+		for _, skill in pairs(data.skills) do
+			local skillLower = skill.name:lower()
+			if lowerCap == skillLower or lowerCap == skillLower .. "s" then
+				return { "InstanceCountOnDirectCast", tag = { type = "SkillName", skillName = skill.name } }
+			end
+		end
+		return "InstanceCountOnDirectCast"
+	end,
 	-- Totem/trap/mine/brand modifiers
 	["totem duration"] = "TotemDuration",
 	-- Other skill modifiers
