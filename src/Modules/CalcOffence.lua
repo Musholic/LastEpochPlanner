@@ -653,6 +653,12 @@ function calcs.offence(env, actor, activeSkill)
 		-- Applies DPS multiplier based on projectile count
 		skillData.dpsMultiplier = skillModList:Sum("BASE", skillCfg, "ProjectileCount")
 	end
+	
+	local extraInstances = skillModList:Sum("BASE", skillCfg, "InstanceCountOnDirectCast")
+	if extraInstances > 0 and not skillData.triggered then
+		skillModList:NewMod("QuantityMultiplier", "BASE", 1 + extraInstances)
+	end
+
 	output.Repeats = 1 + (skillModList:Sum("BASE", skillCfg, "RepeatCount") or 0)
 	if output.Repeats > 1 then
 		output.RepeatCount = output.Repeats

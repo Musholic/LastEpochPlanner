@@ -199,4 +199,51 @@ describe("TestModParse", function()
 
         assert.are.equals(17, build.configTab.modList:Sum("BASE", {keywordFlags = KeywordFlag.Fire}, "ChanceToTriggerOnHit_GasparSetSwipe"))
         end)
+
+    it("always crits above n mana", function()
+        -- Below threshold: override should NOT fire
+        build.configTab.input.customMods = "Always Crits When Above 400 Mana"
+        build.configTab:BuildModList()
+        build.buildFlag = true
+        runCallback("OnFrame")
+        build.skillsTab:SelSkill(1, "Meteor")
+        runCallback("OnFrame")
+        assert.are_not.equals(100, build.calcsTab.mainEnv.player.output.CritChance)
+
+        -- Above threshold: override SHOULD fire
+        build.configTab.input.customMods = "Always Crits When Above 400 Mana\n\z500 mana"
+        build.configTab:BuildModList()
+        build.buildFlag = true
+        runCallback("OnFrame")
+        assert.are.equals(100, build.calcsTab.mainEnv.player.output.CritChance)
+    end)
+
+    it("fires multiple spells on direct cast", function()
+        build.configTab.input.customMods = "+1 Number Of Meteors For Direct Casts"
+        build.configTab:BuildModList()
+        build.buildFlag = true
+        runCallback("OnFrame")
+        build.skillsTab:SelSkill(1, "Meteor")
+        runCallback("OnFrame")
+        -- +1 extra = 2 total instances
+        assert.are.equals(2, build.calcsTab.mainEnv.player.output.QuantityMultiplier)
+
+        -- Should not fire for other spells
+        build.skillsTab:SelSkill(1, "Fireball")
+        runCallback("OnFrame")
+        assert.is_nil(build.calcsTab.mainEnv.player.output.QuantityMultiplier)
+
+        -- Without mod, no quantity multiplier
+        build.configTab.input.customMods = ""
+        build.configTab:BuildModList()
+        build.buildFlag = true
+        runCallback("OnFrame")
+        build.skillsTab:SelSkill(1, "Meteor")
+        runCallback("OnFrame")
+        assert.is_nil(build.calcsTab.mainEnv.player.output.QuantityMultiplier)
+
+
+    end)
+
 end)
+
