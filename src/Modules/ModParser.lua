@@ -101,6 +101,8 @@ local modNameList = {
 	["extra projectiles"] = "ProjectileCount",
 	["projectiles"] = "ProjectileCount",
 	["projectile speed"] = "ProjectileSpeed",
+	-- Explicitly cast (non-triggered) extra instances
+	["number of .* for direct casts"] = "InstanceCountOnDirectCast",
 	-- Totem/trap/mine/brand modifiers
 	["totem duration"] = "TotemDuration",
 	-- Other skill modifiers
@@ -287,6 +289,11 @@ end
 
 local specialModList = {
 	["no cooldown"] = { flag("NoCooldown") },
+	[" ?always crits?.* above (%d+) mana"] = function(num)
+		return {
+			mod("CritChance", "OVERRIDE", 100, { type = "StatThreshold", stat = "Mana", threshold = num })
+		}
+	end,
 }
 
 -- Modifiers that are recognised but unsupported
