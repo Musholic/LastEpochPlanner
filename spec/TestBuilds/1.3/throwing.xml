@@ -118,7 +118,6 @@
 			Rarity: UNIQUE
 Pearls of the Swine
 Bone Amulet
-Unique ID: 11
 Crafted: true
 Prefix: {range:127.5}25_6
 Prefix: None
@@ -153,7 +152,6 @@ Implicits: 2
 			Rarity: RARE
 Champion Regalia
 Champion Regalia
-Unique ID: 3
 Crafted: true
 Prefix: {range:127.5}52_6
 Prefix: {range:127.5}25_4
@@ -180,7 +178,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Blood of the Exile
 Iron Greaves
-Unique ID: 8
 Crafted: true
 Prefix: {range:127.5}36_4
 Prefix: None
@@ -217,7 +214,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Carrion of Creation
 Eternal Gauntlets
-Unique ID: 6
 Crafted: true
 Prefix: {range:127.5}36_6
 Prefix: None
@@ -258,7 +254,6 @@ Implicits: 2
 			Rarity: RARE
 Leonine Greathelm
 Leonine Greathelm
-Unique ID: 2
 Crafted: true
 Prefix: {range:127.5}52_6
 Prefix: {range:127.5}715_4
@@ -287,7 +282,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Valdyr's Chalice
 Silver Grail
-Unique ID: 12
 Crafted: true
 Prefix: {range:127.5}25_6
 Prefix: None
@@ -316,7 +310,6 @@ Implicits: 1
 			Rarity: RARE
 Silver Ring
 Silver Ring
-Unique ID: 9
 Crafted: true
 Prefix: {range:127.5}25_4
 Prefix: {range:127.5}825_4
@@ -347,7 +340,6 @@ Implicits: 1
 			Rarity: RARE
 Silver Ring
 Silver Ring
-Unique ID: 10
 Crafted: true
 Prefix: {range:127.5}25_4
 Prefix: {range:127.5}825_4
@@ -378,7 +370,6 @@ Implicits: 1
 			Rarity: UNIQUE
 Thorn Slinger
 Leather Belt
-Unique ID: 7
 Crafted: true
 Prefix: {range:127.5}52_6
 Prefix: None
@@ -413,7 +404,6 @@ Implicits: 1
 			Rarity: RARE
 Dragonbone Axe
 Dragonbone Axe
-Unique ID: 4
 Crafted: true
 Prefix: {range:127.5}68_4
 Prefix: {range:127.5}55_4
@@ -443,7 +433,6 @@ Implicits: 3
 			Rarity: UNIQUE
 Countenance of Majasa
 Ironglass Shield
-Unique ID: 5
 Crafted: true
 Prefix: None
 Prefix: None
@@ -474,7 +463,6 @@ Implicits: 2
 			Rarity: RARE
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Unique ID: Idol 4
 Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
@@ -497,7 +485,6 @@ Implicits: 0
 			Rarity: RARE
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Unique ID: Idol 14
 Crafted: true
 Prefix: {range:127.5}197_0
 Prefix: {range:127.5}921_6
@@ -520,7 +507,6 @@ Implicits: 0
 			Rarity: RARE
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Unique ID: Idol 1
 Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
@@ -543,7 +529,6 @@ Implicits: 0
 			Rarity: RARE
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Unique ID: Idol 11
 Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
@@ -566,7 +551,6 @@ Implicits: 0
 			Rarity: RARE
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Unique ID: Idol 7
 Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
@@ -589,7 +573,6 @@ Implicits: 0
 			Rarity: RARE
 Humble Weaver Idol
 Humble Weaver Idol
-Unique ID: Idol 2
 Crafted: true
 Prefix: {range:127.5}870_0
 Prefix: None
@@ -612,7 +595,6 @@ Implicits: 0
 			Rarity: RARE
 Humble Weaver Idol
 Humble Weaver Idol
-Unique ID: Idol 6
 Crafted: true
 Prefix: {range:127.5}867_0
 Prefix: None
@@ -635,7 +617,6 @@ Implicits: 0
 			Rarity: RARE
 Grand Flames of the Black Sun
 Grand Flames of the Black Sun
-Unique ID: 35
 Crafted: true
 Prefix: None
 Prefix: None
@@ -652,7 +633,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Cruelty of the Meruna
 Grand Cruelty of the Meruna
-Unique ID: 37
 Crafted: true
 Prefix: None
 Prefix: None
@@ -669,7 +649,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Hemmorage of Marrow
 Grand Hemmorage of Marrow
-Unique ID: 39
 Crafted: true
 Prefix: None
 Prefix: None
@@ -686,7 +665,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Bones of Eternity
 Grand Bones of Eternity
-Unique ID: 44
 Crafted: true
 Prefix: None
 Prefix: None
@@ -705,7 +683,6 @@ Implicits: 2
 			Rarity: RARE
 Grand Body of Obsidian
 Grand Body of Obsidian
-Unique ID: 45
 Crafted: true
 Prefix: None
 Prefix: None
