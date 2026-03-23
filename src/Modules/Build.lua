@@ -654,29 +654,27 @@ function buildMode:ReadLeToolsSave(saveContent)
 			end
 		end
 	end
-	local slotMap = {
-		["weapon1"] = 4,
-		["weapon2"] = 5,
-		["head"] = 2,
-		["chest"] = 3,
-		["hands"] = 6,
-		["feet"] = 8,
-		["amulet"] = 11,
-		["ring1"] = 9,
-		["ring2"] = 10,
-		["waist"] = 7,
-		["relic"] = 12
+	local onlineImportSlotMap = {
+		["weapon1"] = "Weapon 1",
+		["weapon2"] = "Weapon 2",
+		["head"] = "Helmet",
+		["chest"] = "Body Armor",
+		["hands"] = "Gloves",
+		["feet"] = "Boots",
+		["amulet"] = "Amulet",
+		["ring1"] = "Ring 1",
+		["ring2"] = "Ring 2",
+		["waist"] = "Belt",
+		["relic"] = "Relic"
 	}
 
-	for i = 1, 7 do
-		slotMap["Blessing " .. i] = 32 + i
+	for i = 1, 10 do
+		onlineImportSlotMap["Blessing " .. i] = "Blessing " .. i
 	end
-	for i = 1, 3 do
-		slotMap["Blessing " .. (7 + i)] = 42 + i
-	end
+
 	function processItemData(slotName, itemData)
 		local item = {
-			["inventoryId"] = slotMap[slotName]
+			["slotName"] = onlineImportSlotMap[slotName]
 		}
 		if slotName == "idol" then
 			local posX = itemData["x"] - 1
@@ -691,12 +689,12 @@ function buildMode:ReadLeToolsSave(saveContent)
 			if posY == 1 and posX > 2 or posY > 1 then
 				idolPosition = idolPosition - 1
 			end
-			item["inventoryId"] = "Idol " .. idolPosition
+			item["slotName"] = "Idol " .. idolPosition
 		end
 		local baseTypeID = data.LETools_itemBases[itemData.id].baseTypeId
 		local subTypeID = data.LETools_itemBases[itemData.id].subTypeId
 		local uniqueId = data.LETools_itemBases[itemData.id].uniqueId
-		
+
 		for itemBaseName, itemBase in pairs(self.data.itemBases) do
             if itemBase.baseTypeID == baseTypeID and itemBase.subTypeID == subTypeID then
                 item.base = itemBase
@@ -704,7 +702,7 @@ function buildMode:ReadLeToolsSave(saveContent)
           		item.baseName = itemBaseName
             end
 		end
-		
+
 		item["rarity"] = "RARE"
 		item["explicitMods"] = {}
 		item["prefixes"] = {}
@@ -763,7 +761,7 @@ function buildMode:ReadLeToolsSave(saveContent)
 				end
 			end
 		end
-		
+
 		if item.base then
 			item.implicitMods= {}
 			for i,implicit in ipairs(item.base.implicits) do

@@ -640,6 +640,123 @@ function ImportTabClass:DownloadPassiveTree()
     self:ImportPassiveTreeAndJewels(charData)
 end
 
+local offlineImportSlotMap = { [4] = "Weapon 1", [5] = "Weapon 2", [2] = "Helmet", [3] = "Body Armor", [6] = "Gloves", [8] = "Boots", [11] = "Amulet", [9] = "Ring 1", [10] = "Ring 2", [7] = "Belt", [12] = "Relic" }
+
+for i = 1, 7 do
+    offlineImportSlotMap[32 + i] = "Blessing " .. i
+end
+for i = 1, 3 do
+    offlineImportSlotMap[42 + i] = "Blessing " .. (7 + i)
+end
+
+function ImportTabClass:processItemData(itemData)
+    if itemData["containerID"] <= 12 or itemData["containerID"] == 29 or
+            itemData["containerID"] >= 33 and itemData["containerID"] <= 39 or
+            itemData["containerID"] >= 43 and itemData["containerID"] <= 45 then
+        local item = {
+        }
+        local baseTypeID = itemData["data"][4]
+        local subTypeID = itemData["data"][5]
+        if itemData["containerID"] == 29 then
+            local posX = itemData["inventoryPosition"]["x"]
+            local posY = itemData["inventoryPosition"]["y"]
+            local idolPosition = posX + posY * 5
+            if posY > 0 then
+                idolPosition = idolPosition - 1
+            end
+            if posY == 4 then
+                idolPosition = idolPosition - 1
+            end
+            if idolPosition > 10 then
+                idolPosition = idolPosition - 1
+            end
+            item["slotName"] = "Idol " .. idolPosition
+        else
+            item["slotName"] = offlineImportSlotMap[itemData["containerID"]]
+        end
+
+        for itemBaseName, itemBase in pairs(self.build.data.itemBases) do
+            if itemBase.baseTypeID == baseTypeID and itemBase.subTypeID == subTypeID then
+                item.baseName = itemBaseName
+                item.base = itemBase
+                item.implicitMods = {}
+                for i, implicit in ipairs(itemBase.implicits) do
+                    local range = itemData["data"][7 + i]
+                    table.insert(item.implicitMods, "{range: " .. range .. "}" .. implicit)
+                end
+                local rarity = itemData["data"][6]
+                item["explicitMods"] = {}
+                item["prefixes"] = {}
+                item["suffixes"] = {}
+                if rarity >= 7 and rarity <= 9 then
+                    item["rarity"] = "UNIQUE"
+                    local uniqueIDIndex = 8 + 3 -- 3 is the maximum amount of implicits
+                    local uniqueID = itemData["data"][uniqueIDIndex] * 256 + itemData["data"][uniqueIDIndex + 1]
+                    local uniqueBase = self.build.data.uniques[uniqueID]
+                    item["name"] = uniqueBase.name
+                    for i, modLine in ipairs(uniqueBase.mods) do
+                        if itemLib.hasRange(modLine) then
+                            local rollId = uniqueBase.rollIds[i]
+                            local range = itemData["data"][uniqueIDIndex + 2 +  rollId]
+                            -- TODO: avoid using crafted
+                            table.insert(item.explicitMods, "{crafted}{range: " .. range .. "}".. modLine)
+                            else
+                            table.insert(item.explicitMods, "{crafted}".. modLine)
+                        end
+                    end
+                    if rarity == 9 then
+                        local nbAffixesIndex = uniqueIDIndex + 2 + 8 -- 8 is the maximum amount of unique mods
+                        local nbMods = itemData["data"][nbAffixesIndex]
+                        for i = 0, nbMods - 1 do
+                            local dataId = nbAffixesIndex + 1 + 3 * i
+                            -- There are cases where the "nbAffixesIndex" value is wrong, not sure why but
+                            -- we should at least prevent a crash when it's higher than expected (could it be lower?)
+                            if itemData["data"][dataId] then
+                                local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 4) * 256
+                                local affixTier = math.floor(itemData["data"][dataId] / 16)
+                                local modId = affixId .. "_" .. affixTier
+                                local modData = data.itemMods.Item[modId]
+                                local range = itemData["data"][dataId + 2]
+                                if modData then
+                                    if modData.type == "Prefix" then
+                                        table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
+                                    else
+                                        table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
+                                    end
+                                end
+                            end
+                        end
+                    end
+                else
+                    item["name"] = itemBaseName
+                    item["rarity"] = "RARE"
+                    for i = 0, 4 do
+                        local dataId = 14 + i * 3
+                        if #itemData["data"] > dataId then
+                            local affixId = itemData["data"][dataId] + (itemData["data"][dataId - 1] % 4) * 256
+                            if affixId then
+                                local affixTier = math.floor(itemData["data"][dataId - 1] / 16)
+                                local modId = affixId .. "_" .. affixTier
+                                local modData = data.itemMods.Item[modId]
+                                local range = itemData["data"][dataId + 1]
+
+                                if modData then
+                                    if modData.type == "Prefix" then
+                                        table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
+                                    else
+                                        table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+                return item
+            end
+        end
+    end
+end
+
 function ImportTabClass:ReadJsonSaveData(saveFileContent)
     local saveContent = processJson(saveFileContent)
     local classId = saveContent["characterClass"]
@@ -680,108 +797,9 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
         end
     end
     for _, itemData in pairsSortByKey(saveContent["savedItems"]) do
-        if itemData["containerID"] <= 12 or
-                itemData["containerID"] >= 29 and itemData["containerID"] <= 36 or
-                itemData["containerID"] >= 40 and  itemData["containerID"] <= 43  then
-            local item = {
-                ["inventoryId"] = itemData["containerID"],
-            }
-            local baseTypeID = itemData["data"][4]
-            local subTypeID = itemData["data"][5]
-            if itemData["containerID"] == 29 then
-                local posX = itemData["inventoryPosition"]["x"]
-                local posY = itemData["inventoryPosition"]["y"]
-                local idolPosition = posX + posY * 5
-                if posY > 0 then
-                    idolPosition = idolPosition - 1
-                end
-                if posY == 4 then
-                    idolPosition = idolPosition - 1
-                end
-                if idolPosition > 10 then
-                    idolPosition = idolPosition - 1
-                end
-                item["inventoryId"] = "Idol " .. idolPosition
-            end
-            for itemBaseName, itemBase in pairs(self.build.data.itemBases) do
-                if itemBase.baseTypeID == baseTypeID and itemBase.subTypeID == subTypeID then
-                    item.baseName = itemBaseName
-                    item.base = itemBase
-                    item.implicitMods = {}
-                    for i, implicit in ipairs(itemBase.implicits) do
-                        local range = itemData["data"][7 + i]
-                        table.insert(item.implicitMods, "{range: " .. range .. "}" .. implicit)
-                    end
-                    local rarity = itemData["data"][6]
-                    item["explicitMods"] = {}
-                    item["prefixes"] = {}
-                    item["suffixes"] = {}
-                    if rarity >= 7 and rarity <= 9 then
-                        item["rarity"] = "UNIQUE"
-                        local uniqueIDIndex = 8 + 3 -- 3 is the maximum amount of implicits
-                        local uniqueID = itemData["data"][uniqueIDIndex] * 256 + itemData["data"][uniqueIDIndex + 1]
-                        local uniqueBase = self.build.data.uniques[uniqueID]
-                        item["name"] = uniqueBase.name
-                        for i, modLine in ipairs(uniqueBase.mods) do
-                            if itemLib.hasRange(modLine) then
-                                local rollId = uniqueBase.rollIds[i]
-                                local range = itemData["data"][uniqueIDIndex + 2 +  rollId]
-                                -- TODO: avoid using crafted
-                                table.insert(item.explicitMods, "{crafted}{range: " .. range .. "}".. modLine)
-                                else
-                                table.insert(item.explicitMods, "{crafted}".. modLine)
-                            end
-                        end
-                        if rarity == 9 then
-                            local nbAffixesIndex = uniqueIDIndex + 2 + 8 -- 8 is the maximum amount of unique mods
-                            local nbMods = itemData["data"][nbAffixesIndex]
-                            for i = 0, nbMods - 1 do
-                                local dataId = nbAffixesIndex + 1 + 3 * i
-                                -- There are cases where the "nbAffixesIndex" value is wrong, not sure why but
-                                -- we should at least prevent a crash when it's higher than expected (could it be lower?)
-                                if itemData["data"][dataId] then
-                                    local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 4) * 256
-                                    local affixTier = math.floor(itemData["data"][dataId] / 16)
-                                    local modId = affixId .. "_" .. affixTier
-                                    local modData = data.itemMods.Item[modId]
-                                    local range = itemData["data"][dataId + 2]
-                                    if modData then
-                                        if modData.type == "Prefix" then
-                                            table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
-                                        else
-                                            table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
-                                        end
-                                    end
-                                end
-                            end
-                        end
-                    else
-                        item["name"] = itemBaseName
-                        item["rarity"] = "RARE"
-                        for i = 0, 4 do
-                            local dataId = 14 + i * 3
-                            if #itemData["data"] > dataId then
-                                local affixId = itemData["data"][dataId] + (itemData["data"][dataId - 1] % 4) * 256
-                                if affixId then
-                                    local affixTier = math.floor(itemData["data"][dataId - 1] / 16)
-                                    local modId = affixId .. "_" .. affixTier
-                                    local modData = data.itemMods.Item[modId]
-                                    local range = itemData["data"][dataId + 1]
-
-                                    if modData then
-                                        if modData.type == "Prefix" then
-                                            table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
-                                        else
-                                            table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
-                                        end
-                                    end
-                                end
-                            end
-                        end
-                    end
-                    table.insert(char["items"], item)
-                end
-            end
+        local item = self:processItemData(itemData)
+        if item then
+            table.insert(char["items"], item)
         end
     end
 
@@ -864,46 +882,15 @@ function ImportTabClass:ImportItemsAndSkills(charData)
     return charData -- For the wrapper
 end
 
-local slotMap = { [4] = "Weapon 1", [5] = "Weapon 2", [2] = "Helmet", [3] = "Body Armor", [6] = "Gloves", [8] = "Boots", [11] = "Amulet", [9] = "Ring 1", [10] = "Ring 2", [7] = "Belt", [12] = "Relic" }
-
-for i = 1, 20 do
-    slotMap["Idol " .. i] = "Idol " .. i
-end
-
-for i = 1, 7 do
-    slotMap[32 + i] = "Blessing " .. i
-end
-for i = 1, 3 do
-    slotMap[42 + i] = "Blessing " .. (7 + i)
-end
-
-
-function ImportTabClass:ImportItem(itemData, slotName)
-    if not slotName then
-        slotName = slotMap[itemData.inventoryId]
-    end
+function ImportTabClass:ImportItem(itemData)
+    local slotName = itemData.slotName
 
     local item = self:BuildItem(itemData)
 
     -- Add and equip the new item
     --ConPrintf("%s", item.raw)
     if item.base then
-        local repIndex, repItem
-        for index, item in pairs(self.build.itemsTab.items) do
-            if item.uniqueID == itemData.id then
-                repIndex = index
-                repItem = item
-                break
-            end
-        end
-        if repIndex then
-            -- Item already exists in the build, overwrite it
-            item.id = repItem.id
-            self.build.itemsTab.items[item.id] = item
-            item:BuildModList()
-        else
-            self.build.itemsTab:AddItem(item, true)
-        end
+        self.build.itemsTab:AddItem(item, true)
         if slotName then
             self.build.itemsTab.slots[slotName]:SetSelItemId(item.id)
         end
@@ -930,7 +917,6 @@ function ImportTabClass:BuildItem(itemData)
     end
 
     -- Import item data
-    item.uniqueID = itemData.inventoryId
     itemData.ilvl = 0
     if itemData.ilvl > 0 then
         item.itemLevel = itemData.ilvl
