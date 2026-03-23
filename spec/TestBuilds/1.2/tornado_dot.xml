@@ -114,7 +114,6 @@
 			Rarity: UNIQUE
 Nihilis
 Unbound Locket
-Unique ID: 11
 Crafted: true
 Prefix: None
 Prefix: None
@@ -149,7 +148,6 @@ Implicits: 3
 			Rarity: RARE
 Meruna Carapace
 Meruna Carapace
-Unique ID: 3
 Crafted: true
 Prefix: {range:251}52_4
 Prefix: {range:214}25_4
@@ -178,7 +176,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Blood of the Exile
 Iron Greaves
-Unique ID: 8
 Crafted: true
 Prefix: None
 Prefix: None
@@ -211,7 +208,6 @@ Implicits: 2
 			Rarity: RARE
 Arcane Bracers
 Arcane Bracers
-Unique ID: 6
 Crafted: true
 Prefix: {range:102}25_4
 Prefix: {range:217}36_6
@@ -242,7 +238,6 @@ Implicits: 3
 			Rarity: RARE
 Raptor Helm
 Raptor Helm
-Unique ID: 2
 Crafted: true
 Prefix: {range:226}25_4
 Prefix: {range:130}52_4
@@ -273,7 +268,6 @@ Implicits: 3
 			Rarity: UNIQUE
 Ucenui's Sphere
 Navigation Orb
-Unique ID: 12
 Crafted: true
 Prefix: {range:98}25_5
 Prefix: {range:91}825_5
@@ -310,7 +304,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Flames of Midnight
 Celestial Ring
-Unique ID: 9
 Crafted: true
 Prefix: {range:4}25_4
 Prefix: None
@@ -347,7 +340,6 @@ Implicits: 1
 			Rarity: UNIQUE
 Red Ring of Atlaria
 Silver Ring
-Unique ID: 10
 Crafted: true
 Prefix: None
 Prefix: None
@@ -378,7 +370,6 @@ Implicits: 1
 			Rarity: UNIQUE
 Elecoe's Innovation
 Spidersilk Sash
-Unique ID: 7
 Crafted: true
 Prefix: {range:230}52_6
 Prefix: {range:43}27_4
@@ -419,7 +410,6 @@ Implicits: 3
 			Rarity: UNIQUE
 Wrongwarp
 Crystal Wand
-Unique ID: 4
 Crafted: true
 Prefix: None
 Prefix: None
@@ -455,7 +445,6 @@ Implicits: 3
 			Rarity: UNIQUE
 Tempest Maw
 Crescent Axe
-Unique ID: 5
 Crafted: true
 Prefix: {range:197}86_3
 Prefix: None
@@ -493,7 +482,6 @@ Implicits: 3
 			Rarity: RARE
 Stout Weaver Idol
 Stout Weaver Idol
-Unique ID: Idol 7
 Crafted: true
 Prefix: {range:190}111_0
 Prefix: None
@@ -514,7 +502,6 @@ Implicits: 0
 			Rarity: RARE
 Stout Weaver Idol
 Stout Weaver Idol
-Unique ID: Idol 8
 Crafted: true
 Prefix: {range:101}887_0
 Prefix: None
@@ -537,7 +524,6 @@ Implicits: 0
 			Rarity: RARE
 Stout Weaver Idol
 Stout Weaver Idol
-Unique ID: Idol 9
 Crafted: true
 Prefix: {range:26}111_0
 Prefix: None
@@ -558,7 +544,6 @@ Implicits: 0
 			Rarity: RARE
 Humble Weaver Idol
 Humble Weaver Idol
-Unique ID: Idol 1
 Crafted: true
 Prefix: {range:23}870_0
 Prefix: None
@@ -581,7 +566,6 @@ Implicits: 0
 			Rarity: RARE
 Humble Weaver Idol
 Humble Weaver Idol
-Unique ID: Idol 5
 Crafted: true
 Prefix: {range:25}870_0
 Prefix: None
@@ -602,7 +586,6 @@ Implicits: 0
 			Rarity: RARE
 Heretical Huge Nomad Idol
 Heretical Huge Nomad Idol
-Unique ID: Idol 6
 Crafted: true
 Prefix: {range:222}162_0
 Prefix: {range:43}899_5
@@ -631,7 +614,6 @@ Implicits: 0
 			Rarity: RARE
 Small Weaver Idol
 Small Weaver Idol
-Unique ID: Idol 4
 Crafted: true
 Prefix: {range:54}430_0
 Prefix: None
@@ -652,7 +634,6 @@ Implicits: 0
 			Rarity: RARE
 Small Weaver Idol
 Small Weaver Idol
-Unique ID: Idol 3
 Crafted: true
 Prefix: {range:146}835_0
 Prefix: None
@@ -675,7 +656,6 @@ Implicits: 0
 			Rarity: RARE
 Small Weaver Idol
 Small Weaver Idol
-Unique ID: Idol 17
 Crafted: true
 Prefix: {range:246}835_0
 Prefix: None
@@ -698,7 +678,6 @@ Implicits: 0
 			Rarity: RARE
 Small Eterran Idol
 Small Eterran Idol
-Unique ID: Idol 15
 Crafted: true
 Prefix: {range:226}114_0
 Prefix: None
@@ -717,7 +696,6 @@ Implicits: 0
 			Rarity: RARE
 Small Weaver Idol
 Small Weaver Idol
-Unique ID: Idol 18
 Crafted: true
 Prefix: {range:230}835_0
 Prefix: None
@@ -738,7 +716,6 @@ Implicits: 0
 			Rarity: RARE
 Small Weaver Idol
 Small Weaver Idol
-Unique ID: Idol 19
 Crafted: true
 Prefix: {range:81}838_0
 Prefix: None
@@ -761,7 +738,6 @@ Implicits: 0
 			Rarity: RARE
 Grand Strength of Mind
 Grand Strength of Mind
-Unique ID: 33
 Crafted: true
 Prefix: None
 Prefix: None
@@ -778,7 +754,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Talon of Grandeur
 Grand Talon of Grandeur
-Unique ID: 34
 Crafted: true
 Prefix: None
 Prefix: None
@@ -795,7 +770,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Hunger of the Void
 Grand Hunger of the Void
-Unique ID: 35
 Crafted: true
 Prefix: None
 Prefix: None
@@ -812,7 +786,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Rhythm of the Tide
 Grand Rhythm of the Tide
-Unique ID: 37
 Crafted: true
 Prefix: None
 Prefix: None
@@ -831,7 +804,6 @@ Implicits: 2
 			Rarity: RARE
 Grand Survival of Might
 Grand Survival of Might
-Unique ID: 39
 Crafted: true
 Prefix: None
 Prefix: None
@@ -850,7 +822,6 @@ Implicits: 2
 			Rarity: RARE
 Grand Bulwark of the Tundra
 Grand Bulwark of the Tundra
-Unique ID: 44
 Crafted: true
 Prefix: None
 Prefix: None
@@ -867,7 +838,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Embers of Immortality
 Grand Embers of Immortality
-Unique ID: 45
 Crafted: true
 Prefix: None
 Prefix: None
