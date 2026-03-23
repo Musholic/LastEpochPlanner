@@ -4787,7 +4787,8 @@
       "throwing_base_physical_damage": 25,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 350
+      "base_skill_effect_duration": 350,
+      "number_of_additional_projectiles": 2
     },
     "baseMods": [
       "4% increased Damage per player Dexterity"

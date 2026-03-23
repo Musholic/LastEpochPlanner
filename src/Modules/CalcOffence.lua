@@ -649,11 +649,13 @@ function calcs.offence(env, actor, activeSkill)
 			skillModList:NewMod("AreaOfEffect", "INC", mod.value, mod.source, mod.flags, mod.keywordFlags, unpack(mod))
 		end
 	end
-	if skillModList:Flag(nil, "SequentialProjectiles") and not skillModList:Flag(nil, "OneShotProj") and not skillModList:Flag(nil,"NoAdditionalProjectiles") and not skillModList:Flag(nil, "TriggeredBySnipe") then
+	if skillModList:Flag(skillCfg, "SequentialProjectiles") and not skillModList:Flag(skillCfg, "OneShotProj") and not skillModList:Flag(skillCfg,"NoAdditionalProjectiles") and not skillModList:Flag(skillCfg, "TriggeredBySnipe") then
 		-- Applies DPS multiplier based on projectile count
-		skillData.dpsMultiplier = skillModList:Sum("BASE", skillCfg, "ProjectileCount")
+		local projBase = skillModList:Sum("BASE", skillCfg, "ProjectileCount")
+		local projMore = skillModList:More(skillCfg, "ProjectileCount")
+		skillData.dpsMultiplier = 1 + m_floor(projBase * projMore)
 	end
-	
+
 	local extraInstances = skillModList:Sum("BASE", skillCfg, "InstanceCountOnDirectCast")
 	if extraInstances > 0 and not skillData.triggered then
 		skillModList:NewMod("QuantityMultiplier", "BASE", 1 + extraInstances)

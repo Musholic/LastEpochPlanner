@@ -992,7 +992,7 @@ c[" Shreds Fire Resistance"]={nil," Shreds Fire Resistance "}
 c[" Shurikens -> Chakram"]={nil," Shurikens -> Chakram "}
 c[" Shurikens All Around You"]={nil," Shurikens All Around You "}
 c[" Shurikens Cast Around You"]={nil," Shurikens Cast Around You "}
-c[" Shurikens In Line"]={nil," Shurikens In Line "}
+c[" Shurikens In Line"]={{[1]={[1]={skillName="Shurikens",type="SkillName"},flags=0,keywordFlags=0,name="SequentialProjectiles",type="FLAG",value=true}},nil}
 c[" Silenced"]={nil," Silenced "}
 c[" Silver Shroud on ability use"]={nil," Silver Shroud on ability use "}
 c[" Single Projectile"]={nil," Single Projectile "}
@@ -4102,7 +4102,7 @@ c["+20% Explosion Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MOR
 c["+20% Explosion Damage Per Second On Ground"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=20}}," Explosion  Per Second On Ground "}
 c["+20% Explosion Freeze Rate Multiplier"]={{}," Explosion Freeze Rate Multiplier "}
 c["+20% Explosive Ground Frequency"]={{}," Explosive Ground Frequency "}
-c["+20% Extra Projectiles Chance"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=20}},"  Chance "}
+c["+20% Extra Projectiles Chance"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="MORE",value=20}},"  Chance "}
 c["+20% Falcon Strikes Damage after Area skill use"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=20}}," Falcon Strikes  after Area skill use "}
 c["+20% Fall Speed"]={{}," Fall Speed "}
 c["+20% Fear Duration"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="MORE",value=20}},nil}
@@ -4640,7 +4640,7 @@ c["+25% Ensnaring Roots Damage"]={{[1]={[1]={skillName="Root",type="SkillName"},
 c["+25% Ensnaring Roots Duration"]={{[1]={[1]={skillName="Root",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="MORE",value=25}}," Ensnaring s  "}
 c["+25% Eternal Arrow Recurve Chance per Absorbed Archer"]={{}," Eternal Arrow Recurve Chance per Absorbed Archer "}
 c["+25% Explosion Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=25}}," Explosion  "}
-c["+25% Extra Projectiles Chance"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=25}},"  Chance "}
+c["+25% Extra Projectiles Chance"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="MORE",value=25}},"  Chance "}
 c["+25% Fear Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Fear",type="BASE",value=25}},nil}
 c["+25% Final Explosion Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=25}}," Final Explosion  "}
 c["+25% Final Impact Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=25}}," Final Impact  "}
@@ -8449,7 +8449,7 @@ c["-50% Cursed Limbs and Cursed Ground duration"]={{[1]={flags=0,keywordFlags=0,
 c["-50% Delay And Increases To Delay"]={{}," Delay And Increases To Delay "}
 c["-50% Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-50}},nil}
 c["-50% Explosion Hit Damage"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=-50}}," Explosi  "}
-c["-50% Extra Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=-50}},nil}
+c["-50% Extra Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="MORE",value=-50}},nil}
 c["-50% Fewer Ricochets"]={{}," Fewer Ricochets "}
 c["-50% Fire Damage Taken"]={{[1]={flags=0,keywordFlags=0,name="FireDamageTaken",type="BASE",value=-50}},nil}
 c["-50% Forgebreath Cooldown "]={{}," Forgebreath Cooldown  "}
@@ -8460,7 +8460,7 @@ c["-50% Maximum Forged Weapons"]={{}," Maximum Forged Weapons "}
 c["-50% Maximum Number Of Locusts"]={{}," Maximum Number Of Locusts "}
 c["-50% Maximum Number Of Skeletons"]={{}," Maximum Number Of Skeletons "}
 c["-50% Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="MORE",value=-50}},nil}
-c["-50% Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=-50}},nil}
+c["-50% Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="MORE",value=-50}},nil}
 c["-50% Remaining Charged Ground Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="MORE",value=-50}}," Remaining Charged Ground  "}
 c["-50% Retaliation Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=-50}}," Retaliation  "}
 c["-50% Sacrifice Mana Cost"]={{[1]={[1]={skillName="Sacrifice",type="SkillName"},flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=-50}},nil}
@@ -11109,7 +11109,7 @@ c["25% Crit Multi -> Falcon Crit Multi Buff after Attack"]={{}," Crit Multi -> F
 c["25% Critical Multiplier Granted As Ward On Crit"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=25}},"  Granted As Ward On Crit "}
 c["25% Electrify Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=25}},nil}
 c["25% Explosion Chance"]={{}," Explosion Chance "}
-c["25% Extra Projectiles Chance"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=25}},"  Chance "}
+c["25% Extra Projectiles Chance"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="MORE",value=25}},"  Chance "}
 c["25% Falcon Ability Remaining Cooldown Recovery on Crit (1 second cooldown)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=25}}," Falcon Ability Remaining  on Crit  "}
 c["25% Fire Aura Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_FireAura",type="BASE",value=25}},nil}
 c["25% Fire Resistance Shred Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_FireResistanceShred",type="BASE",value=25}},nil}
@@ -13534,7 +13534,7 @@ c["7% Chance To Refund 20% Of Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="Ma
 c["7% Chance to Summon a Primal Serpent on kill with Serpent Strike"]={{}," to Summon a Primal Serpent  with  "}
 c["7% Chance to cast Void Rift on Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_VoidRift",type="BASE",value=7}},nil}
 c["7% Chance to not consume Silver Shrouds when hit"]={{}," to not consume s when  "}
-c["7% Double Projectiles Chance"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=7}}," Double  Chance "}
+c["7% Double Projectiles Chance"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="MORE",value=7}}," Double  Chance "}
 c["7% Elemental Arrow Generation Rate"]={{},"  Arrow Generation Rate "}
 c["7% Elemental Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="MORE",value=7},[2]={flags=0,keywordFlags=0,name="ColdDamage",type="MORE",value=7},[3]={flags=0,keywordFlags=0,name="LightningDamage",type="MORE",value=7}},nil}
 c["7% Fire Penetration while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="FirePenetration",type="BASE",value=7}},nil}

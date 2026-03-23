@@ -306,6 +306,8 @@ local specialModList = {
 			mod("CritChance", "OVERRIDE", 100, { type = "StatThreshold", stat = "Mana", threshold = num })
 		}
 	end,
+	-- The actual text that they can hit the same target is in the flavour text, not mods, so we detect it via shurikens in line instead
+	["^ ?shurikens in line$"] = { flag("SequentialProjectiles", { type = "SkillName", skillName = "Shurikens" })},
 }
 
 -- Modifiers that are recognised but unsupported
@@ -517,9 +519,10 @@ local function parseMod(line, order)
 		return { }, line
 	end
 
+	-- differentiate when a % should be more vs base. e.g. +30% fire resist = base, but +30% damage = more
 	if modForm == "BASE_MORE" and modName ~= nil then
 		local modNameStr = type(modName) == "table" and modName[1] or modName
-		if modNameStr:match("Damage$") or modName == "Duration" then
+		if modNameStr:match("Damage$") or modName == "Duration" or modName == "ProjectileCount" then
 			modType = "MORE"
 		else
 			modType = "BASE"

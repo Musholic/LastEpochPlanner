@@ -245,5 +245,27 @@ describe("TestModParse", function()
 
     end)
 
+    it("deadly aim allows hitting same target multiple times with multiple projectiles", function()
+        -- gather normal DPS first
+        runCallback("OnFrame")
+        build.skillsTab:SelSkill(1, "Shurikens")
+        runCallback("OnFrame")
+        -- shurikens = 3 baseline, we display additional, not total
+        assert.are.equals(2, build.calcsTab.mainEnv.player.output.ProjectileCount)
+        local originalDps = build.calcsTab.calcsOutput.TotalDPS
+
+        build.configTab.input.customMods = "Shurikens In Line\n-50% Projectiles"
+        build.configTab:BuildModList()
+        build.buildFlag = true
+        runCallback("OnFrame")
+        build.skillsTab:SelSkill(1, "Shurikens")
+        runCallback("OnFrame")
+        -- shurikens = 3 baseline, -50% = 1.5, rounded up = 2. however, we display additional, not total, so 1.
+        assert.are.equals(1, build.calcsTab.mainEnv.player.output.ProjectileCount)
+        -- dps doubled because +1 additional projectile
+        assert.are.equals(originalDps * 2, build.calcsTab.calcsOutput.TotalDPS)
+
+    end)
+
 end)
 
