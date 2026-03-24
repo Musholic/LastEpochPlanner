@@ -79,7 +79,12 @@ end
 local buildList = fetchBuilds("../spec/TestBuilds")
 for filename, importCode in pairs(buildList) do
     print("Loading build " .. filename)
-    loadBuildFromXML(importCode, filename)
+    -- If the import code starts with EPOCH, then it's an offline build
+    if importCode:sub(1, 5) == "EPOCH" then
+        loadBuildFromJSON(importCode:sub(6))
+    else
+        loadBuildFromXML(importCode, filename)
+    end
     local fileHnd, errMsg = io.open(filename:gsub("^(.+)%..+$", "%1.lua"), "w+")
     fileHnd:write("return {\n")
     fileHnd:write(buildTable("output", build.calcsTab.mainOutput) .. "\n}")

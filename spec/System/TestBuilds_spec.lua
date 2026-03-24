@@ -48,12 +48,3 @@ expose("test all builds #builds", function()
         end
     end
 end)
-
-describe("test offline build import", function()
-    it("should load a build from an offline save file", function()
-        local saveFile = io.open("../spec/offline_save.json", "r")
-        local saveFileContent = saveFile:read("*a")
-        saveFile:close()
-        loadBuildFromJSON(saveFileContent)
-    end)
-end)
