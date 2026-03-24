@@ -407,7 +407,7 @@ return {
     ["PoisontakenFlat"] = 0,
     ["PreEffectiveCritChance"] = 5,
     ["ProjectileBlockChance"] = 0,
-    ["ProjectileCount"] = 4,
+    ["ProjectileCount"] = 5,
     ["ProjectileEvadeChance"] = 0,
     ["ProjectileEvasion"] = 44,
     ["ProjectileNotHitChance"] = 0,
