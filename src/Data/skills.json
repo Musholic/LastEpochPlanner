@@ -3544,7 +3544,8 @@
       "throwing_base_physical_damage": 22,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 2500
+      "base_skill_effect_duration": 2500,
+      "base_number_of_projectiles": 1
     },
     "baseMods": [
       "4% increased Damage per player Strength",
