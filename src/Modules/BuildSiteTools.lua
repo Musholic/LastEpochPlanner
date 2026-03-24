@@ -16,7 +16,7 @@ buildSites.websiteList = {
 	},
 	{ label = "PastebinP.com", id = "pastebinProxy", matchURL = "pastebinp%.com/%w+", regexURL = "pastebinp%.com/(%w+)%s*$", downloadURL = "pastebinp.com/raw/%1" },
 	{ label = "Rentry.co", id = "rentry", matchURL = "rentry%.co/%w+", regexURL = "rentry%.co/(%w+)%s*$", downloadURL = "rentry.co/paste/%1/raw" },
-	{ label = "build.lastepochplanner.com", id = "build.lastepochplanner", matchURL = "build%.lastepochplanner%.com/%w+", regexURL = "build%.lastepochplanner%.com/(%w+)%s*$", downloadURL = "build.lastepochplanner.com/%1" },
+	{ label = "build.lastepochplanner.com", id = "build.lastepochplanner", matchURL = "build%.lastepochplanner%.com/%w+", regexURL = "build%.lastepochplanner%.com/(%w+)%s*$", downloadURL = "build.lastepochplanner.com/%1", codeOut = "", postUrl = "https://build.lastepochplanner.com/gen-url", postFields = "code=" },
 }
 
 --- Uploads a LEP build code to a website
