@@ -788,20 +788,21 @@ function ImportTabClass:ReadJsonSaveData(saveFileContent)
     end
     for _, skillTree in pairs(saveContent["savedSkillTrees"]) do
         local skillName
+        local treeId = skillTree['treeID']
 
         local skillList = self.build.latestTree.classes[classId].skills
         for _, skill in ipairs(skillList) do
-            if skill.treeId == skillTree['treeID'] then
+            if skill.treeId == treeId then
                skillName = skill.name
             end
         end
 
         if skillName then
-            table.insert(char["hashes"], skillName .. "-" .. 0 .. "#1")
+            table.insert(char["hashes"], treeId .. "-" .. 0 .. "#1")
             table.insert(char["abilities"], skillName)
             for skillIdx, skill in pairs(skillTree["nodeIDs"]) do
                 local nbPoints = skillTree["nodePoints"][skillIdx]
-                table.insert(char["hashes"], skillName .. "-" .. skill .. "#" .. nbPoints)
+                table.insert(char["hashes"], treeId .. "-" .. skill .. "#" .. nbPoints)
             end
         end
     end
