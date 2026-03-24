@@ -250,6 +250,15 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
         end
 
         self.importCodeDetail = colorCodes.NEGATIVE .. "Invalid input"
+
+        -- Check if the buffer contains a lastepochtools build
+        local xmlText
+        if buf:find("window%[\"buildInfo\"%] = ") then
+            -- Change the buffer here to avoid matching url from other parts of the buffer
+            buf = buf:match("window%[\"buildInfo\"%] = (%b{})")
+            xmlText = buf
+        end
+
         local urlText = buf:gsub("^[%s?]+", ""):gsub("[%s?]+$", "") -- Quick Trim
         if urlText:match("youtube%.com/redirect%?") or urlText:match("google%.com/url%?") then
             local nested_url = urlText:gsub(".*[?&]q=([^&]+).*", "%1")
@@ -274,14 +283,19 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
                 if buf ~= urlText then
                     self.controls.importCodeIn:SetText(urlText, false)
                 end
-                if buildSites.websiteList[j].id == "lastepochtools" then
-                    self.importCodeXML = buf:match("window%[\"buildInfo\"%] = (%b{})")
-                end
                 return
             end
         end
 
-        local xmlText = Inflate(common.base64.decode(buf:gsub("-", "+"):gsub("_", "/")))
+        if not xmlText then
+            xmlText = Inflate(common.base64.decode(buf:gsub("-", "+"):gsub("_", "/")))
+        end
+
+        -- Check if the decoded buffer contains a lastepochtools build
+        if xmlText and xmlText:find("window%[\"buildInfo\"%] = ") then
+            xmlText = xmlText:match("window%[\"buildInfo\"%] = (%b{})")
+        end
+
         if not xmlText then
             return
         end
