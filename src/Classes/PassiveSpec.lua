@@ -109,7 +109,7 @@ function PassiveSpecClass:Load(xml, dbFileName)
 							launch:ShowErrMsg("^1Error parsing '%s': 'Override' element missing 'nodeId' attribute", dbFileName)
 							return true
 						end
-						
+
 						local nodeId = child.attrib.nodeId
 						self.hashOverrides[nodeId] = {}
 						for _,stats in ipairs(child) do
@@ -562,7 +562,7 @@ function PassiveSpecClass:BuildPathFromNode(root)
 			--    This permits pathing from the Ascendant 'Path of the X' nodes into the respective class start areas
 			-- 3. They must not pass away from mastery nodes
 			if not other.pathDist then
-				ConPrintTable(other, true)
+				--ConPrintTable(other, true)
 			elseif node.type ~= "Mastery" and other.type ~= "ClassStart" and other.type ~= "AscendClassStart" and other.pathDist > curDist and (node.ascendancyName == other.ascendancyName or (curDist == 1 and not other.ascendancyName)) then
 				-- The shortest path to the other node is through the current node
 				other.pathDist = curDist

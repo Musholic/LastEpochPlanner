@@ -31,7 +31,7 @@ function CalcBreakdownClass:IsMouseOver()
 	if not self:IsShown() then
 		return
 	end
-	return self:IsMouseInBounds() or self:GetMouseOverControl() 
+	return self:IsMouseInBounds() or self:GetMouseOverControl()
 end
 
 function CalcBreakdownClass:SetBreakdownData(displayData, pinned)
@@ -87,7 +87,7 @@ function CalcBreakdownClass:SetBreakdownData(displayData, pinned)
 						local _, num = string.gsub(row[col.key], "%d%d%d%d", "") -- count how many commas will be added
 						if main.showThousandsSeparators and num > 0 then
 							col.width = m_max(col.width or 0, DrawStringWidth(16, "VAR", col.label) + 6, DrawStringWidth(12, "VAR", row[col.key]) + 6 + (4 * num))
-						else 
+						else
 							col.width = m_max(col.width or 0, DrawStringWidth(16, "VAR", col.label) + 6, DrawStringWidth(12, "VAR", row[col.key]) + 6)
 						end
 					end
@@ -157,7 +157,7 @@ function CalcBreakdownClass:AddBreakdownSection(sectionData)
 			end
 			return a[colKey] > b[colKey]
 		end)
-		
+
 		-- Generic table
 		local section = {
 			type = "TABLE",
@@ -174,7 +174,7 @@ function CalcBreakdownClass:AddBreakdownSection(sectionData)
 		local section = {
 			type = "TABLE",
 			rowList = breakdown.reservations,
-			colList = { 
+			colList = {
 				{ label = "Skill", key = "skillName" },
 				{ label = "Base", key = "base" },
 				{ label = "MCM", key = "mult" },
@@ -191,7 +191,7 @@ function CalcBreakdownClass:AddBreakdownSection(sectionData)
 		local section = {
 			type = "TABLE",
 			rowList = breakdown.damageTypes,
-			colList = { 
+			colList = {
 				{ label = "From", key = "source", right = true },
 				{ label = "Base", key = "base" },
 				{ label = "Inc/red", key = "inc" },
@@ -238,8 +238,8 @@ function CalcBreakdownClass:AddBreakdownSection(sectionData)
 		table.sort(rowList, function(a, b)
 			return a['base'] > b['base']
 		end)
-		
-		local section = { 
+
+		local section = {
 			type = "TABLE",
 			rowList = rowList,
 			colList = colList,
@@ -296,7 +296,7 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 		type = "TABLE",
 		label = sectionData.label,
 		rowList = rowList,
-		colList = { 
+		colList = {
 			{ label = "Value", key = "displayValue" },
 			{ label = "Stat", key = "name" },
 			{ label = "Skill types", key = "flags" },
@@ -334,12 +334,12 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 				t_insert(typeList, row.mod.type)
 			end
 			if not row.mod.source then
-				ConPrintTable(row.mod)
+				--ConPrintTable(row.mod)
 			end
 			local sourceType = row.mod.source:match("[^:]+")
 			if not sourceTotals[sourceType] then
 				sourceTotals[sourceType] = { }
-			end	
+			end
 		end
 		for sourceType, lines in pairs(sourceTotals) do
 			cfg.source = sourceType
@@ -527,7 +527,7 @@ function CalcBreakdownClass:FormatModValue(value, modType)
 			return "?"
 		end
 	else
-		return value		
+		return value
 	end
 end
 
