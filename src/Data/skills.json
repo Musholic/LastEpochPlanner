@@ -2951,7 +2951,8 @@
       "spell_base_physical_damage": 20,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 782
+      "base_skill_effect_duration": 782,
+      "base_number_of_projectiles": 7
     },
     "baseMods": [
       "4% increased Damage per player Attunement"
@@ -3217,7 +3218,8 @@
       "spell_base_fire_damage": 60,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 700
+      "base_skill_effect_duration": 700,
+      "base_number_of_projectiles": 5
     },
     "baseMods": [
       "8% increased Damage per player Intelligence",
@@ -3664,7 +3666,8 @@
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "chance_to_cast_Ailment_Possess_on_hit_%": 100,
-      "base_skill_effect_duration": 2500
+      "base_skill_effect_duration": 2500,
+      "base_number_of_projectiles": 5
     },
     "baseMods": [
       "4% increased Damage per player Intelligence"
@@ -3709,7 +3712,8 @@
       "spell_base_cold_damage": 9,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 650
+      "base_skill_effect_duration": 650,
+      "base_number_of_projectiles": 5
     },
     "baseMods": [
       "4% increased Damage per player Attunement",
@@ -4409,7 +4413,8 @@
       "bow_base_physical_damage": 6,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 450
+      "base_skill_effect_duration": 450,
+      "base_number_of_projectiles": 5
     },
     "baseMods": [
       "4% increased Damage per player Dexterity"
@@ -4918,7 +4923,8 @@
     },
     "stats": {
       "chance_to_cast_Ailment_MarkedForDeath_on_hit_%": 100,
-      "base_skill_effect_duration": 2500
+      "base_skill_effect_duration": 2500,
+      "base_number_of_projectiles": 5
     }
   },
   "SpiritPlague": {
@@ -4952,7 +4958,8 @@
       "spell_base_physical_damage": 20,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 350
+      "base_skill_effect_duration": 350,
+      "base_number_of_projectiles": 4
     },
     "baseMods": [
       "4% increased Damage per player Attunement",
@@ -5862,7 +5869,8 @@
       "spell_base_physical_damage": 15,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 600
+      "base_skill_effect_duration": 600,
+      "base_number_of_projectiles": 4
     },
     "fromMinion": true
   },
@@ -5880,7 +5888,8 @@
       "spell_base_physical_damage": 20,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 350
+      "base_skill_effect_duration": 350,
+      "base_number_of_projectiles": 4
     },
     "baseMods": [
       "4% increased Damage per player Attunement",
@@ -5967,7 +5976,8 @@
       "throwing_base_physical_damage": 12,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 350
+      "base_skill_effect_duration": 350,
+      "base_number_of_projectiles": 2
     },
     "baseMods": [
       "4% increased Damage per player Dexterity"
@@ -6078,7 +6088,8 @@
       "spell_base_void_damage": 60,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 700
+      "base_skill_effect_duration": 700,
+      "base_number_of_projectiles": 3
     },
     "baseMods": [
       "4% increased Damage per player Attunement",
@@ -6184,7 +6195,8 @@
       "spell_base_necrotic_damage": 10,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 350
+      "base_skill_effect_duration": 350,
+      "base_number_of_projectiles": 4
     },
     "baseMods": [
       "4% increased Damage per player Intelligence"
