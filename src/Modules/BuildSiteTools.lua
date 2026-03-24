@@ -16,6 +16,7 @@ buildSites.websiteList = {
 	},
 	{ label = "PastebinP.com", id = "pastebinProxy", matchURL = "pastebinp%.com/%w+", regexURL = "pastebinp%.com/(%w+)%s*$", downloadURL = "pastebinp.com/raw/%1" },
 	{ label = "Rentry.co", id = "rentry", matchURL = "rentry%.co/%w+", regexURL = "rentry%.co/(%w+)%s*$", downloadURL = "rentry.co/paste/%1/raw" },
+	{ label = "build.lastepochplanner.com", id = "build.lastepochplanner", matchURL = "build%.lastepochplanner%.com/%w+", regexURL = "build%.lastepochplanner%.com/(%w+)%s*$", downloadURL = "build.lastepochplanner.com/%1" },
 }
 
 --- Uploads a LEP build code to a website
@@ -77,7 +78,14 @@ function buildSites.DownloadBuild(link, websiteInfo, callback)
 	end
 	if websiteInfo then
 		launch:DownloadPage(siteCodeURL, function(response, errMsg)
-			if errMsg then
+			if errMsg == "Response code: 302" then
+				local location = response.header:match("location: (%S+)")
+				if location then
+					callback(true, location)
+				else
+					callback(false, "Redirect was found, but no location header was found")
+				end
+			elseif errMsg then
 				callback(false, errMsg)
 			else
 				callback(true, response.body)
