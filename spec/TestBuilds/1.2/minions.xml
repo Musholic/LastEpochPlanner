@@ -114,7 +114,6 @@
 			Rarity: RARE
 Bone Amulet
 Bone Amulet
-Unique ID: 11
 Crafted: true
 Prefix: {range:178}24_4
 Prefix: {range:163}824_6
@@ -145,7 +144,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Exsanguinous
 Noble Raiment
-Unique ID: 3
 Crafted: true
 Prefix: {range:236}52_6
 Prefix: None
@@ -182,7 +180,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Last Steps of the Living
 Arcane Boots
-Unique ID: 8
 Crafted: true
 Prefix: {range:206}36_4
 Prefix: None
@@ -219,7 +216,6 @@ Implicits: 3
 			Rarity: RARE
 Plated Gauntlets
 Plated Gauntlets
-Unique ID: 6
 Crafted: true
 Prefix: {range:35}45_3
 Prefix: {range:77}36_4
@@ -252,7 +248,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Boneclamor Barbute
 Gladiator Helmet
-Unique ID: 2
 Crafted: true
 Prefix: {range:189}382_6
 Prefix: None
@@ -283,7 +278,6 @@ Implicits: 1
 			Rarity: RARE
 Decaying Homunculus
 Decaying Homunculus
-Unique ID: 12
 Crafted: true
 Prefix: {range:84}24_5
 Prefix: {range:214}25_4
@@ -310,7 +304,6 @@ Implicits: 2
 			Rarity: RARE
 Ivory Ring
 Ivory Ring
-Unique ID: 9
 Crafted: true
 Prefix: {range:211}45_4
 Prefix: {range:178}824_4
@@ -343,7 +336,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Ribbons of Blood
 Ruby Ring
-Unique ID: 10
 Crafted: true
 Prefix: {range:217}824_4
 Prefix: {range:52}25_4
@@ -380,7 +372,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Strands of Souls
 Leather Belt
-Unique ID: 7
 Crafted: true
 Prefix: None
 Prefix: None
@@ -409,7 +400,6 @@ Implicits: 1
 			Rarity: UNIQUE
 Lethal Concentration
 Jadebone Javelin
-Unique ID: 4
 Crafted: true
 Prefix: {range:188}98_6
 Prefix: None
@@ -445,7 +435,6 @@ Implicits: 2
 			Rarity: RARE
 Heretical Large Immortal Idol
 Heretical Large Immortal Idol
-Unique ID: Idol 4
 Crafted: true
 Prefix: {range:224}285_0
 Prefix: {range:160}897_3
@@ -474,7 +463,6 @@ Implicits: 0
 			Rarity: RARE
 Heretical Large Immortal Idol
 Heretical Large Immortal Idol
-Unique ID: Idol 7
 Crafted: true
 Prefix: {range:76}295_0
 Prefix: {range:76}897_5
@@ -503,7 +491,6 @@ Implicits: 0
 			Rarity: RARE
 Minor Weaver Idol
 Minor Weaver Idol
-Unique ID: Idol 3
 Crafted: true
 Prefix: {range:145}851_0
 Prefix: None
@@ -526,7 +513,6 @@ Implicits: 0
 			Rarity: RARE
 Stout Weaver Idol
 Stout Weaver Idol
-Unique ID: Idol 2
 Crafted: true
 Prefix: {range:112}885_0
 Prefix: None
@@ -547,7 +533,6 @@ Implicits: 0
 			Rarity: RARE
 Minor Weaver Idol
 Minor Weaver Idol
-Unique ID: Idol 18
 Crafted: true
 Prefix: {range:22}850_0
 Prefix: None
@@ -570,7 +555,6 @@ Implicits: 0
 			Rarity: RARE
 Stout Weaver Idol
 Stout Weaver Idol
-Unique ID: Idol 15
 Crafted: true
 Prefix: {range:194}112_0
 Prefix: None
@@ -591,7 +575,6 @@ Implicits: 0
 			Rarity: RARE
 Minor Weaver Idol
 Minor Weaver Idol
-Unique ID: Idol 11
 Crafted: true
 Prefix: {range:41}852_0
 Prefix: None
@@ -614,7 +597,6 @@ Implicits: 0
 			Rarity: RARE
 Minor Weaver Idol
 Minor Weaver Idol
-Unique ID: Idol 6
 Crafted: true
 Prefix: {range:189}852_0
 Prefix: None
@@ -637,7 +619,6 @@ Implicits: 0
 			Rarity: RARE
 Minor Weaver Idol
 Minor Weaver Idol
-Unique ID: Idol 16
 Crafted: true
 Prefix: {range:25}112_0
 Prefix: None
@@ -658,7 +639,6 @@ Implicits: 0
 			Rarity: RARE
 Heretical Huge Immortal Idol
 Heretical Huge Immortal Idol
-Unique ID: Idol 1
 Crafted: true
 Prefix: {range:97}285_0
 Prefix: {range:72}899_2
@@ -685,7 +665,6 @@ Implicits: 0
 			Rarity: RARE
 Minor Weaver Idol
 Minor Weaver Idol
-Unique ID: Idol 20
 Crafted: true
 Prefix: {range:151}117_0
 Prefix: None
@@ -706,7 +685,6 @@ Implicits: 0
 			Rarity: RARE
 Grand Winds of Fortune
 Grand Winds of Fortune
-Unique ID: 33
 Crafted: true
 Prefix: None
 Prefix: None
@@ -723,7 +701,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Slumber of Morditas
 Grand Slumber of Morditas
-Unique ID: 34
 Crafted: true
 Prefix: None
 Prefix: None
@@ -740,7 +717,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Echo of Solarum
 Grand Echo of Solarum
-Unique ID: 35
 Crafted: true
 Prefix: None
 Prefix: None
@@ -757,7 +733,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Scars of Blood
 Grand Scars of Blood
-Unique ID: 36
 Crafted: true
 Prefix: None
 Prefix: None
@@ -774,7 +749,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Resonance of the Sea
 Grand Resonance of the Sea
-Unique ID: 37
 Crafted: true
 Prefix: None
 Prefix: None
@@ -791,7 +765,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Hope of the Beginning
 Grand Hope of the Beginning
-Unique ID: 38
 Crafted: true
 Prefix: None
 Prefix: None
@@ -808,7 +781,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Survival of Might
 Grand Survival of Might
-Unique ID: 39
 Crafted: true
 Prefix: None
 Prefix: None
@@ -827,7 +799,6 @@ Implicits: 2
 			Rarity: RARE
 Grand Memory of Masters
 Grand Memory of Masters
-Unique ID: 43
 Crafted: true
 Prefix: None
 Prefix: None
@@ -844,7 +815,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Bulwark of the Tundra
 Grand Bulwark of the Tundra
-Unique ID: 44
 Crafted: true
 Prefix: None
 Prefix: None
@@ -861,7 +831,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Body of Obsidian
 Grand Body of Obsidian
-Unique ID: 45
 Crafted: true
 Prefix: None
 Prefix: None

@@ -119,7 +119,6 @@
 			Rarity: UNIQUE
 Nihilis
 Unbound Locket
-Unique ID: 11
 Crafted: true
 Prefix: None
 Prefix: None
@@ -154,7 +153,6 @@ Implicits: 3
 			Rarity: UNIQUE
 Wings of Argentus
 Gladiator Armor
-Unique ID: 3
 Crafted: true
 Prefix: {range:230}52_3
 Prefix: None
@@ -185,7 +183,6 @@ Implicits: 1
 			Rarity: RARE
 Citadel Boots
 Citadel Boots
-Unique ID: 8
 Crafted: true
 Prefix: {range:79}25_3
 Prefix: {range:215}19_5
@@ -214,7 +211,6 @@ Implicits: 3
 			Rarity: UNIQUE
 Immortal Vise
 Eternal Gauntlets
-Unique ID: 6
 Crafted: true
 Prefix: {range:220}25_4
 Prefix: None
@@ -247,7 +243,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Seed of Ekkidrasil
 Gladiator Helmet
-Unique ID: 2
 Crafted: true
 Prefix: {range:74}52_5
 Prefix: None
@@ -280,7 +275,6 @@ Implicits: 1
 			Rarity: UNIQUE
 Vortex Pennant
 Mournful Pennant
-Unique ID: 12
 Crafted: true
 Prefix: {range:236}429_4
 Prefix: None
@@ -319,7 +313,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Orian's Sun Seal
 Gold Ring
-Unique ID: 9
 Crafted: true
 Prefix: {range:54}25_5
 Prefix: None
@@ -348,7 +341,6 @@ Implicits: 1
 			Rarity: UNIQUE
 Siphon of Anguish
 Gold Ring
-Unique ID: 10
 Crafted: true
 Prefix: {range:79}25_5
 Prefix: None
@@ -381,7 +373,6 @@ Implicits: 1
 			Rarity: UNIQUE
 Orian's Descent
 Plated Belt
-Unique ID: 7
 Crafted: true
 Prefix: {range:244}52_3
 Prefix: None
@@ -414,7 +405,6 @@ Implicits: 2
 			Rarity: RARE
 Obsidian Sceptre
 Obsidian Sceptre
-Unique ID: 4
 Crafted: true
 Prefix: {range:223}85_4
 Prefix: {range:214}720_4
@@ -444,7 +434,6 @@ Implicits: 2
 			Rarity: UNIQUE
 Palarus's Sacred Light
 Broadsword
-Unique ID: 5
 Crafted: true
 Prefix: {range:88}86_3
 Prefix: None
@@ -476,7 +465,6 @@ Implicits: 1
 			Rarity: RARE
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Unique ID: Idol 4
 Crafted: true
 Prefix: {range:129}206_0
 Prefix: {range:251}899_5
@@ -499,7 +487,6 @@ Implicits: 0
 			Rarity: UNIQUE
 Throne of Ambition
 Adorned Silver Idol
-Unique ID: Idol 14
 Crafted: true
 Prefix: None
 Prefix: None
@@ -516,7 +503,6 @@ Implicits: 0
 			Rarity: RARE
 Small Weaver Idol
 Small Weaver Idol
-Unique ID: Idol 20
 Crafted: true
 Prefix: {range:224}836_0
 Prefix: None
@@ -539,7 +525,6 @@ Implicits: 0
 			Rarity: RARE
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Unique ID: Idol 2
 Crafted: true
 Prefix: {range:150}206_0
 Prefix: {range:79}921_5
@@ -562,7 +547,6 @@ Implicits: 0
 			Rarity: RARE
 Small Weaver Idol
 Small Weaver Idol
-Unique ID: Idol 7
 Crafted: true
 Prefix: {range:190}835_0
 Prefix: None
@@ -585,7 +569,6 @@ Implicits: 0
 			Rarity: RARE
 Small Weaver Idol
 Small Weaver Idol
-Unique ID: Idol 1
 Crafted: true
 Prefix: {range:68}114_0
 Prefix: None
@@ -606,7 +589,6 @@ Implicits: 0
 			Rarity: RARE
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Unique ID: Idol 11
 Crafted: true
 Prefix: {range:186}206_0
 Prefix: {range:107}921_5
@@ -629,7 +611,6 @@ Implicits: 0
 			Rarity: RARE
 Small Weaver Idol
 Small Weaver Idol
-Unique ID: Idol 13
 Crafted: true
 Prefix: {range:195}838_0
 Prefix: None
@@ -652,7 +633,6 @@ Implicits: 0
 			Rarity: RARE
 Grand Memory of the Living
 Grand Memory of the Living
-Unique ID: 33
 Crafted: true
 Prefix: None
 Prefix: None
@@ -669,7 +649,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Emptiness of Ash
 Grand Emptiness of Ash
-Unique ID: 35
 Crafted: true
 Prefix: None
 Prefix: None
@@ -686,7 +665,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Rhythm of the Tide
 Grand Rhythm of the Tide
-Unique ID: 37
 Crafted: true
 Prefix: None
 Prefix: None
@@ -705,7 +683,6 @@ Implicits: 2
 			Rarity: RARE
 Grand Survival of Might
 Grand Survival of Might
-Unique ID: 39
 Crafted: true
 Prefix: None
 Prefix: None
@@ -724,7 +701,6 @@ Implicits: 2
 			Rarity: RARE
 Grand Binding of Ruin
 Grand Binding of Ruin
-Unique ID: 43
 Crafted: true
 Prefix: None
 Prefix: None
@@ -741,7 +717,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Resolve of Grael
 Grand Resolve of Grael
-Unique ID: 44
 Crafted: true
 Prefix: None
 Prefix: None
@@ -758,7 +733,6 @@ Implicits: 1
 			Rarity: RARE
 Grand Curse of Sulphur
 Grand Curse of Sulphur
-Unique ID: 45
 Crafted: true
 Prefix: None
 Prefix: None
