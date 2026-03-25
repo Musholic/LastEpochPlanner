@@ -641,18 +641,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	end
 	-- Uniques are always craftable (adding affixes turns them into legendaries)
 	if self.rarityType == "UNIQUE" then
-		-- Tag unflagged unique base mods so they survive Craft().
-		-- On initial DB load, no mod has {unique} yet; on re-parse after
-		-- Craft/BuildAndParseRaw, the serialized {unique} tags are already present.
-		local hasUniqueTag = false
-		for _, modLine in ipairs(self.explicitModLines) do
-			if modLine.unique then hasUniqueTag = true; break end
-		end
-		if not hasUniqueTag then
-			for _, modLine in ipairs(self.explicitModLines) do
-				modLine.unique = true
-			end
-		end
 		self.crafted = true
 	end
 	self.affixLimit = 0
