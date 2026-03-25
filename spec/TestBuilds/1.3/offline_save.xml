@@ -116,7 +116,7 @@
 	<Import exportParty="false"></Import>
 	<Items activeItemSet="1" useSecondWeaponSet="nil">
 		<Item id="1">
-			Rarity: RARE
+			Rarity: EXALTED
 Skull Cage
 Skull Cage
 Crafted: true
@@ -144,7 +144,7 @@ Implicits: 2
 			<ModRange id="7" range="127.5"></ModRange>
 		</Item>
 		<Item id="2">
-			Rarity: RARE
+			Rarity: EXALTED
 Initiate Robes
 Initiate Robes
 Crafted: true
@@ -428,7 +428,7 @@ Implicits: 2
 			<ModRange id="11" range="215"></ModRange>
 		</Item>
 		<Item id="12">
-			Rarity: RARE
+			Rarity: IDOL
 Humble Eterran Idol
 Humble Eterran Idol
 Crafted: true
@@ -446,7 +446,7 @@ Implicits: 0
 			<ModRange id="2" range="60"></ModRange>
 		</Item>
 		<Item id="13">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Lagonian Idol
 Minor Lagonian Idol
 Crafted: true
@@ -464,7 +464,7 @@ Implicits: 0
 			<ModRange id="2" range="226"></ModRange>
 		</Item>
 		<Item id="14">
-			Rarity: RARE
+			Rarity: IDOL
 Small Eterran Idol
 Small Eterran Idol
 Crafted: true
@@ -482,7 +482,7 @@ Implicits: 0
 			<ModRange id="2" range="37"></ModRange>
 		</Item>
 		<Item id="15">
-			Rarity: RARE
+			Rarity: IDOL
 Humble Eterran Idol
 Humble Eterran Idol
 Crafted: true
@@ -500,7 +500,7 @@ Implicits: 0
 			<ModRange id="2" range="191"></ModRange>
 		</Item>
 		<Item id="16">
-			Rarity: RARE
+			Rarity: IDOL
 Humble Eterran Idol
 Humble Eterran Idol
 Crafted: true
@@ -518,7 +518,7 @@ Implicits: 0
 			<ModRange id="2" range="234"></ModRange>
 		</Item>
 		<Item id="17">
-			Rarity: RARE
+			Rarity: IDOL
 Small Eterran Idol
 Small Eterran Idol
 Crafted: true
@@ -536,7 +536,7 @@ Implicits: 0
 			<ModRange id="2" range="173"></ModRange>
 		</Item>
 		<Item id="18">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Adorned Immortal Idol
 Heretical Adorned Immortal Idol
 Crafted: true
@@ -562,7 +562,7 @@ Implicits: 0
 			<ModRange id="6" range="214"></ModRange>
 		</Item>
 		<Item id="19">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Ornate Bone Idol
 Heretical Ornate Bone Idol
 Crafted: true
@@ -588,7 +588,7 @@ Implicits: 0
 			<ModRange id="6" range="111"></ModRange>
 		</Item>
 		<Item id="20">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -608,7 +608,7 @@ Implicits: 0
 			<ModRange id="3" range="46"></ModRange>
 		</Item>
 		<Item id="21">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true

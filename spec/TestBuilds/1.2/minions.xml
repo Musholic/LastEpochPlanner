@@ -111,7 +111,7 @@
 	<Import exportParty="false"></Import>
 	<Items activeItemSet="1" useSecondWeaponSet="nil">
 		<Item id="1">
-			Rarity: RARE
+			Rarity: EXALTED
 Bone Amulet
 Bone Amulet
 Crafted: true
@@ -213,7 +213,7 @@ Implicits: 3
 			<ModRange id="11" range="127.5"></ModRange>
 		</Item>
 		<Item id="4">
-			Rarity: RARE
+			Rarity: EXALTED
 Plated Gauntlets
 Plated Gauntlets
 Crafted: true
@@ -275,7 +275,7 @@ Implicits: 1
 			<ModRange id="8" range="127.5"></ModRange>
 		</Item>
 		<Item id="6">
-			Rarity: RARE
+			Rarity: EXALTED
 Decaying Homunculus
 Decaying Homunculus
 Crafted: true
@@ -301,7 +301,7 @@ Implicits: 2
 			<ModRange id="6" range="247"></ModRange>
 		</Item>
 		<Item id="7">
-			Rarity: RARE
+			Rarity: EXALTED
 Ivory Ring
 Ivory Ring
 Crafted: true
@@ -432,7 +432,7 @@ Implicits: 2
 			<ModRange id="10" range="34"></ModRange>
 		</Item>
 		<Item id="11">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Large Immortal Idol
 Heretical Large Immortal Idol
 Crafted: true
@@ -460,7 +460,7 @@ Implicits: 0
 			<ModRange id="7" range="163"></ModRange>
 		</Item>
 		<Item id="12">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Large Immortal Idol
 Heretical Large Immortal Idol
 Crafted: true
@@ -488,7 +488,7 @@ Implicits: 0
 			<ModRange id="7" range="240"></ModRange>
 		</Item>
 		<Item id="13">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -510,7 +510,7 @@ Implicits: 0
 			<ModRange id="4" range="239"></ModRange>
 		</Item>
 		<Item id="14">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -530,7 +530,7 @@ Implicits: 0
 			<ModRange id="3" range="237"></ModRange>
 		</Item>
 		<Item id="15">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -552,7 +552,7 @@ Implicits: 0
 			<ModRange id="4" range="136"></ModRange>
 		</Item>
 		<Item id="16">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -572,7 +572,7 @@ Implicits: 0
 			<ModRange id="3" range="152"></ModRange>
 		</Item>
 		<Item id="17">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -594,7 +594,7 @@ Implicits: 0
 			<ModRange id="4" range="175"></ModRange>
 		</Item>
 		<Item id="18">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -616,7 +616,7 @@ Implicits: 0
 			<ModRange id="4" range="108"></ModRange>
 		</Item>
 		<Item id="19">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -636,7 +636,7 @@ Implicits: 0
 			<ModRange id="3" range="241"></ModRange>
 		</Item>
 		<Item id="20">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Huge Immortal Idol
 Heretical Huge Immortal Idol
 Crafted: true
@@ -662,7 +662,7 @@ Implicits: 0
 			<ModRange id="6" range="158"></ModRange>
 		</Item>
 		<Item id="21">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -682,7 +682,7 @@ Implicits: 0
 			<ModRange id="3" range="249"></ModRange>
 		</Item>
 		<Item id="22">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Winds of Fortune
 Grand Winds of Fortune
 Crafted: true
@@ -698,7 +698,7 @@ Implicits: 1
 			<ModRange id="1" range="226"></ModRange>
 		</Item>
 		<Item id="23">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Slumber of Morditas
 Grand Slumber of Morditas
 Crafted: true
@@ -714,7 +714,7 @@ Implicits: 1
 			<ModRange id="1" range="209"></ModRange>
 		</Item>
 		<Item id="24">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Echo of Solarum
 Grand Echo of Solarum
 Crafted: true
@@ -730,7 +730,7 @@ Implicits: 1
 			<ModRange id="1" range="238"></ModRange>
 		</Item>
 		<Item id="25">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Scars of Blood
 Grand Scars of Blood
 Crafted: true
@@ -746,7 +746,7 @@ Implicits: 1
 			<ModRange id="1" range="188"></ModRange>
 		</Item>
 		<Item id="26">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Resonance of the Sea
 Grand Resonance of the Sea
 Crafted: true
@@ -762,7 +762,7 @@ Implicits: 1
 			<ModRange id="1" range="116"></ModRange>
 		</Item>
 		<Item id="27">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Hope of the Beginning
 Grand Hope of the Beginning
 Crafted: true
@@ -778,7 +778,7 @@ Implicits: 1
 			<ModRange id="1" range="74"></ModRange>
 		</Item>
 		<Item id="28">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Survival of Might
 Grand Survival of Might
 Crafted: true
@@ -796,7 +796,7 @@ Implicits: 2
 			<ModRange id="2" range="41"></ModRange>
 		</Item>
 		<Item id="29">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Memory of Masters
 Grand Memory of Masters
 Crafted: true
@@ -812,7 +812,7 @@ Implicits: 1
 			<ModRange id="1" range="151"></ModRange>
 		</Item>
 		<Item id="30">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Bulwark of the Tundra
 Grand Bulwark of the Tundra
 Crafted: true
@@ -828,7 +828,7 @@ Implicits: 1
 			<ModRange id="1" range="230"></ModRange>
 		</Item>
 		<Item id="31">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Body of Obsidian
 Grand Body of Obsidian
 Crafted: true

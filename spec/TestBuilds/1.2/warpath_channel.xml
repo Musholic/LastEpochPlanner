@@ -180,7 +180,7 @@ Implicits: 1
 			<ModRange id="8" range="127.5"></ModRange>
 		</Item>
 		<Item id="3">
-			Rarity: RARE
+			Rarity: EXALTED
 Citadel Boots
 Citadel Boots
 Crafted: true
@@ -402,7 +402,7 @@ Implicits: 2
 			<ModRange id="9" range="127.5"></ModRange>
 		</Item>
 		<Item id="10">
-			Rarity: RARE
+			Rarity: EXALTED
 Obsidian Sceptre
 Obsidian Sceptre
 Crafted: true
@@ -462,7 +462,7 @@ Implicits: 1
 			<ModRange id="8" range="127.5"></ModRange>
 		</Item>
 		<Item id="12">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
 Crafted: true
@@ -500,7 +500,7 @@ Implicits: 0
 			<ModRange id="1" range="127.5"></ModRange>
 		</Item>
 		<Item id="14">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -522,7 +522,7 @@ Implicits: 0
 			<ModRange id="4" range="44"></ModRange>
 		</Item>
 		<Item id="15">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
 Crafted: true
@@ -544,7 +544,7 @@ Implicits: 0
 			<ModRange id="4" range="228"></ModRange>
 		</Item>
 		<Item id="16">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -566,7 +566,7 @@ Implicits: 0
 			<ModRange id="4" range="97"></ModRange>
 		</Item>
 		<Item id="17">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -586,7 +586,7 @@ Implicits: 0
 			<ModRange id="3" range="247"></ModRange>
 		</Item>
 		<Item id="18">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
 Crafted: true
@@ -608,7 +608,7 @@ Implicits: 0
 			<ModRange id="4" range="198"></ModRange>
 		</Item>
 		<Item id="19">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -630,7 +630,7 @@ Implicits: 0
 			<ModRange id="4" range="249"></ModRange>
 		</Item>
 		<Item id="20">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Memory of the Living
 Grand Memory of the Living
 Crafted: true
@@ -646,7 +646,7 @@ Implicits: 1
 			<ModRange id="1" range="245"></ModRange>
 		</Item>
 		<Item id="21">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Emptiness of Ash
 Grand Emptiness of Ash
 Crafted: true
@@ -662,7 +662,7 @@ Implicits: 1
 			<ModRange id="1" range="181"></ModRange>
 		</Item>
 		<Item id="22">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Rhythm of the Tide
 Grand Rhythm of the Tide
 Crafted: true
@@ -680,7 +680,7 @@ Implicits: 2
 			<ModRange id="2" range="94"></ModRange>
 		</Item>
 		<Item id="23">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Survival of Might
 Grand Survival of Might
 Crafted: true
@@ -698,7 +698,7 @@ Implicits: 2
 			<ModRange id="2" range="200"></ModRange>
 		</Item>
 		<Item id="24">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Binding of Ruin
 Grand Binding of Ruin
 Crafted: true
@@ -714,7 +714,7 @@ Implicits: 1
 			<ModRange id="1" range="181"></ModRange>
 		</Item>
 		<Item id="25">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Resolve of Grael
 Grand Resolve of Grael
 Crafted: true
@@ -730,7 +730,7 @@ Implicits: 1
 			<ModRange id="1" range="0"></ModRange>
 		</Item>
 		<Item id="26">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Curse of Sulphur
 Grand Curse of Sulphur
 Crafted: true

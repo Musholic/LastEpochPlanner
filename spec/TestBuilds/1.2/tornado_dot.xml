@@ -145,7 +145,7 @@ Implicits: 3
 			<ModRange id="10" range="249"></ModRange>
 		</Item>
 		<Item id="2">
-			Rarity: RARE
+			Rarity: EXALTED
 Meruna Carapace
 Meruna Carapace
 Crafted: true
@@ -205,7 +205,7 @@ Implicits: 2
 			<ModRange id="9" range="252"></ModRange>
 		</Item>
 		<Item id="4">
-			Rarity: RARE
+			Rarity: EXALTED
 Arcane Bracers
 Arcane Bracers
 Crafted: true
@@ -235,7 +235,7 @@ Implicits: 3
 			<ModRange id="8" range="190"></ModRange>
 		</Item>
 		<Item id="5">
-			Rarity: RARE
+			Rarity: EXALTED
 Raptor Helm
 Raptor Helm
 Crafted: true
@@ -479,7 +479,7 @@ Implicits: 3
 			<ModRange id="11" range="94"></ModRange>
 		</Item>
 		<Item id="12">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -499,7 +499,7 @@ Implicits: 0
 			<ModRange id="3" range="151"></ModRange>
 		</Item>
 		<Item id="13">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -521,7 +521,7 @@ Implicits: 0
 			<ModRange id="4" range="220"></ModRange>
 		</Item>
 		<Item id="14">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -541,7 +541,7 @@ Implicits: 0
 			<ModRange id="3" range="91"></ModRange>
 		</Item>
 		<Item id="15">
-			Rarity: RARE
+			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
 Crafted: true
@@ -563,7 +563,7 @@ Implicits: 0
 			<ModRange id="4" range="154"></ModRange>
 		</Item>
 		<Item id="16">
-			Rarity: RARE
+			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
 Crafted: true
@@ -583,7 +583,7 @@ Implicits: 0
 			<ModRange id="3" range="56"></ModRange>
 		</Item>
 		<Item id="17">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Huge Nomad Idol
 Heretical Huge Nomad Idol
 Crafted: true
@@ -611,7 +611,7 @@ Implicits: 0
 			<ModRange id="7" range="207"></ModRange>
 		</Item>
 		<Item id="18">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -631,7 +631,7 @@ Implicits: 0
 			<ModRange id="3" range="179"></ModRange>
 		</Item>
 		<Item id="19">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -653,7 +653,7 @@ Implicits: 0
 			<ModRange id="4" range="25"></ModRange>
 		</Item>
 		<Item id="20">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -675,7 +675,7 @@ Implicits: 0
 			<ModRange id="4" range="111"></ModRange>
 		</Item>
 		<Item id="21">
-			Rarity: RARE
+			Rarity: IDOL
 Small Eterran Idol
 Small Eterran Idol
 Crafted: true
@@ -693,7 +693,7 @@ Implicits: 0
 			<ModRange id="2" range="180"></ModRange>
 		</Item>
 		<Item id="22">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -713,7 +713,7 @@ Implicits: 0
 			<ModRange id="3" range="112"></ModRange>
 		</Item>
 		<Item id="23">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -735,7 +735,7 @@ Implicits: 0
 			<ModRange id="4" range="236"></ModRange>
 		</Item>
 		<Item id="24">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Strength of Mind
 Grand Strength of Mind
 Crafted: true
@@ -751,7 +751,7 @@ Implicits: 1
 			<ModRange id="1" range="0"></ModRange>
 		</Item>
 		<Item id="25">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Talon of Grandeur
 Grand Talon of Grandeur
 Crafted: true
@@ -767,7 +767,7 @@ Implicits: 1
 			<ModRange id="1" range="210"></ModRange>
 		</Item>
 		<Item id="26">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Hunger of the Void
 Grand Hunger of the Void
 Crafted: true
@@ -783,7 +783,7 @@ Implicits: 1
 			<ModRange id="1" range="239"></ModRange>
 		</Item>
 		<Item id="27">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Rhythm of the Tide
 Grand Rhythm of the Tide
 Crafted: true
@@ -801,7 +801,7 @@ Implicits: 2
 			<ModRange id="2" range="0"></ModRange>
 		</Item>
 		<Item id="28">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Survival of Might
 Grand Survival of Might
 Crafted: true
@@ -819,7 +819,7 @@ Implicits: 2
 			<ModRange id="2" range="221"></ModRange>
 		</Item>
 		<Item id="29">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Bulwark of the Tundra
 Grand Bulwark of the Tundra
 Crafted: true
@@ -835,7 +835,7 @@ Implicits: 1
 			<ModRange id="1" range="0"></ModRange>
 		</Item>
 		<Item id="30">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Embers of Immortality
 Grand Embers of Immortality
 Crafted: true
