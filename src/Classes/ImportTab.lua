@@ -694,6 +694,8 @@ function ImportTabClass:processItemData(itemData)
                 idolPosition = idolPosition - 1
             end
             item["slotName"] = "Idol " .. idolPosition
+            item["rarityType"] = "IDOL"
+            item["rarity"] = "IDOL"
         else
             item["slotName"] = offlineImportSlotMap[itemData["containerID"]]
         end
@@ -713,6 +715,7 @@ function ImportTabClass:processItemData(itemData)
                 item["suffixes"] = {}
                 if rarity >= 7 and rarity <= 9 then
                     item["rarity"] = "UNIQUE"
+                    item["rarityType"] = item["rarityType"] or "UNIQUE"
                     local uniqueIDIndex = 8 + 3 -- 3 is the maximum amount of implicits
                     local uniqueID = itemData["data"][uniqueIDIndex] * 256 + itemData["data"][uniqueIDIndex + 1]
                     local uniqueBase = self.build.data.uniques[uniqueID]
@@ -721,13 +724,13 @@ function ImportTabClass:processItemData(itemData)
                         if itemLib.hasRange(modLine) then
                             local rollId = uniqueBase.rollIds[i]
                             local range = itemData["data"][uniqueIDIndex + 2 +  rollId]
-                            -- TODO: avoid using crafted
-                            table.insert(item.explicitMods, "{crafted}{range: " .. range .. "}".. modLine)
+                            table.insert(item.explicitMods, "{unique}{range: " .. range .. "}".. modLine)
                             else
-                            table.insert(item.explicitMods, "{crafted}".. modLine)
+                            table.insert(item.explicitMods, "{unique}".. modLine)
                         end
                     end
                     if rarity == 9 then
+                        item["rarity"] = "LEGENDARY"
                         local nbAffixesIndex = uniqueIDIndex + 2 + 8 -- 8 is the maximum amount of unique mods
                         local nbMods = itemData["data"][nbAffixesIndex]
                         for i = 0, nbMods - 1 do
@@ -752,7 +755,8 @@ function ImportTabClass:processItemData(itemData)
                     end
                 else
                     item["name"] = itemBaseName
-                    item["rarity"] = "RARE"
+                    item["rarity"] = item["rarity"] or "RARE"
+                    item["rarityType"] = item["rarityType"] or "BASIC"
                     for i = 0, 4 do
                         local dataId = 14 + i * 3
                         if #itemData["data"] > dataId then
@@ -926,6 +930,7 @@ function ImportTabClass:BuildItem(itemData)
 
     -- Determine rarity, display name and base type of the item
     item.rarity = itemData.rarity
+    item.rarityType = itemData.rarityType or (itemData.rarity == "UNIQUE" and "UNIQUE" or itemData.rarity == "LEGENDARY" and "UNIQUE" or itemData.rarity == "IDOL" and "IDOL" or "BASIC")
     if #itemData.name > 0 then
         item.title = itemData.name
         item.baseName = itemData.baseName

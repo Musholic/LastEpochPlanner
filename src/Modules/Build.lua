@@ -690,6 +690,8 @@ function buildMode:ReadLeToolsSave(saveContent)
 				idolPosition = idolPosition - 1
 			end
 			item["slotName"] = "Idol " .. idolPosition
+			item["rarityType"] = "IDOL"
+			item["rarity"] = "IDOL"
 		end
 		local baseTypeID = data.LETools_itemBases[itemData.id].baseTypeId
 		local subTypeID = data.LETools_itemBases[itemData.id].subTypeId
@@ -703,7 +705,8 @@ function buildMode:ReadLeToolsSave(saveContent)
             end
 		end
 
-		item["rarity"] = "RARE"
+		item["rarity"] = item["rarity"] or "RARE"
+		item["rarityType"] = item["rarityType"] or "BASIC"
 		item["explicitMods"] = {}
 		item["prefixes"] = {}
 		item["suffixes"] = {}
@@ -746,17 +749,22 @@ function buildMode:ReadLeToolsSave(saveContent)
 			local uniqueBase = data.uniques[uniqueId]
 			if uniqueBase then
 			    item.name = uniqueBase.name
-				item["rarity"] = "UNIQUE"
+				item["rarityType"] = item["rarityType"] or "UNIQUE"
+				-- Unique with crafted affixes becomes Legendary
+				if #item.prefixes > 0 or #item.suffixes > 0 then
+					item["rarity"] = "LEGENDARY"
+				else
+					item["rarity"] = "UNIQUE"
+				end
 				for i, modLine in ipairs(uniqueBase.mods) do
                     if itemLib.hasRange(modLine) then
                         local range = main.defaultItemAffixQuality
                         if itemData['ur'] and #itemData['ur'] > 0 then
                             range = itemData["ur"][uniqueBase.rollIds[i] + 1]
                         end
-                        -- TODO: avoid using crafted
-                        table.insert(item.explicitMods, "{crafted}{range: " .. range .. "}" .. modLine)
+                        table.insert(item.explicitMods, "{unique}{range: " .. range .. "}" .. modLine)
                     else
-                        table.insert(item.explicitMods, "{crafted}" .. modLine)
+                        table.insert(item.explicitMods, "{unique}" .. modLine)
                     end
 				end
 			end

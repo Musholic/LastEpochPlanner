@@ -71,6 +71,7 @@ end
 local lineFlags = {
 	["crafted"] = true, ["crucible"] = true, ["custom"] = true, ["eater"] = true, ["enchant"] = true,
 	["exarch"] = true, ["fractured"] = true, ["implicit"] = true, ["scourge"] = true, ["synthesis"] = true,
+	["unique"] = true,
 }
 
 -- Special function to store unique instances of modifier on specific item slots
@@ -293,6 +294,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.nameSuffix = ""
 	self.base = nil
 	self.rarity = rarity or "UNIQUE"
+	self.rarityType = nil
 	self.quality = nil
 	self.rawLines = { }
 	-- Find non-blank lines and trim whitespace
@@ -310,19 +312,41 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 		local rarity = self.rawLines[l]:match("^Rarity: (%a+)")
 		if rarity then
 			mode = "GAME"
-			if colorCodes[rarity:upper()] then
-				self.rarity = rarity:upper()
-			end
-			if self.rarity == "UNIQUE" then
-				-- Hack for relics
-				for _, line in ipairs(self.rawLines) do
-					if line:find("Foil Unique") then
-						self.rarity = "RELIC"
-						break
-					end
-				end
+			rarity = rarity:upper()
+			-- Map raw rarity to rarityType (BASIC/UNIQUE/SET/IDOL)
+			if rarity == "BASIC" or rarity == "NORMAL" or rarity == "MAGIC" or rarity == "RARE" or rarity == "EXALTED" then
+				self.rarityType = "BASIC"
+				self.rarity = rarity -- keep raw value for name parsing; UpdateDisplayRarity recomputes later
+			elseif rarity == "SET" then
+				self.rarityType = "SET"
+				self.rarity = "SET"
+			elseif rarity == "IDOL" then
+				self.rarityType = "IDOL"
+				self.rarity = "IDOL"
+			elseif rarity == "LEGENDARY" then
+				self.rarityType = "UNIQUE"
+				self.rarity = "LEGENDARY"
+			-- A unique idol serializes as Rarity: UNIQUE; rarityType is fixed later by idol auto-detection
+			else
+				self.rarityType = "UNIQUE"
+				self.rarity = "UNIQUE"
 			end
 			l = l + 1
+		end
+	end
+	-- Default rarityType if not set from raw text
+	if not self.rarityType then
+		local r = self.rarity
+		if r == "NORMAL" or r == "MAGIC" or r == "RARE" or r == "EXALTED" or r == "BASIC" then
+			self.rarityType = "BASIC"
+		elseif r == "SET" then
+			self.rarityType = "SET"
+		elseif r == "IDOL" then
+			self.rarityType = "IDOL"
+		elseif r == "LEGENDARY" then
+			self.rarityType = "UNIQUE"
+		else
+			self.rarityType = "UNIQUE"
 		end
 	end
 	if self.rawLines[l] then
@@ -556,14 +580,14 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					foundImplicit = true
 					gameModeStage = "IMPLICIT"
 				end
-				modLine.implicit = modLine.implicit or (not modLine.crafted and #self.implicitModLines < implicitLines)
+				modLine.implicit = modLine.implicit or (not modLine.crafted and not modLine.unique and #self.implicitModLines < implicitLines)
 				modLine.range = modLine.range or main.defaultItemAffixQuality
 				local rangedLine = itemLib.applyRange(line, modLine.range, modLine.valueScalar, modLine.rounding)
 				local modList, extra = modLib.parseMod(rangedLine)
 
 				local modLines
 
-				if modLine.implicit or (not modLine.crafted and #self.implicitModLines < implicitLines) then
+				if modLine.implicit or (not modLine.crafted and not modLine.unique and #self.implicitModLines < implicitLines) then
 					modLines = self.implicitModLines
 				else
 					modLines = self.explicitModLines
@@ -615,6 +639,10 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			self.requirements.level = self.base.req.level
 		end
 	end
+	-- Uniques are always craftable (adding affixes turns them into legendaries)
+	if self.rarityType == "UNIQUE" then
+		self.crafted = true
+	end
 	self.affixLimit = 0
 	if self.crafted then
 	    -- The affix limit is set to 6 instead of 4 to support sealed affixes
@@ -639,7 +667,57 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			end
 		end
 	end
+	-- Idol bases are always rarityType IDOL; display rarity stays UNIQUE for unique idols
+	if self.type and self.type:match("Idol$") then
+		self.rarityType = "IDOL"
+		if self.rarity ~= "UNIQUE" then
+			self.rarity = "IDOL"
+			self.crafted = true
+		end
+	end
+	self:UpdateDisplayRarity()
 	self:BuildModList()
+end
+
+-- Compute display rarity based on affix count and tiers
+function ItemClass:UpdateDisplayRarity()
+	if self.rarityType == "BASIC" then
+		local affixCount = 0
+		local hasExaltedTier = false
+		for _, list in ipairs({self.prefixes, self.suffixes}) do
+			for _, affix in ipairs(list) do
+				if affix.modId and affix.modId ~= "None" then
+					affixCount = affixCount + 1
+					local tierIndex = tonumber(affix.modId:match("_(%d+)$"))
+					if tierIndex and tierIndex >= 5 then
+						hasExaltedTier = true
+					end
+				end
+			end
+		end
+		if hasExaltedTier then
+			self.rarity = "EXALTED"
+		elseif affixCount >= 3 then
+			self.rarity = "RARE"
+		elseif affixCount >= 1 then
+			self.rarity = "MAGIC"
+		else
+			self.rarity = "NORMAL"
+		end
+	elseif self.rarityType == "UNIQUE" then
+		-- Unique with crafted affixes becomes Legendary
+		local hasAffix = false
+		for _, list in ipairs({self.prefixes, self.suffixes}) do
+			for _, affix in ipairs(list) do
+				if affix.modId and affix.modId ~= "None" then
+					hasAffix = true
+					break
+				end
+			end
+			if hasAffix then break end
+		end
+		self.rarity = hasAffix and "LEGENDARY" or "UNIQUE"
+	end
 end
 
 function ItemClass:NormaliseQuality()
@@ -663,7 +741,7 @@ end
 
 function ItemClass:BuildRaw()
 	local rawLines = { }
-	t_insert(rawLines, "Rarity: " .. self.rarity)
+	t_insert(rawLines, "Rarity: " .. (self.rarity or "BASIC"))
 	if self.title then
 		t_insert(rawLines, self.title)
 		t_insert(rawLines, self.baseName)
@@ -719,6 +797,9 @@ function ItemClass:BuildRaw()
 		end
 		if modLine.crafted then
 			line = "{crafted}" .. line
+		end
+		if modLine.unique then
+			line = "{unique}" .. line
 		end
 		if modLine.custom then
 			line = "{custom}" .. line
@@ -832,7 +913,7 @@ function ItemClass:Craft()
 	-- Save off any crafted or custom mods so they can be re-added at the end
 	local savedMods = {}
 	for _, mod in ipairs(self.explicitModLines) do
-		if mod.crafted or mod.custom then
+		if mod.crafted or mod.custom or mod.unique then
 			t_insert(savedMods, mod)
 		end
 	end

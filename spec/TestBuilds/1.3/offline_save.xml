@@ -116,7 +116,7 @@
 	<Import exportParty="false"></Import>
 	<Items activeItemSet="1" useSecondWeaponSet="nil">
 		<Item id="1">
-			Rarity: RARE
+			Rarity: EXALTED
 Skull Cage
 Skull Cage
 Crafted: true
@@ -144,7 +144,7 @@ Implicits: 2
 			<ModRange id="7" range="127.5"></ModRange>
 		</Item>
 		<Item id="2">
-			Rarity: RARE
+			Rarity: EXALTED
 Initiate Robes
 Initiate Robes
 Crafted: true
@@ -187,11 +187,11 @@ LevelReq: 27
 Implicits: 2
 +25 Melee Damage
 {range:5}+(35-65)% Critical Strike Multiplier
-{crafted}{range:7}+(10-13)% Parry Chance with Traitor's Tongue equipped in the mainhand
-{crafted}{range:21}+(10-13)% Critical Strike Chance with Traitor's Tongue equipped in the offhand
-{crafted}{range:184}{rounding:Integer}+(1-2) to Dexterity Skills
-{crafted}{range:75}{rounding:Integer}+(1-2) to Intelligence Skills
-{crafted}{range:11}(10-18)% increased Melee Attack Speed
+{unique}{range:7}+(10-13)% Parry Chance with Traitor's Tongue equipped in the mainhand
+{unique}{range:21}+(10-13)% Critical Strike Chance with Traitor's Tongue equipped in the offhand
+{unique}{range:184}{rounding:Integer}+(1-2) to Dexterity Skills
+{unique}{range:75}{rounding:Integer}+(1-2) to Intelligence Skills
+{unique}{range:11}(10-18)% increased Melee Attack Speed
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="5"></ModRange>
 			<ModRange id="3" range="7"></ModRange>
@@ -201,7 +201,7 @@ Implicits: 2
 			<ModRange id="7" range="11"></ModRange>
 		</Item>
 		<Item id="4">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Taste of Blood
 Rusted Cleaver
 Crafted: true
@@ -217,10 +217,10 @@ Implicits: 2
 +19 Melee Damage
 {range:76}+(13-19)% Chance to inflict Bleed on Hit
 {range:60}{scalar:1.75}+(41-55)% Chance to Shred Armor on Hit
-{crafted}{range:205}{rounding:Integer}+(20-30) Melee Physical Damage
-{crafted}15 Health Gain on Kill
-{crafted}{range:112}+(50-75)% Chance to inflict Bleed on Melee Hit
-{crafted}15% Increased Bleed Duration
+{unique}{range:205}{rounding:Integer}+(20-30) Melee Physical Damage
+{unique}15 Health Gain on Kill
+{unique}{range:112}+(50-75)% Chance to inflict Bleed on Melee Hit
+{unique}15% Increased Bleed Duration
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="76"></ModRange>
 			<ModRange id="3" range="60"></ModRange>
@@ -230,7 +230,7 @@ Implicits: 2
 			<ModRange id="7" range="127.5"></ModRange>
 		</Item>
 		<Item id="5">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Swaddling of the Erased
 Leather Gloves
 Crafted: true
@@ -245,11 +245,11 @@ Implicits: 2
 +10 Armor
 {range:54}{rounding:Integer}+(5-10) Mana
 {range:231}+(5-6)% Endurance
-{crafted}{range:209}(12-17)% more Melee Damage to High Health Enemies
-{crafted}{range:209}(12-17)% more Spell Damage to Low Health Enemies
-{crafted}{range:243}(6-12)% increased Attack Speed
-{crafted}{range:243}(6-12)% increased Cast Speed
-{crafted}{range:211}{rounding:Integer}+(2-6) to All Attributes
+{unique}{range:209}(12-17)% more Melee Damage to High Health Enemies
+{unique}{range:209}(12-17)% more Spell Damage to Low Health Enemies
+{unique}{range:243}(6-12)% increased Attack Speed
+{unique}{range:243}(6-12)% increased Cast Speed
+{unique}{range:211}{rounding:Integer}+(2-6) to All Attributes
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="54"></ModRange>
 			<ModRange id="3" range="231"></ModRange>
@@ -273,11 +273,11 @@ Suffix: None
 LevelReq: 9
 Implicits: 1
 +4 Potion Slots
-{crafted}+1 to Physical Skills
-{crafted}{range:68}+(24-48)% Chance to inflict Bleed on Hit
-{crafted}6% increased Movement Speed
-{crafted}{range:29}{rounding:Integer}(24-48) Damage Reflected to Attackers
-{crafted}6% increased Throwing Attack Speed
+{unique}+1 to Physical Skills
+{unique}{range:68}+(24-48)% Chance to inflict Bleed on Hit
+{unique}6% increased Movement Speed
+{unique}{range:29}{rounding:Integer}(24-48) Damage Reflected to Attackers
+{unique}6% increased Throwing Attack Speed
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="68"></ModRange>
@@ -300,12 +300,12 @@ LevelReq: 16
 Implicits: 2
 +35 Armor
 {range:28}(8-10)% increased Movement Speed
-{crafted}30% increased Movement Speed
-{crafted}{range:19}(30-67)% Increased Bleed Duration
-{crafted}{range:180}(30-40)% more Physical Ailment Damage to Moving Enemies
-{crafted}{range:189}{rounding:Integer}+(5-8) Strength
-{crafted}{range:127}{rounding:Integer}+(5-8) Dexterity
-{crafted}{range:104}{rounding:Integer}+(5-8) Intelligence
+{unique}30% increased Movement Speed
+{unique}{range:19}(30-67)% Increased Bleed Duration
+{unique}{range:180}(30-40)% more Physical Ailment Damage to Moving Enemies
+{unique}{range:189}{rounding:Integer}+(5-8) Strength
+{unique}{range:127}{rounding:Integer}+(5-8) Dexterity
+{unique}{range:104}{rounding:Integer}+(5-8) Intelligence
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="28"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -381,9 +381,9 @@ Implicits: 3
 {range:223}{rounding:Integer}+(2-6) to All Attributes
 {range:238}(3-10)% increased Movement Speed
 {range:130}+(4-15)% to All Resistances
-{crafted}{range:156}{rounding:Integer}+(1-2) to All Skills
-{crafted}100% chance to Summon a Rift Beast when a hit leaves a Boss or Champion below 40% health (40 second cooldown)
-{crafted}40% increased Minion Damage
+{unique}{range:156}{rounding:Integer}+(1-2) to All Skills
+{unique}100% chance to Summon a Rift Beast when a hit leaves a Boss or Champion below 40% health (40 second cooldown)
+{unique}40% increased Minion Damage
 			<ModRange id="1" range="223"></ModRange>
 			<ModRange id="2" range="238"></ModRange>
 			<ModRange id="3" range="130"></ModRange>
@@ -392,7 +392,7 @@ Implicits: 3
 			<ModRange id="6" range="127.5"></ModRange>
 		</Item>
 		<Item id="11">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Ambitions of an Erased Acolyte
 Caged Souls
 Crafted: true
@@ -411,10 +411,10 @@ Implicits: 2
 {range:26}{rounding:Integer}(56-75)% increased Minion Health
 +1 to Assemble Abomination
 {range:17}{rounding:Integer}(41-60)% increased Minion Health
-{crafted}+1 to Acolyte Skills
-{crafted}{range:178}+(6-14)% Endurance
-{crafted}2% Minimum percentage of health to gain when a nearby enemy or ally dies (2 second cooldown)
-{crafted}{range:215}(4-6)% Maximum percentage of health to gain when a nearby enemy or ally dies (2 second cooldown)
+{unique}+1 to Acolyte Skills
+{unique}{range:178}+(6-14)% Endurance
+{unique}2% Minimum percentage of health to gain when a nearby enemy or ally dies (2 second cooldown)
+{unique}{range:215}(4-6)% Maximum percentage of health to gain when a nearby enemy or ally dies (2 second cooldown)
 			<ModRange id="1" range="14"></ModRange>
 			<ModRange id="2" range="232"></ModRange>
 			<ModRange id="3" range="73"></ModRange>
@@ -428,7 +428,7 @@ Implicits: 2
 			<ModRange id="11" range="215"></ModRange>
 		</Item>
 		<Item id="12">
-			Rarity: RARE
+			Rarity: IDOL
 Humble Eterran Idol
 Humble Eterran Idol
 Crafted: true
@@ -446,7 +446,7 @@ Implicits: 0
 			<ModRange id="2" range="60"></ModRange>
 		</Item>
 		<Item id="13">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Lagonian Idol
 Minor Lagonian Idol
 Crafted: true
@@ -464,7 +464,7 @@ Implicits: 0
 			<ModRange id="2" range="226"></ModRange>
 		</Item>
 		<Item id="14">
-			Rarity: RARE
+			Rarity: IDOL
 Small Eterran Idol
 Small Eterran Idol
 Crafted: true
@@ -482,7 +482,7 @@ Implicits: 0
 			<ModRange id="2" range="37"></ModRange>
 		</Item>
 		<Item id="15">
-			Rarity: RARE
+			Rarity: IDOL
 Humble Eterran Idol
 Humble Eterran Idol
 Crafted: true
@@ -500,7 +500,7 @@ Implicits: 0
 			<ModRange id="2" range="191"></ModRange>
 		</Item>
 		<Item id="16">
-			Rarity: RARE
+			Rarity: IDOL
 Humble Eterran Idol
 Humble Eterran Idol
 Crafted: true
@@ -518,7 +518,7 @@ Implicits: 0
 			<ModRange id="2" range="234"></ModRange>
 		</Item>
 		<Item id="17">
-			Rarity: RARE
+			Rarity: IDOL
 Small Eterran Idol
 Small Eterran Idol
 Crafted: true
@@ -536,7 +536,7 @@ Implicits: 0
 			<ModRange id="2" range="173"></ModRange>
 		</Item>
 		<Item id="18">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Adorned Immortal Idol
 Heretical Adorned Immortal Idol
 Crafted: true
@@ -562,7 +562,7 @@ Implicits: 0
 			<ModRange id="6" range="214"></ModRange>
 		</Item>
 		<Item id="19">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Ornate Bone Idol
 Heretical Ornate Bone Idol
 Crafted: true
@@ -588,7 +588,7 @@ Implicits: 0
 			<ModRange id="6" range="111"></ModRange>
 		</Item>
 		<Item id="20">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -608,7 +608,7 @@ Implicits: 0
 			<ModRange id="3" range="46"></ModRange>
 		</Item>
 		<Item id="21">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true

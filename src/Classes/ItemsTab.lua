@@ -16,11 +16,10 @@ local m_floor = math.floor
 local m_modf = math.modf
 
 local rarityDropList = {
-	{ label = colorCodes.NORMAL.."Normal", rarity = "NORMAL" },
-	{ label = colorCodes.MAGIC.."Magic", rarity = "MAGIC" },
-	{ label = colorCodes.RARE.."Rare", rarity = "RARE" },
+	{ label = colorCodes.NORMAL.."Basic", rarity = "BASIC" },
 	{ label = colorCodes.UNIQUE.."Unique", rarity = "UNIQUE" },
-	{ label = colorCodes.RELIC.."Relic", rarity = "RELIC" }
+	{ label = colorCodes.SET.."Set", rarity = "SET" },
+	{ label = colorCodes.IDOL.."Idol", rarity = "IDOL" },
 }
 
 local baseSlots = { "Weapon 1", "Weapon 2", "Helmet", "Body Armor", "Gloves", "Boots", "Amulet", "Ring 1", "Ring 2", "Belt", "Relic" }
@@ -467,7 +466,7 @@ holding Shift will put it in the second.]])
 		self:AddCustomModifierToDisplayItem()
 	end)
 	self.controls.displayItemAddCustom.shown = function()
-		return self.displayItem and (self.displayItem.rarity == "MAGIC" or self.displayItem.rarity == "RARE")
+		return self.displayItem and self.displayItem.rarityType == "BASIC"
 	end
 
 	-- Section: Modifier Range
@@ -1140,7 +1139,7 @@ function ItemsTabClass:UpdateCustomControls()
 	local item = self.displayItem
 	local i = 1
 	local modLines = copyTable(item.explicitModLines)
-	if item.rarity == "MAGIC" or item.rarity == "RARE" then
+	if item.rarityType == "BASIC" then
 		for index, modLine in ipairs(modLines) do
 			if modLine.custom or modLine.crafted then
 				local line = itemLib.formatModLine(modLine)
@@ -1308,14 +1307,12 @@ function ItemsTabClass:CraftItem()
 		item.implicitModLines = { }
 		item.explicitModLines = { }
 		item.quality = 0
-		local raritySel = controls.rarity.selIndex
-		if raritySel == 2 or raritySel == 3 then
+		local rarityType = controls.rarity.list[controls.rarity.selIndex].rarity
+		item.rarityType = rarityType
+		if rarityType == "BASIC" or rarityType == "UNIQUE" or (rarityType == "IDOL" and item.rarity ~= "UNIQUE") then
 			item.crafted = true
 		end
-		item.rarity = controls.rarity.list[raritySel].rarity
-		if raritySel >= 3 then
-			item.title = controls.title.buf:match("%S") and controls.title.buf or "New Item"
-		end
+		item.title = controls.title.buf:match("%S") and controls.title.buf or "New Item"
 		if base.base.implicits then
 			local implicitIndex = 1
 			for _,line in ipairs(base.base.implicits) do
@@ -1329,10 +1326,10 @@ function ItemsTabClass:CraftItem()
 	end
 	controls.rarityLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, 50, 20, 0, 16, "Rarity:")
 	controls.rarity = new("DropDownControl", nil, -80, 20, 100, 18, rarityDropList)
-	controls.rarity.selIndex = self.lastCraftRaritySel or 3
+	controls.rarity.selIndex = self.lastCraftRaritySel or 1
 	controls.title = new("EditControl", nil, 70, 20, 190, 18, "", "Name")
 	controls.title.shown = function()
-		return controls.rarity.selIndex >= 3
+		return true
 	end
 	controls.typeLabel = new("LabelControl", {"TOPRIGHT",nil,"TOPLEFT"}, 50, 45, 0, 16, "Type:")
 	controls.type = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, 55, 45, 295, 18, self.build.data.itemBaseTypeList, function(index, value)
@@ -1353,7 +1350,7 @@ function ItemsTabClass:CraftItem()
 		main:ClosePopup()
 		local item = makeItem(controls.base.list[controls.base.selIndex])
 		self:SetDisplayItem(item)
-		if not item.crafted and item.rarity ~= "NORMAL" then
+		if not item.crafted and item.rarityType ~= "BASIC" then
 			self:EditDisplayItemText()
 		end
 		self.lastCraftRaritySel = controls.rarity.selIndex
@@ -1381,9 +1378,9 @@ function ItemsTabClass:EditDisplayItemText(alsoAddItem)
 	controls.edit = new("EditControl", nil, 0, 40, 480, 420, "", nil, "^%C\t\n", nil, nil, 14)
 	if self.displayItem then
 		controls.edit:SetText(self.displayItem:BuildRaw():gsub("Rarity: %w+\n",""))
-		controls.rarity:SelByValue(self.displayItem.rarity, "rarity")
+		controls.rarity:SelByValue(self.displayItem.rarityType, "rarity")
 	else
-		controls.rarity.selIndex = 3
+		controls.rarity.selIndex = 1
 	end
 	controls.edit.font = "FIXED"
 	controls.edit.pasteFilter = sanitiseText
@@ -1408,7 +1405,7 @@ function ItemsTabClass:EditDisplayItemText(alsoAddItem)
 		else
 			tooltip:AddLine(14, "The item is invalid.")
 			tooltip:AddLine(14, "Check that the item's title and base name are in the correct format.")
-			tooltip:AddLine(14, "For Rare and Unique items, the first 2 lines must be the title and base name. E.g.:")
+			tooltip:AddLine(14, "For Basic, Unique, and Set items, the first 2 lines must be the title and base name. E.g.:")
 			tooltip:AddLine(14, "Abberath's Horn")
 			tooltip:AddLine(14, "Goat's Horn")
 			tooltip:AddLine(14, "For Normal and Magic items, the base name must be somewhere in the first line. E.g.:")

@@ -136,7 +136,7 @@ function main:Init()
 						table.insert(newItem.implicitModLines, { line = mod })
 					end
 					for _,mod in ipairs(itemData.mods) do
-						table.insert(newItem.explicitModLines, { line = mod })
+						table.insert(newItem.explicitModLines, { line = "{unique}" .. mod })
 					end
 					newItem:BuildAndParseRaw()
 				end

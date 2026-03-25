@@ -111,7 +111,7 @@
 	<Import exportParty="false"></Import>
 	<Items activeItemSet="1" useSecondWeaponSet="nil">
 		<Item id="1">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Nihilis
 Unbound Locket
 Crafted: true
@@ -127,12 +127,12 @@ Implicits: 3
 {range:151}{rounding:Integer}(1-12)% increased Mana
 {range:247}(-4-8)% increased Movement Speed
 {range:215}{scalar:1.17}+(41-50)% Critical Strike Multiplier
-{crafted}{range:213}{rounding:Integer}+(1-2) to All Skills
-{crafted}{range:122}{rounding:Integer}(-20-50)% increased Mana Regen
-{crafted}{range:135}{rounding:Integer}(-10-20)% more Armor
-{crafted}{range:222}+(-5-15)% to All Resistances
-{crafted}{range:86}(10-20)% of Current Health and Ward lost when you use Evade
-{crafted}{range:249}{rounding:Tenth}(1.2-4) Seconds of Frenzy after you use Evade
+{unique}{range:213}{rounding:Integer}+(1-2) to All Skills
+{unique}{range:122}{rounding:Integer}(-20-50)% increased Mana Regen
+{unique}{range:135}{rounding:Integer}(-10-20)% more Armor
+{unique}{range:222}+(-5-15)% to All Resistances
+{unique}{range:86}(10-20)% of Current Health and Ward lost when you use Evade
+{unique}{range:249}{rounding:Tenth}(1.2-4) Seconds of Frenzy after you use Evade
 			<ModRange id="1" range="221"></ModRange>
 			<ModRange id="2" range="151"></ModRange>
 			<ModRange id="3" range="247"></ModRange>
@@ -145,7 +145,7 @@ Implicits: 3
 			<ModRange id="10" range="249"></ModRange>
 		</Item>
 		<Item id="2">
-			Rarity: RARE
+			Rarity: EXALTED
 Meruna Carapace
 Meruna Carapace
 Crafted: true
@@ -173,7 +173,7 @@ Implicits: 2
 			<ModRange id="7" range="84"></ModRange>
 		</Item>
 		<Item id="3">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Blood of the Exile
 Iron Greaves
 Crafted: true
@@ -188,12 +188,12 @@ Implicits: 2
 +35 Armor
 {range:17}(8-10)% increased Movement Speed
 {range:219}(26-30)% increased Movement Speed
-{crafted}30% increased Movement Speed
-{crafted}{range:171}(30-67)% Increased Bleed Duration
-{crafted}{range:142}(30-40)% more Physical Ailment Damage to Moving Enemies
-{crafted}{range:234}{rounding:Integer}+(5-8) Strength
-{crafted}{range:142}{rounding:Integer}+(5-8) Dexterity
-{crafted}{range:252}{rounding:Integer}+(5-8) Intelligence
+{unique}30% increased Movement Speed
+{unique}{range:171}(30-67)% Increased Bleed Duration
+{unique}{range:142}(30-40)% more Physical Ailment Damage to Moving Enemies
+{unique}{range:234}{rounding:Integer}+(5-8) Strength
+{unique}{range:142}{rounding:Integer}+(5-8) Dexterity
+{unique}{range:252}{rounding:Integer}+(5-8) Intelligence
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="17"></ModRange>
 			<ModRange id="3" range="219"></ModRange>
@@ -205,7 +205,7 @@ Implicits: 2
 			<ModRange id="9" range="252"></ModRange>
 		</Item>
 		<Item id="4">
-			Rarity: RARE
+			Rarity: EXALTED
 Arcane Bracers
 Arcane Bracers
 Crafted: true
@@ -235,7 +235,7 @@ Implicits: 3
 			<ModRange id="8" range="190"></ModRange>
 		</Item>
 		<Item id="5">
-			Rarity: RARE
+			Rarity: EXALTED
 Raptor Helm
 Raptor Helm
 Crafted: true
@@ -265,7 +265,7 @@ Implicits: 3
 			<ModRange id="8" range="179"></ModRange>
 		</Item>
 		<Item id="6">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Ucenui's Sphere
 Navigation Orb
 Crafted: true
@@ -284,10 +284,10 @@ Implicits: 2
 {range:91}{rounding:Integer}+(15-19) Health Regen
 {range:116}(48-60)% Increased Healing Effectiveness
 {range:196}+(41-50)% Critical Strike Multiplier
-{crafted}{range:231}{rounding:Integer}+(20-40) Mana
-{crafted}{range:101}+(20-40)% Cold Resistance
-{crafted}{range:101}+(20-40)% Lightning Resistance
-{crafted}100% Chance to Cast Water Orb when you hit a Boss or Rare Enemy (3 second cooldown)
+{unique}{range:231}{rounding:Integer}+(20-40) Mana
+{unique}{range:101}+(20-40)% Cold Resistance
+{unique}{range:101}+(20-40)% Lightning Resistance
+{unique}100% Chance to Cast Water Orb when you hit a Boss or Rare Enemy (3 second cooldown)
 			<ModRange id="1" range="67"></ModRange>
 			<ModRange id="2" range="15"></ModRange>
 			<ModRange id="3" range="98"></ModRange>
@@ -301,7 +301,7 @@ Implicits: 2
 			<ModRange id="11" range="127.5"></ModRange>
 		</Item>
 		<Item id="7">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Flames of Midnight
 Celestial Ring
 Crafted: true
@@ -316,14 +316,14 @@ Implicits: 1
 {range:99}{rounding:Integer}+(42-110) Ward Decay Threshold
 {range:4}{rounding:Integer}+(61-90) Health
 {range:219}{rounding:Integer}+(14-16) Intelligence
-{crafted}100% Evade is replaced by Spirit Step
-{crafted}100% Swiftness
-{crafted}100% of Wandering Spirits Base Damage Converted to Fire
-{crafted}100% Create a Wandering Spirit on direct Fire, Necrotic, or Void Skill Use
-{crafted}{range:150}+(7-11)% Fire Penetration
-{crafted}{range:150}+(7-11)% Necrotic Penetration
-{crafted}{range:150}+(7-11)% Void Penetration
-{crafted}{range:114}{rounding:Integer}+(4-7) Ward gained each second per Active Wandering Spirit
+{unique}100% Evade is replaced by Spirit Step
+{unique}100% Swiftness
+{unique}100% of Wandering Spirits Base Damage Converted to Fire
+{unique}100% Create a Wandering Spirit on direct Fire, Necrotic, or Void Skill Use
+{unique}{range:150}+(7-11)% Fire Penetration
+{unique}{range:150}+(7-11)% Necrotic Penetration
+{unique}{range:150}+(7-11)% Void Penetration
+{unique}{range:114}{rounding:Integer}+(4-7) Ward gained each second per Active Wandering Spirit
 			<ModRange id="1" range="99"></ModRange>
 			<ModRange id="2" range="4"></ModRange>
 			<ModRange id="3" range="219"></ModRange>
@@ -337,7 +337,7 @@ Implicits: 1
 			<ModRange id="11" range="114"></ModRange>
 		</Item>
 		<Item id="8">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Red Ring of Atlaria
 Silver Ring
 Crafted: true
@@ -351,12 +351,12 @@ LevelReq: 0
 Implicits: 1
 {range:52}(3-8)% increased Movement Speed
 {range:199}{rounding:Integer}+(14-16) Strength
-{crafted}{range:176}{rounding:Integer}+(4-5) to All Attributes
-{crafted}{range:248}+(15-20)% to All Resistances
-{crafted}{range:69}{rounding:Integer}(15-20)% increased Health Regen
-{crafted}{range:69}{rounding:Integer}(15-20)% increased Mana Regen
-{crafted}{range:69}{rounding:Integer}(15-20)% increased Dodge Rating
-{crafted}10% less Damage Taken if you have at least 180 Total Attributes
+{unique}{range:176}{rounding:Integer}+(4-5) to All Attributes
+{unique}{range:248}+(15-20)% to All Resistances
+{unique}{range:69}{rounding:Integer}(15-20)% increased Health Regen
+{unique}{range:69}{rounding:Integer}(15-20)% increased Mana Regen
+{unique}{range:69}{rounding:Integer}(15-20)% increased Dodge Rating
+{unique}10% less Damage Taken if you have at least 180 Total Attributes
 			<ModRange id="1" range="52"></ModRange>
 			<ModRange id="2" range="199"></ModRange>
 			<ModRange id="3" range="176"></ModRange>
@@ -367,7 +367,7 @@ Implicits: 1
 			<ModRange id="8" range="127.5"></ModRange>
 		</Item>
 		<Item id="9">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Elecoe's Innovation
 Spidersilk Sash
 Crafted: true
@@ -386,12 +386,12 @@ Implicits: 3
 {range:43}(16-20)% Increased Cooldown Recovery Speed
 {range:9}{rounding:Integer}(76-100) Ward Gained on Potion Use
 100% chance to Cleanse All Ailments on Potion Use
-{crafted}{range:175}{rounding:Integer}(144-216) Ward Gained on Potion Use
-{crafted}{range:254}{rounding:Integer}(144-216) Health Gained on Potion Use
-{crafted}{range:233}(12-24)% increased Critical Strike Chance
-{crafted}{range:166}+(12-24)% Critical Strike Multiplier
-{crafted}100% of Critical Strike Chance applies to Potion Use Crit Chance
-{crafted}25% of Critical Strike Multiplier applies to Potions
+{unique}{range:175}{rounding:Integer}(144-216) Ward Gained on Potion Use
+{unique}{range:254}{rounding:Integer}(144-216) Health Gained on Potion Use
+{unique}{range:233}(12-24)% increased Critical Strike Chance
+{unique}{range:166}+(12-24)% Critical Strike Multiplier
+{unique}100% of Critical Strike Chance applies to Potion Use Crit Chance
+{unique}25% of Critical Strike Multiplier applies to Potions
 			<ModRange id="1" range="35"></ModRange>
 			<ModRange id="2" range="72"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -407,7 +407,7 @@ Implicits: 3
 			<ModRange id="13" range="127.5"></ModRange>
 		</Item>
 		<Item id="10">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Wrongwarp
 Crystal Wand
 Crafted: true
@@ -425,11 +425,11 @@ Implicits: 3
 -3 to -5 Spell Mana Cost
 {range:219}{scalar:1.75}(24-30)% increased Cast Speed
 {range:216}{scalar:1.75}+(21-25)% Critical Strike Multiplier
-{crafted}{range:181}(10-35)% Chance to gain Haste for 1 second on Hit
-{crafted}2% increased Spell Damage per 1% increased Movement Speed
-{crafted}+1 Wrongwarp with Teleport or Transplant
-{crafted}{range:179}(5-10)% Increased Cooldown Recovery Speed for Teleport
-{crafted}{range:179}(5-10)% Increased Cooldown Recovery Speed for Transplant
+{unique}{range:181}(10-35)% Chance to gain Haste for 1 second on Hit
+{unique}2% increased Spell Damage per 1% increased Movement Speed
+{unique}+1 Wrongwarp with Teleport or Transplant
+{unique}{range:179}(5-10)% Increased Cooldown Recovery Speed for Teleport
+{unique}{range:179}(5-10)% Increased Cooldown Recovery Speed for Transplant
 			<ModRange id="1" range="238"></ModRange>
 			<ModRange id="2" range="29"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -442,7 +442,7 @@ Implicits: 3
 			<ModRange id="10" range="179"></ModRange>
 		</Item>
 		<Item id="11">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Tempest Maw
 Crescent Axe
 Crafted: true
@@ -461,11 +461,11 @@ Implicits: 3
 {range:197}{scalar:1.75}+(56-70)% Chance to Shred Armor on Hit
 {range:242}{scalar:1.75}(76-100)% increased Critical Strike Chance
 {range:71}{scalar:1.75}+(41-50)% Critical Strike Multiplier
-{crafted}{range:41}{rounding:Integer}+(17-21) Melee Lightning Damage
-{crafted}{range:161}{rounding:Integer}+(17-21) Spell Lightning Damage
-{crafted}-6 to -3 Totem Mana Cost
-{crafted}{range:94}{rounding:Integer}+(3-6) Attunement
-{crafted}{range:94}{rounding:Integer}+(3-6) Strength
+{unique}{range:41}{rounding:Integer}+(17-21) Melee Lightning Damage
+{unique}{range:161}{rounding:Integer}+(17-21) Spell Lightning Damage
+{unique}-6 to -3 Totem Mana Cost
+{unique}{range:94}{rounding:Integer}+(3-6) Attunement
+{unique}{range:94}{rounding:Integer}+(3-6) Strength
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="216"></ModRange>
 			<ModRange id="3" range="243"></ModRange>
@@ -479,7 +479,7 @@ Implicits: 3
 			<ModRange id="11" range="94"></ModRange>
 		</Item>
 		<Item id="12">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -499,7 +499,7 @@ Implicits: 0
 			<ModRange id="3" range="151"></ModRange>
 		</Item>
 		<Item id="13">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -521,7 +521,7 @@ Implicits: 0
 			<ModRange id="4" range="220"></ModRange>
 		</Item>
 		<Item id="14">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -541,7 +541,7 @@ Implicits: 0
 			<ModRange id="3" range="91"></ModRange>
 		</Item>
 		<Item id="15">
-			Rarity: RARE
+			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
 Crafted: true
@@ -563,7 +563,7 @@ Implicits: 0
 			<ModRange id="4" range="154"></ModRange>
 		</Item>
 		<Item id="16">
-			Rarity: RARE
+			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
 Crafted: true
@@ -583,7 +583,7 @@ Implicits: 0
 			<ModRange id="3" range="56"></ModRange>
 		</Item>
 		<Item id="17">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Huge Nomad Idol
 Heretical Huge Nomad Idol
 Crafted: true
@@ -611,7 +611,7 @@ Implicits: 0
 			<ModRange id="7" range="207"></ModRange>
 		</Item>
 		<Item id="18">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -631,7 +631,7 @@ Implicits: 0
 			<ModRange id="3" range="179"></ModRange>
 		</Item>
 		<Item id="19">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -653,7 +653,7 @@ Implicits: 0
 			<ModRange id="4" range="25"></ModRange>
 		</Item>
 		<Item id="20">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -675,7 +675,7 @@ Implicits: 0
 			<ModRange id="4" range="111"></ModRange>
 		</Item>
 		<Item id="21">
-			Rarity: RARE
+			Rarity: IDOL
 Small Eterran Idol
 Small Eterran Idol
 Crafted: true
@@ -693,7 +693,7 @@ Implicits: 0
 			<ModRange id="2" range="180"></ModRange>
 		</Item>
 		<Item id="22">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -713,7 +713,7 @@ Implicits: 0
 			<ModRange id="3" range="112"></ModRange>
 		</Item>
 		<Item id="23">
-			Rarity: RARE
+			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
 Crafted: true
@@ -735,7 +735,7 @@ Implicits: 0
 			<ModRange id="4" range="236"></ModRange>
 		</Item>
 		<Item id="24">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Strength of Mind
 Grand Strength of Mind
 Crafted: true
@@ -751,7 +751,7 @@ Implicits: 1
 			<ModRange id="1" range="0"></ModRange>
 		</Item>
 		<Item id="25">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Talon of Grandeur
 Grand Talon of Grandeur
 Crafted: true
@@ -767,7 +767,7 @@ Implicits: 1
 			<ModRange id="1" range="210"></ModRange>
 		</Item>
 		<Item id="26">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Hunger of the Void
 Grand Hunger of the Void
 Crafted: true
@@ -783,7 +783,7 @@ Implicits: 1
 			<ModRange id="1" range="239"></ModRange>
 		</Item>
 		<Item id="27">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Rhythm of the Tide
 Grand Rhythm of the Tide
 Crafted: true
@@ -801,7 +801,7 @@ Implicits: 2
 			<ModRange id="2" range="0"></ModRange>
 		</Item>
 		<Item id="28">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Survival of Might
 Grand Survival of Might
 Crafted: true
@@ -819,7 +819,7 @@ Implicits: 2
 			<ModRange id="2" range="221"></ModRange>
 		</Item>
 		<Item id="29">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Bulwark of the Tundra
 Grand Bulwark of the Tundra
 Crafted: true
@@ -835,7 +835,7 @@ Implicits: 1
 			<ModRange id="1" range="0"></ModRange>
 		</Item>
 		<Item id="30">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Embers of Immortality
 Grand Embers of Immortality
 Crafted: true

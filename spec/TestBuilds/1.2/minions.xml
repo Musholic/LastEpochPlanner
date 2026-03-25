@@ -111,7 +111,7 @@
 	<Import exportParty="false"></Import>
 	<Items activeItemSet="1" useSecondWeaponSet="nil">
 		<Item id="1">
-			Rarity: RARE
+			Rarity: EXALTED
 Bone Amulet
 Bone Amulet
 Crafted: true
@@ -141,7 +141,7 @@ Implicits: 2
 			<ModRange id="8" range="113"></ModRange>
 		</Item>
 		<Item id="2">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Exsanguinous
 Noble Raiment
 Crafted: true
@@ -158,12 +158,12 @@ Implicits: 2
 {range:236}{scalar:1.5}{rounding:Integer}(21-26)% increased Health
 +2 to Summon Wraith
 {range:206}{rounding:Integer}(61-90)% increased Minion Damage
-{crafted}{range:230}(15-30)% increased Attack Speed for 4 seconds when you use a Potion
-{crafted}{range:230}(15-30)% increased Spell Cast Speed for 4 seconds when you use a Potion
-{crafted}{range:230}(15-30)% increased Movement Speed for 4 seconds when you use a Potion
-{crafted}20% of Current Health Lost per second
-{crafted}20% of Missing Health gained as Ward per second
-{crafted}100% Bleed Immunity while on Low Health
+{unique}{range:230}(15-30)% increased Attack Speed for 4 seconds when you use a Potion
+{unique}{range:230}(15-30)% increased Spell Cast Speed for 4 seconds when you use a Potion
+{unique}{range:230}(15-30)% increased Movement Speed for 4 seconds when you use a Potion
+{unique}20% of Current Health Lost per second
+{unique}20% of Missing Health gained as Ward per second
+{unique}100% Bleed Immunity while on Low Health
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="121"></ModRange>
 			<ModRange id="3" range="236"></ModRange>
@@ -177,7 +177,7 @@ Implicits: 2
 			<ModRange id="11" range="127.5"></ModRange>
 		</Item>
 		<Item id="3">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Last Steps of the Living
 Arcane Boots
 Crafted: true
@@ -195,11 +195,11 @@ Implicits: 3
 {range:206}{rounding:Integer}+(46-68) Health
 5% increased Health
 {range:182}(26-30)% increased Movement Speed
-{crafted}{range:200}(11-15)% of Current Health Lost per second
-{crafted}{range:200}(11-15)% of Missing Health gained as Ward per second
-{crafted}{range:200}(30-36)% increased Movement Speed
-{crafted}{range:203}+(300-400)% Freeze Rate Multiplier while at Low Health
-{crafted}100% You are chilled every 3 seconds
+{unique}{range:200}(11-15)% of Current Health Lost per second
+{unique}{range:200}(11-15)% of Missing Health gained as Ward per second
+{unique}{range:200}(30-36)% increased Movement Speed
+{unique}{range:203}+(300-400)% Freeze Rate Multiplier while at Low Health
+{unique}100% You are chilled every 3 seconds
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="163"></ModRange>
 			<ModRange id="3" range="145"></ModRange>
@@ -213,7 +213,7 @@ Implicits: 3
 			<ModRange id="11" range="127.5"></ModRange>
 		</Item>
 		<Item id="4">
-			Rarity: RARE
+			Rarity: EXALTED
 Plated Gauntlets
 Plated Gauntlets
 Crafted: true
@@ -245,7 +245,7 @@ Implicits: 2
 			<ModRange id="9" range="151"></ModRange>
 		</Item>
 		<Item id="5">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Boneclamor Barbute
 Gladiator Helmet
 Crafted: true
@@ -260,11 +260,11 @@ Implicits: 1
 +130 Armor
 {range:189}{rounding:Integer}+(43-56) Ward per Second
 {range:64}{rounding:Integer}+(7-8) Intelligence
-{crafted}+150 Armor
-{crafted}{range:235}{rounding:Integer}+(6-13) Dexterity
-{crafted}{range:235}{rounding:Integer}+(6-13) Intelligence
-{crafted}{range:220}+(35-65)% Necrotic Resistance
-{crafted}1 Ward per Second per 3% uncapped Necrotic Resistance
+{unique}+150 Armor
+{unique}{range:235}{rounding:Integer}+(6-13) Dexterity
+{unique}{range:235}{rounding:Integer}+(6-13) Intelligence
+{unique}{range:220}+(35-65)% Necrotic Resistance
+{unique}1 Ward per Second per 3% uncapped Necrotic Resistance
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="189"></ModRange>
 			<ModRange id="3" range="64"></ModRange>
@@ -275,7 +275,7 @@ Implicits: 1
 			<ModRange id="8" range="127.5"></ModRange>
 		</Item>
 		<Item id="6">
-			Rarity: RARE
+			Rarity: EXALTED
 Decaying Homunculus
 Decaying Homunculus
 Crafted: true
@@ -301,7 +301,7 @@ Implicits: 2
 			<ModRange id="6" range="247"></ModRange>
 		</Item>
 		<Item id="7">
-			Rarity: RARE
+			Rarity: EXALTED
 Ivory Ring
 Ivory Ring
 Crafted: true
@@ -333,7 +333,7 @@ Implicits: 2
 			<ModRange id="9" range="127.5"></ModRange>
 		</Item>
 		<Item id="8">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Ribbons of Blood
 Ruby Ring
 Crafted: true
@@ -351,11 +351,11 @@ Implicits: 2
 {range:217}{rounding:Integer}+(96-114) Ward Decay Threshold
 {range:52}{rounding:Integer}+(61-90) Health
 {range:230}{rounding:Integer}+(14-16) Intelligence
-{crafted}{range:144}{rounding:Integer}(7-10)% increased Health
-{crafted}{range:60}{rounding:Integer}+(4-7) Minion Melee Physical Damage
-{crafted}{range:112}(2-4)% of Minion Melee Damage Leeched as Health on Hit
-{crafted}{range:174}(20-40)% Minion Increased Leech Rate
-{crafted}+100% Minion Critical Strike Avoidance
+{unique}{range:144}{rounding:Integer}(7-10)% increased Health
+{unique}{range:60}{rounding:Integer}+(4-7) Minion Melee Physical Damage
+{unique}{range:112}(2-4)% of Minion Melee Damage Leeched as Health on Hit
+{unique}{range:174}(20-40)% Minion Increased Leech Rate
+{unique}+100% Minion Critical Strike Avoidance
 			<ModRange id="1" range="140"></ModRange>
 			<ModRange id="2" range="52"></ModRange>
 			<ModRange id="3" range="217"></ModRange>
@@ -369,7 +369,7 @@ Implicits: 2
 			<ModRange id="11" range="127.5"></ModRange>
 		</Item>
 		<Item id="9">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Strands of Souls
 Leather Belt
 Crafted: true
@@ -383,11 +383,11 @@ LevelReq: 9
 Implicits: 1
 +4 Potion Slots
 {range:245}{rounding:Integer}(96-120)% increased Minion Damage
-{crafted}{range:232}{rounding:Integer}(180-320) Ward Gained on Potion Use
-{crafted}{range:105}(70-180)% of Mana Spent Gained as Ward
-{crafted}{range:198}+(30-70)% Ward Retention
-{crafted}{range:250}{rounding:Integer}(18-30) Ward Gain on Kill
-{crafted}{range:168}{rounding:Integer}+(7-18) Ward per Second
+{unique}{range:232}{rounding:Integer}(180-320) Ward Gained on Potion Use
+{unique}{range:105}(70-180)% of Mana Spent Gained as Ward
+{unique}{range:198}+(30-70)% Ward Retention
+{unique}{range:250}{rounding:Integer}(18-30) Ward Gain on Kill
+{unique}{range:168}{rounding:Integer}+(7-18) Ward per Second
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="245"></ModRange>
 			<ModRange id="3" range="232"></ModRange>
@@ -397,7 +397,7 @@ Implicits: 1
 			<ModRange id="7" range="168"></ModRange>
 		</Item>
 		<Item id="10">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Lethal Concentration
 Jadebone Javelin
 Crafted: true
@@ -413,13 +413,13 @@ Implicits: 2
 +78 Melee Damage
 {range:226}{rounding:Integer}(80-120)% increased Poison Damage
 {range:188}{scalar:3.2}{rounding:Integer}(111-140)% increased Minion Damage Over Time
-{crafted}{range:49}{rounding:Integer}(150-210)% increased Melee Damage
-{crafted}{range:238}{rounding:Integer}(150-210)% increased Minion Damage
-{crafted}+25% Chance to cast Jade Dust on Hit with Harvest
-{crafted}{range:213}(150-210)% of Player Poison Damage Applies to Skeleton Rogues
-{crafted}8% of Minion Poison Damage Leeched as Health
-{crafted}{range:213}(150-210)% of Player Poison Damage Applies to your Falcon
-{crafted}{range:34}{rounding:Integer}+(1-3) to Throwing Minion Skills
+{unique}{range:49}{rounding:Integer}(150-210)% increased Melee Damage
+{unique}{range:238}{rounding:Integer}(150-210)% increased Minion Damage
+{unique}+25% Chance to cast Jade Dust on Hit with Harvest
+{unique}{range:213}(150-210)% of Player Poison Damage Applies to Skeleton Rogues
+{unique}8% of Minion Poison Damage Leeched as Health
+{unique}{range:213}(150-210)% of Player Poison Damage Applies to your Falcon
+{unique}{range:34}{rounding:Integer}+(1-3) to Throwing Minion Skills
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="226"></ModRange>
 			<ModRange id="3" range="188"></ModRange>
@@ -432,7 +432,7 @@ Implicits: 2
 			<ModRange id="10" range="34"></ModRange>
 		</Item>
 		<Item id="11">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Large Immortal Idol
 Heretical Large Immortal Idol
 Crafted: true
@@ -460,7 +460,7 @@ Implicits: 0
 			<ModRange id="7" range="163"></ModRange>
 		</Item>
 		<Item id="12">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Large Immortal Idol
 Heretical Large Immortal Idol
 Crafted: true
@@ -488,7 +488,7 @@ Implicits: 0
 			<ModRange id="7" range="240"></ModRange>
 		</Item>
 		<Item id="13">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -510,7 +510,7 @@ Implicits: 0
 			<ModRange id="4" range="239"></ModRange>
 		</Item>
 		<Item id="14">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -530,7 +530,7 @@ Implicits: 0
 			<ModRange id="3" range="237"></ModRange>
 		</Item>
 		<Item id="15">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -552,7 +552,7 @@ Implicits: 0
 			<ModRange id="4" range="136"></ModRange>
 		</Item>
 		<Item id="16">
-			Rarity: RARE
+			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
 Crafted: true
@@ -572,7 +572,7 @@ Implicits: 0
 			<ModRange id="3" range="152"></ModRange>
 		</Item>
 		<Item id="17">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -594,7 +594,7 @@ Implicits: 0
 			<ModRange id="4" range="175"></ModRange>
 		</Item>
 		<Item id="18">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -616,7 +616,7 @@ Implicits: 0
 			<ModRange id="4" range="108"></ModRange>
 		</Item>
 		<Item id="19">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -636,7 +636,7 @@ Implicits: 0
 			<ModRange id="3" range="241"></ModRange>
 		</Item>
 		<Item id="20">
-			Rarity: RARE
+			Rarity: IDOL
 Heretical Huge Immortal Idol
 Heretical Huge Immortal Idol
 Crafted: true
@@ -662,7 +662,7 @@ Implicits: 0
 			<ModRange id="6" range="158"></ModRange>
 		</Item>
 		<Item id="21">
-			Rarity: RARE
+			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
 Crafted: true
@@ -682,7 +682,7 @@ Implicits: 0
 			<ModRange id="3" range="249"></ModRange>
 		</Item>
 		<Item id="22">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Winds of Fortune
 Grand Winds of Fortune
 Crafted: true
@@ -698,7 +698,7 @@ Implicits: 1
 			<ModRange id="1" range="226"></ModRange>
 		</Item>
 		<Item id="23">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Slumber of Morditas
 Grand Slumber of Morditas
 Crafted: true
@@ -714,7 +714,7 @@ Implicits: 1
 			<ModRange id="1" range="209"></ModRange>
 		</Item>
 		<Item id="24">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Echo of Solarum
 Grand Echo of Solarum
 Crafted: true
@@ -730,7 +730,7 @@ Implicits: 1
 			<ModRange id="1" range="238"></ModRange>
 		</Item>
 		<Item id="25">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Scars of Blood
 Grand Scars of Blood
 Crafted: true
@@ -746,7 +746,7 @@ Implicits: 1
 			<ModRange id="1" range="188"></ModRange>
 		</Item>
 		<Item id="26">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Resonance of the Sea
 Grand Resonance of the Sea
 Crafted: true
@@ -762,7 +762,7 @@ Implicits: 1
 			<ModRange id="1" range="116"></ModRange>
 		</Item>
 		<Item id="27">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Hope of the Beginning
 Grand Hope of the Beginning
 Crafted: true
@@ -778,7 +778,7 @@ Implicits: 1
 			<ModRange id="1" range="74"></ModRange>
 		</Item>
 		<Item id="28">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Survival of Might
 Grand Survival of Might
 Crafted: true
@@ -796,7 +796,7 @@ Implicits: 2
 			<ModRange id="2" range="41"></ModRange>
 		</Item>
 		<Item id="29">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Memory of Masters
 Grand Memory of Masters
 Crafted: true
@@ -812,7 +812,7 @@ Implicits: 1
 			<ModRange id="1" range="151"></ModRange>
 		</Item>
 		<Item id="30">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Bulwark of the Tundra
 Grand Bulwark of the Tundra
 Crafted: true
@@ -828,7 +828,7 @@ Implicits: 1
 			<ModRange id="1" range="230"></ModRange>
 		</Item>
 		<Item id="31">
-			Rarity: RARE
+			Rarity: NORMAL
 Grand Body of Obsidian
 Grand Body of Obsidian
 Crafted: true
