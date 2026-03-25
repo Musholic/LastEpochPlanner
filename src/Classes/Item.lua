@@ -293,6 +293,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.nameSuffix = ""
 	self.base = nil
 	self.rarity = rarity or "UNIQUE"
+	self.rarityType = nil
 	self.quality = nil
 	self.rawLines = { }
 	-- Find non-blank lines and trim whitespace
@@ -310,19 +311,35 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 		local rarity = self.rawLines[l]:match("^Rarity: (%a+)")
 		if rarity then
 			mode = "GAME"
-			if colorCodes[rarity:upper()] then
-				self.rarity = rarity:upper()
-			end
-			if self.rarity == "UNIQUE" then
-				-- Hack for relics
-				for _, line in ipairs(self.rawLines) do
-					if line:find("Foil Unique") then
-						self.rarity = "RELIC"
-						break
-					end
-				end
+			rarity = rarity:upper()
+			-- Map raw rarity to rarityType (BASIC/UNIQUE/SET/IDOL)
+			if rarity == "BASIC" or rarity == "NORMAL" or rarity == "MAGIC" or rarity == "RARE" or rarity == "EXALTED" then
+				self.rarityType = "BASIC"
+				self.rarity = rarity -- keep raw value for name parsing; UpdateDisplayRarity recomputes later
+			elseif rarity == "SET" then
+				self.rarityType = "SET"
+				self.rarity = "SET"
+			elseif rarity == "IDOL" then
+				self.rarityType = "IDOL"
+				self.rarity = "IDOL"
+			else
+				self.rarityType = "UNIQUE"
+				self.rarity = "UNIQUE"
 			end
 			l = l + 1
+		end
+	end
+	-- Default rarityType if not set from raw text
+	if not self.rarityType then
+		local r = self.rarity
+		if r == "NORMAL" or r == "MAGIC" or r == "RARE" or r == "EXALTED" or r == "BASIC" then
+			self.rarityType = "BASIC"
+		elseif r == "SET" then
+			self.rarityType = "SET"
+		elseif r == "IDOL" then
+			self.rarityType = "IDOL"
+		else
+			self.rarityType = "UNIQUE"
 		end
 	end
 	if self.rawLines[l] then
@@ -639,7 +656,41 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			end
 		end
 	end
+	-- Idol bases are always IDOL rarity, regardless of what was parsed
+	if self.type and self.type:match("Idol$") then
+		self.rarityType = "IDOL"
+		self.rarity = "IDOL"
+		self.crafted = true
+	end
+	self:UpdateDisplayRarity()
 	self:BuildModList()
+end
+
+-- Compute display rarity for BASIC items based on affix count and tiers
+function ItemClass:UpdateDisplayRarity()
+	if self.rarityType ~= "BASIC" then return end
+	local affixCount = 0
+	local hasExaltedTier = false
+	for _, list in ipairs({self.prefixes, self.suffixes}) do
+		for _, affix in ipairs(list) do
+			if affix.modId and affix.modId ~= "None" then
+				affixCount = affixCount + 1
+				local tierIndex = tonumber(affix.modId:match("_(%d+)$"))
+				if tierIndex and tierIndex >= 5 then
+					hasExaltedTier = true
+				end
+			end
+		end
+	end
+	if hasExaltedTier then
+		self.rarity = "EXALTED"
+	elseif affixCount >= 3 then
+		self.rarity = "RARE"
+	elseif affixCount >= 1 then
+		self.rarity = "MAGIC"
+	else
+		self.rarity = "NORMAL"
+	end
 end
 
 function ItemClass:NormaliseQuality()
@@ -663,7 +714,7 @@ end
 
 function ItemClass:BuildRaw()
 	local rawLines = { }
-	t_insert(rawLines, "Rarity: " .. self.rarity)
+	t_insert(rawLines, "Rarity: " .. (self.rarityType or "BASIC"))
 	if self.title then
 		t_insert(rawLines, self.title)
 		t_insert(rawLines, self.baseName)

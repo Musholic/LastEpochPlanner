@@ -694,6 +694,8 @@ function ImportTabClass:processItemData(itemData)
                 idolPosition = idolPosition - 1
             end
             item["slotName"] = "Idol " .. idolPosition
+            item["rarityType"] = "IDOL"
+            item["rarity"] = "IDOL"
         else
             item["slotName"] = offlineImportSlotMap[itemData["containerID"]]
         end
@@ -713,6 +715,7 @@ function ImportTabClass:processItemData(itemData)
                 item["suffixes"] = {}
                 if rarity >= 7 and rarity <= 9 then
                     item["rarity"] = "UNIQUE"
+                    item["rarityType"] = "UNIQUE"
                     local uniqueIDIndex = 8 + 3 -- 3 is the maximum amount of implicits
                     local uniqueID = itemData["data"][uniqueIDIndex] * 256 + itemData["data"][uniqueIDIndex + 1]
                     local uniqueBase = self.build.data.uniques[uniqueID]
@@ -753,6 +756,7 @@ function ImportTabClass:processItemData(itemData)
                 else
                     item["name"] = itemBaseName
                     item["rarity"] = "RARE"
+                    item["rarityType"] = "BASIC"
                     for i = 0, 4 do
                         local dataId = 14 + i * 3
                         if #itemData["data"] > dataId then
@@ -926,6 +930,7 @@ function ImportTabClass:BuildItem(itemData)
 
     -- Determine rarity, display name and base type of the item
     item.rarity = itemData.rarity
+    item.rarityType = itemData.rarityType or (itemData.rarity == "UNIQUE" and "UNIQUE" or itemData.rarity == "IDOL" and "IDOL" or "BASIC")
     if #itemData.name > 0 then
         item.title = itemData.name
         item.baseName = itemData.baseName

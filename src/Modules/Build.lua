@@ -690,6 +690,8 @@ function buildMode:ReadLeToolsSave(saveContent)
 				idolPosition = idolPosition - 1
 			end
 			item["slotName"] = "Idol " .. idolPosition
+			item["rarityType"] = "IDOL"
+			item["rarity"] = "IDOL"
 		end
 		local baseTypeID = data.LETools_itemBases[itemData.id].baseTypeId
 		local subTypeID = data.LETools_itemBases[itemData.id].subTypeId
@@ -703,7 +705,8 @@ function buildMode:ReadLeToolsSave(saveContent)
             end
 		end
 
-		item["rarity"] = "RARE"
+		item["rarity"] = item["rarity"] or "RARE"
+		item["rarityType"] = item["rarityType"] or "BASIC"
 		item["explicitMods"] = {}
 		item["prefixes"] = {}
 		item["suffixes"] = {}
@@ -747,6 +750,7 @@ function buildMode:ReadLeToolsSave(saveContent)
 			if uniqueBase then
 			    item.name = uniqueBase.name
 				item["rarity"] = "UNIQUE"
+				item["rarityType"] = "UNIQUE"
 				for i, modLine in ipairs(uniqueBase.mods) do
                     if itemLib.hasRange(modLine) then
                         local range = main.defaultItemAffixQuality

@@ -720,9 +720,13 @@ function calcs.initEnv(build, mode, override, specEnv)
 					env.itemModDB.conditions[item.title:gsub(" ", "")] = item.classRestriction
 				end
 				local key
-				if item.rarity == "UNIQUE" or item.rarity == "RELIC" then
+				if item.rarityType == "UNIQUE" then
 					key = "UniqueItem"
-				elseif item.rarity == "RARE" then
+				elseif item.rarityType == "SET" then
+					key = "SetItem"
+				elseif item.rarityType == "IDOL" then
+					key = "IdolItem"
+				elseif item.rarity == "RARE" or item.rarity == "EXALTED" then
 					key = "RareItem"
 				elseif item.rarity == "MAGIC" then
 					key = "MagicItem"
