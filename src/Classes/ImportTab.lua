@@ -266,9 +266,9 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
         end
 
         -- Support for Last Epoch Planner build URLs
-        if urlText:match("lastepochplanner%.com/le[^#]*#build=") then
+        if urlText:match("lastepochplanner%.com[^#]*#%w*=") then
             -- Extract the nested URL or code from the build URL
-            local nested_url_or_code = urlText:gsub(".*#build=([^&]+).*", "%1")
+            local nested_url_or_code = urlText:gsub(".*lastepochplanner%.com[^#]*#%w*=([^&]+).*", "%1")
             urlText = UrlDecode(nested_url_or_code)
             buf = urlText
             self.controls.importCodeIn:SetText(urlText, false)
