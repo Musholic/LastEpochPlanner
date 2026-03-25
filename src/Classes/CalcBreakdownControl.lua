@@ -17,6 +17,8 @@ local CalcBreakdownClass = newClass("CalcBreakdownControl", "Control", "ControlH
 	self.Control()
 	self.ControlHost()
 	self.calcsTab = calcsTab
+	self.build = self.calcsTab.build
+	self.tree = self.build.spec.tree
 	self.shown = false
 	self.tooltip = new("Tooltip")
 	self.nodeViewer = new("PassiveTreeView")
@@ -583,24 +585,30 @@ function CalcBreakdownClass:DrawBreakdownTable(viewPort, x, y, section)
 						self.tooltip:Clear()
 						ttFunc(self.tooltip)
 						self.tooltip:Draw(col.x, rowY, col.width, 12, viewPort)
-					elseif ttNode and ttNode.x and ttNode.y then -- The source "node" from cluster jewels don't know their location because it's the abstract node in tree.lua rather than the generated node from the cluster jewel.
+					elseif ttNode and ttNode.x and ttNode.y then
+						local decY = 0
+						for id,ability in pairs(self.build.skillsTab.socketGroupList) do
+							if ability.grantedEffect.treeId and not ability.triggered and ttNode.id:match("^" .. ability.grantedEffect.treeId) then
+								decY =  (id - 1) * (self.tree.decAbilityPosY + 1000)
+							end
+						end
 						local viewerX = col.x + col.width + 5
 						if viewPort.x + viewPort.width < viewerX + 304 then
 							viewerX = col.x - 309
 						end
 						local viewerY = m_min(rowY, viewPort.y + viewPort.height - 304)
-						SetDrawColor(1, 1, 1)
+						SetDrawColor(0, 0, 0)
 						DrawImage(nil, viewerX, viewerY, 304, 304)
 						local viewer = self.nodeViewer
-						viewer.zoom = 5
-						local scale = self.calcsTab.build.spec.tree.size / 1500
+						viewer.zoom = 35
+						local scale = self.tree.size / (viewer.zoom * 300)
 						viewer.zoomX = -ttNode.x / scale
-						viewer.zoomY = -ttNode.y / scale
+						viewer.zoomY = (-decY - ttNode.y) / scale
 						SetViewport(viewerX + 2, viewerY + 2, 300, 300)
-						viewer:Draw(self.calcsTab.build, { x = 0, y = 0, width = 300, height = 300 }, { })
+						viewer:Draw(self.build, { x = 0, y = 0, width = 300, height = 300 }, { })
 						SetDrawLayer(nil, 30)
 						SetDrawColor(1, 0, 0)
-						DrawImage(viewer.highlightRing, 135, 135, 30, 30)
+						DrawImage(viewer.highlightRing, 145, 145, 10, 10)
 						SetViewport()
 					end
 					SetDrawLayer(nil, 10)
