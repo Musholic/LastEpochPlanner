@@ -14249,6 +14249,7 @@ c["99% increased area for Melee Area Skills"]={{[1]={flags=0,keywordFlags=512,na
 c["Bow Mastery: 50% increased damage while using a bow"]={nil,"Bow Mastery: 50% increased damage while using a bow "}
 c["Bow Mastery: Using a bow attack grants 5% increased attack speed. Can stack 5 times. All stacks fall off after if you have not used a bow attack recently."]={nil,"Bow Mastery: Using a bow attack grants 5% increased attack speed. Can stack 5 times. All stacks fall off after if you have not used a bow attack recently. "}
 c["Mana spent on melee attacks is converted to ward"]={nil,"Mana spent on melee attacks is converted to ward "}
+c["Obscuring Lens of Corruption"]={nil,"Obscuring Lens of Corruption "}
 c["Spells and Melee attacks deal increased damage equal to your missing health"]={nil,"Spells and Melee attacks deal increased damage equal to your missing health "}
 c["Spells deal increased damage equal to their mana cost"]={nil,"Spells deal increased damage equal to their mana cost "}
 c["When leaving a transformed state, you gain 70% damage reduction for 2 seconds"]={nil,"When leaving a transformed state, you gain 70% damage reduction for 2 seconds "}

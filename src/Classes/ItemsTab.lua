@@ -1309,7 +1309,7 @@ function ItemsTabClass:CraftItem()
 		item.quality = 0
 		local rarityType = controls.rarity.list[controls.rarity.selIndex].rarity
 		item.rarityType = rarityType
-		if rarityType == "BASIC" or rarityType == "IDOL" then
+		if rarityType == "BASIC" or (rarityType == "IDOL" and item.rarity ~= "UNIQUE") then
 			item.crafted = true
 		end
 		item.title = controls.title.buf:match("%S") and controls.title.buf or "New Item"

@@ -36,6 +36,7 @@ describe("Offline Item Import", function()
             ["name"] = 'Grand Winds of Fortune',
             ["prefixes"] = {},
             ["rarity"] = 'RARE',
+            ["rarityType"] = 'BASIC',
             ["slotName"] = 'Blessing 1',
             ["suffixes"] = {}
         }
@@ -110,7 +111,8 @@ describe("Offline Item Import", function()
                     ["range"] = 255
                 }
               },
-              ["rarity"] = 'RARE',
+              ["rarity"] = 'IDOL',
+              ["rarityType"] = 'IDOL',
               ["slotName"] = 'Idol 20',
               ["suffixes"] = {
                 [1] = {

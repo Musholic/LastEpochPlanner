@@ -322,6 +322,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			elseif rarity == "IDOL" then
 				self.rarityType = "IDOL"
 				self.rarity = "IDOL"
+			-- A unique idol serializes as Rarity: UNIQUE; rarityType is fixed later by idol auto-detection
 			else
 				self.rarityType = "UNIQUE"
 				self.rarity = "UNIQUE"
@@ -656,11 +657,13 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			end
 		end
 	end
-	-- Idol bases are always IDOL rarity, regardless of what was parsed
+	-- Idol bases are always rarityType IDOL; display rarity stays UNIQUE for unique idols
 	if self.type and self.type:match("Idol$") then
 		self.rarityType = "IDOL"
-		self.rarity = "IDOL"
-		self.crafted = true
+		if self.rarity ~= "UNIQUE" then
+			self.rarity = "IDOL"
+			self.crafted = true
+		end
 	end
 	self:UpdateDisplayRarity()
 	self:BuildModList()
@@ -714,7 +717,7 @@ end
 
 function ItemClass:BuildRaw()
 	local rawLines = { }
-	t_insert(rawLines, "Rarity: " .. (self.rarityType or "BASIC"))
+	t_insert(rawLines, "Rarity: " .. (self.rarity or "BASIC"))
 	if self.title then
 		t_insert(rawLines, self.title)
 		t_insert(rawLines, self.baseName)

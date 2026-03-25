@@ -750,7 +750,7 @@ function buildMode:ReadLeToolsSave(saveContent)
 			if uniqueBase then
 			    item.name = uniqueBase.name
 				item["rarity"] = "UNIQUE"
-				item["rarityType"] = "UNIQUE"
+				item["rarityType"] = item["rarityType"] or "UNIQUE"
 				for i, modLine in ipairs(uniqueBase.mods) do
                     if itemLib.hasRange(modLine) then
                         local range = main.defaultItemAffixQuality

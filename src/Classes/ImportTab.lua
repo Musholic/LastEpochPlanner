@@ -715,7 +715,7 @@ function ImportTabClass:processItemData(itemData)
                 item["suffixes"] = {}
                 if rarity >= 7 and rarity <= 9 then
                     item["rarity"] = "UNIQUE"
-                    item["rarityType"] = "UNIQUE"
+                    item["rarityType"] = item["rarityType"] or "UNIQUE"
                     local uniqueIDIndex = 8 + 3 -- 3 is the maximum amount of implicits
                     local uniqueID = itemData["data"][uniqueIDIndex] * 256 + itemData["data"][uniqueIDIndex + 1]
                     local uniqueBase = self.build.data.uniques[uniqueID]
@@ -755,8 +755,8 @@ function ImportTabClass:processItemData(itemData)
                     end
                 else
                     item["name"] = itemBaseName
-                    item["rarity"] = "RARE"
-                    item["rarityType"] = "BASIC"
+                    item["rarity"] = item["rarity"] or "RARE"
+                    item["rarityType"] = item["rarityType"] or "BASIC"
                     for i = 0, 4 do
                         local dataId = 14 + i * 3
                         if #itemData["data"] > dataId then
