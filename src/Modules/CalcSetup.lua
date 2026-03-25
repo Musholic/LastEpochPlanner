@@ -876,6 +876,8 @@ function calcs.initEnv(build, mode, override, specEnv)
 					group = { label = "", enabled = true, source = grantedSkill.source, slot = grantedSkill.slotName }
 					build.skillsTab.socketGroupList[5 + grantedIndex] = group
 					markList[group] = true
+					-- The skills list has changed so it may have an impact on previously cached calculations
+					build.buildFlag = true
 				end
 
 				-- Update the group
@@ -917,6 +919,8 @@ function calcs.initEnv(build, mode, override, specEnv)
 					if build.skillsTab.displayGroup == socketGroup then
 						build.skillsTab.displayGroup = nil
 					end
+					-- The skills list has changed so it may have an impact on previously cached calculations
+					build.buildFlag = true
 				end
 				lastIndex = i
 			end
@@ -931,8 +935,9 @@ function calcs.initEnv(build, mode, override, specEnv)
 					end
 					build.skillsTab.socketGroupList[lastIndex] = nil
 					lastIndex = lastIndex - 1
+				else
+					i = i + 1
 				end
-				i = i + 1
 			end
 		end
 
