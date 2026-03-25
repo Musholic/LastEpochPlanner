@@ -115,7 +115,7 @@
 	<Import exportParty="false"></Import>
 	<Items activeItemSet="1" useSecondWeaponSet="nil">
 		<Item id="1">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Pearls of the Swine
 Bone Amulet
 Crafted: true
@@ -131,12 +131,12 @@ Implicits: 2
 {range:127.5}+(13-40)% Necrotic Resistance
 {range:127.5}{scalar:1.17}{rounding:Integer}+(131-180) Health
 {range:127.5}{scalar:1.17}{rounding:Integer}(40-60)% increased Physical Damage
-{crafted}+100% Bone Curse also inflicts Decrepify
-{crafted}{range:127.5}{rounding:Integer}(113-166) Ward per Second for each Curse affecting you
-{crafted}{range:127.5}{rounding:Integer}(31-55)% increased Physical Damage
-{crafted}{range:127.5}{rounding:Integer}+(5-9) Vitality
-{crafted}{range:127.5}+(7-11)% to All Resistances
-{crafted}{range:127.5}{rounding:Integer}+(1-4) to All Attributes
+{unique}+100% Bone Curse also inflicts Decrepify
+{unique}{range:127.5}{rounding:Integer}(113-166) Ward per Second for each Curse affecting you
+{unique}{range:127.5}{rounding:Integer}(31-55)% increased Physical Damage
+{unique}{range:127.5}{rounding:Integer}+(5-9) Vitality
+{unique}{range:127.5}+(7-11)% to All Resistances
+{unique}{range:127.5}{rounding:Integer}+(1-4) to All Attributes
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -175,7 +175,7 @@ Implicits: 2
 			<ModRange id="6" range="127.5"></ModRange>
 		</Item>
 		<Item id="3">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Blood of the Exile
 Iron Greaves
 Crafted: true
@@ -192,12 +192,12 @@ Implicits: 2
 {range:127.5}{rounding:Integer}+(46-68) Health
 5% increased Health
 {range:127.5}(26-30)% increased Movement Speed
-{crafted}30% increased Movement Speed
-{crafted}{range:127.5}(30-67)% Increased Bleed Duration
-{crafted}{range:127.5}(30-40)% more Physical Ailment Damage to Moving Enemies
-{crafted}{range:127.5}{rounding:Integer}+(5-8) Strength
-{crafted}{range:127.5}{rounding:Integer}+(5-8) Dexterity
-{crafted}{range:127.5}{rounding:Integer}+(5-8) Intelligence
+{unique}30% increased Movement Speed
+{unique}{range:127.5}(30-67)% Increased Bleed Duration
+{unique}{range:127.5}(30-40)% more Physical Ailment Damage to Moving Enemies
+{unique}{range:127.5}{rounding:Integer}+(5-8) Strength
+{unique}{range:127.5}{rounding:Integer}+(5-8) Dexterity
+{unique}{range:127.5}{rounding:Integer}+(5-8) Intelligence
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -211,7 +211,7 @@ Implicits: 2
 			<ModRange id="11" range="127.5"></ModRange>
 		</Item>
 		<Item id="4">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Carrion of Creation
 Eternal Gauntlets
 Crafted: true
@@ -227,15 +227,15 @@ Implicits: 2
 {range:127.5}(11-24)% of Armor Mitigation also applies to Damage over Time
 {range:127.5}{rounding:Integer}+(106-135) Health
 {range:127.5}{rounding:Integer}(8-10)% increased Health
-{crafted}{range:127.5}+(100-157)% Chance to inflict Bleed on Hit
-{crafted}100% of Ignite Chance Converted to Bleed Chance
-{crafted}100% of Frostbite Chance Converted to Bleed Chance
-{crafted}100% of Shock Chance Converted to Bleed Chance
-{crafted}100% of Time Rot Chance Converted to Bleed Chance
-{crafted}100% of Damned Chance Converted to Bleed Chance
-{crafted}100% of Poison Chance Converted to Bleed Chance
-{crafted}{range:127.5}(25-47)% Chance for Primordial Blood on Kill (up to 5 times per 2 seconds)
-{crafted}{range:127.5}+(37-100)% Chance to inflict Bleed on Hit for Primordial Blood per stack of Bleed on the enemy releasing it (up to 20)
+{unique}{range:127.5}+(100-157)% Chance to inflict Bleed on Hit
+{unique}100% of Ignite Chance Converted to Bleed Chance
+{unique}100% of Frostbite Chance Converted to Bleed Chance
+{unique}100% of Shock Chance Converted to Bleed Chance
+{unique}100% of Time Rot Chance Converted to Bleed Chance
+{unique}100% of Damned Chance Converted to Bleed Chance
+{unique}100% of Poison Chance Converted to Bleed Chance
+{unique}{range:127.5}(25-47)% Chance for Primordial Blood on Kill (up to 5 times per 2 seconds)
+{unique}{range:127.5}+(37-100)% Chance to inflict Bleed on Hit for Primordial Blood per stack of Bleed on the enemy releasing it (up to 20)
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -279,7 +279,7 @@ Implicits: 2
 			<ModRange id="7" range="127.5"></ModRange>
 		</Item>
 		<Item id="6">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Valdyr's Chalice
 Silver Grail
 Crafted: true
@@ -293,11 +293,11 @@ LevelReq: 15
 Implicits: 1
 {range:127.5}{rounding:Integer}+(10-25) Mana
 {range:127.5}{rounding:Integer}+(131-180) Health
-{crafted}100% of Damage Reflected
-{crafted}{range:127.5}+(40-50)% Chance to inflict Bleed on Hit
-{crafted}{range:127.5}(40-50)% Increased Bleed Duration
-{crafted}2% of Physical Damage Over Time Damage Leeched as Health
-{crafted}20 Health gained on Kill per stack of Bleed on the Target
+{unique}100% of Damage Reflected
+{unique}{range:127.5}+(40-50)% Chance to inflict Bleed on Hit
+{unique}{range:127.5}(40-50)% Increased Bleed Duration
+{unique}2% of Physical Damage Over Time Damage Leeched as Health
+{unique}20 Health gained on Kill per stack of Bleed on the Target
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -367,7 +367,7 @@ Implicits: 1
 			<ModRange id="8" range="127.5"></ModRange>
 		</Item>
 		<Item id="9">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Thorn Slinger
 Leather Belt
 Crafted: true
@@ -384,11 +384,11 @@ Implicits: 1
 {range:127.5}{rounding:Integer}(40-60)% increased Physical Damage
 {range:127.5}{rounding:Integer}(20-30) Ward Gained on Potion Use
 100% chance to Cleanse All Ailments on Potion Use
-{crafted}+1 to Physical Skills
-{crafted}{range:127.5}+(24-48)% Chance to inflict Bleed on Hit
-{crafted}6% increased Movement Speed
-{crafted}{range:127.5}{rounding:Integer}(24-48) Damage Reflected to Attackers
-{crafted}6% increased Throwing Attack Speed
+{unique}+1 to Physical Skills
+{unique}{range:127.5}+(24-48)% Chance to inflict Bleed on Hit
+{unique}6% increased Movement Speed
+{unique}{range:127.5}{rounding:Integer}(24-48) Damage Reflected to Attackers
+{unique}6% increased Throwing Attack Speed
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -430,7 +430,7 @@ Implicits: 3
 			<ModRange id="7" range="127.5"></ModRange>
 		</Item>
 		<Item id="11">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Countenance of Majasa
 Ironglass Shield
 Crafted: true
@@ -446,10 +446,10 @@ Implicits: 2
 {range:127.5}{rounding:Integer}+(400-620) Block Effectiveness
 {range:127.5}+(21-26)% Block Chance
 {range:127.5}{rounding:Integer}+(351-500) Block Effectiveness
-{crafted}+20% Chance every second for each enemy looking at you to be Petrified for 2 seconds
-{crafted}+20% Chance on block to Petrify the attacker for 2 seconds
-{crafted}{range:127.5}(25-30)% of Block Effectiveness applies to Damage over Time as if it had been Blocked
-{crafted}{range:127.5}{rounding:Integer}+(150-300) Block Effectiveness
+{unique}+20% Chance every second for each enemy looking at you to be Petrified for 2 seconds
+{unique}+20% Chance on block to Petrify the attacker for 2 seconds
+{unique}{range:127.5}(25-30)% of Block Effectiveness applies to Damage over Time as if it had been Blocked
+{unique}{range:127.5}{rounding:Integer}+(150-300) Block Effectiveness
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>

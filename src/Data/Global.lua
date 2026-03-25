@@ -10,6 +10,7 @@ colorCodes = {
 	RARE = "^xFFFF77",
 	EXALTED = "^xC184FF",
 	UNIQUE = "^xAF6025",
+	LEGENDARY = "^xFF2674",
 	SET = "^x71E87D",
 	IDOL = "^x36C8C8",
 	RELIC = "^x60C060",

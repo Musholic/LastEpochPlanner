@@ -71,6 +71,7 @@ end
 local lineFlags = {
 	["crafted"] = true, ["crucible"] = true, ["custom"] = true, ["eater"] = true, ["enchant"] = true,
 	["exarch"] = true, ["fractured"] = true, ["implicit"] = true, ["scourge"] = true, ["synthesis"] = true,
+	["unique"] = true,
 }
 
 -- Special function to store unique instances of modifier on specific item slots
@@ -322,6 +323,9 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			elseif rarity == "IDOL" then
 				self.rarityType = "IDOL"
 				self.rarity = "IDOL"
+			elseif rarity == "LEGENDARY" then
+				self.rarityType = "UNIQUE"
+				self.rarity = "LEGENDARY"
 			-- A unique idol serializes as Rarity: UNIQUE; rarityType is fixed later by idol auto-detection
 			else
 				self.rarityType = "UNIQUE"
@@ -339,6 +343,8 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			self.rarityType = "SET"
 		elseif r == "IDOL" then
 			self.rarityType = "IDOL"
+		elseif r == "LEGENDARY" then
+			self.rarityType = "UNIQUE"
 		else
 			self.rarityType = "UNIQUE"
 		end
@@ -574,14 +580,14 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					foundImplicit = true
 					gameModeStage = "IMPLICIT"
 				end
-				modLine.implicit = modLine.implicit or (not modLine.crafted and #self.implicitModLines < implicitLines)
+				modLine.implicit = modLine.implicit or (not modLine.crafted and not modLine.unique and #self.implicitModLines < implicitLines)
 				modLine.range = modLine.range or main.defaultItemAffixQuality
 				local rangedLine = itemLib.applyRange(line, modLine.range, modLine.valueScalar, modLine.rounding)
 				local modList, extra = modLib.parseMod(rangedLine)
 
 				local modLines
 
-				if modLine.implicit or (not modLine.crafted and #self.implicitModLines < implicitLines) then
+				if modLine.implicit or (not modLine.crafted and not modLine.unique and #self.implicitModLines < implicitLines) then
 					modLines = self.implicitModLines
 				else
 					modLines = self.explicitModLines
@@ -633,6 +639,22 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			self.requirements.level = self.base.req.level
 		end
 	end
+	-- Uniques are always craftable (adding affixes turns them into legendaries)
+	if self.rarityType == "UNIQUE" then
+		-- Tag unflagged unique base mods so they survive Craft().
+		-- On initial DB load, no mod has {unique} yet; on re-parse after
+		-- Craft/BuildAndParseRaw, the serialized {unique} tags are already present.
+		local hasUniqueTag = false
+		for _, modLine in ipairs(self.explicitModLines) do
+			if modLine.unique then hasUniqueTag = true; break end
+		end
+		if not hasUniqueTag then
+			for _, modLine in ipairs(self.explicitModLines) do
+				modLine.unique = true
+			end
+		end
+		self.crafted = true
+	end
 	self.affixLimit = 0
 	if self.crafted then
 	    -- The affix limit is set to 6 instead of 4 to support sealed affixes
@@ -669,30 +691,44 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self:BuildModList()
 end
 
--- Compute display rarity for BASIC items based on affix count and tiers
+-- Compute display rarity based on affix count and tiers
 function ItemClass:UpdateDisplayRarity()
-	if self.rarityType ~= "BASIC" then return end
-	local affixCount = 0
-	local hasExaltedTier = false
-	for _, list in ipairs({self.prefixes, self.suffixes}) do
-		for _, affix in ipairs(list) do
-			if affix.modId and affix.modId ~= "None" then
-				affixCount = affixCount + 1
-				local tierIndex = tonumber(affix.modId:match("_(%d+)$"))
-				if tierIndex and tierIndex >= 5 then
-					hasExaltedTier = true
+	if self.rarityType == "BASIC" then
+		local affixCount = 0
+		local hasExaltedTier = false
+		for _, list in ipairs({self.prefixes, self.suffixes}) do
+			for _, affix in ipairs(list) do
+				if affix.modId and affix.modId ~= "None" then
+					affixCount = affixCount + 1
+					local tierIndex = tonumber(affix.modId:match("_(%d+)$"))
+					if tierIndex and tierIndex >= 5 then
+						hasExaltedTier = true
+					end
 				end
 			end
 		end
-	end
-	if hasExaltedTier then
-		self.rarity = "EXALTED"
-	elseif affixCount >= 3 then
-		self.rarity = "RARE"
-	elseif affixCount >= 1 then
-		self.rarity = "MAGIC"
-	else
-		self.rarity = "NORMAL"
+		if hasExaltedTier then
+			self.rarity = "EXALTED"
+		elseif affixCount >= 3 then
+			self.rarity = "RARE"
+		elseif affixCount >= 1 then
+			self.rarity = "MAGIC"
+		else
+			self.rarity = "NORMAL"
+		end
+	elseif self.rarityType == "UNIQUE" then
+		-- Unique with crafted affixes becomes Legendary
+		local hasAffix = false
+		for _, list in ipairs({self.prefixes, self.suffixes}) do
+			for _, affix in ipairs(list) do
+				if affix.modId and affix.modId ~= "None" then
+					hasAffix = true
+					break
+				end
+			end
+			if hasAffix then break end
+		end
+		self.rarity = hasAffix and "LEGENDARY" or "UNIQUE"
 	end
 end
 
@@ -773,6 +809,9 @@ function ItemClass:BuildRaw()
 		end
 		if modLine.crafted then
 			line = "{crafted}" .. line
+		end
+		if modLine.unique then
+			line = "{unique}" .. line
 		end
 		if modLine.custom then
 			line = "{custom}" .. line
@@ -886,7 +925,7 @@ function ItemClass:Craft()
 	-- Save off any crafted or custom mods so they can be re-added at the end
 	local savedMods = {}
 	for _, mod in ipairs(self.explicitModLines) do
-		if mod.crafted or mod.custom then
+		if mod.crafted or mod.custom or mod.unique then
 			t_insert(savedMods, mod)
 		end
 	end

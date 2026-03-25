@@ -724,13 +724,13 @@ function ImportTabClass:processItemData(itemData)
                         if itemLib.hasRange(modLine) then
                             local rollId = uniqueBase.rollIds[i]
                             local range = itemData["data"][uniqueIDIndex + 2 +  rollId]
-                            -- TODO: avoid using crafted
-                            table.insert(item.explicitMods, "{crafted}{range: " .. range .. "}".. modLine)
+                            table.insert(item.explicitMods, "{unique}{range: " .. range .. "}".. modLine)
                             else
-                            table.insert(item.explicitMods, "{crafted}".. modLine)
+                            table.insert(item.explicitMods, "{unique}".. modLine)
                         end
                     end
                     if rarity == 9 then
+                        item["rarity"] = "LEGENDARY"
                         local nbAffixesIndex = uniqueIDIndex + 2 + 8 -- 8 is the maximum amount of unique mods
                         local nbMods = itemData["data"][nbAffixesIndex]
                         for i = 0, nbMods - 1 do
@@ -930,7 +930,7 @@ function ImportTabClass:BuildItem(itemData)
 
     -- Determine rarity, display name and base type of the item
     item.rarity = itemData.rarity
-    item.rarityType = itemData.rarityType or (itemData.rarity == "UNIQUE" and "UNIQUE" or itemData.rarity == "IDOL" and "IDOL" or "BASIC")
+    item.rarityType = itemData.rarityType or (itemData.rarity == "UNIQUE" and "UNIQUE" or itemData.rarity == "LEGENDARY" and "UNIQUE" or itemData.rarity == "IDOL" and "IDOL" or "BASIC")
     if #itemData.name > 0 then
         item.title = itemData.name
         item.baseName = itemData.baseName

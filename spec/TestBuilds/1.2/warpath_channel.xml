@@ -116,7 +116,7 @@
 	<Import exportParty="false"></Import>
 	<Items activeItemSet="1" useSecondWeaponSet="nil">
 		<Item id="1">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Nihilis
 Unbound Locket
 Crafted: true
@@ -132,12 +132,12 @@ Implicits: 3
 {range:236}{rounding:Integer}(1-12)% increased Mana
 {range:105}(-4-8)% increased Movement Speed
 {range:33}{scalar:1.17}{rounding:Integer}(75-95)% increased Damage While Channelling
-{crafted}{range:165}{rounding:Integer}+(1-2) to All Skills
-{crafted}{range:241}{rounding:Integer}(-20-50)% increased Mana Regen
-{crafted}{range:219}{rounding:Integer}(-10-20)% more Armor
-{crafted}{range:226}+(-5-15)% to All Resistances
-{crafted}{range:41}(10-20)% of Current Health and Ward lost when you use Evade
-{crafted}{range:29}{rounding:Tenth}(1.2-4) Seconds of Frenzy after you use Evade
+{unique}{range:165}{rounding:Integer}+(1-2) to All Skills
+{unique}{range:241}{rounding:Integer}(-20-50)% increased Mana Regen
+{unique}{range:219}{rounding:Integer}(-10-20)% more Armor
+{unique}{range:226}+(-5-15)% to All Resistances
+{unique}{range:41}(10-20)% of Current Health and Ward lost when you use Evade
+{unique}{range:29}{rounding:Tenth}(1.2-4) Seconds of Frenzy after you use Evade
 			<ModRange id="1" range="218"></ModRange>
 			<ModRange id="2" range="236"></ModRange>
 			<ModRange id="3" range="105"></ModRange>
@@ -150,7 +150,7 @@ Implicits: 3
 			<ModRange id="10" range="29"></ModRange>
 		</Item>
 		<Item id="2">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Wings of Argentus
 Gladiator Armor
 Crafted: true
@@ -164,12 +164,12 @@ LevelReq: 60
 Implicits: 1
 +220 Armor
 {range:230}{scalar:1.5}{rounding:Integer}(8-9)% increased Health
-{crafted}{range:108}{rounding:Integer}(40-160)% increased Melee Fire Damage
-{crafted}{range:193}{rounding:Integer}(40-160)% increased Melee Cold Damage
-{crafted}20% Chance to gain Haste for 1 second on Hit
-{crafted}20% less Damage Taken While Moving
-{crafted}+2 to Fire Melee Attacks
-{crafted}+2 to Cold Melee Attacks
+{unique}{range:108}{rounding:Integer}(40-160)% increased Melee Fire Damage
+{unique}{range:193}{rounding:Integer}(40-160)% increased Melee Cold Damage
+{unique}20% Chance to gain Haste for 1 second on Hit
+{unique}20% less Damage Taken While Moving
+{unique}+2 to Fire Melee Attacks
+{unique}+2 to Cold Melee Attacks
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="230"></ModRange>
 			<ModRange id="3" range="108"></ModRange>
@@ -208,7 +208,7 @@ Implicits: 3
 			<ModRange id="7" range="146"></ModRange>
 		</Item>
 		<Item id="4">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Immortal Vise
 Eternal Gauntlets
 Crafted: true
@@ -223,12 +223,12 @@ Implicits: 2
 +211 Armor
 {range:158}(11-24)% of Armor Mitigation also applies to Damage over Time
 {range:220}{rounding:Integer}+(61-90) Health
-{crafted}{range:105}(25-30)% of Hit Damage Taken from Bosses and Rare enemies is dealt over 4 seconds instead
-{crafted}{range:223}(10-26)% increased Melee Attack Speed
-{crafted}{range:108}(1-2)% of Melee Damage Leeched as Health
-{crafted}{range:169}{rounding:Integer}+(60-90) Health
-{crafted}{range:86}{rounding:Integer}+(6-9) Strength
-{crafted}+30% Damage Reduction to Health below Endurance Threshold with Delayed Damage
+{unique}{range:105}(25-30)% of Hit Damage Taken from Bosses and Rare enemies is dealt over 4 seconds instead
+{unique}{range:223}(10-26)% increased Melee Attack Speed
+{unique}{range:108}(1-2)% of Melee Damage Leeched as Health
+{unique}{range:169}{rounding:Integer}+(60-90) Health
+{unique}{range:86}{rounding:Integer}+(6-9) Strength
+{unique}+30% Damage Reduction to Health below Endurance Threshold with Delayed Damage
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="158"></ModRange>
 			<ModRange id="3" range="220"></ModRange>
@@ -240,7 +240,7 @@ Implicits: 2
 			<ModRange id="9" range="127.5"></ModRange>
 		</Item>
 		<Item id="5">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Seed of Ekkidrasil
 Gladiator Helmet
 Crafted: true
@@ -254,13 +254,13 @@ LevelReq: 65
 Implicits: 1
 +130 Armor
 {range:74}{rounding:Integer}(15-20)% increased Health
-{crafted}{range:2}{rounding:Integer}+(40-64) Mana
-{crafted}{range:217}{rounding:Integer}(8-20)% increased Mana Regen
-{crafted}{range:56}(40-56)% of Endurance applies to all damage dealt to mana
-{crafted}{range:191}(20-28)% of Damage Dealt to Mana Before Health
-{crafted}{range:66}(4-8)% of Maximum Health gained as Endurance Threshold
-{crafted}{range:24}{rounding:Integer}+(40-64) Health
-{crafted}{range:29}(4-8)% chance to take 0 Damage when Hit
+{unique}{range:2}{rounding:Integer}+(40-64) Mana
+{unique}{range:217}{rounding:Integer}(8-20)% increased Mana Regen
+{unique}{range:56}(40-56)% of Endurance applies to all damage dealt to mana
+{unique}{range:191}(20-28)% of Damage Dealt to Mana Before Health
+{unique}{range:66}(4-8)% of Maximum Health gained as Endurance Threshold
+{unique}{range:24}{rounding:Integer}+(40-64) Health
+{unique}{range:29}(4-8)% chance to take 0 Damage when Hit
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="74"></ModRange>
 			<ModRange id="3" range="2"></ModRange>
@@ -272,7 +272,7 @@ Implicits: 1
 			<ModRange id="9" range="29"></ModRange>
 		</Item>
 		<Item id="6">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Vortex Pennant
 Mournful Pennant
 Crafted: true
@@ -290,12 +290,12 @@ Implicits: 2
 +3 to Smite
 {range:148}{rounding:Integer}(71-80)% increased Spell Damage
 {range:112}{rounding:Integer}(40-60)% increased Fire Damage
-{crafted}+1 Axe Throw every second while channelling Warpath
-{crafted}2% increased Axe Throw Frequency per 10% increased physical damage
-{crafted}+1 to Warpath
-{crafted}{range:78}{rounding:Integer}(13-52)% increased Physical Damage
-{crafted}+1 to Throwing Attacks
-{crafted}{range:78}(24-124)% Increased Physical Damage while Dual Wielding
+{unique}+1 Axe Throw every second while channelling Warpath
+{unique}2% increased Axe Throw Frequency per 10% increased physical damage
+{unique}+1 to Warpath
+{unique}{range:78}{rounding:Integer}(13-52)% increased Physical Damage
+{unique}+1 to Throwing Attacks
+{unique}{range:78}(24-124)% Increased Physical Damage while Dual Wielding
 			<ModRange id="1" range="75"></ModRange>
 			<ModRange id="2" range="33"></ModRange>
 			<ModRange id="3" range="236"></ModRange>
@@ -310,7 +310,7 @@ Implicits: 2
 			<ModRange id="12" range="78"></ModRange>
 		</Item>
 		<Item id="7">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Orian's Sun Seal
 Gold Ring
 Crafted: true
@@ -324,11 +324,11 @@ LevelReq: 25
 Implicits: 1
 {range:227}+(5-18)% Elemental Resistance
 {range:54}{rounding:Integer}+(100-130) Health
-{crafted}{range:155}{rounding:Integer}+(1-2) to Symbols of Hope
-{crafted}{range:188}(20-40)% Increased Symbol Gain Rate
-{crafted}{range:76}(70-80)% of Sigils of Hope Mana Cost consumed to cast it every 6 seconds while above half mana
-{crafted}{range:29}(15-25)% Increased Healing Effectiveness
-{crafted}{range:108}{rounding:Integer}(10-15)% increased Armor
+{unique}{range:155}{rounding:Integer}+(1-2) to Symbols of Hope
+{unique}{range:188}(20-40)% Increased Symbol Gain Rate
+{unique}{range:76}(70-80)% of Sigils of Hope Mana Cost consumed to cast it every 6 seconds while above half mana
+{unique}{range:29}(15-25)% Increased Healing Effectiveness
+{unique}{range:108}{rounding:Integer}(10-15)% increased Armor
 			<ModRange id="1" range="227"></ModRange>
 			<ModRange id="2" range="54"></ModRange>
 			<ModRange id="3" range="155"></ModRange>
@@ -338,7 +338,7 @@ Implicits: 1
 			<ModRange id="7" range="108"></ModRange>
 		</Item>
 		<Item id="8">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Siphon of Anguish
 Gold Ring
 Crafted: true
@@ -353,12 +353,12 @@ Implicits: 1
 {range:98}+(5-18)% Elemental Resistance
 {range:79}{rounding:Integer}+(100-130) Health
 {range:232}{rounding:Integer}+(7-8) Attunement
-{crafted}{range:165}(1-3)% of Melee Damage Leeched as Health
-{crafted}{range:36}(1-3)% of Void Damage Leeched as Health
-{crafted}{range:143}+(10-30)% Chance to apply Doom on Hit
-{crafted}{range:223}+(10-30)% Void Penetration with Doom
-{crafted}{range:90}(3-8)% increased Movement Speed
-{crafted}{range:244}(10-30)% Increased Leech Rate
+{unique}{range:165}(1-3)% of Melee Damage Leeched as Health
+{unique}{range:36}(1-3)% of Void Damage Leeched as Health
+{unique}{range:143}+(10-30)% Chance to apply Doom on Hit
+{unique}{range:223}+(10-30)% Void Penetration with Doom
+{unique}{range:90}(3-8)% increased Movement Speed
+{unique}{range:244}(10-30)% Increased Leech Rate
 			<ModRange id="1" range="98"></ModRange>
 			<ModRange id="2" range="79"></ModRange>
 			<ModRange id="3" range="232"></ModRange>
@@ -370,7 +370,7 @@ Implicits: 1
 			<ModRange id="9" range="244"></ModRange>
 		</Item>
 		<Item id="9">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Orian's Descent
 Plated Belt
 Crafted: true
@@ -385,12 +385,12 @@ Implicits: 2
 {range:38}{rounding:Integer}+(35-65) Armor
 +3 Potion Slots
 {range:244}{rounding:Integer}(8-9)% increased Health
-{crafted}{range:77}(30-45)% Chance to cast Smite on hit (max 6 per 10 seconds, this cooldown resets when you use a potion)
-{crafted}{range:131}{rounding:Integer}+(4-20) Intelligence
-{crafted}{range:77}(32-55)% Increased Chance To Find Potions
-{crafted}{range:198}{rounding:Integer}(8-16) Mana Gained on Potion Use
-{crafted}100% of Volatile Reversal cooldown reset on potion use
-{crafted}+100% Volatile Reversal deals more void damage or is converted to fire based on intelligence
+{unique}{range:77}(30-45)% Chance to cast Smite on hit (max 6 per 10 seconds, this cooldown resets when you use a potion)
+{unique}{range:131}{rounding:Integer}+(4-20) Intelligence
+{unique}{range:77}(32-55)% Increased Chance To Find Potions
+{unique}{range:198}{rounding:Integer}(8-16) Mana Gained on Potion Use
+{unique}100% of Volatile Reversal cooldown reset on potion use
+{unique}+100% Volatile Reversal deals more void damage or is converted to fire based on intelligence
 			<ModRange id="1" range="38"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="244"></ModRange>
@@ -431,7 +431,7 @@ Implicits: 2
 			<ModRange id="7" range="42"></ModRange>
 		</Item>
 		<Item id="11">
-			Rarity: UNIQUE
+			Rarity: LEGENDARY
 Palarus's Sacred Light
 Broadsword
 Crafted: true
@@ -447,11 +447,11 @@ Implicits: 1
 +22 Melee Damage
 {range:88}{scalar:1.75}+(56-70)% Chance to Shred Armor on Hit
 {range:88}{rounding:Integer}+(12-14) Spell Damage
-{crafted}+1 Melee Damage per 2 Attunement
-{crafted}+1 Spell Damage per 2 Strength
-{crafted}{range:44}+(32-46)% chance to cast Smite on Melee hit (up to 3 times per second)
-{crafted}{range:214}(32-46)% chance to cast Smite at two additional targets when you cast it directly
-{crafted}+2 to All Attributes
+{unique}+1 Melee Damage per 2 Attunement
+{unique}+1 Spell Damage per 2 Strength
+{unique}{range:44}+(32-46)% chance to cast Smite on Melee hit (up to 3 times per second)
+{unique}{range:214}(32-46)% chance to cast Smite at two additional targets when you cast it directly
+{unique}+2 to All Attributes
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="88"></ModRange>
 			<ModRange id="3" range="88"></ModRange>
@@ -496,7 +496,7 @@ Suffix: None
 Suffix: None
 LevelReq: 0
 Implicits: 0
-{crafted}100% Chance to gain a stack of Ambition when you hit a boss or rare enemy
+{unique}100% Chance to gain a stack of Ambition when you hit a boss or rare enemy
 			<ModRange id="1" range="127.5"></ModRange>
 		</Item>
 		<Item id="14">
