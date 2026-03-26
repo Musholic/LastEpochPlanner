@@ -18,13 +18,6 @@ Alternatively, the tool is available as a web-based version at https://lastepoch
 The following features are supported (or partially):
 * Passive tree
 * Character import: for offline character and from LE tools build planner
-* A lot of stats and mods/affixes are not working correctly.
-  * **Out of 14,259 mods, 5,120 (36%) mods are recognized by the parser**. Even if a mod is recognized, it's not guaranteed that it will work as expected.
-  * The total amount of mods is made of 
-    * the implicits (one for each implicit of each item)
-    * the prefixes and suffixes (one for each tier of each)
-    * the unique modifiers (one for each mod of each unique)
-    * the passive and skill trees (one for each mod of each node)
 * Items: Imported from character import and can be crafted / modified.
 * Rare, Exalted, Unique, Legendary, Set and Idol items
 * Blessings support
@@ -33,6 +26,14 @@ The following features are supported (or partially):
 * DPS calculation: support for several skills
 * Support for chance to inflict ailments
 * Support for debuff effects (resistance shred, chill, ...)
+
+A lot of stats and mods/affixes are yet not working correctly.
+* **Out of 15,506 mods, 5,465 (35%) mods are recognized by the parser**. Even if a mod is recognized, it's not guaranteed that it will work as expected.
+* The total amount of mods is made of 
+  * the implicits (one for each implicit of each item)
+  * the prefixes and suffixes (one for each tier of each)
+  * the unique modifiers (one for each mod of each unique)
+  * the passive and skill trees (one for each mod of each node)
 
 Note that **most content (docs or code) is outdated** since they only apply to the original project. Everything should be migrated as time goes by.
 
