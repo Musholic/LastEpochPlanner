@@ -3,7 +3,7 @@
     "Forge Guard": {
       "skill": "Forge Guard",
       "name": "Forge Guard",
-      "icon": "badge_forge guard",
+      "icon": "badge_forge_guard",
       "ascendancyName": "Forge Guard",
       "x": 0,
       "y": 0,
@@ -3169,7 +3169,7 @@
     "Void Knight": {
       "skill": "Void Knight",
       "name": "Void Knight",
-      "icon": "badge_void knight",
+      "icon": "badge_void_knight",
       "ascendancyName": "Void Knight",
       "x": 0,
       "y": 0,
