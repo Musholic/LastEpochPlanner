@@ -182,6 +182,9 @@ end
 function loadBuildFromXML(xmlText, name)
 	mainObject.main:SetMode("BUILD", false, name or "", xmlText)
 	runCallback("OnFrame")
+	-- Temporary(?) fix due to automated build tests not ending in a stable state (for some reason), we have to recompute the calculations another time
+	build.buildFlag = true
+	runCallback("OnFrame")
 end
 function loadBuildFromJSON(saveFileContent)
 	mainObject.main:SetMode("BUILD", false, "")
