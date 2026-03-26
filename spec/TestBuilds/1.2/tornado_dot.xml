@@ -1,13 +1,13 @@
 <LastEpochPlanner>
-	<Build ascendClassName="Druid" bandit="None" characterLevelAutoMode="false" className="Primalist" level="98" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
-		<PlayerStat stat="AverageHit" value="162.816"></PlayerStat>
-		<PlayerStat stat="AverageBurstDamage" value="162.816"></PlayerStat>
+	<Build ascendClassName="Druid" bandit="None" characterLevelAutoMode="false" className="Primalist" level="98" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_4" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="146.5344"></PlayerStat>
+		<PlayerStat stat="AverageBurstDamage" value="146.5344"></PlayerStat>
 		<PlayerStat stat="Speed" value="3.1491430370939"></PlayerStat>
 		<PlayerStat stat="PreEffectiveCritChance" value="0"></PlayerStat>
 		<PlayerStat stat="CritChance" value="0"></PlayerStat>
 		<PlayerStat stat="CritMultiplier" value="0"></PlayerStat>
-		<PlayerStat stat="TotalDPS" value="8203.6939636397"></PlayerStat>
-		<PlayerStat stat="CombinedDPS" value="8203.6939636397"></PlayerStat>
+		<PlayerStat stat="TotalDPS" value="9844.4327563676"></PlayerStat>
+		<PlayerStat stat="CombinedDPS" value="9844.4327563676"></PlayerStat>
 		<PlayerStat stat="ManaCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPercentCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPerSecondCost" value="0"></PlayerStat>
@@ -17,11 +17,11 @@
 		<PlayerStat stat="Dex" value="14"></PlayerStat>
 		<PlayerStat stat="Int" value="31"></PlayerStat>
 		<PlayerStat stat="Att" value="35"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="22707.533118736"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="23820.150673045"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="20990.96876986"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="18045.568691701"></PlayerStat>
 		<PlayerStat stat="LightningMaximumHitTaken" value="23820.150673045"></PlayerStat>
 		<PlayerStat stat="ColdMaximumHitTaken" value="23820.150673045"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="31572.153085341"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="23214.818445103"></PlayerStat>
 		<PlayerStat stat="PoisonMaximumHitTaken" value="23820.150673045"></PlayerStat>
 		<PlayerStat stat="NecroticMaximumHitTaken" value="19850.125560871"></PlayerStat>
 		<PlayerStat stat="VoidMaximumHitTaken" value="18609.492713317"></PlayerStat>
@@ -46,14 +46,14 @@
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
-		<PlayerStat stat="FireResist" value="75"></PlayerStat>
-		<PlayerStat stat="FireResistOverCap" value="2"></PlayerStat>
+		<PlayerStat stat="FireResist" value="67"></PlayerStat>
+		<PlayerStat stat="FireResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="LightningResist" value="75"></PlayerStat>
 		<PlayerStat stat="LightningResistOverCap" value="10"></PlayerStat>
 		<PlayerStat stat="ColdResist" value="75"></PlayerStat>
 		<PlayerStat stat="ColdResistOverCap" value="47"></PlayerStat>
-		<PlayerStat stat="PhysicalResist" value="75"></PlayerStat>
-		<PlayerStat stat="PhysicalResistOverCap" value="9"></PlayerStat>
+		<PlayerStat stat="PhysicalResist" value="66"></PlayerStat>
+		<PlayerStat stat="PhysicalResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="PoisonResist" value="75"></PlayerStat>
 		<PlayerStat stat="PoisonResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="NecroticResist" value="70"></PlayerStat>
@@ -61,8 +61,8 @@
 		<PlayerStat stat="VoidResist" value="68"></PlayerStat>
 		<PlayerStat stat="VoidResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.8"></PlayerStat>
-		<PlayerStat stat="FullDPS" value="8203.6939636397"></PlayerStat>
-		<FullDPSSkill skillPart="" source="" stat="Tornado" value="8203.6939636397"></FullDPSSkill>
+		<PlayerStat stat="FullDPS" value="9844.4327563676"></PlayerStat>
+		<FullDPSSkill skillPart="" source="" stat="Tornado" value="9844.4327563676"></FullDPSSkill>
 	</Build>
 	<Calcs>
 		<Input name="misc_buffMode" string="EFFECTIVE"></Input>
@@ -428,8 +428,6 @@ Implicits: 3
 {unique}{range:181}(10-35)% Chance to gain Haste for 1 second on Hit
 {unique}2% increased Spell Damage per 1% increased Movement Speed
 {unique}+1 Wrongwarp with Teleport or Transplant
-{unique}{range:179}(5-10)% Increased Cooldown Recovery Speed for Teleport
-{unique}{range:179}(5-10)% Increased Cooldown Recovery Speed for Transplant
 			<ModRange id="1" range="238"></ModRange>
 			<ModRange id="2" range="29"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -438,8 +436,6 @@ Implicits: 3
 			<ModRange id="6" range="181"></ModRange>
 			<ModRange id="7" range="127.5"></ModRange>
 			<ModRange id="8" range="127.5"></ModRange>
-			<ModRange id="9" range="179"></ModRange>
-			<ModRange id="10" range="179"></ModRange>
 		</Item>
 		<Item id="11">
 			Rarity: LEGENDARY
@@ -466,6 +462,7 @@ Implicits: 3
 {unique}-6 to -3 Totem Mana Cost
 {unique}{range:94}{rounding:Integer}+(3-6) Attunement
 {unique}{range:94}{rounding:Integer}+(3-6) Strength
+{unique}4 Storm Sprites summoned around totem (up to 2 times per 6 seconds)
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="216"></ModRange>
 			<ModRange id="3" range="243"></ModRange>
@@ -477,6 +474,7 @@ Implicits: 3
 			<ModRange id="9" range="127.5"></ModRange>
 			<ModRange id="10" range="94"></ModRange>
 			<ModRange id="11" range="94"></ModRange>
+			<ModRange id="12" range="127.5"></ModRange>
 		</Item>
 		<Item id="12">
 			Rarity: IDOL
@@ -511,8 +509,8 @@ Suffix: None
 Suffix: None
 LevelReq: 0
 Implicits: 0
-{range:101}+(18-23)% Fire Resistance
-{range:101}+(18-23)% Minion Fire Resistance
+{range:101}+(9-12)% Fire Resistance
+{range:101}+(9-12)% Minion Fire Resistance
 {range:220}(22-30)% increased Critical Strike Chance
 {range:220}+(3-6)% Critical Strike Multiplier
 			<ModRange id="1" range="101"></ModRange>
@@ -553,10 +551,10 @@ Suffix: None
 Suffix: None
 LevelReq: 0
 Implicits: 0
-{range:23}+(18-23)% Physical Resistance
-{range:23}+(18-23)% Minion Physical Resistance
-{range:154}+(3-4)% Necrotic Penetration
-{range:154}+(3-4)% Minion Necrotic Penetration
+{range:23}+(9-12)% Physical Resistance
+{range:23}+(9-12)% Minion Physical Resistance
+{range:154}+(1-2)% Necrotic Penetration
+{range:154}+(1-2)% Minion Necrotic Penetration
 			<ModRange id="1" range="23"></ModRange>
 			<ModRange id="2" range="23"></ModRange>
 			<ModRange id="3" range="154"></ModRange>
@@ -575,8 +573,8 @@ Suffix: None
 Suffix: None
 LevelReq: 0
 Implicits: 0
-{range:25}+(18-23)% Physical Resistance
-{range:25}+(18-23)% Minion Physical Resistance
+{range:25}+(9-12)% Physical Resistance
+{range:25}+(9-12)% Minion Physical Resistance
 {range:56}{scalar:0.38}+(13-36)% Chance to inflict Bleed on Hit
 			<ModRange id="1" range="25"></ModRange>
 			<ModRange id="2" range="25"></ModRange>
@@ -926,7 +924,7 @@ Implicits: 1
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
-		<Spec ascendClassId="3" classId="0" nodes="Druid#1,Primalist#1,Primalist-1#8,Primalist-10#1,Primalist-104#10,Primalist-111#8,Primalist-118#5,Primalist-12#8,Primalist-19#2,Primalist-3#5,Primalist-38#5,Primalist-40#1,Primalist-41#8,Primalist-6#6,Primalist-79#5,Primalist-81#3,Primalist-82#5,Primalist-89#4,Primalist-92#5,Primalist-93#5,Primalist-94#2,Primalist-97#7,Primalist-99#8,ga2st-0#1,ga2st-10#1,ga2st-11#2,ga2st-13#4,ga2st-14#1,ga2st-16#1,ga2st-2#1,ga2st-22#4,ga2st-23#2,ga2st-3#4,ga2st-6#1,ga2st-9#1,sw43-0#1,sw43-13#4,sw43-15#5,sw43-16#2,sw43-19#1,sw43-21#2,sw43-3#3,sw43-8#5,to50-0#1,to50-11#3,to50-17#1,to50-18#1,to50-19#4,to50-2#4,to50-4#4,to50-5#1,to50-6#4,wb8fo-0#1,wb8fo-13#2,wb8fo-15#4,wb8fo-18#4,wb8fo-2#1,wb8fo-26#1,wb8fo-29#2,wb8fo-3#1,wb8fo-4#5,wb8fo-5#1,wb8fo-7#1,wc57-0#1,wc57-12#1,wc57-13#1,wc57-15#1,wc57-17#1,wc57-18#2,wc57-19#1,wc57-2#2,wc57-27#2,wc57-28#1,wc57-3#3,wc57-30#1,wc57-32#1,wc57-33#1,wc57-5#1,wc57-6#2,wc57-7#1" treeVersion="1_3">
+		<Spec ascendClassId="3" classId="0" nodes="Druid#1,Primalist#1,Primalist-1#8,Primalist-10#1,Primalist-104#10,Primalist-111#8,Primalist-118#5,Primalist-12#8,Primalist-19#2,Primalist-3#5,Primalist-38#5,Primalist-40#1,Primalist-41#8,Primalist-6#6,Primalist-79#5,Primalist-81#3,Primalist-82#5,Primalist-89#4,Primalist-92#5,Primalist-93#5,Primalist-94#2,Primalist-97#7,Primalist-99#8,ga2st-0#1,ga2st-10#1,ga2st-11#2,ga2st-13#4,ga2st-14#1,ga2st-16#1,ga2st-2#1,ga2st-22#4,ga2st-23#2,ga2st-3#4,ga2st-6#1,ga2st-9#1,sw43-0#1,sw43-13#4,sw43-15#5,sw43-16#2,sw43-19#1,sw43-21#2,sw43-3#3,sw43-8#5,to50-0#1,to50-11#3,to50-17#1,to50-18#1,to50-19#4,to50-2#4,to50-4#4,to50-5#1,to50-6#4,wb8fo-0#1,wb8fo-13#2,wb8fo-15#4,wb8fo-18#4,wb8fo-2#1,wb8fo-26#1,wb8fo-29#2,wb8fo-3#1,wb8fo-4#5,wb8fo-5#1,wb8fo-7#1,wc57-0#1,wc57-12#1,wc57-13#1,wc57-15#1,wc57-17#1,wc57-18#2,wc57-19#1,wc57-2#2,wc57-27#2,wc57-28#1,wc57-3#3,wc57-30#1,wc57-32#1,wc57-33#1,wc57-5#1,wc57-6#2,wc57-7#1" treeVersion="1_4">
 			<Overrides></Overrides>
 		</Spec>
 	</Tree>

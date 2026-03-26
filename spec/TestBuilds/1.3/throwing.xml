@@ -1,5 +1,5 @@
 <LastEpochPlanner>
-	<Build ascendClassName="Paladin" bandit="None" characterLevelAutoMode="false" className="Sentinel" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
+	<Build ascendClassName="Paladin" bandit="None" characterLevelAutoMode="false" className="Sentinel" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_4" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="558.707625"></PlayerStat>
 		<PlayerStat stat="AverageDamage" value="558.707625"></PlayerStat>
 		<PlayerStat stat="AverageBurstDamage" value="558.707625"></PlayerStat>
@@ -19,13 +19,13 @@
 		<PlayerStat stat="Dex" value="11"></PlayerStat>
 		<PlayerStat stat="Int" value="11"></PlayerStat>
 		<PlayerStat stat="Att" value="4"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="14429.798062978"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="13892.143133397"></PlayerStat>
 		<PlayerStat stat="FireMaximumHitTaken" value="13988.662162194"></PlayerStat>
 		<PlayerStat stat="LightningMaximumHitTaken" value="9069.5721710926"></PlayerStat>
 		<PlayerStat stat="ColdMaximumHitTaken" value="9069.5721710926"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="50150.012504509"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="37992.433715537"></PlayerStat>
 		<PlayerStat stat="PoisonMaximumHitTaken" value="11305.905035198"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="33013.242702777"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="23580.887644841"></PlayerStat>
 		<PlayerStat stat="VoidMaximumHitTaken" value="21162.335065883"></PlayerStat>
 		<PlayerStat stat="Life" value="4592"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="12"></PlayerStat>
@@ -54,11 +54,11 @@
 		<PlayerStat stat="LightningResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="ColdResist" value="9"></PlayerStat>
 		<PlayerStat stat="ColdResistOverCap" value="0"></PlayerStat>
-		<PlayerStat stat="PhysicalResist" value="75"></PlayerStat>
-		<PlayerStat stat="PhysicalResistOverCap" value="2"></PlayerStat>
+		<PlayerStat stat="PhysicalResist" value="67"></PlayerStat>
+		<PlayerStat stat="PhysicalResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="PoisonResist" value="27"></PlayerStat>
 		<PlayerStat stat="PoisonResistOverCap" value="0"></PlayerStat>
-		<PlayerStat stat="NecroticResist" value="75"></PlayerStat>
+		<PlayerStat stat="NecroticResist" value="65"></PlayerStat>
 		<PlayerStat stat="NecroticResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="VoidResist" value="61"></PlayerStat>
 		<PlayerStat stat="VoidResistOverCap" value="0"></PlayerStat>
@@ -582,8 +582,8 @@ Suffix: None
 Suffix: None
 LevelReq: 0
 Implicits: 0
-{range:127.5}+(18-23)% Physical Resistance
-{range:127.5}+(18-23)% Minion Physical Resistance
+{range:127.5}+(9-12)% Physical Resistance
+{range:127.5}+(9-12)% Minion Physical Resistance
 {range:127.5}+(15-20)% Chance to inflict Bleed on Hit
 {range:127.5}+(1-2)% Physical Penetration with Bleed
 			<ModRange id="1" range="127.5"></ModRange>
@@ -604,8 +604,8 @@ Suffix: None
 Suffix: None
 LevelReq: 0
 Implicits: 0
-{range:127.5}+(18-23)% Necrotic Resistance
-{range:127.5}+(18-23)% Minion Necrotic Resistance
+{range:127.5}+(9-12)% Necrotic Resistance
+{range:127.5}+(9-12)% Minion Necrotic Resistance
 {range:127.5}+(15-20)% Chance to inflict Bleed on Hit
 {range:127.5}+(1-2)% Physical Penetration with Bleed
 			<ModRange id="1" range="127.5"></ModRange>
@@ -774,7 +774,7 @@ Implicits: 1
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
-		<Spec ascendClassId="3" classId="2" nodes="Paladin#1,Sentinel#1,Sentinel-0#8,Sentinel-1#1,Sentinel-108#5,Sentinel-11#5,Sentinel-119#5,Sentinel-2#5,Sentinel-27#3,Sentinel-49#6,Sentinel-65#5,Sentinel-69#2,Sentinel-72#5,Sentinel-77#8,Sentinel-8#5,Sentinel-81#8,Sentinel-84#10,Sentinel-87#7,Sentinel-89#4,Sentinel-90#5,Sentinel-93#5,Sentinel-95#5,Sentinel-98#6,ah443-0#1,ah443-10#4,ah443-11#2,ah443-12#5,ah443-16#1,ah443-18#3,ah443-19#2,ah443-4#3,hh7pa3-0#1,hh7pa3-1#1,hh7pa3-10#3,hh7pa3-11#1,hh7pa3-18#4,hh7pa3-2#1,hh7pa3-20#2,hh7pa3-22#1,hh7pa3-26#1,hh7pa3-3#1,hh7pa3-4#1,hh7pa3-9#4,ht16aw-0#1,ht16aw-16#1,ht16aw-17#1,ht16aw-18#2,ht16aw-2#1,ht16aw-20#1,ht16aw-21#1,ht16aw-22#6,ht16aw-24#3,ht16aw-9#5,si4lgl-0#1,si4lgl-15#2,si4lgl-2#1,si4lgl-23#2,si4lgl-24#1,si4lgl-26#3,si4lgl-28#1,si4lgl-32#4,si4lgl-4#1,si4lgl-5#5,sm87r4-0#1,sm87r4-10#3,sm87r4-11#4,sm87r4-20#2,sm87r4-28#5,sm87r4-30#5,sm87r4-9#1" treeVersion="1_3">
+		<Spec ascendClassId="3" classId="2" nodes="Paladin#1,Sentinel#1,Sentinel-0#8,Sentinel-1#1,Sentinel-108#5,Sentinel-11#5,Sentinel-119#5,Sentinel-2#5,Sentinel-27#3,Sentinel-49#6,Sentinel-65#5,Sentinel-69#2,Sentinel-72#5,Sentinel-77#8,Sentinel-8#5,Sentinel-81#8,Sentinel-84#10,Sentinel-87#7,Sentinel-89#4,Sentinel-90#5,Sentinel-93#5,Sentinel-95#5,Sentinel-98#6,ah443-0#1,ah443-10#4,ah443-11#2,ah443-12#5,ah443-16#1,ah443-18#3,ah443-19#2,ah443-4#3,hh7pa3-0#1,hh7pa3-1#1,hh7pa3-10#3,hh7pa3-11#1,hh7pa3-18#4,hh7pa3-2#1,hh7pa3-20#2,hh7pa3-22#1,hh7pa3-26#1,hh7pa3-3#1,hh7pa3-4#1,hh7pa3-9#4,ht16aw-0#1,ht16aw-16#1,ht16aw-17#1,ht16aw-18#2,ht16aw-2#1,ht16aw-20#1,ht16aw-21#1,ht16aw-22#6,ht16aw-24#3,ht16aw-9#5,si4lgl-0#1,si4lgl-15#2,si4lgl-2#1,si4lgl-23#2,si4lgl-24#1,si4lgl-26#3,si4lgl-28#1,si4lgl-32#4,si4lgl-4#1,si4lgl-5#5,sm87r4-0#1,sm87r4-10#3,sm87r4-11#4,sm87r4-20#2,sm87r4-28#5,sm87r4-30#5,sm87r4-9#1" treeVersion="1_4">
 			<Overrides></Overrides>
 		</Spec>
 	</Tree>

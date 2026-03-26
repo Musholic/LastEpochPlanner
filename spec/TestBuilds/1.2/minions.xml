@@ -1,5 +1,5 @@
 <LastEpochPlanner>
-	<Build ascendClassName="Necromancer" bandit="None" characterLevelAutoMode="false" className="Acolyte" level="100" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
+	<Build ascendClassName="Necromancer" bandit="None" characterLevelAutoMode="false" className="Acolyte" level="100" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_4" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="110.9808"></PlayerStat>
 		<PlayerStat stat="AverageBurstDamage" value="110.9808"></PlayerStat>
 		<PlayerStat stat="Speed" value="1.4666666275556"></PlayerStat>
@@ -17,10 +17,10 @@
 		<PlayerStat stat="Dex" value="14"></PlayerStat>
 		<PlayerStat stat="Int" value="97"></PlayerStat>
 		<PlayerStat stat="Att" value="1"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="16235.613342564"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="15901.742185618"></PlayerStat>
 		<PlayerStat stat="FireMaximumHitTaken" value="18018.050830113"></PlayerStat>
 		<PlayerStat stat="LightningMaximumHitTaken" value="31711.769460998"></PlayerStat>
-		<PlayerStat stat="ColdMaximumHitTaken" value="14681.374750462"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="12387.409945702"></PlayerStat>
 		<PlayerStat stat="PhysicalMaximumHitTaken" value="35045.154330945"></PlayerStat>
 		<PlayerStat stat="PoisonMaximumHitTaken" value="11325.631950356"></PlayerStat>
 		<PlayerStat stat="NecroticMaximumHitTaken" value="31711.769460998"></PlayerStat>
@@ -50,7 +50,7 @@
 		<PlayerStat stat="FireResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="LightningResist" value="75"></PlayerStat>
 		<PlayerStat stat="LightningResistOverCap" value="25"></PlayerStat>
-		<PlayerStat stat="ColdResist" value="46"></PlayerStat>
+		<PlayerStat stat="ColdResist" value="36"></PlayerStat>
 		<PlayerStat stat="ColdResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="PhysicalResist" value="75"></PlayerStat>
 		<PlayerStat stat="PhysicalResistOverCap" value="8"></PlayerStat>
@@ -413,12 +413,12 @@ Implicits: 2
 +78 Melee Damage
 {range:226}{rounding:Integer}(80-120)% increased Poison Damage
 {range:188}{scalar:3.2}{rounding:Integer}(111-140)% increased Minion Damage Over Time
-{unique}{range:49}{rounding:Integer}(150-210)% increased Melee Damage
-{unique}{range:238}{rounding:Integer}(150-210)% increased Minion Damage
+{unique}{range:49}{rounding:Integer}(150-209)% increased Melee Damage
+{unique}{range:238}{rounding:Integer}(150-209)% increased Minion Damage
 {unique}+25% Chance to cast Jade Dust on Hit with Harvest
-{unique}{range:213}(150-210)% of Player Poison Damage Applies to Skeleton Rogues
+{unique}{range:213}(150-209)% of Player Poison Damage Applies to Skeleton Rogues
 {unique}8% of Minion Poison Damage Leeched as Health
-{unique}{range:213}(150-210)% of Player Poison Damage Applies to your Falcon
+{unique}{range:213}(150-209)% of Player Poison Damage Applies to your Falcon
 {unique}{range:34}{rounding:Integer}+(1-3) to Throwing Minion Skills
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="226"></ModRange>
@@ -522,8 +522,8 @@ Suffix: None
 Suffix: None
 LevelReq: 0
 Implicits: 0
-{range:112}+(18-23)% Cold Resistance
-{range:112}+(18-23)% Minion Cold Resistance
+{range:112}+(9-12)% Cold Resistance
+{range:112}+(9-12)% Minion Cold Resistance
 {range:237}{scalar:0.38}{rounding:Integer}(5-11)% increased Health
 			<ModRange id="1" range="112"></ModRange>
 			<ModRange id="2" range="112"></ModRange>
@@ -916,7 +916,7 @@ Implicits: 1
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
-		<Spec ascendClassId="1" classId="3" nodes="Acolyte#1,Acolyte-0#1,Acolyte-1#8,Acolyte-11#8,Acolyte-15#5,Acolyte-16#10,Acolyte-21#1,Acolyte-23#8,Acolyte-26#10,Acolyte-3#1,Acolyte-32#8,Acolyte-34#8,Acolyte-38#8,Acolyte-4#3,Acolyte-55#5,Acolyte-58#5,Acolyte-59#1,Acolyte-62#5,Acolyte-63#5,Acolyte-7#5,Acolyte-8#1,Acolyte-80#1,Acolyte-83#6,Necromancer#1,ad0ry-0#1,ad0ry-13#4,ad0ry-14#1,ad0ry-15#3,ad0ry-20#1,ad0ry-21#3,ad0ry-22#1,ad0ry-28#4,ad0ry-30#3,bg36nl-0#1,bg36nl-13#1,bg36nl-15#4,bg36nl-16#1,bg36nl-2#5,bg36nl-5#3,bg36nl-7#1,bg36nl-8#5,ds4d3-0#1,ds4d3-14#1,ds4d3-15#1,ds4d3-16#3,ds4d3-2#2,ds4d3-20#4,ds4d3-4#1,ds4d3-8#3,is40-0#1,is40-13#2,is40-14#4,is40-17#1,is40-19#3,is40-20#1,is40-21#1,is40-22#1,is40-23#1,is40-24#3,is40-25#3,sw42ih-0#1,sw42ih-10#1,sw42ih-11#1,sw42ih-12#3,sw42ih-2#1,sw42ih-22#1,sw42ih-23#5,sw42ih-28#5,sw42ih-4#3,sw42ih-9#2" treeVersion="1_3">
+		<Spec ascendClassId="1" classId="3" nodes="Acolyte#1,Acolyte-0#1,Acolyte-1#8,Acolyte-11#8,Acolyte-15#5,Acolyte-16#10,Acolyte-21#1,Acolyte-23#8,Acolyte-26#10,Acolyte-3#1,Acolyte-32#8,Acolyte-34#8,Acolyte-38#8,Acolyte-4#3,Acolyte-55#5,Acolyte-58#5,Acolyte-59#1,Acolyte-62#5,Acolyte-63#5,Acolyte-7#5,Acolyte-8#1,Acolyte-80#1,Acolyte-83#6,Necromancer#1,ad0ry-0#1,ad0ry-13#4,ad0ry-14#1,ad0ry-15#3,ad0ry-20#1,ad0ry-21#3,ad0ry-22#1,ad0ry-28#4,ad0ry-30#3,bg36nl-0#1,bg36nl-13#1,bg36nl-15#4,bg36nl-16#1,bg36nl-2#5,bg36nl-5#3,bg36nl-7#1,bg36nl-8#5,ds4d3-0#1,ds4d3-14#1,ds4d3-15#1,ds4d3-16#3,ds4d3-2#2,ds4d3-20#4,ds4d3-4#1,ds4d3-8#3,is40-0#1,is40-13#2,is40-14#4,is40-17#1,is40-19#3,is40-20#1,is40-21#1,is40-22#1,is40-23#1,is40-24#3,is40-25#3,sw42ih-0#1,sw42ih-10#1,sw42ih-11#1,sw42ih-12#3,sw42ih-2#1,sw42ih-22#1,sw42ih-23#5,sw42ih-28#5,sw42ih-4#3,sw42ih-9#2" treeVersion="1_4">
 			<Overrides></Overrides>
 		</Spec>
 	</Tree>

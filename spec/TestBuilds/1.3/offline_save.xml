@@ -1,15 +1,15 @@
 <LastEpochPlanner>
-	<Build ascendClassName="Lich" bandit="None" characterLevelAutoMode="false" className="Acolyte" level="62" mainSocketGroup="4" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
-		<PlayerStat stat="AverageHit" value="1391.775352"></PlayerStat>
-		<PlayerStat stat="AverageDamage" value="1391.775352"></PlayerStat>
-		<PlayerStat stat="AverageBurstDamage" value="1391.775352"></PlayerStat>
+	<Build ascendClassName="Lich" bandit="None" characterLevelAutoMode="false" className="Acolyte" level="62" mainSocketGroup="4" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_4" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="1115.20319625"></PlayerStat>
+		<PlayerStat stat="AverageDamage" value="1115.20319625"></PlayerStat>
+		<PlayerStat stat="AverageBurstDamage" value="1115.20319625"></PlayerStat>
 		<PlayerStat stat="Speed" value="1.57300001573"></PlayerStat>
 		<PlayerStat stat="PreEffectiveCritChance" value="7.55"></PlayerStat>
 		<PlayerStat stat="CritChance" value="7.55"></PlayerStat>
 		<PlayerStat stat="CritMultiplier" value="2.35"></PlayerStat>
 		<PlayerStat stat="HitChance" value="100"></PlayerStat>
-		<PlayerStat stat="TotalDPS" value="2189.2626505886"></PlayerStat>
-		<PlayerStat stat="CombinedDPS" value="2189.2626505886"></PlayerStat>
+		<PlayerStat stat="TotalDPS" value="1754.2146452434"></PlayerStat>
+		<PlayerStat stat="CombinedDPS" value="1754.2146452434"></PlayerStat>
 		<PlayerStat stat="ManaCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPercentCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPerSecondCost" value="0"></PlayerStat>
@@ -19,8 +19,8 @@
 		<PlayerStat stat="Dex" value="22"></PlayerStat>
 		<PlayerStat stat="Int" value="24"></PlayerStat>
 		<PlayerStat stat="Att" value="14"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="3440.9822245659"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="3331.0603071366"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="3355.7879451565"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="2848.2979437835"></PlayerStat>
 		<PlayerStat stat="LightningMaximumHitTaken" value="2977.7660321373"></PlayerStat>
 		<PlayerStat stat="ColdMaximumHitTaken" value="2655.8453800143"></PlayerStat>
 		<PlayerStat stat="PhysicalMaximumHitTaken" value="5696.8812116608"></PlayerStat>
@@ -48,7 +48,7 @@
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
-		<PlayerStat stat="FireResist" value="41"></PlayerStat>
+		<PlayerStat stat="FireResist" value="31"></PlayerStat>
 		<PlayerStat stat="FireResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="LightningResist" value="34"></PlayerStat>
 		<PlayerStat stat="LightningResistOverCap" value="0"></PlayerStat>
@@ -63,11 +63,10 @@
 		<PlayerStat stat="VoidResist" value="10"></PlayerStat>
 		<PlayerStat stat="VoidResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.57"></PlayerStat>
-		<PlayerStat stat="FullDPS" value="2777.9413899754"></PlayerStat>
-		<FullDPSSkill skillPart="" source="" stat="Flay" value="2189.2626505886"></FullDPSSkill>
-		<FullDPSSkill skillPart="" source="Flay 1" stat="Bleed" value="338.17534088175"></FullDPSSkill>
-		<FullDPSSkill skillPart="" source="Flay 1" stat="Poison" value="240.08148690081"></FullDPSSkill>
-		<FullDPSSkill skillPart="" source="Flay 1" stat="Ignite" value="10.421911604219"></FullDPSSkill>
+		<PlayerStat stat="FullDPS" value="1987.4370655756"></PlayerStat>
+		<FullDPSSkill skillPart="" source="" stat="Flay" value="1754.2146452434"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="Flay 1" stat="Poison" value="223.51779673518"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="Flay 1" stat="Ignite" value="9.7046235970462"></FullDPSSkill>
 	</Build>
 	<Calcs>
 		<Input name="misc_buffMode" string="EFFECTIVE"></Input>
@@ -381,13 +380,13 @@ Implicits: 3
 {range:223}{rounding:Integer}+(2-6) to All Attributes
 {range:238}(3-10)% increased Movement Speed
 {range:130}+(4-15)% to All Resistances
-{unique}{range:156}{rounding:Integer}+(1-2) to All Skills
+{unique}+15% to Minion All Resistances
 {unique}100% chance to Summon a Rift Beast when a hit leaves a Boss or Champion below 40% health (40 second cooldown)
 {unique}40% increased Minion Damage
 			<ModRange id="1" range="223"></ModRange>
 			<ModRange id="2" range="238"></ModRange>
 			<ModRange id="3" range="130"></ModRange>
-			<ModRange id="4" range="156"></ModRange>
+			<ModRange id="4" range="127.5"></ModRange>
 			<ModRange id="5" range="127.5"></ModRange>
 			<ModRange id="6" range="127.5"></ModRange>
 		</Item>
@@ -600,8 +599,8 @@ Suffix: None
 Suffix: None
 LevelReq: 0
 Implicits: 0
-{range:130}+(18-23)% Fire Resistance
-{range:130}+(18-23)% Minion Fire Resistance
+{range:130}+(9-12)% Fire Resistance
+{range:130}+(9-12)% Minion Fire Resistance
 {range:46}{scalar:0.38}+(13-30)% Chance to Ignite on Hit
 			<ModRange id="1" range="130"></ModRange>
 			<ModRange id="2" range="130"></ModRange>
@@ -706,16 +705,14 @@ Implicits: 0
 			<Skill enabled="true" includeInFullDPS="false" index="11" label="Poison (from Reaper Form)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="ReaperForm"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="12" label="Poison (from Aura Of Decay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="AuraOfDecay"></Skill>
 			<Skill enabled="true" includeInFullDPS="true" index="13" label="Shred Armor (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="Flay 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="14" label="Bleed (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="Flay 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="15" label="Chill (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Chill" source="Flay 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="16" label="Haste (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Haste" source="Flay 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="17" label="Ignite (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="Flay 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="18" label="Poison (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="Flay 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="19" label="Bone Curse (from Bone Curse)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_BoneCurse" source="BoneCurse"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="14" label="Chill (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Chill" source="Flay 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="15" label="Ignite (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="Flay 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="16" label="Poison (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="Flay 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="17" label="Bone Curse (from Bone Curse)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_BoneCurse" source="BoneCurse"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
-		<Spec ascendClassId="2" classId="3" nodes="Acolyte#1,Acolyte-115#5,Acolyte-2#5,Acolyte-22#1,Acolyte-29#8,Acolyte-30#2,Acolyte-31#1,Acolyte-33#4,Acolyte-35#4,Acolyte-37#5,Acolyte-43#1,Acolyte-44#5,Acolyte-46#10,Acolyte-55#5,Acolyte-56#5,Acolyte-6#5,Acolyte-67#1,Acolyte-70#5,Acolyte-71#2,Acolyte-78#1,Lich#1,ad0ry-0#1,ad0ry-10#1,ad0ry-13#4,ad0ry-17#3,ad0ry-19#2,ad0ry-20#3,ad0ry-21#3,ad0ry-22#1,ad0ry-9#4,bc53-0#1,bc53-12#4,bc53-14#5,bc53-15#3,bc53-16#1,bc53-23#1,bc53-25#2,bc53-26#2,bc53-27#2,bc53-9#3,fl44-0#1,fl44-1#2,fl44-10#1,fl44-16#1,fl44-2#1,fl44-23#3,fl44-28#1,fl44-3#2,fl44-32#2,fl44-35#1,fl44-4#2,fl44-5#3,fl44-6#2,fl44-8#2,fl44-9#1,rf1azz-0#1,rf1azz-13#2,rf1azz-18#3,rf1azz-2#1,rf1azz-21#2,rf1azz-3#2,rf1azz-31#4,rf1azz-33#3,rf1azz-6#3,ts50pl-0#1,ts50pl-17#1,ts50pl-18#3,ts50pl-19#1,ts50pl-2#1,ts50pl-25#1,ts50pl-26#3,ts50pl-4#3,ts50pl-5#3,ts50pl-6#1,ts50pl-7#1,ts50pl-8#1" treeVersion="1_3">
+		<Spec ascendClassId="2" classId="3" nodes="Acolyte#1,Acolyte-115#5,Acolyte-2#5,Acolyte-22#1,Acolyte-29#8,Acolyte-30#2,Acolyte-31#1,Acolyte-33#4,Acolyte-35#4,Acolyte-37#5,Acolyte-43#1,Acolyte-44#5,Acolyte-46#10,Acolyte-55#5,Acolyte-56#5,Acolyte-6#5,Acolyte-67#1,Acolyte-70#5,Acolyte-71#2,Acolyte-78#1,Lich#1,ad0ry-0#1,ad0ry-10#1,ad0ry-13#4,ad0ry-17#3,ad0ry-19#2,ad0ry-20#3,ad0ry-21#3,ad0ry-22#1,ad0ry-9#4,bc53-0#1,bc53-12#4,bc53-14#5,bc53-15#3,bc53-16#1,bc53-23#1,bc53-25#2,bc53-26#2,bc53-27#2,bc53-9#3,fl44-0#1,fl44-10#1,fl44-16#1,fl44-2#1,fl44-3#2,fl44-4#2,fl44-5#3,fl44-6#2,rf1azz-0#1,rf1azz-13#2,rf1azz-18#3,rf1azz-2#1,rf1azz-21#2,rf1azz-3#2,rf1azz-31#4,rf1azz-33#3,rf1azz-6#3,ts50pl-0#1,ts50pl-17#1,ts50pl-18#3,ts50pl-19#1,ts50pl-2#1,ts50pl-25#1,ts50pl-26#3,ts50pl-4#3,ts50pl-5#3,ts50pl-6#1,ts50pl-7#1,ts50pl-8#1" treeVersion="1_4">
 			<Overrides></Overrides>
 		</Spec>
 	</Tree>
