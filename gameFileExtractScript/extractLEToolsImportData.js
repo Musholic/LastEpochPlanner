@@ -4,16 +4,23 @@ function le_e(a) {
     ? ((a = le_c(a.displayNameKey)), le_wa(a))
     : a.displayName;
 }
-JSON.stringify(Object.fromEntries(Object.entries(le_k).map(([k, v]) => [k, {
-  "baseTypeId": v.baseTypeId,
-  "subTypeId": v.subTypeId,
-  "uniqueId": v.uniqueId
-}])));
+JSON.stringify(
+  Object.fromEntries(
+    Object.entries(le_j).map(([k, v]) => [
+      k,
+      {
+        baseTypeId: v.baseTypeId,
+        subTypeId: v.subTypeId,
+        uniqueId: v.uniqueId,
+      },
+    ]),
+  ),
+);
 
 JSON.stringify(
   Object.fromEntries(
-    Object.entries(le_n)
-      .concat(Object.entries(le_m))
+    Object.entries(le_k)
+      .concat(Object.entries(le_l))
       .map(([k, v]) => [v.id, v.affixId]),
   ),
 );
