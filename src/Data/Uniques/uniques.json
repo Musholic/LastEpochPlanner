@@ -645,14 +645,16 @@
       "{rounding:Integer}+(17-21) Spell Lightning Damage",
       "{rounding:Integer}-6 to -3 Totem Mana Cost",
       "{rounding:Integer}+(3-6) Attunement",
-      "{rounding:Integer}+(3-6) Strength"
+      "{rounding:Integer}+(3-6) Strength",
+      "4 Storm Sprites summoned around totem (up to 2 times per 6 seconds)"
     ],
     "rollIds": [
       0,
       1,
       2,
       3,
-      3
+      3,
+      null
     ]
   },
   "32": {
@@ -788,9 +790,9 @@
     },
     "mods": [
       "+(20-45)% Chance to Ignite on Melee Hit",
-      "+(20-35)% Chance to inflict Bleed on Melee Hit",
+      "+(20-45)% Chance to inflict Bleed on Melee Hit",
       "+(20-45)% Chance to Chill on Melee Hit",
-      "+(15-35)% Chance to Shock on Melee Hit",
+      "+(20-45)% Chance to Shock on Melee Hit",
       "+(20-45)% Chance to Slow on Melee Hit",
       "+(20-45)% Chance to Poison on Melee Hit",
       "+(20-45)% Chance to Blind on Melee Hit",
@@ -1151,7 +1153,7 @@
     "mods": [
       "{rounding:Integer}(100-160)% increased Damage While Transformed",
       "(6-12)% increased Movement Speed While Transformed",
-      "-25% to -15% to All Resistances While Transformed"
+      "-25% to -16% to All Resistances While Transformed"
     ],
     "rollIds": [
       0,
@@ -1167,7 +1169,7 @@
       "level": 0
     },
     "mods": [
-      "13% increased Cold Spell Cast Speed",
+      "21% increased Cold Spell Cast Speed",
       "+(30-75)% Freeze Rate Multiplier",
       "+1 to Snap Freeze",
       "+(30-60)% Critical Strike Multiplier against Frozen Enemies"
@@ -1285,7 +1287,7 @@
     "mods": [
       "+(30-75)% Chance to Ignite on Hit",
       "{rounding:Integer}(30-75)% increased Fire Damage Over Time",
-      "13% increased Fire Spell Cast Speed",
+      "21% increased Fire Spell Cast Speed",
       "+1 to Flame Ward"
     ],
     "rollIds": [
@@ -1305,7 +1307,7 @@
     "mods": [
       "+(30-75)% Chance to Shock on Spell Hit",
       "(5-10)% Chance to Gain 75 Ward when you hit a Shocked Enemy (up to 3 times per 2 seconds)",
-      "+13 Spell Lightning Damage",
+      "+15 Spell Lightning Damage",
       "+1 to Static"
     ],
     "rollIds": [
@@ -1344,13 +1346,19 @@
       "+(40-70)% Chance to Chill on Hit",
       "+13 Melee Necrotic Damage",
       "+(7-13)% Cold Resistance",
-      "+1 Maximum Skeletons"
+      "+1 Maximum Skeletons",
+      "+(7-13)% Minion Cold Resistance",
+      "+(7-13)% Physical Resistance",
+      "+(7-13)% Minion Physical Resistance"
     ],
     "rollIds": [
       0,
       null,
-      0,
-      null
+      1,
+      null,
+      1,
+      2,
+      2
     ]
   },
   "67": {
@@ -1497,7 +1505,7 @@
     "mods": [
       "+(100-220)% Chance to Poison on Hit",
       "+100% Chance to inflict Plague on Hit",
-      "(10-20)% more more Damage Over Time per stack of A Plague",
+      "(10-20)% more Damage Over Time per stack of A Plague",
       "(3-6)% of Current Health Drained per Second",
       "+(10-200)% Poison Penetration with Plague "
     ],
@@ -1562,45 +1570,79 @@
     ]
   },
   "77": {
-    "name": "Bee Keeper Helmet",
-    "baseTypeID": 0,
-    "subTypeID": 0,
+    "name": "Apiarist's Smoker",
+    "baseTypeID": 19,
+    "subTypeID": 20,
     "req": {
       "level": 0
     },
     "mods": [
-      "+5 Bees Per 10 Seconds"
+      "{rounding:Integer}+(2-3) Bees Per 10 Seconds",
+      "+(30-60)% Chance to Poison on Minion Hit",
+      "100% less Damage Over Time Taken",
+      "(20-35)% increased Minion Movement Speed",
+      "{rounding:Integer}+(200-400) Minion Dodge Rating",
+      "+(12-18)% Endurance"
     ],
     "rollIds": [
-      null
+      0,
+      0,
+      null,
+      0,
+      0,
+      0
     ]
   },
   "78": {
-    "name": "Bee Keeper Armor",
+    "name": "Apiarist's Suit",
     "baseTypeID": 1,
-    "subTypeID": 0,
+    "subTypeID": 1,
     "req": {
-      "level": 0
+      "level": 38
     },
     "mods": [
-      "+7 Bees Per 10 Seconds"
+      "{rounding:Integer}+(2-3) Bees Per 10 Seconds",
+      "{rounding:Integer}+(4-6) Health Regeneration per Summoned Bee",
+      "{rounding:Integer}+(8-18) Attunement",
+      "{rounding:Integer}+(80-150) Health",
+      "{rounding:Integer}+(80-150) Minion Health",
+      "{rounding:Integer}+(200-400) Armor",
+      "{rounding:Integer}+(200-400) Minion Armor",
+      "+(20-30)% Physical Resistance",
+      "+(50-75)% Poison Resistance"
     ],
     "rollIds": [
-      null
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ]
   },
   "79": {
-    "name": "Bee Keeper Belt",
-    "baseTypeID": 2,
-    "subTypeID": 0,
+    "name": "Apiarist's Comb",
+    "baseTypeID": 7,
+    "subTypeID": 3,
     "req": {
-      "level": 0
+      "level": 42
     },
     "mods": [
-      "+3 Bees Per 10 Seconds"
+      "{rounding:Integer}+(4-8) Bees Per 10 Seconds",
+      "{rounding:Integer}+(12-24) Melee Damage",
+      "{rounding:Integer}(40-80)% increased Minion Damage",
+      "(8-18)% increased Minion Attack Speed",
+      "+(30-60)% Chance to inflict Bleed on Minion Hit"
     ],
     "rollIds": [
-      null
+      0,
+      0,
+      0,
+      0,
+      0
     ]
   },
   "80": {
@@ -1723,16 +1765,18 @@
     "mods": [
       "(25-42)% Increased Stun Duration",
       "{rounding:Integer}+(42-84) Melee Physical Damage",
-      "(250-420)% Increased Stun Chance",
-      "+(25-42)% Ignite Chance per Forged Weapon",
-      "{rounding:Integer}+(10-25) Melee Fire Damage per Forged Weapon"
+      "(250-419)% Increased Stun Chance",
+      "+(30-60)% Ignite Chance per Forged Weapon",
+      "{rounding:Integer}+(15-30) Melee Fire Damage per Forged Weapon",
+      "{rounding:Integer}(50-75)% increased Fire Damage"
     ],
     "rollIds": [
       4,
       0,
       1,
       2,
-      3
+      3,
+      4
     ]
   },
   "86": {
@@ -1743,10 +1787,10 @@
       "level": 60
     },
     "mods": [
-      "{rounding:Integer}+(500-800) Armor",
-      "+(50-80)% Fire Resistance",
+      "{rounding:Integer}+(600-850) Armor",
+      "+(60-85)% Fire Resistance",
       "+(10-20)% Chance to forge a weapon when hit",
-      "(15-25)% Increased Fire Damage per Forged Weapon"
+      "(20-40)% Increased Fire Damage per Forged Weapon"
     ],
     "rollIds": [
       0,
@@ -1763,8 +1807,8 @@
       "level": 0
     },
     "mods": [
-      "{rounding:Integer}(20-30)% increased Armor",
-      "{rounding:Integer}+(200-300) Armor",
+      "{rounding:Integer}(25-35)% increased Armor",
+      "{rounding:Integer}+(250-350) Armor",
       "(10-12)% Increased Armor per Forged Weapon",
       "{rounding:Integer}+(3-6) Health Regen per Forged Weapon"
     ],
@@ -1787,8 +1831,8 @@
       "{rounding:Integer}+(35-50) Spell Void Damage",
       "{rounding:Integer}(30-70)% increased Void Damage",
       "(15-25)% Chance to gain Haste for 1 second on Hit",
-      "15% increased Cast Speed",
-      "15% increased Attack Speed"
+      "20% increased Cast Speed",
+      "20% increased Attack Speed"
     ],
     "rollIds": [
       0,
@@ -1807,10 +1851,10 @@
       "level": 40
     },
     "mods": [
-      "{rounding:Integer}(70-105)% increased Void Damage",
-      "+(14-21)% Block Chance",
+      "{rounding:Integer}(70-104)% increased Void Damage",
+      "+(15-25)% Block Chance",
       "(21-28)% Chance to apply Time Rot to Attackers when Hit",
-      "{rounding:Integer}+(5-7) Melee Void Damage",
+      "{rounding:Integer}+(6-12) Melee Void Damage",
       "50% less Void Damage Taken on Block",
       "+(21-28)% Chance to inflict Time Rot on Hit"
     ],
@@ -1902,7 +1946,7 @@
       "2 Rage Gained on Kill in Werebear Form",
       "+(12-20)% Elemental Resistance",
       "+5 Strength",
-      "{rounding:Integer}(65-105)% increased Elemental Damage",
+      "{rounding:Integer}(65-104)% increased Elemental Damage",
       "{rounding:Integer}+(15-30) Melee cold damage in Werebear Form",
       "100% White Fur in Werebear Form"
     ],
@@ -1926,12 +1970,14 @@
       "{rounding:Integer}(30-75)% increased Melee Physical Damage",
       "3% Increased Health Regen per point of Strength",
       "(30-100)% Increased Melee Stun Chance",
-      "+3% Critical Strike Chance with Swipe"
+      "+3% Critical Strike Chance with Swipe",
+      "+1 to Swipe"
     ],
     "rollIds": [
       0,
       null,
       1,
+      null,
       null
     ]
   },
@@ -1946,13 +1992,15 @@
       "+10 Strength",
       "100% Increased health regen if you have stunned an enemy recently",
       "(1.5-3)% of Physical Damage Leeched as Health on Hit",
-      "+(20-30)% Endurance"
+      "+(20-30)% Endurance",
+      "+3 to Werebear Form"
     ],
     "rollIds": [
       null,
       null,
       1,
-      2
+      2,
+      null
     ]
   },
   "96": {
@@ -1966,12 +2014,14 @@
       "+(25-45)% Void Resistance",
       "{rounding:Integer}+(50-150) Endurance Threshold",
       "{rounding:Integer}+(10-20) Health Regen",
-      "+100% Chance to taunt nearby enemies for 2 seconds when you stun an enemy"
+      "+100% Chance to taunt nearby enemies for 2 seconds when you stun an enemy",
+      "+2 to Warcry"
     ],
     "rollIds": [
       2,
       0,
       1,
+      null,
       null
     ]
   },
@@ -1983,9 +2033,9 @@
       "level": 0
     },
     "mods": [
-      "{rounding:Integer}+(25-40) Spell Physical Damage",
+      "{rounding:Integer}+(30-45) Spell Physical Damage",
       "+(2-4)% Critical Strike Chance",
-      "{rounding:Integer}+(7-10) Attunement",
+      "{rounding:Integer}+(8-14) Attunement",
       "+30 Mana",
       "+(5-10)% Mana Efficiency"
     ],
@@ -2007,14 +2057,16 @@
     "mods": [
       "+(100-200)% Freeze Rate Multiplier",
       "+(5-10)% Mana Efficiency",
-      "(30-60)% Increased physical spell damage if you have directly cast a cold spell recently",
-      "+(15-30)% Chance to gain Haste when you kill an enemy with a spell"
+      "(35-70)% Increased physical spell damage if you have directly cast a cold spell recently",
+      "+(20-40)% Chance to gain Haste when you kill an enemy with a spell",
+      "(12-18)% increased Movement Speed"
     ],
     "rollIds": [
       0,
       1,
       2,
-      3
+      3,
+      4
     ]
   },
   "99": {
@@ -2025,16 +2077,18 @@
       "level": 42
     },
     "mods": [
-      "(30-60)% Increased cold spell damage if you have directly cast a physical spell recently",
+      "(35-70)% Increased cold spell damage if you have directly cast a physical spell recently",
       "(30-60)% Increased Spell Stun Chance",
-      "+(50-100)% Chance to Shred Armor on Spell Hit",
-      "+(50-100)% Chance to apply Frostbite on Spell Hit"
+      "+(75-150)% Chance to Shred Armor on Spell Hit",
+      "+(50-100)% Chance to apply Frostbite on Spell Hit",
+      "{rounding:Integer}+(20-60) Health"
     ],
     "rollIds": [
       0,
       1,
       2,
-      3
+      3,
+      4
     ]
   },
   "100": {
@@ -2127,7 +2181,7 @@
       "level": 57
     },
     "mods": [
-      "+(70-105)% Melee Critical Strike Multiplier",
+      "+(70-104)% Melee Critical Strike Multiplier",
       "(17-22)% increased Movement Speed",
       "-75% Physical Resistance"
     ],
@@ -2252,7 +2306,7 @@
     },
     "mods": [
       "{rounding:Integer}(70-100)% increased Health Regen",
-      "+(40-80)% Freeze Rate Multiplier",
+      "+(50-100)% Freeze Rate Multiplier",
       "{rounding:Integer}(10-13) Health Gain on Freeze",
       "{rounding:Integer}(50-70)% increased Melee Cold Damage"
     ],
@@ -2341,14 +2395,16 @@
       "+(50-80)% Freeze Rate per stack of Chill",
       "+(150-300)% Minion Freeze Rate per stack of Chill",
       "+(25-40)% Chance to Chill on Hit",
-      "{rounding:Integer}(80-140)% increased Minion Cold Damage"
+      "{rounding:Integer}(80-140)% increased Minion Cold Damage",
+      "(20-40)% increased Minion Cooldown Recovery Speed"
     ],
     "rollIds": [
       0,
       1,
       2,
       3,
-      4
+      4,
+      5
     ]
   },
   "115": {
@@ -2406,7 +2462,7 @@
       "+(17-25)% Chance to Blind on Hit",
       "{rounding:Integer}+(7-12) Spell Void Damage",
       "(12-17)% increased Fire Spell Cast Speed",
-      "+(17-25)% Chance to cast Fire Aura when Hit (1 second cooldown)",
+      "+(17-25)% Chance to cast Fire Aura when Hit (up to 3 times per second)",
       "(30-50)% Increased Void Damage per Fire Aura"
     ],
     "rollIds": [
@@ -2518,7 +2574,9 @@
       "{rounding:Integer}+(46-62) Spell Damage",
       "+(20-40)% Cold Resistance",
       "+(20-40)% Lightning Resistance",
-      "100% Chance to cast Tidal Wave when you use a Melee Attack (2 second cooldown)"
+      "+1 to Cold Melee Attacks",
+      "+1 to Lightning Melee Attacks",
+      "100% Chance to cast Tidal Wave when you use a Melee Attack (1 second cooldown)"
     ],
     "rollIds": [
       0,
@@ -2526,6 +2584,8 @@
       2,
       3,
       4,
+      null,
+      null,
       null
     ]
   },
@@ -2559,13 +2619,15 @@
       "{rounding:Integer}(100-200)% increased Minion Fire Damage",
       "+(50-75)% Minion Fire Resistance",
       "(20-50)% of Damage Reflected",
-      "60% Chance for the nearest minion to the target location to cast Dragonflame Nova when you use a minion skill (1 second cooldown)"
+      "60% Chance for the nearest minion to the target location to cast Dragonflame Nova when you use a minion skill (up to 3 times per second)",
+      "+1 to All Minion Skills"
     ],
     "rollIds": [
       0,
       1,
       2,
       3,
+      null,
       null
     ]
   },
@@ -2582,7 +2644,7 @@
       "(4-2)% less Damage Taken from Chilled Enemies",
       "+(24-40)% Chance to Shock on Hit",
       "(10-20)% Increased Shock Duration ",
-      "1% more more Damage per stack of Shock"
+      "1% more Damage per stack of Shock"
     ],
     "rollIds": [
       0,
@@ -3238,7 +3300,7 @@
       "+7 Spell Void Damage",
       "+(135-245)% Chance to Ignite on Void Spell Hit",
       "(14-28)% increased Fire Spell Cast Speed",
-      "100% Chance to cast Decimate when you directly use a Fire Spell (4 second cooldown)"
+      "100% Chance to cast Decimate when you directly use a Fire Spell (3 second cooldown)"
     ],
     "rollIds": [
       null,
@@ -3256,9 +3318,9 @@
     },
     "mods": [
       "+(35-45)% Void Resistance",
-      "+(235-345)% Chance to Shock on Void Spell Hit",
+      "+(234-345)% Chance to Shock on Void Spell Hit",
       "(7-12)% increased Lightning Spell Cast Speed",
-      "100% Chance to cast Decimate when you directly use a Lightning Spell (4 second cooldown)",
+      "100% Chance to cast Decimate when you directly use a Lightning Spell (3 second cooldown)",
       "+(35-45)% Lightning Resistance"
     ],
     "rollIds": [
@@ -3280,7 +3342,7 @@
       "+(35-45)% Void Resistance",
       "+(135-185)% Freeze Rate Multiplier",
       "(7-12)% increased Cold Spell Cast Speed",
-      "100% Chance to cast Decimate when you directly use a Cold Spell (4 second cooldown)",
+      "100% Chance to cast Decimate when you directly use a Cold Spell (3 second cooldown)",
       "+(35-45)% Cold Resistance"
     ],
     "rollIds": [
@@ -3413,14 +3475,18 @@
       "(5-8)% of Fire Damage Leeched as Health on Crit",
       "(50-80)% Increased Leech Rate",
       "+(2-3)% Minion Critical Strike Chance",
-      "+2 to Fire Minion Skills"
+      "+2 to Fire Minion Skills",
+      "(12-24)% increased Minion Attack Speed",
+      "(12-24)% increased Minion Cast Speed"
     ],
     "rollIds": [
       0,
       1,
       2,
       3,
-      null
+      null,
+      4,
+      4
     ]
   },
   "165": {
@@ -3479,14 +3545,16 @@
       "(28-20)% less Minion Damage Taken While Moving",
       "+2 to Spell Minion Skills",
       "+(20-28)% Lightning Resistance",
-      "+(20-28)% Necrotic Resistance"
+      "+(20-28)% Necrotic Resistance",
+      "(20-28)% increased Minion Cast Speed"
     ],
     "rollIds": [
       0,
       1,
       null,
       2,
-      3
+      3,
+      4
     ]
   },
   "168": {
@@ -3539,7 +3607,7 @@
       "level": 60
     },
     "mods": [
-      "+(30-33)% to Minion All Resistances",
+      "+(40-60)% to Minion All Resistances",
       "{rounding:Integer}(91-166)% increased Curse Damage",
       "{rounding:Integer}+(66-91) Curse Spell Damage",
       "+(30-33)% to All Resistances",
@@ -3608,8 +3676,8 @@
     },
     "mods": [
       "{rounding:Integer}+(55-75) Melee Fire Damage",
-      "+(55-75)% Chance to Poison on Melee Hit",
-      "7% increased Melee Attack Speed",
+      "+(75-100)% Chance to Poison on Melee Hit",
+      "10% increased Melee Attack Speed",
       "+(35-50)% Poison Penetration with Poison inflicted by Melee Attacks",
       "+75% Poison Resistance"
     ],
@@ -3629,10 +3697,10 @@
       "level": 55
     },
     "mods": [
-      "+(55-75)% Chance to Poison on Fire Hit",
-      "{rounding:Integer}(25-7)% less Poison Damage Taken",
+      "+(75-100)% Chance to Poison on Fire Hit",
+      "{rounding:Integer}(30-10)% less Poison Damage Taken",
       "+75% Fire Resistance",
-      "100% Chance to gain a stack of Ruby Venom for 8 seconds on Block"
+      "100% Chance to gain a stack of Ruby Venom for 12 seconds on Block"
     ],
     "rollIds": [
       0,
@@ -3649,7 +3717,7 @@
       "level": 76
     },
     "mods": [
-      "+1 to All Skills",
+      "{rounding:Integer}+(1-2) to All Skills",
       "+(1-45)% Physical Resistance",
       "+(1-45)% Fire Resistance",
       "+(1-45)% Cold Resistance",
@@ -3659,7 +3727,7 @@
       "+(1-45)% Poison Resistance"
     ],
     "rollIds": [
-      null,
+      0,
       0,
       1,
       2,
@@ -3780,7 +3848,7 @@
       "{rounding:Integer}(50-70)% increased Melee Damage",
       "+100% Potion Use Cleanses Stun and Freeze",
       "+100% Stun Immunity for 4 seconds when you use a Potion",
-      "5% more more Melee Damage per stack of Doom"
+      "5% more Melee Void Damage per stack of Doom"
     ],
     "rollIds": [
       0,
@@ -3867,12 +3935,12 @@
       "level": 0
     },
     "mods": [
-      "{rounding:Integer}(150-210)% increased Melee Damage",
-      "{rounding:Integer}(150-210)% increased Minion Damage",
+      "{rounding:Integer}(150-209)% increased Melee Damage",
+      "{rounding:Integer}(150-209)% increased Minion Damage",
       "+25% Chance to cast Jade Dust on Hit with Harvest\n",
-      "(150-210)% of Player Poison Damage Applies to Skeleton Rogues",
+      "(150-209)% of Player Poison Damage Applies to Skeleton Rogues",
       "8% of Minion Poison Damage Leeched as Health",
-      "(150-210)% of Player Poison Damage Applies to your Falcon",
+      "(150-209)% of Player Poison Damage Applies to your Falcon",
       "{rounding:Integer}+(1-3) to Throwing Minion Skills"
     ],
     "rollIds": [
@@ -4261,7 +4329,7 @@
       "{rounding:Integer}+(18-24) Spell Lightning Damage",
       "(12-18)% increased Melee Attack Speed",
       "(6-12)% increased Movement Speed",
-      "(45-75)% Chance to cast Lightning Blast when you use a Melee Attack and hit at least one enemy",
+      "(45-75)% Chance to cast Lightning Blast with 2 additional chains when you use a Melee Attack and hit at least one enemy",
       "{rounding:Integer}+(18-24) Melee Cold Damage",
       "{rounding:Integer}+(18-24) Spell Cold Damage"
     ],
@@ -4725,7 +4793,7 @@
       "level": 85
     },
     "mods": [
-      "-40% to -30% Increased Cooldown Recovery Speed for Lunge",
+      "-40% to -31% Increased Cooldown Recovery Speed for Lunge",
       "+1 Lunge Does Not Require a Target",
       "{rounding:Integer}(33-71)% increased Void Damage",
       "+(16-37)% Critical Strike Avoidance",
@@ -4909,18 +4977,18 @@
       "level": 0
     },
     "mods": [
-      "15% increased Movement Speed",
-      "{rounding:Integer}+(2-3) Projectiles with Spirit Thorns",
+      "(15-21)% increased Movement Speed",
       "(100-160)% Increased damage while in Spriggan Form",
-      "+1 You Cannot Move While in Spriggan Form",
-      "{rounding:Integer}+(20-26) Health Regen while in Spriggan Form"
+      "{rounding:Integer}+(20-26) Health Regen per stack of Germination",
+      "+1 Projectiles with Spirit Thorns per stack of Germination",
+      "+1 [DNT] Can gain Germination Stacks"
     ],
     "rollIds": [
-      null,
       0,
       0,
+      0,
       null,
-      0
+      null
     ]
   },
   "230": {
@@ -5073,7 +5141,7 @@
       "level": 0
     },
     "mods": [
-      "{rounding:Integer}(30-53)% increased Poison Damage",
+      "{rounding:Integer}(30-52)% increased Poison Damage",
       "+1 to Acid Flask",
       "(23-30)% of Missing Health regained on Potion Use",
       "+3 to All Attributes",
@@ -5096,7 +5164,7 @@
     },
     "mods": [
       "{rounding:Integer}(50-90) Damage Reflected to Attackers",
-      "(5-9)% Increased Flat Damage Reflected to Attackers per Attunement",
+      "(3-6)% Increased Flat Damage Reflected to Attackers per Attunement",
       "{rounding:Integer}(15-18)% increased Armor",
       "+(32-45)% Poison Resistance",
       "+(32-45)% Lightning Resistance"
@@ -5137,7 +5205,7 @@
     "mods": [
       "+1 When you kill a stunned enemy a different nearby enemy is stunned for 2 seconds (excludes bosses)",
       "(18-36)% Increased Stun Duration",
-      "(45-105)% Increased Stun Chance",
+      "(45-104)% Increased Stun Chance",
       "+(30-60)% Ward Retention",
       "{rounding:Integer}+(6-9) Vitality"
     ],
@@ -5199,7 +5267,7 @@
       "level": 11
     },
     "mods": [
-      "(111-211)% increased Critical Strike Chance",
+      "(111-210)% increased Critical Strike Chance",
       "{rounding:Integer}+(11-111) Ward gained when you use Shift",
       "+1 Charge for Shift",
       "+1 Charge for Smoke Bomb",
@@ -5274,8 +5342,8 @@
     },
     "mods": [
       "{rounding:Integer}+(3-5) to Vengeance",
-      "(35-53)% more hit damage with Vengeance against bosses and rare enemies (multiplicative with other modifiers)",
-      "(35-53)% increased Melee Attack Speed",
+      "(35-52)% more hit damage with Vengeance against bosses and rare enemies (multiplicative with other modifiers)",
+      "(35-52)% increased Melee Attack Speed",
       "+5 to All Attributes",
       "5% increased Movement Speed"
     ],
@@ -5793,7 +5861,7 @@
     "mods": [
       "{rounding:Integer}+(12-16) Added Health for Bees per Attunement",
       "(7-12)% Increased Damage for Bees per Attunement",
-      "+(4-6)% Physical Penetration with Bleed inflicted by Bees per Strength",
+      "+(6-8)% Physical Penetration with Bleed inflicted by Bees per Strength",
       "+1 When you directly cast Thorn Shield, the nearest Bee also gains Thorn Shield",
       "+(32-56)% Chance to apply Frailty on hit for Bees",
       "4% of Minion Physical Damage Leeched as Health",
@@ -5845,12 +5913,13 @@
       "level": 58
     },
     "mods": [
-      "{rounding:Integer}+(6-10) Bees released when Decoy explodes",
+      "{rounding:Integer}+(3-4) Bees released when Decoy explodes",
       "+(22-34)% Mana efficiency for Decoy",
       "{rounding:Integer}+(40-90) Health",
       "+110 Armor",
       "+60% Poison Resistance",
-      "+100% When you hit a Bee with Acid Flask, it gains Toxic Coating"
+      "+100% When you hit a Bee with Acid Flask, it gains Toxic Coating",
+      "{rounding:Thousandth}+(4-6)% Poison and Elemental Penetration for Bees per Dexterity"
     ],
     "rollIds": [
       0,
@@ -5858,7 +5927,8 @@
       2,
       null,
       null,
-      null
+      null,
+      0
     ]
   },
   "271": {
@@ -5891,8 +5961,8 @@
       "{rounding:Integer}(10-24)% increased Health",
       "{rounding:Integer}(100-240)% increased Minion Health",
       "{rounding:Integer}+(100-240) Minion Health",
-      "+1 to All Minion Skills",
-      "+3 Seconds Cooldown for Bone Shatter"
+      "+2 to All Minion Skills",
+      "+1 Seconds Cooldown for Bone Shatter"
     ],
     "rollIds": [
       null,
@@ -5963,7 +6033,7 @@
       "+1 to Lightning Skills",
       "+1 to Fire Skills",
       "+1 to Cold Skills",
-      "(4000-10000)% Added Spell Damage With Supernova"
+      "{rounding:Integer}+(40-100) Added Spell Damage With Supernova"
     ],
     "rollIds": [
       3,
@@ -6132,7 +6202,7 @@
     },
     "mods": [
       "+(14-26)% Chance to inflict Spreading Flames on Hit",
-      "(26-42)% more more Fire Damage per stack of Spreading Flames",
+      "(26-42)% more Fire Damage per stack of Spreading Flames",
       "{rounding:Integer}(42-72)% increased Fire Damage Over Time",
       "-4 Fire Spell Mana Cost",
       "4% increased Movement Speed"
@@ -6226,10 +6296,10 @@
     },
     "mods": [
       "+1 to Lightning Skills",
-      "(120-240)% increased Spark Charge Explosion Area",
-      "(65-125)% Increased Spark Charge Effect with Melee Attacks",
+      "(100-200)% increased Spark Charge Explosion Area",
+      "(150-175)% Increased Spark Charge Effect with Melee Attacks",
       "+(10-12)% Chance to apply a Spark Charge on Hit",
-      "+2 Lightning Damage for Spark Charge per Intelligence",
+      "+1 Lightning Damage for Spark Charge per Intelligence",
       "+1 Spark Charge to all targets around the destination when you Teleport"
     ],
     "rollIds": [
@@ -6350,7 +6420,7 @@
       "(50-85)% Increased Leech Rate",
       "(5-8)% more Damage to Ignited Enemies",
       "+1 Throwing Fire Damage with Burning Daggers per 2% increased chance to find potions",
-      "(35-50)% chance to throw a Burning Dagger on hit (1 second cooldown)",
+      "(35-50)% chance to throw a Burning Dagger on hit (up to 2 times per second)",
       "100% Chance to throw a Burning Dagger when you drink a Potion"
     ],
     "rollIds": [
@@ -6499,7 +6569,7 @@
     "mods": [
       "+1 to Mage Skills",
       "(5-9)% of Damage Dealt to Mana Before Health",
-      "{rounding:Integer}+(6-9) Effective Endurance Threshold per 10 Missing Mana"
+      "{rounding:Integer}+(5-9) Effective Endurance Threshold per 10 Missing Mana"
     ],
     "rollIds": [
       null,
@@ -6618,7 +6688,7 @@
     },
     "mods": [
       "(21-45)% Chance to Shock Attackers",
-      "(105-175)% more Armor against Shocked Enemies",
+      "(104-175)% more Armor against Shocked Enemies",
       "(7-15)% more Lightning Damage to Shocked Enemies",
       "(21-45)% Chance to gain 15 Static Charges when Hit",
       "(7-15)% Chance to cast Static when Hit"
@@ -6759,16 +6829,12 @@
     "mods": [
       "(10-35)% Chance to gain Haste for 1 second on Hit",
       "2% increased Spell Damage per 1% increased Movement Speed",
-      "+1 Wrongwarp with Teleport or Transplant",
-      "(5-10)% Increased Cooldown Recovery Speed for Teleport",
-      "(5-10)% Increased Cooldown Recovery Speed for Transplant"
+      "+1 Wrongwarp with Teleport or Transplant"
     ],
     "rollIds": [
       0,
       null,
-      null,
-      1,
-      1
+      null
     ]
   },
   "311": {
@@ -7307,7 +7373,7 @@
       "level": 30
     },
     "mods": [
-      "117% increased Bow Damage",
+      "116% increased Bow Damage",
       "+(3-5)% Critical Strike Chance",
       "{rounding:Integer}+(1-4) to Falconry",
       "{rounding:Integer}+(1-4) to Dive Bomb",
@@ -7416,8 +7482,8 @@
       "{rounding:Integer}+(28-39) Minion Melee Damage",
       "{rounding:Integer}+(1-6) to Melee Attacks",
       "100% chance on Parry to restore you and a random minion to full health and grant Frenzy for 5 seconds",
-      "{rounding:Integer}+(39-60) Melee Damage while you have Frenzy",
-      "(39-60)% increased Effect of Frenzy on You "
+      "{rounding:Integer}+(20-30) Melee Damage while you have Frenzy",
+      "(20-40)% increased Effect of Frenzy on You "
     ],
     "rollIds": [
       0,
@@ -7489,7 +7555,7 @@
       "level": 31
     },
     "mods": [
-      "(53-89)% of Sacrifice Mana Cost consumed to automatically Sacrifice Minions after 2 seconds",
+      "(52-89)% of Sacrifice Mana Cost consumed to automatically Sacrifice Minions after 2 seconds",
       "{rounding:Integer}+(1-2) to Sacrifice",
       "(3-11)% increased Movement Speed",
       "(11-23)% increased Minion Movement Speed",
@@ -7555,12 +7621,12 @@
       "level": 0
     },
     "mods": [
-      "+(25-42)% chance to cast Voidwinter Bolts when you hit an enemy with Javelin or a Melee Attack (up to 3 times per 2 seconds)",
+      "+(25-42)% chance to cast Voidwinter Bolts when you hit an enemy with Javelin or a Melee Attack (up to 8 times per 2 seconds)",
       "(25-42)% of Added Melee Damage applied as Added Spell Damage to Cold and Void Spells",
       "{rounding:Integer}+(25-42) Melee Void Damage",
       "{rounding:Integer}+(25-42) Melee Cold Damage",
-      "+1% Voidwinter Bolt Critcal Strike Multiplier per 10% uncapped Chill Chance with Melee Attacks",
-      "1% more Voidwinter Bolt Damage per 10% uncapped Time Rot Chance with Melee Attacks",
+      "+12% Voidwinter Bolt Critical Strike Multiplier per 10% uncapped Chill Chance with Melee Attacks",
+      "3% more Voidwinter Bolt Damage per 10% uncapped Time Rot Chance with Melee Attacks",
       "100% of Cold Damage Taken as Physical"
     ],
     "rollIds": [
@@ -7972,7 +8038,7 @@
     },
     "mods": [
       "100% No Ward Gain in Combat",
-      "(105-155)% of Max Health gained as Ward Decay Threshold",
+      "(104-155)% of Max Health gained as Ward Decay Threshold",
       "(35-55)% of Max Health gained as Ward per Second",
       "{rounding:Integer}+(55-85) Health",
       "{rounding:Integer}+(155-385) Block Effectiveness"
@@ -8117,7 +8183,7 @@
       "level": 30
     },
     "mods": [
-      "100% Movement During Focus",
+      "100% Channeled movement During Focus",
       "{rounding:Integer}(34-70)% increased Mana Regen",
       "{rounding:Integer}+(25-50) Ward per Second While Channelling",
       "{rounding:Integer}+(50-115) Ward Decay Threshold",
@@ -8163,9 +8229,9 @@
       "level": 64
     },
     "mods": [
-      "{rounding:Integer}(12-18)% increased Health",
+      "{rounding:Integer}(8-12)% increased Health",
       "(16-24)% of Damage Redirected to your Highest Health Minion",
-      "{rounding:Integer}(12-18)% increased Minion Health",
+      "{rounding:Integer}(8-12)% increased Minion Health",
       "{rounding:Integer}+(12-16) Strength",
       "(6-10)% increased Movement Speed",
       "{rounding:Integer}+(1-2) to Strength Minion Skills"
@@ -8233,7 +8299,7 @@
       "level": 0
     },
     "mods": [
-      "+(35-75)% Recurve Chance with Heartseeker",
+      "+(35-75)% Recurve Chance for Heartseeker",
       "100% of Heartseeker converted to Throwing ",
       "{rounding:Integer}+(2-4) Throwing Damage with Heartseeker Per 5 Dexterity",
       "{rounding:Integer}+(5-11) Dexterity"
@@ -8629,7 +8695,7 @@
       "level": 34
     },
     "mods": [
-      "+1 Max Vale Spirits per 15 Attunement",
+      "+1 Max Vale Spirits per 12 Attunement",
       "{rounding:Integer}(38-66)% increased Health Regen",
       "+(4-6)% Spell Critical Strike Chance",
       "+(18-36)% Physical Resistance",
@@ -8656,7 +8722,7 @@
       "(32-55)% Increased Chance To Find Potions",
       "{rounding:Integer}(8-16) Mana Gained on Potion Use",
       "100% of Volatile Reversal cooldown reset on potion use",
-      "+100% Volatile Reversal deals more void damage or is converted to fire based on intelligence"
+      "+100% Melee Damage for Shield Bash"
     ],
     "rollIds": [
       0,
@@ -8991,8 +9057,8 @@
       "{rounding:Integer}+(1-2) to Necrotic Minion Skills",
       "{rounding:Integer}+(1-2) to Cold Minion Skills",
       "{rounding:Integer}+(1-2) to Lightning Minion Skills",
-      "{rounding:Integer}(100-170)% increased Minion Damage",
-      "+(40-70)% Chance to Electrify on Minion Hit"
+      "{rounding:Integer}(140-209)% increased Minion Damage",
+      "+(70-110)% Chance to Electrify on Minion Hit"
     ],
     "rollIds": [
       0,
@@ -9101,7 +9167,7 @@
       "level": 36
     },
     "mods": [
-      "{rounding:Integer}+(2-3) to All Minion Skills",
+      "{rounding:Integer}+(1-2) to All Minion Skills",
       "+100% Summons Tyrannosaur Minion"
     ],
     "rollIds": [
@@ -9120,7 +9186,7 @@
       "+(50-75)% Fire Resistance",
       "{rounding:Integer}(17-25)% increased Health",
       "+(4-7)% Chance to Ignite on Hit per 10% uncapped Fire Resistance",
-      "(32-36)% Chance to create a Wildfire Wisp next to an ignited enemy",
+      "(25-30)% Chance to create a Wildfire Wisp next to an ignited enemy",
       "(10-12)% Chance for Wildfire Wisps within 12 metres to repeat Fire Skills",
       "+(60-100)% Fire Penetration with Ignite for skills cast from Wildfire Wisps",
       "+(240-300)% Ignite Chance for skills cast from Wildfire Wisps"
@@ -9372,7 +9438,7 @@
     "baseTypeID": 4,
     "subTypeID": 11,
     "req": {
-      "level": 0
+      "level": 50
     },
     "mods": [
       "(6-12)% increased Cast Speed",
@@ -9404,7 +9470,8 @@
       "{rounding:Integer}+(256-512) Dodge Rating if you have been hit recently",
       "{rounding:Integer}+(32-64) Ward gained when you Dodge",
       "100% increased effect of stats on your Non-Unique Idols that are a different shape to all other equipped Non-Unique Idols",
-      "(32-16)% less Damage Taken from the First Hit Received from each enemy"
+      "(32-16)% less Damage Taken from the First Hit Received from each enemy",
+      "{rounding:Integer}(24-52)% increased Dodge Rating"
     ],
     "rollIds": [
       0,
@@ -9412,7 +9479,8 @@
       2,
       3,
       null,
-      4
+      4,
+      5
     ]
   },
   "437": {
@@ -9424,13 +9492,13 @@
     },
     "mods": [
       "(40-85)% of Overkill damage from your hits and your minion hits dealt as direct damage to surrounding enemies",
-      "+(4-9)% Critical Strike Chance",
-      "+(4-9)% Minion Critical Strike Chance",
+      "+(6-15)% Critical Strike Chance",
+      "+(6-15)% Minion Critical Strike Chance",
       "{rounding:Integer}(20-80) Health Gain on Kill",
-      "(4-9)% of Overkill Damage Leeched as Health",
+      "(6-15)% of Overkill Damage Leeched as Health",
       "{rounding:Integer}(190-275)% increased Hit Damage",
       "+1% Critical Strike Multiplier per 2 Strength",
-      "{rounding:Integer}+(4-9) to All Attributes"
+      "{rounding:Integer}+(6-15) to All Attributes"
     ],
     "rollIds": [
       0,
@@ -9456,7 +9524,7 @@
       "(90-100)% increased effectiveness of Stats on an offhand Exalted Weapon",
       "{rounding:Integer}(15-35)% increased Armor",
       "(15-35)% of Armor Mitigation also applies to Damage over Time",
-      "{rounding:Integer}+(5-13) to All Attributes"
+      "{rounding:Integer}+(8-18) to All Attributes"
     ],
     "rollIds": [
       null,
@@ -9570,7 +9638,7 @@
     },
     "mods": [
       "100% chance to gain a stack of Excoriation when Flay kills an enemy or hits a boss or rare enemy",
-      "(13-26)% increased Melee Attack Speed",
+      "(6-13)% increased Melee Attack Speed",
       "(13-26)% increased Movement Speed",
       "(26-52)% more Melee Damage to High Health Enemies"
     ],
@@ -9589,12 +9657,12 @@
       "level": 0
     },
     "mods": [
-      "{rounding:Integer}+(1-2) to All Skills",
+      "+15% to Minion All Resistances",
       "100% chance to Summon a Rift Beast when a hit leaves a Boss or Champion below 40% health (40 second cooldown)",
       "40% increased Minion Damage"
     ],
     "rollIds": [
-      0,
+      null,
       null,
       null
     ]
@@ -9609,8 +9677,8 @@
     "mods": [
       "{rounding:Integer}(20-10)% reduced Spell Mana Cost",
       "(10-20)% Reduced Health Cost of Spells",
-      "{rounding:Integer}+(2-4) Health per Attunement",
-      "{rounding:Integer}+(2-4) Mana per Attunement",
+      "{rounding:Integer}+(3-6) Health per Attunement",
+      "{rounding:Integer}+(3-6) Mana per Attunement",
       "(20-10)% less Damage Taken from Bosses and Rare Enemies while below half mana",
       "(10-20)% more Damage to Bosses and Rare Enemies while above half mana",
       "{rounding:Integer}+(3-4) to Attunement Skills",
@@ -9639,10 +9707,10 @@
       "(9-15)% more Melee Damage while you have Frenzy",
       "(21-35)% of Health Leech also drains the health of the nearest enemy within 6 meters while you have Frenzy",
       "(3-5)% of Melee Damage leeched as Health while you have Frenzy",
-      "+(9-15)% increased Damage Taken while you have Frenzy",
+      "+(3-6)% increased Damage Taken while you have Frenzy",
       "{rounding:Integer}+(6-10) Seconds of Frenzy on Potion Use",
       "(12-20)% increased Effect of Frenzy while Dual Wielding",
-      "1% increased Effect of Frenzy per Strength"
+      "0.5% increased Effect of Frenzy per Strength"
     ],
     "rollIds": [
       0,
@@ -9716,7 +9784,7 @@
       "(60-112)% increased Effect of Frenzy on You ",
       "{rounding:Integer}(112-144)% increased Damage",
       "1 Mana and 12 Health gained on Hit per 12% increased mana regen (up to 4 times per 2 seconds)",
-      "+100% You have Frenzy"
+      "You have Frenzy"
     ],
     "rollIds": [
       0,
@@ -9725,6 +9793,488 @@
       2,
       null,
       null
+    ]
+  },
+  "450": {
+    "name": "Unbroken Charge",
+    "baseTypeID": 18,
+    "subTypeID": 4,
+    "req": {
+      "level": 65
+    },
+    "mods": [
+      "100% Slow Immunity",
+      "Cannot be Stunned by Blocked Hits",
+      "{rounding:Integer}+(13-25) Block Effectiveness per 1% Increased Movement Speed",
+      "+(9-15)% chance to Block hits taken while Moving",
+      "(11-30)% chance to gain Haste for 5 seconds after you Block"
+    ],
+    "rollIds": [
+      null,
+      null,
+      0,
+      1,
+      2
+    ]
+  },
+  "451": {
+    "name": "Doppelganger's Mimicry",
+    "baseTypeID": 22,
+    "subTypeID": 52,
+    "req": {
+      "level": 45
+    },
+    "mods": [
+      "(20-30)% Chance for consumed Shadows to create a new Shadow",
+      "{rounding:Thousandth}+(6-9)% Critical Strike Chance for skills used by Shadows",
+      "(60-90)% Increased Damage for skills used by Shadows",
+      "+(14-28)% Physical Resistance"
+    ],
+    "rollIds": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "452": {
+    "name": "Doppelganger's Deception",
+    "baseTypeID": 1,
+    "subTypeID": 48,
+    "req": {
+      "level": 51
+    },
+    "mods": [
+      "+1 Maximum Shadows",
+      "(120-180)% Increased Damage for skills used by Shadows",
+      "{rounding:Integer}+(120-170) Health",
+      "{rounding:Integer}+(120-210) Dodge Rating",
+      "+(30-50)% Critical Strike Avoidance"
+    ],
+    "rollIds": [
+      null,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "453": {
+    "name": "Doppelganger's Facade",
+    "baseTypeID": 0,
+    "subTypeID": 47,
+    "req": {
+      "level": 45
+    },
+    "mods": [
+      "{rounding:Integer}(70-120) Health Gained on Shadow Creation",
+      "(10-24)% Chance to receive a Glancing Blow when hit",
+      "{rounding:Integer}(8-14)% increased Health",
+      "{rounding:Integer}+(70-110) Dodge Rating",
+      "100% Chance to gain a stack of Dusk Shroud when you consume a Shadow"
+    ],
+    "rollIds": [
+      0,
+      0,
+      0,
+      0,
+      null
+    ]
+  },
+  "454": {
+    "name": "Abandoned Eyes of the Weaver",
+    "baseTypeID": 20,
+    "subTypeID": 18,
+    "req": {
+      "level": 54
+    },
+    "mods": [
+      "+1% Critical Strike Chance per 40 Total Attributes",
+      "+1 to Level of All Skills per 120 Total Attributes",
+      "{rounding:Integer}+(150-300) Ward Decay Threshold",
+      "+(18-30)% Lightning Resistance",
+      "+(18-30)% Poison Resistance"
+    ],
+    "rollIds": [
+      null,
+      null,
+      0,
+      2,
+      3
+    ]
+  },
+  "455": {
+    "name": "Abandoned Chitin of the Weaver",
+    "baseTypeID": 21,
+    "subTypeID": 11,
+    "req": {
+      "level": 54
+    },
+    "mods": [
+      "1% of Armor Mitigation also applies to damage over time per 10 Total Attributes",
+      "{rounding:Integer}+(120-160) Armor",
+      "{rounding:Integer}+(20-30) Ward per Second",
+      "{rounding:Integer}+(5-8) Strength",
+      "+(18-30)% Physical Resistance"
+    ],
+    "rollIds": [
+      null,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "456": {
+    "name": "Kuzon's Fury",
+    "baseTypeID": 9,
+    "subTypeID": 5,
+    "req": {
+      "level": 49
+    },
+    "mods": [
+      "+40 Melee Fire Damage",
+      "{rounding:Integer}+(2-4) to Cinder Strike",
+      "{rounding:Integer}+(2-4) to Dancing Strikes",
+      "100% of Dancing Strikes is converted to Fire",
+      "(20-40)% increased area for Fire Melee Area Skills",
+      "+(50-70)% chance to throw a Burning Dagger when you use a melee fire attack and hit at least one enemy, doubled for Dancing Strikes (up to 4 times per second)",
+      "{rounding:Integer}(70-120)% increased Fire Damage",
+      "(11-17)% increased Melee Attack Speed"
+    ],
+    "rollIds": [
+      null,
+      0,
+      1,
+      null,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "457": {
+    "name": "Kuzon's Guise",
+    "baseTypeID": 0,
+    "subTypeID": 66,
+    "req": {
+      "level": 49
+    },
+    "mods": [
+      "{rounding:Integer}+(2-4) to Shadow Cascade",
+      "1 Shadow Cascade is converted to Fire",
+      "{rounding:Integer}+(12-18) Throwing Fire Damage",
+      "+100% Chance to Blind on Fire Hit",
+      "{rounding:Integer}(7-14)% increased Health",
+      "+(8-12)% Endurance"
+    ],
+    "rollIds": [
+      0,
+      null,
+      1,
+      null,
+      2,
+      3
+    ]
+  },
+  "458": {
+    "name": "Tabi of Dusk and Dawn",
+    "baseTypeID": 3,
+    "subTypeID": 3,
+    "req": {
+      "level": 58
+    },
+    "mods": [
+      "Shadow Rend no longer moves you",
+      "Shadow Rend performs an additional shadow attack using the alternate weapon type",
+      "(14-18)% increased Movement Speed",
+      "(30-60)% Increased Damage for skills used by Shadows",
+      "{rounding:Integer}(14-8)% less Damage Over Time Taken",
+      "{rounding:Integer}+(30-50) Health"
+    ],
+    "rollIds": [
+      null,
+      null,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "459": {
+    "name": "Artifice of Devastation",
+    "baseTypeID": 22,
+    "subTypeID": 71,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "{rounding:Integer}+(1-2) to Throwing Attacks",
+      "(24-48)% Increased Bladestorm duration",
+      "+100% Bladestorms throw Explosive Trap every second, consuming 120% of its mana cost",
+      "(20-40)% increased area for Throwing Area Skills",
+      "{rounding:Integer}(24-48)% increased Throwing Damage"
+    ],
+    "rollIds": [
+      0,
+      0,
+      null,
+      0,
+      0
+    ]
+  },
+  "460": {
+    "name": "Laup's Path",
+    "baseTypeID": 22,
+    "subTypeID": 70,
+    "req": {
+      "level": 4
+    },
+    "mods": [
+      "{rounding:Integer}+(1-2) to Summon Thorn Totem",
+      "(5-9)% increased Movement Speed",
+      "+(10-25)% Physical Resistance",
+      "+1 Charges for Fury Leap",
+      "+100% Directly casting Fury Leap or Warcry summons up to your maximum Thorn Totems and grants them 100% more cast speed for 1 second",
+      "1 Bleeds Inflicted on you for each Thorn Totem summoned"
+    ],
+    "rollIds": [
+      0,
+      0,
+      0,
+      null,
+      null,
+      null
+    ]
+  },
+  "461": {
+    "name": "Ash Wake",
+    "baseTypeID": 3,
+    "subTypeID": 3,
+    "req": {
+      "level": 40
+    },
+    "mods": [
+      "+1 Aura of Decay is converted to fire",
+      "(30-50)% Increased effect of Haste on you while Aura of Decay is active",
+      "(20-25)% Chance for Volatile Zombies in Aura of Decay to Resurrect",
+      "+(50-90)% Chance to Ignite on Hit",
+      "+(50-90)% Chance to Ignite on Minion Hit",
+      "(14-20)% increased Movement Speed",
+      "(1-3)% of Fire Damage Over Time Damage Leeched as Health"
+    ],
+    "rollIds": [
+      null,
+      0,
+      1,
+      2,
+      2,
+      0,
+      0
+    ]
+  },
+  "462": {
+    "name": "Natural Wrath",
+    "baseTypeID": 30,
+    "subTypeID": 0,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "+1 Earthquake is converted to lightning",
+      "+1 Upheaval is converted to lightning",
+      "+1 Upheaval can consume 20 Storm Stacks on hit to cast Earthquake with at least 30 Storm Stacks"
+    ],
+    "rollIds": [
+      null,
+      null,
+      null
+    ]
+  },
+  "463": {
+    "name": "Rahyeh's Embrace",
+    "baseTypeID": 1,
+    "subTypeID": 28,
+    "req": {
+      "level": 62
+    },
+    "mods": [
+      "{rounding:Integer}(100-170)% increased Minion Fire Damage",
+      "+(100-240)% Chance to Ignite on Minion Hit",
+      "{rounding:Integer}+(12-24) Health Gained on Companion Hit",
+      "{rounding:Integer}(30-44)% increased Health",
+      "{rounding:Integer}(30-44)% increased Minion Health",
+      "1 Summoned Spriggans are converted to Fire",
+      "1 Summoned Storm Crows are converted to Fire",
+      "+1 additional Projectiles per Summoned Storm Crow for Summoned Spriggan's Thorn Volley",
+      "10% more damage per Summoned Storm Crow for your Summoned Spriggan's Thorn Volley",
+      "5% of current Health drained per second while above 80% Health"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "464": {
+    "name": "Jormun's Thirst",
+    "baseTypeID": 2,
+    "subTypeID": 5,
+    "req": {
+      "level": 39
+    },
+    "mods": [
+      "(30-40)% Chance to not consume a Potion when you use a Potion and restore at least 20% of Maximum Health",
+      "{rounding:Integer}+(1-2) Potion Slots",
+      "{rounding:Integer}(250-380) Health Gained on Potion Use",
+      "{rounding:Integer}+(74-140) Health",
+      "{rounding:Integer}+(600-900) Stun Avoidance",
+      "+(22-44)% Physical Resistance"
+    ],
+    "rollIds": [
+      0,
+      5,
+      4,
+      1,
+      2,
+      3
+    ]
+  },
+  "465": {
+    "name": "Jormun's Hunger",
+    "baseTypeID": 5,
+    "subTypeID": 3,
+    "req": {
+      "level": 38
+    },
+    "mods": [
+      "{rounding:Integer}+(44-60) Melee Damage",
+      "+(20-40)% Chance to apply Critical Vulnerability on Melee Hit",
+      "+(80-130)% Chance to inflict Bleed on Melee Hit",
+      "(16-28)% increased Melee Attack Speed",
+      "(6-12)% of Melee Damage Leeched as Health",
+      "{rounding:Integer}+(6-10) Strength",
+      "{rounding:Integer}+(6-10) Dexterity"
+    ],
+    "rollIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      5
+    ]
+  },
+  "466": {
+    "name": "Jormun's Feast",
+    "baseTypeID": 9,
+    "subTypeID": 6,
+    "req": {
+      "level": 42
+    },
+    "mods": [
+      "{rounding:Integer}+(40-56) Melee Damage",
+      "+7% Critical Strike Multiplier per 10 Bleeds on the target, up to 200 Bleeds",
+      "+(4-8)% Melee Critical Strike Chance",
+      "(12-24)% increased Melee Attack Speed"
+    ],
+    "rollIds": [
+      0,
+      null,
+      1,
+      2
+    ]
+  },
+  "467": {
+    "name": "Keplahan's Pyrolith",
+    "baseTypeID": 21,
+    "subTypeID": 1,
+    "req": {
+      "level": 50
+    },
+    "mods": [
+      "100% Chance to cast fire Volcanic Orb when you directly use a fire melee attack or fire traversal skill (3 second cooldown)",
+      "{rounding:Integer}(30-60)% increased Fire Damage",
+      "{rounding:Integer}+(6-12) Intelligence",
+      "{rounding:Integer}+(20-40) Ward per Second",
+      "+(15-30)% Critical Strike Multiplier"
+    ],
+    "rollIds": [
+      null,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "468": {
+    "name": "Keplahan's Cryolith",
+    "baseTypeID": 21,
+    "subTypeID": 2,
+    "req": {
+      "level": 50
+    },
+    "mods": [
+      "100% Chance to cast cold Volcanic Orb when you directly use a cold melee attack or cold traversal skill (3 second cooldown)",
+      "{rounding:Integer}(30-60)% increased Cold Damage",
+      "{rounding:Integer}+(6-12) Dexterity",
+      "{rounding:Integer}+(60-84) Health",
+      "(25-50)% increased Critical Strike Chance"
+    ],
+    "rollIds": [
+      null,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "469": {
+    "name": "Exulis",
+    "baseTypeID": 20,
+    "subTypeID": 8,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "{rounding:Integer}+(1-2) to All Skills",
+      "{rounding:Integer}+(10-20) to All Attributes",
+      "4% Increased Area for Area Spells per 10 Madness",
+      "1% Chance to take 0 damage when hit per 10 Guile",
+      "2% Increased Health per 10 Brutality",
+      "5% Increased effect of Haste per 10 Rampancy",
+      "-1% Less Necrotic, Void and Poison damage taken per 10 Apathy"
+    ],
+    "rollIds": [
+      0,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "470": {
+    "name": "Oculus of Ruin",
+    "baseTypeID": 21,
+    "subTypeID": 11,
+    "req": {
+      "level": 0
+    },
+    "mods": [
+      "{rounding:Integer}+(3-6) to All Attributes"
+    ],
+    "rollIds": [
+      0
     ]
   }
 }

@@ -1,5 +1,5 @@
 <LastEpochPlanner>
-	<Build ascendClassName="Paladin" bandit="None" characterLevelAutoMode="false" className="Sentinel" level="97" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_3" viewMode="TREE">
+	<Build ascendClassName="Paladin" bandit="None" characterLevelAutoMode="false" className="Sentinel" level="97" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_4" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="5349.56308992"></PlayerStat>
 		<PlayerStat stat="AverageBurstDamage" value="5349.56308992"></PlayerStat>
 		<PlayerStat stat="Speed" value="1.4666666275556"></PlayerStat>
@@ -390,7 +390,7 @@ Implicits: 2
 {unique}{range:77}(32-55)% Increased Chance To Find Potions
 {unique}{range:198}{rounding:Integer}(8-16) Mana Gained on Potion Use
 {unique}100% of Volatile Reversal cooldown reset on potion use
-{unique}+100% Volatile Reversal deals more void damage or is converted to fire based on intelligence
+{unique}+100% Melee Damage for Shield Bash
 			<ModRange id="1" range="38"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="244"></ModRange>
@@ -856,7 +856,7 @@ Implicits: 1
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
-		<Spec ascendClassId="3" classId="2" nodes="Paladin#1,Sentinel#1,Sentinel-0#8,Sentinel-104#1,Sentinel-107#10,Sentinel-11#5,Sentinel-119#5,Sentinel-2#5,Sentinel-4#2,Sentinel-49#8,Sentinel-6#1,Sentinel-69#8,Sentinel-7#1,Sentinel-71#8,Sentinel-77#7,Sentinel-83#6,Sentinel-86#8,Sentinel-91#5,Sentinel-93#5,Sentinel-94#1,Sentinel-95#2,Sentinel-96#2,Sentinel-98#12,ah443-0#1,ah443-12#4,ah443-16#1,ah443-19#2,ah443-2#1,ah443-4#3,ah443-5#2,ah443-7#5,ah443-8#2,ah443-9#2,javeli-0#1,javeli-2#1,javeli-20#1,javeli-21#1,javeli-22#1,javeli-24#4,javeli-25#1,javeli-26#1,javeli-27#5,javeli-8#1,si4lgl-0#1,si4lgl-15#2,si4lgl-23#2,si4lgl-24#1,si4lgl-28#1,si4lgl-29#3,si4lgl-32#4,si4lgl-6#3,si4lgl-7#3,si4lgl-8#2,si4lgl-9#1,sm87r4-0#1,sm87r4-16#3,sm87r4-17#4,sm87r4-20#4,sm87r4-26#4,sm87r4-28#5,sm87r4-30#5,va53st-0#1,va53st-10#1,va53st-12#2,va53st-13#3,va53st-14#2,va53st-16#3,va53st-17#1,va53st-18#4,va53st-23#2,va53st-25#5,va53st-27#1,va53st-9#1" treeVersion="1_3">
+		<Spec ascendClassId="3" classId="2" nodes="Paladin#1,Sentinel#1,Sentinel-0#8,Sentinel-104#1,Sentinel-107#10,Sentinel-11#5,Sentinel-119#5,Sentinel-2#5,Sentinel-4#2,Sentinel-49#8,Sentinel-6#1,Sentinel-69#8,Sentinel-7#1,Sentinel-71#8,Sentinel-77#7,Sentinel-83#6,Sentinel-86#8,Sentinel-91#5,Sentinel-93#5,Sentinel-94#1,Sentinel-95#2,Sentinel-96#2,Sentinel-98#12,ah443-0#1,ah443-12#4,ah443-16#1,ah443-19#2,ah443-2#1,ah443-4#3,ah443-5#2,ah443-7#5,ah443-8#2,ah443-9#2,javeli-0#1,javeli-2#1,javeli-20#1,javeli-21#1,javeli-22#1,javeli-24#4,javeli-25#1,javeli-26#1,javeli-27#5,javeli-8#1,si4lgl-0#1,si4lgl-15#2,si4lgl-23#2,si4lgl-24#1,si4lgl-28#1,si4lgl-29#3,si4lgl-32#4,si4lgl-6#3,si4lgl-7#3,si4lgl-8#2,si4lgl-9#1,sm87r4-0#1,sm87r4-16#3,sm87r4-17#4,sm87r4-20#4,sm87r4-26#4,sm87r4-28#5,sm87r4-30#5,va53st-0#1,va53st-10#1,va53st-12#2,va53st-13#3,va53st-14#2,va53st-16#3,va53st-17#1,va53st-18#4,va53st-23#2,va53st-25#5,va53st-27#1,va53st-9#1" treeVersion="1_4">
 			<Overrides></Overrides>
 		</Spec>
 	</Tree>

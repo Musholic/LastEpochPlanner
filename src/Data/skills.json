@@ -2,7 +2,7 @@
   "Abomination Consume Minions": {
     "name": "Devour",
     "skillTypeTags": 0,
-    "castTime": 1.3636364,
+    "castTime": 1.0909091,
     "baseFlags": {
       "hit": true,
       "spell": true,
@@ -113,6 +113,22 @@
     },
     "buffs": [
       "+20% Chance to Receive a Critical Strike"
+    ]
+  },
+  "Ailment_AllResReduction": {
+    "name": "All Resistances Reduction",
+    "skillTypeTags": 0,
+    "baseFlags": {
+      "duration": true,
+      "ailment": true
+    },
+    "stats": {
+      "base_skill_effect_duration": 8000,
+      "maximum_stacks": 0,
+      "damageEffectiveness": 1
+    },
+    "buffs": [
+      "-5% to All Resistances"
     ]
   },
   "Ailment_Ambusher Buff": {
@@ -421,6 +437,19 @@
     "stats": {
       "base_skill_effect_duration": 60000,
       "maximum_stacks": 0,
+      "damageEffectiveness": 1
+    }
+  },
+  "Ailment_BerserkTrigger": {
+    "name": "Berserk Trigger",
+    "skillTypeTags": 0,
+    "baseFlags": {
+      "duration": true,
+      "ailment": true
+    },
+    "stats": {
+      "base_skill_effect_duration": 3000,
+      "maximum_stacks": 1,
       "damageEffectiveness": 1
     }
   },
@@ -992,6 +1021,23 @@
       "damageEffectiveness": 1
     }
   },
+  "Ailment_Fireclaws": {
+    "name": "Fireclaws",
+    "skillTypeTags": 4096,
+    "baseFlags": {
+      "duration": true,
+      "ailment": true,
+      "dot": true
+    },
+    "stats": {
+      "base_skill_effect_duration": 8000,
+      "maximum_stacks": 0
+    },
+    "buffs": [
+      "20% increased Melee Fire Damage",
+      "+100% Chance to Ignite on Hit"
+    ]
+  },
   "Ailment_FireResistanceShred": {
     "name": "Shred Fire Resistance",
     "skillTypeTags": 0,
@@ -1007,6 +1053,24 @@
     "altName": "Fire Resistance Shred",
     "buffs": [
       "-5% Fire Resistance"
+    ]
+  },
+  "Ailment_FlamingHeraldry": {
+    "name": "Flaming Heraldry",
+    "skillTypeTags": 0,
+    "baseFlags": {
+      "duration": true,
+      "ailment": true
+    },
+    "stats": {
+      "base_skill_effect_duration": 4000,
+      "maximum_stacks": 1,
+      "damageEffectiveness": 1
+    },
+    "buffs": [
+      "15% increased Movement Speed",
+      "25% increased Mana Regen",
+      "+25 Spell Fire Damage"
     ]
   },
   "Ailment_Flurry1Tag": {
@@ -1130,6 +1194,21 @@
       "base_skill_effect_duration": 3000,
       "maximum_stacks": 1
     }
+  },
+  "Ailment_Hemorrhage": {
+    "name": "Hemorrhage",
+    "skillTypeTags": 4096,
+    "baseFlags": {
+      "duration": true,
+      "ailment": true,
+      "dot": true
+    },
+    "stats": {
+      "base_skill_effect_duration": 3000,
+      "maximum_stacks": 0,
+      "dot_base_physical_damage": 300
+    },
+    "altName": "Hemorrhaging"
   },
   "Ailment_HolyAuraStackForFlameBurst": {
     "name": "Holy Aura Flame Burst Proc Ailment",
@@ -2025,6 +2104,23 @@
       "10% increased Armor"
     ]
   },
+  "Ailment_StoneAegis": {
+    "name": "Stone Aegis",
+    "skillTypeTags": 0,
+    "baseFlags": {
+      "duration": true,
+      "ailment": true
+    },
+    "stats": {
+      "base_skill_effect_duration": 10000,
+      "maximum_stacks": 0,
+      "damageEffectiveness": 1
+    },
+    "buffs": [
+      "+50 Armor",
+      "+50 Endurance Threshold"
+    ]
+  },
   "Ailment_StoneStare": {
     "name": "Stone Stare",
     "skillTypeTags": 0,
@@ -2456,8 +2552,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 1.8,
-      "spell_base_cold_damage": 36,
+      "damageEffectiveness": 2.4,
+      "spell_base_cold_damage": 48,
       "no_critical_strike_multiplier": 1,
       "base_skill_effect_duration": 2750,
       "damage_interval": 300,
@@ -2467,6 +2563,28 @@
       "4% increased Damage per player Intelligence"
     ],
     "treeId": "bh2"
+  },
+  "Bladestorm Throw": {
+    "name": "Bladestorm",
+    "skillTypeTags": 1025,
+    "castTime": 0.6818182,
+    "baseFlags": {
+      "projectile": true,
+      "attack": true,
+      "hit": true,
+      "duration": true
+    },
+    "stats": {
+      "damageEffectiveness": 1.5,
+      "throwing_base_physical_damage": 30,
+      "base_critical_strike_multiplier_+": 100,
+      "critChance": 5,
+      "base_skill_effect_duration": 1000
+    },
+    "baseMods": [
+      "4% increased Damage per player Dexterity"
+    ],
+    "treeId": "bl5st"
   },
   "Bone Golem 02 Big Slam": {
     "name": "Maul",
@@ -2597,6 +2715,13 @@
     ],
     "treeId": "cstri"
   },
+  "CreateShadow": {
+    "name": "Create Shadow",
+    "skillTypeTags": 0,
+    "castTime": 0.6818182,
+    "baseFlags": {},
+    "stats": {}
+  },
   "DancingStrike1": {
     "name": "Dancing Strikes",
     "skillTypeTags": 513,
@@ -2612,8 +2737,7 @@
       "melee_base_physical_damage": 2,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
-      "base_skill_effect_duration": 10000,
-      "cooldown": 0.7000002
+      "base_skill_effect_duration": 10000
     },
     "baseMods": [
       "4% increased Damage per player Dexterity"
@@ -3156,6 +3280,7 @@
     },
     "baseMods": [
       "4% increased Damage per player Intelligence",
+      "+1 Spell Damage per player Intelligence",
       "4% increased Freeze Rate Multiplier per player Intelligence"
     ]
   },
@@ -3192,7 +3317,7 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 1,
+      "damageEffectiveness": 1.25,
       "melee_base_fire_damage": 2,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
@@ -3255,8 +3380,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 2,
-      "melee_base_fire_damage": 16,
+      "damageEffectiveness": 4,
+      "melee_base_fire_damage": 2,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 500
@@ -3442,7 +3567,9 @@
     },
     "baseMods": [
       "4% increased Damage per player Attunement",
-      "4% increased Damage per player Intelligence"
+      "+4% Critical Strike Multiplier per player Attunement",
+      "4% increased Damage per player Intelligence",
+      "+4% Critical Strike Chance per player Intelligence"
     ]
   },
   "GatheringStormMelee": {
@@ -3817,8 +3944,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 1,
-      "melee_base_physical_damage": 50,
+      "damageEffectiveness": 1.5,
+      "melee_base_physical_damage": 2,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 1050,
@@ -3902,8 +4029,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 0.4,
-      "spell_base_cold_damage": 8,
+      "damageEffectiveness": 0.5,
+      "spell_base_cold_damage": 10,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 7000
@@ -3926,7 +4053,7 @@
     },
     "stats": {
       "damageEffectiveness": 1,
-      "melee_base_lightning_damage": 15,
+      "melee_base_lightning_damage": 2,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10
@@ -3965,7 +4092,7 @@
       "duration": true
     },
     "stats": {
-      "base_skill_effect_duration": 200,
+      "base_skill_effect_duration": 0,
       "cooldown": 10
     },
     "baseMods": [
@@ -4026,8 +4153,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 9.5,
-      "spell_base_fire_damage": 190,
+      "damageEffectiveness": 12,
+      "spell_base_fire_damage": 240,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 9000
@@ -4242,10 +4369,11 @@
     "stats": {
       "damageEffectiveness": 3,
       "spell_base_fire_damage": 60,
+      "chance_to_cast_Ailment_Ignite_on_hit_%": 100,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 10000,
-      "damage_interval": 330,
+      "damage_interval": 250,
       "cooldown": 1
     },
     "treeId": "fs11"
@@ -4382,7 +4510,7 @@
   "RogueFalcon Melee": {
     "name": "Rogue Falcon Melee",
     "skillTypeTags": 513,
-    "castTime": 0.7954545,
+    "castTime": 0.8522727,
     "baseFlags": {
       "melee": true,
       "attack": true,
@@ -4661,8 +4789,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 2,
-      "melee_base_physical_damage": 20,
+      "damageEffectiveness": 3,
+      "melee_base_physical_damage": 2,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 10,
       "base_skill_effect_duration": 10
@@ -4671,6 +4799,28 @@
       "4% increased Damage per player Dexterity"
     ],
     "treeId": "dagg3"
+  },
+  "ShadowRend": {
+    "name": "Shadow Rend",
+    "skillTypeTags": 513,
+    "castTime": 1.0909091,
+    "baseFlags": {
+      "melee": true,
+      "attack": true,
+      "hit": true,
+      "duration": true
+    },
+    "stats": {
+      "damageEffectiveness": 5,
+      "melee_base_physical_damage": 2,
+      "base_critical_strike_multiplier_+": 100,
+      "critChance": 5,
+      "base_skill_effect_duration": 800
+    },
+    "baseMods": [
+      "4% increased Damage per player Dexterity"
+    ],
+    "treeId": "sh4re"
   },
   "ShatterStrike": {
     "name": "Shatter Strike",
@@ -4687,7 +4837,7 @@
     "baseMods": [
       "4% increased Melee Damage per player Dexterity",
       "+1 Melee Cold Damage per player Dexterity",
-      "4% increased Cold Damage per player Intelligence",
+      "4% increased Damage per player Intelligence",
       "+4% Freeze Rate Multiplier per player Intelligence"
     ],
     "treeId": "ss3tre"
@@ -4954,7 +5104,7 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 0.6,
+      "damageEffectiveness": 1,
       "spell_base_physical_damage": 20,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
@@ -5114,7 +5264,7 @@
     },
     "stats": {
       "damageEffectiveness": 1,
-      "bow_base_physical_damage": 25,
+      "bow_base_physical_damage": 20,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 600
@@ -5230,7 +5380,8 @@
     },
     "baseMods": [
       "+20 Minion Health per player Intelligence",
-      "4% increased Minion Damage per player Intelligence"
+      "4% increased Minion Damage per player Intelligence",
+      "+4 Minion Armor per player Intelligence"
     ],
     "minionList": [
       "SummonedBoneGolem"
@@ -5545,7 +5696,11 @@
     },
     "baseMods": [
       "+10 Minion Health per player Attunement",
-      "4% increased Minion Damage per player Attunement"
+      "4% increased Minion Damage per player Attunement",
+      "+2% Minion Critical Strike Multiplier per player Attunement",
+      "+10 Minion Health per player Strength",
+      "4% increased Minion Damage per player Strength",
+      "4% increased Minion Critical Strike Chance per player Strength"
     ],
     "minionList": [
       "StormSprite"
@@ -5783,8 +5938,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 1,
-      "melee_base_physical_damage": 5,
+      "damageEffectiveness": 3,
+      "melee_base_physical_damage": 2,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 200,
@@ -5865,8 +6020,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 0.75,
-      "spell_base_physical_damage": 15,
+      "damageEffectiveness": 1,
+      "spell_base_physical_damage": 20,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 600,
@@ -5884,7 +6039,7 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 0.6,
+      "damageEffectiveness": 1,
       "spell_base_physical_damage": 20,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
@@ -5907,11 +6062,11 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 0.5,
-      "spell_base_physical_damage": 10,
+      "damageEffectiveness": 0.45,
+      "spell_base_physical_damage": 9,
       "no_critical_strike_multiplier": 1,
       "base_skill_effect_duration": 4000,
-      "damage_interval": 400
+      "damage_interval": 300
     },
     "baseMods": [
       "4% increased Damage per player Attunement"
@@ -5995,7 +6150,7 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 1.5,
+      "damageEffectiveness": 2,
       "melee_base_physical_damage": 2,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
@@ -6130,8 +6285,8 @@
       "duration": true
     },
     "stats": {
-      "damageEffectiveness": 0.8,
-      "spell_base_fire_damage": 16,
+      "damageEffectiveness": 1,
+      "spell_base_fire_damage": 20,
       "base_critical_strike_multiplier_+": 100,
       "critChance": 5,
       "base_skill_effect_duration": 3300,
@@ -6386,7 +6541,7 @@
   "golemMelee": {
     "name": "Melee Attack",
     "skillTypeTags": 513,
-    "castTime": 1.0909091,
+    "castTime": 0.9545454,
     "baseFlags": {
       "melee": true,
       "attack": true,

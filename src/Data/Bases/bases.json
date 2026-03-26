@@ -2030,6 +2030,32 @@
       "+4 Potion Slots"
     ]
   },
+  "Singularity Belt": {
+    "type": "Belt",
+    "baseTypeID": 2,
+    "subTypeID": 13,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "+1 Potion Slots",
+      "1 Evade Charges gained on Potion Use"
+    ]
+  },
+  "Corruption Binding": {
+    "type": "Belt",
+    "baseTypeID": 2,
+    "subTypeID": 14,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "+8 Potion Slots",
+      "{rounding:Integer}(37-31)% reduced Health Gained on Potion Use"
+    ]
+  },
   "Hide Boots": {
     "type": "Boots",
     "baseTypeID": 3,
@@ -3083,7 +3109,7 @@
     "affixEffectModifier": 0.75,
     "implicits": [
       "+53 Melee Damage",
-      "(53-75)% Increased Stun Chance"
+      "(52-75)% Increased Stun Chance"
     ],
     "weapon": {
       "AttackRateBase": 0.98,
@@ -3117,8 +3143,8 @@
     "affixEffectModifier": 0.75,
     "implicits": [
       "+53 Melee Damage",
-      "{rounding:Integer}(53-93)% increased Poison Damage",
-      "+(53-75)% Poison Resistance"
+      "{rounding:Integer}(52-93)% increased Poison Damage",
+      "+(52-75)% Poison Resistance"
     ],
     "weapon": {
       "AttackRateBase": 0.98,
@@ -4321,7 +4347,7 @@
     "affixEffectModifier": 2.2,
     "implicits": [
       "+105 Melee Damage",
-      "+(105-135)% Melee Critical Strike Multiplier",
+      "+(104-135)% Melee Critical Strike Multiplier",
       "(100-355)% Chance to Upgrade when you slay a Harbinger"
     ],
     "weapon": {
@@ -4339,7 +4365,7 @@
     "affixEffectModifier": 2.2,
     "implicits": [
       "+105 Melee Damage",
-      "+(105-135)% Melee Critical Strike Multiplier",
+      "+(104-135)% Melee Critical Strike Multiplier",
       "{rounding:Integer}(10-15) Health Gain on Crit"
     ],
     "weapon": {
@@ -4475,7 +4501,7 @@
     "affixEffectModifier": 2.2,
     "implicits": [
       "+106 Melee Damage",
-      "(106-166)% Increased Melee Stun Chance",
+      "(105-166)% Increased Melee Stun Chance",
       "(16-36)% Increased Melee Stun Duration"
     ],
     "weapon": {
@@ -5485,7 +5511,7 @@
     "affixEffectModifier": 2.2,
     "implicits": [
       "+99 Melee Damage",
-      "+(105-145)% Chance to inflict Bleed on Melee Hit",
+      "+(104-145)% Chance to inflict Bleed on Melee Hit",
       "(100-355)% Chance to Upgrade when you slay a Harbinger"
     ],
     "weapon": {
@@ -5503,7 +5529,7 @@
     "affixEffectModifier": 2.2,
     "implicits": [
       "+99 Melee Damage",
-      "+(105-145)% Chance to inflict Bleed on Melee Hit",
+      "+(104-145)% Chance to inflict Bleed on Melee Hit",
       "(35-45)% Increased Bleed Duration "
     ],
     "weapon": {
@@ -6238,6 +6264,18 @@
       "{rounding:Integer}+(30-48) Mana"
     ]
   },
+  "Iron Smoker": {
+    "type": "Off-Hand Catalyst",
+    "baseTypeID": 19,
+    "subTypeID": 20,
+    "req": {
+      "level": 40
+    },
+    "affixEffectModifier": 0.17,
+    "implicits": [
+      "{rounding:Integer}+(50-150) Minion Health Regen"
+    ]
+  },
   "Copper Amulet": {
     "type": "Amulet",
     "baseTypeID": 20,
@@ -6441,6 +6479,47 @@
       "+(4-15)% to All Resistances"
     ]
   },
+  "Deadstar Amulet": {
+    "type": "Amulet",
+    "baseTypeID": 20,
+    "subTypeID": 16,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0.17,
+    "implicits": [
+      "{rounding:Integer}(20-24)% less Damage Over Time Taken",
+      "{rounding:Integer}(42-60)% increased Damage Over Time",
+      "{rounding:Integer}(60-42)% reduced Armor"
+    ]
+  },
+  "Cursed Coin Amulet": {
+    "type": "Amulet",
+    "baseTypeID": 20,
+    "subTypeID": 17,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0.17,
+    "implicits": [
+      "+(51-83)% Lightning Resistance",
+      "+1 to All Skills",
+      "{rounding:Integer}(4-5)% increased Damage Taken"
+    ]
+  },
+  "Spider Eye Amulet": {
+    "type": "Amulet",
+    "baseTypeID": 20,
+    "subTypeID": 18,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0.17,
+    "implicits": [
+      "{rounding:Integer}+(5-8) Vitality",
+      "{rounding:Integer}+(5-8) Dexterity"
+    ]
+  },
   "Copper Ring": {
     "type": "Ring",
     "baseTypeID": 21,
@@ -6604,6 +6683,46 @@
       "(6-10)% Increased Cooldown Recovery Speed"
     ]
   },
+  "Old Silver Ring": {
+    "type": "Ring",
+    "baseTypeID": 21,
+    "subTypeID": 13,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "(3-8)% increased Movement Speed"
+    ]
+  },
+  "Corrupted Insignia": {
+    "type": "Ring",
+    "baseTypeID": 21,
+    "subTypeID": 14,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "(13-19)% increased Cooldown Recovery Speed for Evade",
+      "{rounding:Tenth}(3-4) Seconds of Frenzy after you use Evade",
+      "+(6-7)% increased Damage Taken while you have Frenzy"
+    ]
+  },
+  "Opal Eye Ring": {
+    "type": "Ring",
+    "baseTypeID": 21,
+    "subTypeID": 15,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "(6-10)% Increased Cooldown Recovery Speed",
+      "{rounding:Integer}+(6-7) to All Attributes",
+      "(7-6)% reduced Movement Speed"
+    ]
+  },
   "Reliquary Text": {
     "type": "Relic",
     "baseTypeID": 22,
@@ -6737,7 +6856,7 @@
     },
     "affixEffectModifier": 0,
     "implicits": [
-      "{rounding:Integer}+(3-4) Health Regen"
+      "{rounding:Integer}+(7-12) Health Regen"
     ]
   },
   "Defiled Bones": {
@@ -7412,6 +7531,116 @@
       "+(11-15)% Endurance"
     ]
   },
+  "Timeglass Chalice": {
+    "type": "Relic",
+    "baseTypeID": 22,
+    "subTypeID": 64,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "{rounding:Integer}+(23-31) Mana",
+      "{rounding:Integer}(23-31)% increased Mana Regen",
+      "{rounding:Integer}(47-31)% reduced Health Regen"
+    ]
+  },
+  "Doom Gourd": {
+    "type": "Relic",
+    "baseTypeID": 22,
+    "subTypeID": 65,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "{rounding:Integer}+(11-17) Minion Melee Void Damage",
+      "{rounding:Integer}+(11-17) Minion Spell Void Damage",
+      "-23% to -17% Minion Physical Resistance"
+    ]
+  },
+  "Aberrant Eye": {
+    "type": "Relic",
+    "baseTypeID": 22,
+    "subTypeID": 66,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "{rounding:Integer}+(7-13) Ward per Second",
+      "(11-13)% of Maximum Health gained as Ward Decay Threshold",
+      "{rounding:Integer}(9-7)% reduced Health"
+    ]
+  },
+  "Apocalypse Code": {
+    "type": "Relic",
+    "baseTypeID": 22,
+    "subTypeID": 67,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "+(13-17)% Physical Penetration",
+      "+(13-17)% Void Penetration",
+      "{rounding:Integer}(7-5)% reduced Health"
+    ]
+  },
+  "Prophetic Homonculus": {
+    "type": "Relic",
+    "baseTypeID": 22,
+    "subTypeID": 68,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "+(61-77)% Necrotic Resistance",
+      "+(61-77)% Void Resistance",
+      "{rounding:Integer}(47-37)% reduced Armor"
+    ]
+  },
+  "Bottled Time": {
+    "type": "Relic",
+    "baseTypeID": 22,
+    "subTypeID": 69,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "(6-12)% increased Movement Speed",
+      "(6-12)% increased Increased Cooldown Recovery Speed",
+      "{rounding:Integer}(12-24)% increased Damage Over Time Taken"
+    ]
+  },
+  "Bramble Totem": {
+    "type": "Relic",
+    "baseTypeID": 22,
+    "subTypeID": 70,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "{rounding:Integer}(20-40) Damage Reflected to Attackers",
+      "{rounding:Integer}+(5-10) Minion Spell Damage"
+    ]
+  },
+  "Artificer's Device": {
+    "type": "Relic",
+    "baseTypeID": 22,
+    "subTypeID": 71,
+    "req": {
+      "level": 35
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "{rounding:Integer}+(15-30) Mana",
+      "{rounding:Integer}(15-30)% increased Mana Regen"
+    ]
+  },
   "Shortbow": {
     "type": "Bow",
     "baseTypeID": 23,
@@ -7879,6 +8108,56 @@
     "affixEffectModifier": -0.33,
     "implicits": []
   },
+  "Grand Primal Omen Idol": {
+    "type": "Grand Idol",
+    "baseTypeID": 29,
+    "subTypeID": 10,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": -0.33,
+    "implicits": []
+  },
+  "Grand Arcane Omen Idol": {
+    "type": "Grand Idol",
+    "baseTypeID": 29,
+    "subTypeID": 11,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": -0.33,
+    "implicits": []
+  },
+  "Grand Iron Omen Idol": {
+    "type": "Grand Idol",
+    "baseTypeID": 29,
+    "subTypeID": 12,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": -0.33,
+    "implicits": []
+  },
+  "Grand Spectral Omen Idol": {
+    "type": "Grand Idol",
+    "baseTypeID": 29,
+    "subTypeID": 13,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": -0.33,
+    "implicits": []
+  },
+  "Grand Umbral Omen Idol": {
+    "type": "Grand Idol",
+    "baseTypeID": 29,
+    "subTypeID": 14,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": -0.33,
+    "implicits": []
+  },
   "Large Nomad Idol": {
     "type": "Large Idol",
     "baseTypeID": 30,
@@ -7973,6 +8252,56 @@
     "type": "Large Idol",
     "baseTypeID": 30,
     "subTypeID": 9,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": -0.33,
+    "implicits": []
+  },
+  "Large Primal Omen Idol": {
+    "type": "Large Idol",
+    "baseTypeID": 30,
+    "subTypeID": 10,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": -0.33,
+    "implicits": []
+  },
+  "Large Arcane Omen Idol": {
+    "type": "Large Idol",
+    "baseTypeID": 30,
+    "subTypeID": 11,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": -0.33,
+    "implicits": []
+  },
+  "Large Iron Omen Idol": {
+    "type": "Large Idol",
+    "baseTypeID": 30,
+    "subTypeID": 12,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": -0.33,
+    "implicits": []
+  },
+  "Large Spectral Omen Idol": {
+    "type": "Large Idol",
+    "baseTypeID": 30,
+    "subTypeID": 13,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": -0.33,
+    "implicits": []
+  },
+  "Large Umbral Omen Idol": {
+    "type": "Large Idol",
+    "baseTypeID": 30,
+    "subTypeID": 14,
     "req": {
       "level": 0
     },
@@ -11066,7 +11395,7 @@
     },
     "affixEffectModifier": 0,
     "implicits": [
-      "105% more cost (multiplicative with other modifiers) of all Prophecies but they offer twice as many uses before expiring"
+      "104% more cost (multiplicative with other modifiers) of all Prophecies but they offer twice as many uses before expiring"
     ]
   },
   "Refracting Lens of Wealth": {
@@ -11450,7 +11779,7 @@
     },
     "affixEffectModifier": 0,
     "implicits": [
-      "20% Increased Chance per rank to find Keys Prophecies"
+      "20% Increased Chance per rank to find Dungeon Keys Prophecies"
     ]
   },
   "Focusing Lens of the Soil": {
@@ -11559,6 +11888,156 @@
     "affixEffectModifier": 0,
     "implicits": [
       "20% Increased Chance per rank to find Minor Idols Prophecies"
+    ]
+  },
+  "Twisted Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 0,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": []
+  },
+  "Jagged Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 1,
+    "req": {
+      "level": 65
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "2 Weaver Idols equipped at Maximum"
+    ]
+  },
+  "Skyward Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 2,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": []
+  },
+  "Spire Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 3,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "{rounding:Integer}+(7-24) Mana per Idol in a Refracted Slot"
+    ]
+  },
+  "Carcinised Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 4,
+    "req": {
+      "level": 32
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "{rounding:Integer}+(64-256) Armor per Idol in a Refracted Slot"
+    ]
+  },
+  "Visage Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 5,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "{rounding:Integer}+(6-10) Health per Equipped Omen Idol"
+    ]
+  },
+  "Lunar Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 6,
+    "req": {
+      "level": 0
+    },
+    "affixEffectModifier": 0,
+    "implicits": []
+  },
+  "Ocular Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 7,
+    "req": {
+      "level": 32
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "2 Adorned Idols equipped at Maximum"
+    ]
+  },
+  "Archaic Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 8,
+    "req": {
+      "level": 50
+    },
+    "affixEffectModifier": 0,
+    "implicits": []
+  },
+  "Impervious Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 9,
+    "req": {
+      "level": 65
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "{rounding:Integer}+(15-35) Ward Decay Threshold per Equipped Corrupted Idol",
+      "2 Weaver Idols equipped at Maximum"
+    ]
+  },
+  "Prophesied Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 10,
+    "req": {
+      "level": 60
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "(10-40)% increased Effect of Suffixes for Idols in Refracted Slots"
+    ]
+  },
+  "Pyramidal Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 11,
+    "req": {
+      "level": 76
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "10% Increased Cooldown Recovery Speed if there are no larger idols above smaller ones in the grid",
+      "2 Weaver Idols equipped at Maximum"
+    ]
+  },
+  "Auric Altar": {
+    "type": "Idol Altar",
+    "baseTypeID": 41,
+    "subTypeID": 12,
+    "req": {
+      "level": 79
+    },
+    "affixEffectModifier": 0,
+    "implicits": [
+      "2% more Damage to Bosses per Equipped Unique or Legendary Idol"
     ]
   }
 }
