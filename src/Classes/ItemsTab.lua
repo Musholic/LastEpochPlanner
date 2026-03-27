@@ -22,7 +22,7 @@ local rarityDropList = {
 	{ label = colorCodes.IDOL.."Idol", rarity = "IDOL" },
 }
 
-local baseSlots = { "Weapon 1", "Weapon 2", "Helmet", "Body Armor", "Gloves", "Boots", "Amulet", "Ring 1", "Ring 2", "Belt", "Relic" }
+local baseSlots = { "Weapon 1", "Weapon 2", "Helmet", "Body Armor", "Gloves", "Boots", "Amulet", "Ring 1", "Ring 2", "Belt", "Relic", "Idol Altar" }
 
 for i = 1, 20 do
 	table.insert(baseSlots, "Idol " .. i)
