@@ -1,33 +1,33 @@
 <LastEpochPlanner>
 	<Build ascendClassName="Lich" bandit="None" characterLevelAutoMode="false" className="Acolyte" level="62" mainSocketGroup="4" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="1_4" viewMode="TREE">
-		<PlayerStat stat="AverageHit" value="1115.20319625"></PlayerStat>
-		<PlayerStat stat="AverageDamage" value="1115.20319625"></PlayerStat>
-		<PlayerStat stat="AverageBurstDamage" value="1115.20319625"></PlayerStat>
+		<PlayerStat stat="AverageHit" value="1128.09571875"></PlayerStat>
+		<PlayerStat stat="AverageDamage" value="1128.09571875"></PlayerStat>
+		<PlayerStat stat="AverageBurstDamage" value="1128.09571875"></PlayerStat>
 		<PlayerStat stat="Speed" value="1.57300001573"></PlayerStat>
 		<PlayerStat stat="PreEffectiveCritChance" value="7.55"></PlayerStat>
 		<PlayerStat stat="CritChance" value="7.55"></PlayerStat>
 		<PlayerStat stat="CritMultiplier" value="2.35"></PlayerStat>
 		<PlayerStat stat="HitChance" value="100"></PlayerStat>
-		<PlayerStat stat="TotalDPS" value="1754.2146452434"></PlayerStat>
-		<PlayerStat stat="CombinedDPS" value="1754.2146452434"></PlayerStat>
+		<PlayerStat stat="TotalDPS" value="1774.4945833387"></PlayerStat>
+		<PlayerStat stat="CombinedDPS" value="1774.4945833387"></PlayerStat>
 		<PlayerStat stat="ManaCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPercentCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPerSecondCost" value="0"></PlayerStat>
 		<PlayerStat stat="ManaPercentPerSecondCost" value="0"></PlayerStat>
-		<PlayerStat stat="Vit" value="32"></PlayerStat>
+		<PlayerStat stat="Vit" value="33"></PlayerStat>
 		<PlayerStat stat="Str" value="20"></PlayerStat>
 		<PlayerStat stat="Dex" value="22"></PlayerStat>
-		<PlayerStat stat="Int" value="24"></PlayerStat>
+		<PlayerStat stat="Int" value="25"></PlayerStat>
 		<PlayerStat stat="Att" value="14"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="3355.7879451565"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="2848.2979437835"></PlayerStat>
-		<PlayerStat stat="LightningMaximumHitTaken" value="2977.7660321373"></PlayerStat>
-		<PlayerStat stat="ColdMaximumHitTaken" value="2655.8453800143"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="5696.8812116608"></PlayerStat>
-		<PlayerStat stat="PoisonMaximumHitTaken" value="8773.7749161188"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="4094.4282941888"></PlayerStat>
-		<PlayerStat stat="VoidMaximumHitTaken" value="2183.695090234"></PlayerStat>
-		<PlayerStat stat="Life" value="1597"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="3391.5130991723"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="2865.7916776649"></PlayerStat>
+		<PlayerStat stat="LightningMaximumHitTaken" value="2996.0549357406"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="2672.1571048497"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="5731.8704318329"></PlayerStat>
+		<PlayerStat stat="PoisonMaximumHitTaken" value="9154.6123036518"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="4207.2260799761"></PlayerStat>
+		<PlayerStat stat="VoidMaximumHitTaken" value="2197.1069528764"></PlayerStat>
+		<PlayerStat stat="Life" value="1607"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="0"></PlayerStat>
 		<PlayerStat stat="LifeRegenRecovery" value="14.7"></PlayerStat>
 		<PlayerStat stat="LifeLeechGainRate" value="0"></PlayerStat>
@@ -35,10 +35,10 @@
 		<PlayerStat stat="Spec:ManaInc" value="0"></PlayerStat>
 		<PlayerStat stat="ManaRegenRecovery" value="8"></PlayerStat>
 		<PlayerStat stat="ManaLeechGainRate" value="0"></PlayerStat>
-		<PlayerStat stat="Ward" value="194"></PlayerStat>
-		<PlayerStat stat="WardRetention" value="81"></PlayerStat>
-		<PlayerStat stat="Evasion" value="289"></PlayerStat>
-		<PlayerStat stat="Spec:EvasionInc" value="64"></PlayerStat>
+		<PlayerStat stat="Ward" value="195"></PlayerStat>
+		<PlayerStat stat="WardRetention" value="83"></PlayerStat>
+		<PlayerStat stat="Evasion" value="295"></PlayerStat>
+		<PlayerStat stat="Spec:EvasionInc" value="66"></PlayerStat>
 		<PlayerStat stat="MeleeEvadeChance" value="0"></PlayerStat>
 		<PlayerStat stat="ProjectileEvadeChance" value="0"></PlayerStat>
 		<PlayerStat stat="Armour" value="180"></PlayerStat>
@@ -56,15 +56,15 @@
 		<PlayerStat stat="ColdResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="PhysicalResist" value="64"></PlayerStat>
 		<PlayerStat stat="PhysicalResistOverCap" value="0"></PlayerStat>
-		<PlayerStat stat="PoisonResist" value="72"></PlayerStat>
+		<PlayerStat stat="PoisonResist" value="73"></PlayerStat>
 		<PlayerStat stat="PoisonResistOverCap" value="0"></PlayerStat>
-		<PlayerStat stat="NecroticResist" value="52"></PlayerStat>
+		<PlayerStat stat="NecroticResist" value="53"></PlayerStat>
 		<PlayerStat stat="NecroticResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="VoidResist" value="10"></PlayerStat>
 		<PlayerStat stat="VoidResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.57"></PlayerStat>
-		<PlayerStat stat="FullDPS" value="1987.4370655756"></PlayerStat>
-		<FullDPSSkill skillPart="" source="" stat="Flay" value="1754.2146452434"></FullDPSSkill>
+		<PlayerStat stat="FullDPS" value="2007.7170036709"></PlayerStat>
+		<FullDPSSkill skillPart="" source="" stat="Flay" value="1774.4945833387"></FullDPSSkill>
 		<FullDPSSkill skillPart="" source="Flay 1" stat="Poison" value="223.51779673518"></FullDPSSkill>
 		<FullDPSSkill skillPart="" source="Flay 1" stat="Ignite" value="9.7046235970462"></FullDPSSkill>
 	</Build>
