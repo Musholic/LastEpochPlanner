@@ -58,27 +58,33 @@ function itemLib.applyRange(line, range, valueScalar, rounding)
     if not valueScalar then
         valueScalar = 1.0
     end
-    line = line:gsub("(%+?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)",
-            function(plus, min, max)
-                min = min * valueScalar
-                -- If min decimal part is exactly 0.5, round down
-                if min * precision % 1 == 0.5 then
-                    min = m_floor(min * precision) / precision
-                else
-                    min = m_floor(min * precision + 0.5) / precision
-                end
-                max = max * valueScalar
-                max = m_floor(max * precision + 0.5) / precision
-                numbers = numbers + 1
-                local numVal = (tonumber(min) + range * (tonumber(max) - tonumber(min) + 1 / precision))
-                numVal = m_floor(numVal * precision) / precision
-                if numVal > max then
-                    numVal = max
-                end
-                return (numVal < 0 and "" or plus) .. tostring(numVal)
-            end)
-               :gsub("%-(%d+%.?%d*%%) (%a+)", antonymFunc)
-    return line
+    if itemLib.hasRange(line) then
+        line = line:gsub("(%+?)%((%-?%d+%.?%d*)%-(%-?%d+%.?%d*)%)",
+                function(plus, min, max)
+                    min = min * valueScalar
+                    -- If min decimal part is exactly 0.5, round down
+                    if min * precision % 1 == 0.5 then
+                        min = m_floor(min * precision) / precision
+                    else
+                        min = m_floor(min * precision + 0.5) / precision
+                    end
+                    max = max * valueScalar
+                    max = m_floor(max * precision + 0.5) / precision
+                    numbers = numbers + 1
+                    local numVal = (tonumber(min) + range * (tonumber(max) - tonumber(min) + 1 / precision))
+                    numVal = m_floor(numVal * precision) / precision
+                    if numVal > max then
+                        numVal = max
+                    end
+                    return (numVal < 0 and "" or plus) .. tostring(numVal)
+                end)
+    elseif valueScalar ~= 1.0 then
+        -- If the line actually has no range, we should still apply the value scalar to the single value
+        line = line:gsub("(%d+%.?%d*)", function(num)
+            return tostring(m_floor(num * valueScalar * precision) / precision)
+        end)
+    end
+    return line:gsub("%-(%d+%.?%d*%%) (%a+)", antonymFunc)
 end
 
 function itemLib.hasRange(line)

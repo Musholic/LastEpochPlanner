@@ -204,4 +204,78 @@ describe("Offline Item Import", function()
         }
         assert.are.same(expected, item)
     end)
+
+    it("should process armor with corrupted affix", function()
+        local itemDataJson = [[
+        {
+          "itemData": null,
+          "data": [
+            5,
+            12,
+            166,
+            1,
+            59,
+            4,
+            16,
+            60,
+            134,
+            122,
+            0,
+            69,
+            19,
+            251,
+            33,
+            0,
+            45,
+            176,
+            0,
+            19,
+            205,
+            33,
+            75,
+            177,
+            1,
+            249,
+            57,
+            0
+          ],
+          "inventoryPosition": {
+            "x": 0,
+            "y": 0
+          },
+          "quantity": 1,
+          "containerID": 3,
+          "formatVersion": 2
+        }
+        ]]
+        local itemData = build.importTab:processItemData(processJson(itemDataJson))
+        local item = build.importTab:BuildItem(itemData)
+        local rawItem = item:BuildRaw()
+        local expected = [[Rarity: RARE
+Worn Plate
+Worn Plate
+Crafted: true
+Prefix: {range:176}45_0
+Prefix: {range:205}19_0
+Prefix: None
+Suffix: {range:33}1019_1
+Suffix: {range:177}331_2
+Suffix: {range:57}505_0
+LevelReq: 4
+Implicits: 1
++75 Armor
+{range:176}{scalar:1.5}+(5-9)% Physical Resistance
+{range:205}{scalar:1.5}+(5-9)% Poison Resistance
+{scalar:1.5}7% increased Health
+{scalar:1.5}2% of Health Regen also applies to Ward
+{scalar:1.5}6% increased Mana
+{scalar:1.5}+1 Vitality]]
+
+        assert.are.same(expected, rawItem)
+
+        -- Also check if the mod list is computed correctly for increased life
+        local itemModList = item.modList
+        assert.equal(10, itemModList:Sum("INC", nil, "Life"))
+
+    end)
 end)
