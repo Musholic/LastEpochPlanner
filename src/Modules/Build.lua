@@ -665,7 +665,8 @@ function buildMode:ReadLeToolsSave(saveContent)
 		["ring1"] = "Ring 1",
 		["ring2"] = "Ring 2",
 		["waist"] = "Belt",
-		["relic"] = "Relic"
+		["relic"] = "Relic",
+		["idol_altar"] = "Idol Altar",
 	}
 
 	for i = 1, 10 do

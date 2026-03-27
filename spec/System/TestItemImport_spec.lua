@@ -123,4 +123,85 @@ describe("Offline Item Import", function()
         }
         assert.are.same(expected, item)
     end)
+
+    it("should process idol altar slot correctly", function()
+        local itemDataJson = [[
+        {
+        "itemData": null,
+        "data": [
+            5,
+            70,
+            46,
+            41,
+            5,
+            2,
+            16,
+            60,
+            44,
+            63,
+            0,
+            67,
+            36,
+            81,
+            10,
+            36,
+            73,
+            191,
+            4,
+            70,
+            51,
+            0
+        ],
+        "inventoryPosition": {
+            "x": 0,
+            "y": 0
+        },
+        "quantity": 1,
+        "containerID": 123,
+        "formatVersion": 2
+        }
+        ]]
+        local item = build.importTab:processItemData(processJson(itemDataJson))
+
+        local expected = {
+          ["base"] = {
+            ["affixEffectModifier"] = 0,
+            ["baseTypeID"] = 41,
+            ["implicits"] = {
+              [1] = '{rounding:Integer}+(6-10) Health per Equipped Omen Idol'
+            },
+            ["req"] = {
+              ["level"] = 0
+            },
+            ["subTypeID"] = 5,
+            ["type"] = 'Idol Altar'
+          },
+          ["baseName"] = 'Visage Altar',
+          ["explicitMods"] = { },
+          ["implicitMods"] = {
+            [1] = '{range: 60}{rounding:Integer}+(6-10) Health per Equipped Omen Idol'
+          },
+          ["name"] = 'Visage Altar',
+          ["prefixes"] = {
+            [1] = {
+              ["modId"] = '1097_2',
+              ["range"] = 191
+            }
+          },
+          ["rarity"] = 'RARE',
+          ["rarityType"] = 'BASIC',
+          ["slotName"] = 'Idol Altar',
+          ["suffixes"] = {
+            [1] = {
+              ["modId"] = '1105_2',
+              ["range"] = 10
+            },
+            [2] = {
+              ["modId"] = '1094_0',
+              ["range"] = 51
+            }
+          }
+        }
+        assert.are.same(expected, item)
+    end)
 end)

@@ -663,7 +663,7 @@ function ImportTabClass:DownloadPassiveTree()
     self:ImportPassiveTreeAndJewels(charData)
 end
 
-local offlineImportSlotMap = { [4] = "Weapon 1", [5] = "Weapon 2", [2] = "Helmet", [3] = "Body Armor", [6] = "Gloves", [8] = "Boots", [11] = "Amulet", [9] = "Ring 1", [10] = "Ring 2", [7] = "Belt", [12] = "Relic" }
+local offlineImportSlotMap = { [4] = "Weapon 1", [5] = "Weapon 2", [2] = "Helmet", [3] = "Body Armor", [6] = "Gloves", [8] = "Boots", [11] = "Amulet", [9] = "Ring 1", [10] = "Ring 2", [7] = "Belt", [12] = "Relic", [123] = "Idol Altar" }
 
 for i = 1, 7 do
     offlineImportSlotMap[32 + i] = "Blessing " .. i
@@ -675,7 +675,8 @@ end
 function ImportTabClass:processItemData(itemData)
     if itemData["containerID"] <= 12 or itemData["containerID"] == 29 or
             itemData["containerID"] >= 33 and itemData["containerID"] <= 39 or
-            itemData["containerID"] >= 43 and itemData["containerID"] <= 45 then
+            itemData["containerID"] >= 43 and itemData["containerID"] <= 45 or
+            itemData["containerID"] == 123 then
         local item = {
         }
         local baseTypeID = itemData["data"][4]
@@ -738,7 +739,7 @@ function ImportTabClass:processItemData(itemData)
                             -- There are cases where the "nbAffixesIndex" value is wrong, not sure why but
                             -- we should at least prevent a crash when it's higher than expected (could it be lower?)
                             if itemData["data"][dataId] then
-                                local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 4) * 256
+                                local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 16) * 256
                                 local affixTier = math.floor(itemData["data"][dataId] / 16)
                                 local modId = affixId .. "_" .. affixTier
                                 local modData = data.itemMods.Item[modId]
@@ -760,7 +761,7 @@ function ImportTabClass:processItemData(itemData)
                     for i = 0, 4 do
                         local dataId = 14 + i * 3
                         if #itemData["data"] > dataId then
-                            local affixId = itemData["data"][dataId] + (itemData["data"][dataId - 1] % 4) * 256
+                            local affixId = itemData["data"][dataId] + (itemData["data"][dataId - 1] % 16) * 256
                             if affixId then
                                 local affixTier = math.floor(itemData["data"][dataId - 1] / 16)
                                 local modId = affixId .. "_" .. affixTier
