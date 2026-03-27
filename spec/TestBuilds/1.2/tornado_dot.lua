@@ -118,7 +118,7 @@ return {
     ["EffectiveMovementSpeedMod"] = 1.8,
     ["EffectiveSpellDodgeChance"] = 0,
     ["EffectiveSpellSuppressionChance"] = 0,
-    ["Endurance"] = 62,
+    ["Endurance"] = 63,
     ["EnduranceThreshold"] = 757,
     ["EnemyCritEffect"] = 1.015,
     ["EnemyLifeRegen"] = 0,

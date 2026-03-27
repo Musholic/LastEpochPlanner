@@ -4,6 +4,7 @@ local applyRangeTests = {
     [{ "(5-14)% increased Health", 96, 0.38, "Thousandth" }] = "3.2% increased Health",
     [{ "+(2-6) to All Attributes", 48, 1.0, "Integer" }] = "+2 to All Attributes",
     [{ "+(7-8) Attunement", 38, 1.5, "Integer" }] = "+10 Attunement",
+    [{ "7% increased Health", 0, 1.5, "Integer" }] = "10% increased Health",
 }
 
 describe("TestItemTools", function()
