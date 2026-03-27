@@ -1,3 +1,28 @@
+VERSION[0.9.2][2026/03/27]
+
+--- New to Last Epoch Planner ---
+- Support for mods with "Chance to cast ... when" like Decimate (Musholic)
+- Add support for a few meteor skill tree nodes (ronoudgenoeg)
+- Add support for shurikens able to hit the same enemy multiple times node (ronoudgenoeg)
+- Support for import / export of lastepochplanner.com URLs (Musholic)
+- Extract the "base_number_of_projectiles" for skills (Musholic)
+- Rarity coloring (ronoudgenoeg)
+- Season 4 update (Musholic)
+
+--- Fixed Crashes ---
+- Fixes crash on offline save import in some .zip file cases (Musholic)
+
+--- Fixed Calculations ---
+- Fix unstable calculations when skill list changes (Musholic)
+
+--- Fixed Bugs ---
+- Differentiate skills from different sources chains (Musholic)
+- Fix missing idols and blessings on offline import (Musholic)
+- Fix missing skills on offline import (Musholic)
+
+--- Other changes ---
+- Add extracted skills data of unique items (Musholic)
+
 VERSION[0.9.1][2025/10/01]
 
 --- Fixed Crashes ---

@@ -1,5 +1,31 @@
 # Changelog
 
+## [v0.9.2](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/v0.9.2) (2026/03/27)
+
+[Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.9.1...v0.9.2)
+
+
+## What's Changed
+### New to Last Epoch Planner
+- Support for mods with "Chance to cast ... when" like Decimate [\#81](https://github.com/Musholic/LastEpochPlanner/pull/81) ([Musholic](https://github.com/Musholic))
+- Add support for a few meteor skill tree nodes [\#87](https://github.com/Musholic/LastEpochPlanner/pull/87) ([ronoudgenoeg](https://github.com/ronoudgenoeg))
+- Add support for shurikens able to hit the same enemy multiple times node [\#88](https://github.com/Musholic/LastEpochPlanner/pull/88) ([ronoudgenoeg](https://github.com/ronoudgenoeg))
+- Support for import / export of lastepochplanner.com URLs [\#89](https://github.com/Musholic/LastEpochPlanner/pull/89) ([Musholic](https://github.com/Musholic))
+- Extract the "base_number_of_projectiles" for skills [\#91](https://github.com/Musholic/LastEpochPlanner/pull/91) ([Musholic](https://github.com/Musholic))
+- Rarity coloring [\#92](https://github.com/Musholic/LastEpochPlanner/pull/92) ([ronoudgenoeg](https://github.com/ronoudgenoeg))
+- Season 4 update [\#96](https://github.com/Musholic/LastEpochPlanner/pull/96) ([Musholic](https://github.com/Musholic))
+### Fixed Crashes
+- Fixes crash on offline save import in some .zip file cases [\#85](https://github.com/Musholic/LastEpochPlanner/pull/85) ([Musholic](https://github.com/Musholic))
+### Fixed Calculations
+- Fix unstable calculations when skill list changes [\#93](https://github.com/Musholic/LastEpochPlanner/pull/93) ([Musholic](https://github.com/Musholic))
+### Fixed Bugs
+- Differentiate skills from different sources chains [\#84](https://github.com/Musholic/LastEpochPlanner/pull/84) ([Musholic](https://github.com/Musholic))
+- Fix missing idols and blessings on offline import [\#86](https://github.com/Musholic/LastEpochPlanner/pull/86) ([Musholic](https://github.com/Musholic))
+- Fix missing skills on offline import [\#90](https://github.com/Musholic/LastEpochPlanner/pull/90) ([Musholic](https://github.com/Musholic))
+### Other changes
+- Add extracted skills data of unique items [\#80](https://github.com/Musholic/LastEpochPlanner/pull/80) ([Musholic](https://github.com/Musholic))
+
+
 ## [v0.9.1](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/v0.9.1) (2025/10/01)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.9.0...v0.9.1)
