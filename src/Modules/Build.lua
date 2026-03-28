@@ -678,19 +678,9 @@ function buildMode:ReadLeToolsSave(saveContent)
 			["slotName"] = onlineImportSlotMap[slotName]
 		}
 		if slotName == "idol" then
-			local posX = itemData["x"] - 1
-			local posY = itemData["y"] - 1
-			local idolPosition = posX + posY * 5
-			if posY > 0 then
-				idolPosition = idolPosition - 1
-			end
-			if posY == 4 then
-				idolPosition = idolPosition - 1
-			end
-			if posY == 1 and posX > 2 or posY > 1 then
-				idolPosition = idolPosition - 1
-			end
-			item["slotName"] = "Idol " .. idolPosition
+			local posX = itemData["x"]
+			local posY = itemData["y"]
+			item["slotName"] = "Idol " .. posX .. "," .. posY
 			item["rarityType"] = "IDOL"
 			item["rarity"] = "IDOL"
 		end
