@@ -24,8 +24,10 @@ local rarityDropList = {
 
 local baseSlots = { "Weapon 1", "Weapon 2", "Helmet", "Body Armor", "Gloves", "Boots", "Amulet", "Ring 1", "Ring 2", "Belt", "Relic", "Idol Altar" }
 
-for i = 1, 20 do
-	table.insert(baseSlots, "Idol " .. i)
+for i = 1, 5 do
+    for j = 1, 5 do
+        table.insert(baseSlots, "Idol " .. i .. "," .. j)
+    end
 end
 
 for i = 1, 10 do
@@ -124,7 +126,7 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 	end)
 	self.controls.specLabel = new("LabelControl", {"RIGHT",prevSlot,"LEFT"}, -2, 0, 0, 16, "^7Passive tree:")
 
-	self.controls.idolPositionsLabel = new("LabelControl", {"TOPLEFT",self.controls.specLabel,"BOTTOMLEFT"}, 0, 16, 0, 16, "Idol positions start from bottom left then left to right")
+	self.controls.idolPositionsLabel = new("LabelControl", {"TOPLEFT",self.controls.specLabel,"BOTTOMLEFT"}, 0, 16, 0, 16, "Idol positions start from bottom left (position 1,1) then left to right. Bottom right is position 5,1")
 
 	self.controls.slotHeader = new("LabelControl", {"BOTTOMLEFT",self.slotAnchor,"TOPLEFT"}, 0, -4, 0, 16, "^7Equipped items:")
 	self.controls.weaponSwap1 = new("ButtonControl", {"BOTTOMRIGHT",self.slotAnchor,"TOPRIGHT"}, -20, -2, 18, 18, "I", function()
@@ -1237,7 +1239,7 @@ end
 -- For example, a shield is not valid for Weapon 2 if Weapon 1 is a staff, and a wand is not valid for Weapon 2 if Weapon 1 is a dagger
 function ItemsTabClass:IsItemValidForSlot(item, slotName, itemSet)
 	itemSet = itemSet or self.activeItemSet
-	local slotType, slotId = slotName:match("^([%a ]+) (%d+)$")
+	local slotType = slotName:match("^([%a ]+) %d+,?%d*$")
 	if not slotType then
 		slotType = slotName
 	end

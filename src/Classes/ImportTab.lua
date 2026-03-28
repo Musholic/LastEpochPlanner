@@ -682,19 +682,9 @@ function ImportTabClass:processItemData(itemData)
         local baseTypeID = itemData["data"][4]
         local subTypeID = itemData["data"][5]
         if itemData["containerID"] == 29 then
-            local posX = itemData["inventoryPosition"]["x"]
-            local posY = itemData["inventoryPosition"]["y"]
-            local idolPosition = posX + posY * 5
-            if posY > 0 then
-                idolPosition = idolPosition - 1
-            end
-            if posY == 4 then
-                idolPosition = idolPosition - 1
-            end
-            if idolPosition > 10 then
-                idolPosition = idolPosition - 1
-            end
-            item["slotName"] = "Idol " .. idolPosition
+            local posX = itemData["inventoryPosition"]["x"] + 1
+            local posY = itemData["inventoryPosition"]["y"] + 1
+            item["slotName"] = "Idol " .. posX .. "," .. posY
             item["rarityType"] = "IDOL"
             item["rarity"] = "IDOL"
         else

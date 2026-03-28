@@ -113,7 +113,7 @@ describe("Offline Item Import", function()
               },
               ["rarity"] = 'IDOL',
               ["rarityType"] = 'IDOL',
-              ["slotName"] = 'Idol 20',
+              ["slotName"] = 'Idol 4,5',
               ["suffixes"] = {
                 [1] = {
                     ["modId"] = '843_0',
