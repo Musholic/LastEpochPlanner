@@ -325,10 +325,11 @@ data.itemMods = {
 	Item = readJsonFile("Data/ModItem.json"),
 }
 
-for _,mod in pairs(data.itemMods.Item) do
+for modId, mod in pairs(data.itemMods.Item) do
 	if not mod.affix then
 		mod.affix = ""
 	end
+	mod.group = modId:match("^(%d+)_")
 end
 
 data.costs = LoadModule("Data/Costs")
@@ -396,10 +397,10 @@ data.itemTagSpecialExclusionPattern = {
 }
 
 -- Load bosses
-do 
+do
 	data.bosses = { }
 	LoadModule("Data/Bosses", data.bosses)
-	
+
 	local count, uberCount = 0, 0
 	local armourTotal, evasionTotal = 0, 0
 	local uberArmourTotal, uberEvasionTotal = 0, 0

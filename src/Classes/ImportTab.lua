@@ -702,8 +702,7 @@ function ImportTabClass:processItemData(itemData)
                 end
                 local rarity = itemData["data"][6]
                 item["explicitMods"] = {}
-                item["prefixes"] = {}
-                item["suffixes"] = {}
+                item["affixes"] = {}
                 if rarity >= 7 and rarity <= 9 then
                     item["rarity"] = "UNIQUE"
                     item["rarityType"] = item["rarityType"] or "UNIQUE"
@@ -734,13 +733,15 @@ function ImportTabClass:processItemData(itemData)
                                 local modId = affixId .. "_" .. affixTier
                                 local modData = data.itemMods.Item[modId]
                                 local range = itemData["data"][dataId + 2]
+                                local affix = { ["range"] = range, ["modId"] = modId }
                                 if modData then
                                     if modData.type == "Prefix" then
-                                        table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
+                                        affix.prefix = true
                                     else
-                                        table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
+                                        affix.suffix = true
                                     end
                                 end
+                                table.insert(item.affixes, affix)
                             end
                         end
                     end
@@ -757,14 +758,16 @@ function ImportTabClass:processItemData(itemData)
                                 local modId = affixId .. "_" .. affixTier
                                 local modData = data.itemMods.Item[modId]
                                 local range = itemData["data"][dataId + 1]
+                                local affix = { ["range"] = range, ["modId"] = modId }
 
                                 if modData then
                                     if modData.type == "Prefix" then
-                                        table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
+                                        affix.prefix = true
                                     else
-                                        table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
+                                        affix.suffix = true
                                     end
                                 end
+                                table.insert(item.affixes, affix)
                             end
                         end
                     end
@@ -1005,8 +1008,7 @@ function ImportTabClass:BuildItem(itemData)
             end
         end
     end
-    item.prefixes = itemData.prefixes;
-    item.suffixes = itemData.suffixes;
+    item.affixes = itemData.affixes;
     item.crafted = true
 
     item:BuildAndParseRaw()

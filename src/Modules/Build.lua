@@ -673,6 +673,28 @@ function buildMode:ReadLeToolsSave(saveContent)
 		onlineImportSlotMap["Blessing " .. i] = "Blessing " .. i
 	end
 
+	function proccessItemAffix(affixData, attribute)
+    	local affixId = data.LETools_affixes[affixData.id]
+    	if affixId then
+    		local affixTier = affixData.tier - 1
+    		local modId = affixId .. "_" .. affixTier
+    		local modData = data.itemMods.Item[modId]
+    		local range = (affixData.r or defaultItemAffixQuality)
+            local itemAffix = { ["range"] = range, ["modId"] = modId }
+
+            if attribute == "sealed" then
+                itemAffix.sealed = true
+            elseif attribute == "corrupted" then
+                itemAffix.corrupted = true
+            elseif modData.type == "Prefix" then
+    			itemAffix.prefix = true
+    		else
+    			itemAffix.suffix = true
+            end
+            return itemAffix
+    	end
+	end
+
 	function processItemData(slotName, itemData)
 		local item = {
 			["slotName"] = onlineImportSlotMap[slotName]
@@ -699,41 +721,17 @@ function buildMode:ReadLeToolsSave(saveContent)
 		item["rarity"] = item["rarity"] or "RARE"
 		item["rarityType"] = item["rarityType"] or "BASIC"
 		item["explicitMods"] = {}
-		item["prefixes"] = {}
-		item["suffixes"] = {}
+		item["affixes"] = {}
 
-		if itemData["affixes"] then
-			for _, affixData in ipairs(itemData["affixes"]) do
-				local affixId = data.LETools_affixes[affixData.id]
-				if affixId then
-					local affixTier = affixData.tier - 1
-					local modId = affixId .. "_" .. affixTier
-					local modData = data.itemMods.Item[modId]
-					local range = (affixData.r or main.defaultItemAffixQuality)
-
-					if modData.type == "Prefix" then
-						table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
-					else
-						table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
-					end
-				end
-			end
+		for _, affixData in ipairs(itemData["affixes"] or {}) do
+			table.insert(item.affixes, proccessItemAffix(affixData))
 		end
 		if itemData.sealedAffix then
-			local affixData = itemData.sealedAffix;
-			local affixId = data.LETools_affixes[affixData.id]
-			if affixId then
-				local affixTier = affixData.tier - 1
-				local modId = affixId .. "_" .. affixTier
-				local modData = data.itemMods.Item[modId]
-				local range = (affixData.r or defaultItemAffixQuality)
+			table.insert(item.affixes, proccessItemAffix(itemData.sealedAffix, "sealed"))
+		end
 
-                if modData.type == "Prefix" then
-                    table.insert(item.prefixes, { ["range"] = range, ["modId"] = modId })
-				else
-					table.insert(item.suffixes, { ["range"] = range, ["modId"] = modId })
-                end
-			end
+		if itemData.corruptedAffix then
+			table.insert(item.affixes, proccessItemAffix(itemData.corruptedAffix, "corrupted"))
 		end
 
 		if uniqueId then
@@ -742,7 +740,7 @@ function buildMode:ReadLeToolsSave(saveContent)
 			    item.name = uniqueBase.name
 				item["rarityType"] = item["rarityType"] or "UNIQUE"
 				-- Unique with crafted affixes becomes Legendary
-				if #item.prefixes > 0 or #item.suffixes > 0 then
+				if #item.affixes > 0 then
 					item["rarity"] = "LEGENDARY"
 				else
 					item["rarity"] = "UNIQUE"
@@ -1548,33 +1546,9 @@ end
 -- Add requirements to tooltip
 do
 	local req = { }
-	function buildMode:AddRequirementsToTooltip(tooltip, level, str, dex, int, strBase, dexBase, intBase)
+	function buildMode:AddRequirementsToTooltip(tooltip, level)
 		if level and level > 0 then
 			t_insert(req, s_format("^x7F7F7FLevel %s%d", main:StatColor(level, nil, self.characterLevel), level))
-		end
-		-- Convert normal attributes to Omni attributes
-		if self.calcsTab.mainEnv.modDB:Flag(nil, "OmniscienceRequirements") then
-			local omniSatisfy = self.calcsTab.mainEnv.modDB:Sum("INC", nil, "OmniAttributeRequirements")
-			local highestAttribute = 0
-			for i, stat in ipairs({str, dex, int}) do
-				if((stat or 0) > highestAttribute) then
-					highestAttribute = stat
-				end
-			end
-			local omni = math.floor(highestAttribute * (100/omniSatisfy))
-			if omni and (omni > 0 or omni > self.calcsTab.mainOutput.Omni) then
-				t_insert(req, s_format("%s%d ^x7F7F7FOmni", main:StatColor(omni, 0, self.calcsTab.mainOutput.Omni), omni))
-			end
-		else
-			if str and (str > 14 or str > self.calcsTab.mainOutput.Str) then
-				t_insert(req, s_format("%s%d ^x7F7F7FStr", main:StatColor(str, strBase, self.calcsTab.mainOutput.Str), str))
-			end
-			if dex and (dex > 14 or dex > self.calcsTab.mainOutput.Dex) then
-				t_insert(req, s_format("%s%d ^x7F7F7FDex", main:StatColor(dex, dexBase, self.calcsTab.mainOutput.Dex), dex))
-			end
-			if int and (int > 14 or int > self.calcsTab.mainOutput.Int) then
-				t_insert(req, s_format("%s%d ^x7F7F7FInt", main:StatColor(int, intBase, self.calcsTab.mainOutput.Int), int))
-			end
 		end
 		if req[1] then
 			tooltip:AddLine(16, "^x7F7F7FRequires "..table.concat(req, "^x7F7F7F, "))
