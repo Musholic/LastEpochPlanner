@@ -37,6 +37,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.rarity = rarity or "UNIQUE"
 	self.rarityType = nil
 	self.rawLines = { }
+	self.corrupted = false
 	-- Find non-blank lines and trim whitespace
 	for line in raw:gmatch("%s*([^\n]*%S)") do
 	 	t_insert(self.rawLines, line)
@@ -183,6 +184,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.affixes[5] = parseAffix(specVal, "sealed")
 				elseif specName == "Corrupted" then
 					self.affixes[6] = parseAffix(specVal, "corrupted")
+					self.corrupted = true
 				elseif specName == "Implicits" then
 					implicitLines = specToNumber(specVal) or 0
 					gameModeStage = "EXPLICIT"

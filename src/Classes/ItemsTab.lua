@@ -1591,7 +1591,7 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 
 	-- Corrupted item label
 	if item.corrupted then
-		tooltip:AddLine(fontSizeBig, colorCodes.NEGATIVE.."Corrupted", "FONTIN SC")
+		tooltip:AddLine(18, colorCodes.NEGATIVE.."Corrupted", "FONTIN SC")
 	end
 	tooltip:AddSeparator(14)
 
