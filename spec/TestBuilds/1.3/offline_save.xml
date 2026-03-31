@@ -132,13 +132,6 @@ Implicits: 2
 +2 Dexterity
 +2 Intelligence
 {corrupted}{range:96}{rounding:Integer}+(11-13) Vitality
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="158"></ModRange>
-			<ModRange id="3" range="201"></ModRange>
-			<ModRange id="4" range="248"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="96"></ModRange>
 		</Item>
 		<Item id="2">
 			Rarity: EXALTED
@@ -158,13 +151,6 @@ Implicits: 2
 {scalar:1.5}+1 Intelligence
 {scalar:1.5}+2 Vitality
 {corrupted}{range:248}{scalar:1.5}{rounding:Integer}(15-20)% increased Health
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="108"></ModRange>
-			<ModRange id="3" range="130"></ModRange>
-			<ModRange id="4" range="110"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="248"></ModRange>
 		</Item>
 		<Item id="3">
 			Rarity: UNIQUE
@@ -179,13 +165,6 @@ Implicits: 2
 {unique}{range:184}{rounding:Integer}+(1-2) to Dexterity Skills
 {unique}{range:75}{rounding:Integer}+(1-2) to Intelligence Skills
 {unique}{range:11}(10-18)% increased Melee Attack Speed
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="5"></ModRange>
-			<ModRange id="3" range="7"></ModRange>
-			<ModRange id="4" range="21"></ModRange>
-			<ModRange id="5" range="184"></ModRange>
-			<ModRange id="6" range="75"></ModRange>
-			<ModRange id="7" range="11"></ModRange>
 		</Item>
 		<Item id="4">
 			Rarity: LEGENDARY
@@ -201,13 +180,6 @@ Implicits: 2
 {unique}15 Health Gain on Kill
 {unique}{range:112}+(50-75)% Chance to inflict Bleed on Melee Hit
 {unique}15% Increased Bleed Duration
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="76"></ModRange>
-			<ModRange id="3" range="60"></ModRange>
-			<ModRange id="4" range="205"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="112"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
 		</Item>
 		<Item id="5">
 			Rarity: LEGENDARY
@@ -224,14 +196,6 @@ Implicits: 2
 {unique}{range:243}(6-12)% increased Attack Speed
 {unique}{range:243}(6-12)% increased Cast Speed
 {unique}{range:211}{rounding:Integer}+(2-6) to All Attributes
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="54"></ModRange>
-			<ModRange id="3" range="231"></ModRange>
-			<ModRange id="4" range="209"></ModRange>
-			<ModRange id="5" range="209"></ModRange>
-			<ModRange id="6" range="243"></ModRange>
-			<ModRange id="7" range="243"></ModRange>
-			<ModRange id="8" range="211"></ModRange>
 		</Item>
 		<Item id="6">
 			Rarity: UNIQUE
@@ -245,12 +209,6 @@ Implicits: 1
 {unique}6% increased Movement Speed
 {unique}{range:29}{rounding:Integer}(24-48) Damage Reflected to Attackers
 {unique}6% increased Throwing Attack Speed
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="68"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="29"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
 		</Item>
 		<Item id="7">
 			Rarity: UNIQUE
@@ -266,14 +224,6 @@ Implicits: 2
 {unique}{range:189}{rounding:Integer}+(5-8) Strength
 {unique}{range:127}{rounding:Integer}+(5-8) Dexterity
 {unique}{range:104}{rounding:Integer}+(5-8) Intelligence
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="28"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="19"></ModRange>
-			<ModRange id="5" range="180"></ModRange>
-			<ModRange id="6" range="189"></ModRange>
-			<ModRange id="7" range="127"></ModRange>
-			<ModRange id="8" range="104"></ModRange>
 		</Item>
 		<Item id="8">
 			Rarity: RARE
@@ -291,12 +241,6 @@ Implicits: 1
 {range:98}{rounding:Integer}+(15-24) Dodge Rating
 +1 Attunement
 {range:215}(10-14)% of Potion Health Converted to Ward
-			<ModRange id="1" range="207"></ModRange>
-			<ModRange id="2" range="206"></ModRange>
-			<ModRange id="3" range="98"></ModRange>
-			<ModRange id="4" range="98"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="215"></ModRange>
 		</Item>
 		<Item id="9">
 			Rarity: RARE
@@ -313,11 +257,6 @@ Implicits: 1
 {range:151}+(10-14)% Physical Resistance
 {range:54}(15-20)% increased Critical Strike Chance
 {range:34}{rounding:Integer}(6-12)% increased Physical Damage
-			<ModRange id="1" range="102"></ModRange>
-			<ModRange id="2" range="216"></ModRange>
-			<ModRange id="3" range="151"></ModRange>
-			<ModRange id="4" range="54"></ModRange>
-			<ModRange id="5" range="34"></ModRange>
 		</Item>
 		<Item id="10">
 			Rarity: UNIQUE
@@ -331,12 +270,6 @@ Implicits: 3
 {unique}+15% to Minion All Resistances
 {unique}100% chance to Summon a Rift Beast when a hit leaves a Boss or Champion below 40% health (40 second cooldown)
 {unique}40% increased Minion Damage
-			<ModRange id="1" range="223"></ModRange>
-			<ModRange id="2" range="238"></ModRange>
-			<ModRange id="3" range="130"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
 		</Item>
 		<Item id="11">
 			Rarity: LEGENDARY
@@ -359,17 +292,6 @@ Implicits: 2
 {unique}{range:178}+(6-14)% Endurance
 {unique}2% Minimum percentage of health to gain when a nearby enemy or ally dies (2 second cooldown)
 {unique}{range:215}(4-6)% Maximum percentage of health to gain when a nearby enemy or ally dies (2 second cooldown)
-			<ModRange id="1" range="14"></ModRange>
-			<ModRange id="2" range="232"></ModRange>
-			<ModRange id="3" range="73"></ModRange>
-			<ModRange id="4" range="116"></ModRange>
-			<ModRange id="5" range="26"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="17"></ModRange>
-			<ModRange id="8" range="127.5"></ModRange>
-			<ModRange id="9" range="178"></ModRange>
-			<ModRange id="10" range="127.5"></ModRange>
-			<ModRange id="11" range="215"></ModRange>
 		</Item>
 		<Item id="12">
 			Rarity: IDOL
@@ -381,8 +303,6 @@ LevelReq: 0
 Implicits: 0
 {range:1}{scalar:0.38}+(20-45)% Physical Resistance
 {range:60}{scalar:0.38}{rounding:Integer}(10-20) Health Gain on Kill
-			<ModRange id="1" range="1"></ModRange>
-			<ModRange id="2" range="60"></ModRange>
 		</Item>
 		<Item id="13">
 			Rarity: IDOL
@@ -394,8 +314,6 @@ LevelReq: 0
 Implicits: 0
 {range:169}{scalar:0.17}+(20-45)% Cold Resistance
 {range:226}{scalar:0.17}+(13-30)% Ward Retention
-			<ModRange id="1" range="169"></ModRange>
-			<ModRange id="2" range="226"></ModRange>
 		</Item>
 		<Item id="14">
 			Rarity: IDOL
@@ -407,8 +325,6 @@ LevelReq: 0
 Implicits: 0
 {range:233}{scalar:0.17}+(20-45)% Poison Resistance
 {range:37}{scalar:0.17}(37-70)% Increased Healing Effectiveness
-			<ModRange id="1" range="233"></ModRange>
-			<ModRange id="2" range="37"></ModRange>
 		</Item>
 		<Item id="15">
 			Rarity: IDOL
@@ -420,8 +336,6 @@ LevelReq: 0
 Implicits: 0
 {range:45}{scalar:0.38}+(20-45)% Physical Resistance
 {range:191}{scalar:0.38}{rounding:Integer}(10-20) Health Gain on Kill
-			<ModRange id="1" range="45"></ModRange>
-			<ModRange id="2" range="191"></ModRange>
 		</Item>
 		<Item id="16">
 			Rarity: IDOL
@@ -433,8 +347,6 @@ LevelReq: 0
 Implicits: 0
 {range:16}{scalar:0.38}+(20-45)% Physical Resistance
 {range:234}{scalar:0.38}{rounding:Integer}(10-20) Health Gain on Kill
-			<ModRange id="1" range="16"></ModRange>
-			<ModRange id="2" range="234"></ModRange>
 		</Item>
 		<Item id="17">
 			Rarity: IDOL
@@ -446,8 +358,6 @@ LevelReq: 0
 Implicits: 0
 {range:161}{scalar:0.17}+(20-45)% Poison Resistance
 {range:173}{scalar:0.17}{rounding:Integer}(22-60)% increased Damage Over Time
-			<ModRange id="1" range="161"></ModRange>
-			<ModRange id="2" range="173"></ModRange>
 		</Item>
 		<Item id="18">
 			Rarity: IDOL
@@ -462,10 +372,6 @@ Implicits: 0
 {scalar:0.95}+3% Increased Cooldown Recovery Speed of Reap
 {range:18}{scalar:0.95}+(6-7)% Chance to cast Harvest at 3 nearby enemies when you use Reap
 {range:214}{scalar:0.95}{rounding:Integer}(26-70)% increased Damage Over Time while at Low Health
-			<ModRange id="1" range="148"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="18"></ModRange>
-			<ModRange id="4" range="214"></ModRange>
 		</Item>
 		<Item id="19">
 			Rarity: IDOL
@@ -480,10 +386,6 @@ Implicits: 0
 1% increased Minion Bow Attack Speed
 +1 Minion Bow Damage
 {range:111}{rounding:Integer}(26-70)% increased Damage While Transformed
-			<ModRange id="1" range="100"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="111"></ModRange>
 		</Item>
 		<Item id="20">
 			Rarity: IDOL
@@ -496,9 +398,6 @@ Implicits: 0
 {range:130}+(9-12)% Fire Resistance
 {range:130}+(9-12)% Minion Fire Resistance
 {range:46}{scalar:0.38}+(13-30)% Chance to Ignite on Hit
-			<ModRange id="1" range="130"></ModRange>
-			<ModRange id="2" range="130"></ModRange>
-			<ModRange id="3" range="46"></ModRange>
 		</Item>
 		<Item id="21">
 			Rarity: IDOL
@@ -512,73 +411,57 @@ Implicits: 0
 {range:18}{scalar:0.17}{rounding:Integer}(17-45)% increased Minion Poison Damage
 {range:8}{rounding:Integer}(11-15)% increased Damage Over Time
 1% less Damage Over Time Taken
-			<ModRange id="1" range="18"></ModRange>
-			<ModRange id="2" range="18"></ModRange>
-			<ModRange id="3" range="8"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
 		</Item>
 		<ItemSet id="1" useSecondWeaponSet="nil">
-			<Slot itemId="10" itemPbURL="" name="Amulet"></Slot>
-			<Slot itemId="6" itemPbURL="" name="Belt"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 10"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 6"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 7"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 8"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 9"></Slot>
-			<Slot itemId="2" itemPbURL="" name="Body Armor"></Slot>
-			<Slot itemId="7" itemPbURL="" name="Boots"></Slot>
-			<Slot itemId="5" itemPbURL="" name="Gloves"></Slot>
-			<Slot itemId="1" itemPbURL="" name="Helmet"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 1,1"></Slot>
-			<Slot itemId="19" itemPbURL="" name="Idol 1,2"></Slot>
-			<Slot itemId="12" itemPbURL="" name="Idol 1,3"></Slot>
-			<Slot itemId="13" itemPbURL="" name="Idol 1,4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 1,5"></Slot>
-			<Slot itemId="15" itemPbURL="" name="Idol 2,1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 2,2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 2,3"></Slot>
-			<Slot itemId="18" itemPbURL="" name="Idol 2,4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 2,5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 3,1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 3,2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 3,3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 3,4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 3,5"></Slot>
-			<Slot itemId="17" itemPbURL="" name="Idol 4,1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 4,2"></Slot>
-			<Slot itemId="21" itemPbURL="" name="Idol 4,3"></Slot>
-			<Slot itemId="16" itemPbURL="" name="Idol 4,4"></Slot>
-			<Slot itemId="14" itemPbURL="" name="Idol 4,5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 5,1"></Slot>
-			<Slot itemId="20" itemPbURL="" name="Idol 5,2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 5,3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 5,4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 5,5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol Altar"></Slot>
-			<Slot itemId="11" itemPbURL="" name="Relic"></Slot>
-			<Slot itemId="9" itemPbURL="" name="Ring 1"></Slot>
-			<Slot itemId="8" itemPbURL="" name="Ring 2"></Slot>
-			<Slot itemId="3" itemPbURL="" name="Weapon 1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 6"></Slot>
-			<Slot itemId="4" itemPbURL="" name="Weapon 2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 6"></Slot>
+			<Slot itemId="10" name="Amulet"></Slot>
+			<Slot itemId="6" name="Belt"></Slot>
+			<Slot itemId="0" name="Blessing 1"></Slot>
+			<Slot itemId="0" name="Blessing 10"></Slot>
+			<Slot itemId="0" name="Blessing 2"></Slot>
+			<Slot itemId="0" name="Blessing 3"></Slot>
+			<Slot itemId="0" name="Blessing 4"></Slot>
+			<Slot itemId="0" name="Blessing 5"></Slot>
+			<Slot itemId="0" name="Blessing 6"></Slot>
+			<Slot itemId="0" name="Blessing 7"></Slot>
+			<Slot itemId="0" name="Blessing 8"></Slot>
+			<Slot itemId="0" name="Blessing 9"></Slot>
+			<Slot itemId="2" name="Body Armor"></Slot>
+			<Slot itemId="7" name="Boots"></Slot>
+			<Slot itemId="5" name="Gloves"></Slot>
+			<Slot itemId="1" name="Helmet"></Slot>
+			<Slot itemId="0" name="Idol 1,1"></Slot>
+			<Slot itemId="19" name="Idol 1,2"></Slot>
+			<Slot itemId="12" name="Idol 1,3"></Slot>
+			<Slot itemId="13" name="Idol 1,4"></Slot>
+			<Slot itemId="0" name="Idol 1,5"></Slot>
+			<Slot itemId="15" name="Idol 2,1"></Slot>
+			<Slot itemId="0" name="Idol 2,2"></Slot>
+			<Slot itemId="0" name="Idol 2,3"></Slot>
+			<Slot itemId="18" name="Idol 2,4"></Slot>
+			<Slot itemId="0" name="Idol 2,5"></Slot>
+			<Slot itemId="0" name="Idol 3,1"></Slot>
+			<Slot itemId="0" name="Idol 3,2"></Slot>
+			<Slot itemId="0" name="Idol 3,3"></Slot>
+			<Slot itemId="0" name="Idol 3,4"></Slot>
+			<Slot itemId="0" name="Idol 3,5"></Slot>
+			<Slot itemId="17" name="Idol 4,1"></Slot>
+			<Slot itemId="0" name="Idol 4,2"></Slot>
+			<Slot itemId="21" name="Idol 4,3"></Slot>
+			<Slot itemId="16" name="Idol 4,4"></Slot>
+			<Slot itemId="14" name="Idol 4,5"></Slot>
+			<Slot itemId="0" name="Idol 5,1"></Slot>
+			<Slot itemId="20" name="Idol 5,2"></Slot>
+			<Slot itemId="0" name="Idol 5,3"></Slot>
+			<Slot itemId="0" name="Idol 5,4"></Slot>
+			<Slot itemId="0" name="Idol 5,5"></Slot>
+			<Slot itemId="0" name="Idol Altar"></Slot>
+			<Slot itemId="11" name="Relic"></Slot>
+			<Slot itemId="9" name="Ring 1"></Slot>
+			<Slot itemId="8" name="Ring 2"></Slot>
+			<Slot itemId="3" name="Weapon 1"></Slot>
+			<Slot itemId="0" name="Weapon 1 Swap"></Slot>
+			<Slot itemId="4" name="Weapon 2"></Slot>
+			<Slot itemId="0" name="Weapon 2 Swap"></Slot>
 		</ItemSet>
 	</Items>
 	<Notes>
