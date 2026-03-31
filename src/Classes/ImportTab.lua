@@ -703,6 +703,7 @@ function ImportTabClass:processItemData(itemData)
                 local rarity = itemData["data"][6]
                 item["explicitMods"] = {}
                 item["affixes"] = {}
+                local nbAffixesIndex = 12
                 if rarity >= 7 and rarity <= 9 then
                     item["rarity"] = "UNIQUE"
                     item["rarityType"] = item["rarityType"] or "UNIQUE"
@@ -721,55 +722,42 @@ function ImportTabClass:processItemData(itemData)
                     end
                     if rarity == 9 then
                         item["rarity"] = "LEGENDARY"
-                        local nbAffixesIndex = uniqueIDIndex + 2 + 8 -- 8 is the maximum amount of unique mods
-                        local nbMods = itemData["data"][nbAffixesIndex]
-                        for i = 0, nbMods - 1 do
-                            local dataId = nbAffixesIndex + 1 + 3 * i
-                            -- There are cases where the "nbAffixesIndex" value is wrong, not sure why but
-                            -- we should at least prevent a crash when it's higher than expected (could it be lower?)
-                            if itemData["data"][dataId] then
-                                local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 16) * 256
-                                local affixTier = math.floor(itemData["data"][dataId] / 16)
-                                local modId = affixId .. "_" .. affixTier
-                                local modData = data.itemMods.Item[modId]
-                                local range = itemData["data"][dataId + 2]
-                                local affix = { ["range"] = range, ["modId"] = modId }
-                                if modData then
-                                    if modData.type == "Prefix" then
-                                        affix.prefix = true
-                                    else
-                                        affix.suffix = true
-                                    end
-                                end
-                                table.insert(item.affixes, affix)
-                            end
-                        end
                     end
+                    nbAffixesIndex = uniqueIDIndex + 2 + 8 -- 8 is the maximum amount of unique mods
                 else
                     item["name"] = itemBaseName
                     item["rarity"] = item["rarity"] or "RARE"
                     item["rarityType"] = item["rarityType"] or "BASIC"
-                    for i = 0, 4 do
-                        local dataId = 14 + i * 3
-                        if #itemData["data"] > dataId then
-                            local affixId = itemData["data"][dataId] + (itemData["data"][dataId - 1] % 16) * 256
-                            if affixId then
-                                local affixTier = math.floor(itemData["data"][dataId - 1] / 16)
-                                local modId = affixId .. "_" .. affixTier
-                                local modData = data.itemMods.Item[modId]
-                                local range = itemData["data"][dataId + 1]
-                                local affix = { ["range"] = range, ["modId"] = modId }
+                end
+                if itemData["data"][nbAffixesIndex] then
+	                local nbMods = itemData["data"][nbAffixesIndex] % 8
+	                local nbSealedAffix = math.floor(itemData["data"][nbAffixesIndex] / 64) % 2
+	                local nbCorruptedAffix = math.floor(itemData["data"][nbAffixesIndex] / 128) % 2
+	                for i = 0, nbMods - 1 do
+	                    local dataId = nbAffixesIndex + 1 + 3 * i
+	                    if itemData["data"][dataId] then
+	                        local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 16) * 256
+	                        local affixTier = math.floor(itemData["data"][dataId] / 16)
+	                        local modId = affixId .. "_" .. affixTier
+	                        local modData = data.itemMods.Item[modId]
+	                        local range = itemData["data"][dataId + 2]
+	                        local affix = { ["range"] = range, ["modId"] = modId }
 
-                                if modData then
-                                    if modData.type == "Prefix" then
-                                        affix.prefix = true
-                                    else
-                                        affix.suffix = true
-                                    end
-                                end
-                                table.insert(item.affixes, affix)
-                            end
-                        end
+	                        if modData then
+		                        if nbSealedAffix == 1 then
+		                            affix.sealed = true
+		                            nbSealedAffix = 0
+		                        elseif nbCorruptedAffix == 1 then
+		                            affix.corrupted = true
+		                            nbCorruptedAffix = 0
+					            elseif modData.type == "Prefix" then
+	                                affix.prefix = true
+	                            else
+	                                affix.suffix = true
+	                            end
+	                            table.insert(item.affixes, affix)
+	                        end
+	                    end
                     end
                 end
                 return item
