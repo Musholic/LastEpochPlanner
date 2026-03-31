@@ -28,22 +28,6 @@ local ItemSlotClass = newClass("ItemSlotControl", "DropDownControl", function(se
 	self.selItemId = 0
 	self.slotName = slotName
 	self.slotNum = tonumber(slotName:match("%d+$") or slotName:match("%d+"))
-	if slotName:match("Flask") then
-		self.controls.activate = new("CheckBoxControl", {"RIGHT",self,"LEFT"}, -2, 0, 20, nil, function(state)
-			self.active = state
-			itemsTab.activeItemSet[self.slotName].active = state
-			itemsTab:AddUndoState()
-			itemsTab.build.buildFlag = true
-		end)
-		self.controls.activate.enabled = function()
-			return self.selItemId ~= 0
-		end
-		self.controls.activate.tooltipText = "Activate this flask."
-		self.labelOffset = -24
-	else
-		self.labelOffset = -2
-	end
-	self.abyssalSocketList = { }
 	self.tooltipFunc = function(tooltip, mode, index, itemId)
 		local item = itemsTab.items[self.items[index]]
 		if main.popups[1] or mode == "OUT" or not item or (not self.dropped and itemsTab.selControl and itemsTab.selControl ~= self.controls.activate) then
@@ -79,16 +63,6 @@ function ItemSlotClass:Populate()
 	if not self.selItemId or not self.itemsTab.items[self.selItemId] or not self.itemsTab:IsItemValidForSlot(self.itemsTab.items[self.selItemId], self.slotName) then
 		self:SetSelItemId(0)
 	end
-
-	-- Update Abyssal Sockets
-	local abyssalSocketCount = 0
-	if self.selItemId > 0 then
-		local selItem = self.itemsTab.items[self.selItemId]
-		abyssalSocketCount = selItem.abyssalSocketCount or 0
-	end
-	for i, abyssalSocket in ipairs(self.abyssalSocketList) do
-		abyssalSocket.inactive = i > abyssalSocketCount
-	end
 end
 
 function ItemSlotClass:CanReceiveDrag(type, value)
@@ -100,7 +74,6 @@ function ItemSlotClass:ReceiveDrag(type, value, source)
 		self:SetSelItemId(value.id)
 	else
 		local newItem = new("Item", value.raw)
-		newItem:NormaliseQuality()
 		self.itemsTab:AddItem(newItem, true)
 		self:SetSelItemId(newItem.id)
 	end
@@ -112,7 +85,7 @@ end
 function ItemSlotClass:Draw(viewPort)
 	local x, y = self:GetPos()
 	local width, height = self:GetSize()
-	DrawString(x + self.labelOffset, y + 2, "RIGHT_X", height - 4, "VAR", "^7"..self.label..":")
+	DrawString(x - 2, y + 2, "RIGHT_X", height - 4, "VAR", "^7"..self.label..":")
 	self.DropDownControl:Draw(viewPort)
 	self:DrawControls(viewPort)
 	if not main.popups[1] and self.nodeId and (self.dropped or (self:IsMouseOver() and (self.otherDragSource or not self.itemsTab.selControl))) then

@@ -95,7 +95,6 @@ function ItemSetListClass:ReceiveDrag(type, value, source)
 		itemSet.title = value.title
 		for slotName, item in pairs(value.slots) do
 			local newItem = new("Item", item.raw)
-			newItem:NormaliseQuality()
 			self.itemsTab:AddItem(newItem, true)
 			itemSet[slotName].selItemId = newItem.id
 		end
@@ -123,7 +122,7 @@ function ItemSetListClass:OnSelDelete(index, itemSetId)
 			self.itemsTab.itemSets[itemSetId] = nil
 			self.selIndex = nil
 			self.selValue = nil
-			if itemSetId == self.itemsTab.activeItemSetId then 
+			if itemSetId == self.itemsTab.activeItemSetId then
 				self.itemsTab:SetActiveItemSet(self.list[m_max(1, index - 1)])
 			end
 			self.itemsTab:AddUndoState()

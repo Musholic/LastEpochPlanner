@@ -97,16 +97,6 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 			swapSlot.shown = function()
 				return self.activeItemSet.useSecondWeaponSet
 			end
-			for i = 1, 6 do
-				local abyssal = new("ItemSlotControl", {"TOPLEFT",prevSlot,"BOTTOMLEFT"}, 0, 2, self, slotName.." Swap Abyssal Socket "..i, "Abyssal #"..i)
-				addSlot(abyssal)
-				abyssal.parentSlot = swapSlot
-				abyssal.weaponSet = 2
-				abyssal.shown = function()
-					return not abyssal.inactive and self.activeItemSet.useSecondWeaponSet
-				end
-				swapSlot.abyssalSocketList[i] = abyssal
-			end
 		end
 	end
 
@@ -134,15 +124,6 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 			self.activeItemSet.useSecondWeaponSet = false
 			self:AddUndoState()
 			self.build.buildFlag = true
-			local mainSocketGroup = self.build.skillsTab.socketGroupList[self.build.mainSocketGroup]
-			if mainSocketGroup and mainSocketGroup.slot and self.slots[mainSocketGroup.slot].weaponSet == 2 then
-				for index, socketGroup in pairs(self.build.skillsTab.socketGroupList) do
-					if socketGroup.slot and self.slots[socketGroup.slot].weaponSet == 1 then
-						self.build.mainSocketGroup = index
-						break
-					end
-				end
-			end
 		end
 	end)
 	self.controls.weaponSwap1.overSizeText = 3
@@ -154,16 +135,6 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 			self.activeItemSet.useSecondWeaponSet = true
 			self:AddUndoState()
 			self.build.buildFlag = true
-			local mainSocketGroup = self.build.skillsTab.socketGroupList[self.build.mainSocketGroup]
-			-- TODO: support second item slot
-			if mainSocketGroup and mainSocketGroup.slot and self.slots[mainSocketGroup.slot].weaponSet == 1 then
-				for index, socketGroup in pairs(self.build.skillsTab.socketGroupList) do
-					if socketGroup.slot and self.slots[socketGroup.slot].weaponSet == 2 then
-						self.build.mainSocketGroup = index
-						break
-					end
-				end
-			end
 		end
 	end)
 	self.controls.weaponSwap2.overSizeText = 3
@@ -346,9 +317,7 @@ holding Shift will put it in the second.]])
 			end
 			affix[drop.type:lower()] = true
 			self.displayItem.affixes[drop.outputIndex] = affix
-			prettyPrintTable(self.displayItem.affixes)
 			self.displayItem:Craft()
-			prettyPrintTable(self.displayItem.affixes)
 			self:UpdateDisplayItemTooltip()
 			self:UpdateAffixControls()
 		end)
@@ -548,6 +517,15 @@ function ItemsTabClass:Load(xml, dbFileName)
 			local itemSet = self:NewItemSet(tonumber(node.attrib.id))
 			itemSet.title = node.attrib.title
 			itemSet.useSecondWeaponSet = node.attrib.useSecondWeaponSet == "true"
+			for _, child in ipairs(node) do
+				if child.elem == "Slot" then
+					local slotName = child.attrib.name or ""
+					if itemSet[slotName] then
+						itemSet[slotName].selItemId = tonumber(child.attrib.itemId)
+						itemSet[slotName].active = child.attrib.active == "true"
+					end
+				end
+			end
 			t_insert(self.itemSetOrderList, itemSet.id)
 		end
 	end
@@ -575,19 +553,6 @@ function ItemsTabClass:Save(xml)
 		}
 		item:BuildAndParseRaw()
 		t_insert(child, item.raw)
-		local id = 1
-		for _, modLine in ipairs(item.implicitModLines) do
-			if modLine.range ~= nil then
-				t_insert(child, { elem = "ModRange", attrib = { id = tostring(id), range = tostring(modLine.range) } })
-			end
-			id = id + 1
-		end
-		for _, modLine in ipairs(item.explicitModLines) do
-			if modLine.range ~= nil then
-				t_insert(child, { elem = "ModRange", attrib = { id = tostring(id), range = tostring(modLine.range) } })
-			end
-			id = id + 1
-		end
 		t_insert(xml, child)
 	end
 	for _, itemSetId in ipairs(self.itemSetOrderList) do
@@ -595,11 +560,7 @@ function ItemsTabClass:Save(xml)
 		local child = { elem = "ItemSet", attrib = { id = tostring(itemSetId), title = itemSet.title, useSecondWeaponSet = tostring(itemSet.useSecondWeaponSet) } }
 		for slotName, slot in pairsSortByKey(self.slots) do
 			if not slot.nodeId then
-				t_insert(child, { elem = "Slot", attrib = { name = slotName, itemId = tostring(itemSet[slotName].selItemId), itemPbURL = itemSet[slotName].pbURL or "", active = itemSet[slotName].active and "true" }})
-			else
-				if self.build.spec.allocNodes[slot.nodeId] then
-					t_insert(child, { elem = "SocketIdURL", attrib = { name = slotName, nodeId = tostring(slot.nodeId), itemPbURL = itemSet[slot.nodeId] and itemSet[slot.nodeId].pbURL or ""}})
-				end
+				t_insert(child, { elem = "Slot", attrib = { name = slotName, itemId = tostring(itemSet[slotName].selItemId), active = itemSet[slotName].active and "true" }})
 			end
 		end
 		t_insert(xml, child)

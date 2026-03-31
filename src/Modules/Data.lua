@@ -329,6 +329,7 @@ for modId, mod in pairs(data.itemMods.Item) do
 	if not mod.affix then
 		mod.affix = ""
 	end
+	-- Group is used to exclude the same group from other affixes slots
 	mod.group = modId:match("^(%d+)_")
 end
 
