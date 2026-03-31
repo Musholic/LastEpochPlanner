@@ -11,275 +11,16 @@ local m_max = math.max
 local m_floor = math.floor
 
 local dmgTypeList = DamageTypes
-local catalystList = {"Abrasive", "Accelerating", "Fertile", "Imbued", "Intrinsic", "Noxious", "Prismatic", "Tempering", "Turbulent", "Unstable"}
-local catalystTags = {
-	{ "attack" },
-	{ "speed" },
-	{ "life", "mana", "resource" },
-	{ "caster" },
-	{ "jewellery_attribute", "attribute" },
-	{ "physical_damage", "chaos_damage" },
-	{ "jewellery_resistance", "resistance" },
-	{ "jewellery_defense", "defences" },
-	{ "jewellery_elemental" ,"elemental_damage" },
-	{ "critical" },
-}
-
-local function getCatalystScalar(catalystId, tags, quality)
-	if not catalystId or type(catalystId) ~= "number" or not catalystTags[catalystId] or not tags or type(tags) ~= "table" or #tags == 0 then
-		return 1
-	end
-	if not quality then
-		quality = 20
-	end
-
-	-- Create a fast lookup table for all provided tags
-	local tagLookup = {}
-	for _, curTag in ipairs(tags) do
-		tagLookup[curTag] = true;
-	end
-
-	-- Find if any of the catalyst's tags match the provided tags
-	for _, catalystTag in ipairs(catalystTags[catalystId]) do
-		if tagLookup[catalystTag] then
-			return (100 + quality) / 100
-		end
-	end
-	return 1
-end
-
-local influenceInfo = itemLib.influenceInfo
 
 local ItemClass = newClass("Item", function(self, raw, rarity, highQuality)
 	if raw then
 		self:ParseRaw(sanitiseText(raw), rarity, highQuality)
-	end	
+	end
 end)
 
--- Reset all influence keys to false
-function ItemClass:ResetInfluence()
-	for _, curInfluenceInfo in ipairs(influenceInfo) do
-		self[curInfluenceInfo.key] = false
-	end
-end
-
-local influenceItemMap = { }
-for _, curInfluenceInfo in ipairs(influenceInfo) do
-	influenceItemMap[curInfluenceInfo.display.." Item"] = curInfluenceInfo.key
-end
-
 local lineFlags = {
-	["crafted"] = true, ["crucible"] = true, ["custom"] = true, ["eater"] = true, ["enchant"] = true,
-	["exarch"] = true, ["fractured"] = true, ["implicit"] = true, ["scourge"] = true, ["synthesis"] = true,
-	["unique"] = true,
+	["custom"] = true, ["unique"] = true, ["corrupted"] = true, ["sealed"] = true, ["prefix"] = true, ["suffix"] = true
 }
-
--- Special function to store unique instances of modifier on specific item slots
--- that require special handling for ItemConditions. Only called if line #224 is
--- uncommented
-local specialModifierFoundList = {}
-local inverseModifierFoundList = {}
-local function getTagBasedModifiers(tagName, itemSlotName)
-	local tag_name = tagName:lower()
-	local slot_name = itemSlotName:lower():gsub(" ", "_")
-	-- iterate all the item modifiers
-	for k,v in pairs(data.itemMods.Item) do
-		-- iterate across the modifier tags for each modifier
-		for _,tag in ipairs(v.modTags) do
-			-- if tag matches the tag_name we are investigating
-			if tag:lower() == tag_name then
-				local found = false
-				-- if there is a valid weightKey table
-				if #v.weightKey > 0 then
-					for _,wk in ipairs(v.weightKey) do
-						-- and it matches the slot_name of the item we are investigating
-						if wk == slot_name then
-							for _, dv in ipairs(v) do
-								-- and the modifier description contains the tag_name keyword
-								if dv:lower():find(tag_name) then
-									found = true
-									break
-								else
-									local excluded = false
-									if data.itemTagSpecial[tagName] and data.itemTagSpecial[tagName][itemSlotName] then
-										for _, specialMod in ipairs(data.itemTagSpecial[tagName][itemSlotName]) do
-											if dv:lower():find(specialMod:lower()) then
-												exclude = true
-												break
-											end
-										end
-									end
-									if exclude then
-										found = true
-										break
-									end
-								end
-							end
-							if not found and not specialModifierFoundList[k] then
-								specialModifierFoundList[k] = true
-								ConPrintf("[%s] [%s] ENTRY: %s", tagName, itemSlotName, k)
-							end
-						end
-					end
-				else
-					for _, dv in ipairs(v) do
-						if dv:lower():find(tag_name) then
-							found = true
-							break
-						else
-							local excluded = false
-							if data.itemTagSpecial[tagName] and data.itemTagSpecial[tagName][itemSlotName] then
-								for _, specialMod in ipairs(data.itemTagSpecial[tagName][itemSlotName]) do
-									if dv:lower():find(specialMod:lower()) then
-										exclude = true
-										break
-									end
-								end
-							end
-							if exclude then
-								found = true
-								break
-							end
-						end
-					end
-					if not found and not specialModifierFoundList[k] then
-						specialModifierFoundList[k] = true
-						ConPrintf("[%s] ENTRY: %s", tagName, k)
-					end
-				end
-			end
-		end
-		for _, dv in ipairs(v) do
-			if dv:lower():find(tag_name) then
-				local found_2 = false
-				if #v.weightKey > 0 then
-					for _,wk in ipairs(v.weightKey) do
-						if wk == slot_name then
-							-- this is useless if the modTags = { } (is empty)
-							if #v.modTags > 0 then
-								for _,tag in ipairs(v.modTags) do
-									if tag:lower() == tag_name then
-										found_2 = true
-										break
-									else
-										local excluded = false
-										-- if we have an exclusion pattern list for that tagName and itemSlotName
-										if data.itemTagSpecialExclusionPattern[tagName] and data.itemTagSpecialExclusionPattern[tagName][itemSlotName] then
-											-- iterate across the exclusion patterns
-											for _, specialMod in ipairs(data.itemTagSpecialExclusionPattern[tagName][itemSlotName]) do
-												-- and if the description matches pattern exclude it
-												if dv:lower():find(specialMod:lower()) then
-													excluded = true
-													break
-												end
-											end
-										end
-										if excluded then
-											found_2 = true
-											break
-										end
-									end
-								end
-								if not found_2 and not inverseModifierFoundList[k] then
-									inverseModifierFoundList[k] = true
-									ConPrintf("[%s] appears in desc but not in tags. [%s] %s", tag_name, k, dv)
-									break
-								end
-							end
-						end
-					end
-				else
-					-- this is useless if the modTags = { } (is empty)
-					if #v.modTags > 0 then
-						for _,tag in ipairs(v.modTags) do
-							if tag:lower() == tag_name then
-								found_2 = true
-								break
-							else
-								local excluded = false
-								-- if we have an exclusion pattern list for that tagName and itemSlotName
-								if data.itemTagSpecialExclusionPattern[tagName] and data.itemTagSpecialExclusionPattern[tagName][itemSlotName] then
-									-- iterate across the exclusion patterns
-									for _, specialMod in ipairs(data.itemTagSpecialExclusionPattern[tagName][itemSlotName]) do
-										-- and if the description matches pattern exclude it
-										if dv:lower():find(specialMod:lower()) then
-											excluded = true
-											break
-										end
-									end
-								end
-								if excluded then
-									found_2 = true
-									break
-								end
-							end
-						end
-						if not found_2 and not inverseModifierFoundList[k] then
-							inverseModifierFoundList[k] = true
-							ConPrintf("[%s] appears in desc but not in tags. [%s] %s", tag_name, k, dv)
-						end
-					end
-				end
-			end
-		end
-	end
-end
-
--- Iterate over modifiers to see if specific substring is found (for conditional checking)
-function ItemClass:FindModifierSubstring(substring, itemSlotName)
-	local modLines = {}
-	local substring, explicit = substring:gsub("explicit ", "")
-
-	-- The commented out line below is used at GGPK updates to check if any new modifiers
-	-- have been identified that need to be added to the manually maintained special modifier
-	-- pool in Data.lua (data.itemTagSpecial and data.itemTagSpecialExclusionPattern tables)
-	--getTagBasedModifiers(substring, itemSlotName)
-
-	-- merge various modifier lines into one table
-	for _,v in pairs(self.explicitModLines) do t_insert(modLines, v) end
-	if explicit < 1 then
-		for _,v in pairs(self.enchantModLines) do t_insert(modLines, v) end
-		for _,v in pairs(self.implicitModLines) do t_insert(modLines, v) end
-
-	end
-
-	for _,v in pairs(modLines) do
-		local currentVariant = false
-		if v.variantList then
-			for variant, enabled in pairs(v.variantList) do
-				if enabled and variant == self.variant then
-					currentVariant = true
-				end
-			end
-		else
-			currentVariant = true
-		end
-		if currentVariant then
-			if v.line:lower():find(substring) and not v.line:lower():find(substring .. " modifier") then
-				local excluded = false
-				if data.itemTagSpecialExclusionPattern[substring] and data.itemTagSpecialExclusionPattern[substring][itemSlotName] then
-					for _, specialMod in ipairs(data.itemTagSpecialExclusionPattern[substring][itemSlotName]) do
-						if v.line:lower():find(specialMod:lower()) then
-							excluded = true
-							break
-						end
-					end
-				end
-				if not excluded then
-					return true
-				end
-			end
-			if data.itemTagSpecial[substring] and data.itemTagSpecial[substring][itemSlotName] then
-				for _, specialMod in ipairs(data.itemTagSpecial[substring][itemSlotName]) do
-					if v.line:lower():find(specialMod:lower()) and (not v.variantList or v.variantList[self.variant]) then
-						return true
-					end
-				end
-			end
-		end
-	end
-	return false
-end
 
 local function specToNumber(s)
 	local n = s:match("^([%+%-]?[%d%.]+)")
@@ -295,8 +36,8 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.base = nil
 	self.rarity = rarity or "UNIQUE"
 	self.rarityType = nil
-	self.quality = nil
 	self.rawLines = { }
+	self.corrupted = false
 	-- Find non-blank lines and trim whitespace
 	for line in raw:gmatch("%s*([^\n]*%S)") do
 	 	t_insert(self.rawLines, line)
@@ -366,31 +107,24 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 		end
 	end
 	self.checkSection = false
-	self.sockets = { }
-	self.classRequirementModLines = { }
-	self.buffModLines = { }
-	self.enchantModLines = { }
 	self.implicitModLines = { }
 	self.explicitModLines = { }
 	local implicitLines = 0
 	self.variantList = nil
-	self.prefixes = { }
-	self.suffixes = { }
+	self.affixes = { }
+	for i = 1,6 do
+		self.affixes[i] = { }
+	end
 	self.requirements = { }
-	self.requirements.str = 0
-	self.requirements.dex = 0
-	self.requirements.int = 0
 	self.baseLines = { }
 	local importedLevelReq
 	local gameModeStage = "FINDIMPLICIT"
 	local foundExplicit, foundImplicit
 
-	while self.rawLines[l] do	
+	while self.rawLines[l] do
 		local line = self.rawLines[l]
 		if line == "--------" then
 			self.checkSection = true
-		elseif line == "Mirrored" then
-			self.mirrored = true
 		else
 			if self.checkSection then
 				if gameModeStage == "IMPLICIT" then
@@ -403,8 +137,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					end
 				elseif gameModeStage == "EXPLICIT" then
 					gameModeStage = "DONE"
-				elseif gameModeStage == "FINDIMPLICIT" and self.itemLevel and not line:match(" %(implicit%)") and
-						not line:match(" %(enchant%)") and not line:find("Talisman Tier") then
+				elseif gameModeStage == "FINDIMPLICIT" and self.itemLevel and not line:match(" %(implicit%)") then
 					gameModeStage = "EXPLICIT"
 					foundExplicit = true
 				end
@@ -418,49 +151,40 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			else
 				specName, specVal = line:match("^(Requires %a+) (.+)$")
 			end
+			local function parseAffix(specVal, attribute)
+    			local range, affix = specVal:match("{range:([%d.]+)}(.+)")
+    			range = range or main.defaultItemAffixQuality
+                local parsedAffix = {
+    				modId = affix or specVal,
+    				range = tonumber(range),
+                }
+                parsedAffix[attribute] = true
+                return parsedAffix
+			end
 			if specName then
 				if specName == "Unique ID" then
 					self.uniqueID = specVal
-				elseif specName == "Item Level" then
-					self.itemLevel = specToNumber(specVal)
-				elseif specName == "Requires Class" then
-					self.classRestriction = specVal
-				elseif specName == "Quality" then
-					self.quality = specToNumber(specVal)
-				elseif specName == "Armour" or specName == "Evasion Rating" or specName == "Evasion" or specName == "Ward" then
-					if specName == "Evasion Rating" then
-						specName = "Evasion"
-					end
-					self.armourData = self.armourData or { }
-					self.armourData[specName] = specToNumber(specVal)
-				elseif specName:match("BasePercentile") then
-					self.armourData = self.armourData or { }
-					self.armourData[specName] = specToNumber(specVal) or 0
-				elseif specName == "Requires Level" then
-					self.requirements.level = specToNumber(specVal)
-				elseif specName == "Level" then
-					-- Requirements from imported items can't always be trusted
-					importedLevelReq = specToNumber(specVal)
 				elseif specName == "LevelReq" then
 					self.requirements.level = specToNumber(specVal)
-				elseif specName == "Crafted" then
-					self.crafted = true
 				elseif specName == "Implicit" then
 					self.implicit = true
 				elseif specName == "Prefix" then
-					local range, affix = specVal:match("{range:([%d.]+)}(.+)")
-					range = range or ((affix or specVal) ~= "None" and main.defaultItemAffixQuality)
-					t_insert(self.prefixes, {
-						modId = affix or specVal,
-						range = tonumber(range),
-					})
+					if not self.affixes[1].modId then
+						self.affixes[1] = parseAffix(specVal, "prefix")
+					else
+						self.affixes[2] = parseAffix(specVal, "prefix")
+					end
 				elseif specName == "Suffix" then
-					local range, affix = specVal:match("{range:([%d.]+)}(.+)")
-					range = range or ((affix or specVal) ~= "None" and main.defaultItemAffixQuality)
-					t_insert(self.suffixes, {
-						modId = affix or specVal,
-						range = tonumber(range),
-					})
+					if not self.affixes[3].modId then
+						self.affixes[3] = parseAffix(specVal, "suffix")
+					else
+						self.affixes[4] = parseAffix(specVal, "suffix")
+					end
+				elseif specName == "Sealed" then
+					self.affixes[5] = parseAffix(specVal, "sealed")
+				elseif specName == "Corrupted" then
+					self.affixes[6] = parseAffix(specVal, "corrupted")
+					self.corrupted = true
 				elseif specName == "Implicits" then
 					implicitLines = specToNumber(specVal) or 0
 					gameModeStage = "EXPLICIT"
@@ -468,38 +192,15 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.source = specVal
 				elseif specName == "Note" then
 					self.note = specVal
-				elseif specName == "Str" or specName == "Strength" or specName == "Dex" or specName == "Dexterity" or
-				       specName == "Int" or specName == "Intelligence" then
-					self.requirements[specName:sub(1,3):lower()] = specToNumber(specVal)
-				elseif specName == "Critical Strike Range" or specName == "Attacks per Second" or specName == "Weapon Range" or
-				       specName == "Critical Strike Chance" or specName == "Physical Damage" or specName == "Elemental Damage" or
-				       specName == "Chaos Damage" or specName == "Chance to Block" or specName == "Armour" or
-					   specName == "Energy Shield" or specName == "Evasion" then
-					self.hidden_specs = true
-				-- Anything else is an explicit with a colon in it (Fortress Covenant, Pure Talent, etc) unless it's part of the custom name
 				elseif not (self.name:match(specName) and self.name:match(specVal)) then
 					foundExplicit = true
 					gameModeStage = "EXPLICIT"
 				end
 			end
-			if line == "Prefixes:" then
-				foundExplicit = true
-				gameModeStage = "EXPLICIT"
-			end
 			if not specName or foundExplicit or foundImplicit then
 				local modLine = { modTags = {} }
-
 				line = line:gsub("{(%a*):?([^}]*)}", function(k,val)
-					if k == "variant" then
-						modLine.variantList = { }
-						for varId in val:gmatch("%d+") do
-							modLine.variantList[tonumber(varId)] = true
-						end
-					elseif k == "tags" then
-						for tag in val:gmatch("[%a_]+") do
-							t_insert(modLine.modTags, tag)
-						end
-					elseif k == "range" then
+					if k == "range" then
 						modLine.range = tonumber(val)
 					elseif k == "scalar" then
 						modLine.valueScalar = tonumber(val)
@@ -518,11 +219,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					end
 					return ""
 				end)
-
-				if modLine.enchant then
-					modLine.crafted = true
-					modLine.implicit = true
-				end
 
 				local baseName
 				if not self.base and (self.rarity == "NORMAL" or self.rarity == "MAGIC") then
@@ -547,15 +243,6 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 							baseName = bestMatch.match
 						end
 					end
-					if not baseName then
-						local s, e = self.name:find("Two-Toned Boots", 1, true)
-						if s then
-							-- Hack for Two-Toned Boots
-							baseName = "Two-Toned Boots"
-							self.namePrefix = self.name:sub(1, s - 1)
-							self.nameSuffix = self.name:sub(e + 1)
-						end
-					end
 					self.name = self.name:gsub(" %(.+%)","")
 				end
 				if not baseName then
@@ -570,7 +257,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.title = self.name
 					self.type = base.type
 					self.base = base
-					self.affixes = (self.base.subType and data.itemMods[self.base.type..self.base.subType])
+					self.compatibleAffixes = (self.base.subType and data.itemMods[self.base.type..self.base.subType])
 							or data.itemMods[self.base.type]
 							or data.itemMods.Item
 					-- Base lines don't need mod parsing, skip it
@@ -580,14 +267,14 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					foundImplicit = true
 					gameModeStage = "IMPLICIT"
 				end
-				modLine.implicit = modLine.implicit or (not modLine.crafted and not modLine.unique and #self.implicitModLines < implicitLines)
+				modLine.implicit = modLine.implicit or (not modLine.unique and #self.implicitModLines < implicitLines)
 				modLine.range = modLine.range or main.defaultItemAffixQuality
 				local rangedLine = itemLib.applyRange(line, modLine.range, modLine.valueScalar, modLine.rounding)
 				local modList, extra = modLib.parseMod(rangedLine)
 
 				local modLines
 
-				if modLine.implicit or (not modLine.crafted and not modLine.unique and #self.implicitModLines < implicitLines) then
+				if modLine.implicit or (not modLine.unique and #self.implicitModLines < implicitLines) then
 					modLines = self.implicitModLines
 				else
 					modLines = self.explicitModLines
@@ -611,7 +298,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 						foundExplicit = true
 					end
 				elseif mode == "GAME" then
-					if gameModeStage == "IMPLICIT" or gameModeStage == "EXPLICIT" or (gameModeStage == "FINDIMPLICIT" and (not data.itemBases[line]) and not (self.name == line) and not line:find("Two%-Toned") and not (self.base and (line == self.base.type or self.base.subType and line == self.base.subType .. " " .. self.base.type))) then
+					if gameModeStage == "IMPLICIT" or gameModeStage == "EXPLICIT" or (gameModeStage == "FINDIMPLICIT" and (not data.itemBases[line]) and not (self.name == line) and not (self.base and (line == self.base.type or self.base.subType and line == self.base.subType .. " " .. self.base.type))) then
 						modLine.modList = { }
 						modLine.extra = line
 						t_insert(modLines, modLine)
@@ -632,48 +319,18 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 		self.name = self.title
 	end
 	if self.base and not self.requirements.level then
-		if importedLevelReq and #self.sockets == 0 then
-			-- Requirements on imported items can only be trusted for items with no sockets
-			self.requirements.level = importedLevelReq
-		else
-			self.requirements.level = self.base.req.level
-		end
-	end
-	-- Uniques are always craftable (adding affixes turns them into legendaries)
-	if self.rarityType == "UNIQUE" then
-		self.crafted = true
-	end
-	self.affixLimit = 0
-	if self.crafted then
-	    -- The affix limit is set to 6 instead of 4 to support sealed affixes
-		self.affixLimit = 6
-		if self.crafted then
-			for _, list in ipairs({self.prefixes,self.suffixes}) do
-				for i = 1, self.affixLimit/2 do
-					if not list[i] then
-						list[i] = { modId = "None" }
-					elseif list[i].modId ~= "None" and not self.affixes[list[i].modId] then
-						for modId, mod in pairs(self.affixes) do
-							if list[i].modId == mod.affix then
-								list[i].modId = modId
-								break
-							end
-						end
-						if not self.affixes[list[i].modId] then
-							list[i].modId = "None"
-						end
-					end
-				end
-			end
-		end
+		self.requirements.level = self.base.req.level
 	end
 	-- Idol bases are always rarityType IDOL; display rarity stays UNIQUE for unique idols
 	if self.type and self.type:match("Idol$") then
 		self.rarityType = "IDOL"
 		if self.rarity ~= "UNIQUE" then
 			self.rarity = "IDOL"
-			self.crafted = true
 		end
+		-- Only one prefix and suffix allowed for idols
+		self.affixLimit = 2
+	else
+		self.affixLimit = 4
 	end
 	self:UpdateDisplayRarity()
 	self:BuildModList()
@@ -684,14 +341,12 @@ function ItemClass:UpdateDisplayRarity()
 	if self.rarityType == "BASIC" then
 		local affixCount = 0
 		local hasExaltedTier = false
-		for _, list in ipairs({self.prefixes, self.suffixes}) do
-			for _, affix in ipairs(list) do
-				if affix.modId and affix.modId ~= "None" then
-					affixCount = affixCount + 1
-					local tierIndex = tonumber(affix.modId:match("_(%d+)$"))
-					if tierIndex and tierIndex >= 5 then
-						hasExaltedTier = true
-					end
+		for _, affix in ipairs(self.affixes) do
+			if affix.modId then
+				affixCount = affixCount + 1
+				local tierIndex = tonumber(affix.modId:match("_(%d+)$"))
+				if tierIndex and tierIndex >= 5 then
+					hasExaltedTier = true
 				end
 			end
 		end
@@ -707,37 +362,15 @@ function ItemClass:UpdateDisplayRarity()
 	elseif self.rarityType == "UNIQUE" then
 		-- Unique with crafted affixes becomes Legendary
 		local hasAffix = false
-		for _, list in ipairs({self.prefixes, self.suffixes}) do
-			for _, affix in ipairs(list) do
-				if affix.modId and affix.modId ~= "None" then
-					hasAffix = true
-					break
-				end
+		for _, affix in ipairs(self.affixes) do
+			if affix.modId then
+				hasAffix = true
+				break
 			end
-			if hasAffix then break end
 		end
 		self.rarity = hasAffix and "LEGENDARY" or "UNIQUE"
 	end
 end
-
-function ItemClass:NormaliseQuality()
-	if self.base and (self.base.armour or self.base.weapon or self.base.flask) then
-		if not self.quality then
-			self.quality = 0
-		elseif not self.uniqueID and not self.corrupted and not self.split and not self.mirrored and self.quality < 20 then
-			self.quality = 20
-		end
-	end	
-end
-
-function ItemClass:GetModSpawnWeight(mod, includeTags, excludeTags)
-	return 1
-end
-
-function ItemClass:CheckIfModIsDelve(mod)
-	return mod.affix == "Subterranean" or mod.affix == "of the Underground"
-end
-
 
 function ItemClass:BuildRaw()
 	local rawLines = { }
@@ -748,41 +381,27 @@ function ItemClass:BuildRaw()
 	else
 		t_insert(rawLines, (self.namePrefix or "") .. self.baseName .. (self.nameSuffix or ""))
 	end
-	if self.armourData then
-		for _, type in ipairs({ "Armour", "Evasion", "EnergyShield", "Ward" }) do
-			if self.armourData[type] and self.armourData[type] > 0 then
-				t_insert(rawLines, type:gsub("EnergyShield", "Energy Shield") .. ": " .. self.armourData[type])
-				if self.armourData[type .. "BasePercentile"] then
-					t_insert(rawLines, type .. "BasePercentile: " .. self.armourData[type .. "BasePercentile"])
-				end
-			end
-		end
-	end
 	if self.uniqueID then
 		t_insert(rawLines, "Unique ID: " .. self.uniqueID)
 	end
-	if self.league then
-		t_insert(rawLines, "League: " .. self.league)
-	end
-	if self.unreleased then
-		t_insert(rawLines, "Unreleased: true")
-	end
-	for i, curInfluenceInfo in ipairs(influenceInfo) do
-		if self[curInfluenceInfo.key] then
-			t_insert(rawLines, curInfluenceInfo.display .. " Item")
+	for i, affix in ipairs(self.affixes or { }) do
+		if affix.modId then
+			local line = ""
+			if affix.prefix then
+				line = "Prefix: "
+			elseif affix.suffix then
+				line = "Suffix: "
+			elseif affix.sealed then
+				line = "Sealed: "
+			elseif affix.corrupted then
+				line = "Corrupted: "
+			end
+			if affix.range then
+				line = line .. "{range:" .. round(affix.range,3) .. "}"
+			end
+			line = line .. affix.modId
+			t_insert(rawLines, line)
 		end
-	end
-	if self.crafted then
-		t_insert(rawLines, "Crafted: true")
-		for i, affix in ipairs(self.prefixes or { }) do
-			t_insert(rawLines, "Prefix: " .. (affix.range and ("{range:" .. round(affix.range,3) .. "}") or "") .. affix.modId)
-		end
-		for i, affix in ipairs(self.suffixes or { }) do
-			t_insert(rawLines, "Suffix: " .. (affix.range and ("{range:" .. round(affix.range,3) .. "}") or "") .. affix.modId)
-		end
-	end
-	if self.itemLevel then
-		t_insert(rawLines, "Item Level: " .. self.itemLevel)
 	end
 	local function writeModLine(modLine)
 		local line = modLine.line
@@ -795,32 +414,17 @@ function ItemClass:BuildRaw()
 		if modLine.range ~= nil and itemLib.hasRange(line) then
 			line = "{range:" .. round(modLine.range, 3) .. "}" .. line
 		end
-		if modLine.crafted then
-			line = "{crafted}" .. line
-		end
 		if modLine.unique then
 			line = "{unique}" .. line
 		end
 		if modLine.custom then
 			line = "{custom}" .. line
 		end
-		if modLine.scourge then
-			line = "{scourge}" .. line
+		if modLine.corrupted then
+			line = "{corrupted}" .. line
 		end
-		if modLine.crucible then
-			line = "{crucible}" .. line
-		end
-		if modLine.fractured then
-			line = "{fractured}" .. line
-		end
-		if modLine.exarch then
-			line = "{exarch}" .. line
-		end
-		if modLine.eater then
-			line = "{eater}" .. line
-		end
-		if modLine.synthesis then
-			line = "{synthesis}" .. line
+		if modLine.sealed then
+			line = "{sealed}" .. line
 		end
 		if modLine.variantList then
 			local varSpec
@@ -834,71 +438,18 @@ function ItemClass:BuildRaw()
 		end
 		t_insert(rawLines, line)
 	end
-	if self.variantList then
-		for _, variantName in ipairs(self.variantList) do
-			t_insert(rawLines, "Variant: " .. variantName)
-		end
-		t_insert(rawLines, "Selected Variant: " .. self.variant)
-
-		for _, baseLine in pairs(self.baseLines) do
-			if baseLine.variantList then
-				writeModLine(baseLine)
-			end
-		end	
-		if self.hasAltVariant then
-			t_insert(rawLines, "Has Alt Variant: true")
-			t_insert(rawLines, "Selected Alt Variant: " .. self.variantAlt)
-		end
-		if self.hasAltVariant2 then
-			t_insert(rawLines, "Has Alt Variant Two: true")
-			t_insert(rawLines, "Selected Alt Variant Two: " .. self.variantAlt2)
-		end
-		if self.hasAltVariant3 then
-			t_insert(rawLines, "Has Alt Variant Three: true")
-			t_insert(rawLines, "Selected Alt Variant Three: " .. self.variantAlt3)
-		end
-		if self.hasAltVariant4 then
-			t_insert(rawLines, "Has Alt Variant Four: true")
-			t_insert(rawLines, "Selected Alt Variant Four: " .. self.variantAlt4)
-		end
-		if self.hasAltVariant5 then
-			t_insert(rawLines, "Has Alt Variant Five: true")
-			t_insert(rawLines, "Selected Alt Variant Five: " .. self.variantAlt5)
-		end
-	end
-	if self.quality then
-		t_insert(rawLines, "Quality: " .. self.quality)
-	end
 	if self.requirements and self.requirements.level then
 		t_insert(rawLines, "LevelReq: " .. self.requirements.level)
-	end
-	if self.limit then
-		t_insert(rawLines, "Limited to: " .. self.limit)
 	end
 	if self.classRestriction then
 		t_insert(rawLines, "Requires Class " .. self.classRestriction)
 	end
-	t_insert(rawLines, "Implicits: " .. (#self.enchantModLines + #self.implicitModLines))
-	for _, modLine in ipairs(self.enchantModLines) do
-		writeModLine(modLine)
-	end
-	for _, modLine in ipairs(self.classRequirementModLines) do
-		writeModLine(modLine)
-	end
+	t_insert(rawLines, "Implicits: " .. #self.implicitModLines)
 	for _, modLine in ipairs(self.implicitModLines) do
 		writeModLine(modLine)
 	end
 	for _, modLine in ipairs(self.explicitModLines) do
 		writeModLine(modLine)
-	end
-	if self.split then
-		t_insert(rawLines, "Split")
-	end
-	if self.mirrored then
-		t_insert(rawLines, "Mirrored")
-	end
-	if self.corrupted or self.scourge then
-		t_insert(rawLines, "Corrupted")
 	end
 	return table.concat(rawLines, "\n")
 end
@@ -910,10 +461,10 @@ end
 
 -- Rebuild explicit modifiers using the item's affixes
 function ItemClass:Craft()
-	-- Save off any crafted or custom mods so they can be re-added at the end
+	-- Save off any custom or unique mods so they can be re-added at the end
 	local savedMods = {}
 	for _, mod in ipairs(self.explicitModLines) do
-		if mod.crafted or mod.custom or mod.unique then
+		if mod.custom or mod.unique then
 			t_insert(savedMods, mod)
 		end
 	end
@@ -922,47 +473,38 @@ function ItemClass:Craft()
 	self.namePrefix = ""
 	self.nameSuffix = ""
 	self.requirements.level = self.base.req.level
-	for _, list in ipairs({self.prefixes,self.suffixes}) do
-		for i = 1, self.affixLimit / 2 do
-			local affix = list[i]
-			if not affix then
-				list[i] = { modId = "None" }
-			end
-			local mod = self.affixes[affix.modId]
-			if mod then
-				if mod.type == "Prefix" then
-					self.namePrefix = mod.affix .. " "
-				elseif mod.type == "Suffix" then
-					self.nameSuffix = " " .. mod.affix
+	local function writeModLine(affix)
+		local mod = data.itemMods.Item[affix.modId]
+		if mod then
+			for _, line in ipairs(mod) do
+				local modScalar = 1 + self.base.affixEffectModifier
+				if mod.standardAffixEffectModifier then
+					modScalar = modScalar - mod.standardAffixEffectModifier
 				end
-				for _, line in ipairs(mod) do
-					local modScalar = 1 + self.base.affixEffectModifier
-					if mod.standardAffixEffectModifier then
-						modScalar = modScalar - mod.standardAffixEffectModifier
-					end
-					local modLine = { line = line, range = affix.range, valueScalar = modScalar }
-					t_insert(self.explicitModLines, modLine)
+				local modLine = { line = line, range = affix.range, valueScalar = modScalar }
+				if affix.prefix then
+					modLine.prefix = true
+				elseif affix.suffix then
+					modLine.suffix = true
+				elseif affix.sealed then
+					modLine.sealed = true
+				elseif affix.corrupted then
+					modLine.corrupted = true
 				end
+				t_insert(self.explicitModLines, modLine)
 			end
 		end
 	end
+	for _, affix in ipairs(self.affixes) do
+		writeModLine(affix)
+	end
 
-	-- Restore the crafted and custom mods
+	-- Restore the custom and unique mods
 	for _, mod in ipairs(savedMods) do
 		t_insert(self.explicitModLines, mod)
 	end
 
 	self:BuildAndParseRaw()
-end
-
-function ItemClass:CheckModLineVariant(modLine)
-	return not modLine.variantList 
-		or modLine.variantList[self.variant]
-		or (self.hasAltVariant and modLine.variantList[self.variantAlt])
-		or (self.hasAltVariant2 and modLine.variantList[self.variantAlt2])
-		or (self.hasAltVariant3 and modLine.variantList[self.variantAlt3])
-		or (self.hasAltVariant4 and modLine.variantList[self.variantAlt4])
-		or (self.hasAltVariant5 and modLine.variantList[self.variantAlt5])
 end
 
 -- Return the name of the slot this item is equipped in
@@ -973,8 +515,6 @@ function ItemClass:GetPrimarySlot()
 		return "Weapon 2"
 	elseif self.type == "Ring" then
 		return "Ring 1"
-	elseif self.type == "Flask" then
-		return "Flask 1"
 	else
 		return self.type
 	end
@@ -1055,138 +595,16 @@ function ItemClass:BuildModListForSlotNum(baseList, slotNum)
 			end
 		end
 	end
-	local craftedQuality = calcLocal(modList,"Quality","BASE",0) or 0
-	if craftedQuality ~= self.craftedQuality then
-		if self.craftedQuality then
-			self.quality = (self.quality or 0) - self.craftedQuality + craftedQuality
-		end
-		self.craftedQuality = craftedQuality
-	end
-	if self.quality then
-		modList:NewMod("Multiplier:QualityOn"..slotName, "BASE", self.quality, "Quality")
-	end
 	if self.base.weapon then
 		local weaponData = { }
 		self.weaponData[slotNum] = weaponData
 		weaponData.type = self.base.type
 		weaponData.name = self.name
-		weaponData.AttackSpeedInc = calcLocal(modList, "Speed", "INC", ModFlag.Attack) + m_floor(self.quality / 8 * calcLocal(modList, "AlternateQualityLocalAttackSpeedPer8Quality", "INC", 0))
+		weaponData.AttackSpeedInc = calcLocal(modList, "Speed", "INC", ModFlag.Attack)
 		weaponData.AttackRate = round(self.base.weapon.AttackRateBase * (1 + weaponData.AttackSpeedInc / 100), 2)
 		weaponData.rangeBonus = calcLocal(modList, "WeaponRange", "BASE", 0) + 10 * calcLocal(modList, "WeaponRangeMetre", "BASE", 0) + m_floor(self.quality / 10 * calcLocal(modList, "AlternateQualityLocalWeaponRangePer10Quality", "BASE", 0))
 		weaponData.range = self.base.weapon.Range + weaponData.rangeBonus
-		for _, dmgType in pairs(dmgTypeList) do
-			local min = (self.base.weapon[dmgType.."Min"] or 0) + calcLocal(modList, dmgType.."Min", "BASE", 0)
-			local max = (self.base.weapon[dmgType.."Max"] or 0) + calcLocal(modList, dmgType.."Max", "BASE", 0)
-			if dmgType == "Physical" then
-				local physInc = calcLocal(modList, "PhysicalDamage", "INC", 0)
-				local qualityScalar = self.quality
-				if calcLocal(modList, "AlternateQualityWeapon", "BASE", 0) > 0 then
-					qualityScalar = 0
-				end
-				min = round(min * (1 + (physInc + qualityScalar) / 100))
-				max = round(max * (1 + (physInc + qualityScalar) / 100))
-			end
-			if min > 0 and max > 0 then
-				weaponData[dmgType.."Min"] = min
-				weaponData[dmgType.."Max"] = max
-				local dps = (min + max) / 2 * weaponData.AttackRate
-				weaponData[dmgType.."DPS"] = dps
-				if dmgType ~= "Physical" and dmgType ~= "Chaos" then
-					weaponData.ElementalDPS = (weaponData.ElementalDPS or 0) + dps
-				end
-			end
-		end
-		weaponData.CritChance = round((calcLocal(modList, "CritChance", "BASE", 0)) * (1 + (calcLocal(modList, "CritChance", "INC", 0) + m_floor(self.quality / 4 * calcLocal(modList, "AlternateQualityLocalCritChancePer4Quality", "INC", 0))) / 100), 2)
-		for _, value in ipairs(modList:List(nil, "WeaponData")) do
-			weaponData[value.key] = value.value
-		end
-		for _, mod in ipairs(modList) do
-			-- Convert accuracy, L/MGoH and PAD Leech modifiers to local
-			if (
-				(mod.name == "Accuracy" and mod.flags == 0) or (mod.name == "ImpaleChance" and mod.flags ~= ModFlag.Spell) or
-				((mod.name == "LifeOnHit" or mod.name == "ManaOnHit") and mod.flags == ModFlag.Attack) or
-				((mod.name == "PhysicalDamageLifeLeech" or mod.name == "PhysicalDamageManaLeech") and mod.flags == ModFlag.Attack)
-			   ) and (mod.keywordFlags == 0 or mod.keywordFlags == KeywordFlag.Attack) and not mod[1] then
-				mod[1] = { type = "Condition", var = (slotNum == 1) and "MainHandAttack" or "OffHandAttack" }
-			elseif (mod.name == "PoisonChance" or mod.name == "BleedChance") and mod.flags ~= ModFlag.Spell and (not mod[1] or (mod[1].type == "Condition" and mod[1].var == "CriticalStrike" and not mod[2])) then
-				t_insert(mod, { type = "Condition", var = (slotNum == 1) and "MainHandAttack" or "OffHandAttack" })
-			end
-		end
-		weaponData.TotalDPS = 0
-		for _, dmgType in pairs(dmgTypeList) do
-			weaponData.TotalDPS = weaponData.TotalDPS + (weaponData[dmgType.."DPS"] or 0)
-		end
-	elseif self.base.armour then
-		local armourData = self.armourData
-		local armourBase = calcLocal(modList, "Armour", "BASE", 0) + (self.base.armour.ArmourBaseMin or 0)
-		local armourVariance = (self.base.armour.ArmourBaseMax or 0) - (self.base.armour.ArmourBaseMin or 0)
-		local armourEvasionBase = calcLocal(modList, "ArmourAndEvasion", "BASE", 0)
-		local evasionBase = calcLocal(modList, "Evasion", "BASE", 0) + (self.base.armour.EvasionBaseMin or 0)
-		local evasionVariance = (self.base.armour.EvasionBaseMax or 0) - (self.base.armour.EvasionBaseMin or 0)
-		local evasionEnergyShieldBase = calcLocal(modList, "EvasionAndEnergyShield", "BASE", 0)
-		local energyShieldBase = calcLocal(modList, "EnergyShield", "BASE", 0) + (self.base.armour.EnergyShieldBaseMin or 0)
-		local energyShieldVariance = (self.base.armour.EnergyShieldBaseMax or 0) - (self.base.armour.EnergyShieldBaseMin or 0)
-		local armourEnergyShieldBase = calcLocal(modList, "ArmourAndEnergyShield", "BASE", 0)
-		local wardBase = calcLocal(modList, "Ward", "BASE", 0) + (self.base.armour.WardBaseMin or 0)
-		local wardVariance = (self.base.armour.WardBaseMax or 0) - (self.base.armour.WardBaseMin or 0)
-		local armourInc = calcLocal(modList, "Armour", "INC", 0)
-		local armourEvasionInc = calcLocal(modList, "ArmourAndEvasion", "INC", 0)
-		local evasionInc = calcLocal(modList, "Evasion", "INC", 0)
-		local evasionEnergyShieldInc = calcLocal(modList, "EvasionAndEnergyShield", "INC", 0)
-		local energyShieldInc = calcLocal(modList, "EnergyShield", "INC", 0)
-		local wardInc = calcLocal(modList, "Ward", "INC", 0)
-		local armourEnergyShieldInc = calcLocal(modList, "ArmourAndEnergyShield", "INC", 0)
-		local defencesInc = calcLocal(modList, "Defences", "INC", 0)
-		local qualityScalar = self.quality
-		if calcLocal(modList, "AlternateQualityArmour", "BASE", 0) > 0 then
-			qualityScalar = 0
-		end
-		-- base percentiles need to differ for each armour type, as they're weighted differently
-		if armourData.Armour and armourData.Armour > 0 and not armourData.ArmourBasePercentile then
-			armourData.ArmourBasePercentile = ((armourData.Armour / (1 + (armourInc + armourEvasionInc + armourEnergyShieldInc + defencesInc + qualityScalar) / 100) - armourBase)) / armourVariance
-			armourData.ArmourBasePercentile = round(m_max(m_min(armourData.ArmourBasePercentile, 1), 0), 4)
-		end
-		if armourData.Evasion and armourData.Evasion > 0 and not armourData.EvasionBasePercentile then
-			armourData.EvasionBasePercentile = ((armourData.Evasion / (1 + (evasionInc + armourEvasionInc + evasionEnergyShieldInc + defencesInc + qualityScalar) / 100) - evasionBase)) / evasionVariance
-			armourData.EvasionBasePercentile = round(m_max(m_min(armourData.EvasionBasePercentile, 1), 0), 4)
-		end
-		if armourData.EnergyShield and armourData.EnergyShield > 0 and not armourData.EnergyShieldBasePercentile then
-			armourData.EnergyShieldBasePercentile = ((armourData.EnergyShield / (1 + (energyShieldInc + armourEnergyShieldInc + evasionEnergyShieldInc + defencesInc + qualityScalar) / 100) - energyShieldBase)) / energyShieldVariance
-			armourData.EnergyShieldBasePercentile = round(m_max(m_min(armourData.EnergyShieldBasePercentile, 1), 0), 4)
-		end
-		if armourData.Ward and armourData.Ward > 0 and not armourData.WardBasePercentile then
-			armourData.WardBasePercentile = ((armourData.Ward / (1 + (wardInc + defencesInc + qualityScalar) / 100) - wardBase)) / wardVariance
-			armourData.WardBasePercentile = round(m_max(m_min(armourData.WardBasePercentile, 1), 0),4)
-		end
-
-		armourData.Armour = round((armourBase + armourEvasionBase + armourEnergyShieldBase + armourVariance * (armourData.ArmourBasePercentile or 1)) * (1 + (armourInc + armourEvasionInc + armourEnergyShieldInc + defencesInc + qualityScalar) / 100))
-		armourData.Evasion = round((evasionBase + armourEvasionBase + evasionEnergyShieldBase + evasionVariance * (armourData.EvasionBasePercentile or 1)) * (1 + (evasionInc + armourEvasionInc + evasionEnergyShieldInc + defencesInc + qualityScalar) / 100))
-		armourData.EnergyShield = round((energyShieldBase + evasionEnergyShieldBase + armourEnergyShieldBase + energyShieldVariance * (armourData.EnergyShieldBasePercentile or 1)) * (1 + (energyShieldInc + armourEnergyShieldInc + evasionEnergyShieldInc + defencesInc + qualityScalar) / 100))
-		armourData.Ward = round((wardBase + wardVariance * (armourData.WardBasePercentile or 1)) * (1 + (wardInc + defencesInc + qualityScalar) / 100))
-
-		if not armourData.ArmourBasePercentile and armourData.Armour > 0 then
-			armourData.ArmourBasePercentile = 1
-		end
-		if not armourData.EvasionBasePercentile and armourData.Evasion > 0 then
-			armourData.EvasionBasePercentile = 1
-		end
-		if not armourData.EnergyShieldBasePercentile and armourData.EnergyShield > 0 then
-			armourData.EnergyShieldBasePercentile = 1
-		end
-		if not armourData.WardBasePercentile and armourData.Ward > 0 then
-			armourData.WardBasePercentile = 1
-		end
-
-		if self.base.armour.BlockChance then
-			armourData.BlockChance = self.base.armour.BlockChance + calcLocal(modList, "BlockChance", "BASE", 0)
-		end
-		if self.base.armour.MovementPenalty then
-			modList:NewMod("MovementSpeed", "INC", -self.base.armour.MovementPenalty, self.modSource, { type = "Condition", var = "IgnoreMovementPenalties", neg = true })
-		end
-		for _, value in ipairs(modList:List(nil, "ArmourData")) do
-			armourData[value.key] = value.value
-		end
-	end	
+	end
 	return { unpack(modList) }
 end
 
@@ -1198,61 +616,26 @@ function ItemClass:BuildModList()
 	local baseList = new("ModList")
 	if self.base.weapon then
 		self.weaponData = { }
-	elseif self.base.armour then
-		self.armourData = self.armourData or { }
 	end
 	self.baseModList = baseList
 	self.rangeLineList = { }
 	self.modSource = "Item:"..(self.id or -1)..":"..self.name
-	for _, modLine in ipairs(self.buffModLines) do
-		if not modLine.extra and self:CheckModLineVariant(modLine) then
-			for _, mod in ipairs(modLine.modList) do
-				mod.source = self.modSource
-				t_insert(self.buffModList, mod)
-			end
-		end
-	end
 	local function processModLine(modLine)
-		if self:CheckModLineVariant(modLine) then
-			-- special section for variant over-ride of pre-modifier item parameters
-			if modLine.line:find("Requires Class") then
-				self.classRestriction = modLine.line:gsub("{variant:([%d,]+)}", ""):match("Requires Class (.+)")
-			end
-			-- handle understood modifier variable properties
-			if modLine.range ~= nil and itemLib.hasRange(modLine.line) then
-				t_insert(self.rangeLineList, modLine)
-			end
-			if not modLine.extra then
-				for _, mod in ipairs(modLine.modList) do
-					mod = modLib.setSource(mod, self.modSource)
-					baseList:AddMod(mod)
-				end
-				if modLine.modTags and #modLine.modTags > 0 then
-					self.hasModTags = true
-				end
+		if modLine.range ~= nil and itemLib.hasRange(modLine.line) then
+			t_insert(self.rangeLineList, modLine)
+		end
+		if not modLine.extra then
+			for _, mod in ipairs(modLine.modList) do
+				mod = modLib.setSource(mod, self.modSource)
+				baseList:AddMod(mod)
 			end
 		end
-	end
-	for _, modLine in ipairs(self.enchantModLines) do
-		processModLine(modLine)
-	end
-	for _, modLine in ipairs(self.classRequirementModLines) do
-		processModLine(modLine)
 	end
 	for _, modLine in ipairs(self.implicitModLines) do
 		processModLine(modLine)
 	end
 	for _, modLine in ipairs(self.explicitModLines) do
 		processModLine(modLine)
-	end
-	if calcLocal(baseList, "NoAttributeRequirements", "FLAG", 0) then
-		self.requirements.strMod = 0
-		self.requirements.dexMod = 0
-		self.requirements.intMod = 0
-	else
-		self.requirements.strMod = m_floor((self.requirements.str + calcLocal(baseList, "StrRequirement", "BASE", 0)) * (1 + calcLocal(baseList, "StrRequirement", "INC", 0) / 100))
-		self.requirements.dexMod = m_floor((self.requirements.dex + calcLocal(baseList, "DexRequirement", "BASE", 0)) * (1 + calcLocal(baseList, "DexRequirement", "INC", 0) / 100))
-		self.requirements.intMod = m_floor((self.requirements.int + calcLocal(baseList, "IntRequirement", "BASE", 0)) * (1 + calcLocal(baseList, "IntRequirement", "INC", 0) / 100))
 	end
 	self.grantedSkills = { }
 	for _, skill in ipairs(baseList:List(nil, "ExtraSkill")) do

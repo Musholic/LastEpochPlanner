@@ -11,13 +11,11 @@ colorCodes = {
 	EXALTED = "^xC184FF",
 	UNIQUE = "^xAF6025",
 	LEGENDARY = "^xFF2674",
+	CORRUPTED = "^xFF6E25",
+	SEALED = "^x9F77B0",
 	SET = "^x71E87D",
 	IDOL = "^x36C8C8",
 	RELIC = "^x60C060",
-	GEM = "^x1AA29B",
-	PROPHECY = "^xB54BFF",
-	CURRENCY = "^xAA9E82",
-	CRAFTED = "^xB8DAF1",
 	CUSTOM = "^x5CF0BB",
 	SOURCE = "^x88FFFF",
 	UNSUPPORTED = "^xF05050",
@@ -62,8 +60,6 @@ colorCodes = {
 	SCORCHBG = "^x270b00",
 	BRITTLEBG = "^x00122b",
 	SAPBG = "^x261500",
-	SCOURGE = "^xFF6E25",
-	CRUCIBLE = "^xFFA500",
 
 	VITALITY = "^xFFFD60",
 	STRENGTH = "^xFF7B61",
@@ -234,4 +230,3 @@ GlobalCache = {
 	useFullDPS = false,
 	numActiveSkillInFullDPS = 0
 }
-

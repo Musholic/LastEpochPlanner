@@ -118,13 +118,8 @@
 			Rarity: LEGENDARY
 Pearls of the Swine
 Bone Amulet
-Crafted: true
 Prefix: {range:127.5}25_6
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}30_4
-Suffix: None
-Suffix: None
 LevelReq: 58
 Implicits: 2
 {range:127.5}+(13-40)% Physical Resistance
@@ -137,28 +132,15 @@ Implicits: 2
 {unique}{range:127.5}{rounding:Integer}+(5-9) Vitality
 {unique}{range:127.5}+(7-11)% to All Resistances
 {unique}{range:127.5}{rounding:Integer}+(1-4) to All Attributes
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
-			<ModRange id="8" range="127.5"></ModRange>
-			<ModRange id="9" range="127.5"></ModRange>
-			<ModRange id="10" range="127.5"></ModRange>
 		</Item>
 		<Item id="2">
 			Rarity: EXALTED
 Champion Regalia
 Champion Regalia
-Crafted: true
 Prefix: {range:127.5}52_6
 Prefix: {range:127.5}25_4
-Prefix: None
 Suffix: {range:127.5}358_4
 Suffix: {range:127.5}363_4
-Suffix: None
 LevelReq: 86
 Implicits: 2
 +700 Armor
@@ -167,24 +149,13 @@ Implicits: 2
 {range:127.5}{scalar:1.5}{rounding:Integer}+(61-90) Health
 {range:127.5}{scalar:1.5}+(37-45)% Physical Penetration with Bleed
 {range:127.5}{scalar:1.5}+(36-43)% Chance to Inflict Bleed on Hit if wielding an Axe
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
 		</Item>
 		<Item id="3">
 			Rarity: LEGENDARY
 Blood of the Exile
 Iron Greaves
-Crafted: true
 Prefix: {range:127.5}36_4
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}28_6
-Suffix: None
-Suffix: None
 LevelReq: 16
 Implicits: 2
 +35 Armor
@@ -198,29 +169,12 @@ Implicits: 2
 {unique}{range:127.5}{rounding:Integer}+(5-8) Strength
 {unique}{range:127.5}{rounding:Integer}+(5-8) Dexterity
 {unique}{range:127.5}{rounding:Integer}+(5-8) Intelligence
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
-			<ModRange id="8" range="127.5"></ModRange>
-			<ModRange id="9" range="127.5"></ModRange>
-			<ModRange id="10" range="127.5"></ModRange>
-			<ModRange id="11" range="127.5"></ModRange>
 		</Item>
 		<Item id="4">
 			Rarity: LEGENDARY
 Carrion of Creation
 Eternal Gauntlets
-Crafted: true
 Prefix: {range:127.5}36_6
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 86
 Implicits: 2
 +211 Armor
@@ -236,31 +190,15 @@ Implicits: 2
 {unique}100% of Poison Chance Converted to Bleed Chance
 {unique}{range:127.5}(25-47)% Chance for Primordial Blood on Kill (up to 5 times per 2 seconds)
 {unique}{range:127.5}+(37-100)% Chance to inflict Bleed on Hit for Primordial Blood per stack of Bleed on the enemy releasing it (up to 20)
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
-			<ModRange id="8" range="127.5"></ModRange>
-			<ModRange id="9" range="127.5"></ModRange>
-			<ModRange id="10" range="127.5"></ModRange>
-			<ModRange id="11" range="127.5"></ModRange>
-			<ModRange id="12" range="127.5"></ModRange>
-			<ModRange id="13" range="127.5"></ModRange>
 		</Item>
 		<Item id="5">
 			Rarity: EXALTED
 Leonine Greathelm
 Leonine Greathelm
-Crafted: true
 Prefix: {range:127.5}52_6
 Prefix: {range:127.5}715_4
-Prefix: None
 Suffix: {range:127.5}363_4
 Suffix: {range:127.5}358_4
-Suffix: None
 LevelReq: 85
 Implicits: 2
 +550 Armor
@@ -270,25 +208,12 @@ Implicits: 2
 {range:127.5}(25-30)% reduced Bonus Damage Taken from Critical Strikes
 {range:127.5}+(36-43)% Chance to Inflict Bleed on Hit if wielding an Axe
 {range:127.5}+(37-45)% Physical Penetration with Bleed
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
 		</Item>
 		<Item id="6">
 			Rarity: LEGENDARY
 Valdyr's Chalice
 Silver Grail
-Crafted: true
 Prefix: {range:127.5}25_6
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 15
 Implicits: 1
 {range:127.5}{rounding:Integer}+(10-25) Mana
@@ -298,25 +223,16 @@ Implicits: 1
 {unique}{range:127.5}(40-50)% Increased Bleed Duration
 {unique}2% of Physical Damage Over Time Damage Leeched as Health
 {unique}20 Health gained on Kill per stack of Bleed on the Target
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
 		</Item>
 		<Item id="7">
 			Rarity: EXALTED
 Silver Ring
 Silver Ring
-Crafted: true
 Prefix: {range:127.5}25_4
 Prefix: {range:127.5}825_4
-Prefix: None
 Suffix: {range:127.5}87_6
 Suffix: {range:127.5}72_4
-Suffix: {range:127.5}507_0
+Sealed: {range:127.5}507_0
 LevelReq: 0
 Implicits: 1
 {range:127.5}(3-8)% increased Movement Speed
@@ -325,28 +241,18 @@ Implicits: 1
 {range:127.5}{rounding:Integer}+(10-12) Health Regen
 {range:127.5}(31-36)% increased Throwing Attack Speed
 {range:127.5}{rounding:Integer}(40-60)% increased Damage Over Time
-{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
--3 Throwing Attack Mana Cost
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
-			<ModRange id="8" range="127.5"></ModRange>
+{sealed}{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
+{sealed}-3 Throwing Attack Mana Cost
 		</Item>
 		<Item id="8">
 			Rarity: EXALTED
 Silver Ring
 Silver Ring
-Crafted: true
 Prefix: {range:127.5}25_4
 Prefix: {range:127.5}825_4
-Prefix: None
 Suffix: {range:127.5}87_6
 Suffix: {range:127.5}30_4
-Suffix: {range:127.5}507_0
+Sealed: {range:127.5}507_0
 LevelReq: 0
 Implicits: 1
 {range:127.5}(3-8)% increased Movement Speed
@@ -355,28 +261,16 @@ Implicits: 1
 {range:127.5}{rounding:Integer}+(10-12) Health Regen
 {range:127.5}(31-36)% increased Throwing Attack Speed
 {range:127.5}{rounding:Integer}(40-60)% increased Physical Damage
-{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
--3 Throwing Attack Mana Cost
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
-			<ModRange id="8" range="127.5"></ModRange>
+{sealed}{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
+{sealed}-3 Throwing Attack Mana Cost
 		</Item>
 		<Item id="9">
 			Rarity: LEGENDARY
 Thorn Slinger
 Leather Belt
-Crafted: true
 Prefix: {range:127.5}52_6
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}30_4
 Suffix: {range:127.5}75_0
-Suffix: None
 LevelReq: 9
 Implicits: 1
 +4 Potion Slots
@@ -389,29 +283,15 @@ Implicits: 1
 {unique}6% increased Movement Speed
 {unique}{range:127.5}{rounding:Integer}(24-48) Damage Reflected to Attackers
 {unique}6% increased Throwing Attack Speed
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
-			<ModRange id="8" range="127.5"></ModRange>
-			<ModRange id="9" range="127.5"></ModRange>
-			<ModRange id="10" range="127.5"></ModRange>
 		</Item>
 		<Item id="10">
 			Rarity: EXALTED
 Dragonbone Axe
 Dragonbone Axe
-Crafted: true
 Prefix: {range:127.5}68_4
 Prefix: {range:127.5}55_4
-Prefix: None
 Suffix: {range:127.5}30_6
 Suffix: {range:127.5}72_4
-Suffix: None
-Quality: 0
 LevelReq: 80
 Implicits: 3
 +51 Melee Damage
@@ -421,25 +301,13 @@ Implicits: 3
 {range:127.5}{scalar:1.75}+(24-30)% Chance to Ignite on Hit
 {range:127.5}{scalar:1.75}{rounding:Integer}(96-120)% increased Physical Damage
 {range:127.5}{scalar:1.75}{rounding:Integer}(40-60)% increased Damage Over Time
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
 		</Item>
 		<Item id="11">
 			Rarity: LEGENDARY
 Countenance of Majasa
 Ironglass Shield
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}3_6
 Suffix: {range:127.5}81_4
-Suffix: None
 LevelReq: 72
 Implicits: 2
 +35% Block Chance
@@ -450,313 +318,194 @@ Implicits: 2
 {unique}+20% Chance on block to Petrify the attacker for 2 seconds
 {unique}{range:127.5}(25-30)% of Block Effectiveness applies to Damage over Time as if it had been Blocked
 {unique}{range:127.5}{rounding:Integer}+(150-300) Block Effectiveness
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="127.5"></ModRange>
-			<ModRange id="8" range="127.5"></ModRange>
 		</Item>
 		<Item id="12">
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
-Prefix: None
 Suffix: {range:127.5}128_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
 {range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
 +5% Endurance
 {range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
 		</Item>
 		<Item id="13">
 			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Crafted: true
 Prefix: {range:127.5}197_0
 Prefix: {range:127.5}921_6
-Prefix: None
 Suffix: {range:127.5}276_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}{scalar:0.95}{rounding:Integer}+(185-400) Block Effectiveness
 {range:127.5}{scalar:1.28}{rounding:Integer}(7-8)% increased Armor
 {scalar:1.28}4% of Armor Mitigation also applies to Damage over Time
 {range:127.5}+(10-25)% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
 		</Item>
 		<Item id="14">
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
-Prefix: None
 Suffix: {range:127.5}128_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
 {range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
 +5% Endurance
 {range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
 		</Item>
 		<Item id="15">
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
-Prefix: None
 Suffix: {range:127.5}128_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
 {range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
 +5% Endurance
 {range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
 		</Item>
 		<Item id="16">
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
-Prefix: None
 Suffix: {range:127.5}128_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
 {range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
 +5% Endurance
 {range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
 		</Item>
 		<Item id="17">
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Crafted: true
 Prefix: {range:127.5}870_0
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}858_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}+(9-12)% Physical Resistance
 {range:127.5}+(9-12)% Minion Physical Resistance
 {range:127.5}+(15-20)% Chance to inflict Bleed on Hit
 {range:127.5}+(1-2)% Physical Penetration with Bleed
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
 		</Item>
 		<Item id="18">
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Crafted: true
 Prefix: {range:127.5}867_0
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}858_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}+(9-12)% Necrotic Resistance
 {range:127.5}+(9-12)% Minion Necrotic Resistance
 {range:127.5}+(15-20)% Chance to inflict Bleed on Hit
 {range:127.5}+(1-2)% Physical Penetration with Bleed
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
-			<ModRange id="3" range="127.5"></ModRange>
-			<ModRange id="4" range="127.5"></ModRange>
 		</Item>
 		<Item id="19">
 			Rarity: NORMAL
 Grand Flames of the Black Sun
 Grand Flames of the Black Sun
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:127.5}+(65-100)% Chance to Ignite on Hit
-			<ModRange id="1" range="127.5"></ModRange>
 		</Item>
 		<Item id="20">
 			Rarity: NORMAL
 Grand Cruelty of the Meruna
 Grand Cruelty of the Meruna
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:127.5}+(65-100)% Chance to Shock on Hit
-			<ModRange id="1" range="127.5"></ModRange>
 		</Item>
 		<Item id="21">
 			Rarity: NORMAL
 Grand Hemmorage of Marrow
 Grand Hemmorage of Marrow
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:127.5}+(65-100)% Chance to inflict Bleed on Hit
-			<ModRange id="1" range="127.5"></ModRange>
 		</Item>
 		<Item id="22">
 			Rarity: NORMAL
 Grand Bones of Eternity
 Grand Bones of Eternity
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 2
 {range:127.5}+(5-8)% Block Chance
 {range:127.5}{rounding:Integer}+(180-240) Block Effectiveness
-			<ModRange id="1" range="127.5"></ModRange>
-			<ModRange id="2" range="127.5"></ModRange>
 		</Item>
 		<Item id="23">
 			Rarity: NORMAL
 Grand Body of Obsidian
 Grand Body of Obsidian
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:127.5}{rounding:Integer}+(200-320) Armor
-			<ModRange id="1" range="127.5"></ModRange>
 		</Item>
 		<ItemSet id="1" useSecondWeaponSet="nil">
-			<Slot itemId="1" itemPbURL="" name="Amulet"></Slot>
-			<Slot itemId="9" itemPbURL="" name="Belt"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 1"></Slot>
-			<Slot itemId="23" itemPbURL="" name="Blessing 10"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 2"></Slot>
-			<Slot itemId="19" itemPbURL="" name="Blessing 3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 4"></Slot>
-			<Slot itemId="20" itemPbURL="" name="Blessing 5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 6"></Slot>
-			<Slot itemId="21" itemPbURL="" name="Blessing 7"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Blessing 8"></Slot>
-			<Slot itemId="22" itemPbURL="" name="Blessing 9"></Slot>
-			<Slot itemId="2" itemPbURL="" name="Body Armor"></Slot>
-			<Slot itemId="3" itemPbURL="" name="Boots"></Slot>
-			<Slot itemId="4" itemPbURL="" name="Gloves"></Slot>
-			<Slot itemId="5" itemPbURL="" name="Helmet"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 1,1"></Slot>
-			<Slot itemId="12" itemPbURL="" name="Idol 1,2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 1,3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 1,4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 1,5"></Slot>
-			<Slot itemId="14" itemPbURL="" name="Idol 2,1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 2,2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 2,3"></Slot>
-			<Slot itemId="13" itemPbURL="" name="Idol 2,4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 2,5"></Slot>
-			<Slot itemId="17" itemPbURL="" name="Idol 3,1"></Slot>
-			<Slot itemId="18" itemPbURL="" name="Idol 3,2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 3,3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 3,4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 3,5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 4,1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 4,2"></Slot>
-			<Slot itemId="15" itemPbURL="" name="Idol 4,3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 4,4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 4,5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 5,1"></Slot>
-			<Slot itemId="16" itemPbURL="" name="Idol 5,2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 5,3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 5,4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol 5,5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Idol Altar"></Slot>
-			<Slot itemId="6" itemPbURL="" name="Relic"></Slot>
-			<Slot itemId="7" itemPbURL="" name="Ring 1"></Slot>
-			<Slot itemId="8" itemPbURL="" name="Ring 2"></Slot>
-			<Slot itemId="10" itemPbURL="" name="Weapon 1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 1 Swap Abyssal Socket 6"></Slot>
-			<Slot itemId="11" itemPbURL="" name="Weapon 2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 1"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 2"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 3"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 4"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 5"></Slot>
-			<Slot itemId="0" itemPbURL="" name="Weapon 2 Swap Abyssal Socket 6"></Slot>
+			<Slot itemId="1" name="Amulet"></Slot>
+			<Slot itemId="9" name="Belt"></Slot>
+			<Slot itemId="0" name="Blessing 1"></Slot>
+			<Slot itemId="23" name="Blessing 10"></Slot>
+			<Slot itemId="0" name="Blessing 2"></Slot>
+			<Slot itemId="19" name="Blessing 3"></Slot>
+			<Slot itemId="0" name="Blessing 4"></Slot>
+			<Slot itemId="20" name="Blessing 5"></Slot>
+			<Slot itemId="0" name="Blessing 6"></Slot>
+			<Slot itemId="21" name="Blessing 7"></Slot>
+			<Slot itemId="0" name="Blessing 8"></Slot>
+			<Slot itemId="22" name="Blessing 9"></Slot>
+			<Slot itemId="2" name="Body Armor"></Slot>
+			<Slot itemId="3" name="Boots"></Slot>
+			<Slot itemId="4" name="Gloves"></Slot>
+			<Slot itemId="5" name="Helmet"></Slot>
+			<Slot itemId="0" name="Idol 1,1"></Slot>
+			<Slot itemId="12" name="Idol 1,2"></Slot>
+			<Slot itemId="0" name="Idol 1,3"></Slot>
+			<Slot itemId="0" name="Idol 1,4"></Slot>
+			<Slot itemId="0" name="Idol 1,5"></Slot>
+			<Slot itemId="14" name="Idol 2,1"></Slot>
+			<Slot itemId="0" name="Idol 2,2"></Slot>
+			<Slot itemId="0" name="Idol 2,3"></Slot>
+			<Slot itemId="13" name="Idol 2,4"></Slot>
+			<Slot itemId="0" name="Idol 2,5"></Slot>
+			<Slot itemId="17" name="Idol 3,1"></Slot>
+			<Slot itemId="18" name="Idol 3,2"></Slot>
+			<Slot itemId="0" name="Idol 3,3"></Slot>
+			<Slot itemId="0" name="Idol 3,4"></Slot>
+			<Slot itemId="0" name="Idol 3,5"></Slot>
+			<Slot itemId="0" name="Idol 4,1"></Slot>
+			<Slot itemId="0" name="Idol 4,2"></Slot>
+			<Slot itemId="15" name="Idol 4,3"></Slot>
+			<Slot itemId="0" name="Idol 4,4"></Slot>
+			<Slot itemId="0" name="Idol 4,5"></Slot>
+			<Slot itemId="0" name="Idol 5,1"></Slot>
+			<Slot itemId="16" name="Idol 5,2"></Slot>
+			<Slot itemId="0" name="Idol 5,3"></Slot>
+			<Slot itemId="0" name="Idol 5,4"></Slot>
+			<Slot itemId="0" name="Idol 5,5"></Slot>
+			<Slot itemId="0" name="Idol Altar"></Slot>
+			<Slot itemId="6" name="Relic"></Slot>
+			<Slot itemId="7" name="Ring 1"></Slot>
+			<Slot itemId="8" name="Ring 2"></Slot>
+			<Slot itemId="10" name="Weapon 1"></Slot>
+			<Slot itemId="0" name="Weapon 1 Swap"></Slot>
+			<Slot itemId="11" name="Weapon 2"></Slot>
+			<Slot itemId="0" name="Weapon 2 Swap"></Slot>
 		</ItemSet>
 	</Items>
 	<Notes>

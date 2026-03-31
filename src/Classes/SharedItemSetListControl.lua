@@ -83,9 +83,6 @@ function SharedItemSetListClass:ReceiveDrag(type, value, source)
 					local item = self.itemsTab.items[slot.selItemId]
 					local rawItem = { raw = item:BuildRaw() }
 					local newItem = new("Item", rawItem.raw)
-					if not value.id then
-						newItem:NormaliseQuality()
-					end
 					sharedItemList.slots[slotName] = newItem
 				end
 			end

@@ -45,9 +45,6 @@ function SharedItemListClass:ReceiveDrag(type, value, source)
 	if type == "Item" then
 		local rawItem = { raw = value:BuildRaw() }
 		local newItem = new("Item", rawItem.raw)
-		if not value.id then
-			newItem:NormaliseQuality()
-		end
 		t_insert(self.list, self.selDragIndex or #self.list, newItem)
 	end
 end

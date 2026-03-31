@@ -636,7 +636,6 @@ function calcs.initEnv(build, mode, override, specEnv)
 								implicitIndex = implicitIndex + 1
 							end
 						end
-						item:NormaliseQuality()
 						item:BuildAndParseRaw()
 						item.sockets = previousItem.sockets
 						item.abyssalSocketCount = previousItem.abyssalSocketCount
