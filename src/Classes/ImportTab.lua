@@ -735,7 +735,7 @@ function ImportTabClass:processItemData(itemData)
 	                local nbCorruptedAffix = math.floor(itemData["data"][nbAffixesIndex] / 128) % 2
 	                for i = 0, nbMods - 1 do
 	                    local dataId = nbAffixesIndex + 1 + 3 * i
-	                    if itemData["data"][dataId] then
+	                    if itemData["data"][dataId] ~= nil and itemData["data"][dataId + 1] ~= nil then
 	                        local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 16) * 256
 	                        local affixTier = math.floor(itemData["data"][dataId] / 16)
 	                        local modId = affixId .. "_" .. affixTier
