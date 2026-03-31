@@ -118,13 +118,8 @@
 			Rarity: LEGENDARY
 Pearls of the Swine
 Bone Amulet
-Crafted: true
 Prefix: {range:127.5}25_6
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}30_4
-Suffix: None
-Suffix: None
 LevelReq: 58
 Implicits: 2
 {range:127.5}+(13-40)% Physical Resistance
@@ -152,13 +147,10 @@ Implicits: 2
 			Rarity: EXALTED
 Champion Regalia
 Champion Regalia
-Crafted: true
 Prefix: {range:127.5}52_6
 Prefix: {range:127.5}25_4
-Prefix: None
 Suffix: {range:127.5}358_4
 Suffix: {range:127.5}363_4
-Suffix: None
 LevelReq: 86
 Implicits: 2
 +700 Armor
@@ -178,13 +170,8 @@ Implicits: 2
 			Rarity: LEGENDARY
 Blood of the Exile
 Iron Greaves
-Crafted: true
 Prefix: {range:127.5}36_4
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}28_6
-Suffix: None
-Suffix: None
 LevelReq: 16
 Implicits: 2
 +35 Armor
@@ -214,13 +201,7 @@ Implicits: 2
 			Rarity: LEGENDARY
 Carrion of Creation
 Eternal Gauntlets
-Crafted: true
 Prefix: {range:127.5}36_6
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 86
 Implicits: 2
 +211 Armor
@@ -254,13 +235,10 @@ Implicits: 2
 			Rarity: EXALTED
 Leonine Greathelm
 Leonine Greathelm
-Crafted: true
 Prefix: {range:127.5}52_6
 Prefix: {range:127.5}715_4
-Prefix: None
 Suffix: {range:127.5}363_4
 Suffix: {range:127.5}358_4
-Suffix: None
 LevelReq: 85
 Implicits: 2
 +550 Armor
@@ -282,13 +260,7 @@ Implicits: 2
 			Rarity: LEGENDARY
 Valdyr's Chalice
 Silver Grail
-Crafted: true
 Prefix: {range:127.5}25_6
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 15
 Implicits: 1
 {range:127.5}{rounding:Integer}+(10-25) Mana
@@ -310,13 +282,11 @@ Implicits: 1
 			Rarity: EXALTED
 Silver Ring
 Silver Ring
-Crafted: true
 Prefix: {range:127.5}25_4
 Prefix: {range:127.5}825_4
-Prefix: None
 Suffix: {range:127.5}87_6
 Suffix: {range:127.5}72_4
-Suffix: {range:127.5}507_0
+Sealed: {range:127.5}507_0
 LevelReq: 0
 Implicits: 1
 {range:127.5}(3-8)% increased Movement Speed
@@ -325,8 +295,8 @@ Implicits: 1
 {range:127.5}{rounding:Integer}+(10-12) Health Regen
 {range:127.5}(31-36)% increased Throwing Attack Speed
 {range:127.5}{rounding:Integer}(40-60)% increased Damage Over Time
-{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
--3 Throwing Attack Mana Cost
+{sealed}{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
+{sealed}-3 Throwing Attack Mana Cost
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -340,13 +310,11 @@ Implicits: 1
 			Rarity: EXALTED
 Silver Ring
 Silver Ring
-Crafted: true
 Prefix: {range:127.5}25_4
 Prefix: {range:127.5}825_4
-Prefix: None
 Suffix: {range:127.5}87_6
 Suffix: {range:127.5}30_4
-Suffix: {range:127.5}507_0
+Sealed: {range:127.5}507_0
 LevelReq: 0
 Implicits: 1
 {range:127.5}(3-8)% increased Movement Speed
@@ -355,8 +323,8 @@ Implicits: 1
 {range:127.5}{rounding:Integer}+(10-12) Health Regen
 {range:127.5}(31-36)% increased Throwing Attack Speed
 {range:127.5}{rounding:Integer}(40-60)% increased Physical Damage
-{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
--3 Throwing Attack Mana Cost
+{sealed}{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
+{sealed}-3 Throwing Attack Mana Cost
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="127.5"></ModRange>
 			<ModRange id="3" range="127.5"></ModRange>
@@ -370,13 +338,9 @@ Implicits: 1
 			Rarity: LEGENDARY
 Thorn Slinger
 Leather Belt
-Crafted: true
 Prefix: {range:127.5}52_6
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}30_4
 Suffix: {range:127.5}75_0
-Suffix: None
 LevelReq: 9
 Implicits: 1
 +4 Potion Slots
@@ -404,14 +368,10 @@ Implicits: 1
 			Rarity: EXALTED
 Dragonbone Axe
 Dragonbone Axe
-Crafted: true
 Prefix: {range:127.5}68_4
 Prefix: {range:127.5}55_4
-Prefix: None
 Suffix: {range:127.5}30_6
 Suffix: {range:127.5}72_4
-Suffix: None
-Quality: 0
 LevelReq: 80
 Implicits: 3
 +51 Melee Damage
@@ -433,13 +393,8 @@ Implicits: 3
 			Rarity: LEGENDARY
 Countenance of Majasa
 Ironglass Shield
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}3_6
 Suffix: {range:127.5}81_4
-Suffix: None
 LevelReq: 72
 Implicits: 2
 +35% Block Chance
@@ -463,13 +418,9 @@ Implicits: 2
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
-Prefix: None
 Suffix: {range:127.5}128_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
@@ -485,13 +436,9 @@ Implicits: 0
 			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Crafted: true
 Prefix: {range:127.5}197_0
 Prefix: {range:127.5}921_6
-Prefix: None
 Suffix: {range:127.5}276_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}{scalar:0.95}{rounding:Integer}+(185-400) Block Effectiveness
@@ -507,13 +454,9 @@ Implicits: 0
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
-Prefix: None
 Suffix: {range:127.5}128_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
@@ -529,13 +472,9 @@ Implicits: 0
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
-Prefix: None
 Suffix: {range:127.5}128_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
@@ -551,13 +490,9 @@ Implicits: 0
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Crafted: true
 Prefix: {range:127.5}193_0
 Prefix: {range:127.5}899_6
-Prefix: None
 Suffix: {range:127.5}128_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
@@ -573,13 +508,8 @@ Implicits: 0
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Crafted: true
 Prefix: {range:127.5}870_0
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}858_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}+(9-12)% Physical Resistance
@@ -595,13 +525,8 @@ Implicits: 0
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Crafted: true
 Prefix: {range:127.5}867_0
-Prefix: None
-Prefix: None
 Suffix: {range:127.5}858_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:127.5}+(9-12)% Necrotic Resistance
@@ -617,13 +542,6 @@ Implicits: 0
 			Rarity: NORMAL
 Grand Flames of the Black Sun
 Grand Flames of the Black Sun
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:127.5}+(65-100)% Chance to Ignite on Hit
@@ -633,13 +551,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Cruelty of the Meruna
 Grand Cruelty of the Meruna
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:127.5}+(65-100)% Chance to Shock on Hit
@@ -649,13 +560,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Hemmorage of Marrow
 Grand Hemmorage of Marrow
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:127.5}+(65-100)% Chance to inflict Bleed on Hit
@@ -665,13 +569,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Bones of Eternity
 Grand Bones of Eternity
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 2
 {range:127.5}+(5-8)% Block Chance
@@ -683,13 +580,6 @@ Implicits: 2
 			Rarity: NORMAL
 Grand Body of Obsidian
 Grand Body of Obsidian
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:127.5}{rounding:Integer}+(200-320) Armor

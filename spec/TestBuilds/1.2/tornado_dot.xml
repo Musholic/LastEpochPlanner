@@ -114,13 +114,7 @@
 			Rarity: LEGENDARY
 Nihilis
 Unbound Locket
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
 Suffix: {range:215}6_6
-Suffix: None
-Suffix: None
 LevelReq: 80
 Implicits: 3
 {range:221}{rounding:Integer}(1-12)% increased Health
@@ -148,41 +142,33 @@ Implicits: 3
 			Rarity: EXALTED
 Meruna Carapace
 Meruna Carapace
-Crafted: true
 Prefix: {range:251}52_4
 Prefix: {range:214}25_4
-Prefix: {range:162}10_0
 Suffix: {range:129}501_6
 Suffix: {range:84}95_1
-Suffix: None
+Sealed: {range:162}10_0
 LevelReq: 52
 Implicits: 2
 +372 Armor
 {range:37}{rounding:Integer}+(72-372) Stun Avoidance
 {range:251}{scalar:1.5}{rounding:Integer}(10-12)% increased Health
 {range:214}{scalar:1.5}{rounding:Integer}+(61-90) Health
-{range:162}{scalar:1.5}+(5-9)% Necrotic Resistance
 {range:129}{scalar:1.5}{rounding:Integer}+(14-16) Strength
 {range:84}{scalar:1.5}{rounding:Integer}(20-30) Damage Reflected to Attackers
+{sealed}{range:162}{scalar:1.5}+(5-9)% Necrotic Resistance
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="37"></ModRange>
 			<ModRange id="3" range="251"></ModRange>
 			<ModRange id="4" range="214"></ModRange>
-			<ModRange id="5" range="162"></ModRange>
-			<ModRange id="6" range="129"></ModRange>
-			<ModRange id="7" range="84"></ModRange>
+			<ModRange id="5" range="129"></ModRange>
+			<ModRange id="6" range="84"></ModRange>
+			<ModRange id="7" range="162"></ModRange>
 		</Item>
 		<Item id="3">
 			Rarity: LEGENDARY
 Blood of the Exile
 Iron Greaves
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
 Suffix: {range:219}28_6
-Suffix: None
-Suffix: None
 LevelReq: 16
 Implicits: 2
 +35 Armor
@@ -208,13 +194,10 @@ Implicits: 2
 			Rarity: EXALTED
 Arcane Bracers
 Arcane Bracers
-Crafted: true
 Prefix: {range:102}25_4
 Prefix: {range:217}36_6
-Prefix: None
 Suffix: {range:249}4_4
 Suffix: {range:190}501_4
-Suffix: None
 LevelReq: 54
 Implicits: 3
 +36 Armor
@@ -238,13 +221,11 @@ Implicits: 3
 			Rarity: EXALTED
 Raptor Helm
 Raptor Helm
-Crafted: true
 Prefix: {range:226}25_4
 Prefix: {range:130}52_4
-Prefix: {range:93}45_1
 Suffix: {range:42}73_4
 Suffix: {range:179}501_6
-Suffix: None
+Sealed: {range:93}45_1
 LevelReq: 30
 Implicits: 3
 +65 Armor
@@ -252,29 +233,26 @@ Implicits: 3
 {range:239}+(2-3)% Minion Critical Strike Chance
 {range:226}{rounding:Integer}+(61-90) Health
 {range:130}{rounding:Integer}(10-12)% increased Health
-{range:93}+(10-14)% Physical Resistance
 {range:42}{rounding:Integer}+(61-90) Minion Health Regen
 {range:179}{rounding:Integer}+(14-16) Strength
+{sealed}{range:93}+(10-14)% Physical Resistance
 			<ModRange id="1" range="127.5"></ModRange>
 			<ModRange id="2" range="226"></ModRange>
 			<ModRange id="3" range="239"></ModRange>
 			<ModRange id="4" range="226"></ModRange>
 			<ModRange id="5" range="130"></ModRange>
-			<ModRange id="6" range="93"></ModRange>
-			<ModRange id="7" range="42"></ModRange>
-			<ModRange id="8" range="179"></ModRange>
+			<ModRange id="6" range="42"></ModRange>
+			<ModRange id="7" range="179"></ModRange>
+			<ModRange id="8" range="93"></ModRange>
 		</Item>
 		<Item id="6">
 			Rarity: LEGENDARY
 Ucenui's Sphere
 Navigation Orb
-Crafted: true
 Prefix: {range:98}25_5
 Prefix: {range:91}825_5
-Prefix: None
 Suffix: {range:116}43_4
 Suffix: {range:196}6_6
-Suffix: None
 LevelReq: 61
 Implicits: 2
 {range:67}{rounding:Integer}(20-40)% increased Cold Damage
@@ -304,13 +282,8 @@ Implicits: 2
 			Rarity: LEGENDARY
 Flames of Midnight
 Celestial Ring
-Crafted: true
 Prefix: {range:4}25_4
-Prefix: None
-Prefix: None
 Suffix: {range:219}502_6
-Suffix: None
-Suffix: None
 LevelReq: 52
 Implicits: 1
 {range:99}{rounding:Integer}+(42-110) Ward Decay Threshold
@@ -340,13 +313,7 @@ Implicits: 1
 			Rarity: LEGENDARY
 Red Ring of Atlaria
 Silver Ring
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
 Suffix: {range:199}501_6
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:52}(3-8)% increased Movement Speed
@@ -370,13 +337,9 @@ Implicits: 1
 			Rarity: LEGENDARY
 Elecoe's Innovation
 Spidersilk Sash
-Crafted: true
 Prefix: {range:230}52_6
 Prefix: {range:43}27_4
-Prefix: None
 Suffix: {range:9}75_4
-Suffix: None
-Suffix: None
 LevelReq: 58
 Implicits: 3
 {range:35}+(33-47)% Poison Resistance
@@ -410,14 +373,8 @@ Implicits: 3
 			Rarity: LEGENDARY
 Wrongwarp
 Crystal Wand
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
 Suffix: {range:219}4_6
 Suffix: {range:216}6_4
-Suffix: None
-Quality: 0
 LevelReq: 60
 Implicits: 3
 {range:238}{rounding:Integer}+(50-60) Spell Damage
@@ -441,14 +398,9 @@ Implicits: 3
 			Rarity: LEGENDARY
 Tempest Maw
 Crescent Axe
-Crafted: true
 Prefix: {range:197}86_3
-Prefix: None
-Prefix: None
 Suffix: {range:242}5_6
 Suffix: {range:71}6_6
-Suffix: None
-Quality: 0
 LevelReq: 51
 Implicits: 3
 +28 Melee Damage
@@ -480,13 +432,8 @@ Implicits: 3
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Crafted: true
 Prefix: {range:190}111_0
-Prefix: None
-Prefix: None
 Suffix: {range:151}880_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:190}{scalar:0.38}+(20-45)% Fire Resistance
@@ -500,13 +447,8 @@ Implicits: 0
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Crafted: true
 Prefix: {range:101}887_0
-Prefix: None
-Prefix: None
 Suffix: {range:220}878_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:101}+(9-12)% Fire Resistance
@@ -522,13 +464,8 @@ Implicits: 0
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Crafted: true
 Prefix: {range:26}111_0
-Prefix: None
-Prefix: None
 Suffix: {range:91}878_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:26}{scalar:0.38}+(20-45)% Fire Resistance
@@ -542,13 +479,8 @@ Implicits: 0
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Crafted: true
 Prefix: {range:23}870_0
-Prefix: None
-Prefix: None
 Suffix: {range:154}863_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:23}+(9-12)% Physical Resistance
@@ -564,13 +496,8 @@ Implicits: 0
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Crafted: true
 Prefix: {range:25}870_0
-Prefix: None
-Prefix: None
 Suffix: {range:56}138_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:25}+(9-12)% Physical Resistance
@@ -584,41 +511,28 @@ Implicits: 0
 			Rarity: IDOL
 Heretical Huge Nomad Idol
 Heretical Huge Nomad Idol
-Crafted: true
 Prefix: {range:222}162_0
-Prefix: {range:43}899_5
 Prefix: {range:18}925_0
 Suffix: {range:207}154_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:222}+(15-40)% Critical Strike Avoidance
 {range:222}+(15-40)% Minion Critical Strike Avoidance
-{range:43}{scalar:1.33}{rounding:Integer}(6-7)% increased Damage Over Time
-{scalar:1.33}+4% Endurance
 1% increased Minion Melee Attack Speed
 +2 Minion Melee Damage
 {range:207}+(1-2)% Minion Melee Critical Strike Chance
 			<ModRange id="1" range="222"></ModRange>
 			<ModRange id="2" range="222"></ModRange>
-			<ModRange id="3" range="43"></ModRange>
+			<ModRange id="3" range="127.5"></ModRange>
 			<ModRange id="4" range="127.5"></ModRange>
-			<ModRange id="5" range="127.5"></ModRange>
-			<ModRange id="6" range="127.5"></ModRange>
-			<ModRange id="7" range="207"></ModRange>
+			<ModRange id="5" range="207"></ModRange>
 		</Item>
 		<Item id="18">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Crafted: true
 Prefix: {range:54}430_0
-Prefix: None
-Prefix: None
 Suffix: {range:179}829_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:54}{scalar:0.17}+(20-45)% Physical Resistance
@@ -632,13 +546,8 @@ Implicits: 0
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Crafted: true
 Prefix: {range:146}835_0
-Prefix: None
-Prefix: None
 Suffix: {range:25}832_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:146}+(9-12)% Void Resistance
@@ -654,13 +563,8 @@ Implicits: 0
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Crafted: true
 Prefix: {range:246}835_0
-Prefix: None
-Prefix: None
 Suffix: {range:111}831_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:246}+(9-12)% Void Resistance
@@ -676,13 +580,8 @@ Implicits: 0
 			Rarity: IDOL
 Small Eterran Idol
 Small Eterran Idol
-Crafted: true
 Prefix: {range:226}114_0
-Prefix: None
-Prefix: None
 Suffix: {range:180}135_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:226}{scalar:0.17}+(20-45)% Necrotic Resistance
@@ -694,13 +593,8 @@ Implicits: 0
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Crafted: true
 Prefix: {range:230}835_0
-Prefix: None
-Prefix: None
 Suffix: {range:112}135_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:230}+(9-12)% Void Resistance
@@ -714,13 +608,8 @@ Implicits: 0
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Crafted: true
 Prefix: {range:81}838_0
-Prefix: None
-Prefix: None
 Suffix: {range:236}834_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:81}+(9-12)% Necrotic Resistance
@@ -736,13 +625,6 @@ Implicits: 0
 			Rarity: NORMAL
 Grand Strength of Mind
 Grand Strength of Mind
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:0}(7-10)% Increased Experience
@@ -752,13 +634,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Talon of Grandeur
 Grand Talon of Grandeur
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:210}(35-75)% Increased Ring Drop Rate
@@ -768,13 +643,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Hunger of the Void
 Grand Hunger of the Void
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:239}(2.2-3.5)% of Spell Damage Leeched as Health
@@ -784,13 +652,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Rhythm of the Tide
 Grand Rhythm of the Tide
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 2
 {range:0}{rounding:Integer}(120-200)% increased Health Regen
@@ -802,13 +663,6 @@ Implicits: 2
 			Rarity: NORMAL
 Grand Survival of Might
 Grand Survival of Might
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 2
 {range:180}+(50-70)% Critical Strike Avoidance
@@ -820,13 +674,6 @@ Implicits: 2
 			Rarity: NORMAL
 Grand Bulwark of the Tundra
 Grand Bulwark of the Tundra
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:0}{rounding:Integer}(25-55)% increased Armor
@@ -836,13 +683,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Embers of Immortality
 Grand Embers of Immortality
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:171}+(18-30)% Endurance

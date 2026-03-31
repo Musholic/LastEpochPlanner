@@ -119,13 +119,7 @@
 			Rarity: LEGENDARY
 Nihilis
 Unbound Locket
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
 Suffix: {range:33}103_5
-Suffix: None
-Suffix: None
 LevelReq: 80
 Implicits: 3
 {range:218}{rounding:Integer}(1-12)% increased Health
@@ -153,13 +147,7 @@ Implicits: 3
 			Rarity: LEGENDARY
 Wings of Argentus
 Gladiator Armor
-Crafted: true
 Prefix: {range:230}52_3
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 60
 Implicits: 1
 +220 Armor
@@ -183,13 +171,10 @@ Implicits: 1
 			Rarity: EXALTED
 Citadel Boots
 Citadel Boots
-Crafted: true
 Prefix: {range:79}25_3
 Prefix: {range:215}19_5
-Prefix: None
 Suffix: {range:34}505_0
 Suffix: {range:146}28_6
-Suffix: None
 LevelReq: 85
 Implicits: 3
 +185 Armor
@@ -211,13 +196,7 @@ Implicits: 3
 			Rarity: LEGENDARY
 Immortal Vise
 Eternal Gauntlets
-Crafted: true
 Prefix: {range:220}25_4
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 86
 Implicits: 2
 +211 Armor
@@ -243,13 +222,7 @@ Implicits: 2
 			Rarity: LEGENDARY
 Seed of Ekkidrasil
 Gladiator Helmet
-Crafted: true
 Prefix: {range:74}52_5
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 65
 Implicits: 1
 +130 Armor
@@ -275,13 +248,9 @@ Implicits: 1
 			Rarity: LEGENDARY
 Vortex Pennant
 Mournful Pennant
-Crafted: true
 Prefix: {range:236}429_4
-Prefix: None
-Prefix: None
 Suffix: {range:148}603_5
 Suffix: {range:112}12_4
-Suffix: None
 LevelReq: 12
 Implicits: 2
 {range:75}{rounding:Integer}+(15-25) Health
@@ -313,13 +282,7 @@ Implicits: 2
 			Rarity: LEGENDARY
 Orian's Sun Seal
 Gold Ring
-Crafted: true
 Prefix: {range:54}25_5
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 25
 Implicits: 1
 {range:227}+(5-18)% Elemental Resistance
@@ -341,13 +304,8 @@ Implicits: 1
 			Rarity: LEGENDARY
 Siphon of Anguish
 Gold Ring
-Crafted: true
 Prefix: {range:79}25_5
-Prefix: None
-Prefix: None
 Suffix: {range:232}504_4
-Suffix: None
-Suffix: None
 LevelReq: 25
 Implicits: 1
 {range:98}+(5-18)% Elemental Resistance
@@ -373,13 +331,7 @@ Implicits: 1
 			Rarity: LEGENDARY
 Orian's Descent
 Plated Belt
-Crafted: true
 Prefix: {range:244}52_3
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 19
 Implicits: 2
 {range:38}{rounding:Integer}+(35-65) Armor
@@ -405,14 +357,10 @@ Implicits: 2
 			Rarity: EXALTED
 Obsidian Sceptre
 Obsidian Sceptre
-Crafted: true
 Prefix: {range:223}85_4
 Prefix: {range:214}720_4
-Prefix: None
 Suffix: {range:51}89_4
 Suffix: {range:42}12_6
-Suffix: None
-Quality: 0
 LevelReq: 75
 Implicits: 2
 +55 Melee Damage
@@ -434,14 +382,8 @@ Implicits: 2
 			Rarity: LEGENDARY
 Palarus's Sacred Light
 Broadsword
-Crafted: true
 Prefix: {range:88}86_3
-Prefix: None
-Prefix: None
 Suffix: {range:88}49_3
-Suffix: None
-Suffix: None
-Quality: 0
 LevelReq: 20
 Implicits: 1
 +22 Melee Damage
@@ -465,13 +407,9 @@ Implicits: 1
 			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Crafted: true
 Prefix: {range:129}206_0
 Prefix: {range:251}899_5
-Prefix: None
 Suffix: {range:240}276_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:129}{scalar:0.95}+(30-80)% Chance to Shred Armor on Fire Hit
@@ -487,13 +425,6 @@ Implicits: 0
 			Rarity: UNIQUE
 Throne of Ambition
 Adorned Silver Idol
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {unique}100% Chance to gain a stack of Ambition when you hit a boss or rare enemy
@@ -503,13 +434,8 @@ Implicits: 0
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Crafted: true
 Prefix: {range:224}836_0
-Prefix: None
-Prefix: None
 Suffix: {range:44}828_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:224}+(9-12)% Poison Resistance
@@ -525,13 +451,9 @@ Implicits: 0
 			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Crafted: true
 Prefix: {range:150}206_0
 Prefix: {range:79}921_5
-Prefix: None
 Suffix: {range:228}276_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:150}{scalar:0.95}+(30-80)% Chance to Shred Armor on Fire Hit
@@ -547,13 +469,8 @@ Implicits: 0
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Crafted: true
 Prefix: {range:190}835_0
-Prefix: None
-Prefix: None
 Suffix: {range:97}829_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:190}+(9-12)% Void Resistance
@@ -569,13 +486,8 @@ Implicits: 0
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Crafted: true
 Prefix: {range:68}114_0
-Prefix: None
-Prefix: None
 Suffix: {range:247}828_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:68}{scalar:0.17}+(20-45)% Necrotic Resistance
@@ -589,13 +501,9 @@ Implicits: 0
 			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Crafted: true
 Prefix: {range:186}206_0
 Prefix: {range:107}921_5
-Prefix: None
 Suffix: {range:198}276_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:186}{scalar:0.95}+(30-80)% Chance to Shred Armor on Fire Hit
@@ -611,13 +519,8 @@ Implicits: 0
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Crafted: true
 Prefix: {range:195}838_0
-Prefix: None
-Prefix: None
 Suffix: {range:249}829_0
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 0
 {range:195}+(9-12)% Necrotic Resistance
@@ -633,13 +536,6 @@ Implicits: 0
 			Rarity: NORMAL
 Grand Memory of the Living
 Grand Memory of the Living
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:245}(16-25)% Increased Glyph Drop Rate
@@ -649,13 +545,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Emptiness of Ash
 Grand Emptiness of Ash
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:181}+(27-40)% Critical Strike Multiplier
@@ -665,13 +554,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Rhythm of the Tide
 Grand Rhythm of the Tide
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 2
 {range:161}{rounding:Integer}(120-200)% increased Health Regen
@@ -683,13 +565,6 @@ Implicits: 2
 			Rarity: NORMAL
 Grand Survival of Might
 Grand Survival of Might
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 2
 {range:249}+(50-70)% Critical Strike Avoidance
@@ -701,13 +576,6 @@ Implicits: 2
 			Rarity: NORMAL
 Grand Binding of Ruin
 Grand Binding of Ruin
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:181}(32-50)% Increased Belt Shard Drop Rate
@@ -717,13 +585,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Resolve of Grael
 Grand Resolve of Grael
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:0}+(55-75)% Physical Resistance
@@ -733,13 +594,6 @@ Implicits: 1
 			Rarity: NORMAL
 Grand Curse of Sulphur
 Grand Curse of Sulphur
-Crafted: true
-Prefix: None
-Prefix: None
-Prefix: None
-Suffix: None
-Suffix: None
-Suffix: None
 LevelReq: 0
 Implicits: 1
 {range:0}+(40-60)% Chance to apply Frailty on Hit
