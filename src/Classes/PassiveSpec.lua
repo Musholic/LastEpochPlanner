@@ -658,6 +658,9 @@ function PassiveSpecClass:BuildAllDependsAndPaths()
 				self.visibleNodes[nodeId] = node
 			end
 		end
+		if node.alloc > 0 then
+			self.visibleNodes[nodeId] = node
+		end
 	end
 	-- Check all nodes for other nodes which depend on them (i.e. are only connected to the tree through that node)
 	for id, node in pairs(self.visibleNodes) do

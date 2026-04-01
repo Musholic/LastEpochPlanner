@@ -63,7 +63,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 	end
 	if self.targetVersion ~= liveTargetVersion then
 		self.targetVersion = nil
-		self:OpenConversionPopup()
+		self:OpenConversionPopup(buildXML)
 		return
 	end
 
@@ -1084,7 +1084,7 @@ function buildMode:OnFrame(inputEvents)
 end
 
 -- Opens the game version conversion popup
-function buildMode:OpenConversionPopup()
+function buildMode:OpenConversionPopup(buildXML)
 	local controls = { }
 	local currentVersion = treeVersions[latestTreeVersion].display
 	controls.note = new("LabelControl", nil, 0, 20, 0, 16, colorCodes.TIP..[[
@@ -1102,7 +1102,7 @@ You should create a backup copy of the build before proceeding.
 	controls.convert = new("ButtonControl", nil, -40, 170, 120, 20, "Convert to ".. currentVersion, function()
 		main:ClosePopup()
 		self:Shutdown()
-		self:Init(self.dbFileName, self.buildName, nil, true)
+		self:Init(self.dbFileName, self.buildName, buildXML, true)
 	end)
 	controls.cancel = new("ButtonControl", nil, 60, 170, 70, 20, "Cancel", function()
 		main:ClosePopup()
