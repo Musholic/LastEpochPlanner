@@ -9446,7 +9446,7 @@ c["1% Melee Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=512,name="Dam
 c["1% Melee Damage per Bleed"]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=512,name="Damage",type="MORE",value=1}},"   per  "}
 c["1% Melee Elemental Damage Per 2% Missing Mana"]={{[1]={flags=0,keywordFlags=512,name="FireDamage",type="MORE",value=1},[2]={flags=0,keywordFlags=512,name="ColdDamage",type="MORE",value=1},[3]={flags=0,keywordFlags=512,name="LightningDamage",type="MORE",value=1}},"   Per 2% Missing Mana "}
 c["1% Minion Damage Leeched As Health"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Damage",type="MORE",value=1}}}},"   Leeched As Health "}
-c["1% Minion Increased Crit Chance Per Intelligence"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="CritChance",type="BASE",value=1}}}},"  Increased   "}
+c["1% Minion Increased Crit Chance Per Intelligence"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=1}}}},nil}
 c["1% Minion More Damage Over Time Per Vitality"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={stat="Vit",type="PerStat"},flags=4096,keywordFlags=0,name="Damage",type="MORE",value=1}}}},"  More   "}
 c["1% Minion Penetration Per 5% Overcapped Resistance"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Penetration",type="BASE",value=1}}}},"   Per 5% Overcapped Resistance "}
 c["1% Missing Health Gained As Ward Per Second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=1}}," Missing  Gained As Ward Per Second "}
@@ -11405,8 +11405,8 @@ c["2% Less Damage Taken while Channeling"]={{[1]={flags=0,keywordFlags=0,name="D
 c["2% Less Poison Damage Taken"]={{[1]={flags=0,keywordFlags=0,name="PoisonDamageTaken",type="MORE",value=-2}},nil}
 c["2% Melee Kill Threshold"]={{},"  Kill Threshold "}
 c["2% Minimum percentage of health to gain when a nearby enemy or ally dies (2 second cooldown)"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=2}}," Minimum percentage of  to gain when a nearby enemy or ally dies  "}
-c["2% Minion Increased Cast Speed"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=256,keywordFlags=0,name="Speed",type="BASE",value=2}}}},"  Increased  "}
-c["2% Minion Increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="MovementSpeed",type="BASE",value=2}}}},"  Increased  "}
+c["2% Minion Increased Cast Speed"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=256,keywordFlags=0,name="Speed",type="INC",value=2}}}},nil}
+c["2% Minion Increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=2}}}},nil}
 c["2% More Damage Per Slow"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=2}},"  Per  "}
 c["2% More Damage With An Axe"]={{[1]={[1]={type="Condition",var="UsingAxe"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=2}},nil}
 c["2% More Damage per Mana Consumed"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=2}},"  per Mana Consumed "}
@@ -11936,7 +11936,7 @@ c["24% Increased Attack and Cast Speed for Summoned Vines"]={{[1]={flags=0,keywo
 c["24% Increased Healing"]={{},"  "}
 c["24% Increased Healing Effectiveness"]={{},"  Effectiveness "}
 c["24% Increased Spell Damage per Skeletal Mage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="INC",value=24}},"   per Skeletal Mage "}
-c["24% Minion Increased Healing Effectiveness"]={{},"  Increased  Effectiveness "}
+c["24% Minion Increased Healing Effectiveness"]={{},"   Effectiveness "}
 c["24% Reduced Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-24}},nil}
 c["24% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=24}},nil}
 c["24% increased Armor While Transformed"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=24}},"  While Transformed "}
@@ -12651,8 +12651,8 @@ c["30% Maximum Crit Chance Bonus"]={{[1]={flags=0,keywordFlags=0,name="CritChanc
 c["30% Maximum Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=30}}," Maximum  "}
 c["30% Maximum Damage Bonus"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=30}}," Maximum  Bonus "}
 c["30% Maximum Direct Damage bonus"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=30}}," Maximum Direct  bonus "}
-c["30% Minion Increased Attack Speed On 20 Mana Cost Skill"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=3584,keywordFlags=0,name="Speed",type="BASE",value=30}}}},"  Increased  On 20 Mana Cost Skill "}
-c["30% Minion Increased Leech Rate"]={{},"  Increased Leech Rate "}
+c["30% Minion Increased Attack Speed On 20 Mana Cost Skill"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=3584,keywordFlags=0,name="Speed",type="INC",value=30}}}},"   On 20 Mana Cost Skill "}
+c["30% Minion Increased Leech Rate"]={{},"  Leech Rate "}
 c["30% More Global Cold Damage"]={{[1]={[1]={type="Global"},flags=0,keywordFlags=0,name="ColdDamage",type="MORE",value=30}},nil}
 c["30% Necrotic Resistance Shred Chance Per Second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_NecroticResistanceShred",type="BASE",value=30}},"  Per Second "}
 c["30% Percent of Missing Health Recovered"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=30}}," Percent of Missing  Recovered "}
@@ -13295,7 +13295,7 @@ c["4% Kill Threshold"]={{}," Kill Threshold "}
 c["4% Less Damage Over Time Taken"]={{[1]={flags=0,keywordFlags=0,name="DamageTakenOverTime",type="MORE",value=-4}},nil}
 c["4% Less Damage Taken on Low Health"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="MORE",value=-4}},"  on Low Health "}
 c["4% Less Hit Damage Taken Per Stack"]={{[1]={flags=8388608,keywordFlags=0,name="DamageTaken",type="MORE",value=-4}},"   Per Stack "}
-c["4% Minion Increased Healing Effectiveness per player Attunement"]={{},"  Increased  Effectiveness  "}
+c["4% Minion Increased Healing Effectiveness per player Attunement"]={{},"   Effectiveness  "}
 c["4% Minion Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=4}}}},nil}
 c["4% More Damage in Arena"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=4}},"  in Arena "}
 c["4% More Damage over Time to Cursed"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="MORE",value=4}},"  to Cursed "}
@@ -13925,7 +13925,7 @@ c["5% Maximum Health Gained On Crit"]={{[1]={flags=0,keywordFlags=0,name="Life",
 c["5% Maximum Kill Threshold"]={{}," Maximum Kill Threshold "}
 c["5% Maximum percentage of health to gain when a nearby enemy or ally dies (2 second cooldown)"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=5}}," Maximum percentage of  to gain when a nearby enemy or ally dies  "}
 c["5% Melee Attack Speed Buff"]={{[1]={flags=3584,keywordFlags=512,name="Speed",type="BASE",value=5}},"   Buff "}
-c["5% Minion Increased Melee Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=512,name="Damage",type="MORE",value=5}}}},"  Increased   "}
+c["5% Minion Increased Melee Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=512,name="Damage",type="INC",value=5}}}},nil}
 c["5% Missing Health Gained As Ward Per Second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=5}}," Missing  Gained As Ward Per Second "}
 c["5% More Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="MORE",value=5}},nil}
 c["5% More Crit Chance per Bleed"]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="CritChance",type="MORE",value=5}},"  per  "}
@@ -14756,8 +14756,8 @@ c["7% Increased Throwing Damage"]={{[1]={flags=0,keywordFlags=1024,name="Damage"
 c["7% Increased Totem Attack And Cast Speed"]={{[1]={flags=0,keywordFlags=0,name="Speed",type="INC",value=7}}," Totem  "}
 c["7% Kill Threshold"]={{}," Kill Threshold "}
 c["7% Maximum Damage Boost per stack of Runeweave"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=7}}," Maximum  Boost per stack of Runeweave "}
-c["7% Minion Increased Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ColdDamage",type="MORE",value=7}}}},"  Increased  "}
-c["7% Minion Increased Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LightningDamage",type="MORE",value=7}}}},"  Increased  "}
+c["7% Minion Increased Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ColdDamage",type="INC",value=7}}}},nil}
+c["7% Minion Increased Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LightningDamage",type="INC",value=7}}}},nil}
 c["7% More Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="MORE",value=7}},nil}
 c["7% Physical Penetration while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=7}},nil}
 c["7% Reduced Bonus Damage Taken from Critical Strikes per Equipped Heretical Idol"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="DamageTaken",type="INC",value=-7}}," Bonus   per Equipped Heretical Idol "}
@@ -14870,7 +14870,7 @@ c["71% of Sacrifice Mana Cost consumed to automatically Sacrifice Minions after 
 c["72 Health Gain on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="Life",type="BASE",value=72}},"  Gain  "}
 c["72% Increased Necrotic Damage if you have been Hit Recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="NecroticDamage",type="INC",value=72}},nil}
 c["72% Increased Stun Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="INC",value=72}},nil}
-c["72% Minion Increased Healing Effectiveness"]={{},"  Increased  Effectiveness "}
+c["72% Minion Increased Healing Effectiveness"]={{},"   Effectiveness "}
 c["72% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=72}},nil}
 c["72% increased Critical Strike Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=72}},nil}
 c["72% increased Echo Damage when a skill is Echoed"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=72}}," Echo  when a skill is Echoed "}

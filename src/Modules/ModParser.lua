@@ -296,6 +296,7 @@ local specialQuickFixModList = {
 	["^([%+%-]?[%d%.]+%%) Movespeed"] = "%1 increased Movespeed",
 	-- Simplify the parsing if we invert the terms
 	["Shared Increased"] = "Increased Shared",
+	["Minion Increased"] = "Increased Minion",
 }
 
 for _, damageType in ipairs(DamageTypes) do

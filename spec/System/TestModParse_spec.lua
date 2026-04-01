@@ -269,12 +269,14 @@ describe("TestModParse", function()
 
     it("shared critical chance", function()
         build.skillsTab:SelSkill(1, "SummonSkeleton")
-        build.configTab.input.customMods = "+17% Shared Increased Critical Strike Chance\n+7% Increased Critical Strike Chance"
+        build.configTab.input.customMods = "+17% Shared Increased Critical Strike Chance\n\z
+        +7% Increased Critical Strike Chance\n\z
+        +3% Minion Increased Critical Strike Chance"
         build.configTab:BuildModList()
         runCallback("OnFrame")
 
         assert.are.equals(24, build.calcsTab.mainEnv.player.modDB:Sum("INC", nil, "CritChance"))
-        assert.are.equals(17, build.calcsTab.mainEnv.minion.modDB:Sum("INC", nil, "CritChance"))
+        assert.are.equals(20, build.calcsTab.mainEnv.minion.modDB:Sum("INC", nil, "CritChance"))
     end)
 
 end)
