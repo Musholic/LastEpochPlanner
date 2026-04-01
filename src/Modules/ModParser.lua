@@ -187,6 +187,7 @@ local modFlagList = {
 	["minion skills"] = { tag = { type = "SkillType", skillType = SkillType.Minion } },
 	["with elemental spells"] = { keywordFlags = bor(KeywordFlag.Lightning, KeywordFlag.Cold, KeywordFlag.Fire) },
 	["minion"] = { addToMinion = true },
+	["shared"] = { addToMinion = true, shared = true },
 	-- can be ignored since the cooldown is already part of the triggered skill data
 	["%(%d+ second cooldown%)"] = {},
 	-- Other
@@ -293,6 +294,8 @@ local specialQuickFixModList = {
 	["^([%+%-]?[%d%.]+%%) Cooldown Recovery Speed"] = "%1 increased Cooldown Recovery Speed",
 	["^([%+%-]?[%d%.]+%%) Duration"] = "%1 increased Duration",
 	["^([%+%-]?[%d%.]+%%) Movespeed"] = "%1 increased Movespeed",
+	-- Simplify the parsing if we invert the terms
+	["Shared Increased"] = "Increased Shared",
 }
 
 for _, damageType in ipairs(DamageTypes) do
@@ -482,6 +485,8 @@ local function parseMod(line, order)
 	local modExtraTags
 	if modForm == "INC" then
 		modType = "INC"
+	elseif modForm == "SHARED_INC" then
+		modType = "INC"
 	elseif modForm == "RED" then
 		modValue = -modValue
 		modType = "INC"
@@ -585,6 +590,7 @@ local function parseMod(line, order)
 			end
 		elseif misc.addToMinion then
 			-- Minion modifiers
+			local newModList = { }
 			for i, effectMod in ipairs(modList) do
 				local tagList = { }
 				if misc.playerTag then t_insert(tagList, misc.playerTag) end
@@ -594,7 +600,15 @@ local function parseMod(line, order)
 						t_insert(tagList, tag)
 					end
 				end
-				modList[i] = mod("MinionModifier", "LIST", { mod = effectMod }, unpack(tagList))
+				local newMod = mod("MinionModifier", "LIST", { mod = effectMod }, unpack(tagList))
+				t_insert(newModList, newMod)
+			end
+			if misc.shared then
+				for _, newMod in ipairs(newModList) do
+					t_insert(modList, newMod)
+				end
+			else
+				modList = newModList
 			end
 		elseif misc.addToSkill then
 			-- Skill enchants or socketed gem modifiers that add additional effects
