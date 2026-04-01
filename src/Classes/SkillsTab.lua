@@ -221,11 +221,13 @@ function SkillsTabClass:LoadSkill(node, skillSetId)
 	local grantedEffect = self.build.data.skills[skillId]
 	socketGroup.skillId = skillId
 	socketGroup.grantedEffect = grantedEffect
-	self:ProcessSocketGroup(socketGroup)
-	if node.attrib.index then
-	    self.skillSets[skillSetId].socketGroupList[tonumber(node.attrib.index)] = socketGroup
-	else
-		t_insert(self.skillSets[skillSetId].socketGroupList, socketGroup)
+	if grantedEffect then
+		self:ProcessSocketGroup(socketGroup)
+		if node.attrib.index then
+		    self.skillSets[skillSetId].socketGroupList[tonumber(node.attrib.index)] = socketGroup
+		else
+			t_insert(self.skillSets[skillSetId].socketGroupList, socketGroup)
+		end
 	end
 end
 
