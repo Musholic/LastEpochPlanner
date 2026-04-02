@@ -326,6 +326,11 @@ local specialModList = {
 	["^ ?shurikens in line$"] = { flag("SequentialProjectiles", { type = "SkillName", skillName = "Shurikens" })},
 }
 
+for _, skillId in ipairs(data.treeSkills) do
+	local skill = data.skills[skillId]
+	specialModList["^+(%d+) to " .. skill.name:lower() .. "$"] = function (num) return { mod(skill.id .. "Level", "BASE", num) } end
+end
+
 -- Modifiers that are recognised but unsupported
 local unsupportedModList = {
 }

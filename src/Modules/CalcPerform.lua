@@ -1130,6 +1130,18 @@ function calcs.perform(env, fullDPSSkipEHP)
 			breakdown[stat] = breakdown.simple(nil, nil, output[stat], stat)
 		end
 	end
+
+	-- Skill levels
+	for _, skillId in ipairs(data.treeSkills) do
+		local value = calcLib.val(modDB, skillId .. "Level")
+		if value > 0 then
+			output[skillId .. "Level"] = value
+			if breakdown then
+				breakdown[skillId .. "Level"] = breakdown.simple(nil, nil, output[skillId .. "Level"], skillId .. "Level")
+			end
+		end
+	end
+
 	calcs.defence(env, env.player)
 	if not fullDPSSkipEHP then
 		calcs.buildDefenceEstimations(env, env.player)

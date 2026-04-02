@@ -1622,170 +1622,170 @@ c["+1 max Shadows"]={{}," max Shadows "}
 c["+1 max Skeleton"]={{}," max Skeleton "}
 c["+1 max Skeleton Mage"]={{}," max Skeleton Mage "}
 c["+1 random Totems teleported to your location after you use a traversal skill"]={{}," random Totems ed to your location after you use a traversal skill "}
-c["+1 to Abyssal Echoes"]={{},"  "}
-c["+1 to Acid Flask"]={{},"  "}
+c["+1 to Abyssal Echoes"]={{[1]={flags=0,keywordFlags=0,name="AbyssalEchoesLevel",type="BASE",value=1}},nil}
+c["+1 to Acid Flask"]={{[1]={flags=0,keywordFlags=0,name="AcidFlaskLevel",type="BASE",value=1}},nil}
 c["+1 to Acolyte Skills"]={{}," Acolyte Skills "}
-c["+1 to Aerial Assault"]={{},"  "}
+c["+1 to Aerial Assault"]={{[1]={flags=0,keywordFlags=0,name="Falconer 02 Aerial AssaultLevel",type="BASE",value=1}},nil}
 c["+1 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=1},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=1},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=1},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=1}},nil}
 c["+1 to All Minion Skills"]={{}," All  "}
 c["+1 to All Skills"]={{}," All Skills "}
 c["+1 to All Skills per Complete Set"]={{}," All Skills per Complete Set "}
 c["+1 to All Totem Skills"]={{}," All Totem Skills "}
-c["+1 to Anomaly"]={{},"  "}
-c["+1 to Arcane Ascendance"]={{},"  "}
-c["+1 to Assemble Abomination"]={{},"  "}
-c["+1 to Aura Of Decay"]={{},"  "}
-c["+1 to Avalanche"]={{},"  "}
-c["+1 to Ballista"]={{},"  "}
-c["+1 to Black Hole"]={{},"  "}
-c["+1 to Bladestorm"]={{},"  "}
-c["+1 to Bone Curse"]={{},"  "}
-c["+1 to Chaos Bolts"]={{},"  "}
-c["+1 to Chthonic Fissure"]={{},"  "}
-c["+1 to Cinder Strike"]={{},"  "}
+c["+1 to Anomaly"]={{[1]={flags=0,keywordFlags=0,name="AnomalyLevel",type="BASE",value=1}},nil}
+c["+1 to Arcane Ascendance"]={{[1]={flags=0,keywordFlags=0,name="ArcaneAscendanceLevel",type="BASE",value=1}},nil}
+c["+1 to Assemble Abomination"]={{[1]={flags=0,keywordFlags=0,name="AssembleAbominationLevel",type="BASE",value=1}},nil}
+c["+1 to Aura Of Decay"]={{[1]={flags=0,keywordFlags=0,name="AuraOfDecayLevel",type="BASE",value=1}},nil}
+c["+1 to Avalanche"]={{[1]={flags=0,keywordFlags=0,name="AvalancheLevel",type="BASE",value=1}},nil}
+c["+1 to Ballista"]={{[1]={flags=0,keywordFlags=0,name="SummonBallistaLevel",type="BASE",value=1}},nil}
+c["+1 to Black Hole"]={{[1]={flags=0,keywordFlags=0,name="BlackHoleLevel",type="BASE",value=1}},nil}
+c["+1 to Bladestorm"]={{[1]={flags=0,keywordFlags=0,name="Bladestorm ThrowLevel",type="BASE",value=1}},nil}
+c["+1 to Bone Curse"]={{[1]={flags=0,keywordFlags=0,name="BoneCurseLevel",type="BASE",value=1}},nil}
+c["+1 to Chaos Bolts"]={{[1]={flags=0,keywordFlags=0,name="Warlock 01 Chaos BoltsLevel",type="BASE",value=1}},nil}
+c["+1 to Chthonic Fissure"]={{[1]={flags=0,keywordFlags=0,name="Warlock 04 Chthonic FissureLevel",type="BASE",value=1}},nil}
+c["+1 to Cinder Strike"]={{[1]={flags=0,keywordFlags=0,name="CinderStrikeLevel",type="BASE",value=1}},nil}
 c["+1 to Cold Melee Attacks"]={{},"  s "}
 c["+1 to Cold Skills"]={{},"  Skills "}
 c["+1 to Damage Over Time Minion Skills"]={{[1]={[1]={skillType=8192,type="SkillType"},flags=4096,keywordFlags=0,name="Damage",type="BASE",value=1}},nil}
 c["+1 to Damage Over Time Spells"]={{[1]={flags=4096,keywordFlags=256,name="Damage",type="BASE",value=1}},"  s "}
-c["+1 to Dancing Strikes"]={{},"  "}
-c["+1 to Dark Quiver"]={{},"  "}
-c["+1 to Death Seal"]={{},"  "}
-c["+1 to Decoy"]={{},"  "}
-c["+1 to Detonating Arrow"]={{},"  "}
-c["+1 to Devouring Orb"]={{},"  "}
+c["+1 to Dancing Strikes"]={{[1]={flags=0,keywordFlags=0,name="DancingStrike1Level",type="BASE",value=1}},nil}
+c["+1 to Dark Quiver"]={{[1]={flags=0,keywordFlags=0,name="DarkQuiverLevel",type="BASE",value=1}},nil}
+c["+1 to Death Seal"]={{[1]={flags=0,keywordFlags=0,name="DeathSealLevel",type="BASE",value=1}},nil}
+c["+1 to Decoy"]={{[1]={flags=0,keywordFlags=0,name="DecoyLevel",type="BASE",value=1}},nil}
+c["+1 to Detonating Arrow"]={{[1]={flags=0,keywordFlags=0,name="DetonatingArrowLevel",type="BASE",value=1}},nil}
+c["+1 to Devouring Orb"]={{[1]={flags=0,keywordFlags=0,name="DevouringOrbLevel",type="BASE",value=1}},nil}
 c["+1 to Dexterity Skills"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=1}},"  Skills "}
-c["+1 to Disintegrate"]={{},"  "}
-c["+1 to Dive Bomb"]={{},"  "}
-c["+1 to Drain Life"]={{},"  "}
-c["+1 to Dread Shade"]={{},"  "}
-c["+1 to Earthquake"]={{},"  "}
-c["+1 to Elemental Nova"]={{},"  "}
+c["+1 to Disintegrate"]={{[1]={flags=0,keywordFlags=0,name="DisintegrateLevel",type="BASE",value=1}},nil}
+c["+1 to Dive Bomb"]={{[1]={flags=0,keywordFlags=0,name="Falconer 03 Dive BombLevel",type="BASE",value=1}},nil}
+c["+1 to Drain Life"]={{[1]={flags=0,keywordFlags=0,name="DrainLifeLevel",type="BASE",value=1}},nil}
+c["+1 to Dread Shade"]={{[1]={flags=0,keywordFlags=0,name="DreadShadeLevel",type="BASE",value=1}},nil}
+c["+1 to Earthquake"]={{[1]={flags=0,keywordFlags=0,name="EarthquakeSlamLevel",type="BASE",value=1}},nil}
+c["+1 to Elemental Nova"]={{[1]={flags=0,keywordFlags=0,name="ElementalNovaLevel",type="BASE",value=1}},nil}
 c["+1 to Elemental Skills"]={{},"  Skills "}
 c["+1 to Elemental Spells"]={{},"  s "}
-c["+1 to Enchant Weapon"]={{},"  "}
-c["+1 to Entangling Roots"]={{},"  "}
-c["+1 to Erasing Strike"]={{},"  "}
-c["+1 to Eterra's Blessing"]={{},"  "}
-c["+1 to Explosive Trap"]={{},"  "}
-c["+1 to Falconry"]={{},"  "}
+c["+1 to Enchant Weapon"]={{[1]={flags=0,keywordFlags=0,name="EnchantWeaponLevel",type="BASE",value=1}},nil}
+c["+1 to Entangling Roots"]={{[1]={flags=0,keywordFlags=0,name="EntanglingRootsLevel",type="BASE",value=1}},nil}
+c["+1 to Erasing Strike"]={{[1]={flags=0,keywordFlags=0,name="ErasingStrikeLevel",type="BASE",value=1}},nil}
+c["+1 to Eterra's Blessing"]={{[1]={flags=0,keywordFlags=0,name="Eterras BlessingLevel",type="BASE",value=1}},nil}
+c["+1 to Explosive Trap"]={{[1]={flags=0,keywordFlags=0,name="Falconer 04 Explosive TrapLevel",type="BASE",value=1}},nil}
+c["+1 to Falconry"]={{[1]={flags=0,keywordFlags=0,name="Falconer 00 FalconryLevel",type="BASE",value=1}},nil}
 c["+1 to Fire Skills"]={{},"  Skills "}
 c["+1 to Fire Spells"]={{},"  s "}
-c["+1 to Fireball"]={{},"  "}
-c["+1 to Firebrand"]={{},"  "}
-c["+1 to Flame Reave"]={{},"  "}
-c["+1 to Flame Rush"]={{},"  "}
-c["+1 to Flame Ward"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=1}}," Flame  "}
-c["+1 to Flay"]={{},"  "}
-c["+1 to Flurry"]={{},"  "}
-c["+1 to Focus"]={{},"  "}
-c["+1 to Forge Strike"]={{},"  "}
-c["+1 to Frost Claw"]={{},"  "}
-c["+1 to Frost Wall"]={{},"  "}
-c["+1 to Fury Leap"]={{},"  "}
-c["+1 to Gathering Storm"]={{},"  "}
-c["+1 to Ghostflame"]={{},"  "}
-c["+1 to Glacier"]={{},"  "}
-c["+1 to Glyph of Dominion"]={{},"  "}
-c["+1 to Hail of Arrows"]={{},"  "}
-c["+1 to Hammer Throw"]={{},"  "}
-c["+1 to Harvest"]={{},"  "}
-c["+1 to Healing Hands"]={{},"  "}
-c["+1 to Heartseeker"]={{},"  "}
-c["+1 to Holy Aura"]={{},"  "}
-c["+1 to Hungering Souls"]={{},"  "}
-c["+1 to Ice Barrage"]={{},"  "}
-c["+1 to Infernal Shade"]={{},"  "}
-c["+1 to Javelin"]={{},"  "}
-c["+1 to Judgement"]={{},"  "}
-c["+1 to Lethal Mirage"]={{},"  "}
+c["+1 to Fireball"]={{[1]={flags=0,keywordFlags=0,name="FireballLevel",type="BASE",value=1}},nil}
+c["+1 to Firebrand"]={{[1]={flags=0,keywordFlags=0,name="FirebrandLevel",type="BASE",value=1}},nil}
+c["+1 to Flame Reave"]={{[1]={flags=0,keywordFlags=0,name="FlameReaveLevel",type="BASE",value=1}},nil}
+c["+1 to Flame Rush"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 06 Flame RushLevel",type="BASE",value=1}},nil}
+c["+1 to Flame Ward"]={{[1]={flags=0,keywordFlags=0,name="FlameWardLevel",type="BASE",value=1}},nil}
+c["+1 to Flay"]={{[1]={flags=0,keywordFlags=0,name="Flay 1Level",type="BASE",value=1}},nil}
+c["+1 to Flurry"]={{[1]={flags=0,keywordFlags=0,name="FlurryLevel",type="BASE",value=1}},nil}
+c["+1 to Focus"]={{[1]={flags=0,keywordFlags=0,name="FocusLevel",type="BASE",value=1}},nil}
+c["+1 to Forge Strike"]={{[1]={flags=0,keywordFlags=0,name="ForgeStrikeLevel",type="BASE",value=1}},nil}
+c["+1 to Frost Claw"]={{[1]={flags=0,keywordFlags=0,name="Frost ClawLevel",type="BASE",value=1}},nil}
+c["+1 to Frost Wall"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 01 Frost WallLevel",type="BASE",value=1}},nil}
+c["+1 to Fury Leap"]={{[1]={flags=0,keywordFlags=0,name="FuryLeapLevel",type="BASE",value=1}},nil}
+c["+1 to Gathering Storm"]={{[1]={flags=0,keywordFlags=0,name="GatheringStormMeleeLevel",type="BASE",value=1}},nil}
+c["+1 to Ghostflame"]={{[1]={flags=0,keywordFlags=0,name="Warlock 02 GhostflameLevel",type="BASE",value=1}},nil}
+c["+1 to Glacier"]={{[1]={flags=0,keywordFlags=0,name="GlacierLevel",type="BASE",value=1}},nil}
+c["+1 to Glyph of Dominion"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 02 Glyph of DominionLevel",type="BASE",value=1}},nil}
+c["+1 to Hail of Arrows"]={{[1]={flags=0,keywordFlags=0,name="HailOfArrowsLevel",type="BASE",value=1}},nil}
+c["+1 to Hammer Throw"]={{[1]={flags=0,keywordFlags=0,name="HammerThrowLevel",type="BASE",value=1}},nil}
+c["+1 to Harvest"]={{[1]={flags=0,keywordFlags=0,name="HarvestLevel",type="BASE",value=1}},nil}
+c["+1 to Healing Hands"]={{[1]={flags=0,keywordFlags=0,name="HealingHandsLevel",type="BASE",value=1}},nil}
+c["+1 to Heartseeker"]={{[1]={flags=0,keywordFlags=0,name="HeartseekerLevel",type="BASE",value=1}},nil}
+c["+1 to Holy Aura"]={{[1]={flags=0,keywordFlags=0,name="HolyAuraLevel",type="BASE",value=1}},nil}
+c["+1 to Hungering Souls"]={{[1]={flags=0,keywordFlags=0,name="HungeringSoulsLevel",type="BASE",value=1}},nil}
+c["+1 to Ice Barrage"]={{[1]={flags=0,keywordFlags=0,name="IceBarrageLevel",type="BASE",value=1}},nil}
+c["+1 to Infernal Shade"]={{[1]={flags=0,keywordFlags=0,name="InfernalShadeLevel",type="BASE",value=1}},nil}
+c["+1 to Javelin"]={{[1]={flags=0,keywordFlags=0,name="JavelinLevel",type="BASE",value=1}},nil}
+c["+1 to Judgement"]={{[1]={flags=0,keywordFlags=0,name="JudgementLevel",type="BASE",value=1}},nil}
+c["+1 to Lethal Mirage"]={{[1]={flags=0,keywordFlags=0,name="Lethal MirageLevel",type="BASE",value=1}},nil}
 c["+1 to Level of All Skills per 120 Total Attributes"]={{}," Level of All Skills  "}
-c["+1 to Lightning Blast"]={{},"  "}
+c["+1 to Lightning Blast"]={{[1]={flags=0,keywordFlags=0,name="LightningBlastLevel",type="BASE",value=1}},nil}
 c["+1 to Lightning Melee Attacks"]={{},"  s "}
 c["+1 to Lightning Skills"]={{},"  Skills "}
 c["+1 to Lightning Spells"]={{},"  s "}
-c["+1 to Lunge"]={{},"  "}
-c["+1 to Maelstrom"]={{},"  "}
+c["+1 to Lunge"]={{[1]={flags=0,keywordFlags=0,name="LungeLevel",type="BASE",value=1}},nil}
+c["+1 to Maelstrom"]={{[1]={flags=0,keywordFlags=0,name="MaelstromLevel",type="BASE",value=1}},nil}
 c["+1 to Mage Skills"]={{}," Mage Skills "}
-c["+1 to Mana Strike"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Strike "}
-c["+1 to Manifest Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}}," Manifest  "}
-c["+1 to Marrow Shards"]={{},"  "}
+c["+1 to Mana Strike"]={{[1]={flags=0,keywordFlags=0,name="ManaStrikeLevel",type="BASE",value=1}},nil}
+c["+1 to Manifest Armor"]={{[1]={flags=0,keywordFlags=0,name="ManifestArmorLevel",type="BASE",value=1}},nil}
+c["+1 to Marrow Shards"]={{[1]={flags=0,keywordFlags=0,name="MarrowShardsLevel",type="BASE",value=1}},nil}
 c["+1 to Melee Attacks"]={{}," s "}
-c["+1 to Meteor"]={{},"  "}
-c["+1 to Multishot"]={{},"  "}
-c["+1 to Multistrike"]={{},"  "}
+c["+1 to Meteor"]={{[1]={flags=0,keywordFlags=0,name="MeteorLevel",type="BASE",value=1}},nil}
+c["+1 to Multishot"]={{[1]={flags=0,keywordFlags=0,name="RogueMultishotLevel",type="BASE",value=1}},nil}
+c["+1 to Multistrike"]={{[1]={flags=0,keywordFlags=0,name="MultistrikeLevel",type="BASE",value=1}},nil}
 c["+1 to Necrotic Skills"]={{},"  Skills "}
 c["+1 to Necrotic Spells"]={{},"  s "}
-c["+1 to Net"]={{},"  "}
+c["+1 to Net"]={{[1]={flags=0,keywordFlags=0,name="Falconer 05 NetLevel",type="BASE",value=1}},nil}
 c["+1 to Physical Skills"]={{},"  Skills "}
 c["+1 to Poison Melee Attacks"]={{},"   Attacks "}
 c["+1 to Poison Spells"]={{},"  s "}
 c["+1 to Primalist Skills"]={{}," Primalist Skills "}
-c["+1 to Profane Veil"]={{},"  "}
-c["+1 to Puncture"]={{},"  "}
-c["+1 to Reaper Form"]={{},"  "}
-c["+1 to Rebuke"]={{},"  "}
-c["+1 to Ring Of Shields"]={{},"  "}
-c["+1 to Rip Blood"]={{},"  "}
-c["+1 to Rive"]={{},"  "}
+c["+1 to Profane Veil"]={{[1]={flags=0,keywordFlags=0,name="Warlock 05 Profane VeilLevel",type="BASE",value=1}},nil}
+c["+1 to Puncture"]={{[1]={flags=0,keywordFlags=0,name="PunctureLevel",type="BASE",value=1}},nil}
+c["+1 to Reaper Form"]={{[1]={flags=0,keywordFlags=0,name="ReaperFormLevel",type="BASE",value=1}},nil}
+c["+1 to Rebuke"]={{[1]={flags=0,keywordFlags=0,name="RebukeLevel",type="BASE",value=1}},nil}
+c["+1 to Ring Of Shields"]={{[1]={flags=0,keywordFlags=0,name="Ring Of ShieldsLevel",type="BASE",value=1}},nil}
+c["+1 to Rip Blood"]={{[1]={flags=0,keywordFlags=0,name="RipBloodLevel",type="BASE",value=1}},nil}
+c["+1 to Rive"]={{[1]={flags=0,keywordFlags=0,name="Rive1Level",type="BASE",value=1}},nil}
 c["+1 to Rogue Skills"]={{}," Rogue Skills "}
-c["+1 to Runebolt"]={{},"  "}
-c["+1 to Runic Invocation"]={{},"  "}
-c["+1 to Sacrifice"]={{},"  "}
+c["+1 to Runebolt"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 05c1 Runebolt FireLevel",type="BASE",value=1}},nil}
+c["+1 to Runic Invocation"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 04 Runic InvocationLevel",type="BASE",value=1}},nil}
+c["+1 to Sacrifice"]={{[1]={flags=0,keywordFlags=0,name="SacrificeLevel",type="BASE",value=1}},nil}
 c["+1 to Sentinel Skills"]={{}," Sentinel Skills "}
-c["+1 to Serpent Strike"]={{},"  "}
-c["+1 to Shadow Cascade"]={{},"  "}
-c["+1 to Shadow Rend"]={{},"  "}
-c["+1 to Shatter Strike"]={{},"  "}
-c["+1 to Shield Bash"]={{},"  "}
-c["+1 to Shield Rush"]={{},"  "}
-c["+1 to Shield Throw"]={{},"  "}
-c["+1 to Shift"]={{},"  "}
-c["+1 to Shurikens"]={{},"  "}
-c["+1 to Smelter's Wrath"]={{},"  "}
-c["+1 to Smite"]={{},"  "}
-c["+1 to Smoke Bomb"]={{},"  "}
-c["+1 to Snap Freeze"]={{},"  "}
-c["+1 to Soul Feast"]={{},"  "}
-c["+1 to Spirit Plague"]={{},"  "}
-c["+1 to Spriggan Form"]={{},"  "}
-c["+1 to Static"]={{},"  "}
-c["+1 to Static Orb"]={{},"  "}
-c["+1 to Summon Bear"]={{},"  "}
-c["+1 to Summon Bone Golem"]={{},"  "}
-c["+1 to Summon Frenzy Totem"]={{},"  "}
-c["+1 to Summon Raptor"]={{},"  "}
-c["+1 to Summon Sabertooth"]={{},"  "}
-c["+1 to Summon Scorpion"]={{},"  "}
-c["+1 to Summon Skeletal Mage"]={{},"  "}
-c["+1 to Summon Skeleton"]={{},"  "}
-c["+1 to Summon Spriggan"]={{},"  "}
-c["+1 to Summon Storm Crows"]={{},"  "}
-c["+1 to Summon Storm Totem"]={{},"  "}
-c["+1 to Summon Thorn Totem"]={{},"  "}
-c["+1 to Summon Volatile Zombie"]={{},"  "}
-c["+1 to Summon Wolf"]={{},"  "}
-c["+1 to Summon Wraith"]={{},"  "}
-c["+1 to Surge"]={{},"  "}
-c["+1 to Swarmblade Form"]={{},"  "}
-c["+1 to Swipe"]={{},"  "}
-c["+1 to Symbols of Hope"]={{},"  "}
-c["+1 to Synchronized Strike"]={{},"  "}
-c["+1 to Teleport"]={{},"  "}
-c["+1 to Tempest Strike"]={{},"  "}
+c["+1 to Serpent Strike"]={{[1]={flags=0,keywordFlags=0,name="SerpentStrikeLevel",type="BASE",value=1}},nil}
+c["+1 to Shadow Cascade"]={{[1]={flags=0,keywordFlags=0,name="ShadowCascadeLevel",type="BASE",value=1}},nil}
+c["+1 to Shadow Rend"]={{[1]={flags=0,keywordFlags=0,name="ShadowRendLevel",type="BASE",value=1}},nil}
+c["+1 to Shatter Strike"]={{[1]={flags=0,keywordFlags=0,name="ShatterStrikeLevel",type="BASE",value=1}},nil}
+c["+1 to Shield Bash"]={{[1]={flags=0,keywordFlags=0,name="ShieldBashLevel",type="BASE",value=1}},nil}
+c["+1 to Shield Rush"]={{[1]={flags=0,keywordFlags=0,name="ShieldRushLevel",type="BASE",value=1}},nil}
+c["+1 to Shield Throw"]={{[1]={flags=0,keywordFlags=0,name="ShieldThrowLevel",type="BASE",value=1}},nil}
+c["+1 to Shift"]={{[1]={flags=0,keywordFlags=0,name="ShiftLevel",type="BASE",value=1}},nil}
+c["+1 to Shurikens"]={{[1]={flags=0,keywordFlags=0,name="ShurikensLevel",type="BASE",value=1}},nil}
+c["+1 to Smelter's Wrath"]={{[1]={flags=0,keywordFlags=0,name="SmeltersWrathLevel",type="BASE",value=1}},nil}
+c["+1 to Smite"]={{[1]={flags=0,keywordFlags=0,name="SmiteLevel",type="BASE",value=1}},nil}
+c["+1 to Smoke Bomb"]={{[1]={flags=0,keywordFlags=0,name="Smoke BombLevel",type="BASE",value=1}},nil}
+c["+1 to Snap Freeze"]={{[1]={flags=0,keywordFlags=0,name="SnapFreezeLevel",type="BASE",value=1}},nil}
+c["+1 to Soul Feast"]={{[1]={flags=0,keywordFlags=0,name="Warlock 03 SoulFeastLevel",type="BASE",value=1}},nil}
+c["+1 to Spirit Plague"]={{[1]={flags=0,keywordFlags=0,name="SpiritPlagueLevel",type="BASE",value=1}},nil}
+c["+1 to Spriggan Form"]={{[1]={flags=0,keywordFlags=0,name="SprigganFormLevel",type="BASE",value=1}},nil}
+c["+1 to Static"]={{[1]={flags=0,keywordFlags=0,name="StaticLevel",type="BASE",value=1}},nil}
+c["+1 to Static Orb"]={{[1]={flags=0,keywordFlags=0,name="StaticOrbLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Bear"]={{[1]={flags=0,keywordFlags=0,name="SummonBearLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Bone Golem"]={{[1]={flags=0,keywordFlags=0,name="SummonBoneGolemLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Frenzy Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonFrenzyTotemLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Raptor"]={{[1]={flags=0,keywordFlags=0,name="SummonRaptorLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Sabertooth"]={{[1]={flags=0,keywordFlags=0,name="SummonSabertoothLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Scorpion"]={{[1]={flags=0,keywordFlags=0,name="SummonScorpionLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Skeletal Mage"]={{[1]={flags=0,keywordFlags=0,name="SummonMageLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Skeleton"]={{[1]={flags=0,keywordFlags=0,name="SummonSkeletonLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Spriggan"]={{[1]={flags=0,keywordFlags=0,name="SummonSprigganLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Storm Crows"]={{[1]={flags=0,keywordFlags=0,name="SummonStormCrowLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Storm Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonStormTotemLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Thorn Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonThornTotemLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Volatile Zombie"]={{[1]={flags=0,keywordFlags=0,name="SummonVolatileZombieLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Wolf"]={{[1]={flags=0,keywordFlags=0,name="SummonWolfLevel",type="BASE",value=1}},nil}
+c["+1 to Summon Wraith"]={{[1]={flags=0,keywordFlags=0,name="SummonWraithLevel",type="BASE",value=1}},nil}
+c["+1 to Surge"]={{[1]={flags=0,keywordFlags=0,name="SurgeLevel",type="BASE",value=1}},nil}
+c["+1 to Swarmblade Form"]={{[1]={flags=0,keywordFlags=0,name="Swarmblade FormLevel",type="BASE",value=1}},nil}
+c["+1 to Swipe"]={{[1]={flags=0,keywordFlags=0,name="SwipeLevel",type="BASE",value=1}},nil}
+c["+1 to Symbols of Hope"]={{[1]={flags=0,keywordFlags=0,name="SigilsOfHopeLevel",type="BASE",value=1}},nil}
+c["+1 to Synchronized Strike"]={{[1]={flags=0,keywordFlags=0,name="SynchronizedStrikeLevel",type="BASE",value=1}},nil}
+c["+1 to Teleport"]={{[1]={flags=0,keywordFlags=0,name="TeleportLevel",type="BASE",value=1}},nil}
+c["+1 to Tempest Strike"]={{[1]={flags=0,keywordFlags=0,name="TempestStrikeLevel",type="BASE",value=1}},nil}
 c["+1 to Throwing Attacks"]={{},"  Attacks "}
-c["+1 to Tornado"]={{},"  "}
-c["+1 to Transplant"]={{},"  "}
-c["+1 to Umbral Blades"]={{},"  "}
-c["+1 to Upheaval"]={{},"  "}
-c["+1 to Vengeance"]={{},"  "}
-c["+1 to Void Cleave"]={{},"  "}
+c["+1 to Tornado"]={{[1]={flags=0,keywordFlags=0,name="TornadoLevel",type="BASE",value=1}},nil}
+c["+1 to Transplant"]={{[1]={flags=0,keywordFlags=0,name="TransplantLevel",type="BASE",value=1}},nil}
+c["+1 to Umbral Blades"]={{[1]={flags=0,keywordFlags=0,name="Umbral Blades 1Level",type="BASE",value=1}},nil}
+c["+1 to Upheaval"]={{[1]={flags=0,keywordFlags=0,name="UpheavalLevel",type="BASE",value=1}},nil}
+c["+1 to Vengeance"]={{[1]={flags=0,keywordFlags=0,name="VengeanceLevel",type="BASE",value=1}},nil}
+c["+1 to Void Cleave"]={{[1]={flags=0,keywordFlags=0,name="VoidCleaveLevel",type="BASE",value=1}},nil}
 c["+1 to Void Spells"]={{},"  s "}
-c["+1 to Volatile Reversal"]={{},"  "}
-c["+1 to Volcanic Orb"]={{},"  "}
-c["+1 to Wandering Spirits"]={{},"  "}
-c["+1 to Warcry"]={{},"  "}
-c["+1 to Warpath"]={{},"  "}
-c["+1 to Werebear Form"]={{},"  "}
+c["+1 to Volatile Reversal"]={{[1]={flags=0,keywordFlags=0,name="VolatileReversalLevel",type="BASE",value=1}},nil}
+c["+1 to Volcanic Orb"]={{[1]={flags=0,keywordFlags=0,name="VolcanicOrbLevel",type="BASE",value=1}},nil}
+c["+1 to Wandering Spirits"]={{[1]={flags=0,keywordFlags=0,name="WanderingSpiritsLevel",type="BASE",value=1}},nil}
+c["+1 to Warcry"]={{[1]={flags=0,keywordFlags=0,name="WarcryLevel",type="BASE",value=1}},nil}
+c["+1 to Warpath"]={{[1]={flags=0,keywordFlags=0,name="WarpathLevel",type="BASE",value=1}},nil}
+c["+1 to Werebear Form"]={{[1]={flags=0,keywordFlags=0,name="WerebearFormLevel",type="BASE",value=1}},nil}
 c["+1% Ailment Damage Per 10% Increased Stun Chance"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=1}}," Ailment  Per 10% Increased Stun Chance "}
 c["+1% All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=1},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=1},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=1},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=1},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=1},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=1}},nil}
 c["+1% Area per 10 Ward consumed"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=1}},"  per 10 Ward consumed "}
@@ -3931,166 +3931,166 @@ c["+2 Ward per second per Active Maelstrom"]={{[1]={[1]={skillName="Maelstrom",t
 c["+2 Wraiths Summoned"]={{}," Wraiths Summoned "}
 c["+2 Zombies Per Cast"]={{}," Zombies Per Cast "}
 c["+2 random Totems teleported to your location after you use a traversal skill"]={{}," random Totems ed to your location after you use a traversal skill "}
-c["+2 to Abyssal Echoes"]={{},"  "}
-c["+2 to Acid Flask"]={{},"  "}
+c["+2 to Abyssal Echoes"]={{[1]={flags=0,keywordFlags=0,name="AbyssalEchoesLevel",type="BASE",value=2}},nil}
+c["+2 to Acid Flask"]={{[1]={flags=0,keywordFlags=0,name="AcidFlaskLevel",type="BASE",value=2}},nil}
 c["+2 to Acolyte Minion Skills"]={{}," Acolyte  "}
 c["+2 to Acolyte Skills"]={{}," Acolyte Skills "}
 c["+2 to Acolyte Spells"]={{}," Acolyte s "}
-c["+2 to Aerial Assault"]={{},"  "}
+c["+2 to Aerial Assault"]={{[1]={flags=0,keywordFlags=0,name="Falconer 02 Aerial AssaultLevel",type="BASE",value=2}},nil}
 c["+2 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=2},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=2},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=2},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=2},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=2}},nil}
 c["+2 to All Minion Skills"]={{}," All  "}
 c["+2 to All Skills"]={{}," All Skills "}
-c["+2 to Anomaly"]={{},"  "}
-c["+2 to Arcane Ascendance"]={{},"  "}
-c["+2 to Assemble Abomination"]={{},"  "}
-c["+2 to Aura Of Decay"]={{},"  "}
-c["+2 to Avalanche"]={{},"  "}
-c["+2 to Ballista"]={{},"  "}
-c["+2 to Black Hole"]={{},"  "}
-c["+2 to Bladestorm"]={{},"  "}
-c["+2 to Bone Curse"]={{},"  "}
+c["+2 to Anomaly"]={{[1]={flags=0,keywordFlags=0,name="AnomalyLevel",type="BASE",value=2}},nil}
+c["+2 to Arcane Ascendance"]={{[1]={flags=0,keywordFlags=0,name="ArcaneAscendanceLevel",type="BASE",value=2}},nil}
+c["+2 to Assemble Abomination"]={{[1]={flags=0,keywordFlags=0,name="AssembleAbominationLevel",type="BASE",value=2}},nil}
+c["+2 to Aura Of Decay"]={{[1]={flags=0,keywordFlags=0,name="AuraOfDecayLevel",type="BASE",value=2}},nil}
+c["+2 to Avalanche"]={{[1]={flags=0,keywordFlags=0,name="AvalancheLevel",type="BASE",value=2}},nil}
+c["+2 to Ballista"]={{[1]={flags=0,keywordFlags=0,name="SummonBallistaLevel",type="BASE",value=2}},nil}
+c["+2 to Black Hole"]={{[1]={flags=0,keywordFlags=0,name="BlackHoleLevel",type="BASE",value=2}},nil}
+c["+2 to Bladestorm"]={{[1]={flags=0,keywordFlags=0,name="Bladestorm ThrowLevel",type="BASE",value=2}},nil}
+c["+2 to Bone Curse"]={{[1]={flags=0,keywordFlags=0,name="BoneCurseLevel",type="BASE",value=2}},nil}
 c["+2 to Buff Skills"]={{}," Buff Skills "}
-c["+2 to Chaos Bolts"]={{},"  "}
-c["+2 to Chthonic Fissure"]={{},"  "}
-c["+2 to Cinder Strike"]={{},"  "}
+c["+2 to Chaos Bolts"]={{[1]={flags=0,keywordFlags=0,name="Warlock 01 Chaos BoltsLevel",type="BASE",value=2}},nil}
+c["+2 to Chthonic Fissure"]={{[1]={flags=0,keywordFlags=0,name="Warlock 04 Chthonic FissureLevel",type="BASE",value=2}},nil}
+c["+2 to Cinder Strike"]={{[1]={flags=0,keywordFlags=0,name="CinderStrikeLevel",type="BASE",value=2}},nil}
 c["+2 to Cold Melee Attacks"]={{},"  s "}
 c["+2 to Cold Minion Skills"]={{},"   "}
 c["+2 to Cold Skills"]={{},"  Skills "}
 c["+2 to Damage Over Time Skills"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="BASE",value=2}},"  Skills "}
-c["+2 to Dancing Strikes"]={{},"  "}
-c["+2 to Dark Quiver"]={{},"  "}
-c["+2 to Death Seal"]={{},"  "}
-c["+2 to Decoy"]={{},"  "}
-c["+2 to Detonating Arrow"]={{},"  "}
-c["+2 to Devouring Orb"]={{},"  "}
+c["+2 to Dancing Strikes"]={{[1]={flags=0,keywordFlags=0,name="DancingStrike1Level",type="BASE",value=2}},nil}
+c["+2 to Dark Quiver"]={{[1]={flags=0,keywordFlags=0,name="DarkQuiverLevel",type="BASE",value=2}},nil}
+c["+2 to Death Seal"]={{[1]={flags=0,keywordFlags=0,name="DeathSealLevel",type="BASE",value=2}},nil}
+c["+2 to Decoy"]={{[1]={flags=0,keywordFlags=0,name="DecoyLevel",type="BASE",value=2}},nil}
+c["+2 to Detonating Arrow"]={{[1]={flags=0,keywordFlags=0,name="DetonatingArrowLevel",type="BASE",value=2}},nil}
+c["+2 to Devouring Orb"]={{[1]={flags=0,keywordFlags=0,name="DevouringOrbLevel",type="BASE",value=2}},nil}
 c["+2 to Dexterity Skills"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=2}},"  Skills "}
-c["+2 to Disintegrate"]={{},"  "}
-c["+2 to Dive Bomb"]={{},"  "}
-c["+2 to Drain Life"]={{},"  "}
-c["+2 to Dread Shade"]={{},"  "}
-c["+2 to Earthquake"]={{},"  "}
-c["+2 to Elemental Nova"]={{},"  "}
-c["+2 to Enchant Weapon"]={{},"  "}
-c["+2 to Entangling Roots"]={{},"  "}
-c["+2 to Erasing Strike"]={{},"  "}
-c["+2 to Eterra's Blessing"]={{},"  "}
-c["+2 to Explosive Trap"]={{},"  "}
-c["+2 to Falconry"]={{},"  "}
+c["+2 to Disintegrate"]={{[1]={flags=0,keywordFlags=0,name="DisintegrateLevel",type="BASE",value=2}},nil}
+c["+2 to Dive Bomb"]={{[1]={flags=0,keywordFlags=0,name="Falconer 03 Dive BombLevel",type="BASE",value=2}},nil}
+c["+2 to Drain Life"]={{[1]={flags=0,keywordFlags=0,name="DrainLifeLevel",type="BASE",value=2}},nil}
+c["+2 to Dread Shade"]={{[1]={flags=0,keywordFlags=0,name="DreadShadeLevel",type="BASE",value=2}},nil}
+c["+2 to Earthquake"]={{[1]={flags=0,keywordFlags=0,name="EarthquakeSlamLevel",type="BASE",value=2}},nil}
+c["+2 to Elemental Nova"]={{[1]={flags=0,keywordFlags=0,name="ElementalNovaLevel",type="BASE",value=2}},nil}
+c["+2 to Enchant Weapon"]={{[1]={flags=0,keywordFlags=0,name="EnchantWeaponLevel",type="BASE",value=2}},nil}
+c["+2 to Entangling Roots"]={{[1]={flags=0,keywordFlags=0,name="EntanglingRootsLevel",type="BASE",value=2}},nil}
+c["+2 to Erasing Strike"]={{[1]={flags=0,keywordFlags=0,name="ErasingStrikeLevel",type="BASE",value=2}},nil}
+c["+2 to Eterra's Blessing"]={{[1]={flags=0,keywordFlags=0,name="Eterras BlessingLevel",type="BASE",value=2}},nil}
+c["+2 to Explosive Trap"]={{[1]={flags=0,keywordFlags=0,name="Falconer 04 Explosive TrapLevel",type="BASE",value=2}},nil}
+c["+2 to Falconry"]={{[1]={flags=0,keywordFlags=0,name="Falconer 00 FalconryLevel",type="BASE",value=2}},nil}
 c["+2 to Fire Melee Attacks"]={{},"  s "}
 c["+2 to Fire Minion Skills"]={{},"   "}
 c["+2 to Fire Skills"]={{},"  Skills "}
-c["+2 to Fireball"]={{},"  "}
-c["+2 to Firebrand"]={{},"  "}
-c["+2 to Flame Reave"]={{},"  "}
-c["+2 to Flame Rush"]={{},"  "}
-c["+2 to Flame Ward"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=2}}," Flame  "}
-c["+2 to Flay"]={{},"  "}
-c["+2 to Flurry"]={{},"  "}
-c["+2 to Focus"]={{},"  "}
-c["+2 to Forge Strike"]={{},"  "}
-c["+2 to Frost Claw"]={{},"  "}
-c["+2 to Frost Wall"]={{},"  "}
-c["+2 to Fury Leap"]={{},"  "}
-c["+2 to Gathering Storm"]={{},"  "}
-c["+2 to Ghostflame"]={{},"  "}
-c["+2 to Glacier"]={{},"  "}
-c["+2 to Glyph of Dominion"]={{},"  "}
-c["+2 to Hail of Arrows"]={{},"  "}
-c["+2 to Hammer Throw"]={{},"  "}
-c["+2 to Harvest"]={{},"  "}
-c["+2 to Healing Hands"]={{},"  "}
-c["+2 to Heartseeker"]={{},"  "}
-c["+2 to Holy Aura"]={{},"  "}
-c["+2 to Hungering Souls"]={{},"  "}
-c["+2 to Ice Barrage"]={{},"  "}
-c["+2 to Infernal Shade"]={{},"  "}
+c["+2 to Fireball"]={{[1]={flags=0,keywordFlags=0,name="FireballLevel",type="BASE",value=2}},nil}
+c["+2 to Firebrand"]={{[1]={flags=0,keywordFlags=0,name="FirebrandLevel",type="BASE",value=2}},nil}
+c["+2 to Flame Reave"]={{[1]={flags=0,keywordFlags=0,name="FlameReaveLevel",type="BASE",value=2}},nil}
+c["+2 to Flame Rush"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 06 Flame RushLevel",type="BASE",value=2}},nil}
+c["+2 to Flame Ward"]={{[1]={flags=0,keywordFlags=0,name="FlameWardLevel",type="BASE",value=2}},nil}
+c["+2 to Flay"]={{[1]={flags=0,keywordFlags=0,name="Flay 1Level",type="BASE",value=2}},nil}
+c["+2 to Flurry"]={{[1]={flags=0,keywordFlags=0,name="FlurryLevel",type="BASE",value=2}},nil}
+c["+2 to Focus"]={{[1]={flags=0,keywordFlags=0,name="FocusLevel",type="BASE",value=2}},nil}
+c["+2 to Forge Strike"]={{[1]={flags=0,keywordFlags=0,name="ForgeStrikeLevel",type="BASE",value=2}},nil}
+c["+2 to Frost Claw"]={{[1]={flags=0,keywordFlags=0,name="Frost ClawLevel",type="BASE",value=2}},nil}
+c["+2 to Frost Wall"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 01 Frost WallLevel",type="BASE",value=2}},nil}
+c["+2 to Fury Leap"]={{[1]={flags=0,keywordFlags=0,name="FuryLeapLevel",type="BASE",value=2}},nil}
+c["+2 to Gathering Storm"]={{[1]={flags=0,keywordFlags=0,name="GatheringStormMeleeLevel",type="BASE",value=2}},nil}
+c["+2 to Ghostflame"]={{[1]={flags=0,keywordFlags=0,name="Warlock 02 GhostflameLevel",type="BASE",value=2}},nil}
+c["+2 to Glacier"]={{[1]={flags=0,keywordFlags=0,name="GlacierLevel",type="BASE",value=2}},nil}
+c["+2 to Glyph of Dominion"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 02 Glyph of DominionLevel",type="BASE",value=2}},nil}
+c["+2 to Hail of Arrows"]={{[1]={flags=0,keywordFlags=0,name="HailOfArrowsLevel",type="BASE",value=2}},nil}
+c["+2 to Hammer Throw"]={{[1]={flags=0,keywordFlags=0,name="HammerThrowLevel",type="BASE",value=2}},nil}
+c["+2 to Harvest"]={{[1]={flags=0,keywordFlags=0,name="HarvestLevel",type="BASE",value=2}},nil}
+c["+2 to Healing Hands"]={{[1]={flags=0,keywordFlags=0,name="HealingHandsLevel",type="BASE",value=2}},nil}
+c["+2 to Heartseeker"]={{[1]={flags=0,keywordFlags=0,name="HeartseekerLevel",type="BASE",value=2}},nil}
+c["+2 to Holy Aura"]={{[1]={flags=0,keywordFlags=0,name="HolyAuraLevel",type="BASE",value=2}},nil}
+c["+2 to Hungering Souls"]={{[1]={flags=0,keywordFlags=0,name="HungeringSoulsLevel",type="BASE",value=2}},nil}
+c["+2 to Ice Barrage"]={{[1]={flags=0,keywordFlags=0,name="IceBarrageLevel",type="BASE",value=2}},nil}
+c["+2 to Infernal Shade"]={{[1]={flags=0,keywordFlags=0,name="InfernalShadeLevel",type="BASE",value=2}},nil}
 c["+2 to Intelligence Skills"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=2}},"  Skills "}
-c["+2 to Javelin"]={{},"  "}
-c["+2 to Judgement"]={{},"  "}
-c["+2 to Lethal Mirage"]={{},"  "}
-c["+2 to Lightning Blast"]={{},"  "}
+c["+2 to Javelin"]={{[1]={flags=0,keywordFlags=0,name="JavelinLevel",type="BASE",value=2}},nil}
+c["+2 to Judgement"]={{[1]={flags=0,keywordFlags=0,name="JudgementLevel",type="BASE",value=2}},nil}
+c["+2 to Lethal Mirage"]={{[1]={flags=0,keywordFlags=0,name="Lethal MirageLevel",type="BASE",value=2}},nil}
+c["+2 to Lightning Blast"]={{[1]={flags=0,keywordFlags=0,name="LightningBlastLevel",type="BASE",value=2}},nil}
 c["+2 to Lightning Minion Skills"]={{},"   "}
-c["+2 to Lunge"]={{},"  "}
-c["+2 to Maelstrom"]={{},"  "}
-c["+2 to Mana Strike"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=2}},"  Strike "}
-c["+2 to Manifest Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=2}}," Manifest  "}
-c["+2 to Marrow Shards"]={{},"  "}
+c["+2 to Lunge"]={{[1]={flags=0,keywordFlags=0,name="LungeLevel",type="BASE",value=2}},nil}
+c["+2 to Maelstrom"]={{[1]={flags=0,keywordFlags=0,name="MaelstromLevel",type="BASE",value=2}},nil}
+c["+2 to Mana Strike"]={{[1]={flags=0,keywordFlags=0,name="ManaStrikeLevel",type="BASE",value=2}},nil}
+c["+2 to Manifest Armor"]={{[1]={flags=0,keywordFlags=0,name="ManifestArmorLevel",type="BASE",value=2}},nil}
+c["+2 to Marrow Shards"]={{[1]={flags=0,keywordFlags=0,name="MarrowShardsLevel",type="BASE",value=2}},nil}
 c["+2 to Melee Attacks"]={{}," s "}
 c["+2 to Melee Minion Skills"]={{},"   "}
-c["+2 to Meteor"]={{},"  "}
-c["+2 to Multishot"]={{},"  "}
-c["+2 to Multistrike"]={{},"  "}
+c["+2 to Meteor"]={{[1]={flags=0,keywordFlags=0,name="MeteorLevel",type="BASE",value=2}},nil}
+c["+2 to Multishot"]={{[1]={flags=0,keywordFlags=0,name="RogueMultishotLevel",type="BASE",value=2}},nil}
+c["+2 to Multistrike"]={{[1]={flags=0,keywordFlags=0,name="MultistrikeLevel",type="BASE",value=2}},nil}
 c["+2 to Necrotic Minion Skills"]={{},"   "}
-c["+2 to Net"]={{},"  "}
+c["+2 to Net"]={{[1]={flags=0,keywordFlags=0,name="Falconer 05 NetLevel",type="BASE",value=2}},nil}
 c["+2 to Physical Skills"]={{},"  Skills "}
 c["+2 to Primalist Melee Attacks"]={{}," Primalist s "}
-c["+2 to Profane Veil"]={{},"  "}
-c["+2 to Puncture"]={{},"  "}
-c["+2 to Reaper Form"]={{},"  "}
-c["+2 to Rebuke"]={{},"  "}
-c["+2 to Ring Of Shields"]={{},"  "}
-c["+2 to Rip Blood"]={{},"  "}
-c["+2 to Rive"]={{},"  "}
-c["+2 to Runebolt"]={{},"  "}
-c["+2 to Runic Invocation"]={{},"  "}
-c["+2 to Sacrifice"]={{},"  "}
-c["+2 to Serpent Strike"]={{},"  "}
-c["+2 to Shadow Cascade"]={{},"  "}
-c["+2 to Shadow Rend"]={{},"  "}
-c["+2 to Shatter Strike"]={{},"  "}
-c["+2 to Shield Bash"]={{},"  "}
-c["+2 to Shield Rush"]={{},"  "}
-c["+2 to Shield Throw"]={{},"  "}
-c["+2 to Shift"]={{},"  "}
-c["+2 to Shurikens"]={{},"  "}
-c["+2 to Smelter's Wrath"]={{},"  "}
-c["+2 to Smite"]={{},"  "}
-c["+2 to Smoke Bomb"]={{},"  "}
-c["+2 to Snap Freeze"]={{},"  "}
-c["+2 to Soul Feast"]={{},"  "}
+c["+2 to Profane Veil"]={{[1]={flags=0,keywordFlags=0,name="Warlock 05 Profane VeilLevel",type="BASE",value=2}},nil}
+c["+2 to Puncture"]={{[1]={flags=0,keywordFlags=0,name="PunctureLevel",type="BASE",value=2}},nil}
+c["+2 to Reaper Form"]={{[1]={flags=0,keywordFlags=0,name="ReaperFormLevel",type="BASE",value=2}},nil}
+c["+2 to Rebuke"]={{[1]={flags=0,keywordFlags=0,name="RebukeLevel",type="BASE",value=2}},nil}
+c["+2 to Ring Of Shields"]={{[1]={flags=0,keywordFlags=0,name="Ring Of ShieldsLevel",type="BASE",value=2}},nil}
+c["+2 to Rip Blood"]={{[1]={flags=0,keywordFlags=0,name="RipBloodLevel",type="BASE",value=2}},nil}
+c["+2 to Rive"]={{[1]={flags=0,keywordFlags=0,name="Rive1Level",type="BASE",value=2}},nil}
+c["+2 to Runebolt"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 05c1 Runebolt FireLevel",type="BASE",value=2}},nil}
+c["+2 to Runic Invocation"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 04 Runic InvocationLevel",type="BASE",value=2}},nil}
+c["+2 to Sacrifice"]={{[1]={flags=0,keywordFlags=0,name="SacrificeLevel",type="BASE",value=2}},nil}
+c["+2 to Serpent Strike"]={{[1]={flags=0,keywordFlags=0,name="SerpentStrikeLevel",type="BASE",value=2}},nil}
+c["+2 to Shadow Cascade"]={{[1]={flags=0,keywordFlags=0,name="ShadowCascadeLevel",type="BASE",value=2}},nil}
+c["+2 to Shadow Rend"]={{[1]={flags=0,keywordFlags=0,name="ShadowRendLevel",type="BASE",value=2}},nil}
+c["+2 to Shatter Strike"]={{[1]={flags=0,keywordFlags=0,name="ShatterStrikeLevel",type="BASE",value=2}},nil}
+c["+2 to Shield Bash"]={{[1]={flags=0,keywordFlags=0,name="ShieldBashLevel",type="BASE",value=2}},nil}
+c["+2 to Shield Rush"]={{[1]={flags=0,keywordFlags=0,name="ShieldRushLevel",type="BASE",value=2}},nil}
+c["+2 to Shield Throw"]={{[1]={flags=0,keywordFlags=0,name="ShieldThrowLevel",type="BASE",value=2}},nil}
+c["+2 to Shift"]={{[1]={flags=0,keywordFlags=0,name="ShiftLevel",type="BASE",value=2}},nil}
+c["+2 to Shurikens"]={{[1]={flags=0,keywordFlags=0,name="ShurikensLevel",type="BASE",value=2}},nil}
+c["+2 to Smelter's Wrath"]={{[1]={flags=0,keywordFlags=0,name="SmeltersWrathLevel",type="BASE",value=2}},nil}
+c["+2 to Smite"]={{[1]={flags=0,keywordFlags=0,name="SmiteLevel",type="BASE",value=2}},nil}
+c["+2 to Smoke Bomb"]={{[1]={flags=0,keywordFlags=0,name="Smoke BombLevel",type="BASE",value=2}},nil}
+c["+2 to Snap Freeze"]={{[1]={flags=0,keywordFlags=0,name="SnapFreezeLevel",type="BASE",value=2}},nil}
+c["+2 to Soul Feast"]={{[1]={flags=0,keywordFlags=0,name="Warlock 03 SoulFeastLevel",type="BASE",value=2}},nil}
 c["+2 to Spell Minion Skills"]={{},"   "}
-c["+2 to Spirit Plague"]={{},"  "}
-c["+2 to Spriggan Form"]={{},"  "}
-c["+2 to Static"]={{},"  "}
-c["+2 to Static Orb"]={{},"  "}
+c["+2 to Spirit Plague"]={{[1]={flags=0,keywordFlags=0,name="SpiritPlagueLevel",type="BASE",value=2}},nil}
+c["+2 to Spriggan Form"]={{[1]={flags=0,keywordFlags=0,name="SprigganFormLevel",type="BASE",value=2}},nil}
+c["+2 to Static"]={{[1]={flags=0,keywordFlags=0,name="StaticLevel",type="BASE",value=2}},nil}
+c["+2 to Static Orb"]={{[1]={flags=0,keywordFlags=0,name="StaticOrbLevel",type="BASE",value=2}},nil}
 c["+2 to Strength Minion Skills"]={{[1]={[1]={skillType=8192,type="SkillType"},flags=0,keywordFlags=0,name="Str",type="BASE",value=2}},nil}
-c["+2 to Summon Bear"]={{},"  "}
-c["+2 to Summon Bone Golem"]={{},"  "}
-c["+2 to Summon Frenzy Totem"]={{},"  "}
-c["+2 to Summon Raptor"]={{},"  "}
-c["+2 to Summon Sabertooth"]={{},"  "}
-c["+2 to Summon Scorpion"]={{},"  "}
-c["+2 to Summon Skeletal Mage"]={{},"  "}
-c["+2 to Summon Skeleton"]={{},"  "}
-c["+2 to Summon Spriggan"]={{},"  "}
-c["+2 to Summon Storm Crows"]={{},"  "}
-c["+2 to Summon Storm Totem"]={{},"  "}
-c["+2 to Summon Thorn Totem"]={{},"  "}
-c["+2 to Summon Volatile Zombie"]={{},"  "}
-c["+2 to Summon Wolf"]={{},"  "}
-c["+2 to Summon Wraith"]={{},"  "}
-c["+2 to Surge"]={{},"  "}
-c["+2 to Swarmblade Form"]={{},"  "}
-c["+2 to Swipe"]={{},"  "}
-c["+2 to Symbols of Hope"]={{},"  "}
-c["+2 to Synchronized Strike"]={{},"  "}
-c["+2 to Teleport"]={{},"  "}
-c["+2 to Tempest Strike"]={{},"  "}
+c["+2 to Summon Bear"]={{[1]={flags=0,keywordFlags=0,name="SummonBearLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Bone Golem"]={{[1]={flags=0,keywordFlags=0,name="SummonBoneGolemLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Frenzy Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonFrenzyTotemLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Raptor"]={{[1]={flags=0,keywordFlags=0,name="SummonRaptorLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Sabertooth"]={{[1]={flags=0,keywordFlags=0,name="SummonSabertoothLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Scorpion"]={{[1]={flags=0,keywordFlags=0,name="SummonScorpionLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Skeletal Mage"]={{[1]={flags=0,keywordFlags=0,name="SummonMageLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Skeleton"]={{[1]={flags=0,keywordFlags=0,name="SummonSkeletonLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Spriggan"]={{[1]={flags=0,keywordFlags=0,name="SummonSprigganLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Storm Crows"]={{[1]={flags=0,keywordFlags=0,name="SummonStormCrowLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Storm Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonStormTotemLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Thorn Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonThornTotemLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Volatile Zombie"]={{[1]={flags=0,keywordFlags=0,name="SummonVolatileZombieLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Wolf"]={{[1]={flags=0,keywordFlags=0,name="SummonWolfLevel",type="BASE",value=2}},nil}
+c["+2 to Summon Wraith"]={{[1]={flags=0,keywordFlags=0,name="SummonWraithLevel",type="BASE",value=2}},nil}
+c["+2 to Surge"]={{[1]={flags=0,keywordFlags=0,name="SurgeLevel",type="BASE",value=2}},nil}
+c["+2 to Swarmblade Form"]={{[1]={flags=0,keywordFlags=0,name="Swarmblade FormLevel",type="BASE",value=2}},nil}
+c["+2 to Swipe"]={{[1]={flags=0,keywordFlags=0,name="SwipeLevel",type="BASE",value=2}},nil}
+c["+2 to Symbols of Hope"]={{[1]={flags=0,keywordFlags=0,name="SigilsOfHopeLevel",type="BASE",value=2}},nil}
+c["+2 to Synchronized Strike"]={{[1]={flags=0,keywordFlags=0,name="SynchronizedStrikeLevel",type="BASE",value=2}},nil}
+c["+2 to Teleport"]={{[1]={flags=0,keywordFlags=0,name="TeleportLevel",type="BASE",value=2}},nil}
+c["+2 to Tempest Strike"]={{[1]={flags=0,keywordFlags=0,name="TempestStrikeLevel",type="BASE",value=2}},nil}
 c["+2 to Throwing Attacks"]={{},"  Attacks "}
 c["+2 to Throwing Minion Skills"]={{},"   "}
-c["+2 to Tornado"]={{},"  "}
-c["+2 to Transplant"]={{},"  "}
-c["+2 to Umbral Blades"]={{},"  "}
-c["+2 to Upheaval"]={{},"  "}
-c["+2 to Vengeance"]={{},"  "}
-c["+2 to Void Cleave"]={{},"  "}
+c["+2 to Tornado"]={{[1]={flags=0,keywordFlags=0,name="TornadoLevel",type="BASE",value=2}},nil}
+c["+2 to Transplant"]={{[1]={flags=0,keywordFlags=0,name="TransplantLevel",type="BASE",value=2}},nil}
+c["+2 to Umbral Blades"]={{[1]={flags=0,keywordFlags=0,name="Umbral Blades 1Level",type="BASE",value=2}},nil}
+c["+2 to Upheaval"]={{[1]={flags=0,keywordFlags=0,name="UpheavalLevel",type="BASE",value=2}},nil}
+c["+2 to Vengeance"]={{[1]={flags=0,keywordFlags=0,name="VengeanceLevel",type="BASE",value=2}},nil}
+c["+2 to Void Cleave"]={{[1]={flags=0,keywordFlags=0,name="VoidCleaveLevel",type="BASE",value=2}},nil}
 c["+2 to Void Skills"]={{},"  Skills "}
-c["+2 to Volatile Reversal"]={{},"  "}
-c["+2 to Volcanic Orb"]={{},"  "}
-c["+2 to Wandering Spirits"]={{},"  "}
-c["+2 to Warcry"]={{},"  "}
-c["+2 to Warpath"]={{},"  "}
-c["+2 to Werebear Form"]={{},"  "}
+c["+2 to Volatile Reversal"]={{[1]={flags=0,keywordFlags=0,name="VolatileReversalLevel",type="BASE",value=2}},nil}
+c["+2 to Volcanic Orb"]={{[1]={flags=0,keywordFlags=0,name="VolcanicOrbLevel",type="BASE",value=2}},nil}
+c["+2 to Wandering Spirits"]={{[1]={flags=0,keywordFlags=0,name="WanderingSpiritsLevel",type="BASE",value=2}},nil}
+c["+2 to Warcry"]={{[1]={flags=0,keywordFlags=0,name="WarcryLevel",type="BASE",value=2}},nil}
+c["+2 to Warpath"]={{[1]={flags=0,keywordFlags=0,name="WarpathLevel",type="BASE",value=2}},nil}
+c["+2 to Werebear Form"]={{[1]={flags=0,keywordFlags=0,name="WerebearFormLevel",type="BASE",value=2}},nil}
 c["+2% Added Bow Critical Strike Chance"]={{[1]={flags=0,keywordFlags=2048,name="CritChance",type="BASE",value=2}}," Added   "}
 c["+2% All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=2},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=2},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=2},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=2},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=2},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=2},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=2}},nil}
 c["+2% Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="BASE",value=2}},nil}
@@ -5368,144 +5368,144 @@ c["+3 Ward Per Second Per 15 Intelligence"]={{[1]={[1]={div=15,stat="Int",type="
 c["+3 Ward per Second per Equipped Heretical Idol"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=3}},"  per Equipped Heretical Idol "}
 c["+3 Ward per second per Active Maelstrom"]={{[1]={[1]={skillName="Maelstrom",type="SkillName"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=3}},"  per Active  "}
 c["+3 random Totems teleported to your location after you use a traversal skill"]={{}," random Totems ed to your location after you use a traversal skill "}
-c["+3 to Abyssal Echoes"]={{},"  "}
-c["+3 to Acid Flask"]={{},"  "}
-c["+3 to Aerial Assault"]={{},"  "}
+c["+3 to Abyssal Echoes"]={{[1]={flags=0,keywordFlags=0,name="AbyssalEchoesLevel",type="BASE",value=3}},nil}
+c["+3 to Acid Flask"]={{[1]={flags=0,keywordFlags=0,name="AcidFlaskLevel",type="BASE",value=3}},nil}
+c["+3 to Aerial Assault"]={{[1]={flags=0,keywordFlags=0,name="Falconer 02 Aerial AssaultLevel",type="BASE",value=3}},nil}
 c["+3 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=3},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=3},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=3},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=3},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=3}},nil}
-c["+3 to Anomaly"]={{},"  "}
-c["+3 to Arcane Ascendance"]={{},"  "}
-c["+3 to Assemble Abomination"]={{},"  "}
-c["+3 to Aura Of Decay"]={{},"  "}
-c["+3 to Avalanche"]={{},"  "}
-c["+3 to Ballista"]={{},"  "}
-c["+3 to Black Hole"]={{},"  "}
-c["+3 to Bladestorm"]={{},"  "}
-c["+3 to Bone Curse"]={{},"  "}
-c["+3 to Chaos Bolts"]={{},"  "}
-c["+3 to Chthonic Fissure"]={{},"  "}
-c["+3 to Cinder Strike"]={{},"  "}
+c["+3 to Anomaly"]={{[1]={flags=0,keywordFlags=0,name="AnomalyLevel",type="BASE",value=3}},nil}
+c["+3 to Arcane Ascendance"]={{[1]={flags=0,keywordFlags=0,name="ArcaneAscendanceLevel",type="BASE",value=3}},nil}
+c["+3 to Assemble Abomination"]={{[1]={flags=0,keywordFlags=0,name="AssembleAbominationLevel",type="BASE",value=3}},nil}
+c["+3 to Aura Of Decay"]={{[1]={flags=0,keywordFlags=0,name="AuraOfDecayLevel",type="BASE",value=3}},nil}
+c["+3 to Avalanche"]={{[1]={flags=0,keywordFlags=0,name="AvalancheLevel",type="BASE",value=3}},nil}
+c["+3 to Ballista"]={{[1]={flags=0,keywordFlags=0,name="SummonBallistaLevel",type="BASE",value=3}},nil}
+c["+3 to Black Hole"]={{[1]={flags=0,keywordFlags=0,name="BlackHoleLevel",type="BASE",value=3}},nil}
+c["+3 to Bladestorm"]={{[1]={flags=0,keywordFlags=0,name="Bladestorm ThrowLevel",type="BASE",value=3}},nil}
+c["+3 to Bone Curse"]={{[1]={flags=0,keywordFlags=0,name="BoneCurseLevel",type="BASE",value=3}},nil}
+c["+3 to Chaos Bolts"]={{[1]={flags=0,keywordFlags=0,name="Warlock 01 Chaos BoltsLevel",type="BASE",value=3}},nil}
+c["+3 to Chthonic Fissure"]={{[1]={flags=0,keywordFlags=0,name="Warlock 04 Chthonic FissureLevel",type="BASE",value=3}},nil}
+c["+3 to Cinder Strike"]={{[1]={flags=0,keywordFlags=0,name="CinderStrikeLevel",type="BASE",value=3}},nil}
 c["+3 to Cold Minion Skills"]={{},"   "}
-c["+3 to Dancing Strikes"]={{},"  "}
-c["+3 to Dark Quiver"]={{},"  "}
-c["+3 to Death Seal"]={{},"  "}
-c["+3 to Decoy"]={{},"  "}
-c["+3 to Detonating Arrow"]={{},"  "}
-c["+3 to Devouring Orb"]={{},"  "}
-c["+3 to Disintegrate"]={{},"  "}
-c["+3 to Dive Bomb"]={{},"  "}
-c["+3 to Drain Life"]={{},"  "}
-c["+3 to Dread Shade"]={{},"  "}
-c["+3 to Earthquake"]={{},"  "}
-c["+3 to Elemental Nova"]={{},"  "}
-c["+3 to Enchant Weapon"]={{},"  "}
-c["+3 to Entangling Roots"]={{},"  "}
-c["+3 to Erasing Strike"]={{},"  "}
-c["+3 to Eterra's Blessing"]={{},"  "}
-c["+3 to Explosive Trap"]={{},"  "}
-c["+3 to Falconry"]={{},"  "}
-c["+3 to Fireball"]={{},"  "}
-c["+3 to Firebrand"]={{},"  "}
-c["+3 to Flame Reave"]={{},"  "}
-c["+3 to Flame Rush"]={{},"  "}
-c["+3 to Flame Ward"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=3}}," Flame  "}
-c["+3 to Flay"]={{},"  "}
-c["+3 to Flurry"]={{},"  "}
-c["+3 to Focus"]={{},"  "}
-c["+3 to Forge Strike"]={{},"  "}
-c["+3 to Frost Claw"]={{},"  "}
-c["+3 to Frost Wall"]={{},"  "}
-c["+3 to Fury Leap"]={{},"  "}
-c["+3 to Gathering Storm"]={{},"  "}
-c["+3 to Ghostflame"]={{},"  "}
-c["+3 to Glacier"]={{},"  "}
-c["+3 to Glyph of Dominion"]={{},"  "}
-c["+3 to Hail of Arrows"]={{},"  "}
-c["+3 to Hammer Throw"]={{},"  "}
-c["+3 to Harvest"]={{},"  "}
-c["+3 to Healing Hands"]={{},"  "}
-c["+3 to Heartseeker"]={{},"  "}
-c["+3 to Holy Aura"]={{},"  "}
-c["+3 to Hungering Souls"]={{},"  "}
-c["+3 to Ice Barrage"]={{},"  "}
-c["+3 to Infernal Shade"]={{},"  "}
-c["+3 to Javelin"]={{},"  "}
-c["+3 to Judgement"]={{},"  "}
-c["+3 to Lethal Mirage"]={{},"  "}
-c["+3 to Lightning Blast"]={{},"  "}
+c["+3 to Dancing Strikes"]={{[1]={flags=0,keywordFlags=0,name="DancingStrike1Level",type="BASE",value=3}},nil}
+c["+3 to Dark Quiver"]={{[1]={flags=0,keywordFlags=0,name="DarkQuiverLevel",type="BASE",value=3}},nil}
+c["+3 to Death Seal"]={{[1]={flags=0,keywordFlags=0,name="DeathSealLevel",type="BASE",value=3}},nil}
+c["+3 to Decoy"]={{[1]={flags=0,keywordFlags=0,name="DecoyLevel",type="BASE",value=3}},nil}
+c["+3 to Detonating Arrow"]={{[1]={flags=0,keywordFlags=0,name="DetonatingArrowLevel",type="BASE",value=3}},nil}
+c["+3 to Devouring Orb"]={{[1]={flags=0,keywordFlags=0,name="DevouringOrbLevel",type="BASE",value=3}},nil}
+c["+3 to Disintegrate"]={{[1]={flags=0,keywordFlags=0,name="DisintegrateLevel",type="BASE",value=3}},nil}
+c["+3 to Dive Bomb"]={{[1]={flags=0,keywordFlags=0,name="Falconer 03 Dive BombLevel",type="BASE",value=3}},nil}
+c["+3 to Drain Life"]={{[1]={flags=0,keywordFlags=0,name="DrainLifeLevel",type="BASE",value=3}},nil}
+c["+3 to Dread Shade"]={{[1]={flags=0,keywordFlags=0,name="DreadShadeLevel",type="BASE",value=3}},nil}
+c["+3 to Earthquake"]={{[1]={flags=0,keywordFlags=0,name="EarthquakeSlamLevel",type="BASE",value=3}},nil}
+c["+3 to Elemental Nova"]={{[1]={flags=0,keywordFlags=0,name="ElementalNovaLevel",type="BASE",value=3}},nil}
+c["+3 to Enchant Weapon"]={{[1]={flags=0,keywordFlags=0,name="EnchantWeaponLevel",type="BASE",value=3}},nil}
+c["+3 to Entangling Roots"]={{[1]={flags=0,keywordFlags=0,name="EntanglingRootsLevel",type="BASE",value=3}},nil}
+c["+3 to Erasing Strike"]={{[1]={flags=0,keywordFlags=0,name="ErasingStrikeLevel",type="BASE",value=3}},nil}
+c["+3 to Eterra's Blessing"]={{[1]={flags=0,keywordFlags=0,name="Eterras BlessingLevel",type="BASE",value=3}},nil}
+c["+3 to Explosive Trap"]={{[1]={flags=0,keywordFlags=0,name="Falconer 04 Explosive TrapLevel",type="BASE",value=3}},nil}
+c["+3 to Falconry"]={{[1]={flags=0,keywordFlags=0,name="Falconer 00 FalconryLevel",type="BASE",value=3}},nil}
+c["+3 to Fireball"]={{[1]={flags=0,keywordFlags=0,name="FireballLevel",type="BASE",value=3}},nil}
+c["+3 to Firebrand"]={{[1]={flags=0,keywordFlags=0,name="FirebrandLevel",type="BASE",value=3}},nil}
+c["+3 to Flame Reave"]={{[1]={flags=0,keywordFlags=0,name="FlameReaveLevel",type="BASE",value=3}},nil}
+c["+3 to Flame Rush"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 06 Flame RushLevel",type="BASE",value=3}},nil}
+c["+3 to Flame Ward"]={{[1]={flags=0,keywordFlags=0,name="FlameWardLevel",type="BASE",value=3}},nil}
+c["+3 to Flay"]={{[1]={flags=0,keywordFlags=0,name="Flay 1Level",type="BASE",value=3}},nil}
+c["+3 to Flurry"]={{[1]={flags=0,keywordFlags=0,name="FlurryLevel",type="BASE",value=3}},nil}
+c["+3 to Focus"]={{[1]={flags=0,keywordFlags=0,name="FocusLevel",type="BASE",value=3}},nil}
+c["+3 to Forge Strike"]={{[1]={flags=0,keywordFlags=0,name="ForgeStrikeLevel",type="BASE",value=3}},nil}
+c["+3 to Frost Claw"]={{[1]={flags=0,keywordFlags=0,name="Frost ClawLevel",type="BASE",value=3}},nil}
+c["+3 to Frost Wall"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 01 Frost WallLevel",type="BASE",value=3}},nil}
+c["+3 to Fury Leap"]={{[1]={flags=0,keywordFlags=0,name="FuryLeapLevel",type="BASE",value=3}},nil}
+c["+3 to Gathering Storm"]={{[1]={flags=0,keywordFlags=0,name="GatheringStormMeleeLevel",type="BASE",value=3}},nil}
+c["+3 to Ghostflame"]={{[1]={flags=0,keywordFlags=0,name="Warlock 02 GhostflameLevel",type="BASE",value=3}},nil}
+c["+3 to Glacier"]={{[1]={flags=0,keywordFlags=0,name="GlacierLevel",type="BASE",value=3}},nil}
+c["+3 to Glyph of Dominion"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 02 Glyph of DominionLevel",type="BASE",value=3}},nil}
+c["+3 to Hail of Arrows"]={{[1]={flags=0,keywordFlags=0,name="HailOfArrowsLevel",type="BASE",value=3}},nil}
+c["+3 to Hammer Throw"]={{[1]={flags=0,keywordFlags=0,name="HammerThrowLevel",type="BASE",value=3}},nil}
+c["+3 to Harvest"]={{[1]={flags=0,keywordFlags=0,name="HarvestLevel",type="BASE",value=3}},nil}
+c["+3 to Healing Hands"]={{[1]={flags=0,keywordFlags=0,name="HealingHandsLevel",type="BASE",value=3}},nil}
+c["+3 to Heartseeker"]={{[1]={flags=0,keywordFlags=0,name="HeartseekerLevel",type="BASE",value=3}},nil}
+c["+3 to Holy Aura"]={{[1]={flags=0,keywordFlags=0,name="HolyAuraLevel",type="BASE",value=3}},nil}
+c["+3 to Hungering Souls"]={{[1]={flags=0,keywordFlags=0,name="HungeringSoulsLevel",type="BASE",value=3}},nil}
+c["+3 to Ice Barrage"]={{[1]={flags=0,keywordFlags=0,name="IceBarrageLevel",type="BASE",value=3}},nil}
+c["+3 to Infernal Shade"]={{[1]={flags=0,keywordFlags=0,name="InfernalShadeLevel",type="BASE",value=3}},nil}
+c["+3 to Javelin"]={{[1]={flags=0,keywordFlags=0,name="JavelinLevel",type="BASE",value=3}},nil}
+c["+3 to Judgement"]={{[1]={flags=0,keywordFlags=0,name="JudgementLevel",type="BASE",value=3}},nil}
+c["+3 to Lethal Mirage"]={{[1]={flags=0,keywordFlags=0,name="Lethal MirageLevel",type="BASE",value=3}},nil}
+c["+3 to Lightning Blast"]={{[1]={flags=0,keywordFlags=0,name="LightningBlastLevel",type="BASE",value=3}},nil}
 c["+3 to Lightning Spells"]={{},"  s "}
-c["+3 to Lunge"]={{},"  "}
-c["+3 to Maelstrom"]={{},"  "}
-c["+3 to Mana Strike"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=3}},"  Strike "}
-c["+3 to Manifest Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=3}}," Manifest  "}
-c["+3 to Marrow Shards"]={{},"  "}
-c["+3 to Meteor"]={{},"  "}
-c["+3 to Multishot"]={{},"  "}
-c["+3 to Multistrike"]={{},"  "}
+c["+3 to Lunge"]={{[1]={flags=0,keywordFlags=0,name="LungeLevel",type="BASE",value=3}},nil}
+c["+3 to Maelstrom"]={{[1]={flags=0,keywordFlags=0,name="MaelstromLevel",type="BASE",value=3}},nil}
+c["+3 to Mana Strike"]={{[1]={flags=0,keywordFlags=0,name="ManaStrikeLevel",type="BASE",value=3}},nil}
+c["+3 to Manifest Armor"]={{[1]={flags=0,keywordFlags=0,name="ManifestArmorLevel",type="BASE",value=3}},nil}
+c["+3 to Marrow Shards"]={{[1]={flags=0,keywordFlags=0,name="MarrowShardsLevel",type="BASE",value=3}},nil}
+c["+3 to Meteor"]={{[1]={flags=0,keywordFlags=0,name="MeteorLevel",type="BASE",value=3}},nil}
+c["+3 to Multishot"]={{[1]={flags=0,keywordFlags=0,name="RogueMultishotLevel",type="BASE",value=3}},nil}
+c["+3 to Multistrike"]={{[1]={flags=0,keywordFlags=0,name="MultistrikeLevel",type="BASE",value=3}},nil}
 c["+3 to Necrotic Minion Skills"]={{},"   "}
-c["+3 to Net"]={{},"  "}
+c["+3 to Net"]={{[1]={flags=0,keywordFlags=0,name="Falconer 05 NetLevel",type="BASE",value=3}},nil}
 c["+3 to Poison Skills"]={{},"  Skills "}
-c["+3 to Profane Veil"]={{},"  "}
-c["+3 to Puncture"]={{},"  "}
-c["+3 to Reaper Form"]={{},"  "}
-c["+3 to Rebuke"]={{},"  "}
-c["+3 to Ring Of Shields"]={{},"  "}
-c["+3 to Rip Blood"]={{},"  "}
-c["+3 to Rive"]={{},"  "}
-c["+3 to Runebolt"]={{},"  "}
-c["+3 to Runic Invocation"]={{},"  "}
-c["+3 to Sacrifice"]={{},"  "}
-c["+3 to Serpent Strike"]={{},"  "}
-c["+3 to Shadow Cascade"]={{},"  "}
-c["+3 to Shadow Rend"]={{},"  "}
-c["+3 to Shatter Strike"]={{},"  "}
-c["+3 to Shield Bash"]={{},"  "}
-c["+3 to Shield Rush"]={{},"  "}
-c["+3 to Shield Throw"]={{},"  "}
-c["+3 to Shift"]={{},"  "}
-c["+3 to Shurikens"]={{},"  "}
-c["+3 to Smelter's Wrath"]={{},"  "}
-c["+3 to Smite"]={{},"  "}
-c["+3 to Smoke Bomb"]={{},"  "}
-c["+3 to Snap Freeze"]={{},"  "}
-c["+3 to Soul Feast"]={{},"  "}
-c["+3 to Spirit Plague"]={{},"  "}
-c["+3 to Spriggan Form"]={{},"  "}
-c["+3 to Static"]={{},"  "}
-c["+3 to Static Orb"]={{},"  "}
-c["+3 to Summon Bear"]={{},"  "}
-c["+3 to Summon Bone Golem"]={{},"  "}
-c["+3 to Summon Frenzy Totem"]={{},"  "}
-c["+3 to Summon Raptor"]={{},"  "}
-c["+3 to Summon Sabertooth"]={{},"  "}
-c["+3 to Summon Scorpion"]={{},"  "}
-c["+3 to Summon Skeletal Mage"]={{},"  "}
-c["+3 to Summon Skeleton"]={{},"  "}
-c["+3 to Summon Spriggan"]={{},"  "}
-c["+3 to Summon Storm Crows"]={{},"  "}
-c["+3 to Summon Storm Totem"]={{},"  "}
-c["+3 to Summon Thorn Totem"]={{},"  "}
-c["+3 to Summon Volatile Zombie"]={{},"  "}
-c["+3 to Summon Wolf"]={{},"  "}
-c["+3 to Summon Wraith"]={{},"  "}
-c["+3 to Surge"]={{},"  "}
-c["+3 to Swarmblade Form"]={{},"  "}
-c["+3 to Swipe"]={{},"  "}
-c["+3 to Symbols of Hope"]={{},"  "}
-c["+3 to Synchronized Strike"]={{},"  "}
-c["+3 to Teleport"]={{},"  "}
-c["+3 to Tempest Strike"]={{},"  "}
-c["+3 to Tornado"]={{},"  "}
-c["+3 to Transplant"]={{},"  "}
-c["+3 to Umbral Blades"]={{},"  "}
-c["+3 to Upheaval"]={{},"  "}
-c["+3 to Vengeance"]={{},"  "}
-c["+3 to Void Cleave"]={{},"  "}
-c["+3 to Volatile Reversal"]={{},"  "}
-c["+3 to Volcanic Orb"]={{},"  "}
-c["+3 to Wandering Spirits"]={{},"  "}
-c["+3 to Warcry"]={{},"  "}
-c["+3 to Warpath"]={{},"  "}
-c["+3 to Werebear Form"]={{},"  "}
+c["+3 to Profane Veil"]={{[1]={flags=0,keywordFlags=0,name="Warlock 05 Profane VeilLevel",type="BASE",value=3}},nil}
+c["+3 to Puncture"]={{[1]={flags=0,keywordFlags=0,name="PunctureLevel",type="BASE",value=3}},nil}
+c["+3 to Reaper Form"]={{[1]={flags=0,keywordFlags=0,name="ReaperFormLevel",type="BASE",value=3}},nil}
+c["+3 to Rebuke"]={{[1]={flags=0,keywordFlags=0,name="RebukeLevel",type="BASE",value=3}},nil}
+c["+3 to Ring Of Shields"]={{[1]={flags=0,keywordFlags=0,name="Ring Of ShieldsLevel",type="BASE",value=3}},nil}
+c["+3 to Rip Blood"]={{[1]={flags=0,keywordFlags=0,name="RipBloodLevel",type="BASE",value=3}},nil}
+c["+3 to Rive"]={{[1]={flags=0,keywordFlags=0,name="Rive1Level",type="BASE",value=3}},nil}
+c["+3 to Runebolt"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 05c1 Runebolt FireLevel",type="BASE",value=3}},nil}
+c["+3 to Runic Invocation"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 04 Runic InvocationLevel",type="BASE",value=3}},nil}
+c["+3 to Sacrifice"]={{[1]={flags=0,keywordFlags=0,name="SacrificeLevel",type="BASE",value=3}},nil}
+c["+3 to Serpent Strike"]={{[1]={flags=0,keywordFlags=0,name="SerpentStrikeLevel",type="BASE",value=3}},nil}
+c["+3 to Shadow Cascade"]={{[1]={flags=0,keywordFlags=0,name="ShadowCascadeLevel",type="BASE",value=3}},nil}
+c["+3 to Shadow Rend"]={{[1]={flags=0,keywordFlags=0,name="ShadowRendLevel",type="BASE",value=3}},nil}
+c["+3 to Shatter Strike"]={{[1]={flags=0,keywordFlags=0,name="ShatterStrikeLevel",type="BASE",value=3}},nil}
+c["+3 to Shield Bash"]={{[1]={flags=0,keywordFlags=0,name="ShieldBashLevel",type="BASE",value=3}},nil}
+c["+3 to Shield Rush"]={{[1]={flags=0,keywordFlags=0,name="ShieldRushLevel",type="BASE",value=3}},nil}
+c["+3 to Shield Throw"]={{[1]={flags=0,keywordFlags=0,name="ShieldThrowLevel",type="BASE",value=3}},nil}
+c["+3 to Shift"]={{[1]={flags=0,keywordFlags=0,name="ShiftLevel",type="BASE",value=3}},nil}
+c["+3 to Shurikens"]={{[1]={flags=0,keywordFlags=0,name="ShurikensLevel",type="BASE",value=3}},nil}
+c["+3 to Smelter's Wrath"]={{[1]={flags=0,keywordFlags=0,name="SmeltersWrathLevel",type="BASE",value=3}},nil}
+c["+3 to Smite"]={{[1]={flags=0,keywordFlags=0,name="SmiteLevel",type="BASE",value=3}},nil}
+c["+3 to Smoke Bomb"]={{[1]={flags=0,keywordFlags=0,name="Smoke BombLevel",type="BASE",value=3}},nil}
+c["+3 to Snap Freeze"]={{[1]={flags=0,keywordFlags=0,name="SnapFreezeLevel",type="BASE",value=3}},nil}
+c["+3 to Soul Feast"]={{[1]={flags=0,keywordFlags=0,name="Warlock 03 SoulFeastLevel",type="BASE",value=3}},nil}
+c["+3 to Spirit Plague"]={{[1]={flags=0,keywordFlags=0,name="SpiritPlagueLevel",type="BASE",value=3}},nil}
+c["+3 to Spriggan Form"]={{[1]={flags=0,keywordFlags=0,name="SprigganFormLevel",type="BASE",value=3}},nil}
+c["+3 to Static"]={{[1]={flags=0,keywordFlags=0,name="StaticLevel",type="BASE",value=3}},nil}
+c["+3 to Static Orb"]={{[1]={flags=0,keywordFlags=0,name="StaticOrbLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Bear"]={{[1]={flags=0,keywordFlags=0,name="SummonBearLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Bone Golem"]={{[1]={flags=0,keywordFlags=0,name="SummonBoneGolemLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Frenzy Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonFrenzyTotemLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Raptor"]={{[1]={flags=0,keywordFlags=0,name="SummonRaptorLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Sabertooth"]={{[1]={flags=0,keywordFlags=0,name="SummonSabertoothLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Scorpion"]={{[1]={flags=0,keywordFlags=0,name="SummonScorpionLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Skeletal Mage"]={{[1]={flags=0,keywordFlags=0,name="SummonMageLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Skeleton"]={{[1]={flags=0,keywordFlags=0,name="SummonSkeletonLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Spriggan"]={{[1]={flags=0,keywordFlags=0,name="SummonSprigganLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Storm Crows"]={{[1]={flags=0,keywordFlags=0,name="SummonStormCrowLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Storm Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonStormTotemLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Thorn Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonThornTotemLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Volatile Zombie"]={{[1]={flags=0,keywordFlags=0,name="SummonVolatileZombieLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Wolf"]={{[1]={flags=0,keywordFlags=0,name="SummonWolfLevel",type="BASE",value=3}},nil}
+c["+3 to Summon Wraith"]={{[1]={flags=0,keywordFlags=0,name="SummonWraithLevel",type="BASE",value=3}},nil}
+c["+3 to Surge"]={{[1]={flags=0,keywordFlags=0,name="SurgeLevel",type="BASE",value=3}},nil}
+c["+3 to Swarmblade Form"]={{[1]={flags=0,keywordFlags=0,name="Swarmblade FormLevel",type="BASE",value=3}},nil}
+c["+3 to Swipe"]={{[1]={flags=0,keywordFlags=0,name="SwipeLevel",type="BASE",value=3}},nil}
+c["+3 to Symbols of Hope"]={{[1]={flags=0,keywordFlags=0,name="SigilsOfHopeLevel",type="BASE",value=3}},nil}
+c["+3 to Synchronized Strike"]={{[1]={flags=0,keywordFlags=0,name="SynchronizedStrikeLevel",type="BASE",value=3}},nil}
+c["+3 to Teleport"]={{[1]={flags=0,keywordFlags=0,name="TeleportLevel",type="BASE",value=3}},nil}
+c["+3 to Tempest Strike"]={{[1]={flags=0,keywordFlags=0,name="TempestStrikeLevel",type="BASE",value=3}},nil}
+c["+3 to Tornado"]={{[1]={flags=0,keywordFlags=0,name="TornadoLevel",type="BASE",value=3}},nil}
+c["+3 to Transplant"]={{[1]={flags=0,keywordFlags=0,name="TransplantLevel",type="BASE",value=3}},nil}
+c["+3 to Umbral Blades"]={{[1]={flags=0,keywordFlags=0,name="Umbral Blades 1Level",type="BASE",value=3}},nil}
+c["+3 to Upheaval"]={{[1]={flags=0,keywordFlags=0,name="UpheavalLevel",type="BASE",value=3}},nil}
+c["+3 to Vengeance"]={{[1]={flags=0,keywordFlags=0,name="VengeanceLevel",type="BASE",value=3}},nil}
+c["+3 to Void Cleave"]={{[1]={flags=0,keywordFlags=0,name="VoidCleaveLevel",type="BASE",value=3}},nil}
+c["+3 to Volatile Reversal"]={{[1]={flags=0,keywordFlags=0,name="VolatileReversalLevel",type="BASE",value=3}},nil}
+c["+3 to Volcanic Orb"]={{[1]={flags=0,keywordFlags=0,name="VolcanicOrbLevel",type="BASE",value=3}},nil}
+c["+3 to Wandering Spirits"]={{[1]={flags=0,keywordFlags=0,name="WanderingSpiritsLevel",type="BASE",value=3}},nil}
+c["+3 to Warcry"]={{[1]={flags=0,keywordFlags=0,name="WarcryLevel",type="BASE",value=3}},nil}
+c["+3 to Warpath"]={{[1]={flags=0,keywordFlags=0,name="WarpathLevel",type="BASE",value=3}},nil}
+c["+3 to Werebear Form"]={{[1]={flags=0,keywordFlags=0,name="WerebearFormLevel",type="BASE",value=3}},nil}
 c["+3% Additional Cooldown Recovery"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=3}},nil}
 c["+3% Area For Area Spells"]={{[1]={flags=0,keywordFlags=256,name="AreaOfEffect",type="BASE",value=3}},"  For Area s "}
 c["+3% Armor per Shock with Runeword: Inferno"]={{[1]={[1]={skillName="Shock",type="SkillName"},flags=0,keywordFlags=0,name="Armour",type="BASE",value=3}},"  per  with Runeword: Inferno "}
@@ -6269,146 +6269,146 @@ c["+4 Ward granted by Silver Shroud per stack"]={{[1]={[1]={skillName="Silver Sh
 c["+4 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=4}},nil}
 c["+4 Ward per Second per Equipped Heretical Idol"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=4}},"  per Equipped Heretical Idol "}
 c["+4 Ward per second per Active Maelstrom"]={{[1]={[1]={skillName="Maelstrom",type="SkillName"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=4}},"  per Active  "}
-c["+4 to Abyssal Echoes"]={{},"  "}
-c["+4 to Acid Flask"]={{},"  "}
-c["+4 to Aerial Assault"]={{},"  "}
+c["+4 to Abyssal Echoes"]={{[1]={flags=0,keywordFlags=0,name="AbyssalEchoesLevel",type="BASE",value=4}},nil}
+c["+4 to Acid Flask"]={{[1]={flags=0,keywordFlags=0,name="AcidFlaskLevel",type="BASE",value=4}},nil}
+c["+4 to Aerial Assault"]={{[1]={flags=0,keywordFlags=0,name="Falconer 02 Aerial AssaultLevel",type="BASE",value=4}},nil}
 c["+4 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=4},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=4},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=4},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=4},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=4}},nil}
 c["+4 to All Attributes per Complete Set"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=4},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=4},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=4},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=4},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=4}},"  per Complete Set "}
-c["+4 to Anomaly"]={{},"  "}
-c["+4 to Arcane Ascendance"]={{},"  "}
-c["+4 to Assemble Abomination"]={{},"  "}
+c["+4 to Anomaly"]={{[1]={flags=0,keywordFlags=0,name="AnomalyLevel",type="BASE",value=4}},nil}
+c["+4 to Arcane Ascendance"]={{[1]={flags=0,keywordFlags=0,name="ArcaneAscendanceLevel",type="BASE",value=4}},nil}
+c["+4 to Assemble Abomination"]={{[1]={flags=0,keywordFlags=0,name="AssembleAbominationLevel",type="BASE",value=4}},nil}
 c["+4 to Attunement Skills"]={{[1]={flags=0,keywordFlags=0,name="Att",type="BASE",value=4}},"  Skills "}
-c["+4 to Aura Of Decay"]={{},"  "}
-c["+4 to Avalanche"]={{},"  "}
-c["+4 to Ballista"]={{},"  "}
-c["+4 to Black Hole"]={{},"  "}
-c["+4 to Bladestorm"]={{},"  "}
-c["+4 to Bone Curse"]={{},"  "}
-c["+4 to Chaos Bolts"]={{},"  "}
-c["+4 to Chthonic Fissure"]={{},"  "}
-c["+4 to Cinder Strike"]={{},"  "}
-c["+4 to Dancing Strikes"]={{},"  "}
-c["+4 to Dark Quiver"]={{},"  "}
-c["+4 to Death Seal"]={{},"  "}
-c["+4 to Decoy"]={{},"  "}
-c["+4 to Detonating Arrow"]={{},"  "}
-c["+4 to Devouring Orb"]={{},"  "}
+c["+4 to Aura Of Decay"]={{[1]={flags=0,keywordFlags=0,name="AuraOfDecayLevel",type="BASE",value=4}},nil}
+c["+4 to Avalanche"]={{[1]={flags=0,keywordFlags=0,name="AvalancheLevel",type="BASE",value=4}},nil}
+c["+4 to Ballista"]={{[1]={flags=0,keywordFlags=0,name="SummonBallistaLevel",type="BASE",value=4}},nil}
+c["+4 to Black Hole"]={{[1]={flags=0,keywordFlags=0,name="BlackHoleLevel",type="BASE",value=4}},nil}
+c["+4 to Bladestorm"]={{[1]={flags=0,keywordFlags=0,name="Bladestorm ThrowLevel",type="BASE",value=4}},nil}
+c["+4 to Bone Curse"]={{[1]={flags=0,keywordFlags=0,name="BoneCurseLevel",type="BASE",value=4}},nil}
+c["+4 to Chaos Bolts"]={{[1]={flags=0,keywordFlags=0,name="Warlock 01 Chaos BoltsLevel",type="BASE",value=4}},nil}
+c["+4 to Chthonic Fissure"]={{[1]={flags=0,keywordFlags=0,name="Warlock 04 Chthonic FissureLevel",type="BASE",value=4}},nil}
+c["+4 to Cinder Strike"]={{[1]={flags=0,keywordFlags=0,name="CinderStrikeLevel",type="BASE",value=4}},nil}
+c["+4 to Dancing Strikes"]={{[1]={flags=0,keywordFlags=0,name="DancingStrike1Level",type="BASE",value=4}},nil}
+c["+4 to Dark Quiver"]={{[1]={flags=0,keywordFlags=0,name="DarkQuiverLevel",type="BASE",value=4}},nil}
+c["+4 to Death Seal"]={{[1]={flags=0,keywordFlags=0,name="DeathSealLevel",type="BASE",value=4}},nil}
+c["+4 to Decoy"]={{[1]={flags=0,keywordFlags=0,name="DecoyLevel",type="BASE",value=4}},nil}
+c["+4 to Detonating Arrow"]={{[1]={flags=0,keywordFlags=0,name="DetonatingArrowLevel",type="BASE",value=4}},nil}
+c["+4 to Devouring Orb"]={{[1]={flags=0,keywordFlags=0,name="DevouringOrbLevel",type="BASE",value=4}},nil}
 c["+4 to Dexterity Skills"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=4}},"  Skills "}
-c["+4 to Disintegrate"]={{},"  "}
-c["+4 to Dive Bomb"]={{},"  "}
-c["+4 to Drain Life"]={{},"  "}
-c["+4 to Dread Shade"]={{},"  "}
-c["+4 to Earthquake"]={{},"  "}
-c["+4 to Elemental Nova"]={{},"  "}
-c["+4 to Enchant Weapon"]={{},"  "}
-c["+4 to Entangling Roots"]={{},"  "}
-c["+4 to Erasing Strike"]={{},"  "}
-c["+4 to Eterra's Blessing"]={{},"  "}
-c["+4 to Explosive Trap"]={{},"  "}
-c["+4 to Falconry"]={{},"  "}
-c["+4 to Fireball"]={{},"  "}
-c["+4 to Firebrand"]={{},"  "}
-c["+4 to Flame Reave"]={{},"  "}
-c["+4 to Flame Rush"]={{},"  "}
-c["+4 to Flame Ward"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=4}}," Flame  "}
-c["+4 to Flay"]={{},"  "}
-c["+4 to Flurry"]={{},"  "}
-c["+4 to Focus"]={{},"  "}
-c["+4 to Forge Strike"]={{},"  "}
-c["+4 to Frost Claw"]={{},"  "}
-c["+4 to Frost Wall"]={{},"  "}
-c["+4 to Fury Leap"]={{},"  "}
-c["+4 to Gathering Storm"]={{},"  "}
-c["+4 to Ghostflame"]={{},"  "}
-c["+4 to Glacier"]={{},"  "}
-c["+4 to Glyph of Dominion"]={{},"  "}
-c["+4 to Hail of Arrows"]={{},"  "}
-c["+4 to Hammer Throw"]={{},"  "}
-c["+4 to Harvest"]={{},"  "}
-c["+4 to Healing Hands"]={{},"  "}
-c["+4 to Heartseeker"]={{},"  "}
-c["+4 to Holy Aura"]={{},"  "}
-c["+4 to Hungering Souls"]={{},"  "}
-c["+4 to Ice Barrage"]={{},"  "}
-c["+4 to Infernal Shade"]={{},"  "}
+c["+4 to Disintegrate"]={{[1]={flags=0,keywordFlags=0,name="DisintegrateLevel",type="BASE",value=4}},nil}
+c["+4 to Dive Bomb"]={{[1]={flags=0,keywordFlags=0,name="Falconer 03 Dive BombLevel",type="BASE",value=4}},nil}
+c["+4 to Drain Life"]={{[1]={flags=0,keywordFlags=0,name="DrainLifeLevel",type="BASE",value=4}},nil}
+c["+4 to Dread Shade"]={{[1]={flags=0,keywordFlags=0,name="DreadShadeLevel",type="BASE",value=4}},nil}
+c["+4 to Earthquake"]={{[1]={flags=0,keywordFlags=0,name="EarthquakeSlamLevel",type="BASE",value=4}},nil}
+c["+4 to Elemental Nova"]={{[1]={flags=0,keywordFlags=0,name="ElementalNovaLevel",type="BASE",value=4}},nil}
+c["+4 to Enchant Weapon"]={{[1]={flags=0,keywordFlags=0,name="EnchantWeaponLevel",type="BASE",value=4}},nil}
+c["+4 to Entangling Roots"]={{[1]={flags=0,keywordFlags=0,name="EntanglingRootsLevel",type="BASE",value=4}},nil}
+c["+4 to Erasing Strike"]={{[1]={flags=0,keywordFlags=0,name="ErasingStrikeLevel",type="BASE",value=4}},nil}
+c["+4 to Eterra's Blessing"]={{[1]={flags=0,keywordFlags=0,name="Eterras BlessingLevel",type="BASE",value=4}},nil}
+c["+4 to Explosive Trap"]={{[1]={flags=0,keywordFlags=0,name="Falconer 04 Explosive TrapLevel",type="BASE",value=4}},nil}
+c["+4 to Falconry"]={{[1]={flags=0,keywordFlags=0,name="Falconer 00 FalconryLevel",type="BASE",value=4}},nil}
+c["+4 to Fireball"]={{[1]={flags=0,keywordFlags=0,name="FireballLevel",type="BASE",value=4}},nil}
+c["+4 to Firebrand"]={{[1]={flags=0,keywordFlags=0,name="FirebrandLevel",type="BASE",value=4}},nil}
+c["+4 to Flame Reave"]={{[1]={flags=0,keywordFlags=0,name="FlameReaveLevel",type="BASE",value=4}},nil}
+c["+4 to Flame Rush"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 06 Flame RushLevel",type="BASE",value=4}},nil}
+c["+4 to Flame Ward"]={{[1]={flags=0,keywordFlags=0,name="FlameWardLevel",type="BASE",value=4}},nil}
+c["+4 to Flay"]={{[1]={flags=0,keywordFlags=0,name="Flay 1Level",type="BASE",value=4}},nil}
+c["+4 to Flurry"]={{[1]={flags=0,keywordFlags=0,name="FlurryLevel",type="BASE",value=4}},nil}
+c["+4 to Focus"]={{[1]={flags=0,keywordFlags=0,name="FocusLevel",type="BASE",value=4}},nil}
+c["+4 to Forge Strike"]={{[1]={flags=0,keywordFlags=0,name="ForgeStrikeLevel",type="BASE",value=4}},nil}
+c["+4 to Frost Claw"]={{[1]={flags=0,keywordFlags=0,name="Frost ClawLevel",type="BASE",value=4}},nil}
+c["+4 to Frost Wall"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 01 Frost WallLevel",type="BASE",value=4}},nil}
+c["+4 to Fury Leap"]={{[1]={flags=0,keywordFlags=0,name="FuryLeapLevel",type="BASE",value=4}},nil}
+c["+4 to Gathering Storm"]={{[1]={flags=0,keywordFlags=0,name="GatheringStormMeleeLevel",type="BASE",value=4}},nil}
+c["+4 to Ghostflame"]={{[1]={flags=0,keywordFlags=0,name="Warlock 02 GhostflameLevel",type="BASE",value=4}},nil}
+c["+4 to Glacier"]={{[1]={flags=0,keywordFlags=0,name="GlacierLevel",type="BASE",value=4}},nil}
+c["+4 to Glyph of Dominion"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 02 Glyph of DominionLevel",type="BASE",value=4}},nil}
+c["+4 to Hail of Arrows"]={{[1]={flags=0,keywordFlags=0,name="HailOfArrowsLevel",type="BASE",value=4}},nil}
+c["+4 to Hammer Throw"]={{[1]={flags=0,keywordFlags=0,name="HammerThrowLevel",type="BASE",value=4}},nil}
+c["+4 to Harvest"]={{[1]={flags=0,keywordFlags=0,name="HarvestLevel",type="BASE",value=4}},nil}
+c["+4 to Healing Hands"]={{[1]={flags=0,keywordFlags=0,name="HealingHandsLevel",type="BASE",value=4}},nil}
+c["+4 to Heartseeker"]={{[1]={flags=0,keywordFlags=0,name="HeartseekerLevel",type="BASE",value=4}},nil}
+c["+4 to Holy Aura"]={{[1]={flags=0,keywordFlags=0,name="HolyAuraLevel",type="BASE",value=4}},nil}
+c["+4 to Hungering Souls"]={{[1]={flags=0,keywordFlags=0,name="HungeringSoulsLevel",type="BASE",value=4}},nil}
+c["+4 to Ice Barrage"]={{[1]={flags=0,keywordFlags=0,name="IceBarrageLevel",type="BASE",value=4}},nil}
+c["+4 to Infernal Shade"]={{[1]={flags=0,keywordFlags=0,name="InfernalShadeLevel",type="BASE",value=4}},nil}
 c["+4 to Intelligence Skills"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=4}},"  Skills "}
-c["+4 to Javelin"]={{},"  "}
-c["+4 to Judgement"]={{},"  "}
-c["+4 to Lethal Mirage"]={{},"  "}
-c["+4 to Lightning Blast"]={{},"  "}
-c["+4 to Lunge"]={{},"  "}
-c["+4 to Maelstrom"]={{},"  "}
-c["+4 to Mana Strike"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=4}},"  Strike "}
-c["+4 to Manifest Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=4}}," Manifest  "}
-c["+4 to Marrow Shards"]={{},"  "}
+c["+4 to Javelin"]={{[1]={flags=0,keywordFlags=0,name="JavelinLevel",type="BASE",value=4}},nil}
+c["+4 to Judgement"]={{[1]={flags=0,keywordFlags=0,name="JudgementLevel",type="BASE",value=4}},nil}
+c["+4 to Lethal Mirage"]={{[1]={flags=0,keywordFlags=0,name="Lethal MirageLevel",type="BASE",value=4}},nil}
+c["+4 to Lightning Blast"]={{[1]={flags=0,keywordFlags=0,name="LightningBlastLevel",type="BASE",value=4}},nil}
+c["+4 to Lunge"]={{[1]={flags=0,keywordFlags=0,name="LungeLevel",type="BASE",value=4}},nil}
+c["+4 to Maelstrom"]={{[1]={flags=0,keywordFlags=0,name="MaelstromLevel",type="BASE",value=4}},nil}
+c["+4 to Mana Strike"]={{[1]={flags=0,keywordFlags=0,name="ManaStrikeLevel",type="BASE",value=4}},nil}
+c["+4 to Manifest Armor"]={{[1]={flags=0,keywordFlags=0,name="ManifestArmorLevel",type="BASE",value=4}},nil}
+c["+4 to Marrow Shards"]={{[1]={flags=0,keywordFlags=0,name="MarrowShardsLevel",type="BASE",value=4}},nil}
 c["+4 to Melee Attacks"]={{}," s "}
-c["+4 to Meteor"]={{},"  "}
-c["+4 to Multishot"]={{},"  "}
-c["+4 to Multistrike"]={{},"  "}
-c["+4 to Net"]={{},"  "}
-c["+4 to Profane Veil"]={{},"  "}
-c["+4 to Puncture"]={{},"  "}
-c["+4 to Reaper Form"]={{},"  "}
-c["+4 to Rebuke"]={{},"  "}
-c["+4 to Ring Of Shields"]={{},"  "}
-c["+4 to Rip Blood"]={{},"  "}
-c["+4 to Rive"]={{},"  "}
-c["+4 to Runebolt"]={{},"  "}
-c["+4 to Runic Invocation"]={{},"  "}
-c["+4 to Sacrifice"]={{},"  "}
-c["+4 to Serpent Strike"]={{},"  "}
-c["+4 to Shadow Cascade"]={{},"  "}
-c["+4 to Shadow Rend"]={{},"  "}
-c["+4 to Shatter Strike"]={{},"  "}
-c["+4 to Shield Bash"]={{},"  "}
-c["+4 to Shield Rush"]={{},"  "}
-c["+4 to Shield Throw"]={{},"  "}
-c["+4 to Shift"]={{},"  "}
-c["+4 to Shurikens"]={{},"  "}
-c["+4 to Smelter's Wrath"]={{},"  "}
-c["+4 to Smite"]={{},"  "}
-c["+4 to Smoke Bomb"]={{},"  "}
-c["+4 to Snap Freeze"]={{},"  "}
-c["+4 to Soul Feast"]={{},"  "}
-c["+4 to Spirit Plague"]={{},"  "}
-c["+4 to Spriggan Form"]={{},"  "}
-c["+4 to Static"]={{},"  "}
-c["+4 to Static Orb"]={{},"  "}
+c["+4 to Meteor"]={{[1]={flags=0,keywordFlags=0,name="MeteorLevel",type="BASE",value=4}},nil}
+c["+4 to Multishot"]={{[1]={flags=0,keywordFlags=0,name="RogueMultishotLevel",type="BASE",value=4}},nil}
+c["+4 to Multistrike"]={{[1]={flags=0,keywordFlags=0,name="MultistrikeLevel",type="BASE",value=4}},nil}
+c["+4 to Net"]={{[1]={flags=0,keywordFlags=0,name="Falconer 05 NetLevel",type="BASE",value=4}},nil}
+c["+4 to Profane Veil"]={{[1]={flags=0,keywordFlags=0,name="Warlock 05 Profane VeilLevel",type="BASE",value=4}},nil}
+c["+4 to Puncture"]={{[1]={flags=0,keywordFlags=0,name="PunctureLevel",type="BASE",value=4}},nil}
+c["+4 to Reaper Form"]={{[1]={flags=0,keywordFlags=0,name="ReaperFormLevel",type="BASE",value=4}},nil}
+c["+4 to Rebuke"]={{[1]={flags=0,keywordFlags=0,name="RebukeLevel",type="BASE",value=4}},nil}
+c["+4 to Ring Of Shields"]={{[1]={flags=0,keywordFlags=0,name="Ring Of ShieldsLevel",type="BASE",value=4}},nil}
+c["+4 to Rip Blood"]={{[1]={flags=0,keywordFlags=0,name="RipBloodLevel",type="BASE",value=4}},nil}
+c["+4 to Rive"]={{[1]={flags=0,keywordFlags=0,name="Rive1Level",type="BASE",value=4}},nil}
+c["+4 to Runebolt"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 05c1 Runebolt FireLevel",type="BASE",value=4}},nil}
+c["+4 to Runic Invocation"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 04 Runic InvocationLevel",type="BASE",value=4}},nil}
+c["+4 to Sacrifice"]={{[1]={flags=0,keywordFlags=0,name="SacrificeLevel",type="BASE",value=4}},nil}
+c["+4 to Serpent Strike"]={{[1]={flags=0,keywordFlags=0,name="SerpentStrikeLevel",type="BASE",value=4}},nil}
+c["+4 to Shadow Cascade"]={{[1]={flags=0,keywordFlags=0,name="ShadowCascadeLevel",type="BASE",value=4}},nil}
+c["+4 to Shadow Rend"]={{[1]={flags=0,keywordFlags=0,name="ShadowRendLevel",type="BASE",value=4}},nil}
+c["+4 to Shatter Strike"]={{[1]={flags=0,keywordFlags=0,name="ShatterStrikeLevel",type="BASE",value=4}},nil}
+c["+4 to Shield Bash"]={{[1]={flags=0,keywordFlags=0,name="ShieldBashLevel",type="BASE",value=4}},nil}
+c["+4 to Shield Rush"]={{[1]={flags=0,keywordFlags=0,name="ShieldRushLevel",type="BASE",value=4}},nil}
+c["+4 to Shield Throw"]={{[1]={flags=0,keywordFlags=0,name="ShieldThrowLevel",type="BASE",value=4}},nil}
+c["+4 to Shift"]={{[1]={flags=0,keywordFlags=0,name="ShiftLevel",type="BASE",value=4}},nil}
+c["+4 to Shurikens"]={{[1]={flags=0,keywordFlags=0,name="ShurikensLevel",type="BASE",value=4}},nil}
+c["+4 to Smelter's Wrath"]={{[1]={flags=0,keywordFlags=0,name="SmeltersWrathLevel",type="BASE",value=4}},nil}
+c["+4 to Smite"]={{[1]={flags=0,keywordFlags=0,name="SmiteLevel",type="BASE",value=4}},nil}
+c["+4 to Smoke Bomb"]={{[1]={flags=0,keywordFlags=0,name="Smoke BombLevel",type="BASE",value=4}},nil}
+c["+4 to Snap Freeze"]={{[1]={flags=0,keywordFlags=0,name="SnapFreezeLevel",type="BASE",value=4}},nil}
+c["+4 to Soul Feast"]={{[1]={flags=0,keywordFlags=0,name="Warlock 03 SoulFeastLevel",type="BASE",value=4}},nil}
+c["+4 to Spirit Plague"]={{[1]={flags=0,keywordFlags=0,name="SpiritPlagueLevel",type="BASE",value=4}},nil}
+c["+4 to Spriggan Form"]={{[1]={flags=0,keywordFlags=0,name="SprigganFormLevel",type="BASE",value=4}},nil}
+c["+4 to Static"]={{[1]={flags=0,keywordFlags=0,name="StaticLevel",type="BASE",value=4}},nil}
+c["+4 to Static Orb"]={{[1]={flags=0,keywordFlags=0,name="StaticOrbLevel",type="BASE",value=4}},nil}
 c["+4 to Strength Skills"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=4}},"  Skills "}
-c["+4 to Summon Bear"]={{},"  "}
-c["+4 to Summon Bone Golem"]={{},"  "}
-c["+4 to Summon Frenzy Totem"]={{},"  "}
-c["+4 to Summon Raptor"]={{},"  "}
-c["+4 to Summon Sabertooth"]={{},"  "}
-c["+4 to Summon Scorpion"]={{},"  "}
-c["+4 to Summon Skeletal Mage"]={{},"  "}
-c["+4 to Summon Skeleton"]={{},"  "}
-c["+4 to Summon Spriggan"]={{},"  "}
-c["+4 to Summon Storm Crows"]={{},"  "}
-c["+4 to Summon Storm Totem"]={{},"  "}
-c["+4 to Summon Thorn Totem"]={{},"  "}
-c["+4 to Summon Volatile Zombie"]={{},"  "}
-c["+4 to Summon Wolf"]={{},"  "}
-c["+4 to Summon Wraith"]={{},"  "}
-c["+4 to Surge"]={{},"  "}
-c["+4 to Swarmblade Form"]={{},"  "}
-c["+4 to Swipe"]={{},"  "}
-c["+4 to Symbols of Hope"]={{},"  "}
-c["+4 to Synchronized Strike"]={{},"  "}
-c["+4 to Teleport"]={{},"  "}
-c["+4 to Tempest Strike"]={{},"  "}
-c["+4 to Tornado"]={{},"  "}
-c["+4 to Transplant"]={{},"  "}
-c["+4 to Umbral Blades"]={{},"  "}
-c["+4 to Upheaval"]={{},"  "}
-c["+4 to Vengeance"]={{},"  "}
-c["+4 to Void Cleave"]={{},"  "}
-c["+4 to Volatile Reversal"]={{},"  "}
-c["+4 to Volcanic Orb"]={{},"  "}
-c["+4 to Wandering Spirits"]={{},"  "}
-c["+4 to Warcry"]={{},"  "}
-c["+4 to Warpath"]={{},"  "}
-c["+4 to Werebear Form"]={{},"  "}
+c["+4 to Summon Bear"]={{[1]={flags=0,keywordFlags=0,name="SummonBearLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Bone Golem"]={{[1]={flags=0,keywordFlags=0,name="SummonBoneGolemLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Frenzy Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonFrenzyTotemLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Raptor"]={{[1]={flags=0,keywordFlags=0,name="SummonRaptorLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Sabertooth"]={{[1]={flags=0,keywordFlags=0,name="SummonSabertoothLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Scorpion"]={{[1]={flags=0,keywordFlags=0,name="SummonScorpionLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Skeletal Mage"]={{[1]={flags=0,keywordFlags=0,name="SummonMageLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Skeleton"]={{[1]={flags=0,keywordFlags=0,name="SummonSkeletonLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Spriggan"]={{[1]={flags=0,keywordFlags=0,name="SummonSprigganLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Storm Crows"]={{[1]={flags=0,keywordFlags=0,name="SummonStormCrowLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Storm Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonStormTotemLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Thorn Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonThornTotemLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Volatile Zombie"]={{[1]={flags=0,keywordFlags=0,name="SummonVolatileZombieLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Wolf"]={{[1]={flags=0,keywordFlags=0,name="SummonWolfLevel",type="BASE",value=4}},nil}
+c["+4 to Summon Wraith"]={{[1]={flags=0,keywordFlags=0,name="SummonWraithLevel",type="BASE",value=4}},nil}
+c["+4 to Surge"]={{[1]={flags=0,keywordFlags=0,name="SurgeLevel",type="BASE",value=4}},nil}
+c["+4 to Swarmblade Form"]={{[1]={flags=0,keywordFlags=0,name="Swarmblade FormLevel",type="BASE",value=4}},nil}
+c["+4 to Swipe"]={{[1]={flags=0,keywordFlags=0,name="SwipeLevel",type="BASE",value=4}},nil}
+c["+4 to Symbols of Hope"]={{[1]={flags=0,keywordFlags=0,name="SigilsOfHopeLevel",type="BASE",value=4}},nil}
+c["+4 to Synchronized Strike"]={{[1]={flags=0,keywordFlags=0,name="SynchronizedStrikeLevel",type="BASE",value=4}},nil}
+c["+4 to Teleport"]={{[1]={flags=0,keywordFlags=0,name="TeleportLevel",type="BASE",value=4}},nil}
+c["+4 to Tempest Strike"]={{[1]={flags=0,keywordFlags=0,name="TempestStrikeLevel",type="BASE",value=4}},nil}
+c["+4 to Tornado"]={{[1]={flags=0,keywordFlags=0,name="TornadoLevel",type="BASE",value=4}},nil}
+c["+4 to Transplant"]={{[1]={flags=0,keywordFlags=0,name="TransplantLevel",type="BASE",value=4}},nil}
+c["+4 to Umbral Blades"]={{[1]={flags=0,keywordFlags=0,name="Umbral Blades 1Level",type="BASE",value=4}},nil}
+c["+4 to Upheaval"]={{[1]={flags=0,keywordFlags=0,name="UpheavalLevel",type="BASE",value=4}},nil}
+c["+4 to Vengeance"]={{[1]={flags=0,keywordFlags=0,name="VengeanceLevel",type="BASE",value=4}},nil}
+c["+4 to Void Cleave"]={{[1]={flags=0,keywordFlags=0,name="VoidCleaveLevel",type="BASE",value=4}},nil}
+c["+4 to Volatile Reversal"]={{[1]={flags=0,keywordFlags=0,name="VolatileReversalLevel",type="BASE",value=4}},nil}
+c["+4 to Volcanic Orb"]={{[1]={flags=0,keywordFlags=0,name="VolcanicOrbLevel",type="BASE",value=4}},nil}
+c["+4 to Wandering Spirits"]={{[1]={flags=0,keywordFlags=0,name="WanderingSpiritsLevel",type="BASE",value=4}},nil}
+c["+4 to Warcry"]={{[1]={flags=0,keywordFlags=0,name="WarcryLevel",type="BASE",value=4}},nil}
+c["+4 to Warpath"]={{[1]={flags=0,keywordFlags=0,name="WarpathLevel",type="BASE",value=4}},nil}
+c["+4 to Werebear Form"]={{[1]={flags=0,keywordFlags=0,name="WerebearFormLevel",type="BASE",value=4}},nil}
 c["+4% Ancestral Sabertooth Chance"]={{}," Ancestral Sabertooth Chance "}
 c["+4% Ancestral Sabertooth Duration per Attunement"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="Duration",type="MORE",value=4}}," Ancestral Sabertooth   "}
 c["+4% Armor Shred Chance Per Strength"]={{[1]={[1]={stat="Str",type="PerStat"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=4}},nil}
@@ -7028,7 +7028,7 @@ c["+5 Ward gained when you use Evade"]={{[1]={flags=0,keywordFlags=0,name="Ward"
 c["+5 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=5}},nil}
 c["+5 Ward per Second per Equipped Heretical Idol"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=5}},"  per Equipped Heretical Idol "}
 c["+5 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=5},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=5},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=5},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=5},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=5}},nil}
-c["+5 to Elemental Nova"]={{},"  "}
+c["+5 to Elemental Nova"]={{[1]={flags=0,keywordFlags=0,name="ElementalNovaLevel",type="BASE",value=5}},nil}
 c["+5% Added Critical Multiplier Per Second"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=5}}," Added  Per Second "}
 c["+5% Added Critical Strike Chance Per Second"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=5}}," Added  Per Second "}
 c["+5% Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=5}},nil}
@@ -7614,140 +7614,140 @@ c["+6 Ward Gained"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=
 c["+6 Ward gained each second per Active Wandering Spirit"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=6}},"  gained each second per Active Wandering Spirit "}
 c["+6 Ward granted by Silver Shroud per stack"]={{[1]={[1]={skillName="Silver Shroud",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=6}},"  granted by  per stack "}
 c["+6 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=6}},nil}
-c["+6 to Abyssal Echoes"]={{},"  "}
-c["+6 to Acid Flask"]={{},"  "}
-c["+6 to Aerial Assault"]={{},"  "}
+c["+6 to Abyssal Echoes"]={{[1]={flags=0,keywordFlags=0,name="AbyssalEchoesLevel",type="BASE",value=6}},nil}
+c["+6 to Acid Flask"]={{[1]={flags=0,keywordFlags=0,name="AcidFlaskLevel",type="BASE",value=6}},nil}
+c["+6 to Aerial Assault"]={{[1]={flags=0,keywordFlags=0,name="Falconer 02 Aerial AssaultLevel",type="BASE",value=6}},nil}
 c["+6 to All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=6},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=6},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=6},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=6},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=6}},nil}
-c["+6 to Anomaly"]={{},"  "}
-c["+6 to Arcane Ascendance"]={{},"  "}
-c["+6 to Assemble Abomination"]={{},"  "}
-c["+6 to Aura Of Decay"]={{},"  "}
-c["+6 to Avalanche"]={{},"  "}
-c["+6 to Ballista"]={{},"  "}
-c["+6 to Black Hole"]={{},"  "}
-c["+6 to Bladestorm"]={{},"  "}
-c["+6 to Bone Curse"]={{},"  "}
-c["+6 to Chaos Bolts"]={{},"  "}
-c["+6 to Chthonic Fissure"]={{},"  "}
-c["+6 to Cinder Strike"]={{},"  "}
-c["+6 to Dancing Strikes"]={{},"  "}
-c["+6 to Dark Quiver"]={{},"  "}
-c["+6 to Death Seal"]={{},"  "}
-c["+6 to Decoy"]={{},"  "}
-c["+6 to Detonating Arrow"]={{},"  "}
-c["+6 to Devouring Orb"]={{},"  "}
-c["+6 to Disintegrate"]={{},"  "}
-c["+6 to Dive Bomb"]={{},"  "}
-c["+6 to Drain Life"]={{},"  "}
-c["+6 to Dread Shade"]={{},"  "}
-c["+6 to Earthquake"]={{},"  "}
-c["+6 to Elemental Nova"]={{},"  "}
-c["+6 to Enchant Weapon"]={{},"  "}
-c["+6 to Entangling Roots"]={{},"  "}
-c["+6 to Erasing Strike"]={{},"  "}
-c["+6 to Eterra's Blessing"]={{},"  "}
-c["+6 to Explosive Trap"]={{},"  "}
-c["+6 to Falconry"]={{},"  "}
-c["+6 to Fireball"]={{},"  "}
-c["+6 to Firebrand"]={{},"  "}
-c["+6 to Flame Reave"]={{},"  "}
-c["+6 to Flame Rush"]={{},"  "}
-c["+6 to Flame Ward"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=6}}," Flame  "}
-c["+6 to Flay"]={{},"  "}
-c["+6 to Flurry"]={{},"  "}
-c["+6 to Focus"]={{},"  "}
-c["+6 to Forge Strike"]={{},"  "}
-c["+6 to Frost Claw"]={{},"  "}
-c["+6 to Frost Wall"]={{},"  "}
-c["+6 to Fury Leap"]={{},"  "}
-c["+6 to Gathering Storm"]={{},"  "}
-c["+6 to Ghostflame"]={{},"  "}
-c["+6 to Glacier"]={{},"  "}
-c["+6 to Glyph of Dominion"]={{},"  "}
-c["+6 to Hail of Arrows"]={{},"  "}
-c["+6 to Hammer Throw"]={{},"  "}
-c["+6 to Harvest"]={{},"  "}
-c["+6 to Healing Hands"]={{},"  "}
-c["+6 to Heartseeker"]={{},"  "}
-c["+6 to Holy Aura"]={{},"  "}
-c["+6 to Hungering Souls"]={{},"  "}
-c["+6 to Ice Barrage"]={{},"  "}
-c["+6 to Infernal Shade"]={{},"  "}
-c["+6 to Javelin"]={{},"  "}
-c["+6 to Judgement"]={{},"  "}
-c["+6 to Lethal Mirage"]={{},"  "}
-c["+6 to Lightning Blast"]={{},"  "}
-c["+6 to Lunge"]={{},"  "}
-c["+6 to Maelstrom"]={{},"  "}
-c["+6 to Mana Strike"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=6}},"  Strike "}
-c["+6 to Manifest Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=6}}," Manifest  "}
-c["+6 to Marrow Shards"]={{},"  "}
-c["+6 to Meteor"]={{},"  "}
-c["+6 to Multishot"]={{},"  "}
-c["+6 to Multistrike"]={{},"  "}
-c["+6 to Net"]={{},"  "}
-c["+6 to Profane Veil"]={{},"  "}
-c["+6 to Puncture"]={{},"  "}
-c["+6 to Reaper Form"]={{},"  "}
-c["+6 to Rebuke"]={{},"  "}
-c["+6 to Ring Of Shields"]={{},"  "}
-c["+6 to Rip Blood"]={{},"  "}
-c["+6 to Rive"]={{},"  "}
-c["+6 to Runebolt"]={{},"  "}
-c["+6 to Runic Invocation"]={{},"  "}
-c["+6 to Sacrifice"]={{},"  "}
-c["+6 to Serpent Strike"]={{},"  "}
-c["+6 to Shadow Cascade"]={{},"  "}
-c["+6 to Shadow Rend"]={{},"  "}
-c["+6 to Shatter Strike"]={{},"  "}
-c["+6 to Shield Bash"]={{},"  "}
-c["+6 to Shield Rush"]={{},"  "}
-c["+6 to Shield Throw"]={{},"  "}
-c["+6 to Shift"]={{},"  "}
-c["+6 to Shurikens"]={{},"  "}
-c["+6 to Smelter's Wrath"]={{},"  "}
-c["+6 to Smite"]={{},"  "}
-c["+6 to Smoke Bomb"]={{},"  "}
-c["+6 to Snap Freeze"]={{},"  "}
-c["+6 to Soul Feast"]={{},"  "}
-c["+6 to Spirit Plague"]={{},"  "}
-c["+6 to Spriggan Form"]={{},"  "}
-c["+6 to Static"]={{},"  "}
-c["+6 to Static Orb"]={{},"  "}
-c["+6 to Summon Bear"]={{},"  "}
-c["+6 to Summon Bone Golem"]={{},"  "}
-c["+6 to Summon Frenzy Totem"]={{},"  "}
-c["+6 to Summon Raptor"]={{},"  "}
-c["+6 to Summon Sabertooth"]={{},"  "}
-c["+6 to Summon Scorpion"]={{},"  "}
-c["+6 to Summon Skeletal Mage"]={{},"  "}
-c["+6 to Summon Skeleton"]={{},"  "}
-c["+6 to Summon Spriggan"]={{},"  "}
-c["+6 to Summon Storm Crows"]={{},"  "}
-c["+6 to Summon Storm Totem"]={{},"  "}
-c["+6 to Summon Thorn Totem"]={{},"  "}
-c["+6 to Summon Volatile Zombie"]={{},"  "}
-c["+6 to Summon Wolf"]={{},"  "}
-c["+6 to Summon Wraith"]={{},"  "}
-c["+6 to Surge"]={{},"  "}
-c["+6 to Swarmblade Form"]={{},"  "}
-c["+6 to Swipe"]={{},"  "}
-c["+6 to Symbols of Hope"]={{},"  "}
-c["+6 to Synchronized Strike"]={{},"  "}
-c["+6 to Teleport"]={{},"  "}
-c["+6 to Tempest Strike"]={{},"  "}
-c["+6 to Tornado"]={{},"  "}
-c["+6 to Transplant"]={{},"  "}
-c["+6 to Umbral Blades"]={{},"  "}
-c["+6 to Upheaval"]={{},"  "}
-c["+6 to Vengeance"]={{},"  "}
-c["+6 to Void Cleave"]={{},"  "}
-c["+6 to Volatile Reversal"]={{},"  "}
-c["+6 to Volcanic Orb"]={{},"  "}
-c["+6 to Wandering Spirits"]={{},"  "}
-c["+6 to Warcry"]={{},"  "}
-c["+6 to Warpath"]={{},"  "}
-c["+6 to Werebear Form"]={{},"  "}
+c["+6 to Anomaly"]={{[1]={flags=0,keywordFlags=0,name="AnomalyLevel",type="BASE",value=6}},nil}
+c["+6 to Arcane Ascendance"]={{[1]={flags=0,keywordFlags=0,name="ArcaneAscendanceLevel",type="BASE",value=6}},nil}
+c["+6 to Assemble Abomination"]={{[1]={flags=0,keywordFlags=0,name="AssembleAbominationLevel",type="BASE",value=6}},nil}
+c["+6 to Aura Of Decay"]={{[1]={flags=0,keywordFlags=0,name="AuraOfDecayLevel",type="BASE",value=6}},nil}
+c["+6 to Avalanche"]={{[1]={flags=0,keywordFlags=0,name="AvalancheLevel",type="BASE",value=6}},nil}
+c["+6 to Ballista"]={{[1]={flags=0,keywordFlags=0,name="SummonBallistaLevel",type="BASE",value=6}},nil}
+c["+6 to Black Hole"]={{[1]={flags=0,keywordFlags=0,name="BlackHoleLevel",type="BASE",value=6}},nil}
+c["+6 to Bladestorm"]={{[1]={flags=0,keywordFlags=0,name="Bladestorm ThrowLevel",type="BASE",value=6}},nil}
+c["+6 to Bone Curse"]={{[1]={flags=0,keywordFlags=0,name="BoneCurseLevel",type="BASE",value=6}},nil}
+c["+6 to Chaos Bolts"]={{[1]={flags=0,keywordFlags=0,name="Warlock 01 Chaos BoltsLevel",type="BASE",value=6}},nil}
+c["+6 to Chthonic Fissure"]={{[1]={flags=0,keywordFlags=0,name="Warlock 04 Chthonic FissureLevel",type="BASE",value=6}},nil}
+c["+6 to Cinder Strike"]={{[1]={flags=0,keywordFlags=0,name="CinderStrikeLevel",type="BASE",value=6}},nil}
+c["+6 to Dancing Strikes"]={{[1]={flags=0,keywordFlags=0,name="DancingStrike1Level",type="BASE",value=6}},nil}
+c["+6 to Dark Quiver"]={{[1]={flags=0,keywordFlags=0,name="DarkQuiverLevel",type="BASE",value=6}},nil}
+c["+6 to Death Seal"]={{[1]={flags=0,keywordFlags=0,name="DeathSealLevel",type="BASE",value=6}},nil}
+c["+6 to Decoy"]={{[1]={flags=0,keywordFlags=0,name="DecoyLevel",type="BASE",value=6}},nil}
+c["+6 to Detonating Arrow"]={{[1]={flags=0,keywordFlags=0,name="DetonatingArrowLevel",type="BASE",value=6}},nil}
+c["+6 to Devouring Orb"]={{[1]={flags=0,keywordFlags=0,name="DevouringOrbLevel",type="BASE",value=6}},nil}
+c["+6 to Disintegrate"]={{[1]={flags=0,keywordFlags=0,name="DisintegrateLevel",type="BASE",value=6}},nil}
+c["+6 to Dive Bomb"]={{[1]={flags=0,keywordFlags=0,name="Falconer 03 Dive BombLevel",type="BASE",value=6}},nil}
+c["+6 to Drain Life"]={{[1]={flags=0,keywordFlags=0,name="DrainLifeLevel",type="BASE",value=6}},nil}
+c["+6 to Dread Shade"]={{[1]={flags=0,keywordFlags=0,name="DreadShadeLevel",type="BASE",value=6}},nil}
+c["+6 to Earthquake"]={{[1]={flags=0,keywordFlags=0,name="EarthquakeSlamLevel",type="BASE",value=6}},nil}
+c["+6 to Elemental Nova"]={{[1]={flags=0,keywordFlags=0,name="ElementalNovaLevel",type="BASE",value=6}},nil}
+c["+6 to Enchant Weapon"]={{[1]={flags=0,keywordFlags=0,name="EnchantWeaponLevel",type="BASE",value=6}},nil}
+c["+6 to Entangling Roots"]={{[1]={flags=0,keywordFlags=0,name="EntanglingRootsLevel",type="BASE",value=6}},nil}
+c["+6 to Erasing Strike"]={{[1]={flags=0,keywordFlags=0,name="ErasingStrikeLevel",type="BASE",value=6}},nil}
+c["+6 to Eterra's Blessing"]={{[1]={flags=0,keywordFlags=0,name="Eterras BlessingLevel",type="BASE",value=6}},nil}
+c["+6 to Explosive Trap"]={{[1]={flags=0,keywordFlags=0,name="Falconer 04 Explosive TrapLevel",type="BASE",value=6}},nil}
+c["+6 to Falconry"]={{[1]={flags=0,keywordFlags=0,name="Falconer 00 FalconryLevel",type="BASE",value=6}},nil}
+c["+6 to Fireball"]={{[1]={flags=0,keywordFlags=0,name="FireballLevel",type="BASE",value=6}},nil}
+c["+6 to Firebrand"]={{[1]={flags=0,keywordFlags=0,name="FirebrandLevel",type="BASE",value=6}},nil}
+c["+6 to Flame Reave"]={{[1]={flags=0,keywordFlags=0,name="FlameReaveLevel",type="BASE",value=6}},nil}
+c["+6 to Flame Rush"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 06 Flame RushLevel",type="BASE",value=6}},nil}
+c["+6 to Flame Ward"]={{[1]={flags=0,keywordFlags=0,name="FlameWardLevel",type="BASE",value=6}},nil}
+c["+6 to Flay"]={{[1]={flags=0,keywordFlags=0,name="Flay 1Level",type="BASE",value=6}},nil}
+c["+6 to Flurry"]={{[1]={flags=0,keywordFlags=0,name="FlurryLevel",type="BASE",value=6}},nil}
+c["+6 to Focus"]={{[1]={flags=0,keywordFlags=0,name="FocusLevel",type="BASE",value=6}},nil}
+c["+6 to Forge Strike"]={{[1]={flags=0,keywordFlags=0,name="ForgeStrikeLevel",type="BASE",value=6}},nil}
+c["+6 to Frost Claw"]={{[1]={flags=0,keywordFlags=0,name="Frost ClawLevel",type="BASE",value=6}},nil}
+c["+6 to Frost Wall"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 01 Frost WallLevel",type="BASE",value=6}},nil}
+c["+6 to Fury Leap"]={{[1]={flags=0,keywordFlags=0,name="FuryLeapLevel",type="BASE",value=6}},nil}
+c["+6 to Gathering Storm"]={{[1]={flags=0,keywordFlags=0,name="GatheringStormMeleeLevel",type="BASE",value=6}},nil}
+c["+6 to Ghostflame"]={{[1]={flags=0,keywordFlags=0,name="Warlock 02 GhostflameLevel",type="BASE",value=6}},nil}
+c["+6 to Glacier"]={{[1]={flags=0,keywordFlags=0,name="GlacierLevel",type="BASE",value=6}},nil}
+c["+6 to Glyph of Dominion"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 02 Glyph of DominionLevel",type="BASE",value=6}},nil}
+c["+6 to Hail of Arrows"]={{[1]={flags=0,keywordFlags=0,name="HailOfArrowsLevel",type="BASE",value=6}},nil}
+c["+6 to Hammer Throw"]={{[1]={flags=0,keywordFlags=0,name="HammerThrowLevel",type="BASE",value=6}},nil}
+c["+6 to Harvest"]={{[1]={flags=0,keywordFlags=0,name="HarvestLevel",type="BASE",value=6}},nil}
+c["+6 to Healing Hands"]={{[1]={flags=0,keywordFlags=0,name="HealingHandsLevel",type="BASE",value=6}},nil}
+c["+6 to Heartseeker"]={{[1]={flags=0,keywordFlags=0,name="HeartseekerLevel",type="BASE",value=6}},nil}
+c["+6 to Holy Aura"]={{[1]={flags=0,keywordFlags=0,name="HolyAuraLevel",type="BASE",value=6}},nil}
+c["+6 to Hungering Souls"]={{[1]={flags=0,keywordFlags=0,name="HungeringSoulsLevel",type="BASE",value=6}},nil}
+c["+6 to Ice Barrage"]={{[1]={flags=0,keywordFlags=0,name="IceBarrageLevel",type="BASE",value=6}},nil}
+c["+6 to Infernal Shade"]={{[1]={flags=0,keywordFlags=0,name="InfernalShadeLevel",type="BASE",value=6}},nil}
+c["+6 to Javelin"]={{[1]={flags=0,keywordFlags=0,name="JavelinLevel",type="BASE",value=6}},nil}
+c["+6 to Judgement"]={{[1]={flags=0,keywordFlags=0,name="JudgementLevel",type="BASE",value=6}},nil}
+c["+6 to Lethal Mirage"]={{[1]={flags=0,keywordFlags=0,name="Lethal MirageLevel",type="BASE",value=6}},nil}
+c["+6 to Lightning Blast"]={{[1]={flags=0,keywordFlags=0,name="LightningBlastLevel",type="BASE",value=6}},nil}
+c["+6 to Lunge"]={{[1]={flags=0,keywordFlags=0,name="LungeLevel",type="BASE",value=6}},nil}
+c["+6 to Maelstrom"]={{[1]={flags=0,keywordFlags=0,name="MaelstromLevel",type="BASE",value=6}},nil}
+c["+6 to Mana Strike"]={{[1]={flags=0,keywordFlags=0,name="ManaStrikeLevel",type="BASE",value=6}},nil}
+c["+6 to Manifest Armor"]={{[1]={flags=0,keywordFlags=0,name="ManifestArmorLevel",type="BASE",value=6}},nil}
+c["+6 to Marrow Shards"]={{[1]={flags=0,keywordFlags=0,name="MarrowShardsLevel",type="BASE",value=6}},nil}
+c["+6 to Meteor"]={{[1]={flags=0,keywordFlags=0,name="MeteorLevel",type="BASE",value=6}},nil}
+c["+6 to Multishot"]={{[1]={flags=0,keywordFlags=0,name="RogueMultishotLevel",type="BASE",value=6}},nil}
+c["+6 to Multistrike"]={{[1]={flags=0,keywordFlags=0,name="MultistrikeLevel",type="BASE",value=6}},nil}
+c["+6 to Net"]={{[1]={flags=0,keywordFlags=0,name="Falconer 05 NetLevel",type="BASE",value=6}},nil}
+c["+6 to Profane Veil"]={{[1]={flags=0,keywordFlags=0,name="Warlock 05 Profane VeilLevel",type="BASE",value=6}},nil}
+c["+6 to Puncture"]={{[1]={flags=0,keywordFlags=0,name="PunctureLevel",type="BASE",value=6}},nil}
+c["+6 to Reaper Form"]={{[1]={flags=0,keywordFlags=0,name="ReaperFormLevel",type="BASE",value=6}},nil}
+c["+6 to Rebuke"]={{[1]={flags=0,keywordFlags=0,name="RebukeLevel",type="BASE",value=6}},nil}
+c["+6 to Ring Of Shields"]={{[1]={flags=0,keywordFlags=0,name="Ring Of ShieldsLevel",type="BASE",value=6}},nil}
+c["+6 to Rip Blood"]={{[1]={flags=0,keywordFlags=0,name="RipBloodLevel",type="BASE",value=6}},nil}
+c["+6 to Rive"]={{[1]={flags=0,keywordFlags=0,name="Rive1Level",type="BASE",value=6}},nil}
+c["+6 to Runebolt"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 05c1 Runebolt FireLevel",type="BASE",value=6}},nil}
+c["+6 to Runic Invocation"]={{[1]={flags=0,keywordFlags=0,name="Runemaster 04 Runic InvocationLevel",type="BASE",value=6}},nil}
+c["+6 to Sacrifice"]={{[1]={flags=0,keywordFlags=0,name="SacrificeLevel",type="BASE",value=6}},nil}
+c["+6 to Serpent Strike"]={{[1]={flags=0,keywordFlags=0,name="SerpentStrikeLevel",type="BASE",value=6}},nil}
+c["+6 to Shadow Cascade"]={{[1]={flags=0,keywordFlags=0,name="ShadowCascadeLevel",type="BASE",value=6}},nil}
+c["+6 to Shadow Rend"]={{[1]={flags=0,keywordFlags=0,name="ShadowRendLevel",type="BASE",value=6}},nil}
+c["+6 to Shatter Strike"]={{[1]={flags=0,keywordFlags=0,name="ShatterStrikeLevel",type="BASE",value=6}},nil}
+c["+6 to Shield Bash"]={{[1]={flags=0,keywordFlags=0,name="ShieldBashLevel",type="BASE",value=6}},nil}
+c["+6 to Shield Rush"]={{[1]={flags=0,keywordFlags=0,name="ShieldRushLevel",type="BASE",value=6}},nil}
+c["+6 to Shield Throw"]={{[1]={flags=0,keywordFlags=0,name="ShieldThrowLevel",type="BASE",value=6}},nil}
+c["+6 to Shift"]={{[1]={flags=0,keywordFlags=0,name="ShiftLevel",type="BASE",value=6}},nil}
+c["+6 to Shurikens"]={{[1]={flags=0,keywordFlags=0,name="ShurikensLevel",type="BASE",value=6}},nil}
+c["+6 to Smelter's Wrath"]={{[1]={flags=0,keywordFlags=0,name="SmeltersWrathLevel",type="BASE",value=6}},nil}
+c["+6 to Smite"]={{[1]={flags=0,keywordFlags=0,name="SmiteLevel",type="BASE",value=6}},nil}
+c["+6 to Smoke Bomb"]={{[1]={flags=0,keywordFlags=0,name="Smoke BombLevel",type="BASE",value=6}},nil}
+c["+6 to Snap Freeze"]={{[1]={flags=0,keywordFlags=0,name="SnapFreezeLevel",type="BASE",value=6}},nil}
+c["+6 to Soul Feast"]={{[1]={flags=0,keywordFlags=0,name="Warlock 03 SoulFeastLevel",type="BASE",value=6}},nil}
+c["+6 to Spirit Plague"]={{[1]={flags=0,keywordFlags=0,name="SpiritPlagueLevel",type="BASE",value=6}},nil}
+c["+6 to Spriggan Form"]={{[1]={flags=0,keywordFlags=0,name="SprigganFormLevel",type="BASE",value=6}},nil}
+c["+6 to Static"]={{[1]={flags=0,keywordFlags=0,name="StaticLevel",type="BASE",value=6}},nil}
+c["+6 to Static Orb"]={{[1]={flags=0,keywordFlags=0,name="StaticOrbLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Bear"]={{[1]={flags=0,keywordFlags=0,name="SummonBearLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Bone Golem"]={{[1]={flags=0,keywordFlags=0,name="SummonBoneGolemLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Frenzy Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonFrenzyTotemLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Raptor"]={{[1]={flags=0,keywordFlags=0,name="SummonRaptorLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Sabertooth"]={{[1]={flags=0,keywordFlags=0,name="SummonSabertoothLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Scorpion"]={{[1]={flags=0,keywordFlags=0,name="SummonScorpionLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Skeletal Mage"]={{[1]={flags=0,keywordFlags=0,name="SummonMageLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Skeleton"]={{[1]={flags=0,keywordFlags=0,name="SummonSkeletonLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Spriggan"]={{[1]={flags=0,keywordFlags=0,name="SummonSprigganLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Storm Crows"]={{[1]={flags=0,keywordFlags=0,name="SummonStormCrowLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Storm Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonStormTotemLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Thorn Totem"]={{[1]={flags=0,keywordFlags=0,name="SummonThornTotemLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Volatile Zombie"]={{[1]={flags=0,keywordFlags=0,name="SummonVolatileZombieLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Wolf"]={{[1]={flags=0,keywordFlags=0,name="SummonWolfLevel",type="BASE",value=6}},nil}
+c["+6 to Summon Wraith"]={{[1]={flags=0,keywordFlags=0,name="SummonWraithLevel",type="BASE",value=6}},nil}
+c["+6 to Surge"]={{[1]={flags=0,keywordFlags=0,name="SurgeLevel",type="BASE",value=6}},nil}
+c["+6 to Swarmblade Form"]={{[1]={flags=0,keywordFlags=0,name="Swarmblade FormLevel",type="BASE",value=6}},nil}
+c["+6 to Swipe"]={{[1]={flags=0,keywordFlags=0,name="SwipeLevel",type="BASE",value=6}},nil}
+c["+6 to Symbols of Hope"]={{[1]={flags=0,keywordFlags=0,name="SigilsOfHopeLevel",type="BASE",value=6}},nil}
+c["+6 to Synchronized Strike"]={{[1]={flags=0,keywordFlags=0,name="SynchronizedStrikeLevel",type="BASE",value=6}},nil}
+c["+6 to Teleport"]={{[1]={flags=0,keywordFlags=0,name="TeleportLevel",type="BASE",value=6}},nil}
+c["+6 to Tempest Strike"]={{[1]={flags=0,keywordFlags=0,name="TempestStrikeLevel",type="BASE",value=6}},nil}
+c["+6 to Tornado"]={{[1]={flags=0,keywordFlags=0,name="TornadoLevel",type="BASE",value=6}},nil}
+c["+6 to Transplant"]={{[1]={flags=0,keywordFlags=0,name="TransplantLevel",type="BASE",value=6}},nil}
+c["+6 to Umbral Blades"]={{[1]={flags=0,keywordFlags=0,name="Umbral Blades 1Level",type="BASE",value=6}},nil}
+c["+6 to Upheaval"]={{[1]={flags=0,keywordFlags=0,name="UpheavalLevel",type="BASE",value=6}},nil}
+c["+6 to Vengeance"]={{[1]={flags=0,keywordFlags=0,name="VengeanceLevel",type="BASE",value=6}},nil}
+c["+6 to Void Cleave"]={{[1]={flags=0,keywordFlags=0,name="VoidCleaveLevel",type="BASE",value=6}},nil}
+c["+6 to Volatile Reversal"]={{[1]={flags=0,keywordFlags=0,name="VolatileReversalLevel",type="BASE",value=6}},nil}
+c["+6 to Volcanic Orb"]={{[1]={flags=0,keywordFlags=0,name="VolcanicOrbLevel",type="BASE",value=6}},nil}
+c["+6 to Wandering Spirits"]={{[1]={flags=0,keywordFlags=0,name="WanderingSpiritsLevel",type="BASE",value=6}},nil}
+c["+6 to Warcry"]={{[1]={flags=0,keywordFlags=0,name="WarcryLevel",type="BASE",value=6}},nil}
+c["+6 to Warpath"]={{[1]={flags=0,keywordFlags=0,name="WarpathLevel",type="BASE",value=6}},nil}
+c["+6 to Werebear Form"]={{[1]={flags=0,keywordFlags=0,name="WerebearFormLevel",type="BASE",value=6}},nil}
 c["+6% Attack And Cast Speed"]={{[1]={flags=0,keywordFlags=0,name="Speed",type="BASE",value=6}},nil}
 c["+6% Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="BASE",value=6}},nil}
 c["+6% Axe Attack And Cast Speed"]={{[1]={flags=0,keywordFlags=0,name="Speed",type="BASE",value=6}}," Axe  "}

@@ -462,6 +462,13 @@ end
 data.skills = readJsonFile("Data/skills.json")
 data.skillStatMap = LoadModule("Data/SkillStatMap", makeSkillMod, makeFlagMod, makeSkillDataMod)
 
+data.treeSkills = {}
+for skillId, skill in pairs(data.skills) do
+	if skill.treeId then
+		table.insert(data.treeSkills, skillId)
+	end
+end
+
 -- Add a default skill
 data.skills["Default"] = {
 	name = "Default",

@@ -438,6 +438,16 @@ return {
 	{ label = "Movement Speed", { format = "x {2:output:EffectiveMovementSpeedMod}", { breakdown = "EffectiveMovementSpeedMod" }, { modName = { "MovementSpeed", "MovementSpeedEqualHighestLinkedPlayers" } }, }, },
 } },
 } },
+-- misc others
+{ 1, "MiscOthers", 3, colorCodes.DEFENCE, {{ defaultCollapsed = false, label = "Others", data =  generateTableByValues({ label = "Skill Levels"},
+		data.treeSkills, function (_,skillId)
+    		return { label = data.skills[skillId].name .. " Level", haveOutput = skillId .. "Level", { format = "{0:output:" .. skillId .. "Level}",
+    			{ breakdown = skillId .. "Level" },
+    			{ modName = skillId .. "Level" } } }
+		end
+	),
+},
+} },
 -- damage taken
 { 3, "DamageTaken", 1, colorCodes.DEFENCE, {{ defaultCollapsed = false, label = "Damage Taken", data = {
 	colWidth = 95,
