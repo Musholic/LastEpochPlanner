@@ -28,7 +28,7 @@ The following features are supported (or partially):
 * Support for debuff effects (resistance shred, chill, ...)
 
 A lot of stats and mods/affixes are yet not working correctly.
-* **Out of 15,506 mods, 5,465 (35%) mods are recognized by the parser**. Even if a mod is recognized, it's not guaranteed that it will work as expected.
+* **Out of 15,506 mods, 6,646 (43%) mods are recognized by the parser**. Even if a mod is recognized, it's not guaranteed that it will work as expected.
 * The total amount of mods is made of 
   * the implicits (one for each implicit of each item)
   * the prefixes and suffixes (one for each tier of each)
