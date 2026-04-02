@@ -86,6 +86,7 @@ local modNameList = {
 	["elemental damage taken over time"] = "ElementalDamageTakenOverTime",
 	-- Other defences
 	["block chance"] = "BlockChance",
+	["block effectiveness"] = "BlockEffectiveness",
 	["health gained on block"] = "LifeOnBlock",
 	["health gain on block"] = "LifeOnBlock",
 	["mana gained on block"] = "ManaOnBlock",

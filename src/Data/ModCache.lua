@@ -1300,7 +1300,7 @@ c["+1 Black Arrows"]={{}," Black Arrows "}
 c["+1 Bleed Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=100}},nil}
 c["+1 Bleeding Fury Max Stacks"]={{}," ing Fury Max Stacks "}
 c["+1 Block Chance converted to Parry Chance while not wielding a shield"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=1}},"  converted to Parry Chance while not wielding a shield "}
-c["+1 Block Effectiveness per 1% Total Uncapped Resistance"]={{}," Block Effectiveness per 1% Total Uncapped Resistance "}
+c["+1 Block Effectiveness per 1% Total Uncapped Resistance"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=1}},"  per 1% Total Uncapped Resistance "}
 c["+1 Bone Armor Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}}," Bone  Duration "}
 c["+1 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=1}},nil}
 c["+1 Bow Damage Per 3 Dex"]={{[1]={[1]={div=3,stat="Dex",type="PerStat"},flags=0,keywordFlags=2048,name="Damage",type="BASE",value=1}},nil}
@@ -2059,7 +2059,7 @@ c["+10% Bleed Duration On Third Strike"]={{[1]={[1]={skillName="Bleed",type="Ski
 c["+10% Blind Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=10}},nil}
 c["+10% Block Chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=10}},nil}
 c["+10% Block Chance per stack of Golden Aegis"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=10}},"  per stack of Golden Aegis "}
-c["+10% Block Effectiveness On Heal"]={{}," Block Effectiveness On Heal "}
+c["+10% Block Effectiveness On Heal"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=10}},"  On Heal "}
 c["+10% Bow Hit Damage Per Pierce"]={{[1]={flags=8388608,keywordFlags=2048,name="Damage",type="MORE",value=10}},"    Per Pierce "}
 c["+10% Burning Dagger Damage"]={{[1]={[1]={skillName="Burning Dagger",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=10}},nil}
 c["+10% Caltrops Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=10}}," Caltrops  "}
@@ -2323,7 +2323,7 @@ c["+10% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",typ
 c["+10% to Minion All Resistances"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=10}}},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=10}}},[3]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=10}}},[4]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=10}}},[5]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=10}}},[6]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=10}}},[7]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=10}}}},nil}
 c["+100 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=100}},nil}
 c["+100 Armor To Totems And Vines"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=100}},"  To Totems And Vines "}
-c["+100 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+100 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=100}},nil}
 c["+100 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=100}},nil}
 c["+100 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=100}},nil}
 c["+100 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=100}},nil}
@@ -2477,7 +2477,7 @@ c["+103 Health gained when stunned"]={{[1]={flags=0,keywordFlags=0,name="Life",t
 c["+103 Ward gained per Rune consumed with Runic Invocation"]={{[1]={[1]={skillName="Runic Invocation",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=103}},"  gained per Rune consumed with  "}
 c["+104 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=104}},nil}
 c["+105 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=105}},nil}
-c["+105 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+105 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=105}},nil}
 c["+105 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=105}},nil}
 c["+105 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=105}},nil}
 c["+105 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=105}},nil}
@@ -2509,7 +2509,7 @@ c["+108% Chance to inflict Time Rot on Void Hit"]={{[1]={flags=8388608,keywordFl
 c["+108% Critical Strike Multiplier against Frozen Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Frozen"},flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=108}},nil}
 c["+108% Mana Efficiency with Lethal Mirage"]={{[1]={[1]={skillName="Lethal Mirage",type="SkillName"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=108}},"  Efficiency with  "}
 c["+108% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=108}},nil}
-c["+1080 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+1080 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=1080}},nil}
 c["+109 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=109}},nil}
 c["+11 Attunement"]={{[1]={flags=0,keywordFlags=0,name="Att",type="BASE",value=11}},nil}
 c["+11 Bow Cold Damage"]={{[1]={flags=0,keywordFlags=2048,name="ColdDamage",type="BASE",value=11}},nil}
@@ -2609,7 +2609,7 @@ c["+11% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",typ
 c["+11% to All Resistances While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="FireResist",type="BASE",value=11},[2]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=11},[3]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=11},[4]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=11},[5]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=11},[6]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=11},[7]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=11}},nil}
 c["+110 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=110}},nil}
 c["+110 Armor per Rah Rune"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=110}},"  per Rah Rune "}
-c["+110 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+110 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=110}},nil}
 c["+110 Curse Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=110}}," Curse  "}
 c["+110 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=110}},nil}
 c["+110 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=110}},nil}
@@ -2643,9 +2643,9 @@ c["+115 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThres
 c["+115 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=115}},nil}
 c["+115 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=115}},nil}
 c["+115 Minion Health"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Life",type="BASE",value=115}}}},nil}
-c["+1150 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+1150 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=1150}},nil}
 c["+116 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=116}},nil}
-c["+116 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+116 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=116}},nil}
 c["+117 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=117}},nil}
 c["+117% Chance to Chill on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=117}},nil}
 c["+117% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=117}},nil}
@@ -2819,7 +2819,7 @@ c["+12% chance to Block hits taken while Moving"]={{}," to Block s taken  "}
 c["+12% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=12},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=12},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=12},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=12},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=12},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=12},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=12}},nil}
 c["+12% to Minion All Resistances"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=12}}},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=12}}},[3]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=12}}},[4]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=12}}},[5]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=12}}},[6]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=12}}},[7]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=12}}}},nil}
 c["+120 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=120}},nil}
-c["+120 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+120 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=120}},nil}
 c["+120 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=120}},nil}
 c["+120 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=120}},nil}
 c["+120 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=120}},nil}
@@ -2832,7 +2832,7 @@ c["+120% Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",v
 c["+120% Melee Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=512,name="CritMultiplier",type="BASE",value=120}},nil}
 c["+120% Reveal Rate"]={{}," Reveal Rate "}
 c["+120% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=120}},nil}
-c["+1201 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+1201 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=1201}},nil}
 c["+121 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=121}},nil}
 c["+121 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=121}}}},nil}
 c["+121% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
@@ -2845,7 +2845,7 @@ c["+123% Chance to apply Frostbite on Hit"]={{[1]={flags=8388608,keywordFlags=0,
 c["+123% Freeze Rate Multiplier for Minions affected by Dread Shade"]={{}," Freeze Rate Multiplier for s affected by  "}
 c["+124 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=124}},nil}
 c["+125 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=125}},nil}
-c["+125 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+125 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=125}},nil}
 c["+125 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=125}},nil}
 c["+125 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=125}},nil}
 c["+125% Chance to Ignite on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=125}},nil}
@@ -2951,7 +2951,7 @@ c["+130% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=
 c["+130% Damage when consuming 12 stacks"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=130}},"  when consuming 12 stacks "}
 c["+130% Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=130}},nil}
 c["+130% Range when consuming 12 stacks"]={{}," Range when consuming 12 stacks "}
-c["+131 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+131 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=131}},nil}
 c["+131 Minion Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=131}}}},nil}
 c["+131 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=131}},nil}
 c["+132 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=132}},nil}
@@ -3097,7 +3097,7 @@ c["+15 Armor for Totems"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE
 c["+15 Armor on Block"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=15}},"  on Block "}
 c["+15 Attunement"]={{[1]={flags=0,keywordFlags=0,name="Att",type="BASE",value=15}},nil}
 c["+15 Bees Per 10 Seconds"]={{}," Bees Per 10 Seconds "}
-c["+15 Block Effectiveness Per Active Symbol"]={{}," Block Effectiveness Per Active Symbol "}
+c["+15 Block Effectiveness Per Active Symbol"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=15}},"  Per Active Symbol "}
 c["+15 Bow Fire Damage"]={{[1]={flags=0,keywordFlags=2048,name="FireDamage",type="BASE",value=15}},nil}
 c["+15 Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=15}},nil}
 c["+15 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=15}},nil}
@@ -3487,7 +3487,7 @@ c["+16% Snap Freeze Area per Ice Spiral"]={{[1]={[1]={skillName="Snap Freeze",ty
 c["+16% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=16}},nil}
 c["+160 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=160}},nil}
 c["+160 Armor per Idol in a Refracted Slot"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=160}},"  per Idol in a Refracted Slot "}
-c["+160 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+160 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=160}},nil}
 c["+160 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=160}},nil}
 c["+160 Primal Serpent Armour"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=160}}," Primal Serpent  "}
 c["+160 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=160}},nil}
@@ -3504,7 +3504,7 @@ c["+163 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=16
 c["+163% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+164 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=164}},nil}
 c["+165 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=165}},nil}
-c["+165 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+165 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=165}},nil}
 c["+165 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=165}},nil}
 c["+165 Minion Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=165}}}},nil}
 c["+165 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=165}},nil}
@@ -3696,10 +3696,10 @@ c["+184 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=18
 c["+185 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=185}},nil}
 c["+185% Chance for non-Critical Strikes to inflict Critical Vulnerability"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=185}}," for non-Critical Strikes  "}
 c["+185% Ward Retention on Transform"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=185}},"  on Transform "}
-c["+186 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+186 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=186}},nil}
 c["+188 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=188}},nil}
 c["+189 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=189}},"  while using Evade "}
-c["+19 Block Effectiveness per 1% Increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="BASE",value=19}}," Block Effectiveness per 1% Increased  "}
+c["+19 Block Effectiveness per 1% Increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=19}},"  per 1% Increased Movement Speed "}
 c["+19 Bow Cold Damage"]={{[1]={flags=0,keywordFlags=2048,name="ColdDamage",type="BASE",value=19}},nil}
 c["+19 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=19}},nil}
 c["+19 Bow Fire Damage"]={{[1]={flags=0,keywordFlags=2048,name="FireDamage",type="BASE",value=19}},nil}
@@ -3773,7 +3773,7 @@ c["+191 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",
 c["+192 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=192}},nil}
 c["+194 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=194}},nil}
 c["+196 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=196}},nil}
-c["+196 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+196 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=196}},nil}
 c["+198 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=198}},"  while using Evade "}
 c["+198% Chance to inflict Bleed on Minion Hit"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=198}}}},"  on   "}
 c["+2 Added Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="LightningDamage",type="BASE",value=2}}," Added  "}
@@ -3789,7 +3789,7 @@ c["+2 Armour per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=0,k
 c["+2 Attunement"]={{[1]={flags=0,keywordFlags=0,name="Att",type="BASE",value=2}},nil}
 c["+2 Bees Per 10 Seconds"]={{}," Bees Per 10 Seconds "}
 c["+2 Black Arrows Dropped by Dark Quiver"]={{}," Black Arrows Dropped by  "}
-c["+2 Block Effectiveness Per Dex"]={{}," Block Effectiveness Per Dex "}
+c["+2 Block Effectiveness Per Dex"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=2}},"  Per Dex "}
 c["+2 Charge On Melee Hit"]={{}," Charge  "}
 c["+2 Charge for Void Cleave"]={{}," Charge  "}
 c["+2 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamage",type="BASE",value=2}},nil}
@@ -4233,7 +4233,7 @@ c["+20 Additional Healing Per Second"]={{},"  Per Second "}
 c["+20 Aftershock Spell Damage"]={{[1]={[1]={skillName="Shock",type="SkillName"},flags=0,keywordFlags=256,name="Damage",type="BASE",value=20}}," After   "}
 c["+20 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=20}},nil}
 c["+20 Armour With Shield"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=20}},"  With Shield "}
-c["+20 Block Effectiveness Per Shield"]={{}," Block Effectiveness Per Shield "}
+c["+20 Block Effectiveness Per Shield"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=20}},"  Per Shield "}
 c["+20 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=20}},nil}
 c["+20 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
 c["+20 Damage Reflected"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=20}},"  Reflected "}
@@ -4596,7 +4596,7 @@ c["+21% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="
 c["+21% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=21},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=21},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=21},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=21},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=21},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=21},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=21}},nil}
 c["+21% to Minion All Resistances"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=21}}},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=21}}},[3]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=21}}},[4]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=21}}},[5]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=21}}},[6]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=21}}},[7]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=21}}}},nil}
 c["+210 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=210}},nil}
-c["+210 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+210 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=210}},nil}
 c["+210 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=210}}}},nil}
 c["+210 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=210}},nil}
 c["+211 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=211}},nil}
@@ -4673,7 +4673,7 @@ c["+220% Time Rot chance with next fire melee attack every 2 seconds"]={{[1]={[1
 c["+222 Stun Avoidance"]={{}," Stun Aance "}
 c["+223 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=223}},nil}
 c["+224 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=224}},nil}
-c["+225 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+225 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=225}},nil}
 c["+225 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=225}},nil}
 c["+225 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=225}},nil}
 c["+225% Minion Freeze Rate per stack of Chill"]={{},"  Freeze Rate per stack of  "}
@@ -4795,7 +4795,7 @@ c["+240 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Eva
 c["+240 Stun Avoidance"]={{}," Stun Aance "}
 c["+240 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=240}},nil}
 c["+241 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=241}}}},nil}
-c["+245 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+245 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=245}},nil}
 c["+245% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+25 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=25}},nil}
 c["+25 Armor With Active Totem"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=25}},"  With Active Totem "}
@@ -5038,7 +5038,7 @@ c["+25% Ward Gained"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",valu
 c["+25% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=25}},nil}
 c["+25% Wave of Death Necrotic Resistance Shred Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_NecroticResistanceShred",type="BASE",value=25}}," Wave of Death  "}
 c["+25% Zombie Explosion Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=25}}," Zombie Explosion  "}
-c["+250 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+250 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=250}},nil}
 c["+250 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=250}},nil}
 c["+250% Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=250}},nil}
 c["+250% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=250}},nil}
@@ -5050,7 +5050,7 @@ c["+252% Chance to apply Damned on Hit"]={{[1]={flags=8388608,keywordFlags=0,nam
 c["+252% Chance to apply Frostbite on Cold Hit"]={{[1]={flags=8388608,keywordFlags=4,name="ChanceToTriggerOnHit_Ailment_Frostbite",type="BASE",value=252}},nil}
 c["+252% Increased damage with Blood Splatter"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=252}},"  with Blood Splatter "}
 c["+252% Increased damage with Rip Blood"]={{[1]={[1]={skillName="Rip Blood",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=252}},"  with  "}
-c["+2520 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+2520 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=2520}},nil}
 c["+255 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=255}},nil}
 c["+255 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=255}},nil}
 c["+255 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=255}},nil}
@@ -5159,7 +5159,7 @@ c["+27% Void Penetration"]={{[1]={flags=0,keywordFlags=0,name="VoidPenetration",
 c["+27% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=27}},nil}
 c["+27% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=27},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=27},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=27},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=27},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=27},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=27},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=27}},nil}
 c["+270 Armor per Rah Rune"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=270}},"  per Rah Rune "}
-c["+270 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+270 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=270}},nil}
 c["+270 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=270}},nil}
 c["+270 Stun Avoidance"]={{}," Stun Aance "}
 c["+270 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=270}},nil}
@@ -5226,7 +5226,7 @@ c["+28% Minion Critical Strike Avoidance"]={{},"  Critical Strike Aance "}
 c["+28% Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=28}},nil}
 c["+28% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=28}},nil}
 c["+280 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=280}},nil}
-c["+280 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+280 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=280}},nil}
 c["+280 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=280}},nil}
 c["+285 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=285}},nil}
 c["+285% Chance to apply Frailty on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=285}},nil}
@@ -5257,8 +5257,8 @@ c["+29% Spell Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=256,name=
 c["+29% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=29}},nil}
 c["+29% chance to throw a Burning Dagger when you use a melee fire attack and hit at least one enemy, doubled for Dancing Strikes (up to 4 times per second)"]={{}," to throw a  when you use a   attack and  at least one enemy, doubled for Dancing Strikes (up to 4 times per second) "}
 c["+290% Chance to Shock on Void Spell Hit"]={{[1]={flags=8388608,keywordFlags=272,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=290}},"  on    "}
-c["+293 Block Effectiveness"]={{}," Block Effectiveness "}
-c["+296 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+293 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=293}},nil}
+c["+296 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=296}},nil}
 c["+3 Armor per Equipped Corrupted Idol"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=3}},"  per Equipped Corrupted Idol "}
 c["+3 Attunement"]={{[1]={flags=0,keywordFlags=0,name="Att",type="BASE",value=3}},nil}
 c["+3 Bees Per 10 Seconds"]={{}," Bees Per 10 Seconds "}
@@ -5632,8 +5632,8 @@ c["+3.5 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
 c["+3.8% Critical Strike Chance for skills used by Shadows"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=3.8}},"  for skills used by Shadows "}
 c["+30 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=30}},nil}
 c["+30 Armor Per Stack"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=30}},"  Per Stack "}
-c["+30 Block Effectiveness"]={{}," Block Effectiveness "}
-c["+30 Block Effectiveness Per Stack"]={{}," Block Effectiveness Per Stack "}
+c["+30 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=30}},nil}
+c["+30 Block Effectiveness Per Stack"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=30}},"  Per Stack "}
 c["+30 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=30}},nil}
 c["+30 Cone Width (Degrees)"]={{}," Cone Width (Degrees) "}
 c["+30 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=30}},nil}
@@ -5845,7 +5845,7 @@ c["+31% Lightning Resistance"]={{[1]={flags=0,keywordFlags=0,name="LightningResi
 c["+31% Physical Penetration for Bleed inflicted by Minions "]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=31}}}},"   inflicted by s  "}
 c["+31% Physical Penetration with Bleed "]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=31}},"  with   "}
 c["+31% Recurve Chance for Heartseeker"]={{}," Recurve Chance  "}
-c["+310 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+310 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=310}},nil}
 c["+311% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+313 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=313}},nil}
 c["+316 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=316}},nil}
@@ -5934,10 +5934,10 @@ c["+33% Physical Penetration with Bleed"]={{[1]={[1]={skillName="Bleed",type="Sk
 c["+33% Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=33}},nil}
 c["+33% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=33}},nil}
 c["+33% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=33}},nil}
-c["+330 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+330 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=330}},nil}
 c["+330 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=330}},nil}
 c["+331 Dodge Rating per Heo Rune"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=331}},"  per Heo Rune "}
-c["+338 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+338 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=338}},nil}
 c["+34 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=34}},nil}
 c["+34 Curse Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=34}}," Curse  "}
 c["+34 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=34}},nil}
@@ -6005,7 +6005,7 @@ c["+35% Chance to Poison on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,na
 c["+35% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=35}},nil}
 c["+35% Chance to gain Haste when you kill an enemy with a spell"]={nil,"Haste  with a spell "}
 c["+35% Chance to inflict Bleed on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=35}},"  on   "}
-c["+35% Chance to inflict Spirit Plague on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_SpiritPlague",type="BASE",value=35}},nil}
+c["+35% Chance to inflict Spirit Plague on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_SpiritPlague",type="BASE",value=35}},nil}
 c["+35% Cold Penetration with Frostbite "]={{[1]={[1]={skillName="Frostbite",type="SkillName"},flags=0,keywordFlags=0,name="ColdPenetration",type="BASE",value=35}},"  with   "}
 c["+35% Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=35}},nil}
 c["+35% Consecrated Ground Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=35}}," Consecrated Ground  "}
@@ -6046,7 +6046,7 @@ c["+35% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="
 c["+35% Zombie Explosion Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=35}}," Zombie Explosion  "}
 c["+35% fire and necrotic resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=35},[2]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=35}},nil}
 c["+35% physical and fire resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=35},[2]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=35}},nil}
-c["+350 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+350 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=350}},nil}
 c["+350% Freeze Rate Multiplier while at Low Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=350}}," Freeze Rate Multiplier while at Low  "}
 c["+351 Endurance Threshold if you have not been Hit Recently"]={{[1]={[1]={neg=true,type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=351}},nil}
 c["+351 Stun Avoidance"]={{}," Stun Aance "}
@@ -6084,7 +6084,7 @@ c["+36% Mana efficiency for Decoy"]={{[1]={[1]={skillName="Decoy",type="SkillNam
 c["+36% Mana efficiency for Synchronized Strike"]={{[1]={[1]={skillName="Synchronized Strike",type="SkillName"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=36}},"  efficiency  "}
 c["+36% Necrotic Resistance"]={{[1]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=36}},nil}
 c["+36% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=36}},nil}
-c["+360 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+360 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=360}},nil}
 c["+360 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=360}},nil}
 c["+360 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=360}},nil}
 c["+360 Minion Health Regen"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=360}}}},nil}
@@ -6113,7 +6113,7 @@ c["+37% Recurve Chance for Heartseeker"]={{}," Recurve Chance  "}
 c["+37% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=37}},nil}
 c["+37% chance to throw a Burning Dagger when you use a melee fire attack and hit at least one enemy, doubled for Dancing Strikes (up to 4 times per second)"]={{}," to throw a  when you use a   attack and  at least one enemy, doubled for Dancing Strikes (up to 4 times per second) "}
 c["+372 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=372}},nil}
-c["+375 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+375 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=375}},nil}
 c["+376 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=376}},"  while using Evade "}
 c["+38 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=38}},nil}
 c["+38 Armor While Transformed"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=38}},"  While Transformed "}
@@ -6149,7 +6149,7 @@ c["+38% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",ty
 c["+38% Poison Resistance While Transformed"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=38}},"  While Transformed "}
 c["+38% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=38}},nil}
 c["+384 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=384}},nil}
-c["+388 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+388 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=388}},nil}
 c["+39 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=39}},nil}
 c["+39 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=39}},nil}
 c["+39 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=39}},nil}
@@ -6535,7 +6535,7 @@ c["+4% chance to gain Frenzy for 3 seconds when you Echo an ability"]={{[1]={fla
 c["+4% to All Resistances per Complete Set"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=4},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=4},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=4},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=4},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=4},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=4},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=4}},"  per Complete Set "}
 c["+4.6% Critical Strike Chance for skills used by Shadows"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=4.6}},"  for skills used by Shadows "}
 c["+40 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=40}},nil}
-c["+40 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+40 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=40}},nil}
 c["+40 Bow Cold Damage"]={{[1]={flags=0,keywordFlags=2048,name="ColdDamage",type="BASE",value=40}},nil}
 c["+40 Bow Physical Damage if you have at least 40 Dexterity"]={{[1]={[1]={stat="Dex",threshold=40,type="StatThreshold"},flags=0,keywordFlags=2048,name="PhysicalDamage",type="BASE",value=40}},nil}
 c["+40 Disintegrate Grants Ward Gain Per Second"]={{[1]={[1]={skillName="Disintegrate",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=40}},"  Grants  Gain Per Second "}
@@ -6688,7 +6688,7 @@ c["+40% Vomit Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",v
 c["+40% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=40}},nil}
 c["+40% Zombie Explosion Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=40}}," Zombie Explosion  "}
 c["+400 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=400}},nil}
-c["+400 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+400 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=400}},nil}
 c["+40000% Ward Gain on Transform"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=40000}},"  Gain on Transform "}
 c["+405 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=405}},nil}
 c["+41 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=41}},nil}
@@ -6713,7 +6713,7 @@ c["+41% Chance to inflict Bleed on Physical Spell Hit"]={{[1]={flags=8388608,key
 c["+41% Physical Penetration with Bleed "]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=41}},"  with   "}
 c["+41% Pierce Chance with Fireball"]={{}," Pierce Chance with  "}
 c["+411 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=411}}}},nil}
-c["+414 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+414 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=414}},nil}
 c["+414 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=414}},nil}
 c["+42 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=42}},nil}
 c["+42 Armor for Totems"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=42}},"  for Totems "}
@@ -6741,10 +6741,10 @@ c["+42% Mana Efficiency with Lethal Mirage"]={{[1]={[1]={skillName="Lethal Mirag
 c["+42% Necrotic Resistance"]={{[1]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=42}},nil}
 c["+42% Spell Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=256,name="CritMultiplier",type="BASE",value=42}},nil}
 c["+420 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=420}},nil}
-c["+425 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+425 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=425}},nil}
 c["+425 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=425}},nil}
 c["+425 Ward gained when you cast Flame Ward"]={{[1]={[1]={skillName="Flame Ward",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=425}},"  gained when you cast  "}
-c["+426 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+426 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=426}},nil}
 c["+43 Curse Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=43}}," Curse  "}
 c["+43 Curse Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=43}}," Curse   "}
 c["+43 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=43}},nil}
@@ -6773,7 +6773,7 @@ c["+43% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 
 c["+43% Chance to gain 20 Ward on Kill with Hungering Souls"]={nil,"20 Ward  with Hungering Souls "}
 c["+43% Poison Penetration with Poison inflicted by Melee Attacks"]={{[1]={[1]={skillName="Poison",type="SkillName"},flags=0,keywordFlags=512,name="PoisonPenetration",type="BASE",value=43}},"  with  inflicted by  Attacks "}
 c["+43% to All Resistances While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="FireResist",type="BASE",value=43},[2]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=43},[3]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=43},[4]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=43},[5]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=43},[6]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=43},[7]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=43}},nil}
-c["+430 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+430 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=430}},nil}
 c["+432% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=432}},"  on   "}
 c["+432% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=432}},nil}
 c["+432% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=432}},"  on   "}
@@ -6787,7 +6787,7 @@ c["+44% Chance to Ignite on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=102
 c["+44% Chance to apply Frailty on hit for Bees"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=44}},"   for Bees "}
 c["+44% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
 c["+44% Increased Spirit Frequency with Chthonic Fissure"]={{}," Spirit Frequency with  "}
-c["+443 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+443 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=443}},nil}
 c["+45 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=45}},nil}
 c["+45 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=45}},nil}
 c["+45 Bow Physical Damage"]={{[1]={flags=0,keywordFlags=2048,name="PhysicalDamage",type="BASE",value=45}},nil}
@@ -6861,8 +6861,8 @@ c["+46% Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=0,name="CritMul
 c["+46% Lightning Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=2,name="CritMultiplier",type="BASE",value=46}},nil}
 c["+46% Minion Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=46}}}},nil}
 c["+46% Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=46}},nil}
-c["+460 Block Effectiveness"]={{}," Block Effectiveness "}
-c["+463 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+460 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=460}},nil}
+c["+463 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=463}},nil}
 c["+468 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=468}},nil}
 c["+468% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+47 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=47}},nil}
@@ -6885,7 +6885,7 @@ c["+47% Endurance"]={{[1]={flags=0,keywordFlags=0,name="Endurance",type="BASE",v
 c["+47% Increased Lightning Damage while you have Lightning Aegis"]={{[1]={flags=0,keywordFlags=2,name="LightningDamage",type="INC",value=47}},"  while you have  Aegis "}
 c["+47% Increased damage with Blood Splatter"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=47}},"  with Blood Splatter "}
 c["+47% Increased damage with Rip Blood"]={{[1]={[1]={skillName="Rip Blood",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=47}},"  with  "}
-c["+472 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+472 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=472}},nil}
 c["+475 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=475}},nil}
 c["+48 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=48}},nil}
 c["+48 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=48}},nil}
@@ -6903,7 +6903,7 @@ c["+48% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name=
 c["+48% Chance to inflict Bleed on Minion Hit"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=48}}}},"  on   "}
 c["+48% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+48% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
-c["+480 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+480 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=480}},nil}
 c["+49 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=49}},nil}
 c["+49 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=49}},nil}
 c["+49 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=49}},nil}
@@ -7208,8 +7208,8 @@ c["+5% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type
 c["+50 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=50}},nil}
 c["+50 Armor On Cooldown"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=50}},"  On Cooldown "}
 c["+50 Armor While With A Shield"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=50}},"  While With A Shield "}
-c["+50 Block Effectiveness"]={{}," Block Effectiveness "}
-c["+50 Block Effectiveness with a Shield"]={{}," Block Effectiveness with a Shield "}
+c["+50 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=50}},nil}
+c["+50 Block Effectiveness with a Shield"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=50}},"  with a Shield "}
 c["+50 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=50}},nil}
 c["+50 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=50}},nil}
 c["+50 Dodge Rating With Active Decoy"]={{[1]={[1]={skillName="Decoy",type="SkillName"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=50}},"  With Active  "}
@@ -7360,10 +7360,10 @@ c["+50% Void Bolt Time Rot Chance"]={{[1]={flags=8388608,keywordFlags=16,name="C
 c["+50% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=50}},nil}
 c["+50% elemental resistance while you control a totem"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=50},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=50},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=50}},"  while you control a totem "}
 c["+50% to Minion All Resistances"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=50}}},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=50}}},[3]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=50}}},[4]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=50}}},[5]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=50}}},[6]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=50}}},[7]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=50}}}},nil}
-c["+500 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+500 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=500}},nil}
 c["+500 Stun Avoidance"]={{}," Stun Aance "}
 c["+500% Chance to apply Frostbite on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frostbite",type="BASE",value=500}},nil}
-c["+501 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+501 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=501}},nil}
 c["+51 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=51}},nil}
 c["+51 Dodge Rating per Heo Rune"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=51}},"  per Heo Rune "}
 c["+51 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=51}},nil}
@@ -7377,7 +7377,7 @@ c["+51% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 
 c["+51% Chance to inflict Bleed on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=51}},nil}
 c["+51% Chance to inflict Time Rot on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_TimeRot",type="BASE",value=51}},nil}
 c["+51% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
-c["+510 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+510 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=510}},nil}
 c["+513 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=513}},nil}
 c["+52 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=52}},nil}
 c["+52 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=52}},nil}
@@ -7397,7 +7397,7 @@ c["+52% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="
 c["+52% Increased damage with Blood Splatter"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=52}},"  with Blood Splatter "}
 c["+52% Increased damage with Rip Blood"]={{[1]={[1]={skillName="Rip Blood",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=52}},"  with  "}
 c["+525 Armor While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="Armour",type="BASE",value=525}},nil}
-c["+525 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+525 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=525}},nil}
 c["+53 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=53}},nil}
 c["+53 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=53}},nil}
 c["+53 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=53}},nil}
@@ -7425,7 +7425,7 @@ c["+53% Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist
 c["+53% Physical resistance to allies nearby Storm Totem"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=53}},"  to allies nearby Storm Totem "}
 c["+53% Pierce Chance with Fireball"]={{}," Pierce Chance with  "}
 c["+53% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=53}},nil}
-c["+530 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+530 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=530}},nil}
 c["+54 Curse Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=54}}," Curse  "}
 c["+54 Dodge Rating per Heo Rune"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=54}},"  per Heo Rune "}
 c["+54 Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=54}},nil}
@@ -7443,7 +7443,7 @@ c["+540 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=54
 c["+540 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=540}},nil}
 c["+540 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=540}}}},nil}
 c["+540 Stun Avoidance"]={{}," Stun Aance "}
-c["+543 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+543 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=543}},nil}
 c["+55 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=55}},nil}
 c["+55 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=55}},nil}
 c["+55 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=55}},nil}
@@ -7478,9 +7478,9 @@ c["+55% Recurve Chance for Heartseeker"]={{}," Recurve Chance  "}
 c["+55% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=55}},nil}
 c["+55% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=55}},nil}
 c["+550 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=550}},nil}
-c["+550 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+550 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=550}},nil}
 c["+558 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=558}},nil}
-c["+559 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+559 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=559}},nil}
 c["+56 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=56}},nil}
 c["+56 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=56}},nil}
 c["+56 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=56}},nil}
@@ -7497,7 +7497,7 @@ c["+56% Chance to apply Frailty on Melee Hit"]={{[1]={flags=8389120,keywordFlags
 c["+56% Chance to inflict Bleed on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=56}},nil}
 c["+56% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=56}},nil}
 c["+56% Vengeance Range"]={{},"  Range "}
-c["+560 Block Effectiveness while preparing to Riposte"]={{}," Block Effectiveness while preparing to Riposte "}
+c["+560 Block Effectiveness while preparing to Riposte"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=560}},"  while preparing to Riposte "}
 c["+57 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=57}},nil}
 c["+57 Armor per Rah Rune"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=57}},"  per Rah Rune "}
 c["+57 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=57}},nil}
@@ -7515,7 +7515,7 @@ c["+57% Chance to apply Frostbite on Cold Hit"]={{[1]={flags=8388608,keywordFlag
 c["+57% Chance to gain 20 Ward on Kill with Hungering Souls"]={nil,"20 Ward  with Hungering Souls "}
 c["+57% Chance to inflict Bleed on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=57}},nil}
 c["+57% Chance to inflict Bleed on Minion Hit"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=57}}}},"  on   "}
-c["+575 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+575 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=575}},nil}
 c["+575 Minion Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=575}}}},nil}
 c["+577 Ward Gained when you cast Transplant"]={{[1]={[1]={skillName="Transplant",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=577}},"  Gained when you cast  "}
 c["+58 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=58}},nil}
@@ -7545,7 +7545,7 @@ c["+58% Chance to inflict Bleed on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2
 c["+58% Chance to inflict Bleed on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=58}},nil}
 c["+58% Chance to inflict Time Rot on Void Hit"]={{[1]={flags=8388608,keywordFlags=16,name="ChanceToTriggerOnHit_Ailment_TimeRot",type="BASE",value=58}},nil}
 c["+58% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
-c["+587 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+587 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=587}},nil}
 c["+59 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=59}},nil}
 c["+59 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=59}},nil}
 c["+6 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=6}},nil}
@@ -7842,7 +7842,7 @@ c["+6% chance for Shield Throw to Fork on the first ricochet"]={{},"  to Fork on
 c["+6% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=6},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=6},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=6},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=6},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=6},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=6},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=6}},nil}
 c["+6% to All Resistances While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="FireResist",type="BASE",value=6},[2]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=6},[3]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=6},[4]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=6},[5]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=6},[6]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=6},[7]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=6}},nil}
 c["+60 Armor for Totems"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=60}},"  for Totems "}
-c["+60 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+60 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=60}},nil}
 c["+60 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=60}},nil}
 c["+60 Freeze Rate"]={{}," Freeze Rate "}
 c["+60 Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=60}},nil}
@@ -7966,7 +7966,7 @@ c["+65% Width when consuming 12 stacks"]={{}," Width when consuming 12 stacks "}
 c["+65% chance to throw a Burning Dagger when you use a melee fire attack and hit at least one enemy, doubled for Dancing Strikes (up to 4 times per second)"]={{}," to throw a  when you use a   attack and  at least one enemy, doubled for Dancing Strikes (up to 4 times per second) "}
 c["+651 Stun Avoidance"]={{}," Stun Aance "}
 c["+66 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=66}},nil}
-c["+66 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+66 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=66}},nil}
 c["+66 Bow Lightning Damage"]={{[1]={flags=0,keywordFlags=2048,name="LightningDamage",type="BASE",value=66}},nil}
 c["+66 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=66}},nil}
 c["+66 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=66}},nil}
@@ -8206,7 +8206,7 @@ c["+70% Minion Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type
 c["+70% Trap Drop Chance"]={{}," Trap Drop Chance "}
 c["+70% Zombie Explosion Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=70}}," Zombie Explosion  "}
 c["+700 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=700}},nil}
-c["+700 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+700 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=700}},nil}
 c["+71 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=71}},nil}
 c["+71 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=71}},nil}
 c["+71 Lightning Damage with Lethal Mirage"]={{[1]={[1]={skillName="Lethal Mirage",type="SkillName"},flags=0,keywordFlags=0,name="LightningDamage",type="BASE",value=71}},"  with  "}
@@ -8250,7 +8250,7 @@ c["+74 Stun Avoidance"]={{}," Stun Aance "}
 c["+74% Chance for non-Critical Strikes to inflict Critical Vulnerability"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=74}}," for non-Critical Strikes  "}
 c["+75 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=75}},nil}
 c["+75 Armor with a Shield"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=75}},"  with a Shield "}
-c["+75 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+75 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=75}},nil}
 c["+75 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=75}},nil}
 c["+75 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=75}},nil}
 c["+75 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=75}},nil}
@@ -8284,7 +8284,7 @@ c["+75% Overcharge Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type
 c["+75% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=75}},nil}
 c["+75% Poison Resistance for 4 seconds when you use a Potion"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=75}},"   when you use a Potion "}
 c["+75% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=75}},nil}
-c["+750 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+750 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=750}},nil}
 c["+750 Stun Avoidance"]={{}," Stun Aance "}
 c["+76 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=76}},nil}
 c["+76 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=76}},nil}
@@ -8553,7 +8553,7 @@ c["+80% Tier 3 Channel Cost"]={{}," Tier 3 Channel Cost "}
 c["+80% Totem Armor With Buff"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=80}},"tem  With Buff "}
 c["+80% Void Penetration with Future Attack"]={{[1]={flags=0,keywordFlags=0,name="VoidPenetration",type="BASE",value=80}},"  with Future Attack "}
 c["+80% to Increased Poison Damage while Aura of Decay is active"]={{[1]={[1]={skillName="Aura Of Decay",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="INC",value=80}}," Damage while  is active "}
-c["+800 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+800 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=800}},nil}
 c["+801 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=801}},"  while using Evade "}
 c["+801 Stun Avoidance"]={{}," Stun Aance "}
 c["+81 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=81}},nil}
@@ -8596,7 +8596,7 @@ c["+85% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=8
 c["+85% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
 c["+85% Ward Granted From Rares Or Bosses"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=85}},"  Granted From Rares Or Bosses "}
 c["+85% to All Resistances While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="FireResist",type="BASE",value=85},[2]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=85},[3]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=85},[4]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=85},[5]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=85},[6]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=85},[7]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=85}},nil}
-c["+850 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+850 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=850}},nil}
 c["+86 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=86}},nil}
 c["+86 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=86}},nil}
 c["+86% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=86}},nil}
@@ -8606,7 +8606,7 @@ c["+87 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThres
 c["+87 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=87}},nil}
 c["+87% Chance on Block to apply Marked For Death to the Attacker"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_MarkedForDeath",type="BASE",value=87}}," on Block  to the Attacker "}
 c["+87% Melee Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=512,name="CritMultiplier",type="BASE",value=87}},nil}
-c["+875 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+875 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=875}},nil}
 c["+88 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=88}},nil}
 c["+88 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=88}},nil}
 c["+88 Ward gained when you cast Flame Ward"]={{[1]={[1]={skillName="Flame Ward",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=88}},"  gained when you cast  "}
@@ -8762,14 +8762,14 @@ c["+95% Chance to gain 20 Ward on Kill with Hungering Souls"]={nil,"20 Ward  wit
 c["+95% Throwing Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=1024,name="CritMultiplier",type="BASE",value=95}},nil}
 c["+9500 Starting Armour Near Dead Golem"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=9500}}," Starting  Near Dead Golem "}
 c["+96 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=96}},nil}
-c["+96 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+96 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=96}},nil}
 c["+96 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=96}},nil}
 c["+96% Chance for non-Critical Strikes to inflict Critical Vulnerability"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=96}}," for non-Critical Strikes  "}
 c["+97 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=97}},nil}
 c["+97 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=97}},nil}
 c["+97 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=97}},nil}
 c["+97 Ward per Second during Profane Veil"]={{[1]={[1]={skillName="Profane Veil",type="SkillName"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=97}},"  during  "}
-c["+975 Block Effectiveness"]={{}," Block Effectiveness "}
+c["+975 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=975}},nil}
 c["+98 Stun Avoidance"]={{}," Stun Aance "}
 c["+98% Chance on Block to apply Marked For Death to the Attacker"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_MarkedForDeath",type="BASE",value=98}}," on Block  to the Attacker "}
 c["+99 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=99}},nil}
@@ -8840,7 +8840,7 @@ c["-10% Shield Damage Taken"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",t
 c["-10% Shield Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=-10}}," Shield  "}
 c["-10% Spirit Movespeed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="BASE",value=-10}}," Spirit  "}
 c["-10% Void Damage Taken"]={{[1]={flags=0,keywordFlags=0,name="VoidDamageTaken",type="BASE",value=-10}},nil}
-c["-100 to -91 Block Effectiveness"]={{}," -91 Block Effectiveness "}
+c["-100 to -91 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=-100}}," -91  "}
 c["-100% Current Health Drain"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=-100}}," Current  Drain "}
 c["-100% Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=-100}},nil}
 c["-100% Mana From Burst"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=-100}},"  From Burst "}
@@ -8889,7 +8889,7 @@ c["-2% Damage Taken From Nearby Enemies"]={{[1]={flags=0,keywordFlags=0,name="Da
 c["-2% Damage Taken in Arena"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="BASE",value=-2}},"  in Arena "}
 c["-2% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=-2}},nil}
 c["-20 Base Freeze Rate"]={{}," Freeze Rate "}
-c["-20 to -10 Block Effectiveness"]={{}," -10 Block Effectiveness "}
+c["-20 to -10 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=-20}}," -10  "}
 c["-20% All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=-20},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=-20},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=-20},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=-20},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=-20},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=-20},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=-20}},nil}
 c["-20% Archer Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="BASE",value=-20}}," Archer  "}
 c["-20% Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="BASE",value=-20}},nil}
@@ -8970,7 +8970,7 @@ c["-4% Enemy Movespeed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type
 c["-4% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=-4}},nil}
 c["-4% Void Damage Taken"]={{[1]={flags=0,keywordFlags=0,name="VoidDamageTaken",type="BASE",value=-4}},nil}
 c["-40 Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=-40}},nil}
-c["-40 to -30 Block Effectiveness"]={{}," -30 Block Effectiveness "}
+c["-40 to -30 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=-40}}," -30  "}
 c["-40% Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=-40}},nil}
 c["-40% Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=-40}},nil}
 c["-40% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=-40}},nil}
@@ -9003,7 +9003,7 @@ c["-5% Range"]={{}," Range "}
 c["-5% Second Strike Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=-5}}," Second Strike  "}
 c["-5% Summoning Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="BASE",value=-5}}," Summoning  "}
 c["-5% Void And Physical Damage Taken"]={{[1]={flags=0,keywordFlags=16,name="PhysicalDamageTaken",type="BASE",value=-5}},"  And  "}
-c["-50 to -41 Block Effectiveness"]={{}," -41 Block Effectiveness "}
+c["-50 to -41 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=-50}}," -41  "}
 c["-50% Buff Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="MORE",value=-50}}," Buff  "}
 c["-50% Chill Effect On You"]={{},"  Effect On You "}
 c["-50% Cone Width"]={{}," Cone Width "}
@@ -9046,7 +9046,7 @@ c["-6% Damage Taken while channeling"]={{[1]={[1]={type="Condition",var="Channel
 c["-6% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=-6}},nil}
 c["-6% Radius"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=-6}},nil}
 c["-6% Target Area per stack"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=-6}}," Target  per stack "}
-c["-60 to -51 Block Effectiveness"]={{}," -51 Block Effectiveness "}
+c["-60 to -51 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=-60}}," -51  "}
 c["-60% Bear Earthquake Damage"]={{[1]={[1]={skillName="Earthquake",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=-60}}," Bear   "}
 c["-60% Blaze Shade Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="MORE",value=-60}}," Blaze Shade  "}
 c["-60% Less Aspect Of The Shark Effect"]={{},"  Effect "}
@@ -9056,7 +9056,7 @@ c["-7 Throwing Attack Mana Cost"]={{[1]={flags=0,keywordFlags=1024,name="ManaCos
 c["-7% Elemental Damage Taken"]={{[1]={flags=0,keywordFlags=0,name="ElementalDamageTaken",type="BASE",value=-7}},nil}
 c["-7% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=-7}},nil}
 c["-7% Wraith Interval"]={{}," Wraith Interval "}
-c["-70 to -61 Block Effectiveness"]={{}," -61 Block Effectiveness "}
+c["-70 to -61 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=-70}}," -61  "}
 c["-70% Blood Eruption Delay"]={{}," Blood Eruption Delay "}
 c["-70% Range"]={{}," Range "}
 c["-70% Shadow Falcon Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=-70}}," Shadow Falcon  "}
@@ -9069,7 +9069,7 @@ c["-8% Health Cost"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value
 c["-8% Target Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=-8}}," Target  "}
 c["-8% Thrown Blades Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=-8}}," Thrown Blades  "}
 c["-8% Width"]={{}," Width "}
-c["-80 to -71 Block Effectiveness"]={{}," -71 Block Effectiveness "}
+c["-80 to -71 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=-80}}," -71  "}
 c["-80% Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=-80}},nil}
 c["-80% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=-80}},nil}
 c["-80% Explosion Hit Damage"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=-80}}," Explosi  "}
@@ -9077,7 +9077,7 @@ c["-80% Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",va
 c["-80% Mana Gained"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=-80}},"  Gained "}
 c["-88% Increased Decoy Duration"]={{[1]={[1]={skillName="Decoy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=-88}},nil}
 c["-9% Channel Cost"]={{}," Channel Cost "}
-c["-90 to -81 Block Effectiveness"]={{}," -81 Block Effectiveness "}
+c["-90 to -81 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=-90}}," -81  "}
 c["-90% Cooldown Duration"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=-90}},nil}
 c["0 Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=0}},nil}
 c["0 Out-Of-Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=0}}," Out-Of- "}
@@ -10129,7 +10129,7 @@ c["11% chance to gain 20 mana when you directly cast Runebolt or Fireball"]={nil
 c["11% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=11}},"  for Area Skills "}
 c["11% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=11}},nil}
 c["11% increased Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="INC",value=11}},nil}
-c["11% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["11% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=11}},nil}
 c["11% increased Bow Attack Speed"]={{[1]={flags=3584,keywordFlags=2048,name="Speed",type="INC",value=11}},nil}
 c["11% increased Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=11}},nil}
 c["11% increased Cast Speed for Totems"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=11}},"  for Totems "}
@@ -10163,7 +10163,7 @@ c["11% more Damage to Stunned Enemies"]={{[1]={flags=0,keywordFlags=0,name="Dama
 c["11% more Lightning Damage to Shocked Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Shocked"},flags=0,keywordFlags=0,name="LightningDamage",type="MORE",value=11}},nil}
 c["11% of Added Melee Damage gained as Added Spell Damage"]={{[1]={flags=0,keywordFlags=768,name="Damage",type="BASE",value=11}}," Added   gained as Added  Damage "}
 c["11% of Armor Mitigation also applies to Damage over Time"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=11}},"  Mitigation also applies to Damage over Time "}
-c["11% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="BASE",value=11}}," Block Effectiveness applies to  as if it had been Blocked "}
+c["11% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=11}},"  applies to Damage over Time as if it had been Blocked "}
 c["11% of Current Health Lost per second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=11}}," Current  Lost per second "}
 c["11% of Current Health converted to Ward when you directly cast a Necrotic Spell"]={{[1]={flags=0,keywordFlags=288,name="Life",type="BASE",value=11}}," Current  converted to Ward when you directly cast a   "}
 c["11% of Endurance Threshold added as Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=11}},"  added as Ward Decay Threshold "}
@@ -10552,7 +10552,7 @@ c["14% chance to gain 20 mana when you directly cast Runebolt or Fireball"]={nil
 c["14% chance when one of your Skeletons dies to resummon a new one after 3 seconds"]={{}," when one of your Skeletons dies to resummon a new one after 3 seconds "}
 c["14% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=14}},"  for Area Skills "}
 c["14% increased Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="INC",value=14}},nil}
-c["14% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["14% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=14}},nil}
 c["14% increased Bow Attack Speed"]={{[1]={flags=3584,keywordFlags=2048,name="Speed",type="INC",value=14}},nil}
 c["14% increased Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=14}},nil}
 c["14% increased Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamage",type="INC",value=14}},nil}
@@ -10958,7 +10958,7 @@ c["17% Increased Skeleton Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",t
 c["17% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-17}},"  Cost of s "}
 c["17% chance to recover 8% of Aerial Assault's remaining cooldown on Throwing Hit (up to 3 times)"]={{}," to recover 8% of 's remaining cooldown on   (up to 3 times) "}
 c["17% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=17}},nil}
-c["17% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["17% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=17}},nil}
 c["17% increased Bow Attack Speed"]={{[1]={flags=3584,keywordFlags=2048,name="Speed",type="INC",value=17}},nil}
 c["17% increased Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="INC",value=17}},nil}
 c["17% increased Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=17}},nil}
@@ -11063,7 +11063,7 @@ c["18% chance to gain 20 mana when you directly cast Runebolt or Fireball"]={nil
 c["18% chance when one of your Skeletons dies to resummon a new one after 3 seconds"]={{}," when one of your Skeletons dies to resummon a new one after 3 seconds "}
 c["18% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=18}},"  for Area Skills "}
 c["18% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=18}},nil}
-c["18% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["18% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=18}},nil}
 c["18% increased Bow Attack Speed"]={{[1]={flags=3584,keywordFlags=2048,name="Speed",type="INC",value=18}},nil}
 c["18% increased Cast Speed for Totems"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=18}},"  for Totems "}
 c["18% increased Critical Strike Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=18}},nil}
@@ -12143,7 +12143,7 @@ c["26% Increased Melee Stun Duration"]={{[1]={flags=0,keywordFlags=512,name="Ene
 c["26% Increased Stun Chance"]={{}," Stun Chance "}
 c["26% Increased Volcanic Orb Shrapnel Speed"]={{},"  Shrapnel Speed "}
 c["26% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-26}},"  Cost of s "}
-c["26% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["26% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=26}},nil}
 c["26% increased Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="INC",value=26}},nil}
 c["26% increased Cast Speed for Totems"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=26}},"  for Totems "}
 c["26% increased Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamage",type="INC",value=26}},nil}
@@ -12205,7 +12205,7 @@ c["27% Increased Stun Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDu
 c["27% Increased area of effect with Acid Flask"]={{[1]={[1]={skillName="Acid Flask",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=27}},"  with  "}
 c["27% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=27}},"  for Area Skills "}
 c["27% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=27}},nil}
-c["27% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["27% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=27}},nil}
 c["27% increased Bow Attack Speed"]={{[1]={flags=3584,keywordFlags=2048,name="Speed",type="INC",value=27}},nil}
 c["27% increased Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="INC",value=27}},nil}
 c["27% increased Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=27}},nil}
@@ -12301,7 +12301,7 @@ c["28% increased Volatile Zombie Movement Speed"]={{[1]={flags=0,keywordFlags=0,
 c["28% less Fire Damage Taken on Block"]={{[1]={flags=0,keywordFlags=0,name="FireDamageTaken",type="MORE",value=-28}},"  on Block "}
 c["28% more Physical Damage while at Full Health"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="MORE",value=28}},"  while at Full Health "}
 c["28% of Armor Mitigation also applies to Damage over Time"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=28}},"  Mitigation also applies to Damage over Time "}
-c["28% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="BASE",value=28}}," Block Effectiveness applies to  as if it had been Blocked "}
+c["28% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=28}},"  applies to Damage over Time as if it had been Blocked "}
 c["28% of Current Health Lost per second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=28}}," Current  Lost per second "}
 c["28% of Damage Dealt to Mana Before Health"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=28}},"  Dealt to Mana Before Health "}
 c["28% of Health Leech also drains the health of the nearest enemy within 6 meters while you have Frenzy"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Life",type="BASE",value=28}},"  Leech also drains the health of the nearest enemy within 6 meters while you have  "}
@@ -12832,7 +12832,7 @@ c["33% Melee Hit"]={{},"   "}
 c["33% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-33}},"  Cost of s "}
 c["33% chance to gain Haste for 5 seconds after you Block"]={nil,"Haste  after you Block "}
 c["33% chance when one of your Skeletons dies to resummon a new one after 3 seconds"]={{}," when one of your Skeletons dies to resummon a new one after 3 seconds "}
-c["33% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["33% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=33}},nil}
 c["33% increased Bow Elemental Damage"]={{[1]={flags=0,keywordFlags=2048,name="FireDamage",type="INC",value=33},[2]={flags=0,keywordFlags=2048,name="ColdDamage",type="INC",value=33},[3]={flags=0,keywordFlags=2048,name="LightningDamage",type="INC",value=33}},nil}
 c["33% increased Cast Speed for Totems"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=33}},"  for Totems "}
 c["33% increased Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamage",type="INC",value=33}},nil}
@@ -12936,7 +12936,7 @@ c["35% Reduced Cooldown Duration"]={{[1]={flags=0,keywordFlags=0,name="CooldownR
 c["35% Shadow Dagger Chance On Slow"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ShadowDaggers",type="BASE",value=35}},"  On  "}
 c["35% chance to gain 20 mana when you directly cast Runebolt or Fireball"]={nil,"20 mana when you directly cast Runebolt or Fireball "}
 c["35% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=35}},"  for Area Skills "}
-c["35% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["35% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=35}},nil}
 c["35% increased Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="INC",value=35}},nil}
 c["35% increased Bow Elemental Damage"]={{[1]={flags=0,keywordFlags=2048,name="FireDamage",type="INC",value=35},[2]={flags=0,keywordFlags=2048,name="ColdDamage",type="INC",value=35},[3]={flags=0,keywordFlags=2048,name="LightningDamage",type="INC",value=35}},nil}
 c["35% increased Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamage",type="INC",value=35}},nil}
@@ -13365,7 +13365,7 @@ c["4% more Damage to Bleeding Enemies"]={{[1]={[1]={skillName="Bleed",type="Skil
 c["4% more Damage to Slowed Enemies"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=4}},"  to ed Enemies "}
 c["4% more Damage to Stunned Enemies"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=4}},"  to Stunned Enemies "}
 c["4% of Armor Mitigation also applies to Damage over Time"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=4}},"  Mitigation also applies to Damage over Time "}
-c["4% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="BASE",value=4}}," Block Effectiveness applies to  as if it had been Blocked "}
+c["4% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=4}},"  applies to Damage over Time as if it had been Blocked "}
 c["4% of Current Health Drained per Second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=4}}," Current  Drained per Second "}
 c["4% of Current Health Lost per second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=4}}," Current  Lost per second "}
 c["4% of Current Health converted to Ward when you directly cast a Necrotic Spell"]={{[1]={flags=0,keywordFlags=288,name="Life",type="BASE",value=4}}," Current  converted to Ward when you directly cast a   "}
@@ -13746,7 +13746,7 @@ c["49% Effect of Weaver Enchantment Affixes for Idols in Refracted Slots"]={{},"
 c["49% Increased Area for Infernal Shade"]={{[1]={[1]={skillName="Infernal Shade",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=49}},nil}
 c["49% Increased Bleed Duration"]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=49}},nil}
 c["49% Increased Melee Attack Area for Summoned Wraiths"]={{[1]={[1]={skillName="Melee Attack",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=49}},"   for Summoned Wraiths "}
-c["49% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["49% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=49}},nil}
 c["49% increased Bow Attack Speed"]={{[1]={flags=3584,keywordFlags=2048,name="Speed",type="INC",value=49}},nil}
 c["49% increased Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=49}},nil}
 c["49% increased Cold Damage Over Time"]={{[1]={flags=4100,keywordFlags=0,name="ColdDamage",type="INC",value=49}},nil}
@@ -13988,7 +13988,7 @@ c["5% more Damage Over Time to Bleeding Enemies"]={{[1]={[1]={skillName="Bleed",
 c["5% more Damage to Bleeding Enemies"]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=5}},"  to ing Enemies "}
 c["5% more Melee Void Damage per stack of Doom"]={{[1]={[1]={skillName="Doom",type="SkillName"},flags=0,keywordFlags=512,name="VoidDamage",type="MORE",value=5}},"   per stack of  "}
 c["5% more damage per curse on the target"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=5}},"  per curse on the target "}
-c["5% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="BASE",value=5}}," Block Effectiveness applies to  as if it had been Blocked "}
+c["5% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=5}},"  applies to Damage over Time as if it had been Blocked "}
 c["5% of Current Health Drained per Second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=5}}," Current  Drained per Second "}
 c["5% of Current Health Drained per Second for 4 seconds when you use a Potion"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=5}}," Current  Drained per Second  when you use a Potion "}
 c["5% of Current Health Lost per second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=5}}," Current  Lost per second "}
@@ -14119,7 +14119,7 @@ c["50% increased Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",ty
 c["50% increased Throwing Damage"]={{[1]={flags=0,keywordFlags=1024,name="Damage",type="INC",value=50}},nil}
 c["50% increased Void Damage"]={{[1]={flags=0,keywordFlags=0,name="VoidDamage",type="INC",value=50}},nil}
 c["50% increased area for Area Spells"]={{[1]={flags=0,keywordFlags=256,name="AreaOfEffect",type="INC",value=50}},"  for Area s "}
-c["50% less Block Effectiveness"]={{}," Block Effectiveness "}
+c["50% less Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="MORE",value=-50}},nil}
 c["50% less Critical Strike Chance if you have dealt a Critical Strike Recently"]={{[1]={[1]={type="Condition",var="CritRecently"},flags=0,keywordFlags=0,name="CritChance",type="MORE",value=-50}},nil}
 c["50% less Void Damage Taken on Block"]={{[1]={flags=0,keywordFlags=0,name="VoidDamageTaken",type="MORE",value=-50}},"  on Block "}
 c["50% of Current Mana gained as Ward when you stop moving (2 second cooldown)"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=50}}," Current  gained as Ward when you stop moving  "}
@@ -14460,7 +14460,7 @@ c["6% more Bow Damage to Slowed Enemies"]={{[1]={[1]={skillName="Slow",type="Ski
 c["6% more Damage to Poisoned Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Poisoned"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=6}},nil}
 c["6% more Damage to Stunned Enemies"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=6}},"  to Stunned Enemies "}
 c["6% more Spell Damage per Negative Ailment on the Target (up to 8)"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="MORE",value=6}},"   per Negative Ailment on the Target (up to 8) "}
-c["6% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="BASE",value=6}}," Block Effectiveness applies to  as if it had been Blocked "}
+c["6% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=6}},"  applies to Damage over Time as if it had been Blocked "}
 c["6% of Current Health Drained per Second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=6}}," Current  Drained per Second "}
 c["6% of Current Health converted to Ward when you directly cast a Necrotic Spell"]={{[1]={flags=0,keywordFlags=288,name="Life",type="BASE",value=6}}," Current  converted to Ward when you directly cast a   "}
 c["6% of Current mana gained as ward per second"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=6}}," Current  gained as ward per second "}
@@ -14767,7 +14767,7 @@ c["7% chance to throw Acid Flask on Bow Hit"]={{}," to throw  on   "}
 c["7% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=7}},"  for Area Skills "}
 c["7% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=7}},nil}
 c["7% increased Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="INC",value=7}},nil}
-c["7% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["7% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=7}},nil}
 c["7% increased Bow Attack Speed"]={{[1]={flags=3584,keywordFlags=2048,name="Speed",type="INC",value=7}},nil}
 c["7% increased Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=7}},nil}
 c["7% increased Cold Spell Cast Speed"]={{[1]={flags=256,keywordFlags=260,name="Speed",type="INC",value=7}},nil}
@@ -14803,7 +14803,7 @@ c["7% more Damage to Bleeding Enemies"]={{[1]={[1]={skillName="Bleed",type="Skil
 c["7% more Damage to Ignited Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Ignited"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=7}},nil}
 c["7% more Damage to Slowed Enemies"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=7}},"  to ed Enemies "}
 c["7% more Damage with Vengeance per 10% Block Chance"]={{[1]={[1]={div=10,stat="BlockChance",type="PerStat"},[2]={skillName="Vengeance",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=7}},"  with   "}
-c["7% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="BASE",value=7}}," Block Effectiveness applies to  as if it had been Blocked "}
+c["7% of Block Effectiveness applies to Damage over Time as if it had been Blocked"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=7}},"  applies to Damage over Time as if it had been Blocked "}
 c["7% of Current Health Drained per Second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=7}}," Current  Drained per Second "}
 c["7% of Current Health Lost per second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=7}}," Current  Lost per second "}
 c["7% of Current Health converted to Ward when you directly cast a Necrotic Spell"]={{[1]={flags=0,keywordFlags=288,name="Life",type="BASE",value=7}}," Current  converted to Ward when you directly cast a   "}
@@ -15336,7 +15336,7 @@ c["9% chance to throw Acid Flask on Bow Hit"]={{}," to throw  on   "}
 c["9% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=9}},"  for Area Skills "}
 c["9% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=9}},nil}
 c["9% increased Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="INC",value=9}},nil}
-c["9% increased Block Effectiveness"]={{}," Block Effectiveness "}
+c["9% increased Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="INC",value=9}},nil}
 c["9% increased Bow Attack Speed"]={{[1]={flags=3584,keywordFlags=2048,name="Speed",type="INC",value=9}},nil}
 c["9% increased Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="INC",value=9}},nil}
 c["9% increased Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",value=9}},nil}
