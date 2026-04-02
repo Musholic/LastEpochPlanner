@@ -19,14 +19,14 @@
 		<PlayerStat stat="Dex" value="5"></PlayerStat>
 		<PlayerStat stat="Int" value="98"></PlayerStat>
 		<PlayerStat stat="Att" value="4"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="12369.96408634"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="13573.880741266"></PlayerStat>
-		<PlayerStat stat="LightningMaximumHitTaken" value="13573.880741266"></PlayerStat>
-		<PlayerStat stat="ColdMaximumHitTaken" value="13573.880741266"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="14630.745198724"></PlayerStat>
-		<PlayerStat stat="PoisonMaximumHitTaken" value="13573.880741266"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="8276.7565495523"></PlayerStat>
-		<PlayerStat stat="VoidMaximumHitTaken" value="13573.880741266"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="15085.322056512"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="16553.513099105"></PlayerStat>
+		<PlayerStat stat="LightningMaximumHitTaken" value="16553.513099105"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="16553.513099105"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="17842.372193566"></PlayerStat>
+		<PlayerStat stat="PoisonMaximumHitTaken" value="16553.513099105"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="10093.605548235"></PlayerStat>
+		<PlayerStat stat="VoidMaximumHitTaken" value="16553.513099105"></PlayerStat>
 		<PlayerStat stat="Life" value="1763"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="0"></PlayerStat>
 		<PlayerStat stat="LifeRegenRecovery" value="24.5"></PlayerStat>
@@ -45,6 +45,7 @@
 		<PlayerStat stat="Spec:ArmourInc" value="12"></PlayerStat>
 		<PlayerStat stat="PhysicalDamageReduction" value="20.605547822588"></PlayerStat>
 		<PlayerStat stat="BlockChance" value="0"></PlayerStat>
+		<PlayerStat stat="BlockEffectiveness" value="0"></PlayerStat>
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
@@ -88,6 +89,7 @@
 		<Section collapsed="false" id="DamageAvoidance" subsection="Block"></Section>
 		<Section collapsed="false" id="DamageAvoidance" subsection="Dodge"></Section>
 		<Section collapsed="false" id="MiscDefences" subsection="OtherDefences"></Section>
+		<Section collapsed="false" id="MiscOthers" subsection="Others"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="DamageTaken"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="DamagingHits"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="EffectiveHealthPool"></Section>
@@ -582,15 +584,18 @@ Implicits: 1
 			<Skill enabled="true" includeInFullDPS="true" index="3" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="FlameReave" slot="Skill 3"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="EnchantWeapon" slot="Skill 4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Firebrand" slot="Skill 5"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="6" label="Shock (from Surge)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="Surge"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="7" label="Slow (from Surge)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="Surge"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="8" label="Fire Aura (from Surge)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="FireAura" source="Surge"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="9" label="Ignite (from Flame Reave)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="FlameReave"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="10" label="Slow (from Flame Reave)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="FlameReave"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="11" label="Fire Aura (from Flame Reave)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="FireAura" source="FlameReave"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="12" label="Ignite (from Firebrand)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="Firebrand"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="13" label="Slow (from Firebrand)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="Firebrand"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="14" label="Fire Aura (from Firebrand)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="FireAura" source="Firebrand"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="6" label="Frailty (from Surge)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Frailty" source="Surge"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="7" label="Shock (from Surge)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Shock" source="Surge"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="8" label="Slow (from Surge)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="Surge"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="9" label="Fire Aura (from Surge)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="FireAura" source="Surge"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="10" label="Frailty (from Flame Reave)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Frailty" source="FlameReave"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="11" label="Ignite (from Flame Reave)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="FlameReave"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="12" label="Slow (from Flame Reave)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="FlameReave"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="13" label="Fire Aura (from Flame Reave)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="FireAura" source="FlameReave"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="14" label="Frailty (from Firebrand)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Frailty" source="Firebrand"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="15" label="Ignite (from Firebrand)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="Firebrand"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="16" label="Slow (from Firebrand)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Slow" source="Firebrand"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="17" label="Fire Aura (from Firebrand)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="FireAura" source="Firebrand"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">

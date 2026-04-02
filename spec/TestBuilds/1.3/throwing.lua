@@ -50,6 +50,7 @@ return {
     ["BlockChanceOverCap"] = 83,
     ["BlockDuration"] = 0.35,
     ["BlockEffect"] = 100,
+    ["BlockEffectiveness"] = 2079,
     ["BonusCritDotMultiplier"] = 0,
     ["CastRate"] = 2.8136,
     ["Chain"] = 0,
@@ -172,7 +173,7 @@ return {
     ["ForkCountString"] = "0",
     ["FrostShieldDamageMitigation"] = 0,
     ["FrostShieldLife"] = 0,
-    ["FullDPS"] = 9454.2021,
+    ["FullDPS"] = 34253.9492,
     ["FullLifePercentage"] = 100,
     ["HitChance"] = 100,
     ["IgniteAvoidChance"] = 0,
@@ -441,7 +442,7 @@ return {
     ["SkillDPS"] = {
       [1] = {
         ["count"] = 1,
-        ["dps"] = 6441.4928,
+        ["dps"] = 31241.2398,
         ["name"] = "Bleed",
         ["trigger"] = "HammerThrow",
       },
@@ -483,6 +484,7 @@ return {
     ["SplitCountString"] = 0,
     ["Str"] = 26,
     ["StunAvoidChance"] = 0,
+    ["StunAvoidance"] = 1000,
     ["StunDuration"] = 0.35,
     ["StunThreshold"] = 4592,
     ["TheoreticalMaxOffensiveWarcryEffect"] = 1,

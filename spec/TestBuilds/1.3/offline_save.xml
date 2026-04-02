@@ -45,6 +45,7 @@
 		<PlayerStat stat="Spec:ArmourInc" value="0"></PlayerStat>
 		<PlayerStat stat="PhysicalDamageReduction" value="12.671515954785"></PlayerStat>
 		<PlayerStat stat="BlockChance" value="0"></PlayerStat>
+		<PlayerStat stat="BlockEffectiveness" value="0"></PlayerStat>
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
@@ -63,9 +64,10 @@
 		<PlayerStat stat="VoidResist" value="10"></PlayerStat>
 		<PlayerStat stat="VoidResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.56"></PlayerStat>
-		<PlayerStat stat="FullDPS" value="1959.4675169034"></PlayerStat>
+		<PlayerStat stat="FullDPS" value="2222.8507465013"></PlayerStat>
 		<FullDPSSkill skillPart="" source="" stat="Flay" value="1733.9347071481"></FullDPSSkill>
-		<FullDPSSkill skillPart="" source="Flay 1" stat="Poison" value="216.15615666156"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="Flay 1" stat="Bleed" value="331.11215868512"></FullDPSSkill>
+		<FullDPSSkill skillPart="" source="Flay 1" stat="Poison" value="148.42722757427"></FullDPSSkill>
 		<FullDPSSkill skillPart="" source="Flay 1" stat="Ignite" value="9.3766530937665"></FullDPSSkill>
 	</Build>
 	<Calcs>
@@ -88,6 +90,7 @@
 		<Section collapsed="false" id="DamageAvoidance" subsection="Block"></Section>
 		<Section collapsed="false" id="DamageAvoidance" subsection="Dodge"></Section>
 		<Section collapsed="false" id="MiscDefences" subsection="OtherDefences"></Section>
+		<Section collapsed="false" id="MiscOthers" subsection="Others"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="DamageTaken"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="DamagingHits"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="EffectiveHealthPool"></Section>
@@ -476,17 +479,20 @@ Implicits: 0
 			<Skill enabled="true" includeInFullDPS="true" index="4" mainActiveSkill="1" mainActiveSkillCalcs="1" skillId="Flay 1" slot="Skill 4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="BoneCurse" slot="Skill 5"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="6" label="Shred Armor (from Transplant)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="Transplant"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="7" label="Ignite (from Transplant)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="Transplant"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="8" label="Poison (from Transplant)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="Transplant"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="9" label="Shred Armor (from Reaper Form)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="ReaperForm"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="10" label="Ignite (from Reaper Form)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="ReaperForm"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="11" label="Poison (from Reaper Form)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="ReaperForm"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="12" label="Poison (from Aura Of Decay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="AuraOfDecay"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="13" label="Shred Armor (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="Flay 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="14" label="Chill (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Chill" source="Flay 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="15" label="Ignite (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="Flay 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="true" index="16" label="Poison (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="Flay 1"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="17" label="Bone Curse (from Bone Curse)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_BoneCurse" source="BoneCurse"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="7" label="Bleed (from Transplant)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="Transplant"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="8" label="Ignite (from Transplant)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="Transplant"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="9" label="Poison (from Transplant)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="Transplant"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="10" label="Shred Armor (from Reaper Form)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="ReaperForm"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="11" label="Bleed (from Reaper Form)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="ReaperForm"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="12" label="Ignite (from Reaper Form)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="ReaperForm"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="13" label="Poison (from Reaper Form)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="ReaperForm"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="14" label="Poison (from Aura Of Decay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="AuraOfDecay"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="15" label="Shred Armor (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="Flay 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="16" label="Bleed (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="Flay 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="17" label="Chill (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Chill" source="Flay 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="18" label="Ignite (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Ignite" source="Flay 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="true" index="19" label="Poison (from Flay)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Poison" source="Flay 1"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="20" label="Bone Curse (from Bone Curse)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_BoneCurse" source="BoneCurse"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">

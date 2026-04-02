@@ -43,6 +43,7 @@
 		<PlayerStat stat="Spec:ArmourInc" value="0"></PlayerStat>
 		<PlayerStat stat="PhysicalDamageReduction" value="52.033679936033"></PlayerStat>
 		<PlayerStat stat="BlockChance" value="0"></PlayerStat>
+		<PlayerStat stat="BlockEffectiveness" value="0"></PlayerStat>
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
@@ -84,6 +85,7 @@
 		<Section collapsed="false" id="DamageAvoidance" subsection="Block"></Section>
 		<Section collapsed="false" id="DamageAvoidance" subsection="Dodge"></Section>
 		<Section collapsed="false" id="MiscDefences" subsection="OtherDefences"></Section>
+		<Section collapsed="false" id="MiscOthers" subsection="Others"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="DamageTaken"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="DamagingHits"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="EffectiveHealthPool"></Section>
@@ -596,9 +598,12 @@ Implicits: 1
 			<Skill enabled="true" includeInFullDPS="false" index="4" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Warcry" slot="Skill 4"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="5" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Swipe" slot="Skill 5"></Skill>
 			<Skill enabled="true" includeInFullDPS="false" index="6" label="Shred Armor (from Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="GatheringStormMelee"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="7" label="Storm Bolt (from Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="PrimalLightning" source="GatheringStormMelee"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="8" label="Shred Armor (from Swipe)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="Swipe"></Skill>
-			<Skill enabled="true" includeInFullDPS="false" index="9" label="Shred Armor (from Storm Bolt/Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="PrimalLightning/GatheringStormMelee"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="7" label="Bleed (from Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="GatheringStormMelee"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="8" label="Storm Bolt (from Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="PrimalLightning" source="GatheringStormMelee"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="9" label="Shred Armor (from Swipe)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="Swipe"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="10" label="Bleed (from Swipe)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="Swipe"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="11" label="Shred Armor (from Storm Bolt/Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_ArmourShred" source="PrimalLightning/GatheringStormMelee"></Skill>
+			<Skill enabled="true" includeInFullDPS="false" index="12" label="Bleed (from Storm Bolt/Gathering Storm)" mainActiveSkill="1" mainActiveSkillCalcs="nil" skillId="Ailment_Bleed" source="PrimalLightning/GatheringStormMelee"></Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">
