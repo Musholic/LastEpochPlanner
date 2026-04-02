@@ -355,23 +355,14 @@ function PassiveTreeClass:ProcessStats(node, startIndex)
 
     -- Build unified list of modifiers from all recognised modifier lines
     for i = startIndex, #node.mods do
-        local mod = node.mods[i]
-        if mod.list and not mod.extra then
-            for i, mod in ipairs(mod.list) do
-                mod = modLib.setSource(mod, "Tree:" .. node.id)
+        local mod1 = node.mods[i]
+        if mod1.list and not mod1.extra then
+            for i, mod2 in ipairs(mod1.list) do
+                local newMod = modLib.setSource(mod2, "Tree:" .. node.id)
                 if node.skillId then
-                    table.insert(mod, {type = "SkillId", skillId = node.skillId})
+                    table.insert(newMod, {type = "SkillId", skillId = node.skillId})
                 end
-                if node.alloc > 1 then
-                    if type(mod.value) == "table" then
-                        for _, mod in ipairs(mod.value) do
-                            mod.value = mod.value
-                        end
-                    else
-                        mod.value = mod.value
-                    end
-                end
-                node.modList:AddMod(mod)
+                node.modList:AddMod(newMod)
             end
         end
     end

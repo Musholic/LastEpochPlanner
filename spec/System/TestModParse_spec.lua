@@ -95,7 +95,7 @@ describe("TestModParse", function()
         assert.are.equals(0, build.configTab.modList:Sum("BASE", { keywordFlags = KeywordFlag.Fire }, "FireDamage"))
         assert.are.equals(25, build.configTab.modList:Sum("BASE", { keywordFlags = bit.bor(KeywordFlag.Fire, KeywordFlag.Spell) }, "FireDamage"))
     end)
-    
+
     it("void spell damage", function()
         build.configTab.input.customMods = "+13 void spell damage"
         build.configTab:BuildModList()
@@ -183,7 +183,7 @@ describe("TestModParse", function()
         assert.are.equals(0, build.configTab.modList:Sum("BASE", {flags = bit.bor(ModFlag.Hit)}, "ChanceToTriggerOnHit_Ailment_Ignite"))
         assert.are.equals(10, build.configTab.modList:Sum("BASE", {flags = bit.bor(ModFlag.Hit, ModFlag.Melee)}, "ChanceToTriggerOnHit_Ailment_Ignite"))
     end)
-    
+
     it("bleed chance", function()
         build.configTab.input.customMods = "+17% Bleed Chance"
         build.configTab:BuildModList()
@@ -267,5 +267,16 @@ describe("TestModParse", function()
 
     end)
 
-end)
+    it("shared critical chance", function()
+        build.skillsTab:SelSkill(1, "SummonSkeleton")
+        build.configTab.input.customMods = "+17% Shared Increased Critical Strike Chance\n\z
+        +7% Increased Critical Strike Chance\n\z
+        +3% Minion Increased Critical Strike Chance"
+        build.configTab:BuildModList()
+        runCallback("OnFrame")
 
+        assert.are.equals(24, build.calcsTab.mainEnv.player.modDB:Sum("INC", nil, "CritChance"))
+        assert.are.equals(20, build.calcsTab.mainEnv.minion.modDB:Sum("INC", nil, "CritChance"))
+    end)
+
+end)

@@ -17,9 +17,13 @@ end
 -- List of modifier forms
 local formList = {
 	["^([%+%-]?[%d%.]+)%% increased"] = "INC",
+	["^([%+%-]?[%d%.]+)%% (%w+) increased"] = "INC",
 	["^([%+%-]?[%d%.]+)%% reduced"] = "RED",
+	["^([%+%-]?[%d%.]+)%% (%w+) reduced"] = "RED",
 	["^([%+%-]?[%d%.]+)%% more"] = "MORE",
+	["^([%+%-]?[%d%.]+)%% (%w+) more"] = "MORE",
 	["^([%+%-]?[%d%.]+)%% less"] = "LESS",
+	["^([%+%-]?[%d%.]+)%% (%w+) less"] = "LESS",
 	["^(%d+)%% faster"] = "INC",
 	["^(%d+)%% slower"] = "RED",
 	["^([%+%-]?[%d%.]+)%%"] = "BASE_MORE",
@@ -187,6 +191,7 @@ local modFlagList = {
 	["minion skills"] = { tag = { type = "SkillType", skillType = SkillType.Minion } },
 	["with elemental spells"] = { keywordFlags = bor(KeywordFlag.Lightning, KeywordFlag.Cold, KeywordFlag.Fire) },
 	["minion"] = { addToMinion = true },
+	["shared"] = { addToMinion = true, shared = true },
 	-- can be ignored since the cooldown is already part of the triggered skill data
 	["%(%d+ second cooldown%)"] = {},
 	-- Other
@@ -292,7 +297,7 @@ local specialQuickFixModList = {
 	["^([%+%-]?[%d%.]+%%) Cast Speed"] = "%1 increased Cast Speed",
 	["^([%+%-]?[%d%.]+%%) Cooldown Recovery Speed"] = "%1 increased Cooldown Recovery Speed",
 	["^([%+%-]?[%d%.]+%%) Duration"] = "%1 increased Duration",
-	["^([%+%-]?[%d%.]+%%) Movespeed"] = "%1 increased Movespeed",
+	["^([%+%-]?[%d%.]+%%) Movespeed"] = "%1 increased Movespeed"
 }
 
 for _, damageType in ipairs(DamageTypes) do
@@ -424,6 +429,9 @@ local function parseMod(line, order)
 	if not modForm then
 		return nil, line
 	end
+	if formCap[2] then
+		line = formCap[2] .. line
+	end
 
 	-- Check for tags (per-charge, conditionals)
 	local modTag, modTag2, tagCap
@@ -481,6 +489,8 @@ local function parseMod(line, order)
 	local modSuffix
 	local modExtraTags
 	if modForm == "INC" then
+		modType = "INC"
+	elseif modForm == "SHARED_INC" then
 		modType = "INC"
 	elseif modForm == "RED" then
 		modValue = -modValue
@@ -585,8 +595,10 @@ local function parseMod(line, order)
 			end
 		elseif misc.addToMinion then
 			-- Minion modifiers
+			local newModList = { }
 			for i, effectMod in ipairs(modList) do
 				local tagList = { }
+				local modTagList = copyTable(effectMod)
 				if misc.playerTag then t_insert(tagList, misc.playerTag) end
 				if misc.addToMinionTag then t_insert(tagList, misc.addToMinionTag) end
 				if misc.playerTagList then
@@ -594,7 +606,21 @@ local function parseMod(line, order)
 						t_insert(tagList, tag)
 					end
 				end
-				modList[i] = mod("MinionModifier", "LIST", { mod = effectMod }, unpack(tagList))
+				-- Until proven otherwise, "PerStat" mods are always relative to the player
+				for _, tag in ipairs(modTagList) do
+					if tag.type == "PerStat" then
+						tag.actor = "parent"
+					end
+				end
+				local newMod = mod("MinionModifier", "LIST", { mod = modTagList }, unpack(tagList))
+				t_insert(newModList, newMod)
+			end
+			if misc.shared then
+				for _, newMod in ipairs(newModList) do
+					t_insert(modList, newMod)
+				end
+			else
+				modList = newModList
 			end
 		elseif misc.addToSkill then
 			-- Skill enchants or socketed gem modifiers that add additional effects

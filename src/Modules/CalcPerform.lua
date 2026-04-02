@@ -318,6 +318,8 @@ function calcs.perform(env, fullDPSSkipEHP)
 		env.minion.modDB:NewMod("CritMultiplier", "BASE", 30, "Base")
 		env.minion.modDB:NewMod("CritDegenMultiplier", "BASE", 30, "Base")
 		env.minion.modDB:NewMod("ProjectileCount", "BASE", 1, "Base")
+		env.minion.modDB:NewMod("Damage", "MORE", 0.6, "Base", { type = "Multiplier", var = "Level", threshold = 25})
+		env.minion.modDB:NewMod("DamageTaken", "MORE", -0.8, "Base", { type = "Multiplier", var = "Level", threshold = 25})
 		for _, mod in ipairs(env.minion.minionData.modList) do
 			env.minion.modDB:AddMod(mod)
 		end

@@ -13,10 +13,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Run tests
-        run: busted --lua=luajit --exclude-tags=""
+        run: busted --lua=luajit
       - name: Report coverage
         continue-on-error: true # Coverage report may fail if the coveralls.io server is overloaded
         run: cd src; luacov-coveralls --repo-token=${{ secrets.github_token }} -e TestData -e Data -e runtime
+  run_build_tests:
+    runs-on: ubuntu-latest
+    container: ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run tests
+        run: busted --lua=luajit --exclude-tags="" -t builds
   check_generated_builds:
     runs-on: ubuntu-latest
     container: ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
