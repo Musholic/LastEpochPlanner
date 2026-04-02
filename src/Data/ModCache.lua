@@ -1257,7 +1257,7 @@ c["+0.8% Critical Strike Chance per 40 Total Attributes"]={{[1]={[1]={div=40,sta
 c["+0.9% Shock Chance per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=0.9}},nil}
 c["+1  Can gain Germination Stacks"]={{},"  Can gain Germination Stacks "}
 c["+1 10% chance for Additional hits on Boss or Rares"]={{}," 10% chance for Additional s on Boss or Rares "}
-c["+1 Active Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Active  "}
+c["+1 Active Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["+1 Additional Abyssal Echoes Casts"]={{},"  Casts "}
 c["+1 Additional Acid Flask Charges"]={{},"  Charges "}
 c["+1 Additional Chains"]={{}," Chains "}
@@ -8911,7 +8911,7 @@ c["-20% Shrapnel Frequency"]={{}," Shrapnel Frequency "}
 c["-20% Shrapnel Speed and Range"]={{}," Shrapnel Speed and Range "}
 c["-20% Speed and Range"]={{}," Speed and Range "}
 c["-23% to -17% Minion Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=-23}}}}," -17%   "}
-c["-25% Active Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="MORE",value=-25}}," Active  "}
+c["-25% Active Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="MORE",value=-25}},nil}
 c["-25% Bonus Damage Taken From Crits"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="BASE",value=-25}}," Bonus  From Crits "}
 c["-25% Cooldown"]={{}," Cooldown "}
 c["-25% Detonation Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=-25}}," Detonation  "}
@@ -10542,7 +10542,7 @@ c["14% Increased Mana regeneration while you control a minion"]={{[1]={flags=0,k
 c["14% Increased Poison Duration"]={{[1]={[1]={skillName="Poison",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=14}},nil}
 c["14% Increased Shock Duration "]={{[1]={[1]={skillName="Shock",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=14}},nil}
 c["14% Increased Silver Shroud Duration "]={{[1]={[1]={skillName="Silver Shroud",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=14}},nil}
-c["14% Increased Symbols of Hope Active Duration"]={{[1]={[1]={skillName="Symbols of Hope",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=14}},"  Active  "}
+c["14% Increased Symbols of Hope Active Duration"]={{[1]={[1]={skillName="Symbols of Hope",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=14}},nil}
 c["14% Maximum Damage Bonus"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=14}}," Maximum  Bonus "}
 c["14% More Hit Damage if you have only one Singularity equipped"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=14}},"   if you have only one Singularity equipped "}
 c["14% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-14}},"  Cost of s "}

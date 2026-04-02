@@ -126,6 +126,7 @@ local modNameList = {
 	["area"] = "AreaOfEffect",
 	["area of effect"] = "AreaOfEffect",
 	["duration"] = "Duration",
+	["active duration"] = "Duration",
 	["cooldown duration"] = "CooldownRecovery",
 	["cooldown recovery"] = "CooldownRecovery",
 	["cooldown recovery speed"] = "CooldownRecovery",
