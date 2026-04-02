@@ -211,6 +211,7 @@ end
 
 for _, damageSourceType in ipairs(DamageSourceTypes) do
 	modFlagList[damageSourceType:lower()] = { keywordFlags = ModFlag[damageSourceType] }
+	modFlagList["with " .. damageSourceType:lower() .. " attacks"] = { keywordFlags = ModFlag[damageSourceType], flags = ModFlag.Hit }
 end
 
 for _, damageType in ipairs(DamageTypes) do

@@ -2723,7 +2723,7 @@ c["+12% Chance to apply Critical Vulnerability on Melee Hit"]={{[1]={flags=83891
 c["+12% Chance to apply a Spark Charge on Melee Hit"]={{}," to apply a   "}
 c["+12% Chance to cast Fire Aura on Crit (up to 3 times per second)"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_FireAura",type="BASE",value=12}},"  on Crit (up to 3 times per second) "}
 c["+12% Chance to cast Fire Aura when Hit (up to 3 times per second)"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_FireAura",type="BASE",value=12}},"  when  (up to 3 times per second) "}
-c["+12% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=12}},"   with  attacks (up to 10 times per 2 seconds) "}
+c["+12% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=12}},"    (up to 10 times per 2 seconds) "}
 c["+12% Chance to create a Void Rift when you hit an enemy (2 second cooldown)"]={{}," to create a  when you  an enemy  "}
 c["+12% Chance to gain Lightning Aegis when hit"]={nil,"Lightning Aegis when hit "}
 c["+12% Chance to inflict Time Rot on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_TimeRot",type="BASE",value=12}},nil}
@@ -2812,7 +2812,7 @@ c["+12% Throwing Attack Damage"]={{[1]={flags=0,keywordFlags=1024,name="Damage",
 c["+12% Void Essence Chance On Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_VoidEssence",type="BASE",value=12}},nil}
 c["+12% Void Penetration"]={{[1]={flags=0,keywordFlags=0,name="VoidPenetration",type="BASE",value=12}},nil}
 c["+12% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=12}},nil}
-c["+12% Voidwinter Bolt Critical Strike Multiplier per 10% uncapped Chill Chance with Melee Attacks"]={{[1]={[1]={skillName="Voidwinter Bolt",type="SkillName"},flags=0,keywordFlags=512,name="CritMultiplier",type="BASE",value=12}},"   per 10% uncapped Chill Chance with  Attacks "}
+c["+12% Voidwinter Bolt Critical Strike Multiplier per 10% uncapped Chill Chance with Melee Attacks"]={{[1]={[1]={skillName="Voidwinter Bolt",type="SkillName"},flags=8388608,keywordFlags=512,name="CritMultiplier",type="BASE",value=12}},"   per 10% uncapped Chill Chance  "}
 c["+12% Ward Retention with a Sceptre"]={{[1]={[1]={type="Condition",var="UsingSceptre"},flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=12}},nil}
 c["+12% Width"]={{}," Width "}
 c["+12% chance to Block hits taken while Moving"]={{}," to Block s taken  "}
@@ -3197,7 +3197,7 @@ c["+15% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="Chance
 c["+15% Chance to apply Critical Vulnerability on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=15}},nil}
 c["+15% Chance to apply a Spark Charge on Melee Hit"]={{}," to apply a   "}
 c["+15% Chance to cast Lightning Blast When Hit while you have Lightning Aegis"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_LightningBlast",type="BASE",value=15}},"  When  while you have  Aegis "}
-c["+15% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=15}},"   with  attacks (up to 10 times per 2 seconds) "}
+c["+15% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=15}},"    (up to 10 times per 2 seconds) "}
 c["+15% Chance to forge a weapon when hit"]={{}," to forge a weapon when  "}
 c["+15% Chance to inflict Bleed on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=15}},nil}
 c["+15% Chill Duration"]={{[1]={[1]={skillName="Chill",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="MORE",value=15}},nil}
@@ -3650,7 +3650,7 @@ c["+18% Chance to apply a Spark Charge on Melee Hit"]={{}," to apply a   "}
 c["+18% Chance to cast Fire Aura on Crit (up to 3 times per second)"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_FireAura",type="BASE",value=18}},"  on Crit (up to 3 times per second) "}
 c["+18% Chance to cast Fire Aura when Hit (up to 3 times per second)"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_FireAura",type="BASE",value=18}},"  when  (up to 3 times per second) "}
 c["+18% Chance to cast Harvest at 3 nearby enemies when you use Reap"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Harvest",type="BASE",value=18}},"  at 3 nearby enemies when you use Reap "}
-c["+18% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=18}},"   with  attacks (up to 10 times per 2 seconds) "}
+c["+18% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=18}},"    (up to 10 times per 2 seconds) "}
 c["+18% Chance to create a Void Rift when you hit an enemy (2 second cooldown)"]={{}," to create a  when you  an enemy  "}
 c["+18% Chance to forge a weapon when hit"]={{}," to forge a weapon when  "}
 c["+18% Chance to gain Lightning Aegis when hit"]={nil,"Lightning Aegis when hit "}
@@ -3737,7 +3737,7 @@ c["+19% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name=
 c["+19% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=19}},nil}
 c["+19% Chance to apply Critical Vulnerability on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=19}},nil}
 c["+19% Chance to apply Frailty on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=19}},nil}
-c["+19% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=19}},"   with  attacks (up to 10 times per 2 seconds) "}
+c["+19% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=19}},"    (up to 10 times per 2 seconds) "}
 c["+19% Chance to gain Dusk Shroud when you use a Melee Attack that hits"]={nil,"Dusk Shroud when you use a Melee Attack that hits "}
 c["+19% Chance to inflict Bleed on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=19}},"  on   "}
 c["+19% Chance to inflict Bleed on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=19}},nil}
@@ -4709,7 +4709,7 @@ c["+23% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name=
 c["+23% Chance to apply Frailty on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=23}},"  on   "}
 c["+23% Chance to apply Future Strike on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_FutureAttack",type="BASE",value=23}},nil}
 c["+23% Chance to cast Harvest at 3 nearby enemies when you use Reap"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Harvest",type="BASE",value=23}},"  at 3 nearby enemies when you use Reap "}
-c["+23% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=23}},"   with  attacks (up to 10 times per 2 seconds) "}
+c["+23% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=23}},"    (up to 10 times per 2 seconds) "}
 c["+23% Chance to gain Dusk Shroud when you use a Melee Attack that hits"]={nil,"Dusk Shroud when you use a Melee Attack that hits "}
 c["+23% Chance to inflict Bleed on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=23}},"  on   "}
 c["+23% Cold Penetration with Frostbite "]={{[1]={[1]={skillName="Frostbite",type="SkillName"},flags=0,keywordFlags=0,name="ColdPenetration",type="BASE",value=23}},"  with   "}
@@ -5677,7 +5677,7 @@ c["+30% Chance to Slow on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="Chance
 c["+30% Chance to apply Critical Vulnerability on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=30}},nil}
 c["+30% Chance to apply Damned on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Damned",type="BASE",value=30}},nil}
 c["+30% Chance to cast Fire Trail when you are crit"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_FireTrail",type="BASE",value=30}},"  when you are crit "}
-c["+30% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=30}},"   with  attacks (up to 10 times per 2 seconds) "}
+c["+30% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=30}},"    (up to 10 times per 2 seconds) "}
 c["+30% Chance to cast stationary fire Tornado at a nearby enemy on hit (up to 2 times per 3 seconds)"]={{}," to cast stationary   at a nearby enemy  (up to 2 times per 3 seconds) "}
 c["+30% Chance to create an Earthquake Aftershock at a nearby enemy on melee attack (up to 10 times per 2 seconds)"]={{}," to create an  Aftershock at a nearby enemy on  attack (up to 10 times per 2 seconds) "}
 c["+30% Chance to gain Haste when you kill an enemy with a spell"]={nil,"Haste  with a spell "}
@@ -6769,7 +6769,7 @@ c["+43% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name=
 c["+43% Chance to Slow on Void Hit"]={{[1]={flags=8388608,keywordFlags=16,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=43}},nil}
 c["+43% Chance to apply Frailty on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=43}},"  on   "}
 c["+43% Chance to apply Frostbite on Cold Hit"]={{[1]={flags=8388608,keywordFlags=4,name="ChanceToTriggerOnHit_Ailment_Frostbite",type="BASE",value=43}},nil}
-c["+43% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=43}},"   with  attacks (up to 10 times per 2 seconds) "}
+c["+43% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=43}},"    (up to 10 times per 2 seconds) "}
 c["+43% Chance to gain 20 Ward on Kill with Hungering Souls"]={nil,"20 Ward  with Hungering Souls "}
 c["+43% Poison Penetration with Poison inflicted by Melee Attacks"]={{[1]={[1]={skillName="Poison",type="SkillName"},flags=0,keywordFlags=512,name="PoisonPenetration",type="BASE",value=43}},"  with  inflicted by  Attacks "}
 c["+43% to All Resistances While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="FireResist",type="BASE",value=43},[2]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=43},[3]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=43},[4]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=43},[5]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=43},[6]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=43},[7]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=43}},nil}
@@ -7373,7 +7373,7 @@ c["+51 Minion Melee Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier"
 c["+51 Minion Spell Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=256,name="Damage",type="BASE",value=51}}}},nil}
 c["+51 Spell Damage for Totems"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=51}},"   for Totems "}
 c["+51 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=51}},nil}
-c["+51% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=51}},"   with  attacks (up to 10 times per 2 seconds) "}
+c["+51% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=51}},"    (up to 10 times per 2 seconds) "}
 c["+51% Chance to inflict Bleed on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=51}},nil}
 c["+51% Chance to inflict Time Rot on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_TimeRot",type="BASE",value=51}},nil}
 c["+51% Freeze Rate per stack of Chill"]={{}," Freeze Rate per stack of  "}
@@ -8747,7 +8747,7 @@ c["+93 Melee Physical Damage"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDam
 c["+93 Melee Void Damage"]={{[1]={flags=0,keywordFlags=512,name="VoidDamage",type="BASE",value=93}},nil}
 c["+93% Chance on Block to apply Marked For Death to the Attacker"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_MarkedForDeath",type="BASE",value=93}}," on Block  to the Attacker "}
 c["+93% Chance to Blind on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=93}},nil}
-c["+93% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=93}},"   with  attacks (up to 10 times per 2 seconds) "}
+c["+93% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Smite",type="BASE",value=93}},"    (up to 10 times per 2 seconds) "}
 c["+93% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+94 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=94}},nil}
 c["+94 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=94}},nil}
@@ -10925,7 +10925,7 @@ c["162% increased Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",ty
 c["162% increased Elemental Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=162},[2]={flags=0,keywordFlags=0,name="ColdDamage",type="INC",value=162},[3]={flags=0,keywordFlags=0,name="LightningDamage",type="INC",value=162}},nil}
 c["162% increased Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=162}},nil}
 c["162% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=162}},nil}
-c["163% Increased Spark Charge Effect with Melee Attacks"]={{},"  Effect with  Attacks "}
+c["163% Increased Spark Charge Effect with Melee Attacks"]={{},"  Effect  "}
 c["163% Increased Stun Chance"]={{}," Stun Chance "}
 c["165 Damage Reflected to Attackers"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=165}},"  Reflected to Attackers "}
 c["165 Ward Gained on Shadow Creation"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=165}},"  Gained on Shadow Creation "}
@@ -12553,7 +12553,7 @@ c["3% more Damage to Poisoned Enemies"]={{[1]={[1]={actor="enemy",type="ActorCon
 c["3% more Damage to Slowed Enemies"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=3}},"  to ed Enemies "}
 c["3% more Increased Mana per stack of Spirit Battery"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="INC",value=3}},"more  per stack of Spirit Battery "}
 c["3% more Stygian Beam Damage per 10 Current Mana"]={{[1]={[1]={skillName="Stygian Beam",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=3}},"   per 10 Current Mana "}
-c["3% more Voidwinter Bolt Damage per 10% uncapped Time Rot Chance with Melee Attacks"]={{[1]={[1]={skillName="Voidwinter Bolt",type="SkillName"},flags=0,keywordFlags=512,name="Damage",type="MORE",value=3}},"   per 10% uncapped Time Rot Chance with  Attacks "}
+c["3% more Voidwinter Bolt Damage per 10% uncapped Time Rot Chance with Melee Attacks"]={{[1]={[1]={skillName="Voidwinter Bolt",type="SkillName"},flags=8388608,keywordFlags=512,name="Damage",type="MORE",value=3}},"   per 10% uncapped Time Rot Chance  "}
 c["3% more your maximum mana restored when Great Harvest kills an enemy"]={{[1]={[1]={skillName="Harvest",type="SkillName"},flags=0,keywordFlags=0,name="Mana",type="MORE",value=3}}," your  restored when Great  kills an enemy "}
 c["3% of Armor Mitigation also applies to Damage over Time"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=3}},"  Mitigation also applies to Damage over Time "}
 c["3% of Bone Golems have 6% chance on hit to grant you a percentage of their missing health as ward."]={{[1]={flags=8388608,keywordFlags=0,name="Life",type="BASE",value=3}}," Bone Golems have 6% chance  to grant you a percentage of their missing  as ward. "}
