@@ -1266,7 +1266,7 @@ c["+1 Additional Divine Bolts"]={{}," Divine Bolts "}
 c["+1 Additional Falcon Strikes hits"]={{}," Falcon Strikes s "}
 c["+1 Additional Falcon Strikes hits on kill"]={{}," Falcon Strikes s  "}
 c["+1 Additional Health Per 2 Vitality"]={{[1]={[1]={div=2,stat="Vit",type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},nil}
-c["+1 Additional Ignite Stacks Applied"]={{},"  Stacks Applied "}
+c["+1 Additional Ignite Stacks Applied"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=100}},nil}
 c["+1 Additional Javelins"]={{}," s "}
 c["+1 Additional Limit per 3 Seconds"]={{}," Limit per 3 Seconds "}
 c["+1 Additional Max Totems"]={{}," Max Totems "}
@@ -1297,7 +1297,7 @@ c["+1 Bear Earthquake Charges"]={{}," Bear  Charges "}
 c["+1 Bees Per 10 Seconds"]={{}," Bees Per 10 Seconds "}
 c["+1 Berserk Stacks On Hit While Berserk"]={{}," Berserk Stacks  While Berserk "}
 c["+1 Black Arrows"]={{}," Black Arrows "}
-c["+1 Bleed Stacks"]={{},"  Stacks "}
+c["+1 Bleed Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=100}},nil}
 c["+1 Bleeding Fury Max Stacks"]={{}," ing Fury Max Stacks "}
 c["+1 Block Chance converted to Parry Chance while not wielding a shield"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=1}},"  converted to Parry Chance while not wielding a shield "}
 c["+1 Block Effectiveness per 1% Total Uncapped Resistance"]={{}," Block Effectiveness per 1% Total Uncapped Resistance "}
@@ -1314,7 +1314,7 @@ c["+1 Charge for Void Cleave"]={{}," Charge for  "}
 c["+1 Charges"]={{}," Charges "}
 c["+1 Charges Gained When Hit"]={{}," Charges Gained When  "}
 c["+1 Charges for Fury Leap"]={{}," Charges for  "}
-c["+1 Chill stacks on Cursed Rares and Bosses"]={{},"  stacks on Cursed Rares and Bosses "}
+c["+1 Chill stacks on Cursed Rares and Bosses"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=100}},"  on Cursed Rares and Bosses "}
 c["+1 Chthonic Fissure Tree applies to Flame Whip"]={{},"  Tree applies to Flame Whip "}
 c["+1 Cold Melee Damage per 2 Dexterity"]={{[1]={[1]={div=2,stat="Dex",type="PerStat"},flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=1}},nil}
 c["+1 Colossus Stacks Per Hit"]={{}," Colossus Stacks Per  "}
@@ -1323,15 +1323,15 @@ c["+1 Companion Summon Limit"]={{}," Companion Summon Limit "}
 c["+1 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
 c["+1 Cooldown Duration"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=1}},nil}
 c["+1 Cooldown Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=1}},"  (seconds) "}
-c["+1 Critical Vulnerability Stacks"]={{},"  Stacks "}
+c["+1 Critical Vulnerability Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=100}},nil}
 c["+1 Crossbow Mercenaries"]={{}," Cross Mercenaries "}
 c["+1 Cursed Ground Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Cursed Ground  (seconds) "}
 c["+1 Damage Per Dusk Shroud"]={{[1]={[1]={skillName="Dusk Shroud",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}},"  Per  "}
 c["+1 Damage Reflected Per Point Of Attunement"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}},"  Reflected  "}
 c["+1 Damage dealt to enemies facing you every 0.5 seconds per 1 Damage Reflected to Attackers"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}},"  dealt to enemies facing you every 0.5 seconds per 1 Damage Reflected to Attackers "}
 c["+1 Damage per 40 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}},"  per 40 Block Effectiveness "}
-c["+1 Damned Stacks"]={{},"  Stacks "}
-c["+1 Damned Stacks Per Second"]={{},"  Stacks Per Second "}
+c["+1 Damned Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Damned",type="BASE",value=100}},nil}
+c["+1 Damned Stacks Per Second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Damned",type="BASE",value=100}},"  Per Second "}
 c["+1 Dark Shackle Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Dark Shackle  (Seconds) "}
 c["+1 Detonations Per Gon Rune"]={{}," Detonations Per Gon Rune "}
 c["+1 Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=1}},nil}
@@ -1342,7 +1342,7 @@ c["+1 Dodge Rating per Intelligence while Channeling"]={{[1]={[1]={stat="Int",ty
 c["+1 Drain Life casts Stygian Beams instead"]={{},"  casts Stygian Beams instead "}
 c["+1 Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  (Seconds) "}
 c["+1 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  (seconds) "}
-c["+1 Dusk Shroud Stacks"]={{},"  Stacks "}
+c["+1 Dusk Shroud Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_DuskShroud",type="BASE",value=100}},nil}
 c["+1 Earthquake Converted To Fire"]={{},"  Converted To  "}
 c["+1 Earthquake is converted to lightning"]={{},"  is converted to  "}
 c["+1 Elemental Arrow consumed per bow attack"]={{},"  Arrow consumed  attack "}
@@ -1364,17 +1364,17 @@ c["+1 Falcon Throwing Damage Per 4 Dex"]={{[1]={[1]={div=4,stat="Dex",type="PerS
 c["+1 Fault Lines"]={{}," Fault Lines "}
 c["+1 Fear Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
 c["+1 Fear For Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  For  (seconds) "}
-c["+1 Fire Aura Stacks Per Second"]={{},"  Stacks Per Second "}
+c["+1 Fire Aura Stacks Per Second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_FireAura",type="BASE",value=100}},"  Per Second "}
 c["+1 Fire Damage Per Symbol"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="BASE",value=1}},"  Per Symbol "}
 c["+1 Fire Damage per Attunement with a Mace"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="FireDamage",type="BASE",value=1}},"   with a Mace "}
 c["+1 Fire Res Shred Stacks"]={{},"  Res Shred Stacks "}
 c["+1 Fire Shred Stacks On Pass Through"]={{},"  Shred Stacks On Pass Through "}
 c["+1 Fissure Spell Damage per 2% Ignite Chance"]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=256,name="Damage",type="BASE",value=1}}," Fissure   per 2%  Chance "}
 c["+1 Forged Weapons Per Stack"]={{}," Forged Weapons Per Stack "}
-c["+1 Frailty Stacks"]={{},"  Stacks "}
-c["+1 Frailty Stacks Applied"]={{},"  Stacks Applied "}
-c["+1 Frailty Stacks on Feather Burst"]={{},"  Stacks on Feather Burst "}
-c["+1 Frailty Stacks on Screech"]={{},"  Stacks on Screech "}
+c["+1 Frailty Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=100}},nil}
+c["+1 Frailty Stacks Applied"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=100}},nil}
+c["+1 Frailty Stacks on Feather Burst"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=100}},"  on Feather Burst "}
+c["+1 Frailty Stacks on Screech"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=100}},"  on Screech "}
 c["+1 Freeze Rate Per Int"]={{}," Freeze Rate Per Int "}
 c["+1 Freeze Rate Per Level"]={{}," Freeze Rate  "}
 c["+1 Freeze Rate per 1% Cold Res"]={{}," Freeze Rate per 1%  Res "}
@@ -1402,9 +1402,9 @@ c["+1 Health Regeneration per Summoned Bee"]={{[1]={flags=0,keywordFlags=0,name=
 c["+1 Health per Attunement"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},nil}
 c["+1 Hits Blocked"]={{}," s Blocked "}
 c["+1 Hungering Souls projectiles are fired in sequence and can all hit the same target"]={{[1]={[1]={skillName="Hungering Souls",type="SkillName"},flags=8388608,keywordFlags=8,name="ProjectileCount",type="BASE",value=1}},"   are d in sequence and can all  the same target "}
-c["+1 Ignite Stacks"]={{},"  Stacks "}
-c["+1 Ignite Stacks Applied"]={{},"  Stacks Applied "}
-c["+1 Ignite Stacks Every 0.5 Seconds"]={{},"  Stacks Every 0.5 Seconds "}
+c["+1 Ignite Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=100}},nil}
+c["+1 Ignite Stacks Applied"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=100}},nil}
+c["+1 Ignite Stacks Every 0.5 Seconds"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=100}},"  Every 0.5 Seconds "}
 c["+1 Increases to Fire Aura Area also apply to Glyph of Dominion"]={{[1]={[1]={skillName="Glyph of Dominion",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_FireAura",type="BASE",value=1}}," Increases  Area also apply to  "}
 c["+1 Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=1}},nil}
 c["+1 Intelligence Equals Strength"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=1}},"  Equals Strength "}
@@ -1421,7 +1421,7 @@ c["+1 Limited to One Companion of Each Type"]={{}," Limited to One Companion of 
 c["+1 Locusts On Hive Hit"]={{}," Locusts On Hive  "}
 c["+1 Lunge Charges"]={{},"  Charges "}
 c["+1 Lunge Does Not Require a Target"]={{},"  Does Not Require a Target "}
-c["+1 Maelstrom Stacks On Dive"]={{},"  Stacks On Dive "}
+c["+1 Maelstrom Stacks On Dive"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Maelstrom",type="BASE",value=100}},"  On Dive "}
 c["+1 Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=1}},nil}
 c["+1 Mana Cost Per Charge"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=1}},"  Per Charge "}
 c["+1 Mana Gain"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gain "}
@@ -1453,7 +1453,7 @@ c["+1 Maximum Omen Idols"]={{}," Maximum Omen Idols "}
 c["+1 Maximum Possible Aftershocks"]={{}," Maximum Possible Afters "}
 c["+1 Maximum Shades"]={{}," Maximum Shades "}
 c["+1 Maximum Shadows"]={{}," Maximum Shadows "}
-c["+1 Maximum Shock Stacks"]={{}," Maximum  Stacks "}
+c["+1 Maximum Shock Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=100}}," Maximum  "}
 c["+1 Maximum Skeletal Mages"]={{}," Maximum Skeletal Mages "}
 c["+1 Maximum Skeletons"]={{}," Maximum Skeletons "}
 c["+1 Maximum Stacks"]={{}," Maximum Stacks "}
@@ -1492,7 +1492,7 @@ c["+1 Minion Spell Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionM
 c["+1 Minion Throwing Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=1024,name="Damage",type="BASE",value=1}}}},nil}
 c["+1 Mirages created by Lethal Mirage"]={{}," Mirages created by  "}
 c["+1 Mirror Images On Arrival"]={{}," Mirror Images On Arrival "}
-c["+1 Molten Infusion Stacks On Hit"]={{},"  Stacks  "}
+c["+1 Molten Infusion Stacks On Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_MoltenInfusion",type="BASE",value=100}},nil}
 c["+1 Necrotic Res Stacks"]={{},"  Res Stacks "}
 c["+1 Number Of Meteors For Direct Casts"]={{[1]={[1]={skillName="Meteor",type="SkillName"},flags=0,keywordFlags=0,name="InstanceCountOnDirectCast",type="BASE",value=1}},nil}
 c["+1 Number Of Rip Bloods Cast"]={{}," Number Of s Cast "}
@@ -1525,11 +1525,11 @@ c["+1 Shadow Dagger Stacks"]={{}," Shadow Dagger Stacks "}
 c["+1 Shared Spell Damage Buff"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=256,name="Damage",type="BASE",value=1}}}},"    Buff "}
 c["+1 Shields"]={{}," Shields "}
 c["+1 Shurikens Thrown"]={{},"  Thrown "}
-c["+1 Silver Shroud Stacks"]={{},"  Stacks "}
+c["+1 Silver Shroud Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_SilverShroud",type="BASE",value=100}},nil}
 c["+1 Skeletons Summoned Per Cast"]={{}," Skeletons Summoned Per Cast "}
 c["+1 Slow Duration (seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
-c["+1 Slow Stacks"]={{},"  Stacks "}
-c["+1 Slow Stacks on Screech"]={{},"  Stacks on Screech "}
+c["+1 Slow Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=100}},nil}
+c["+1 Slow Stacks on Screech"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=100}},"  on Screech "}
 c["+1 Small Boulders Per Cast"]={{}," Small Boulders Per Cast "}
 c["+1 Smite Void Spell Damage per Vitality"]={{[1]={[1]={stat="Vit",type="PerStat"},[2]={skillName="Smite",type="SkillName"},flags=0,keywordFlags=256,name="VoidDamage",type="BASE",value=1}},nil}
 c["+1 Spark Charge to all targets around the destination when you Teleport"]={{},"  to all targets around the destination when you Teleport "}
@@ -1578,8 +1578,8 @@ c["+1 Throwing Fire Damage Per Stack"]={{[1]={flags=0,keywordFlags=1024,name="Fi
 c["+1 Throwing Fire Damage with Burning Daggers per 2% increased chance to find potions"]={{[1]={[1]={skillName="Burning Dagger",type="SkillName"},flags=0,keywordFlags=1024,name="FireDamage",type="BASE",value=1}},"   with s per 2% increased chance to find potions "}
 c["+1 Throwing Physical Damage"]={{[1]={flags=0,keywordFlags=1024,name="PhysicalDamage",type="BASE",value=1}},nil}
 c["+1 Throwing an Acid Flask consumes a potion in order to throw an additional flask that deals more damage"]={{[1]={[1]={skillName="Acid Flask",type="SkillName"},flags=0,keywordFlags=1024,name="Damage",type="BASE",value=1}},"  an  consumes a potion in order to throw an additional flask that deals more  "}
-c["+1 Time Rot Stacks"]={{},"  Stacks "}
-c["+1 Time Rot Stacks For Next Throwing"]={{},"  Stacks For Next  "}
+c["+1 Time Rot Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_TimeRot",type="BASE",value=100}},nil}
+c["+1 Time Rot Stacks For Next Throwing"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_TimeRot",type="BASE",value=100}},"  For Next  "}
 c["+1 Tolmat's Historic Minions"]={{},"lmat's Historic s "}
 c["+1 Totem Melee Damage on Hit"]={{[1]={flags=8388608,keywordFlags=512,name="Damage",type="BASE",value=1}},"tem    "}
 c["+1 Totem Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=1}},"tem   "}
@@ -3812,11 +3812,11 @@ c["+2 Extra Arrows"]={{}," Extra Arrows "}
 c["+2 Extra Flasks"]={{}," Extra Flasks "}
 c["+2 Extra Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=2}},nil}
 c["+2 Fester Maximum Stacks"]={{}," Fester Maximum Stacks "}
-c["+2 Fire Aura Stacks"]={{},"  Stacks "}
+c["+2 Fire Aura Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_FireAura",type="BASE",value=200}},nil}
 c["+2 Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="BASE",value=2}},nil}
 c["+2 Fire Hit Damage"]={{[1]={flags=8388608,keywordFlags=8,name="Damage",type="BASE",value=2}},nil}
-c["+2 Frailty -> Poison Stacks"]={{},"  ->  Stacks "}
-c["+2 Frostbite Stacks"]={{},"  Stacks "}
+c["+2 Frailty -> Poison Stacks"]={{[1]={[1]={skillName="Frailty",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=200}},"  ->  "}
+c["+2 Frostbite Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frostbite",type="BASE",value=200}},nil}
 c["+2 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=2}},nil}
 c["+2 Health And Rage Gain On Boss or Rare Hit"]={{[1]={flags=8388608,keywordFlags=0,name="Life",type="BASE",value=2}},"  And Rage Gain On Boss or Rare  "}
 c["+2 Health And Rage Gain On Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="Life",type="BASE",value=2}},"  And Rage Gain  "}
@@ -6943,7 +6943,7 @@ c["+5 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThresho
 c["+5 Enemies Pierced with Multishot"]={{}," Enemies Pierced with  "}
 c["+5 Final Impact Void Damage"]={{[1]={flags=0,keywordFlags=0,name="VoidDamage",type="BASE",value=5}}," Final Impact  "}
 c["+5 Freeze Rate"]={{}," Freeze Rate "}
-c["+5 Frostbite Stacks Per Second Per Heo Rune"]={{},"  Stacks Per Second Per Heo Rune "}
+c["+5 Frostbite Stacks Per Second Per Heo Rune"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frostbite",type="BASE",value=500}},"  Per Second Per Heo Rune "}
 c["+5 Global Melee Damage"]={{[1]={[1]={type="Global"},flags=0,keywordFlags=512,name="Damage",type="BASE",value=5}},nil}
 c["+5 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=5}},nil}
 c["+5 Health Gain On Hit"]={{[1]={flags=8388608,keywordFlags=0,name="LifeOnHit",type="BASE",value=5}},nil}
@@ -9180,12 +9180,12 @@ c["1 Aspect of The Boar Duration on Traversal or Evade (Seconds)"]={{[1]={[1]={s
 c["1 Attached Trap Arming Time (seconds)"]={{}," Attached Trap Arming Time (seconds) "}
 c["1 Baby Scorpions Summoned"]={{}," Baby Scorpions Summoned "}
 c["1 Black Holes Per Cast "]={{}," s Per Cast  "}
-c["1 Blade Frenzy Stacks Gained per Bladestorm Created"]={{}," Blade  Stacks Gained per Bladestorm Created "}
-c["1 Bleed Stacks"]={{},"  Stacks "}
-c["1 Bleed Stacks Inflicted"]={{},"  Stacks Inflicted "}
-c["1 Bleed Stacks On You"]={{},"  Stacks On You "}
-c["1 Bleed Stacks Per Second"]={{},"  Stacks Per Second "}
-c["1 Bleed Stacks on Third Attack"]={{},"  Stacks on Third Attack "}
+c["1 Blade Frenzy Stacks Gained per Bladestorm Created"]={{[1]={[1]={skillName="Bladestorm",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frenzy",type="BASE",value=100}}," Blade  Gained per  Created "}
+c["1 Bleed Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=100}},nil}
+c["1 Bleed Stacks Inflicted"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=100}},"  Inflicted "}
+c["1 Bleed Stacks On You"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=100}},"  On You "}
+c["1 Bleed Stacks Per Second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=100}},"  Per Second "}
+c["1 Bleed Stacks on Third Attack"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=100}},"  on Third Attack "}
 c["1 Bleeds Inflicted on you for each Thorn Totem summoned"]={{}," s Inflicted on you for each Thorn Totem summoned "}
 c["1 Bone Curse Maximum Hits"]={{},"  Maximum s "}
 c["1 Buff Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Buff  "}
@@ -9193,14 +9193,14 @@ c["1 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",typ
 c["1 Buff Duration (seconds) per Rune"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Buff  (seconds) per Rune "}
 c["1 Caltrops per 2 Seconds"]={{}," Caltrops per 2 Seconds "}
 c["1 Chill Duration (Seconds)"]={{[1]={[1]={skillName="Chill",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (Seconds) "}
-c["1 Chill Stacks"]={{},"  Stacks "}
+c["1 Chill Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=100}},nil}
 c["1 Cloud Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Cloud  (seconds) "}
 c["1 Converts Harvest to Great Harvest which has a 5 second cooldown, deals 150% more damage, and has 50% more area of effect"]={{[1]={[1]={skillName="Harvest",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}}," Converts  to Great Harvest which has a 5 second cooldown, deals 150% more , and has 50% more area of effect "}
 c["1 Cooldown Recovery Attacks"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=1}},"  Attacks "}
 c["1 Corpse Parasites On Zombie Death"]={{}," Corpse Parasites On Zombie Death "}
 c["1 Crimson Shroud Duration (seconds)"]={{[1]={[1]={skillName="Crimson Shroud",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
-c["1 Crimson Shroud Stacks Per Enemy"]={{},"  Stacks Per Enemy "}
-c["1 Critical Vulnerability Stacks"]={{},"  Stacks "}
+c["1 Crimson Shroud Stacks Per Enemy"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CrimsonShroud",type="BASE",value=100}},"  Per Enemy "}
+c["1 Critical Vulnerability Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=100}},nil}
 c["1 Cursed Enemy Threshold"]={{}," Cursed Enemy Threshold "}
 c["1 Daggers Thrown"]={{}," Daggers Thrown "}
 c["1 Delay Before Detonation (seconds)"]={{}," Delay Before Detonation (seconds) "}
@@ -9225,8 +9225,8 @@ c["1 Fear Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},fl
 c["1 Fire Res Shred Stacks"]={{},"  Res Shred Stacks "}
 c["1 Fire Shred Stacks"]={{},"  Shred Stacks "}
 c["1 Frailty Duration (seconds)"]={{[1]={[1]={skillName="Frailty",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
-c["1 Frailty Stacks"]={{},"  Stacks "}
-c["1 Frailty Stacks Inflicted"]={{},"  Stacks Inflicted "}
+c["1 Frailty Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=100}},nil}
+c["1 Frailty Stacks Inflicted"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=100}},"  Inflicted "}
 c["1 Freeze Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyFreezeDuration",type="BASE",value=1}},nil}
 c["1 Frenzy Duration (Seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (Seconds) "}
 c["1 Frenzy Duration (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
@@ -9247,7 +9247,7 @@ c["1 Health Gained per Stack of Shroud"]={{[1]={flags=0,keywordFlags=0,name="Lif
 c["1 Health gained per Dexterity when your Falcon hits an enemy"]={{[1]={[1]={stat="Dex",type="PerStat"},flags=8388608,keywordFlags=0,name="Life",type="BASE",value=1}},"  gained  when your Falcs an enemy "}
 c["1 Hungering Souls Interval (Seconds)"]={{},"  Interval (Seconds) "}
 c["1 Ice Spirals on Cast per Stack"]={{}," Ice Spirals on Cast per Stack "}
-c["1 Ignite Stacks In Trail Each Second"]={{},"  Stacks In Trail Each Second "}
+c["1 Ignite Stacks In Trail Each Second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=100}},"  In Trail Each Second "}
 c["1 Immobilize Duration (seconds)"]={{[1]={[1]={skillName="Immobilize",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
 c["1 Immobilized Duration (seconds)"]={{[1]={[1]={skillName="Immobilize",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," d  (seconds) "}
 c["1 Infernal Hunger Stacks Per 2 Seconds"]={{}," Infernal Hunger Stacks Per 2 Seconds "}
@@ -9263,8 +9263,8 @@ c["1 Lightning Strikes Per Second While Rampaging"]={{},"  Strikes Per Second Wh
 c["1 Limit per Cast"]={{}," Limit per Cast "}
 c["1 Locust Per Stunned Enemy"]={{}," Locust Per Stunned Enemy "}
 c["1 Locusts per 3 seconds from Locust Swarm"]={{}," Locusts per 3 seconds from Locust Swarm "}
-c["1 Maelstrom Stacks On Use"]={{},"  Stacks On Use "}
-c["1 Maelstrom Stacks Per Stack Consumed"]={{},"  Stacks Per Stack Consumed "}
+c["1 Maelstrom Stacks On Use"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Maelstrom",type="BASE",value=100}},"  On Use "}
+c["1 Maelstrom Stacks Per Stack Consumed"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Maelstrom",type="BASE",value=100}},"  Per Stack Consumed "}
 c["1 Mana Gain"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gain "}
 c["1 Mana Gain Per Storm Stack On Use"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gain Per Storm Stack On Use "}
 c["1 Mana Gain against Cursed"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  Gain against Cursed "}
@@ -9312,16 +9312,16 @@ c["1 Number of Spreads"]={{}," Number of Spreads "}
 c["1 Number of Witchfire Spreads within 10m"]={{}," Number of  Spreads within 10m "}
 c["1 Physical Res Shred Stacks"]={{},"  Res Shred Stacks "}
 c["1 Physical Shred Stacks"]={{},"  Shred Stacks "}
-c["1 Poison Stacks Per Cast"]={{},"  Stacks Per Cast "}
-c["1 Poison Stacks Received"]={{},"  Stacks Received "}
-c["1 Poison Stacks To Nearby Enemies On Transform"]={{},"  Stacks To Nearby Enemies On Transform "}
+c["1 Poison Stacks Per Cast"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=100}},"  Per Cast "}
+c["1 Poison Stacks Received"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=100}},"  Received "}
+c["1 Poison Stacks To Nearby Enemies On Transform"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=100}},"  To Nearby Enemies On Transform "}
 c["1 Rage Gain on Locust Release"]={{}," Rage Gain on Locust Release "}
 c["1 Rage gained per second while Transformed"]={{}," Rage gained per second while Transformed "}
 c["1 Ravaging Aura Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Ravaging Aura  (seconds) "}
 c["1 Recasts"]={{}," Recasts "}
 c["1 Refund Trigger Amount"]={{}," Refund Trigger Amount "}
 c["1 Rip Blood Casts Each Second With Bleed Overload"]={{},"  Casts Each Second With Bleed Overload "}
-c["1 Roar Frailty Stacks"]={{}," Roar  Stacks "}
+c["1 Roar Frailty Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=100}}," Roar  "}
 c["1 Sacrifice Casts"]={{},"  Casts "}
 c["1 Screech Fear duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Screech   (seconds) "}
 c["1 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
@@ -9332,14 +9332,14 @@ c["1 Shadow Created"]={{}," Shadow Created "}
 c["1 Shadow Falcons"]={{}," Shadow Falcons "}
 c["1 Shadows Created"]={{}," Shadows Created "}
 c["1 Shock Immunity"]={{},"  Immunity "}
-c["1 Shock Stacks"]={{},"  Stacks "}
-c["1 Silver Shroud Stacks Gained"]={{},"  Stacks Gained "}
+c["1 Shock Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=100}},nil}
+c["1 Silver Shroud Stacks Gained"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_SilverShroud",type="BASE",value=100}},"  Gained "}
 c["1 Skeletal Vanguards on Death"]={{}," Skeletal Vanguards on Death "}
 c["1 Skeletons Summoned"]={{}," Skeletons Summoned "}
 c["1 Slither Max Stacks"]={{}," Slither Max Stacks "}
 c["1 Slow Duration (seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
-c["1 Slow Stacks"]={{},"  Stacks "}
-c["1 Slow Stacks When Free"]={{},"  Stacks When Free "}
+c["1 Slow Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=100}},nil}
+c["1 Slow Stacks When Free"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=100}},"  When Free "}
 c["1 Smaller Orbs"]={{}," Smaller Orbs "}
 c["1 Smite Casts"]={{},"  Casts "}
 c["1 Smite Scaling Attunement -> Vitality"]={{[1]={[1]={skillName="Smite",type="SkillName"},flags=0,keywordFlags=0,name="Att",type="BASE",value=1}},"  Scaling  -> Vitality "}
@@ -9371,8 +9371,8 @@ c["1 Ward per 2 Attunement"]={{[1]={[1]={div=2,stat="Att",type="PerStat"},flags=
 c["1 Ward per 60% Freeze Rate Multiplier"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=1}},"  per 60% Freeze Rate Multiplier "}
 c["1 Ward per Second per 3% uncapped Necrotic Resistance"]={{[1]={flags=0,keywordFlags=32,name="WardPerSecond",type="BASE",value=1}},"  per 3% uncapped  Resistance "}
 c["1 While you have both Ignite Overload and Damned Overload, enemies within 10 meters are inflicted with Witchfire every second"]={{}," While you have both  Overload and Damned Overload, enemies within 10 meters are inflicted with Witch every second "}
-c["1 Withering Stacks"]={{},"  Stacks "}
-c["1 Zombie Explosion Poison Stacks"]={{}," Zombie Explosion  Stacks "}
+c["1 Withering Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Withering",type="BASE",value=100}},nil}
+c["1 Zombie Explosion Poison Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=100}}," Zombie Explosion  "}
 c["1 Zombies Summoned on exit"]={{}," Zombies Summoned on exit "}
 c["1 of Current Health is set to Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=1}}," Current  is set to Endurance Threshold "}
 c["1 seconds of Enrage granted to companions hit by your Storm Totem"]={{}," seconds of  granted to companions  by your Storm Totem "}
@@ -9589,7 +9589,7 @@ c["10 Max Stacks"]={{}," Max Stacks "}
 c["10 Maximum Distance Benefit (meters)"]={{}," Maximum Distance Benefit (meters) "}
 c["10 Maximum Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}}," Maximum  (seconds) "}
 c["10 Maximum Scaling Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}}," Maximum Scaling  (seconds) "}
-c["10 Maximum Sharpshooter stacks"]={{}," Maximum  stacks "}
+c["10 Maximum Sharpshooter stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Sharpshooter",type="BASE",value=1000}}," Maximum  "}
 c["10 Maximum Stacks"]={{}," Maximum Stacks "}
 c["10 Maximum Storm Stacks"]={{}," Maximum Storm Stacks "}
 c["10 Primal Serpent Health Granted On Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="Life",type="BASE",value=10}}," Primal Serpent  Granted  "}
@@ -11232,7 +11232,7 @@ c["2 Additional Chains"]={{}," Chains "}
 c["2 Adorned Idols equipped at Maximum"]={{}," Adorned Idols equipped at Maximum "}
 c["2 Bees Summoned on Potion Use"]={{}," Bees Summoned on Potion Use "}
 c["2 Black Arrows per 3 Seconds"]={{}," Black Arrows per 3 Seconds "}
-c["2 Bleed Stacks from Screech"]={{},"  Stacks from Screech "}
+c["2 Bleed Stacks from Screech"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=200}},"  from Screech "}
 c["2 Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Buff  (Seconds) "}
 c["2 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Buff  (seconds) "}
 c["2 Chain Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Chain  (seconds) "}
@@ -11242,7 +11242,7 @@ c["2 Cooldown"]={{}," Cooldown "}
 c["2 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
 c["2 Cooldown Recovered Per Expired Orb (seconds)"]={{}," Cooldown Recovered Per Expired Orb (seconds) "}
 c["2 Cooldown Reduction uses"]={{}," Cooldown Reduction uses "}
-c["2 Damned Stacks Applied"]={{},"  Stacks Applied "}
+c["2 Damned Stacks Applied"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Damned",type="BASE",value=200}},nil}
 c["2 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"  (seconds) "}
 c["2 Feathers Thrown"]={{}," Feathers Thrown "}
 c["2 Frenzy Chance (seconds)"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frenzy",type="BASE",value=2}},"  (seconds) "}
@@ -11313,7 +11313,7 @@ c["2 Seconds of Ancient Flight when you move after attacking"]={{}," Seconds of 
 c["2 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["2 Slow Duration (Seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"   (Seconds) "}
 c["2 Slow Duration (seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"   (seconds) "}
-c["2 Slow Stacks per Second"]={{},"  Stacks per Second "}
+c["2 Slow Stacks per Second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=200}},"  per Second "}
 c["2 Stack Change Rate per Second"]={{}," Stack Change Rate per Second "}
 c["2 Stacks Of Armor Shred Applied"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=2}}," Stacks Of  Shred Applied "}
 c["2 Static Charges On Hit"]={{},"  Charges  "}
@@ -12365,7 +12365,7 @@ c["3 Bleeding Fury Duration (seconds)"]={{[1]={[1]={skillName="Bleed",type="Skil
 c["3 Bleeding Fury Max Stacks"]={{}," ing Fury Max Stacks "}
 c["3 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Buff  (seconds) "}
 c["3 Charges Gained On Crit"]={{}," Charges Gained On Crit "}
-c["3 Chill Stacks On Bosses And Rares"]={{},"  Stacks On Bosses And Rares "}
+c["3 Chill Stacks On Bosses And Rares"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=300}},"  On Bosses And Rares "}
 c["3 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
 c["3 Dagger Dance Casts Per Second"]={{}," Dagger Dance Casts Per Second "}
 c["3 Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}},"  (Seconds) "}
@@ -12375,7 +12375,7 @@ c["3 Enemies Flame Whipped"]={{}," Enemies Flame Whipped "}
 c["3 Enemies attacked with Vengeance after using a Movement Skill (max 2 per 12 seconds)"]={{}," Enemies attacked with  after using a Movement Skill (max 2 per 12 seconds) "}
 c["3 Fire Aura Trigger Limit Per Second"]={{},"  Trigger Limit Per Second "}
 c["3 Firebrand lines"]={{},"  lines "}
-c["3 Frailty Stacks From Caltrops"]={{},"  Stacks From Caltrops "}
+c["3 Frailty Stacks From Caltrops"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=300}},"  From Caltrops "}
 c["3 Freezing Cascade Cooldown (seconds)"]={{}," Freezing Cascade Cooldown (seconds) "}
 c["3 Frenzy Duration (Seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}},"   (Seconds) "}
 c["3 Ghost Blade Stacks Consumed per Second While Moving"]={{}," Ghost Blade Stacks Consumed per Second  "}
@@ -12414,7 +12414,7 @@ c["3 Maximum Stacks Of Runic Energy"]={{}," Maximum Stacks Of Runic Energy "}
 c["3 Maximum Zeal Stacks"]={{}," Maximum Zeal Stacks "}
 c["3 Minions Teleported"]={{}," s ed "}
 c["3 Minions teleported around you after you use a Traversal Skill"]={{}," s ed around you after you use a Traversal Skill "}
-c["3 Poison Stacks Inflicted"]={{},"  Stacks Inflicted "}
+c["3 Poison Stacks Inflicted"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=300}},"  Inflicted "}
 c["3 Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=3}},nil}
 c["3 Rage Gained"]={{}," Rage Gained "}
 c["3 Rage gained per second while Transformed"]={{}," Rage gained per second while Transformed "}
@@ -12422,7 +12422,7 @@ c["3 Runeweave Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration
 c["3 Seconds of Frenzy after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["3 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["3 Seconds of Haste when you directly cast Soul Feast"]={{}," Seconds of  when you directly cast Soul Feast "}
-c["3 Silver Shroud Stacks when Damaged to Below 70%"]={{[1]={[1]={skillName="Silver Shroud",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="BASE",value=3}},"  Stacks when d to Below 70% "}
+c["3 Silver Shroud Stacks when Damaged to Below 70%"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_SilverShroud",type="BASE",value=300}},"  when Damaged to Below 70% "}
 c["3 Spreads After Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Spreads After  (Seconds) "}
 c["3 Stacks Consumed"]={{}," Stacks Consumed "}
 c["3 Stacks on Firebrand Use"]={{}," Stacks on  Use "}
@@ -13797,7 +13797,7 @@ c["5 Mana Gained when you use Harvest"]={{[1]={[1]={skillName="Harvest",type="Sk
 c["5 Mana Gained when you use Rive and hit at least one enemy"]={{[1]={[1]={skillName="Rive",type="SkillName"},flags=8388608,keywordFlags=0,name="Mana",type="BASE",value=5}},"  Gained when you use  and  at least one enemy "}
 c["5 Mana Gained when you use Vengeance and hit at least one enemy"]={{[1]={[1]={skillName="Vengeance",type="SkillName"},flags=8388608,keywordFlags=0,name="Mana",type="BASE",value=5}},"  Gained when you use  and  at least one enemy "}
 c["5 Marrow Orb Mana Gained"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=5}}," Marrow Orb  Gained "}
-c["5 Max Aspect Of The Shark Stacks"]={{}," Max  Stacks "}
+c["5 Max Aspect Of The Shark Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_AspectOfTheSharkVisuals",type="BASE",value=500}}," Max  "}
 c["5 Max Blood Revelry Stacks"]={{}," Max Blood Revelry Stacks "}
 c["5 Max Buff stacks"]={{}," Max Buff stacks "}
 c["5 Max Prism Shards"]={{}," Max s "}
@@ -14337,7 +14337,7 @@ c["6 Mana Gained when you use Rive and hit at least one enemy"]={{[1]={[1]={skil
 c["6 Mana Gained when you use Vengeance and hit at least one enemy"]={{[1]={[1]={skillName="Vengeance",type="SkillName"},flags=8388608,keywordFlags=0,name="Mana",type="BASE",value=6}},"  Gained when you use  and  at least one enemy "}
 c["6 Mana Granted"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=6}},"  Granted "}
 c["6 Mana Granted From Rares Or Bosses"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=6}},"  Granted From Rares Or Bosses "}
-c["6 Max Blade Frenzy Stacks"]={{}," Max Blade  Stacks "}
+c["6 Max Blade Frenzy Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frenzy",type="BASE",value=600}}," Max Blade  "}
 c["6 Max Net Traps"]={{}," Max  Traps "}
 c["6 Maximum Acid Flask Traps"]={{}," Maximum  Traps "}
 c["6 Stacks on Surge Use"]={{}," Stacks on  Use "}

@@ -165,6 +165,8 @@ for skillId, skill in pairs(data.skills) do
         modNameList[skill.altName:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
       end
       modNameList["to cast " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
+      modNameList[skill.name:lower() .. " stacks"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit, mult = 100}
+      modNameList[skill.name:lower() .. " stacks applied"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit, mult = 100}
     end
 end
 
@@ -570,10 +572,14 @@ local function parseMod(line, order)
 	local nameList = modName
 	local modList = { }
 	for i, name in ipairs(type(nameList) == "table" and nameList or { nameList }) do
+		local value = type(modValue) == "table" and modValue[i] or modValue
+		if modName.mult then
+			value = value * modName.mult
+		end
 		modList[i] = {
 			name = name .. (modSuffix or misc.modSuffix or ""),
 			type = modType,
-			value = type(modValue) == "table" and modValue[i] or modValue,
+			value = value,
 			flags = flags,
 			keywordFlags = bor(type(keywordFlags) == "table" and keywordFlags[i] or 0, baseKeywordFlags),
 			unpack(tagList)
