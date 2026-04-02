@@ -1285,7 +1285,7 @@ c["+1 Additional Targets On Spread"]={{}," Targets On Spread "}
 c["+1 Additional Traps Thrown"]={{}," Traps Thrown "}
 c["+1 Aerial Prowess Stacks on dodge"]={{}," Aerial Prowess Stacks on dodge "}
 c["+1 All Attributes"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="Str",type="BASE",value=1},[3]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=1},[4]={flags=0,keywordFlags=0,name="Int",type="BASE",value=1},[5]={flags=0,keywordFlags=0,name="Att",type="BASE",value=1}},nil}
-c["+1 Armor Per 2 Dex"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}},"  Per 2 Dex "}
+c["+1 Armor Per 2 Dex"]={{[1]={[1]={div=2,stat="Dex",type="PerStat"},flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}},nil}
 c["+1 Armor Per Point Of Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}},"  Per Point Of Intelligence "}
 c["+1 Armor Shred Stacks"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}},"  Shred Stacks "}
 c["+1 Armor Shred Stacks Applied"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}},"  Shred Stacks Applied "}
@@ -1303,7 +1303,7 @@ c["+1 Block Chance converted to Parry Chance while not wielding a shield"]={{[1]
 c["+1 Block Effectiveness per 1% Total Uncapped Resistance"]={{}," Block Effectiveness per 1% Total Uncapped Resistance "}
 c["+1 Bone Armor Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}}," Bone  Duration (seconds) "}
 c["+1 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=1}},nil}
-c["+1 Bow Damage Per 3 Dex"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=1}},"   Per 3 Dex "}
+c["+1 Bow Damage Per 3 Dex"]={{[1]={[1]={div=3,stat="Dex",type="PerStat"},flags=0,keywordFlags=2048,name="Damage",type="BASE",value=1}},nil}
 c["+1 Bow Damage per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=2048,name="Damage",type="BASE",value=1}},nil}
 c["+1 Bow Fire Damage Per Stack"]={{[1]={flags=0,keywordFlags=2048,name="FireDamage",type="BASE",value=1}},"   Per Stack "}
 c["+1 Bow Void Damage per Dusk Shroud when using a Black Arrow"]={{[1]={[1]={skillName="Dusk Shroud",type="SkillName"},flags=0,keywordFlags=2048,name="VoidDamage",type="BASE",value=1}},"   per  when using a Black Arrow "}
@@ -1360,7 +1360,7 @@ c["+1 Extra Blades On Throw 3"]={{}," Extra Blades On Throw 3 "}
 c["+1 Extra Decoys Thrown"]={{}," Extra s Thrown "}
 c["+1 Extra Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=1}},nil}
 c["+1 Falcon Melee Damage Buff"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=1}}," Falcon   Buff "}
-c["+1 Falcon Throwing Damage Per 4 Dex"]={{[1]={flags=0,keywordFlags=1024,name="Damage",type="BASE",value=1}}," Falcon   Per 4 Dex "}
+c["+1 Falcon Throwing Damage Per 4 Dex"]={{[1]={[1]={div=4,stat="Dex",type="PerStat"},flags=0,keywordFlags=1024,name="Damage",type="BASE",value=1}}," Falcon    "}
 c["+1 Fault Lines"]={{}," Fault Lines "}
 c["+1 Fear Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
 c["+1 Fear For Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  For  (seconds) "}
@@ -1467,7 +1467,7 @@ c["+1 Melee Cold Damage"]={{[1]={flags=0,keywordFlags=512,name="ColdDamage",type
 c["+1 Melee Cold Damage Per 5 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="ColdDamage",type="BASE",value=1}},"   Per 5  Damage "}
 c["+1 Melee Cold Damage per player Dexterity"]={{[1]={[1]={actor="parent",stat="Dex",type="PerStat"},flags=0,keywordFlags=512,name="ColdDamage",type="BASE",value=1}},nil}
 c["+1 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=1}},nil}
-c["+1 Melee Damage Per 10 Dex With Spear"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=1}},"   Per 10 Dex With Spear "}
+c["+1 Melee Damage Per 10 Dex With Spear"]={{[1]={[1]={div=10,stat="Dex",type="PerStat"},flags=0,keywordFlags=512,name="Damage",type="BASE",value=1}},"    With Spear "}
 c["+1 Melee Damage Per 2 Attunement"]={{[1]={[1]={div=2,stat="Att",type="PerStat"},flags=0,keywordFlags=512,name="Damage",type="BASE",value=1}},nil}
 c["+1 Melee Damage Per Strength"]={{[1]={[1]={stat="Str",type="PerStat"},flags=0,keywordFlags=512,name="Damage",type="BASE",value=1}},nil}
 c["+1 Melee Damage per 2 Attunement"]={{[1]={[1]={div=2,stat="Att",type="PerStat"},flags=0,keywordFlags=512,name="Damage",type="BASE",value=1}},nil}
@@ -1596,7 +1596,7 @@ c["+1 Void Damage per Vitality with an Axe"]={{[1]={[1]={stat="Vit",type="PerSta
 c["+1 Void Res Shred Stacks"]={{},"  Res Shred Stacks "}
 c["+1 Ward Decay Threshold Per 10 Max Health"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=1}},"  Per 10 Max Health "}
 c["+1 Ward Decay Threshold Per 2% Necro Res"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=1}},"  Per 2% Necro Res "}
-c["+1 Ward Gained Per 3 Int Per Second"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=1}},"  Gained Per 3 Int Per Second "}
+c["+1 Ward Gained Per 3 Int Per Second"]={{[1]={[1]={div=3,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=1}},"  Gained  Per Second "}
 c["+1 Ward Granted"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=1}},"  Granted "}
 c["+1 Ward Granted per 25 Intelligence"]={{[1]={[1]={div=25,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=1}},"  Granted  "}
 c["+1 Ward Per Second Per 10 Max Mana"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=1}},"  Per 10 Max Mana "}
@@ -1856,11 +1856,11 @@ c["+1% Elemental Penetration Per 3 Intelligence"]={{[1]={[1]={div=3,stat="Int",t
 c["+1% Elemental Penetration with Elemental Nova per 10% uncapped Total Elemental Resistance"]={{[1]={[1]={skillName="Elemental Nova",type="SkillName"},flags=0,keywordFlags=14,name="Penetration",type="BASE",value=1}},"   with  per 10% uncapped Total  Resistance "}
 c["+1% Endurance"]={{[1]={flags=0,keywordFlags=0,name="Endurance",type="BASE",value=1}},nil}
 c["+1% Explosion Hit Damage per 5% Missing Health"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=1}}," Explosi  per 5% Missing Health "}
-c["+1% Falcon Bleed Chance per 10 Dex with Buff"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=1}}," Falcon  per 10 Dex with Buff "}
+c["+1% Falcon Bleed Chance per 10 Dex with Buff"]={{[1]={[1]={div=10,stat="Dex",type="PerStat"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=1}}," Falcon   with Buff "}
 c["+1% Falcon Damage per Dex"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=1}}," Falcon  per Dex "}
 c["+1% Falcon Damage per Level"]={{[1]={[1]={type="Multiplier",var="Level"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=1}}," Falcon   "}
 c["+1% Fire Aura Damage Per 1% Uncapped Fire Resistance"]={{[1]={[1]={skillName="Fire Aura",type="SkillName"},flags=0,keywordFlags=8,name="Damage",type="MORE",value=1}},"   Per 1% Uncapped  Resistance "}
-c["+1% Fire Damage Per 2 Int"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="MORE",value=1}},"  Per 2 Int "}
+c["+1% Fire Damage Per 2 Int"]={{[1]={[1]={div=2,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="FireDamage",type="MORE",value=1}},nil}
 c["+1% Fire Damage Per 2 Intelligence"]={{[1]={[1]={div=2,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="FireDamage",type="MORE",value=1}},nil}
 c["+1% Fire Damage per 10% Increased Healing Effectiveness"]={{[1]={[1]={skillName="Healing",type="SkillName"},flags=0,keywordFlags=0,name="FireDamage",type="MORE",value=1}},"  per 10% Increased  Effectiveness "}
 c["+1% Fire Hit Damage Per Ignite"]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=8388608,keywordFlags=8,name="Damage",type="MORE",value=1}},"    Per  "}
@@ -9238,8 +9238,8 @@ c["1 Haste Duration (Seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},
 c["1 Haste Duration (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
 c["1 Haste duration after Channeling (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   after Channeling (seconds) "}
 c["1 Healing Per Point of Dexterity"]={{[1]={[1]={skillName="Healing",type="SkillName"},flags=0,keywordFlags=0,name="Dex",type="BASE",value=1}},"  Per Point of  "}
-c["1 Health Gain Per 2 Dex"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain Per 2 Dex "}
-c["1 Health Gain on Falcon Hit Per 3 Dex"]={{[1]={flags=8388608,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain on Falc Per 3 Dex "}
+c["1 Health Gain Per 2 Dex"]={{[1]={[1]={div=2,stat="Dex",type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain  "}
+c["1 Health Gain on Falcon Hit Per 3 Dex"]={{[1]={[1]={div=3,stat="Dex",type="PerStat"},flags=8388608,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain on Falc  "}
 c["1 Health Gain per 2 Dexterity"]={{[1]={[1]={div=2,stat="Dex",type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain  "}
 c["1 Health Gain per 2 total attributes"]={{[1]={[1]={div=2,statList={[1]="Vit",[2]="Str",[3]="Dex",[4]="Int",[5]="Att"},type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain  "}
 c["1 Health Gained Per Point Of Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gained Per Point Of Intelligence "}
