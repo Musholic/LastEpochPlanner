@@ -1301,7 +1301,7 @@ c["+1 Bleed Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOn
 c["+1 Bleeding Fury Max Stacks"]={{}," ing Fury Max Stacks "}
 c["+1 Block Chance converted to Parry Chance while not wielding a shield"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=1}},"  converted to Parry Chance while not wielding a shield "}
 c["+1 Block Effectiveness per 1% Total Uncapped Resistance"]={{}," Block Effectiveness per 1% Total Uncapped Resistance "}
-c["+1 Bone Armor Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}}," Bone  Duration (seconds) "}
+c["+1 Bone Armor Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}}," Bone  Duration "}
 c["+1 Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="BASE",value=1}},nil}
 c["+1 Bow Damage Per 3 Dex"]={{[1]={[1]={div=3,stat="Dex",type="PerStat"},flags=0,keywordFlags=2048,name="Damage",type="BASE",value=1}},nil}
 c["+1 Bow Damage per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=2048,name="Damage",type="BASE",value=1}},nil}
@@ -1322,17 +1322,17 @@ c["+1 Companion Spell Damage per 3 Strength"]={{[1]={[1]={div=3,stat="Str",type=
 c["+1 Companion Summon Limit"]={{}," Companion Summon Limit "}
 c["+1 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
 c["+1 Cooldown Duration"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=1}},nil}
-c["+1 Cooldown Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=1}},"  (seconds) "}
+c["+1 Cooldown Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=1}},nil}
 c["+1 Critical Vulnerability Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=100}},nil}
 c["+1 Crossbow Mercenaries"]={{}," Cross Mercenaries "}
-c["+1 Cursed Ground Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Cursed Ground  (seconds) "}
+c["+1 Cursed Ground Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Cursed Ground  "}
 c["+1 Damage Per Dusk Shroud"]={{[1]={[1]={skillName="Dusk Shroud",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}},"  Per  "}
 c["+1 Damage Reflected Per Point Of Attunement"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}},"  Reflected  "}
 c["+1 Damage dealt to enemies facing you every 0.5 seconds per 1 Damage Reflected to Attackers"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}},"  dealt to enemies facing you every 0.5 seconds per 1 Damage Reflected to Attackers "}
 c["+1 Damage per 40 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}},"  per 40 Block Effectiveness "}
 c["+1 Damned Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Damned",type="BASE",value=100}},nil}
 c["+1 Damned Stacks Per Second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Damned",type="BASE",value=100}},"  Per Second "}
-c["+1 Dark Shackle Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Dark Shackle  (Seconds) "}
+c["+1 Dark Shackle Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Dark Shackle  "}
 c["+1 Detonations Per Gon Rune"]={{}," Detonations Per Gon Rune "}
 c["+1 Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=1}},nil}
 c["+1 Dodge Rating Per 1% Cold Resistance"]={{[1]={flags=0,keywordFlags=4,name="Evasion",type="BASE",value=1}},"  Per 1%  Resistance "}
@@ -1340,8 +1340,8 @@ c["+1 Dodge Rating Per Dexterity"]={{[1]={[1]={stat="Dex",type="PerStat"},flags=
 c["+1 Dodge Rating per Dex inside Feather Storm"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=1}},"  per Dex inside Feather Storm "}
 c["+1 Dodge Rating per Intelligence while Channeling"]={{[1]={[1]={stat="Int",type="PerStat"},[2]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=1}},nil}
 c["+1 Drain Life casts Stygian Beams instead"]={{},"  casts Stygian Beams instead "}
-c["+1 Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  (Seconds) "}
-c["+1 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  (seconds) "}
+c["+1 Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
+c["+1 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["+1 Dusk Shroud Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_DuskShroud",type="BASE",value=100}},nil}
 c["+1 Earthquake Converted To Fire"]={{},"  Converted To  "}
 c["+1 Earthquake is converted to lightning"]={{},"  is converted to  "}
@@ -1362,8 +1362,8 @@ c["+1 Extra Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",t
 c["+1 Falcon Melee Damage Buff"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=1}}," Falcon   Buff "}
 c["+1 Falcon Throwing Damage Per 4 Dex"]={{[1]={[1]={div=4,stat="Dex",type="PerStat"},flags=0,keywordFlags=1024,name="Damage",type="BASE",value=1}}," Falcon    "}
 c["+1 Fault Lines"]={{}," Fault Lines "}
-c["+1 Fear Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
-c["+1 Fear For Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  For  (seconds) "}
+c["+1 Fear Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
+c["+1 Fear For Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  For  "}
 c["+1 Fire Aura Stacks Per Second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_FireAura",type="BASE",value=100}},"  Per Second "}
 c["+1 Fire Damage Per Symbol"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="BASE",value=1}},"  Per Symbol "}
 c["+1 Fire Damage per Attunement with a Mace"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="FireDamage",type="BASE",value=1}},"   with a Mace "}
@@ -1381,7 +1381,7 @@ c["+1 Freeze Rate per 1% Cold Res"]={{}," Freeze Rate per 1%  Res "}
 c["+1 Freeze Rate per 10% Chill Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=1}}," Freeze Rate per 10%  "}
 c["+1 Freezing Grasp Damage per Vitality"]={{[1]={[1]={stat="Vit",type="PerStat"},flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}}," Freezing Grasp   "}
 c["+1 Freezing Grasp Freeze Rate per Vitality"]={{}," Freezing Grasp Freeze Rate  "}
-c["+1 Frenzy Duration (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
+c["+1 Frenzy Duration (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["+1 Gain Cold Infusion when you cast a cold spell"]={{}," Gain  Infusion when you cast a   "}
 c["+1 Gain Dawn to Dusk and Dusk to Midnight with Runic Invocation"]={{}," Gain Dawn to Dusk and Dusk to Midnight with  "}
 c["+1 Gain Fire Infusion when you cast a fire spell"]={{}," Gain  Infusion when you cast a   "}
@@ -1393,7 +1393,7 @@ c["+1 Gain a stack of Golden Aegis each second"]={{}," Gain a stack of Golden Ae
 c["+1 Gain a stack of Void Barrier every 3 seconds while above your endurance threshold"]={{[1]={[1]={skillName="Void Barrier",type="SkillName"},flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=1}}," Gain a stack of  every 3 seconds while above your  "}
 c["+1 Global Melee Damage per Stack"]={{[1]={[1]={type="Global"},flags=0,keywordFlags=512,name="Damage",type="BASE",value=1}},"    per Stack "}
 c["+1 Global Spell Damage on Hit"]={{[1]={[1]={type="Global"},flags=8388608,keywordFlags=256,name="Damage",type="BASE",value=1}},nil}
-c["+1 Haste Duration (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
+c["+1 Haste Duration (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["+1 Heal all totems and give them 2 seconds of Damage Immunity when you use a Potion"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}}," Heal all totems and give them 2 seconds of  Immunity when you use a Potion "}
 c["+1 Health Gain On Stun Per Strength"]={{[1]={[1]={stat="Str",type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain On Stun  "}
 c["+1 Health Regen Per 3 Attunement"]={{[1]={[1]={div=3,stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=1}},nil}
@@ -1503,14 +1503,14 @@ c["+1 Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type
 c["+1 Physical Damage per Dexterity with a Sword"]={{[1]={[1]={stat="Dex",type="PerStat"},[2]={type="Condition",var="UsingSword"},flags=0,keywordFlags=0,name="PhysicalDamage",type="BASE",value=1}},nil}
 c["+1 Physical Res Shred Stacks"]={{},"  Res Shred Stacks "}
 c["+1 Physical Spell Damage per Strength from Nearby Ally"]={{[1]={[1]={stat="Str",type="PerStat"},flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=1}},"   from Nearby Ally "}
-c["+1 Pool Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Pool  (seconds) "}
+c["+1 Pool Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Pool  "}
 c["+1 Potion Slot per equipped Weaver Item"]={{}," Potion Slot per equipped Weaver Item "}
 c["+1 Potion Slots"]={{}," Potion Slots "}
 c["+1 Projectiles with Spirit Thorns per stack of Germination"]={{[1]={[1]={skillName="Spirit Thorns",type="SkillName"},flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=1}},"  with  per stack of Germination "}
 c["+1 Puncture cannot be dodged"]={{},"  cannot be dodged "}
 c["+1 Rage Gain When You Or Locusts Crit"]={{}," Rage Gain When You Or Locusts Crit "}
 c["+1 Rage Gained On Hit"]={{}," Rage Gained  "}
-c["+1 Reveal Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Reveal  (seconds) "}
+c["+1 Reveal Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Reveal  "}
 c["+1 Ricochets"]={{}," Ricochets "}
 c["+1 Ricochets "]={{}," Ricochets  "}
 c["+1 Rime Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Rime  "}
@@ -1527,7 +1527,7 @@ c["+1 Shields"]={{}," Shields "}
 c["+1 Shurikens Thrown"]={{},"  Thrown "}
 c["+1 Silver Shroud Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_SilverShroud",type="BASE",value=100}},nil}
 c["+1 Skeletons Summoned Per Cast"]={{}," Skeletons Summoned Per Cast "}
-c["+1 Slow Duration (seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
+c["+1 Slow Duration (seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["+1 Slow Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=100}},nil}
 c["+1 Slow Stacks on Screech"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=100}},"  on Screech "}
 c["+1 Small Boulders Per Cast"]={{}," Small Boulders Per Cast "}
@@ -1587,7 +1587,7 @@ c["+1 Totem Spell Damage on Hit"]={{[1]={flags=8388608,keywordFlags=256,name="Da
 c["+1 Umbral Blades per 20 Dexterity thrown with Aerial Assault's Burst of Feathers"]={{},"   thrown with Aerial Assault's Burst of Feathers "}
 c["+1 Upheaval can consume 20 Storm Stacks on hit to cast Earthquake with at least 30 Storm Stacks"]={{[1]={[1]={skillName="Upheaval",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_EarthquakeSlam",type="BASE",value=1}},"  can consume 20 Storm Stacks   with at least 30 Storm Stacks "}
 c["+1 Upheaval is converted to lightning"]={{},"  is converted to  "}
-c["+1 Usable Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Usable  (seconds) "}
+c["+1 Usable Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Usable  "}
 c["+1 Using a potion grants you Falsewater Fury until you run out of mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}}," Using a potion grants you Falsewater Fury until you run out of  "}
 c["+1 Vitality"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=1}},nil}
 c["+1 Void Cleave is Instant"]={{},"  is Instant "}
@@ -3795,12 +3795,12 @@ c["+2 Charge for Void Cleave"]={{}," Charge for  "}
 c["+2 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamage",type="BASE",value=2}},nil}
 c["+2 Cooldown"]={{}," Cooldown "}
 c["+2 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
-c["+2 Cooldown Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=2}},"  (Seconds) "}
+c["+2 Cooldown Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=2}},nil}
 c["+2 Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=2}},nil}
 c["+2 Dodge Rating per 1 Intelligence, up to +100"]={{[1]={[1]={div=1,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=2}},"  , up to +100 "}
 c["+2 Dodge Rating per Equipped Corrupted Idol"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=2}},"  per Equipped Corrupted Idol "}
 c["+2 Dodge Rating per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=2}},nil}
-c["+2 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"  (seconds) "}
+c["+2 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},nil}
 c["+2 Duration To Wandering Spirits (Seconds)"]={{[1]={[1]={skillName="Wandering Spirits",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"  To  (Seconds) "}
 c["+2 Endurance Threshold Per Attunement"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=2}},nil}
 c["+2 Endurance Threshold per Ignite with Runeword: Avalanche"]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=2}},"  per  with Runeword: Avalanche "}
@@ -3833,7 +3833,7 @@ c["+2 Health per Idol in a Refracted Slot"]={{[1]={flags=0,keywordFlags=0,name="
 c["+2 Health per Vitality"]={{[1]={[1]={stat="Vit",type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=2}},nil}
 c["+2 Ice Barrage Cooldown (seconds)"]={{},"  Cooldown (seconds) "}
 c["+2 Ice Shards Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=2}}," Ice Shards  "}
-c["+2 Ice Shield Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Ice Shield  (seconds) "}
+c["+2 Ice Shield Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Ice Shield  "}
 c["+2 Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=2}},nil}
 c["+2 Intelligence Per Crow"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=2}},"  Per Crow "}
 c["+2 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=2}},nil}
@@ -5272,7 +5272,7 @@ c["+3 Cold Damage with Spells and Attacks per Attached Infernal Shade for Minion
 c["+3 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
 c["+3 Cooldown Duration"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=3}},nil}
 c["+3 Daggers Thrown"]={{}," Daggers Thrown "}
-c["+3 Dark Shackle Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Dark Shackle  (Seconds) "}
+c["+3 Dark Shackle Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Dark Shackle  "}
 c["+3 Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=3}},nil}
 c["+3 Dodge Rating per Equipped Corrupted Idol"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=3}},"  per Equipped Corrupted Idol "}
 c["+3 Enemies Pierced with Multishot"]={{}," Enemies Pierced with  "}
@@ -5301,7 +5301,7 @@ c["+3 Mana Gain Per Shadow"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BAS
 c["+3 Mana from Mana Orbs"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=3}},"  from Mana Orbs "}
 c["+3 Mana per Equipped Corrupted Idol"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=3}},"  per Equipped Corrupted Idol "}
 c["+3 Mana per Idol in a Refracted Slot"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=3}},"  per Idol in a Refracted Slot "}
-c["+3 Mark For Death Duration (seconds)"]={{[1]={[1]={skillName="Mark For Death",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}},"   (seconds) "}
+c["+3 Mark For Death Duration (seconds)"]={{[1]={[1]={skillName="Mark For Death",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}},nil}
 c["+3 Maximum Ballistae"]={{}," Maximum e "}
 c["+3 Maximum Omen Idols"]={{}," Maximum Omen Idols "}
 c["+3 Maximum Stacks"]={{}," Maximum Stacks "}
@@ -6181,7 +6181,7 @@ c["+396 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=39
 c["+4 Additional Spell And Melee Lightning Damage"]={{[1]={flags=0,keywordFlags=768,name="LightningDamage",type="BASE",value=4}},nil}
 c["+4 Additional Spells"]={{}," s "}
 c["+4 Additional Static Charges Per Second"]={{},"  Charges Per Second "}
-c["+4 Additional Thorn Shield Duration (seconds)"]={{[1]={[1]={skillName="Thorn Shield",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}},"   (seconds) "}
+c["+4 Additional Thorn Shield Duration (seconds)"]={{[1]={[1]={skillName="Thorn Shield",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}},nil}
 c["+4 Additonal Shurikens"]={{}," Additonal  "}
 c["+4 Armor per Equipped Corrupted Idol"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=4}},"  per Equipped Corrupted Idol "}
 c["+4 Armor per Idol in a Refracted Slot"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=4}},"  per Idol in a Refracted Slot "}
@@ -6934,7 +6934,7 @@ c["+5 Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamage",type="BASE",
 c["+5 Cold Damage with Spells and Attacks per Attached Infernal Shade for Minions affected by Dread Shade"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={skillName="Infernal Shade",type="SkillName"},flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=5}}}},"  with s and Attacks per Attached  for s affected by Dread Shade "}
 c["+5 Cooldown"]={{}," Cooldown "}
 c["+5 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
-c["+5 Cooldown Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=5}},"  (Seconds) "}
+c["+5 Cooldown Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=5}},nil}
 c["+5 Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=5}},nil}
 c["+5 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=5}},nil}
 c["+5 Dodge Rating per Equipped Corrupted Idol"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=5}},"  per Equipped Corrupted Idol "}
@@ -8803,7 +8803,7 @@ c["-1% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="B
 c["-1% Less Damage Taken from Ignited Shocked or Chilled Enemies"]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="DamageTaken",type="MORE",value=1}},"  from d Shocked or Chilled Enemies "}
 c["-1% Less Necrotic, Void and Poison damage taken per 10 Apathy"]={{[1]={flags=0,keywordFlags=48,name="PoisonDamageTaken",type="MORE",value=1}}," ,  and  per 10 Apathy "}
 c["-1% Poison Resistance Per Int"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=-1}},"  Per Int "}
-c["-1.5 Cooldown Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=-1.5}},"  (seconds) "}
+c["-1.5 Cooldown Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=-1.5}},nil}
 c["-10 Mana Cost Per Second if Lightning Blast Cannot Chain"]={{[1]={[1]={skillName="Lightning Blast",type="SkillName"},flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=-10}},"  Per Second if  Cannot Chain "}
 c["-10 Next Melee Attack Mana Cost"]={{[1]={[1]={skillName="Melee Attack",type="SkillName"},flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=-10}}," Next   "}
 c["-10 to -5 Erasing Strike Mana Cost"]={{[1]={[1]={skillName="Erasing Strike",type="SkillName"},flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=-10}}," -5   "}
@@ -8897,7 +8897,7 @@ c["-20% Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type="INC",val
 c["-20% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=-20}},nil}
 c["-20% Distance"]={{}," Distance "}
 c["-20% Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-20}},nil}
-c["-20% Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-20}},"  (seconds) "}
+c["-20% Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-20}},nil}
 c["-20% Hit Damage"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=-20}},nil}
 c["-20% Mana Arc Mana Consumption"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=-20}},"  Arc Mana Consumption "}
 c["-20% Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=-20}},nil}
@@ -8915,7 +8915,7 @@ c["-25% Active Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="MO
 c["-25% Bonus Damage Taken From Crits"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="BASE",value=-25}}," Bonus  From Crits "}
 c["-25% Cooldown"]={{}," Cooldown "}
 c["-25% Detonation Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=-25}}," Detonation  "}
-c["-25% Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-25}},"  (seconds) "}
+c["-25% Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-25}},nil}
 c["-25% Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=-25}},nil}
 c["-25% Less Hit Damage To Far Away Targets"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=25}},"   To Far Away Targets "}
 c["-25% Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=-25}},nil}
@@ -9124,12 +9124,12 @@ c["0.4% more Damage per stack of Frailty"]={{[1]={[1]={skillName="Frailty",type=
 c["0.4% of Armor Mitigation also applies to damage over time per 10 Total Attributes"]={{[1]={[1]={div=10,statList={[1]="Vit",[2]="Str",[3]="Dex",[4]="Int",[5]="Att"},type="PerStat"},flags=0,keywordFlags=0,name="Armour",type="BASE",value=0.4}},"  Mitigation also applies to damage over time  "}
 c["0.4% of Damage Leeched as Health on Crit"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=0.4}},"  Leeched as Health on Crit "}
 c["0.5 Arming Time (seconds)"]={{}," Arming Time (seconds) "}
-c["0.5 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=0.5}}," Buff  (seconds) "}
-c["0.5 Chill Duration (seconds)"]={{[1]={[1]={skillName="Chill",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=0.5}},"   (seconds) "}
-c["0.5 Detached Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=0.5}}," Detached  (seconds) "}
+c["0.5 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=0.5}}," Buff  "}
+c["0.5 Chill Duration (seconds)"]={{[1]={[1]={skillName="Chill",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=0.5}},nil}
+c["0.5 Detached Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=0.5}}," Detached  "}
 c["0.5 Devouring Souls Cooldown Reduction"]={{}," ing Souls Cooldown Reduction "}
 c["0.5 Haste Duration On Cast (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=0.5}},"   On Cast (seconds) "}
-c["0.5 Immobilized Duration (seconds)"]={{[1]={[1]={skillName="Immobilize",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=0.5}}," d  (seconds) "}
+c["0.5 Immobilized Duration (seconds)"]={{[1]={[1]={skillName="Immobilize",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=0.5}}," d  "}
 c["0.5 Seconds of Traversal Skill Cooldowns Recovered on Potion Use"]={{}," Seconds of Traversal Skill Cooldowns Recovered on Potion Use "}
 c["0.5 Stomp Cooldown Reduction"]={{}," Stomp Cooldown Reduction "}
 c["0.5% Bow Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="MORE",value=0.5}},"   Leeched as Health "}
@@ -9175,7 +9175,7 @@ c["1 After you use Evade to move next to an enemy you attack it with Gathering S
 c["1 Arcane Lightning Casts"]={{}," Arcane  Casts "}
 c["1 Armor Shred Stacks"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}},"  Shred Stacks "}
 c["1 Armor Shred Stacks Applied"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1}},"  Shred Stacks Applied "}
-c["1 Aspect Of The Lynx Duration (Seconds)"]={{[1]={[1]={skillName="Aspect of the Lynx",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (Seconds) "}
+c["1 Aspect Of The Lynx Duration (Seconds)"]={{[1]={[1]={skillName="Aspect of the Lynx",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Aspect of The Boar Duration on Traversal or Evade (Seconds)"]={{[1]={[1]={skillName="Aspect of the Boar",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   on Traversal or Evade (Seconds) "}
 c["1 Attached Trap Arming Time (seconds)"]={{}," Attached Trap Arming Time (seconds) "}
 c["1 Baby Scorpions Summoned"]={{}," Baby Scorpions Summoned "}
@@ -9189,28 +9189,28 @@ c["1 Bleed Stacks on Third Attack"]={{[1]={flags=8388608,keywordFlags=0,name="Ch
 c["1 Bleeds Inflicted on you for each Thorn Totem summoned"]={{}," s Inflicted on you for each Thorn Totem summoned "}
 c["1 Bone Curse Maximum Hits"]={{},"  Maximum s "}
 c["1 Buff Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Buff  "}
-c["1 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Buff  (seconds) "}
-c["1 Buff Duration (seconds) per Rune"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Buff  (seconds) per Rune "}
+c["1 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Buff  "}
+c["1 Buff Duration (seconds) per Rune"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Buff  per Rune "}
 c["1 Caltrops per 2 Seconds"]={{}," Caltrops per 2 Seconds "}
-c["1 Chill Duration (Seconds)"]={{[1]={[1]={skillName="Chill",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (Seconds) "}
+c["1 Chill Duration (Seconds)"]={{[1]={[1]={skillName="Chill",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Chill Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=100}},nil}
-c["1 Cloud Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Cloud  (seconds) "}
+c["1 Cloud Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Cloud  "}
 c["1 Converts Harvest to Great Harvest which has a 5 second cooldown, deals 150% more damage, and has 50% more area of effect"]={{[1]={[1]={skillName="Harvest",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="BASE",value=1}}," Converts  to Great Harvest which has a 5 second cooldown, deals 150% more , and has 50% more area of effect "}
 c["1 Cooldown Recovery Attacks"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=1}},"  Attacks "}
 c["1 Corpse Parasites On Zombie Death"]={{}," Corpse Parasites On Zombie Death "}
-c["1 Crimson Shroud Duration (seconds)"]={{[1]={[1]={skillName="Crimson Shroud",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
+c["1 Crimson Shroud Duration (seconds)"]={{[1]={[1]={skillName="Crimson Shroud",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Crimson Shroud Stacks Per Enemy"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CrimsonShroud",type="BASE",value=100}},"  Per Enemy "}
 c["1 Critical Vulnerability Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=100}},nil}
 c["1 Cursed Enemy Threshold"]={{}," Cursed Enemy Threshold "}
 c["1 Daggers Thrown"]={{}," Daggers Thrown "}
 c["1 Delay Before Detonation (seconds)"]={{}," Delay Before Detonation (seconds) "}
-c["1 Deliverance Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Deliverance  (seconds) "}
+c["1 Deliverance Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Deliverance  "}
 c["1 Detonating Arrow Converted to a Melee Attack"]={{},"  Converted to a  Attack "}
 c["1 Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=1}},nil}
 c["1 Divine Bolts Cast"]={{}," Divine Bolts Cast "}
-c["1 Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  (Seconds) "}
+c["1 Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Duration (second)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  (second) "}
-c["1 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  (seconds) "}
+c["1 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Duration Per Crit Strike"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  Per Crit Strike "}
 c["1 Elemental Arrows Per Second"]={{},"  Arrows Per Second "}
 c["1 Enemies Anguished on Curse Cast"]={{}," Enemies ed on Curse Cast "}
@@ -9221,21 +9221,21 @@ c["1 Evade Charges gained on Potion Use"]={{}," Evade Charges gained on Potion U
 c["1 Expends Storm Stacks On Companion Use"]={{}," Expends Storm Stacks On Companion Use "}
 c["1 Extra Casts per Stack of Infernal Hunger"]={{}," Extra Casts per Stack of Infernal Hunger "}
 c["1 Extra Casts per Stack of Lagon's Slumber"]={{}," Extra Casts per Stack of Lagon's Slumber "}
-c["1 Fear Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
+c["1 Fear Duration (seconds)"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Fire Res Shred Stacks"]={{},"  Res Shred Stacks "}
 c["1 Fire Shred Stacks"]={{},"  Shred Stacks "}
-c["1 Frailty Duration (seconds)"]={{[1]={[1]={skillName="Frailty",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
+c["1 Frailty Duration (seconds)"]={{[1]={[1]={skillName="Frailty",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Frailty Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=100}},nil}
 c["1 Frailty Stacks Inflicted"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=100}},"  Inflicted "}
 c["1 Freeze Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyFreezeDuration",type="BASE",value=1}},nil}
-c["1 Frenzy Duration (Seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (Seconds) "}
-c["1 Frenzy Duration (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
+c["1 Frenzy Duration (Seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
+c["1 Frenzy Duration (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Frenzy Duration On Exit (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   On Exit (seconds) "}
 c["1 Ghost Blades Stacks Gained"]={{}," Ghost Blades Stacks Gained "}
 c["1 Haste Duration"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Haste Duration (Double For Companions)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (Double For Companions) "}
-c["1 Haste Duration (Seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (Seconds) "}
-c["1 Haste Duration (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
+c["1 Haste Duration (Seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
+c["1 Haste Duration (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Haste duration after Channeling (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   after Channeling (seconds) "}
 c["1 Healing Per Point of Dexterity"]={{},"   "}
 c["1 Health Gain Per 2 Dex"]={{[1]={[1]={div=2,stat="Dex",type="PerStat"},flags=0,keywordFlags=0,name="Life",type="BASE",value=1}},"  Gain  "}
@@ -9248,8 +9248,8 @@ c["1 Health gained per Dexterity when your Falcon hits an enemy"]={{[1]={[1]={st
 c["1 Hungering Souls Interval (Seconds)"]={{},"  Interval (Seconds) "}
 c["1 Ice Spirals on Cast per Stack"]={{}," Ice Spirals on Cast per Stack "}
 c["1 Ignite Stacks In Trail Each Second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=100}},"  In Trail Each Second "}
-c["1 Immobilize Duration (seconds)"]={{[1]={[1]={skillName="Immobilize",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
-c["1 Immobilized Duration (seconds)"]={{[1]={[1]={skillName="Immobilize",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," d  (seconds) "}
+c["1 Immobilize Duration (seconds)"]={{[1]={[1]={skillName="Immobilize",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
+c["1 Immobilized Duration (seconds)"]={{[1]={[1]={skillName="Immobilize",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," d  "}
 c["1 Infernal Hunger Stacks Per 2 Seconds"]={{}," Infernal Hunger Stacks Per 2 Seconds "}
 c["1 Instant Arrows"]={{}," Instant Arrows "}
 c["1 Intelligence"]={{[1]={flags=0,keywordFlags=0,name="Int",type="BASE",value=1}},nil}
@@ -9279,7 +9279,7 @@ c["1 Mana Restored on Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},
 c["1 Mana and 12 Health gained on Hit per 12% increased mana regen (up to 4 times per 2 seconds)"]={{[1]={flags=8388608,keywordFlags=0,name="Mana",type="BASE",value=1}},"  and 12 Health gained  per 12% increased mana regen (up to 4 times per 2 seconds) "}
 c["1 Mana on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="Mana",type="BASE",value=1}},nil}
 c["1 Mana per Stack Consumed"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=1}},"  per Stack Consumed "}
-c["1 Marked For Death Duration (seconds)"]={{[1]={[1]={skillName="Marked For Death",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
+c["1 Marked For Death Duration (seconds)"]={{[1]={[1]={skillName="Marked For Death",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Max Arcane Momentum Stacks"]={{}," Max Arcane Momentum Stacks "}
 c["1 Max Blade Weaving Stacks"]={{}," Max Blade Weaving Stacks "}
 c["1 Max Marrow Shards per second against 1 target"]={{}," Max  per second against 1 target "}
@@ -9317,7 +9317,7 @@ c["1 Poison Stacks Received"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceTo
 c["1 Poison Stacks To Nearby Enemies On Transform"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=100}},"  To Nearby Enemies On Transform "}
 c["1 Rage Gain on Locust Release"]={{}," Rage Gain on Locust Release "}
 c["1 Rage gained per second while Transformed"]={{}," Rage gained per second while Transformed "}
-c["1 Ravaging Aura Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Ravaging Aura  (seconds) "}
+c["1 Ravaging Aura Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}}," Ravaging Aura  "}
 c["1 Recasts"]={{}," Recasts "}
 c["1 Refund Trigger Amount"]={{}," Refund Trigger Amount "}
 c["1 Rip Blood Casts Each Second With Bleed Overload"]={{},"  Casts Each Second With Bleed Overload "}
@@ -9337,7 +9337,7 @@ c["1 Silver Shroud Stacks Gained"]={{[1]={flags=8388608,keywordFlags=0,name="Cha
 c["1 Skeletal Vanguards on Death"]={{}," Skeletal Vanguards on Death "}
 c["1 Skeletons Summoned"]={{}," Skeletons Summoned "}
 c["1 Slither Max Stacks"]={{}," Slither Max Stacks "}
-c["1 Slow Duration (seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (seconds) "}
+c["1 Slow Duration (seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Slow Stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=100}},nil}
 c["1 Slow Stacks When Free"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=100}},"  When Free "}
 c["1 Smaller Orbs"]={{}," Smaller Orbs "}
@@ -9535,8 +9535,8 @@ c["1.4% of Armor Mitigation also applies to damage over time per 10 Total Attrib
 c["1.4% of Damage Over Time Damage Leeched as Health"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="BASE",value=1.4}},"  Damage Leeched as Health "}
 c["1.5 Attach Cooldown (seconds)"]={{}," Attach Cooldown (seconds) "}
 c["1.5 Bladestorms Shurikens Interval (seconds)"]={{}," s Shurikens Interval (seconds) "}
-c["1.5 Haste Duration (Seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1.5}},"   (Seconds) "}
-c["1.5 Max Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1.5}}," Max  (seconds) "}
+c["1.5 Haste Duration (Seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1.5}},nil}
+c["1.5 Max Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1.5}}," Max  "}
 c["1.5 Seconds of Frenzy after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["1.5 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["1.5 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
@@ -9553,14 +9553,14 @@ c["1.9 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Ev
 c["1.9 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  after you use a Traversal Skill "}
 c["10 Armor Stolen"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=10}},"  Stolen "}
 c["10 Arrow Storm Cooldown"]={{}," Arrow Storm Cooldown "}
-c["10 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}}," Buff  (seconds) "}
+c["10 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}}," Buff  "}
 c["10 Cooldown"]={{}," Cooldown "}
 c["10 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
-c["10 Damage Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=10}},"  Buff Duration (Seconds) "}
+c["10 Damage Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=10}},"  Buff Duration "}
 c["10 Detonating Arrow Limit Per 2 Seconds"]={{},"  Limit Per 2 Seconds "}
 c["10 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=10}},nil}
 c["10 Dodge Rating, Doubled if Hit Recently"]={{[1]={flags=8388608,keywordFlags=0,name="Evasion",type="BASE",value=10}}," , Doubled if  Recently "}
-c["10 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}},"  (seconds) "}
+c["10 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}},nil}
 c["10 Feather Knives Cooldown (seconds)"]={{}," Feather Knives Cooldown (seconds) "}
 c["10 Fissure Mana Consumption"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=10}}," Fissure  Consumption "}
 c["10 Heal Amount Per Shield"]={{}," Heal Amount Per Shield "}
@@ -9587,8 +9587,8 @@ c["10 Mana Gained when you use Vengeance and hit at least one enemy"]={{[1]={[1]
 c["10 Max Duration Extensions"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}}," Max  Extensions "}
 c["10 Max Stacks"]={{}," Max Stacks "}
 c["10 Maximum Distance Benefit (meters)"]={{}," Maximum Distance Benefit (meters) "}
-c["10 Maximum Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}}," Maximum  (seconds) "}
-c["10 Maximum Scaling Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}}," Maximum Scaling  (seconds) "}
+c["10 Maximum Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}}," Maximum  "}
+c["10 Maximum Scaling Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=10}}," Maximum Scaling  "}
 c["10 Maximum Sharpshooter stacks"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Sharpshooter",type="BASE",value=1000}}," Maximum  "}
 c["10 Maximum Stacks"]={{}," Maximum Stacks "}
 c["10 Maximum Storm Stacks"]={{}," Maximum Storm Stacks "}
@@ -10212,9 +10212,9 @@ c["117% increased Volatile Zombie Movement Speed"]={{[1]={flags=0,keywordFlags=0
 c["118% increased Echo Damage when a skill is Echoed"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=118}}," Echo  when a skill is Echoed "}
 c["119% Increased Fire Aura Damage"]={{[1]={[1]={skillName="Fire Aura",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=119}},nil}
 c["12 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
-c["12 Cooldown Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=12}},"  (Seconds) "}
-c["12 Damned Overload Duration (seconds)"]={{[1]={[1]={skillName="Damned",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=12}},"  Overload  (seconds) "}
-c["12 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=12}},"  (seconds) "}
+c["12 Cooldown Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=12}},nil}
+c["12 Damned Overload Duration (seconds)"]={{[1]={[1]={skillName="Damned",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=12}},"  Overload  "}
+c["12 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=12}},nil}
 c["12 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=12}},nil}
 c["12 Health Gain on Block"]={{[1]={flags=0,keywordFlags=0,name="LifeOnBlock",type="BASE",value=12}},nil}
 c["12 Health Gain on Freeze"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=12}},"  Gain on Freeze "}
@@ -11011,7 +11011,7 @@ c["18 Health Gain on Freeze"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BA
 c["18 Health Gained on Potion Use"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=18}},"  Gained on Potion Use "}
 c["18 Mana consumed by Grim Harvest"]={{[1]={[1]={skillName="Harvest",type="SkillName"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=18}},"  consumed by Grim  "}
 c["18 Mana gained when you use 3 zero mana cost skills in a row (3 second cooldown)"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=18}},"  gained when you use 3 zero mana cost skills in a row  "}
-c["18 Talon Blades Duration (seconds)"]={{[1]={[1]={skillName="Talon Blades",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=18}},"   (seconds) "}
+c["18 Talon Blades Duration (seconds)"]={{[1]={[1]={skillName="Talon Blades",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=18}},nil}
 c["18 Ward Gain On Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=18}},"  Gain  "}
 c["18 Ward Gain on Freeze"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=18}},"  Gain on Freeze "}
 c["18 Ward Gain on Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=18}},"  Gain  "}
@@ -11233,33 +11233,33 @@ c["2 Adorned Idols equipped at Maximum"]={{}," Adorned Idols equipped at Maximum
 c["2 Bees Summoned on Potion Use"]={{}," Bees Summoned on Potion Use "}
 c["2 Black Arrows per 3 Seconds"]={{}," Black Arrows per 3 Seconds "}
 c["2 Bleed Stacks from Screech"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=200}},"  from Screech "}
-c["2 Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Buff  (Seconds) "}
-c["2 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Buff  (seconds) "}
-c["2 Chain Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Chain  (seconds) "}
+c["2 Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Buff  "}
+c["2 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Buff  "}
+c["2 Chain Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Chain  "}
 c["2 Cold Melee Damage per Dexterity"]={{[1]={[1]={stat="Dex",type="PerStat"},flags=0,keywordFlags=256,name="ColdDamage",type="BASE",value=2}},nil}
-c["2 Contempt Duration (Seconds)"]={{[1]={[1]={skillName="Contempt",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"   (Seconds) "}
+c["2 Contempt Duration (Seconds)"]={{[1]={[1]={skillName="Contempt",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},nil}
 c["2 Cooldown"]={{}," Cooldown "}
 c["2 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
 c["2 Cooldown Recovered Per Expired Orb (seconds)"]={{}," Cooldown Recovered Per Expired Orb (seconds) "}
 c["2 Cooldown Reduction uses"]={{}," Cooldown Reduction uses "}
 c["2 Damned Stacks Applied"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Damned",type="BASE",value=200}},nil}
-c["2 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"  (seconds) "}
+c["2 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},nil}
 c["2 Feathers Thrown"]={{}," Feathers Thrown "}
 c["2 Frenzy Chance (seconds)"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frenzy",type="BASE",value=2}},"  (seconds) "}
 c["2 Frenzy Duration"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},nil}
-c["2 Frenzy Duration (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"   (seconds) "}
+c["2 Frenzy Duration (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},nil}
 c["2 Frenzy Duration After Flurry Swipes (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"   After Flurry Swipes (seconds) "}
 c["2 Haste Duration"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},nil}
-c["2 Haste Duration (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"   (seconds) "}
+c["2 Haste Duration (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},nil}
 c["2 Healing Per Second"]={{},"  Per Second "}
 c["2 Health Gain on Block"]={{[1]={flags=0,keywordFlags=0,name="LifeOnBlock",type="BASE",value=2}},nil}
 c["2 Health Gain on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="LifeOnHit",type="BASE",value=2}},nil}
 c["2 Health Gain on Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="Life",type="BASE",value=2}},"  Gain  "}
 c["2 Health Gained On Block"]={{[1]={flags=0,keywordFlags=0,name="LifeOnBlock",type="BASE",value=2}},nil}
 c["2 Hives -> Healing Totems"]={{}," Hives ->  Totems "}
-c["2 Huntress Advantage Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Huntress Advantage  (seconds) "}
-c["2 Infernal Shade Remaining Duration (Seconds)"]={{[1]={[1]={skillName="Infernal Shade",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"  Remaining  (Seconds) "}
-c["2 Lightning Aegis Duration (seconds)"]={{[1]={flags=0,keywordFlags=2,name="Duration",type="BASE",value=2}},"  Aegis  (seconds) "}
+c["2 Huntress Advantage Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Huntress Advantage  "}
+c["2 Infernal Shade Remaining Duration (Seconds)"]={{[1]={[1]={skillName="Infernal Shade",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"  Remaining  "}
+c["2 Lightning Aegis Duration (seconds)"]={{[1]={flags=0,keywordFlags=2,name="Duration",type="BASE",value=2}},"  Aegis  "}
 c["2 Lightning Blast Chains per Firebrand Stack Consumed"]={{},"  Chains per brand Stack Consumed "}
 c["2 Limit Per 2 Seconds"]={{}," Limit Per 2 Seconds "}
 c["2 Limit Per Second"]={{}," Limit Per Second "}
@@ -11281,7 +11281,7 @@ c["2 Mana Gained per Blade"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BAS
 c["2 Mana Restored"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=2}},"  Restored "}
 c["2 Mana Restored from First Shadow Consumed"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=2}},"  Restored from First Shadow Consumed "}
 c["2 Mana gained when you Dodge While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=2}},"  gained when you Dodge  "}
-c["2 Marked Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Marked  (seconds) "}
+c["2 Marked Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Marked  "}
 c["2 Max Earth Shattering Stacks"]={{}," Max Earth Shattering Stacks "}
 c["2 Max Marrow Shards per second"]={{}," Max  per second "}
 c["2 Max Stacks"]={{}," Max Stacks "}
@@ -11305,20 +11305,20 @@ c["2 Physical Resistance Shred Stacks"]={{[1]={flags=0,keywordFlags=0,name="Phys
 c["2 Rage Gained on Kill in Werebear Form"]={{}," Rage Gained  in  "}
 c["2 Rage Gained per Second per Summoned Vine"]={{}," Rage Gained per Second per Summoned Vine "}
 c["2 Rage gained per second while Transformed"]={{}," Rage gained per second while Transformed "}
-c["2 Rhythm Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Rhythm  (seconds) "}
+c["2 Rhythm Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}}," Rhythm  "}
 c["2 Rune Bolts from Runestone"]={{}," Rune Bolts from Runestone "}
 c["2 Sacrifice Chain Targets"]={{},"  Chain Targets "}
 c["2 Seconds Older"]={{}," Seconds Older "}
 c["2 Seconds of Ancient Flight when you move after attacking"]={{}," Seconds of  when you move after attacking "}
 c["2 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
-c["2 Slow Duration (Seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"   (Seconds) "}
-c["2 Slow Duration (seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},"   (seconds) "}
+c["2 Slow Duration (Seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},nil}
+c["2 Slow Duration (seconds)"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=2}},nil}
 c["2 Slow Stacks per Second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=200}},"  per Second "}
 c["2 Stack Change Rate per Second"]={{}," Stack Change Rate per Second "}
 c["2 Stacks Of Armor Shred Applied"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=2}}," Stacks Of  Shred Applied "}
 c["2 Static Charges On Hit"]={{},"  Charges  "}
-c["2 Stun Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="BASE",value=2}},"  (Seconds) "}
-c["2 Stun Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="BASE",value=2}},"  (seconds) "}
+c["2 Stun Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="BASE",value=2}},nil}
+c["2 Stun Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="BASE",value=2}},nil}
 c["2 Swipe Cooldown for Bears (Seconds)"]={{},"  Cooldown for Bears (Seconds) "}
 c["2 Times Per 2 Seconds"]={{}," Times Per 2 Seconds "}
 c["2 Umbral Blades on Feather Burst"]={{},"  on Feather Burst "}
@@ -11499,7 +11499,7 @@ c["2.3 Seconds of Haste after you use a Traversal Skill"]={{}," Seconds of  afte
 c["2.3% more Damage to Poisoned Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Poisoned"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=2.3}},nil}
 c["2.4 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["2.4% more Damage to Poisoned Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Poisoned"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=2.4}},nil}
-c["2.5 Maximum Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2.5}}," Maximum  (seconds) "}
+c["2.5 Maximum Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=2.5}}," Maximum  "}
 c["2.5 Seconds of Frenzy after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["2.5 Seconds of Traversal Skill Cooldowns Recovered on Potion Use"]={{}," Seconds of Traversal Skill Cooldowns Recovered on Potion Use "}
 c["2.5% Chance To Repeat Per Energy"]={{}," Chance To Repeat Per Energy "}
@@ -12361,15 +12361,15 @@ c["3 Abyssal Echoes Casts From Location"]={{},"  Casts From Location "}
 c["3 Arrow Limit"]={{}," Arrow Limit "}
 c["3 Arrow Storm Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Arrow Storm  "}
 c["3 Bees Summoned on Potion Use"]={{}," Bees Summoned on Potion Use "}
-c["3 Bleeding Fury Duration (seconds)"]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," ing Fury  (seconds) "}
+c["3 Bleeding Fury Duration (seconds)"]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," ing Fury  "}
 c["3 Bleeding Fury Max Stacks"]={{}," ing Fury Max Stacks "}
-c["3 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Buff  (seconds) "}
+c["3 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Buff  "}
 c["3 Charges Gained On Crit"]={{}," Charges Gained On Crit "}
 c["3 Chill Stacks On Bosses And Rares"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=300}},"  On Bosses And Rares "}
 c["3 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
 c["3 Dagger Dance Casts Per Second"]={{}," Dagger Dance Casts Per Second "}
-c["3 Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}},"  (Seconds) "}
-c["3 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}},"  (seconds) "}
+c["3 Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}},nil}
+c["3 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}},nil}
 c["3 Effect Cooldown (seconds)"]={{}," Effect Cooldown (seconds) "}
 c["3 Enemies Flame Whipped"]={{}," Enemies Flame Whipped "}
 c["3 Enemies attacked with Vengeance after using a Movement Skill (max 2 per 12 seconds)"]={{}," Enemies attacked with  after using a Movement Skill (max 2 per 12 seconds) "}
@@ -12377,7 +12377,7 @@ c["3 Fire Aura Trigger Limit Per Second"]={{},"  Trigger Limit Per Second "}
 c["3 Firebrand lines"]={{},"  lines "}
 c["3 Frailty Stacks From Caltrops"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frailty",type="BASE",value=300}},"  From Caltrops "}
 c["3 Freezing Cascade Cooldown (seconds)"]={{}," Freezing Cascade Cooldown (seconds) "}
-c["3 Frenzy Duration (Seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}},"   (Seconds) "}
+c["3 Frenzy Duration (Seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}},nil}
 c["3 Ghost Blade Stacks Consumed per Second While Moving"]={{}," Ghost Blade Stacks Consumed per Second  "}
 c["3 Health Gain On Crit"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=3}},"  Gain On Crit "}
 c["3 Health Gain on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="Life",type="BASE",value=3}},"  Gain  "}
@@ -12403,7 +12403,7 @@ c["3 Mana Instantly Restored on Boss or Rare Hit"]={{[1]={flags=8388608,keywordF
 c["3 Mana Instantly Restored on Crit"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=3}},"  Instantly Restored on Crit "}
 c["3 Mana Instantly Restored on Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=3}},"  Instantly Restored  "}
 c["3 Max Bladed Armor Stacks"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=3}}," Max Bladed  Stacks "}
-c["3 Max Bonus Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Max Bonus  (seconds) "}
+c["3 Max Bonus Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Max Bonus  "}
 c["3 Max Crimson Shrouds"]={{}," Max s "}
 c["3 Maximum Crimson Shrouds"]={{}," Maximum s "}
 c["3 Maximum Elemental Arrows"]={{}," Maximum  Arrows "}
@@ -12418,16 +12418,16 @@ c["3 Poison Stacks Inflicted"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceT
 c["3 Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=3}},nil}
 c["3 Rage Gained"]={{}," Rage Gained "}
 c["3 Rage gained per second while Transformed"]={{}," Rage gained per second while Transformed "}
-c["3 Runeweave Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Runeweave  (seconds) "}
+c["3 Runeweave Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Runeweave  "}
 c["3 Seconds of Frenzy after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["3 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["3 Seconds of Haste when you directly cast Soul Feast"]={{}," Seconds of  when you directly cast Soul Feast "}
 c["3 Silver Shroud Stacks when Damaged to Below 70%"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_SilverShroud",type="BASE",value=300}},"  when Damaged to Below 70% "}
-c["3 Spreads After Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Spreads After  (Seconds) "}
+c["3 Spreads After Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Spreads After  "}
 c["3 Stacks Consumed"]={{}," Stacks Consumed "}
 c["3 Stacks on Firebrand Use"]={{}," Stacks on  Use "}
-c["3 Taunt Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Taunt  (seconds) "}
-c["3 Totem Frenzy Duration (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Totem   (seconds) "}
+c["3 Taunt Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Taunt  "}
+c["3 Totem Frenzy Duration (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=3}}," Totem   "}
 c["3 Vanguard Limit"]={{}," Vanguard Limit "}
 c["3 Void Bolts At Arrival"]={{},"  Bolts At Arrival "}
 c["3 Void Bolts At Starting Position"]={{},"  Bolts At Starting Position "}
@@ -12439,7 +12439,7 @@ c["3 Ward Gained on Potion Use"]={{[1]={flags=0,keywordFlags=0,name="Ward",type=
 c["3 Ward Per Second Per Stack"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=3}},"  Per Stack "}
 c["3 Ward Regen Per Second"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=3}},"  Regen Per Second "}
 c["3 Ward gained per 10 Missing Mana when you use a Traversal Skill"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=3}},"  gained per 10 Missing Mana when you use a Traversal Skill "}
-c["3 Ward per Second Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=3}},"  Duration (Seconds) "}
+c["3 Ward per Second Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=3}},"  Duration "}
 c["3 seconds of Frenzy gained when hit by your Storm Totem"]={{}," seconds of  gained when  by your Storm Totem "}
 c["3 seconds of Haste after you transform"]={{}," seconds of  after you transform "}
 c["3 seconds of Haste gained when hit by your Storm Totem"]={{}," seconds of  gained when  by your Storm Totem "}
@@ -13150,27 +13150,27 @@ c["396% Chance to Shock Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="Ch
 c["396% Increased Fire Aura Damage"]={{[1]={[1]={skillName="Fire Aura",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=396}},nil}
 c["396% increased Echo Damage when a skill is Echoed"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=396}}," Echo  when a skill is Echoed "}
 c["396% increased Elemental Damage Over Time"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=396},[2]={flags=0,keywordFlags=0,name="ColdDamage",type="INC",value=396},[3]={flags=0,keywordFlags=0,name="LightningDamage",type="INC",value=396}},"  Over Time "}
-c["4 Adrenaline Rush Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Adrenaline Rush  (seconds) "}
+c["4 Adrenaline Rush Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Adrenaline Rush  "}
 c["4 Adrenaline Rush Max Stacks"]={{}," Adrenaline Rush Max Stacks "}
-c["4 Ancestral Sabertooth Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Ancestral Sabertooth  (seconds) "}
+c["4 Ancestral Sabertooth Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Ancestral Sabertooth  "}
 c["4 Arcane Shield Ward Per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=4}}," Arcane Shield  "}
 c["4 Arcane Shielding Stacks Gained From Surge or Enchant Weapon"]={{}," Arcane Shielding Stacks Gained From  or Enchant Weapon "}
-c["4 Arena Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Arena  (seconds) "}
+c["4 Arena Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Arena  "}
 c["4 Bees Summoned on Potion Use"]={{}," Bees Summoned on Potion Use "}
 c["4 Blades On 3rd Throw"]={{}," Blades On 3rd Throw "}
 c["4 Blind Duration (duration)"]={{[1]={[1]={skillName="Blind",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}},"   (duration) "}
-c["4 Blind Duration (seconds)"]={{[1]={[1]={skillName="Blind",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}},"   (seconds) "}
-c["4 Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Buff  (Seconds) "}
-c["4 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Buff  (seconds) "}
+c["4 Blind Duration (seconds)"]={{[1]={[1]={skillName="Blind",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}},nil}
+c["4 Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Buff  "}
+c["4 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Buff  "}
 c["4 Casts Between Chaining"]={{}," Casts Between Chaining "}
 c["4 Casts Per Second"]={{}," Casts Per Second "}
 c["4 Companion Damage Immunity Duration After Revive (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=4}}," Companion  Immunity Duration After Revive (seconds) "}
 c["4 Concentration cooldown"]={{}," Concentration cooldown "}
 c["4 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
-c["4 Crimson Shroud Duration (seconds)"]={{[1]={[1]={skillName="Crimson Shroud",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}},"   (seconds) "}
+c["4 Crimson Shroud Duration (seconds)"]={{[1]={[1]={skillName="Crimson Shroud",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}},nil}
 c["4 Crystalwind stacks gained per second while moving"]={{}," Crystalwind stacks gained per second  "}
 c["4 Crystalwind stacks gained when you use Evade"]={{}," Crystalwind stacks gained when you use Evade "}
-c["4 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}},"  (seconds) "}
+c["4 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}},nil}
 c["4 Extra Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=4}},nil}
 c["4 Falcon Bleed Chance Buff duration (seconds)"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=4}}," Falcon  Buff duration (seconds) "}
 c["4 Haste Duration On Release (seconds)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}},"   On Release (seconds) "}
@@ -13202,13 +13202,13 @@ c["4 Minion Armor Per Level"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier
 c["4 Minions teleported around you after you use a Traversal Skill"]={{}," s ed around you after you use a Traversal Skill "}
 c["4 Number Of Enemies Spread To"]={{}," Number Of Enemies Spread To "}
 c["4 Reap Freeze Rate per Intelligence"]={{}," Reap Freeze Rate  "}
-c["4 Rime Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Rime  (seconds) "}
+c["4 Rime Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Rime  "}
 c["4 Seconds of Disabled Health Leech after you directy cast a Spell"]={{[1]={flags=0,keywordFlags=256,name="Life",type="BASE",value=4}}," Seconds of Disabled  Leech after you directy cast a  "}
 c["4 Seconds of Haste after you use Evade"]={{}," Seconds of  after you use Evade "}
 c["4 Stacks on Manastrike Use"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=4}}," Stacks on strike Use "}
 c["4 Stacks on use"]={{}," Stacks on use "}
 c["4 Storm Sprites summoned around totem (up to 2 times per 6 seconds)"]={{}," Storm Sprites summoned around totem (up to 2 times per 6 seconds) "}
-c["4 Taunt Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Taunt  (seconds) "}
+c["4 Taunt Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=4}}," Taunt  "}
 c["4 Unique Skills Required"]={{}," Unique Skills Required "}
 c["4 Void Beams Summoned"]={{},"  Beams Summoned "}
 c["4 Ward Gain on Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=4}},"  Gain  "}
@@ -13765,10 +13765,10 @@ c["49% of Mana Spent Gained as Ward"]={{[1]={flags=0,keywordFlags=0,name="Mana",
 c["4m Knockback Distance"]={{[1]={flags=0,keywordFlags=0,name="EnemyKnockbackDistance",type="BASE",value=4}},"m  "}
 c["5 Consumption Limit"]={{}," Consumption Limit "}
 c["5 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
-c["5 Cooldown Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=5}},"  (seconds) "}
+c["5 Cooldown Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=5}},nil}
 c["5 Corrupted Idols equipped at Maximum"]={{}," Corrupted Idols equipped at Maximum "}
 c["5 Damage Reflected Per 1% Armor Mitigation"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=5}},"  Reflected Per 1% Armor Mitigation "}
-c["5 Feather Storm Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=5}}," Feather Storm  (seconds) "}
+c["5 Feather Storm Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=5}}," Feather Storm  "}
 c["5 Fireballs Required For Flame Burst"]={{}," s Required For Flame Burst "}
 c["5 Heal On Crit"]={{}," Heal On Crit "}
 c["5 Health Gain"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=5}},"  Gain "}
@@ -13803,11 +13803,11 @@ c["5 Max Buff stacks"]={{}," Max Buff stacks "}
 c["5 Max Prism Shards"]={{}," Max s "}
 c["5 Max Unique Negative Ailments Considered"]={{}," Max Unique Negative Ailments Considered "}
 c["5 Maximum Barrage of Pain Stacks"]={{}," Maximum Barrage of Pain Stacks "}
-c["5 Maximum Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=5}}," Maximum  (seconds) "}
+c["5 Maximum Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=5}}," Maximum  "}
 c["5 Maximum Duration Benefit (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=5}}," Maximum  Benefit (seconds) "}
 c["5 Maximum Stacks"]={{}," Maximum Stacks "}
 c["5 Maximum Storm Stacks"]={{}," Maximum Storm Stacks "}
-c["5 Minion Haste And Frenzy Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=5}}}},"   And Frenzy  (Seconds) "}
+c["5 Minion Haste And Frenzy Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=5}}}},"   And Frenzy  "}
 c["5 Minions teleported around you after you use a Traversal Skill"]={{}," s ed around you after you use a Traversal Skill "}
 c["5 Novas Per Second"]={{}," Novas Per Second "}
 c["5 Spell Fire Damage per Stack"]={{[1]={flags=0,keywordFlags=256,name="FireDamage",type="BASE",value=5}},"   per Stack "}
@@ -14309,11 +14309,11 @@ c["59% increased Throwing Attack Speed"]={{[1]={flags=3584,keywordFlags=1024,nam
 c["59% of Shurikens Base Damage converted to Lightning"]={{[1]={[1]={skillName="Shurikens",type="SkillName"},flags=0,keywordFlags=2,name="Damage",type="BASE",value=59}},"  Base  converted to  "}
 c["6 Acid Flask Cooldown (seconds)"]={{},"  Cooldown (seconds) "}
 c["6 Bees Summoned on Potion Use"]={{}," Bees Summoned on Potion Use "}
-c["6 Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=6}}," Buff  (Seconds) "}
+c["6 Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=6}}," Buff  "}
 c["6 Coagulated Blood Stacks Needed"]={{}," Coagulated Blood Stacks Needed "}
 c["6 Cooldown (seconds)"]={{}," Cooldown (seconds) "}
-c["6 Cooldown Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=6}},"  (seconds) "}
-c["6 Craterborn Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=6}}," Craterborn  (seconds) "}
+c["6 Cooldown Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="BASE",value=6}},nil}
+c["6 Craterborn Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=6}}," Craterborn  "}
 c["6 Distance For Max Chance (meters)"]={{}," Distance For Max Chance (meters) "}
 c["6 Extra Projectiles"]={{[1]={flags=0,keywordFlags=0,name="ProjectileCount",type="BASE",value=6}},nil}
 c["6 Great Vine Limit"]={{}," Great Vine Limit "}
@@ -14991,11 +14991,11 @@ c["78% increased Void Damage"]={{[1]={flags=0,keywordFlags=0,name="VoidDamage",t
 c["79% Increased Armor Shred Duration "]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=79}},"  Shred Duration  "}
 c["79% Increased Fire Aura Damage"]={{[1]={[1]={skillName="Fire Aura",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=79}},nil}
 c["79% increased Echo Damage when a skill is Echoed"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=79}}," Echo  when a skill is Echoed "}
-c["8 Bone Prison Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Bone Prison  (seconds) "}
-c["8 Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Buff  (Seconds) "}
-c["8 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Buff  (seconds) "}
+c["8 Bone Prison Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Bone Prison  "}
+c["8 Buff Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Buff  "}
+c["8 Buff Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Buff  "}
 c["8 Cooldown (Seconds)"]={{}," Cooldown (Seconds) "}
-c["8 Gladiator of Lagon Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Gladiator of Lagon  (seconds) "}
+c["8 Gladiator of Lagon Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Gladiator of Lagon  "}
 c["8 Health Gain on Block"]={{[1]={flags=0,keywordFlags=0,name="LifeOnBlock",type="BASE",value=8}},nil}
 c["8 Health Gain on Crit"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=8}},"  Gain on Crit "}
 c["8 Health Gain on Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="Life",type="BASE",value=8}},"  Gain  "}
@@ -15010,7 +15010,7 @@ c["8 Max Damage Bonus Stacks"]={{[1]={flags=0,keywordFlags=0,name="Damage",type=
 c["8 Max Number Of Enemies"]={{}," Max Number Of Enemies "}
 c["8 Minions teleported around you after you use a Traversal Skill"]={{}," s ed around you after you use a Traversal Skill "}
 c["8 Perfection Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Perfection  "}
-c["8 Runestone Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Runestone  (seconds) "}
+c["8 Runestone Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=8}}," Runestone  "}
 c["8 Ward Gain"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=8}},"  Gain "}
 c["8 Ward Gain on Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=8}},"  Gain  "}
 c["8 Ward Gain vs Spirit Plagued"]={{[1]={[1]={skillName="Spirit Plague",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=8}},"  Gain vs d "}

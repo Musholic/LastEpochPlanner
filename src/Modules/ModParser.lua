@@ -302,7 +302,8 @@ local specialQuickFixModList = {
 	["^([%+%-]?[%d%.]+%%) Cast Speed"] = "%1 increased Cast Speed",
 	["^([%+%-]?[%d%.]+%%) Cooldown Recovery Speed"] = "%1 increased Cooldown Recovery Speed",
 	["^([%+%-]?[%d%.]+%%) Duration"] = "%1 increased Duration",
-	["^([%+%-]?[%d%.]+%%) Movespeed"] = "%1 increased Movespeed"
+	["^([%+%-]?[%d%.]+%%) Movespeed"] = "%1 increased Movespeed",
+	["Duration %(S?s?econds%)"] = "Duration"
 }
 
 for _, damageType in ipairs(DamageTypes) do
