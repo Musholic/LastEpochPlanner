@@ -1,3 +1,19 @@
+VERSION[0.11.0][2026/04/02]
+
+--- New to Last Epoch Planner ---
+- Support for idol altar items and for bigger affix ids on offline import (Musholic)
+- Basic support for the additional idols slots (Musholic)
+- Support for importing corrupted affixes + better support for crafting (Musholic)
+- Minion critical chance mod supports (Musholic)
+- Support for various mods including Block Effectiveness, stun avoidance, skill level gains, ... (Musholic)
+
+--- Fixed Calculations ---
+- Fix mod scaling not applied to mods with no range (Musholic)
+
+--- Fixed Bugs ---
+- Better support for importing a build code for an older version of the game (Musholic)
+
+
 VERSION[0.10.0][2026/03/27]
 
 --- New to Last Epoch Planner ---

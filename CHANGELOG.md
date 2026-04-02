@@ -1,5 +1,24 @@
 # Changelog
 
+## [v0.11.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.11.0) (2026/04/02)
+
+[Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.10.0...v0.11.0)
+
+
+## What's Changed
+### New to Last Epoch Planner
+- Support for idol altar items and for bigger affix ids on offline import [\#99](https://github.com/Musholic/LastEpochPlanner/pull/99) ([Musholic](https://github.com/Musholic))
+- Basic support for the additional idols slots [\#101](https://github.com/Musholic/LastEpochPlanner/pull/101) ([Musholic](https://github.com/Musholic))
+- Support for importing corrupted affixes + better support for crafting [\#102](https://github.com/Musholic/LastEpochPlanner/pull/102) ([Musholic](https://github.com/Musholic))
+- Minion critical chance mod supports [\#104](https://github.com/Musholic/LastEpochPlanner/pull/104) ([Musholic](https://github.com/Musholic))
+- Support for various mods including Block Effectiveness, stun avoidance, skill level gains, ... [\#105](https://github.com/Musholic/LastEpochPlanner/pull/105) ([Musholic](https://github.com/Musholic))
+### Fixed Calculations
+- Fix mod scaling not applied to mods with no range [\#100](https://github.com/Musholic/LastEpochPlanner/pull/100) ([Musholic](https://github.com/Musholic))
+### Fixed Bugs
+- Better support for importing a build code for an older version of the game [\#103](https://github.com/Musholic/LastEpochPlanner/pull/103) ([Musholic](https://github.com/Musholic))
+
+
+
 ## [v0.10.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.10.0) (2026/03/27)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.9.1...v0.10.0)
