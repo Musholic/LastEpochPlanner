@@ -359,6 +359,7 @@ local skillNameList = {
 
 for _, skill in pairs(data.skills) do
 	skillNameList[skill.name:lower()] = { tag = { type = "SkillName", skillName = skill.name } }
+	skillNameList["for " .. skill.name:lower()] = { tag = { type = "SkillName", skillName = skill.name } }
 end
 
 local preSkillNameList = { }
