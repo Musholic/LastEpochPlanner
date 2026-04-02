@@ -90,7 +90,7 @@ function calcs.createActiveSkill(activeEffect, supportList, actor, socketGroup, 
 	}
 
 	local activeGrantedEffect = activeEffect.grantedEffect
-	
+
 	-- Initialise skill types
 	activeSkill.skillTypes = copyTable(activeGrantedEffect.skillTypes)
 	if activeGrantedEffect.minionSkillTypes then
@@ -133,7 +133,7 @@ function calcs.createActiveSkill(activeEffect, supportList, actor, socketGroup, 
 			end
 		end
 	until (notAddedNewSupport)
-	
+
 	for _, supportEffect in ipairs(supportList) do
 		-- Pass 2: Add all compatible supports
 		if calcLib.canGrantedEffectSupportActiveSkill(supportEffect.grantedEffect, activeSkill) then
@@ -417,7 +417,7 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 	else
 		effectiveRange = env.config.projectileDistance
 	end
-	
+
 	-- Build config structure for modifier searches
 	activeSkill.skillCfg = {
 		flags = bor(skillModFlags, activeSkill.weapon1Flags or activeSkill.weapon2Flags or 0),
@@ -450,9 +450,9 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 	local skillModList = new("ModList", activeSkill.actor.modDB)
 	activeSkill.skillModList = skillModList
 	activeSkill.baseSkillModList = skillModList
-	
+
 	-- The damage fixup stat applies x% less base Attack Damage and x% more base Attack Speed as confirmed by Openarl Jan 4th 2024
-	-- Implemented in this manner as the stat exists on the minion not the skills 
+	-- Implemented in this manner as the stat exists on the minion not the skills
 	if activeSkill.actor and activeSkill.actor.minionData and activeSkill.actor.minionData.damageFixup then
 		skillModList:NewMod("Damage", "MORE", -100 * activeSkill.actor.minionData.damageFixup, "Damage Fixup", ModFlag.Attack)
 		skillModList:NewMod("Speed", "MORE", 100 * activeSkill.actor.minionData.damageFixup, "Damage Fixup", ModFlag.Attack)
@@ -479,7 +479,7 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 			end
 			if level.manaReservationPercent then
 				activeSkill.skillData.manaReservationPercent = level.manaReservationPercent
-			end	
+			end
 			-- Handle multiple triggers situation and if triggered by a trigger skill save a reference to the trigger.
 			local match = skillEffect.grantedEffect.addSkillTypes and (not skillFlags.disable)
 			if match and skillEffect.grantedEffect.isTrigger then
@@ -559,13 +559,13 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 		activeEffect.srcInstance.skillMineCountCalcs = nil
 		activeEffect.srcInstance.skillMineCount = nil
 	end
-	
+
 
 	-- Determine if it possible to have a stage on this skill based upon skill parts.
 	local noPotentialStage = true
 	if activeEffect.grantedEffect.parts then
 		for _, part in ipairs(activeEffect.grantedEffect.parts) do
-			if part.stages then 
+			if part.stages then
 				noPotentialStage = false
 				break
 			end
@@ -680,7 +680,7 @@ function calcs.buildActiveSkillModList(env, activeSkill)
 					cond = effectTag.effectCond,
 					enemyCond = effectTag.effectEnemyCond,
 					stackVar = effectTag.effectStackVar,
-					stackLimit = effectTag.effectStackLimit,
+					stackLimit = activeSkill.skillData.maxStacks,
 					stackLimitVar = effectTag.effectStackLimitVar,
 					applyNotPlayer = effectTag.applyNotPlayer,
 					applyMinions = effectTag.applyMinions,
@@ -760,7 +760,7 @@ function calcs.createMinionSkills(env, activeSkill)
 		minionSkill.skillData.damageEffectiveness = 1 + (activeSkill.skillData.minionDamageEffectiveness or 0) / 100
 		t_insert(minion.activeSkillList, minionSkill)
 	end
-	local skillIndex 
+	local skillIndex
 	if env.mode == "CALCS" then
 		skillIndex = m_max(m_min(activeEffect.srcInstance.skillMinionSkillCalcs or 1, #minion.activeSkillList), 1)
 		activeEffect.srcInstance.skillMinionSkillCalcs = skillIndex
