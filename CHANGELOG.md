@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.10.0](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/v0.10.0) (2026/03/27)
+## [v0.10.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.10.0) (2026/03/27)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.9.1...v0.10.0)
 
@@ -26,7 +26,7 @@
 - Add extracted skills data of unique items [\#80](https://github.com/Musholic/LastEpochPlanner/pull/80) ([Musholic](https://github.com/Musholic))
 
 
-## [v0.9.1](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/v0.9.1) (2025/10/01)
+## [v0.9.1](https://github.com/Musholic/LastEpochPlanner/tree/v0.9.1) (2025/10/01)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.9.0...v0.9.1)
 
@@ -37,7 +37,7 @@
 
 
 
-## [v0.9.0](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/v0.9.0) (2025/09/24)
+## [v0.9.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.9.0) (2025/09/24)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.8.0...v0.9.0)
 
@@ -243,4 +243,4 @@ The following features are supported (or partially):
 * Basic support for following stat calculation: health, mana, armor, attributes
 * Skills: Can select up to 5 skills which allows to spend points in the associated skill trees
 
-Note that online character import is not directly available, but you can import from Last Epoch Tools build planner (which can do online character import). 
+Note that online character import is not directly available, but you can import from Last Epoch Tools build planner (which can do online character import).

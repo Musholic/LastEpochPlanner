@@ -32,7 +32,7 @@ sed -i -re 's/^\*\s(.*)\sby\s\(?(@[^)]*[^) ])\)?\s+in\s+(.*)/- \1 \3 (\2)/' temp
 # Convert @usernames to GitHub links
 # "(@username1, @username2)" → "([username1](https://github.com/username1), [username2](https://github.com/username2))"
 sed -i -re 's/@([a-zA-Z0-9_-]+)/[\1](https:\/\/github.com\/\1)/g' temp_change.md
-# Convert full PR URLs to linked format  
+# Convert full PR URLs to linked format
 # "https://github.com/repo/pull/1310" → "[\#1310](https://github.com/repo/pull/1310)"
 sed -i -re 's/(https:\/\/[^) ]*\/pull\/([0-9]+))/[\\#\2](\1)/g' temp_change.md
 
@@ -40,7 +40,7 @@ cp temp_change.md changelog_temp.txt
 # Append existing CHANGELOG.md content (excluding first line) to temp_change.md
 cat CHANGELOG.md | sed '1d' >> temp_change.md
 # Create new CHANGELOG.md with header containing version and date, followed by processed changes
-printf "# Changelog\n\n## [$RELEASE_VERSION](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/tree/$RELEASE_VERSION) ($(date +'%Y/%m/%d'))\n\n" | cat - temp_change.md > CHANGELOG.md
+printf "# Changelog\n\n## [$RELEASE_VERSION](https://github.com/Musholic/LastEpochPlanner/tree/$RELEASE_VERSION) ($(date +'%Y/%m/%d'))\n\n" | cat - temp_change.md > CHANGELOG.md
 
 # Delete up to and including the line containing "## What's Changed"
 sed -i "1,/## What's Changed/d" changelog_temp.txt
