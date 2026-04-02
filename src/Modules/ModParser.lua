@@ -165,6 +165,8 @@ for skillId, skill in pairs(data.skills) do
         modNameList[skill.altName:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
       end
       modNameList["to cast " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
+      modNameList["to apply " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
+      modNameList["to inflict " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
       modNameList[skill.name:lower() .. " stacks"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit, mult = 100}
       modNameList[skill.name:lower() .. " stacks applied"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit, mult = 100}
     end
