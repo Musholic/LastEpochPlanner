@@ -237,7 +237,7 @@ local modTagList = {
 	["while wielding a two handed melee weapon"] = { tagList = { { type = "Condition", var = "UsingTwoHandedWeapon" }, { type = "Condition", var = "UsingMeleeWeapon" } } },
 	["while unarmed"] = { tag = { type = "Condition", var = "Unarmed" } },
 	["while moving"] = { tag = { type = "Condition", var = "Moving" } },
-	["while channelling"] = { tag = { type = "Condition", var = "Channelling" } },
+	["while channell?ing"] = { tag = { type = "Condition", var = "Channelling" } },
 	["while leeching"] = { tag = { type = "Condition", var = "Leeching" } },
 	["while frozen"] = { tag = { type = "Condition", var = "Frozen" } },
 	["while cursed"] = { tag = { type = "Condition", var = "Cursed" } },

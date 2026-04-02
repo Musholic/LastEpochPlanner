@@ -1338,7 +1338,7 @@ c["+1 Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=1}}
 c["+1 Dodge Rating Per 1% Cold Resistance"]={{[1]={flags=0,keywordFlags=4,name="Evasion",type="BASE",value=1}},"  Per 1%  Resistance "}
 c["+1 Dodge Rating Per Dexterity"]={{[1]={[1]={stat="Dex",type="PerStat"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=1}},nil}
 c["+1 Dodge Rating per Dex inside Feather Storm"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=1}},"  per Dex inside Feather Storm "}
-c["+1 Dodge Rating per Intelligence while Channeling"]={{[1]={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=1}},"   while Channeling "}
+c["+1 Dodge Rating per Intelligence while Channeling"]={{[1]={[1]={stat="Int",type="PerStat"},[2]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=1}},nil}
 c["+1 Drain Life casts Stygian Beams instead"]={{},"  casts Stygian Beams instead "}
 c["+1 Duration (Seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  (Seconds) "}
 c["+1 Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"  (seconds) "}
@@ -1600,7 +1600,7 @@ c["+1 Ward Gained Per 3 Int Per Second"]={{[1]={[1]={div=3,stat="Int",type="PerS
 c["+1 Ward Granted"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=1}},"  Granted "}
 c["+1 Ward Granted per 25 Intelligence"]={{[1]={[1]={div=25,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=1}},"  Granted  "}
 c["+1 Ward Per Second Per 10 Max Mana"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=1}},"  Per 10 Max Mana "}
-c["+1 Ward Per Second Per 3 Intelligence While Channeling"]={{[1]={[1]={div=3,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=1}},"   While Channeling "}
+c["+1 Ward Per Second Per 3 Intelligence While Channeling"]={{[1]={[1]={div=3,stat="Int",type="PerStat"},[2]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=1}},nil}
 c["+1 Ward Per Second Per 5% Uncapped Resistances"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=1}},"  Per 5% Uncapped Resistances "}
 c["+1 Ward per Second per Equipped Heretical Idol"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=1}},"  per Equipped Heretical Idol "}
 c["+1 Ward per second per Active Maelstrom"]={{[1]={[1]={skillName="Maelstrom",type="SkillName"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=1}},"  per Active  "}
@@ -2237,7 +2237,7 @@ c["+10% More Movespeed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type
 c["+10% Movespeed"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=10}},nil}
 c["+10% Movespeed after Traversal"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=10}},"  after Traversal "}
 c["+10% Movespeed at Max Stacks"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=10}},"  at Max Stacks "}
-c["+10% Movespeed while Channeling"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=10}},"  while Channeling "}
+c["+10% Movespeed while Channeling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=10}},nil}
 c["+10% Movespeed with 5 stacks"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=10}},"  with 5 stacks "}
 c["+10% Movespeed with Dagger"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=10}},"  with Dagger "}
 c["+10% Multishot Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_RogueMultishot",type="BASE",value=10}},nil}
@@ -7166,7 +7166,7 @@ c["+5% Melee Leech on Low Health"]={{[1]={flags=0,keywordFlags=512,name="Life",t
 c["+5% Minion Elemental Resistance"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=5}}},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=5}}},[3]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=5}}}},nil}
 c["+5% Minion Melee Critical Strike Chance"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=512,name="CritChance",type="BASE",value=5}}}},nil}
 c["+5% Movespeed While Rampaging"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=5}},"  While Rampaging "}
-c["+5% Movespeed while Channeling"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=5}},"  while Channeling "}
+c["+5% Movespeed while Channeling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=5}},nil}
 c["+5% Necrotic Health Leech"]={{[1]={flags=0,keywordFlags=32,name="Life",type="BASE",value=5}},"   Leech "}
 c["+5% Necrotic Penetration"]={{[1]={flags=0,keywordFlags=0,name="NecroticPenetration",type="BASE",value=5}},nil}
 c["+5% Necrotic Resistance"]={{[1]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=5}},nil}
@@ -7281,7 +7281,7 @@ c["+50% Damage, Doubled if Directly Used"]={{[1]={flags=0,keywordFlags=0,name="D
 c["+50% Detonations Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=50}}," Detonations  "}
 c["+50% Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=50}},nil}
 c["+50% Explosive Trap Area"]={{[1]={[1]={skillName="Explosive Trap",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=50}},nil}
-c["+50% Fester Stack Gain Rate while Channeling"]={{}," Fester Stack Gain Rate while Channeling "}
+c["+50% Fester Stack Gain Rate while Channeling"]={{}," Fester Stack Gain Rate  "}
 c["+50% Fire Burst Area While Active"]={{[1]={flags=0,keywordFlags=8,name="AreaOfEffect",type="BASE",value=50}},"  Burst  While Active "}
 c["+50% Fire Res Shred Chance Per Second"]={{},"  Res Shred Chance Per Second "}
 c["+50% First Strike Ignite Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=50}}," First Strike  "}
@@ -8239,7 +8239,7 @@ c["+73 Spell Necrotic Damage"]={{[1]={flags=0,keywordFlags=256,name="NecroticDam
 c["+73 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=73}},nil}
 c["+73 Ward gained when you use Shift"]={{[1]={[1]={skillName="Shift",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=73}},"  gained when you use  "}
 c["+73 Ward per Second for you or your allies while standing on your Glyph of Dominion"]={{[1]={[1]={skillName="Glyph of Dominion",type="SkillName"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=73}},"  for you or your allies while standing on your  "}
-c["+73 Ward per Second while channeling Ghostflame"]={{[1]={[1]={skillName="Ghostflame",type="SkillName"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=73}},"  while channeling  "}
+c["+73 Ward per Second while channeling Ghostflame"]={{[1]={[1]={type="Condition",var="Channelling"},[2]={skillName="Ghostflame",type="SkillName"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=73}},nil}
 c["+73% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=73}},nil}
 c["+73% Chance to Slow on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=73}},"  on   "}
 c["+73% Chance to inflict Bleed on Bow Hit"]={{}," to inflict  on   "}
@@ -8901,7 +8901,7 @@ c["-20% Duration (seconds)"]={{[1]={flags=0,keywordFlags=0,name="Duration",type=
 c["-20% Hit Damage"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=-20}},nil}
 c["-20% Mana Arc Mana Consumption"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=-20}},"  Arc Mana Consumption "}
 c["-20% Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="BASE",value=-20}},nil}
-c["-20% Movespeed while Channeling"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=-20}},"  while Channeling "}
+c["-20% Movespeed while Channeling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=-20}},nil}
 c["-20% Projectile Range"]={{}," Projectile Range "}
 c["-20% Rampage Speed"]={{},"  Speed "}
 c["-20% Range"]={{}," Range "}
@@ -9042,7 +9042,7 @@ c["-6% Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=-6}
 c["-6% Bonus Damage from Crits with a Catalyst"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=-6}}," Bonus  from Crits with a Catalyst "}
 c["-6% Crowstorm Cooldown Length"]={{}," Crowstorm Cooldown Length "}
 c["-6% Damage Taken"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="BASE",value=-6}},nil}
-c["-6% Damage Taken while channeling"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="BASE",value=-6}},"  while channeling "}
+c["-6% Damage Taken while channeling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="DamageTaken",type="BASE",value=-6}},nil}
 c["-6% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=-6}},nil}
 c["-6% Radius"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=-6}},nil}
 c["-6% Target Area per stack"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=-6}}," Target  per stack "}
@@ -9900,7 +9900,7 @@ c["100% Critical Chance Below Half Health"]={{[1]={flags=0,keywordFlags=0,name="
 c["100% Critical Multiplier"]={{[1]={flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=100}},nil}
 c["100% Disabled Mana Regen"]={{[1]={flags=0,keywordFlags=0,name="ManaRegen",type="BASE",value=100}}," Disabled  "}
 c["100% Dodge Rating -> Armor"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=100}},"  -> Armor "}
-c["100% Dodge Rating -> Armor while Channeling"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=100}},"  -> Armor while Channeling "}
+c["100% Dodge Rating -> Armor while Channeling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=100}},"  -> Armor  "}
 c["100% Elemental Nova Mana Consumption"]={{[1]={[1]={skillName="Elemental Nova",type="SkillName"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=100}},"   Consumption "}
 c["100% Elemental Nova is now cast at the target location"]={{},"  is now cast at the target location "}
 c["100% Evade is replaced by Spirit Step"]={{}," Evade is replaced by  "}
@@ -10517,7 +10517,7 @@ c["14% Chance to gain Dusk Shroud when Hit"]={nil,"Dusk Shroud when Hit "}
 c["14% Chance to gain Haste for 1 second on Hit"]={nil,"Haste for 1 second on Hit "}
 c["14% Chance to inflict Damned on Hit with Hungering Souls per Active Wandering Spirit"]={{}," to inflict   with Hungering Souls per Active Wandering Spirit "}
 c["14% Chance to summon a Storm Totem on hit with Tempest Strike"]={{}," to summon a Storm Totem  with  "}
-c["14% Current Mana -> Ward Gain while Channeling"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=14}}," Current  -> Ward Gain while Channeling "}
+c["14% Current Mana -> Ward Gain while Channeling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=14}}," Current  -> Ward Gain  "}
 c["14% Elemental Nova Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_ElementalNova",type="BASE",value=14}},nil}
 c["14% Increased Area for Infernal Shade per Active Dread Shade"]={{[1]={[1]={skillName="Infernal Shade",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=14}},"  for  per Active Dread Shade "}
 c["14% Increased Area with Dancing Strikes"]={{[1]={[1]={skillName="Dancing Strikes",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=14}},"  with  "}
@@ -11401,7 +11401,7 @@ c["2% Increased Throwing Attack Speed"]={{[1]={flags=3584,keywordFlags=1024,name
 c["2% Increased movement speed with Concentration"]={{[1]={flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=2}},"  with Concentration "}
 c["2% Kill Threshold"]={{}," Kill Threshold "}
 c["2% Less Damage Taken Per Curse On Target"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="MORE",value=-2}},"  Per Curse On Target "}
-c["2% Less Damage Taken while Channeling"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="MORE",value=-2}},"  while Channeling "}
+c["2% Less Damage Taken while Channeling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="DamageTaken",type="MORE",value=-2}},nil}
 c["2% Less Poison Damage Taken"]={{[1]={flags=0,keywordFlags=0,name="PoisonDamageTaken",type="MORE",value=-2}},nil}
 c["2% Melee Kill Threshold"]={{},"  Kill Threshold "}
 c["2% Minimum percentage of health to gain when a nearby enemy or ally dies (2 second cooldown)"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=2}}," Minimum percentage of  to gain when a nearby enemy or ally dies  "}
@@ -11410,7 +11410,7 @@ c["2% Minion Increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="Mini
 c["2% More Damage Per Slow"]={{[1]={[1]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=2}},"  Per  "}
 c["2% More Damage With An Axe"]={{[1]={[1]={type="Condition",var="UsingAxe"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=2}},nil}
 c["2% More Damage per Mana Consumed"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=2}},"  per Mana Consumed "}
-c["2% More Damage to Damned while Channeling"]={{[1]={[1]={skillName="Damned",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=2}},"  to  while Channeling "}
+c["2% More Damage to Damned while Channeling"]={{[1]={[1]={type="Condition",var="Channelling"},[2]={skillName="Damned",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=2}},"  to   "}
 c["2% More Damage with Concentration"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=2}},"  with Concentration "}
 c["2% More Void Damage"]={{[1]={flags=0,keywordFlags=0,name="VoidDamage",type="MORE",value=2}},nil}
 c["2% More Witchfire Damage per Ignite chance"]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="FireDamage",type="MORE",value=2}}," Witch per  chance "}
@@ -11964,7 +11964,7 @@ c["24% of Remaining Volcanic Orb Cooldown Recovered when you use a Melee Attack 
 c["24% reduced Duration of Stuns Received"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-24}},"  of Stuns Received "}
 c["240% increased Melee Physical Damage"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDamage",type="INC",value=240}},nil}
 c["243% increased Damage Over Time"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="INC",value=243}},nil}
-c["25 Armor while Channeling per Rune"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=25}},"  while Channeling per Rune "}
+c["25 Armor while Channeling per Rune"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="Armour",type="BASE",value=25}},"   per Rune "}
 c["25 Damage Reflected to Attackers"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=25}},"  Reflected to Attackers "}
 c["25 Healing Per Second"]={{},"  Per Second "}
 c["25 Health Gain"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=25}},"  Gain "}
@@ -12061,7 +12061,7 @@ c["25% More Arming Time"]={{}," Arming Time "}
 c["25% More Crit Chance Against Ignited Enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Ignited"},flags=0,keywordFlags=0,name="CritChance",type="MORE",value=25}},nil}
 c["25% More Critcal Chance Against Ignited"]={{}," Critcal Chance Against d "}
 c["25% More Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=25}},nil}
-c["25% More Dodge Rating while Channeling"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="MORE",value=25}},"  while Channeling "}
+c["25% More Dodge Rating while Channeling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="Evasion",type="MORE",value=25}},nil}
 c["25% More Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="MORE",value=25}},nil}
 c["25% More Hit Damage Against Rares And Bosses"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=25}},"   Against Rares And Bosses "}
 c["25% Physical Shred Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_PhysicalResistanceShred",type="BASE",value=25}},nil}
@@ -12918,7 +12918,7 @@ c["35% Chance to summon a Storm Totem on hit with Tempest Strike"]={{}," to summ
 c["35% Coagulated Blood Orb Explosion Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=35}}," Coagulated Blood Orb Explosion  "}
 c["35% Coagulated Blood Orb Explosion Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=35}}," Coagulated Blood Orb Explosion  "}
 c["35% Endurance while channelling Warpath"]={{[1]={[1]={type="Condition",var="Channelling"},[2]={skillName="Warpath",type="SkillName"},flags=0,keywordFlags=0,name="Endurance",type="BASE",value=35}},nil}
-c["35% Faster Rune Gain while Channeling"]={{}," Rune Gain while Channeling "}
+c["35% Faster Rune Gain while Channeling"]={{}," Rune Gain  "}
 c["35% Increased Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=35}},nil}
 c["35% Increased Aspect of the Boar Duration"]={{[1]={[1]={skillName="Aspect of the Boar",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=35}},nil}
 c["35% Increased Bleed Duration"]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=35}},nil}
