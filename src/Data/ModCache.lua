@@ -1812,7 +1812,7 @@ c["+1% Chance to not consume a Potion on Potion use"]={{}," to not consume a Pot
 c["+1% Chance to repeat Bow Ability"]={{}," to repeat  Ability "}
 c["+1% Cold Pen Per 5% Uncapped Cold Res"]={{},"  Pen Per 5% Uncapped  Res "}
 c["+1% Cold Penetration Per 10% Overcapped Cold Res"]={{[1]={flags=0,keywordFlags=4,name="ColdPenetration",type="BASE",value=1}},"  Per 10% Overcapped  Res "}
-c["+1% Cold Penetration for Minions affected by Dread Shade per Intelligence"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={stat="Int",type="PerStat"},[2]={skillName="Dread Shade",type="SkillName"},flags=0,keywordFlags=0,name="ColdPenetration",type="BASE",value=1}}}},"  for s affected by   "}
+c["+1% Cold Penetration for Minions affected by Dread Shade per Intelligence"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={actor="parent",stat="Int",type="PerStat"},[2]={skillName="Dread Shade",type="SkillName"},flags=0,keywordFlags=0,name="ColdPenetration",type="BASE",value=1}}}},"  for s affected by   "}
 c["+1% Cooldown Recovery Speed per 6 Intelligence"]={{[1]={[1]={div=6,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=1}},nil}
 c["+1% Crit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=1}},nil}
 c["+1% Crit Chance Per 15 Intelligence"]={{[1]={[1]={div=15,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="CritChance",type="BASE",value=1}},nil}
@@ -1929,7 +1929,7 @@ c["+1% Runic Invocation Crit Chance per stack"]={{[1]={[1]={skillName="Runic Inv
 c["+1% Serpent Venom Damage Per Frostbite Stack"]={{[1]={[1]={skillName="Serpent Venom",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=1}},"   Per Frostbite Stack "}
 c["+1% Serpent Venom Damage Per Poison"]={{[1]={[1]={skillName="Serpent Venom",type="SkillName"},flags=0,keywordFlags=64,name="Damage",type="MORE",value=1}},"   Per  "}
 c["+1% Shadow Falcon Damage Per Umbral Blade"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=1}}," Shadow Falcon  Per Umbral Blade "}
-c["+1% Shared Critical Multiplier per 2 Dexterity"]={{[1]={[1]={div=2,stat="Dex",type="PerStat"},flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={div=2,stat="Dex",type="PerStat"},flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=1}}}},nil}
+c["+1% Shared Critical Multiplier per 2 Dexterity"]={{[1]={[1]={div=2,stat="Dex",type="PerStat"},flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=1},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={actor="parent",div=2,stat="Dex",type="PerStat"},flags=0,keywordFlags=0,name="CritMultiplier",type="BASE",value=1}}}},nil}
 c["+1% Shock Chance per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=1}},nil}
 c["+1% Throwing Crit Chance Per 5 Dexterity"]={{[1]={[1]={div=5,stat="Dex",type="PerStat"},flags=0,keywordFlags=1024,name="CritChance",type="BASE",value=1}},nil}
 c["+1% Ward Retention per 1% Increased Area"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type="BASE",value=1}},"  per 1% Increased Area "}
@@ -4219,7 +4219,7 @@ c["+2% Roots Health Leech"]={{[1]={[1]={skillName="Root",type="SkillName"},flags
 c["+2% Second Strike Leech"]={{}," Second Strike Leech "}
 c["+2% Serpent Venom Damage per Melee Crit Chance"]={{[1]={[1]={skillName="Serpent Venom",type="SkillName"},flags=0,keywordFlags=512,name="Damage",type="MORE",value=2}},"   per  Crit Chance "}
 c["+2% Serpent Venom Damage per Vitality"]={{[1]={[1]={stat="Vit",type="PerStat"},[2]={skillName="Serpent Venom",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="MORE",value=2}},nil}
-c["+2% Shared Spell Lightning Penetration Per 5 Attunement"]={{[1]={[1]={div=5,stat="Att",type="PerStat"},flags=0,keywordFlags=256,name="LightningPenetration",type="BASE",value=2},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={div=5,stat="Att",type="PerStat"},flags=0,keywordFlags=256,name="LightningPenetration",type="BASE",value=2}}}},nil}
+c["+2% Shared Spell Lightning Penetration Per 5 Attunement"]={{[1]={[1]={div=5,stat="Att",type="PerStat"},flags=0,keywordFlags=256,name="LightningPenetration",type="BASE",value=2},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={actor="parent",div=5,stat="Att",type="PerStat"},flags=0,keywordFlags=256,name="LightningPenetration",type="BASE",value=2}}}},nil}
 c["+2% Slow Duration Per Dexterity"]={{[1]={[1]={stat="Dex",type="PerStat"},[2]={skillName="Slow",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="MORE",value=2}},nil}
 c["+2% Smite Base Crit Chance"]={{[1]={[1]={skillName="Smite",type="SkillName"},flags=0,keywordFlags=0,name="CritChance",type="BASE",value=2}},"  Base  "}
 c["+2% Spell Health Leech"]={{[1]={flags=0,keywordFlags=256,name="Life",type="BASE",value=2}},"   Leech "}
@@ -9446,8 +9446,8 @@ c["1% Melee Damage Leeched as Health"]={{[1]={flags=0,keywordFlags=512,name="Dam
 c["1% Melee Damage per Bleed"]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=512,name="Damage",type="MORE",value=1}},"   per  "}
 c["1% Melee Elemental Damage Per 2% Missing Mana"]={{[1]={flags=0,keywordFlags=512,name="FireDamage",type="MORE",value=1},[2]={flags=0,keywordFlags=512,name="ColdDamage",type="MORE",value=1},[3]={flags=0,keywordFlags=512,name="LightningDamage",type="MORE",value=1}},"   Per 2% Missing Mana "}
 c["1% Minion Damage Leeched As Health"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Damage",type="MORE",value=1}}}},"   Leeched As Health "}
-c["1% Minion Increased Crit Chance Per Intelligence"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=1}}}},nil}
-c["1% Minion More Damage Over Time Per Vitality"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={stat="Vit",type="PerStat"},flags=4096,keywordFlags=0,name="Damage",type="MORE",value=1}}}},nil}
+c["1% Minion Increased Crit Chance Per Intelligence"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={actor="parent",stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=1}}}},nil}
+c["1% Minion More Damage Over Time Per Vitality"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={actor="parent",stat="Vit",type="PerStat"},flags=4096,keywordFlags=0,name="Damage",type="MORE",value=1}}}},nil}
 c["1% Minion Penetration Per 5% Overcapped Resistance"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Penetration",type="BASE",value=1}}}},"   Per 5% Overcapped Resistance "}
 c["1% Missing Health Gained As Ward Per Second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=1}}," Missing  Gained As Ward Per Second "}
 c["1% More Bleed Damage per 10 Poisons on Enemy, up to 20%"]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=64,name="Damage",type="MORE",value=1}},"   per 10 s on Enemy, up to 20% "}
@@ -11388,7 +11388,7 @@ c["2% Increased Mana Regen per Rah Rune"]={{[1]={flags=0,keywordFlags=0,name="Ma
 c["2% Increased Mana regeneration while you control a minion"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=2}}}}," eration while you control a  "}
 c["2% Increased Melee Attack Speed"]={{[1]={flags=3584,keywordFlags=512,name="Speed",type="INC",value=2}},nil}
 c["2% Increased Melee Damage per Strength"]={{[1]={[1]={stat="Str",type="PerStat"},flags=0,keywordFlags=512,name="Damage",type="INC",value=2}},nil}
-c["2% Increased Minion Armor Per Intelligence"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Armour",type="INC",value=2}}}},nil}
+c["2% Increased Minion Armor Per Intelligence"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={actor="parent",stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Armour",type="INC",value=2}}}},nil}
 c["2% Increased Minion Attack Speed"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=3584,keywordFlags=0,name="Speed",type="INC",value=2}}}},nil}
 c["2% Increased Minion Cast Speed"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=256,keywordFlags=0,name="Speed",type="INC",value=2}}}},nil}
 c["2% Increased Movement Speed With A Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="MovementSpeed",type="INC",value=2}},nil}
@@ -13284,7 +13284,7 @@ c["4% Increased Melee Attack Speed"]={{[1]={flags=3584,keywordFlags=512,name="Sp
 c["4% Increased Minion Attack Speed"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=3584,keywordFlags=0,name="Speed",type="INC",value=4}}}},nil}
 c["4% Increased Minion Cast Speed"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=256,keywordFlags=0,name="Speed",type="INC",value=4}}}},nil}
 c["4% Increased Minion Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Damage",type="INC",value=4}}}},nil}
-c["4% Increased Minion Health Per Vitality"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={stat="Vit",type="PerStat"},flags=0,keywordFlags=0,name="Life",type="INC",value=4}}}},nil}
+c["4% Increased Minion Health Per Vitality"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={actor="parent",stat="Vit",type="PerStat"},flags=0,keywordFlags=0,name="Life",type="INC",value=4}}}},nil}
 c["4% Increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalDamage",type="INC",value=4}},nil}
 c["4% Increased Poison Duration "]={{[1]={[1]={skillName="Poison",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=4}},nil}
 c["4% Increased Shock Duration "]={{[1]={[1]={skillName="Shock",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=4}},nil}

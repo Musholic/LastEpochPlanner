@@ -598,6 +598,7 @@ local function parseMod(line, order)
 			local newModList = { }
 			for i, effectMod in ipairs(modList) do
 				local tagList = { }
+				local modTagList = copyTable(effectMod)
 				if misc.playerTag then t_insert(tagList, misc.playerTag) end
 				if misc.addToMinionTag then t_insert(tagList, misc.addToMinionTag) end
 				if misc.playerTagList then
@@ -605,7 +606,13 @@ local function parseMod(line, order)
 						t_insert(tagList, tag)
 					end
 				end
-				local newMod = mod("MinionModifier", "LIST", { mod = effectMod }, unpack(tagList))
+				-- Until proven otherwise, "PerStat" mods are always relative to the player
+				for _, tag in ipairs(modTagList) do
+					if tag.type == "PerStat" then
+						tag.actor = "parent"
+					end
+				end
+				local newMod = mod("MinionModifier", "LIST", { mod = modTagList }, unpack(tagList))
 				t_insert(newModList, newMod)
 			end
 			if misc.shared then
