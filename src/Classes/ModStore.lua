@@ -199,9 +199,9 @@ function ModStoreClass:Max(cfg, ...)
 		local val = self:EvalMod(value.mod, cfg)
 		if val > (max or 0) then
 			max = val
-		end	
+		end
 	end
-	return max		
+	return max
 end
 
 ---HasMod
@@ -290,6 +290,13 @@ function ModStoreClass:EvalMod(mod, cfg)
 				end
 			else
 				base = target:GetMultiplier(tag.var, cfg)
+			end
+			local threshold = tag.threshold
+			if threshold then
+				if base < threshold then
+					return
+				end
+				base = base - threshold
 			end
 			local mult = m_floor(base / (tag.div or 1) + 0.0001)
 			local limitTotal
@@ -380,7 +387,7 @@ function ModStoreClass:EvalMod(mod, cfg)
 					limitTotal = limit
 				else
 					mult = m_min(mult, limit)
-				end 
+				end
 			end
 			if type(value) == "table" then
 				value = copyTable(value)
@@ -426,7 +433,7 @@ function ModStoreClass:EvalMod(mod, cfg)
 					limitTotal = limit
 				else
 					mult = m_min(mult, limit)
-				end 
+				end
 			end
 			if type(value) == "table" then
 				value = copyTable(value)
@@ -640,7 +647,7 @@ function ModStoreClass:EvalMod(mod, cfg)
 					end
 					return false
 				end
-				
+
 				local match = {}
 				if tag.slotName then
 					match["slotName"] = (tag.slotName == cfg.slotName) or false
@@ -801,6 +808,6 @@ function ModStoreClass:EvalMod(mod, cfg)
 				return
 			end
 		end
-	end	
+	end
 	return value
 end

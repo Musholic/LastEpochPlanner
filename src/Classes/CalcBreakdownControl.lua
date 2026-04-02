@@ -444,6 +444,9 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 				elseif tag.type == "Multiplier" then
 					local base = tag.base and (self:FormatModBase(row.mod, tag.base).." + "..math.abs(row.mod.value).." ") or baseVal
 					desc = base.."per "..(tag.div and (tag.div.." ") or "")..self:FormatVarNameOrList(tag.var, tag.varList)
+					if tag.threshold then
+						desc = desc .. " above "..tag.threshold
+					end
 					baseVal = ""
 				elseif tag.type == "PerStat" then
 					local base = tag.base and (self:FormatModBase(row.mod, tag.base).." + "..math.abs(row.mod.value).." ") or baseVal
