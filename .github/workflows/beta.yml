@@ -1,17 +1,17 @@
 name: Push beta branch
-on: 
+on:
   workflow_run:
     workflows: ["Run Tests"]
     branches: [dev]
     types: [completed]
   push:
     tags:
-      - v** 
+      - v**
   workflow_dispatch:
 jobs:
   push-beta:
     runs-on: ubuntu-22.04
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'push' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Set line endings
         run: git config --global core.autocrlf true
