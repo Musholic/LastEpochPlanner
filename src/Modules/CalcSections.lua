@@ -309,6 +309,10 @@ return {
 } }
 } },
 { 1, "MiscEffects", 1, colorCodes.OFFENCE, {{ defaultCollapsed = false, label = "Other Effects", data = {
+	{ label = "Stun Avoidance", { format = "{0:output:StunAvoidance}",
+		{ breakdown = "StunAvoidance" },
+		{ modName = "StunAvoidance" },
+	}, },
 	{ label = "Stun Threshold", flag = "hit", notFlag = "attack", { format = "x {2:output:EnemyStunThresholdMod}", { modName = "EnemyStunThreshold", cfg = "skill" }, }, },
 	{ label = "Stun Duration", flag = "hit", notFlag = "attack", { format = "{2:output:EnemyStunDuration}s",
 		{ breakdown = "EnemyStunDuration" },
@@ -341,6 +345,7 @@ return {
 	{ label = "Total Increased", { format = "{0:mod:1}%", { modName = "Life", modType = "INC", }, }, },
 	{ label = "Total More", { format = "{0:mod:1}%", { modName = "Life", modType = "MORE", }, }, },
 	{ label = "Total", { format = "{0:output:Life}", { breakdown = "Life" }, }, },
+	{ label = "Healing Eff.", { format = "{0:output:HealingEffectiveness}%", { modName = "HealingEffectiveness" }, }, },
 	{ label = "Recovery", { format = "{1:output:LifeRegenRecovery} ({1:output:LifeRegenPercent}%)",
 		{ breakdown = "LifeRegenRecovery" },
 		{ label = "Sources", modName = { "LifeRegen", "LifeRegenPercent", "LifeDegen", "LifeDegenPercent", "LifeRecovery" }, modType = "BASE" },
@@ -411,6 +416,10 @@ return {
 		{ breakdown = "BlockChance" },
 		{ modName = "BlockChance" },
 	}, },
+	{ label = "Block Effectiveness", { format = "{0:output:BlockEffectiveness}",
+		{ breakdown = "BlockEffectiveness" },
+		{ modName = "BlockEffectiveness" },
+	}, },
 	{ label = "Taken From Block", haveOutput = "ShowBlockEffect", { format = "{0:output:DamageTakenOnBlock}%",
 		{ breakdown = "BlockEffect" },
 		{ modName = { "BlockEffect" }, },
@@ -429,6 +438,16 @@ return {
 { 1, "MiscDefences", 3, colorCodes.DEFENCE, {{ defaultCollapsed = false, label = "Other Defences", data = {
 	{ label = "Movement Speed", { format = "x {2:output:EffectiveMovementSpeedMod}", { breakdown = "EffectiveMovementSpeedMod" }, { modName = { "MovementSpeed", "MovementSpeedEqualHighestLinkedPlayers" } }, }, },
 } },
+} },
+-- misc others
+{ 1, "MiscOthers", 3, colorCodes.DEFENCE, {{ defaultCollapsed = false, label = "Others", data =  generateTableByValues({ label = "Skill Levels"},
+		data.treeSkills, function (_,skillId)
+    		return { label = data.skills[skillId].name .. " Level", haveOutput = skillId .. "Level", { format = "{0:output:" .. skillId .. "Level}",
+    			{ breakdown = skillId .. "Level" },
+    			{ modName = skillId .. "Level" } } }
+		end
+	),
+},
 } },
 -- damage taken
 { 3, "DamageTaken", 1, colorCodes.DEFENCE, {{ defaultCollapsed = false, label = "Damage Taken", data = {

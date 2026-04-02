@@ -1124,12 +1124,24 @@ function calcs.perform(env, fullDPSSkipEHP)
 	end
 
 	-- Defence/offence calculations
-	for _, stat in ipairs({"WardRetention", "Endurance", "EnduranceThreshold", "WardPerSecond", "WardDecayThreshold"}) do
+	for _, stat in ipairs({"WardRetention", "Endurance", "EnduranceThreshold", "WardPerSecond", "WardDecayThreshold", "BlockEffectiveness", "StunAvoidance", "HealingEffectiveness"}) do
 		output[stat] = round(calcLib.val(modDB, stat))
 		if breakdown then
 			breakdown[stat] = breakdown.simple(nil, nil, output[stat], stat)
 		end
 	end
+
+	-- Skill levels
+	for _, skillId in ipairs(data.treeSkills) do
+		local value = calcLib.val(modDB, skillId .. "Level")
+		if value > 0 then
+			output[skillId .. "Level"] = value
+			if breakdown then
+				breakdown[skillId .. "Level"] = breakdown.simple(nil, nil, output[skillId .. "Level"], skillId .. "Level")
+			end
+		end
+	end
+
 	calcs.defence(env, env.player)
 	if not fullDPSSkipEHP then
 		calcs.buildDefenceEstimations(env, env.player)

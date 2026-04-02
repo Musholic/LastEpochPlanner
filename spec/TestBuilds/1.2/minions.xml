@@ -43,6 +43,7 @@
 		<PlayerStat stat="Spec:ArmourInc" value="0"></PlayerStat>
 		<PlayerStat stat="PhysicalDamageReduction" value="25.946966148514"></PlayerStat>
 		<PlayerStat stat="BlockChance" value="0"></PlayerStat>
+		<PlayerStat stat="BlockEffectiveness" value="0"></PlayerStat>
 		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
@@ -84,6 +85,7 @@
 		<Section collapsed="false" id="DamageAvoidance" subsection="Block"></Section>
 		<Section collapsed="false" id="DamageAvoidance" subsection="Dodge"></Section>
 		<Section collapsed="false" id="MiscDefences" subsection="OtherDefences"></Section>
+		<Section collapsed="false" id="MiscOthers" subsection="Others"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="DamageTaken"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="DamagingHits"></Section>
 		<Section collapsed="false" id="DamageTaken" subsection="EffectiveHealthPool"></Section>

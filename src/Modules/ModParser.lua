@@ -60,6 +60,7 @@ local modNameList = {
 	["health"] = "Life",
 	["health regen"] = "LifeRegen",
 	["health regeneration"] = "LifeRegen",
+	["healing effectiveness"] = "HealingEffectiveness",
 	["maximum health"] = "Life",
 	["mana"] = "Mana",
 	["maximum mana"] = "Mana",
@@ -86,6 +87,7 @@ local modNameList = {
 	["elemental damage taken over time"] = "ElementalDamageTakenOverTime",
 	-- Other defences
 	["block chance"] = "BlockChance",
+	["block effectiveness"] = "BlockEffectiveness",
 	["health gained on block"] = "LifeOnBlock",
 	["health gain on block"] = "LifeOnBlock",
 	["mana gained on block"] = "ManaOnBlock",
@@ -95,6 +97,7 @@ local modNameList = {
 	-- Stun/knockback modifiers
 	["stun duration on you"] = "StunDuration",
 	["stun duration"] = "EnemyStunDuration",
+	["stun avoidance"] = "StunAvoidance",
 	["knockback distance"] = "EnemyKnockbackDistance",
 	-- Auras/curses/buffs
 	["buff effect"] = "BuffEffect",
@@ -126,6 +129,7 @@ local modNameList = {
 	["area"] = "AreaOfEffect",
 	["area of effect"] = "AreaOfEffect",
 	["duration"] = "Duration",
+	["active duration"] = "Duration",
 	["cooldown duration"] = "CooldownRecovery",
 	["cooldown recovery"] = "CooldownRecovery",
 	["cooldown recovery speed"] = "CooldownRecovery",
@@ -164,6 +168,12 @@ for skillId, skill in pairs(data.skills) do
         modNameList[skill.altName:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
       end
       modNameList["to cast " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
+      if skill.baseFlags.ailment then
+        modNameList["to apply " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
+        modNameList["to inflict " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
+      end
+      modNameList[skill.name:lower() .. " stacks"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit, mult = 100}
+      modNameList[skill.name:lower() .. " stacks applied"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit, mult = 100}
     end
 end
 
@@ -206,6 +216,7 @@ end
 
 for _, damageSourceType in ipairs(DamageSourceTypes) do
 	modFlagList[damageSourceType:lower()] = { keywordFlags = ModFlag[damageSourceType] }
+	modFlagList["with " .. damageSourceType:lower() .. " attacks"] = { keywordFlags = ModFlag[damageSourceType], flags = ModFlag.Hit }
 end
 
 for _, damageType in ipairs(DamageTypes) do
@@ -234,7 +245,7 @@ local modTagList = {
 	["while wielding a two handed melee weapon"] = { tagList = { { type = "Condition", var = "UsingTwoHandedWeapon" }, { type = "Condition", var = "UsingMeleeWeapon" } } },
 	["while unarmed"] = { tag = { type = "Condition", var = "Unarmed" } },
 	["while moving"] = { tag = { type = "Condition", var = "Moving" } },
-	["while channelling"] = { tag = { type = "Condition", var = "Channelling" } },
+	["while channell?ing"] = { tag = { type = "Condition", var = "Channelling" } },
 	["while leeching"] = { tag = { type = "Condition", var = "Leeching" } },
 	["while frozen"] = { tag = { type = "Condition", var = "Frozen" } },
 	["while cursed"] = { tag = { type = "Condition", var = "Cursed" } },
@@ -263,8 +274,10 @@ local modTagList = {
 
 for i,stat in ipairs(LongAttributes) do
 	modTagList["per " .. stat:lower()] = { tag = { type = "PerStat", stat = Attributes[i] } }
+	modTagList["per point of " .. stat:lower()] = { tag = { type = "PerStat", stat = Attributes[i] } }
 	modTagList["per player " .. stat:lower()] = { tag = { type = "PerStat", stat = Attributes[i], actor = "parent" } }
 	modTagList["per (%d+) " .. stat:lower()] = function(num) return { tag = { type = "PerStat", stat = Attributes[i], div = num } } end
+	modTagList["per (%d+) " .. Attributes[i]:lower()] = function(num) return { tag = { type = "PerStat", stat = Attributes[i], div = num } } end
 	modTagList["w?h?i[lf]e? you have at least (%d+) " .. stat:lower()] = function(num) return { tag = { type = "StatThreshold", stat = Attributes[i], threshold = num } } end
 end
 for _, weapon in ipairs(DamageSourceWeapons) do
@@ -297,7 +310,8 @@ local specialQuickFixModList = {
 	["^([%+%-]?[%d%.]+%%) Cast Speed"] = "%1 increased Cast Speed",
 	["^([%+%-]?[%d%.]+%%) Cooldown Recovery Speed"] = "%1 increased Cooldown Recovery Speed",
 	["^([%+%-]?[%d%.]+%%) Duration"] = "%1 increased Duration",
-	["^([%+%-]?[%d%.]+%%) Movespeed"] = "%1 increased Movespeed"
+	["^([%+%-]?[%d%.]+%%) Movespeed"] = "%1 increased Movespeed",
+	["Duration %(S?s?econds%)"] = "Duration"
 }
 
 for _, damageType in ipairs(DamageTypes) do
@@ -314,6 +328,11 @@ local specialModList = {
 	-- The actual text that they can hit the same target is in the flavour text, not mods, so we detect it via shurikens in line instead
 	["^ ?shurikens in line$"] = { flag("SequentialProjectiles", { type = "SkillName", skillName = "Shurikens" })},
 }
+
+for _, skillId in ipairs(data.treeSkills) do
+	local skill = data.skills[skillId]
+	specialModList["^+(%d+) to " .. skill.name:lower() .. "$"] = function (num) return { mod(skill.id .. "Level", "BASE", num) } end
+end
 
 -- Modifiers that are recognised but unsupported
 local unsupportedModList = {
@@ -350,6 +369,7 @@ local skillNameList = {
 
 for _, skill in pairs(data.skills) do
 	skillNameList[skill.name:lower()] = { tag = { type = "SkillName", skillName = skill.name } }
+	skillNameList["for " .. skill.name:lower()] = { tag = { type = "SkillName", skillName = skill.name } }
 end
 
 local preSkillNameList = { }
@@ -567,10 +587,14 @@ local function parseMod(line, order)
 	local nameList = modName
 	local modList = { }
 	for i, name in ipairs(type(nameList) == "table" and nameList or { nameList }) do
+		local value = type(modValue) == "table" and modValue[i] or modValue
+		if modName.mult then
+			value = value * modName.mult
+		end
 		modList[i] = {
 			name = name .. (modSuffix or misc.modSuffix or ""),
 			type = modType,
-			value = type(modValue) == "table" and modValue[i] or modValue,
+			value = value,
 			flags = flags,
 			keywordFlags = bor(type(keywordFlags) == "table" and keywordFlags[i] or 0, baseKeywordFlags),
 			unpack(tagList)

@@ -224,7 +224,7 @@ function convertUTF8to16(text, offset)
 			else
 				t_insert(out, "?\z")
 			end
-		else 
+		else
 			t_insert(out, "?\z")
 		end
 	end
@@ -539,7 +539,7 @@ function prettyPrintTable(tbl, pre, outFile)
 	pre = pre or ""
 	local outNames = { }
 	for name in pairs(tbl) do
-		t_insert(outNames, name)
+		t_insert(outNames, tostring(name))
 	end
 	table.sort(outNames)
 	for _, name in ipairs(outNames) do
