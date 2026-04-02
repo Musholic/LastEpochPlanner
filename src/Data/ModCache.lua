@@ -2330,7 +2330,7 @@ c["+100 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=100
 c["+100 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=100}},nil}
 c["+100 Minion Health Regen"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=100}}}},nil}
 c["+100 Spell Void Damage"]={{[1]={flags=0,keywordFlags=256,name="VoidDamage",type="BASE",value=100}},nil}
-c["+100 Stun Avoidance"]={{}," Stun Aance "}
+c["+100 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=100}},nil}
 c["+100 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=100}},nil}
 c["+100 Ward Gain On Dodge"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=100}},"  Gain On Dodge "}
 c["+100% Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=100}},nil}
@@ -2493,7 +2493,7 @@ c["+105% Lightning Penetration with Electrify"]={{[1]={[1]={skillName="Electrify
 c["+105% Poison Penetration with Plague"]={{[1]={[1]={skillName="Plague",type="SkillName"},flags=0,keywordFlags=0,name="PoisonPenetration",type="BASE",value=105}},"  with  "}
 c["+106 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=106}},nil}
 c["+106 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=106}},nil}
-c["+106 Stun Avoidance"]={{}," Stun Aance "}
+c["+106 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=106}},nil}
 c["+106 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=106}},nil}
 c["+106% Armor Shred Chance for Locusts"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=106}},"  for Locusts "}
 c["+107 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=107}},nil}
@@ -2616,7 +2616,7 @@ c["+110 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThres
 c["+110 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=110}},nil}
 c["+110 Melee Necrotic Damage"]={{[1]={flags=0,keywordFlags=512,name="NecroticDamage",type="BASE",value=110}},nil}
 c["+110 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=110}}}},nil}
-c["+110 Stun Avoidance"]={{}," Stun Aance "}
+c["+110 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=110}},nil}
 c["+110 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=110}},nil}
 c["+110% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=110}},nil}
 c["+110% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=110}},nil}
@@ -2823,7 +2823,7 @@ c["+120 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffective
 c["+120 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=120}},nil}
 c["+120 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=120}},nil}
 c["+120 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=120}},nil}
-c["+120 Stun Avoidance"]={{}," Stun Aance "}
+c["+120 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=120}},nil}
 c["+120 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=120}},nil}
 c["+120% Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="BASE",value=120}},nil}
 c["+120% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=120}},nil}
@@ -2964,7 +2964,7 @@ c["+135 Armor for Totems"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BAS
 c["+135 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=135}},nil}
 c["+135 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=135}}}},nil}
 c["+135 Minion Health Regen"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="BASE",value=135}}}},nil}
-c["+135 Stun Avoidance"]={{}," Stun Aance "}
+c["+135 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=135}},nil}
 c["+135% Chance to Ignite on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=135}},nil}
 c["+135% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=135}},nil}
 c["+135% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=135}},nil}
@@ -2978,7 +2978,7 @@ c["+135% Necrotic Resistance"]={{[1]={flags=0,keywordFlags=0,name="NecroticResis
 c["+135% Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=135}},nil}
 c["+135% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=135}},nil}
 c["+135% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=135}},nil}
-c["+1350 Stun Avoidance"]={{}," Stun Aance "}
+c["+1350 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=1350}},nil}
 c["+136 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=136}},nil}
 c["+136 Armor per Rah Rune"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=136}},"  per Rah Rune "}
 c["+137 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=137}},nil}
@@ -3073,7 +3073,7 @@ c["+141 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=14
 c["+141 Armor for Totems"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=141}},"  for Totems "}
 c["+141 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=141}},nil}
 c["+141 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=141}},nil}
-c["+141 Stun Avoidance"]={{}," Stun Aance "}
+c["+141 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=141}},nil}
 c["+141 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=141}},nil}
 c["+142 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=142}},nil}
 c["+142 Dodge Rating While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=142}},nil}
@@ -3499,7 +3499,7 @@ c["+1601 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type
 c["+161% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+162 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=162}},nil}
 c["+1620 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=1620}},"  while using Evade "}
-c["+1620 Stun Avoidance"]={{}," Stun Aance "}
+c["+1620 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=1620}},nil}
 c["+163 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=163}},nil}
 c["+163% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+164 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=164}},nil}
@@ -3588,7 +3588,7 @@ c["+170 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThre
 c["+170% Chance to Ignite on Minion Hit"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=170}}}},"  on   "}
 c["+171 Endurance Threshold if you have not been Hit Recently"]={{[1]={[1]={neg=true,type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=171}},nil}
 c["+172 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=172}},nil}
-c["+173 Stun Avoidance"]={{}," Stun Aance "}
+c["+173 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=173}},nil}
 c["+175 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=175}},nil}
 c["+175 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=175}},nil}
 c["+175% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
@@ -3691,7 +3691,7 @@ c["+180% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+180% Physical Penetration with Shadow Daggers "]={{[1]={[1]={skillName="Shadow Daggers",type="SkillName"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=180}},"  with   "}
 c["+1800 Minion Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=1800}}}},nil}
 c["+181 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=181}},nil}
-c["+183 Stun Avoidance"]={{}," Stun Aance "}
+c["+183 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=183}},nil}
 c["+184 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=184}},nil}
 c["+185 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=185}},nil}
 c["+185% Chance for non-Critical Strikes to inflict Critical Vulnerability"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=185}}," for non-Critical Strikes  "}
@@ -3908,7 +3908,7 @@ c["+2 Spell Void Damage"]={{[1]={flags=0,keywordFlags=256,name="VoidDamage",type
 c["+2 Spell Void Damage per player Vitality"]={{[1]={[1]={actor="parent",stat="Vit",type="PerStat"},flags=0,keywordFlags=256,name="VoidDamage",type="BASE",value=2}},nil}
 c["+2 Strength"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=2}},nil}
 c["+2 Strength With 2h Weapon"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=2}},"  With 2h Weapon "}
-c["+2 Stun Avoidance Per 10 Missing Health"]={{[1]={flags=0,keywordFlags=16,name="Life",type="BASE",value=2}}," Stun Aance Per 10 Missing  "}
+c["+2 Stun Avoidance Per 10 Missing Health"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=2}},"  Per 10 Missing Health "}
 c["+2 Throwing Damage"]={{[1]={flags=0,keywordFlags=1024,name="Damage",type="BASE",value=2}},nil}
 c["+2 Throwing Fire Damage"]={{[1]={flags=0,keywordFlags=1024,name="FireDamage",type="BASE",value=2}},nil}
 c["+2 Throwing Physical Damage"]={{[1]={flags=0,keywordFlags=1024,name="PhysicalDamage",type="BASE",value=2}},nil}
@@ -4610,7 +4610,7 @@ c["+215 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=215}}
 c["+216 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=216}},nil}
 c["+216 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=216}},nil}
 c["+216 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=216}},nil}
-c["+216 Stun Avoidance"]={{}," Stun Aance "}
+c["+216 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=216}},nil}
 c["+216% Armor Shred Chance for Locusts"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=216}},"  for Locusts "}
 c["+216% Chance to Electrify on Lightning Hit"]={{[1]={flags=8388608,keywordFlags=2,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=216}},nil}
 c["+216% Chance to Inflict Bleed on Hit per equipped Sword"]={{[1]={[1]={type="Multiplier",var="SwordItem"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=216}},nil}
@@ -4667,10 +4667,10 @@ c["+22% chance to throw a Burning Dagger when you use a melee fire attack and hi
 c["+220 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=220}},nil}
 c["+220 Melee fire damage with next void melee attack every 2 seconds"]={{[1]={[1]={skillName="Melee Attack",type="SkillName"},flags=0,keywordFlags=528,name="FireDamage",type="BASE",value=220}},"   with next   every 2 seconds "}
 c["+220 Melee void damage with next fire melee attack every 2 seconds"]={{[1]={[1]={skillName="Melee Attack",type="SkillName"},flags=0,keywordFlags=520,name="VoidDamage",type="BASE",value=220}},"   with next   every 2 seconds "}
-c["+220 Stun Avoidance"]={{}," Stun Aance "}
+c["+220 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=220}},nil}
 c["+220% Ignite chance with next void melee attack every 2 seconds"]={{[1]={[1]={skillName="Melee Attack",type="SkillName"},flags=8388608,keywordFlags=16,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=220}},"  with next   every 2 seconds "}
 c["+220% Time Rot chance with next fire melee attack every 2 seconds"]={{[1]={[1]={skillName="Melee Attack",type="SkillName"},flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_TimeRot",type="BASE",value=220}},"  with next   every 2 seconds "}
-c["+222 Stun Avoidance"]={{}," Stun Aance "}
+c["+222 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=222}},nil}
 c["+223 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=223}},nil}
 c["+224 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=224}},nil}
 c["+225 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=225}},nil}
@@ -4792,7 +4792,7 @@ c["+24% Throwing Critical Strike Multiplier"]={{[1]={flags=0,keywordFlags=1024,n
 c["+240 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=240}},nil}
 c["+240 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=240}},nil}
 c["+240 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=240}},"  while using Evade "}
-c["+240 Stun Avoidance"]={{}," Stun Aance "}
+c["+240 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=240}},nil}
 c["+240 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=240}},nil}
 c["+241 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=241}}}},nil}
 c["+245 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=245}},nil}
@@ -5054,7 +5054,7 @@ c["+2520 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiv
 c["+255 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=255}},nil}
 c["+255 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=255}},nil}
 c["+255 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=255}},nil}
-c["+256 Stun Avoidance"]={{}," Stun Aance "}
+c["+256 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=256}},nil}
 c["+257 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=257}},nil}
 c["+26 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=26}},nil}
 c["+26 Attunement"]={{[1]={flags=0,keywordFlags=0,name="Att",type="BASE",value=26}},nil}
@@ -5161,7 +5161,7 @@ c["+27% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",typ
 c["+270 Armor per Rah Rune"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=270}},"  per Rah Rune "}
 c["+270 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=270}},nil}
 c["+270 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=270}},nil}
-c["+270 Stun Avoidance"]={{}," Stun Aance "}
+c["+270 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=270}},nil}
 c["+270 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=270}},nil}
 c["+270% Chance to Poison on Fire Hit"]={{[1]={flags=8388608,keywordFlags=8,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=270}},nil}
 c["+270% Chance to Poison on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="BASE",value=270}},nil}
@@ -5805,14 +5805,14 @@ c["+300 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=300
 c["+300 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=300}}}},nil}
 c["+300 Minion Armor (doubled for Locusts)"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=300}}}},"   (doubled for Locusts) "}
 c["+300 Minion Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=300}}}},nil}
-c["+300 Stun Avoidance Granted To Allies"]={{}," Stun Aance Granted To Allies "}
+c["+300 Stun Avoidance Granted To Allies"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=300}},"  Granted To Allies "}
 c["+300% Chance to Shred Armor on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=300}},nil}
 c["+300% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=300}},nil}
 c["+300% Guaranteed Stun -> Ignite Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=300}}," Guaranteed Stun ->  "}
 c["+300% Javelin Hit Damage"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=300}},nil}
 c["+300% Seconds of Damage Immunity After being Hit (15 second cooldown)"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=300}}," Seconds of  Immunity After being   "}
 c["+300% seconds of Haste and Frenzy for your minions when you gain Haste or refresh its duration"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="MORE",value=300}}}}," seconds of  and Frenzy for your s when you gain Haste or refresh its  "}
-c["+301 Stun Avoidance"]={{}," Stun Aance "}
+c["+301 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=301}},nil}
 c["+306 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=306}},nil}
 c["+306 Ward per Second for you or your allies while standing on your Glyph of Dominion"]={{[1]={[1]={skillName="Glyph of Dominion",type="SkillName"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=306}},"  for you or your allies while standing on your  "}
 c["+31 Curse Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=31}}," Curse   "}
@@ -5880,7 +5880,7 @@ c["+32% Pierce Chance with Fireball"]={{}," Pierce Chance with  "}
 c["+32% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=32},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=32},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=32},[4]={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=32},[5]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=32},[6]={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=32},[7]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=32}},nil}
 c["+32% to All Resistances While Channelling"]={{[1]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="FireResist",type="BASE",value=32},[2]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=32},[3]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=32},[4]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=32},[5]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=32},[6]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=32},[7]={[1]={type="Condition",var="Channelling"},flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=32}},nil}
 c["+324 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=324}},nil}
-c["+325 Stun Avoidance"]={{}," Stun Aance "}
+c["+325 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=325}},nil}
 c["+326 Armor for Totems"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=326}},"  for Totems "}
 c["+326 Minion Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=326}}}},nil}
 c["+329 Armor for Totems"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=329}},"  for Totems "}
@@ -5896,7 +5896,7 @@ c["+33 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",
 c["+33 Melee Necrotic Damage"]={{[1]={flags=0,keywordFlags=512,name="NecroticDamage",type="BASE",value=33}},nil}
 c["+33 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=33}},nil}
 c["+33 Spell Fire Damage"]={{[1]={flags=0,keywordFlags=256,name="FireDamage",type="BASE",value=33}},nil}
-c["+33 Stun Avoidance"]={{}," Stun Aance "}
+c["+33 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=33}},nil}
 c["+33 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=33}},nil}
 c["+33 Ward per Second for you or your allies while standing on your Glyph of Dominion"]={{[1]={[1]={skillName="Glyph of Dominion",type="SkillName"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=33}},"  for you or your allies while standing on your  "}
 c["+33% Chance to Blind on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Blind",type="BASE",value=33}},nil}
@@ -6005,7 +6005,7 @@ c["+35% Chance to Poison on Spell Hit"]={{[1]={flags=8388608,keywordFlags=256,na
 c["+35% Chance to Shock on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Shock",type="BASE",value=35}},nil}
 c["+35% Chance to gain Haste when you kill an enemy with a spell"]={nil,"Haste  with a spell "}
 c["+35% Chance to inflict Bleed on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2048,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=35}},"  on   "}
-c["+35% Chance to inflict Spirit Plague on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_SpiritPlague",type="BASE",value=35}},nil}
+c["+35% Chance to inflict Spirit Plague on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_SpiritPlague",type="BASE",value=35}},nil}
 c["+35% Cold Penetration with Frostbite "]={{[1]={[1]={skillName="Frostbite",type="SkillName"},flags=0,keywordFlags=0,name="ColdPenetration",type="BASE",value=35}},"  with   "}
 c["+35% Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=35}},nil}
 c["+35% Consecrated Ground Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=35}}," Consecrated Ground  "}
@@ -6049,7 +6049,7 @@ c["+35% physical and fire resistance"]={{[1]={flags=0,keywordFlags=0,name="Physi
 c["+350 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=350}},nil}
 c["+350% Freeze Rate Multiplier while at Low Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=350}}," Freeze Rate Multiplier while at Low  "}
 c["+351 Endurance Threshold if you have not been Hit Recently"]={{[1]={[1]={neg=true,type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=351}},nil}
-c["+351 Stun Avoidance"]={{}," Stun Aance "}
+c["+351 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=351}},nil}
 c["+351 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=351}},nil}
 c["+351% Freeze Rate Multiplier"]={{}," Freeze Rate Multiplier "}
 c["+358 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=358}},"  while using Evade "}
@@ -7013,7 +7013,7 @@ c["+5 Spell Void Damage"]={{[1]={flags=0,keywordFlags=256,name="VoidDamage",type
 c["+5 Static Charges"]={{},"  Charges "}
 c["+5 Static Charges Per Second"]={{},"  Charges Per Second "}
 c["+5 Strength"]={{[1]={flags=0,keywordFlags=0,name="Str",type="BASE",value=5}},nil}
-c["+5 Stun Avoidance Per Attunement"]={{}," Stun Aance  "}
+c["+5 Stun Avoidance Per Attunement"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=5}},nil}
 c["+5 Thorns per 1% Armor Mitigation"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=5}}," Thorns per 1%  Mitigation "}
 c["+5 Throwing Fire Damage"]={{[1]={flags=0,keywordFlags=1024,name="FireDamage",type="BASE",value=5}},nil}
 c["+5 Vitality"]={{[1]={flags=0,keywordFlags=0,name="Vit",type="BASE",value=5}},nil}
@@ -7224,7 +7224,7 @@ c["+50 Melee Void Damage"]={{[1]={flags=0,keywordFlags=512,name="VoidDamage",typ
 c["+50 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=50}}}},nil}
 c["+50 Minion Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=50}}}},nil}
 c["+50 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=50}},nil}
-c["+50 Stun Avoidance"]={{}," Stun Aance "}
+c["+50 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=50}},nil}
 c["+50 Ward Granted"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=50}},"  Granted "}
 c["+50 Ward per Second"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=50}},nil}
 c["+50 mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=50}},nil}
@@ -7361,7 +7361,7 @@ c["+50% Ward Retention"]={{[1]={flags=0,keywordFlags=0,name="WardRetention",type
 c["+50% elemental resistance while you control a totem"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=50},[2]={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=50},[3]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=50}},"  while you control a totem "}
 c["+50% to Minion All Resistances"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=50}}},[2]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LightningResist",type="BASE",value=50}}},[3]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=50}}},[4]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=50}}},[5]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=50}}},[6]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="NecroticResist",type="BASE",value=50}}},[7]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=50}}}},nil}
 c["+500 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=500}},nil}
-c["+500 Stun Avoidance"]={{}," Stun Aance "}
+c["+500 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=500}},nil}
 c["+500% Chance to apply Frostbite on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frostbite",type="BASE",value=500}},nil}
 c["+501 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=501}},nil}
 c["+51 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=51}},nil}
@@ -7408,7 +7408,7 @@ c["+53 Melee Necrotic Damage"]={{[1]={flags=0,keywordFlags=512,name="NecroticDam
 c["+53 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=53}},nil}
 c["+53 Spell Fire Damage"]={{[1]={flags=0,keywordFlags=256,name="FireDamage",type="BASE",value=53}},nil}
 c["+53 Spell Necrotic Damage"]={{[1]={flags=0,keywordFlags=256,name="NecroticDamage",type="BASE",value=53}},nil}
-c["+53 Stun Avoidance"]={{}," Stun Aance "}
+c["+53 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=53}},nil}
 c["+53 Ward gained per Rune consumed with Runic Invocation"]={{[1]={[1]={skillName="Runic Invocation",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=53}},"  gained per Rune consumed with  "}
 c["+53% Armor Shred Chance for Locusts"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=53}},"  for Locusts "}
 c["+53% Chance for non-Critical Strikes to inflict Critical Vulnerability"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=53}}," for non-Critical Strikes  "}
@@ -7442,7 +7442,7 @@ c["+54% to All Resistances"]={{[1]={flags=0,keywordFlags=0,name="FireResist",typ
 c["+540 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=540}},nil}
 c["+540 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=540}},nil}
 c["+540 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=540}}}},nil}
-c["+540 Stun Avoidance"]={{}," Stun Aance "}
+c["+540 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=540}},nil}
 c["+543 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=543}},nil}
 c["+55 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=55}},nil}
 c["+55 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=55}},nil}
@@ -7529,7 +7529,7 @@ c["+58 Melee Physical Damage"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDam
 c["+58 Melee Physical Damage if wielding a Mace"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDamage",type="BASE",value=58}},"   if wielding a Mace "}
 c["+58 Melee Void Damage"]={{[1]={flags=0,keywordFlags=512,name="VoidDamage",type="BASE",value=58}},nil}
 c["+58 Spell Physical Damage"]={{[1]={flags=0,keywordFlags=256,name="PhysicalDamage",type="BASE",value=58}},nil}
-c["+58 Stun Avoidance"]={{}," Stun Aance "}
+c["+58 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=58}},nil}
 c["+58 Throwing Damage"]={{[1]={flags=0,keywordFlags=1024,name="Damage",type="BASE",value=58}},nil}
 c["+58 Ward per Second per Gon Rune"]={{[1]={flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=58}},"  per Gon Rune "}
 c["+58% Ailment Chance per Rune with Grand Nova Prism"]={{}," Ailment Chance per Rune with Grand Nova Prism "}
@@ -7850,7 +7850,7 @@ c["+60 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",
 c["+60 Melee Fire Damage"]={{[1]={flags=0,keywordFlags=512,name="FireDamage",type="BASE",value=60}},nil}
 c["+60 Melee Physical Damage"]={{[1]={flags=0,keywordFlags=512,name="PhysicalDamage",type="BASE",value=60}},nil}
 c["+60 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=60}},nil}
-c["+60 Stun Avoidance"]={{}," Stun Aance "}
+c["+60 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=60}},nil}
 c["+60 Ward Burst after Flame Rush"]={{[1]={[1]={skillName="Flame Rush",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=60}},"  Burst after  "}
 c["+60% Chance for non-Critical Strikes to inflict Critical Vulnerability"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=60}}," for non-Critical Strikes  "}
 c["+60% Chance to Ignite on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=60}},nil}
@@ -7902,7 +7902,7 @@ c["+62 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=62}
 c["+62 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=62}},nil}
 c["+62 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=62}},nil}
 c["+625 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=625}},"  while using Evade "}
-c["+625 Stun Avoidance"]={{}," Stun Aance "}
+c["+625 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=625}},nil}
 c["+63 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=63}},nil}
 c["+63 Endurance Threshold against Shocked enemies"]={{[1]={[1]={actor="enemy",type="ActorCondition",var="Shocked"},flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=63}},nil}
 c["+63 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=63}},nil}
@@ -7964,7 +7964,7 @@ c["+65% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",ty
 c["+65% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=65}},nil}
 c["+65% Width when consuming 12 stacks"]={{}," Width when consuming 12 stacks "}
 c["+65% chance to throw a Burning Dagger when you use a melee fire attack and hit at least one enemy, doubled for Dancing Strikes (up to 4 times per second)"]={{}," to throw a  when you use a   attack and  at least one enemy, doubled for Dancing Strikes (up to 4 times per second) "}
-c["+651 Stun Avoidance"]={{}," Stun Aance "}
+c["+651 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=651}},nil}
 c["+66 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=66}},nil}
 c["+66 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=66}},nil}
 c["+66 Bow Lightning Damage"]={{[1]={flags=0,keywordFlags=2048,name="LightningDamage",type="BASE",value=66}},nil}
@@ -7985,7 +7985,7 @@ c["+68 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThresh
 c["+68 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=68}},nil}
 c["+68 Lightning Damage with Shurikens"]={{[1]={[1]={skillName="Shurikens",type="SkillName"},flags=0,keywordFlags=0,name="LightningDamage",type="BASE",value=68}},"  with  "}
 c["+68 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=68}},nil}
-c["+68 Stun Avoidance"]={{}," Stun Aance "}
+c["+68 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=68}},nil}
 c["+68 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=68}},nil}
 c["+68 Ward gained when you cast Flame Ward"]={{[1]={[1]={skillName="Flame Ward",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=68}},"  gained when you cast  "}
 c["+68% Chance to Electrify on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Electrify",type="BASE",value=68}},nil}
@@ -8246,7 +8246,7 @@ c["+73% Chance to inflict Bleed on Bow Hit"]={{[1]={flags=8388608,keywordFlags=2
 c["+73% Fire Resistance"]={{[1]={flags=0,keywordFlags=0,name="FireResist",type="BASE",value=73}},nil}
 c["+74 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=74}},nil}
 c["+74 Endurance Threshold"]={{[1]={flags=0,keywordFlags=0,name="EnduranceThreshold",type="BASE",value=74}},nil}
-c["+74 Stun Avoidance"]={{}," Stun Aance "}
+c["+74 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=74}},nil}
 c["+74% Chance for non-Critical Strikes to inflict Critical Vulnerability"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CriticalVulnerability",type="BASE",value=74}}," for non-Critical Strikes  "}
 c["+75 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=75}},nil}
 c["+75 Armor with a Shield"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=75}},"  with a Shield "}
@@ -8285,7 +8285,7 @@ c["+75% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",ty
 c["+75% Poison Resistance for 4 seconds when you use a Potion"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="BASE",value=75}},"   when you use a Potion "}
 c["+75% Void Resistance"]={{[1]={flags=0,keywordFlags=0,name="VoidResist",type="BASE",value=75}},nil}
 c["+750 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=750}},nil}
-c["+750 Stun Avoidance"]={{}," Stun Aance "}
+c["+750 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=750}},nil}
 c["+76 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=76}},nil}
 c["+76 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=76}},nil}
 c["+76 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=76}},nil}
@@ -8533,7 +8533,7 @@ c["+80 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=80}}
 c["+80 Initial Slam Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=80}}," Initial Slam   "}
 c["+80 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=80}},nil}
 c["+80 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=80}},nil}
-c["+80 Stun Avoidance"]={{}," Stun Aance "}
+c["+80 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=80}},nil}
 c["+80 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=80}},nil}
 c["+80% Accuracy"]={{}," Accuracy "}
 c["+80% Chance to inflict Bleed on Minion Hit"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=80}}}},"  on   "}
@@ -8555,7 +8555,7 @@ c["+80% Void Penetration with Future Attack"]={{[1]={flags=0,keywordFlags=0,name
 c["+80% to Increased Poison Damage while Aura of Decay is active"]={{[1]={[1]={skillName="Aura Of Decay",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Poison",type="INC",value=80}}," Damage while  is active "}
 c["+800 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=800}},nil}
 c["+801 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=801}},"  while using Evade "}
-c["+801 Stun Avoidance"]={{}," Stun Aance "}
+c["+801 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=801}},nil}
 c["+81 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=81}},nil}
 c["+81 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=81}},nil}
 c["+81 Spell Fire Damage"]={{[1]={flags=0,keywordFlags=256,name="FireDamage",type="BASE",value=81}},nil}
@@ -8569,7 +8569,7 @@ c["+83 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=83}
 c["+83 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=83}},nil}
 c["+83 Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=83}},nil}
 c["+83 Minion Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=83}}}},nil}
-c["+83 Stun Avoidance"]={{}," Stun Aance "}
+c["+83 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=83}},nil}
 c["+83 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=83}},nil}
 c["+83 Ward gained per Rune consumed with Runic Invocation"]={{[1]={[1]={skillName="Runic Invocation",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=83}},"  gained per Rune consumed with  "}
 c["+83% Armor Shred Chance for Locusts"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=83}},"  for Locusts "}
@@ -8618,7 +8618,7 @@ c["+88% Chance to Shred Armor on Bow Hit"]={{[1]={flags=8388608,keywordFlags=204
 c["+88% Chance to Shred Armor on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=88}},nil}
 c["+88% Chance to Shred Armor on Throwing Hit"]={{[1]={flags=8388608,keywordFlags=1024,name="ChanceToTriggerOnHit_Ailment_ArmourShred",type="BASE",value=88}},"  on   "}
 c["+89 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=89}},nil}
-c["+89 Stun Avoidance"]={{}," Stun Aance "}
+c["+89 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=89}},nil}
 c["+89% Physical Penetration with Shadow Daggers "]={{[1]={[1]={skillName="Shadow Daggers",type="SkillName"},flags=0,keywordFlags=0,name="PhysicalPenetration",type="BASE",value=89}},"  with   "}
 c["+9 Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=9}},nil}
 c["+9 Armor While Transformed"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="BASE",value=9}},"  While Transformed "}
@@ -8736,7 +8736,7 @@ c["+91 Ward gained when you use Shift"]={{[1]={[1]={skillName="Shift",type="Skil
 c["+92 Curse Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="BASE",value=92}}," Curse  "}
 c["+92 Dodge Rating"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=92}},nil}
 c["+92 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=92}},nil}
-c["+92 Stun Avoidance"]={{}," Stun Aance "}
+c["+92 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=92}},nil}
 c["+93 Dodge Rating if you have been hit recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="Evasion",type="BASE",value=93}},nil}
 c["+93 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=93}},"  while using Evade "}
 c["+93 Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=93}},nil}
@@ -8770,7 +8770,7 @@ c["+97 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",
 c["+97 Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="BASE",value=97}},nil}
 c["+97 Ward per Second during Profane Veil"]={{[1]={[1]={skillName="Profane Veil",type="SkillName"},flags=0,keywordFlags=0,name="WardPerSecond",type="BASE",value=97}},"  during  "}
 c["+975 Block Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="BlockEffectiveness",type="BASE",value=975}},nil}
-c["+98 Stun Avoidance"]={{}," Stun Aance "}
+c["+98 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=98}},nil}
 c["+98% Chance on Block to apply Marked For Death to the Attacker"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_MarkedForDeath",type="BASE",value=98}}," on Block  to the Attacker "}
 c["+99 Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="BASE",value=99}},nil}
 c["+99 Ward Decay Threshold"]={{[1]={flags=0,keywordFlags=0,name="WardDecayThreshold",type="BASE",value=99}},nil}
@@ -14017,7 +14017,7 @@ c["50 Heal Amount On Shield Death"]={{}," Heal Amount On Shield Death "}
 c["50 Healing Amount"]={{},"  Amount "}
 c["50 Health Gain on Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},flags=0,keywordFlags=0,name="Life",type="BASE",value=50}},"  Gain  "}
 c["50 Health Restored on Landing"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=50}},"  Restored on Landing "}
-c["50 Stun Avoidance"]={{}," Stun Aance "}
+c["50 Stun Avoidance"]={{[1]={flags=0,keywordFlags=0,name="StunAvoidance",type="BASE",value=50}},nil}
 c["50 Ward Gained when you use Enchant Weapon "]={{[1]={[1]={skillName="Enchant Weapon",type="SkillName"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=50}},"  Gained when you use   "}
 c["50 Ward gained when damage leaves you at low health"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=50}},"  gained when damage leaves you at low health "}
 c["50% 50% Base Damage -> Lightning"]={{[1]={flags=0,keywordFlags=2,name="Damage",type="MORE",value=50}}," 50% Base  ->  "}

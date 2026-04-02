@@ -96,6 +96,7 @@ local modNameList = {
 	-- Stun/knockback modifiers
 	["stun duration on you"] = "StunDuration",
 	["stun duration"] = "EnemyStunDuration",
+	["stun avoidance"] = "StunAvoidance",
 	["knockback distance"] = "EnemyKnockbackDistance",
 	-- Auras/curses/buffs
 	["buff effect"] = "BuffEffect",

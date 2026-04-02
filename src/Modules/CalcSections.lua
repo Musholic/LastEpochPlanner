@@ -309,6 +309,10 @@ return {
 } }
 } },
 { 1, "MiscEffects", 1, colorCodes.OFFENCE, {{ defaultCollapsed = false, label = "Other Effects", data = {
+	{ label = "Stun Avoidance", { format = "{0:output:StunAvoidance}",
+		{ breakdown = "StunAvoidance" },
+		{ modName = "StunAvoidance" },
+	}, },
 	{ label = "Stun Threshold", flag = "hit", notFlag = "attack", { format = "x {2:output:EnemyStunThresholdMod}", { modName = "EnemyStunThreshold", cfg = "skill" }, }, },
 	{ label = "Stun Duration", flag = "hit", notFlag = "attack", { format = "{2:output:EnemyStunDuration}s",
 		{ breakdown = "EnemyStunDuration" },
