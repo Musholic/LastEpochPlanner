@@ -345,6 +345,7 @@ return {
 	{ label = "Total Increased", { format = "{0:mod:1}%", { modName = "Life", modType = "INC", }, }, },
 	{ label = "Total More", { format = "{0:mod:1}%", { modName = "Life", modType = "MORE", }, }, },
 	{ label = "Total", { format = "{0:output:Life}", { breakdown = "Life" }, }, },
+	{ label = "Healing Eff.", { format = "{0:output:HealingEffectiveness}%", { modName = "HealingEffectiveness" }, }, },
 	{ label = "Recovery", { format = "{1:output:LifeRegenRecovery} ({1:output:LifeRegenPercent}%)",
 		{ breakdown = "LifeRegenRecovery" },
 		{ label = "Sources", modName = { "LifeRegen", "LifeRegenPercent", "LifeDegen", "LifeDegenPercent", "LifeRecovery" }, modType = "BASE" },

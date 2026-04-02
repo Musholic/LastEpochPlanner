@@ -60,6 +60,7 @@ local modNameList = {
 	["health"] = "Life",
 	["health regen"] = "LifeRegen",
 	["health regeneration"] = "LifeRegen",
+	["healing effectiveness"] = "HealingEffectiveness",
 	["maximum health"] = "Life",
 	["mana"] = "Mana",
 	["maximum mana"] = "Mana",

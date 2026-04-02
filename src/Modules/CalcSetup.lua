@@ -367,6 +367,7 @@ function calcs.initEnv(build, mode, override, specEnv)
 		modDB:NewMod("StunAvoidance", "BASE", classStats["stunAvoidancePerLevel"], "Base", { type = "Multiplier", var = "Level", base = classStats["baseStunAvoidance"] })
 		modDB:NewMod("Endurance", "BASE", classStats["baseEndurance"] * 100, "Base")
 		modDB:NewMod("EnduranceThreshold", "BASE", classStats["enduranceThresholdPerHealth"], "Base", { type = "PerStat", stat = "Life"})
+		modDB:NewMod("HealingEffectiveness", "BASE", 100, "Base")
 
 		-- Add attribute bonuses
 		modDB:NewMod("Armour", "INC", 4, "Strength", {type = "PerStat", stat = "Str"})

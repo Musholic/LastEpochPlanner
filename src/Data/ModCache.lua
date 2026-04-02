@@ -2188,7 +2188,7 @@ c["+10% Ignite Chance with Fire Skills"]={{[1]={flags=8388608,keywordFlags=8,nam
 c["+10% Ignite Duration"]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="MORE",value=10}},nil}
 c["+10% Increased Damage Over Time"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="INC",value=10}},nil}
 c["+10% Increased Healing"]={{},"  "}
-c["+10% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["+10% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=10}},nil}
 c["+10% Increased Health Leech"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=10}},"  Leech "}
 c["+10% Increased Totem Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=10}}," Totem  "}
 c["+10% Initial Slam Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=10}}," Initial Slam  "}
@@ -4874,7 +4874,7 @@ c["+25% Cold Penetration with Cold Invocations"]={{[1]={flags=0,keywordFlags=4,n
 c["+25% Cold Penetration with Frostbite "]={{[1]={[1]={skillName="Frostbite",type="SkillName"},flags=0,keywordFlags=0,name="ColdPenetration",type="BASE",value=25}},"  with   "}
 c["+25% Cold Resistance"]={{[1]={flags=0,keywordFlags=0,name="ColdResist",type="BASE",value=25}},nil}
 c["+25% Consecrated Ground Healing"]={{}," Consecrated Ground  "}
-c["+25% Consecrated Ground Healing Effectiveness"]={{}," Consecrated Ground  Effectiveness "}
+c["+25% Consecrated Ground Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="BASE",value=25}}," Consecrated Ground  "}
 c["+25% Cooldown Recovery Speed"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=25}},nil}
 c["+25% Cooldown Recovery Speed with 2h Sword"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=25}},"  with 2h Sword "}
 c["+25% Critical Chance Stat Ratio"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="BASE",value=25}},"  Stat Ratio "}
@@ -5729,7 +5729,7 @@ c["+30% Furnace Ignite Chance"]={{[1]={flags=8388608,keywordFlags=0,name="Chance
 c["+30% Furnace Slow Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Slow",type="BASE",value=30}}," Furnace  "}
 c["+30% Global Increased Crit Chance"]={{[1]={[1]={type="Global"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=30}},nil}
 c["+30% Haste Duration"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="MORE",value=30}},nil}
-c["+30% Healing Effectiveness"]={{},"  Effectiveness "}
+c["+30% Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="BASE",value=30}},nil}
 c["+30% Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=30}},nil}
 c["+30% Health Decay"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=30}},"  Decay "}
 c["+30% Hit Damage"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=30}},nil}
@@ -8825,7 +8825,7 @@ c["-10% Explosion Hit Damage"]={{[1]={flags=8388608,keywordFlags=0,name="Damage"
 c["-10% Fear Duration"]={{[1]={[1]={skillName="Fear",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="MORE",value=-10}},nil}
 c["-10% Fester Stack Loss Rate While Moving"]={{}," Fester Stack Loss Rate  "}
 c["-10% Great Axe Attack Speed"]={{[1]={flags=3584,keywordFlags=0,name="Speed",type="BASE",value=-10}}," Great Axe  "}
-c["-10% Healing Effectiveness"]={{},"  Effectiveness "}
+c["-10% Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="BASE",value=-10}},nil}
 c["-10% Health Drain"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=-10}},"  Drain "}
 c["-10% Hit Damage"]={{[1]={flags=8388608,keywordFlags=0,name="Damage",type="MORE",value=-10}},nil}
 c["-10% Less Channel Cost"]={{}," Channel Cost "}
@@ -9493,7 +9493,7 @@ c["1% increased Movement Speed per 4 Character Levels"]={{[1]={flags=0,keywordFl
 c["1% increased Shock Duration per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},[2]={skillName="Shock",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=1}},nil}
 c["1% increased Spell Damage per 1% increased Movement Speed"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="INC",value=1}},"   per 1% increased Movement Speed "}
 c["1% increased Stygian Beam frequency per Intelligence"]={{},"  frequency  "}
-c["1% increased healing effectiveness per point of attunement"]={{},"  effectiveness  "}
+c["1% increased healing effectiveness per point of attunement"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=1}},nil}
 c["1% less Damage Over Time Taken"]={{[1]={flags=0,keywordFlags=0,name="DamageTakenOverTime",type="MORE",value=-1}},nil}
 c["1% less Damage Taken for each Meteor you have cast recently (up to 18)"]={{[1]={[1]={skillName="Meteor",type="SkillName"},flags=0,keywordFlags=0,name="DamageTaken",type="MORE",value=-1}},"  for each  you have cast recently (up to 18) "}
 c["1% less Damage Taken on Block"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="MORE",value=-1}},"  on Block "}
@@ -9917,7 +9917,7 @@ c["100% Increased Cast Speed"]={{[1]={flags=256,keywordFlags=0,name="Speed",type
 c["100% Increased Crit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=100}},nil}
 c["100% Increased Critical Strike Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=100}},nil}
 c["100% Increased Damage per 100% Increased Movement Speed"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=100}},"  per 100% Increased Movement Speed "}
-c["100% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["100% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=100}},nil}
 c["100% Increased Ignite Duration"]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=100}},nil}
 c["100% Increased Stun Chance"]={{}," Stun Chance "}
 c["100% Increased Stun Immunity Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=100}}," Stun Immunity  "}
@@ -10075,7 +10075,7 @@ c["108% Increased Damage while wielding a Bow"]={{[1]={[1]={type="Condition",var
 c["108% Increased Damage while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="Damage",type="INC",value=108}},nil}
 c["108% Increased Damage while wielding a Sword"]={{[1]={[1]={type="Condition",var="UsingSword"},flags=0,keywordFlags=0,name="Damage",type="INC",value=108}},nil}
 c["108% Increased Damage with Shadow Cascade per Active Shadow"]={{[1]={[1]={skillName="Shadow Cascade",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=108}},"  with  per Active Shadow "}
-c["108% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["108% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=108}},nil}
 c["108% Increased area of effect with Acid Flask"]={{[1]={[1]={skillName="Acid Flask",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=108}},"  with  "}
 c["108% increased Bow Damage"]={{[1]={flags=0,keywordFlags=2048,name="Damage",type="INC",value=108}},nil}
 c["108% increased Bow Elemental Damage"]={{[1]={flags=0,keywordFlags=2048,name="FireDamage",type="INC",value=108},[2]={flags=0,keywordFlags=2048,name="ColdDamage",type="INC",value=108},[3]={flags=0,keywordFlags=2048,name="LightningDamage",type="INC",value=108}},nil}
@@ -10117,7 +10117,7 @@ c["11% Increased Bleed Duration "]={{[1]={[1]={skillName="Bleed",type="SkillName
 c["11% Increased Cooldown Recovery Speed"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=11}},nil}
 c["11% Increased Cooldown Recovery Speed for Transplant"]={{[1]={[1]={skillName="Transplant",type="SkillName"},flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=11}},nil}
 c["11% Increased Damage while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=0,keywordFlags=0,name="Damage",type="INC",value=11}},nil}
-c["11% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["11% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=11}},nil}
 c["11% Increased Leech Rate"]={{}," Leech Rate "}
 c["11% Increased Lightning Damage per Active Maelstrom"]={{[1]={[1]={skillName="Maelstrom",type="SkillName"},flags=0,keywordFlags=0,name="LightningDamage",type="INC",value=11}},"  per Active  "}
 c["11% Increased Minion Damage Granted"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Damage",type="INC",value=11}}}},"   Granted "}
@@ -10254,7 +10254,7 @@ c["12% Increased Critical Strike Chance with a Bow"]={{[1]={[1]={type="Condition
 c["12% Increased Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=12}},nil}
 c["12% Increased Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=12}},nil}
 c["12% Increased Fire Damage per Forged Weapon"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=12}},"  per Forged Weapon "}
-c["12% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["12% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=12}},nil}
 c["12% Increased Melee Attack Speed while Dual Wielding"]={{[1]={[1]={type="Condition",var="DualWielding"},flags=3584,keywordFlags=512,name="Speed",type="INC",value=12}},nil}
 c["12% Increased Minion Necrotic Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="NecroticDamage",type="INC",value=12}}}},nil}
 c["12% Increased Poison Duration "]={{[1]={[1]={skillName="Poison",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=12}},nil}
@@ -10332,7 +10332,7 @@ c["121% Increased Stun Chance"]={{}," Stun Chance "}
 c["123% increased Minion Damage"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Damage",type="INC",value=123}}}},nil}
 c["124% increased Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=124}},nil}
 c["125% Detonating Arrow Mana Consumption"]={{[1]={[1]={skillName="Detonating Arrow",type="SkillName"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=125}},"   Consumption "}
-c["125% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["125% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=125}},nil}
 c["125% Runic Invocation Mana Consumption"]={{[1]={[1]={skillName="Runic Invocation",type="SkillName"},flags=0,keywordFlags=0,name="Mana",type="BASE",value=125}},"   Consumption "}
 c["125% increased Damage Over Time"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="INC",value=125}},nil}
 c["125% increased Melee Damage"]={{[1]={flags=0,keywordFlags=512,name="Damage",type="INC",value=125}},nil}
@@ -10396,7 +10396,7 @@ c["13% Increased Damage while wielding a Bow"]={{[1]={[1]={type="Condition",var=
 c["13% Increased Damage with Shadow Cascade per Active Shadow"]={{[1]={[1]={skillName="Shadow Cascade",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=13}},"  with  per Active Shadow "}
 c["13% Increased Evade cooldown Duration"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=13}}," Evade  "}
 c["13% Increased Glyph Drop Rate"]={{}," Glyph Drop Rate "}
-c["13% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["13% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=13}},nil}
 c["13% Increased Ignite Duration"]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=13}},nil}
 c["13% Increased Leech Rate"]={{}," Leech Rate "}
 c["13% Increased Necrotic Damage if you have been Hit Recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="NecroticDamage",type="INC",value=13}},nil}
@@ -10536,7 +10536,7 @@ c["14% Increased Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC"
 c["14% Increased Damage per arrow with Multishot"]={{[1]={[1]={skillName="Multishot",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=14}},"  per arrow with  "}
 c["14% Increased Damage while wielding a Bow"]={{[1]={[1]={type="Condition",var="UsingBow"},flags=0,keywordFlags=0,name="Damage",type="INC",value=14}},nil}
 c["14% Increased Electrify Duration "]={{[1]={[1]={skillName="Electrify",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=14}},nil}
-c["14% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["14% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=14}},nil}
 c["14% Increased Leech Rate"]={{}," Leech Rate "}
 c["14% Increased Mana regeneration while you control a minion"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=14}}}}," eration while you control a  "}
 c["14% Increased Poison Duration"]={{[1]={[1]={skillName="Poison",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=14}},nil}
@@ -10707,7 +10707,7 @@ c["15% Increased Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="
 c["15% Increased Evade cooldown Duration"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=15}}," Evade  "}
 c["15% Increased Fire Aura Area"]={{[1]={[1]={skillName="Fire Aura",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=15}},nil}
 c["15% Increased Fire Damage per Forged Weapon"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=15}},"  per Forged Weapon "}
-c["15% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["15% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=15}},nil}
 c["15% Increased Helmet Drop Rate"]={{}," Helmet Drop Rate "}
 c["15% Increased Ignite Duration "]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=15}},nil}
 c["15% Increased Leech Rate"]={{}," Leech Rate "}
@@ -10952,7 +10952,7 @@ c["17% Increased Chance To Find Potions"]={{}," Chance To Find Potions "}
 c["17% Increased Chill Duration "]={{[1]={[1]={skillName="Chill",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=17}},nil}
 c["17% Increased Evade cooldown Duration"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=17}}," Evade  "}
 c["17% Increased Haste Effect"]={{},"  Effect "}
-c["17% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["17% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=17}},nil}
 c["17% Increased Necrotic Damage if you have been Hit Recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="NecroticDamage",type="INC",value=17}},nil}
 c["17% Increased Skeleton Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=17}}," Skeleton  "}
 c["17% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-17}},"  Cost of s "}
@@ -11044,7 +11044,7 @@ c["18% Increased Cooldown Recovery Speed for Transplant"]={{[1]={[1]={skillName=
 c["18% Increased Critical Strike Chance while using a Catalyst"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=18}},"  while using a Catalyst "}
 c["18% Increased Damage per arrow with Multishot"]={{[1]={[1]={skillName="Multishot",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=18}},"  per arrow with  "}
 c["18% Increased Electrify Duration "]={{[1]={[1]={skillName="Electrify",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=18}},nil}
-c["18% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["18% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=18}},nil}
 c["18% Increased Ignite Duration "]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=18}},nil}
 c["18% Increased Mana regeneration while you control a minion"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=18}}}}," eration while you control a  "}
 c["18% Increased Shock Duration "]={{[1]={[1]={skillName="Shock",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=18}},nil}
@@ -11146,7 +11146,7 @@ c["181% increased Minion Health"]={{[1]={flags=0,keywordFlags=0,name="MinionModi
 c["181% increased Volatile Zombie Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=181}}," Volatile Zombie  "}
 c["185 Health Gained on Potion Use"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=185}},"  Gained on Potion Use "}
 c["185% Frostbite Chance per Second with Frost Wall"]={{[1]={[1]={skillName="Frost Wall",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Frostbite",type="BASE",value=185}},"  per Second with  "}
-c["185% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["185% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=185}},nil}
 c["185% increased Spell Damage While Transformed"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="INC",value=185}},"   While Transformed "}
 c["189% Increased Damage with Hammer Throw"]={{[1]={[1]={skillName="Hammer Throw",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=189}},"  with  "}
 c["189% Increased damage with Smelter's Wrath"]={{[1]={[1]={skillName="Smelter's Wrath",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=189}},"  with  "}
@@ -11175,7 +11175,7 @@ c["19% Increased Chill Duration "]={{[1]={[1]={skillName="Chill",type="SkillName
 c["19% Increased Damage with Shadow Cascade per Active Shadow"]={{[1]={[1]={skillName="Shadow Cascade",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=19}},"  with  per Active Shadow "}
 c["19% Increased Evade cooldown Duration"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=19}}," Evade  "}
 c["19% Increased Fire Damage per Forged Weapon"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=19}},"  per Forged Weapon "}
-c["19% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["19% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=19}},nil}
 c["19% Increased Melee Stun Duration"]={{[1]={flags=0,keywordFlags=512,name="EnemyStunDuration",type="INC",value=19}},nil}
 c["19% Increased Relic Drop Rate"]={{}," Relic Drop Rate "}
 c["19% Increased Shock Duration"]={{[1]={[1]={skillName="Shock",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=19}},nil}
@@ -11373,7 +11373,7 @@ c["2% Increased Forged Weapon Duration"]={{[1]={flags=0,keywordFlags=0,name="Dur
 c["2% Increased Frenzy Effect "]={{},"  Effect  "}
 c["2% Increased Frequency per 10% Poison Resistance"]={{[1]={flags=0,keywordFlags=0,name="PoisonResist",type="INC",value=2}}," Frequency per 10%  "}
 c["2% Increased Frostbite Duration "]={{[1]={[1]={skillName="Frostbite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=2}},nil}
-c["2% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["2% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=2}},nil}
 c["2% Increased Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=2}},nil}
 c["2% Increased Health Regen Per Attunement"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=2}},nil}
 c["2% Increased Health Regen Per Strength"]={{[1]={[1]={stat="Str",type="PerStat"},flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=2}},nil}
@@ -11581,7 +11581,7 @@ c["20% Increased Damage Granted"]={{[1]={flags=0,keywordFlags=0,name="Damage",ty
 c["20% Increased Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=20}},nil}
 c["20% Increased Explosion Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=20}}," Explosion  "}
 c["20% Increased Fire Rate Against Bosses"]={{},"  Rate Against Bosses "}
-c["20% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["20% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=20}},nil}
 c["20% Increased Ignite Duration "]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=20}},nil}
 c["20% Increased Leech Rate"]={{}," Leech Rate "}
 c["20% Increased Melee Cold Damage"]={{[1]={flags=0,keywordFlags=512,name="ColdDamage",type="INC",value=20}},nil}
@@ -11826,7 +11826,7 @@ c["22% of Mana Spent Gained as Ward"]={{[1]={flags=0,keywordFlags=0,name="Mana",
 c["22% of Potion Health Converted to Ward"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=22}}," Potion  Converted to Ward "}
 c["22% reduced Bonus Damage Taken from Critical Strikes"]={{[1]={[1]={type="Condition",var="CriticalStrike"},flags=0,keywordFlags=0,name="DamageTaken",type="INC",value=-22}}," Bonus   "}
 c["22% reduced Channel Cost"]={{}," Channel Cost "}
-c["220% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["220% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=220}},nil}
 c["220% increased Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=220}},nil}
 c["220% increased Void Damage"]={{[1]={flags=0,keywordFlags=0,name="VoidDamage",type="INC",value=220}},nil}
 c["220% of Maximum Health applied as a Ward Limit"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=220}},"  applied as a Ward Limit "}
@@ -11864,7 +11864,7 @@ c["23% Increased Cooldown Recovery Speed for Javelin"]={{[1]={[1]={skillName="Ja
 c["23% Increased Cooldown Recovery Speed for Judgement"]={{[1]={[1]={skillName="Judgement",type="SkillName"},flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=23}},nil}
 c["23% Increased Cooldown Recovery Speed for Shift"]={{[1]={[1]={skillName="Shift",type="SkillName"},flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=23}},nil}
 c["23% Increased Gloves Drop Rate"]={{}," Gloves Drop Rate "}
-c["23% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["23% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=23}},nil}
 c["23% Increased Ignite Duration "]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=23}},nil}
 c["23% Increased Leech Rate"]={{}," Leech Rate "}
 c["23% Increased Necrotic Damage if you have been Hit Recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="NecroticDamage",type="INC",value=23}},nil}
@@ -11934,9 +11934,9 @@ c["24% Chance to summon a Storm Totem on hit with Tempest Strike"]={{}," to summ
 c["24% Increased Aspect of the Viper Effect"]={{},"  Effect "}
 c["24% Increased Attack and Cast Speed for Summoned Vines"]={{[1]={flags=0,keywordFlags=0,name="Speed",type="INC",value=24}},"  for Summoned Vines "}
 c["24% Increased Healing"]={{},"  "}
-c["24% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["24% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=24}},nil}
 c["24% Increased Spell Damage per Skeletal Mage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="INC",value=24}},"   per Skeletal Mage "}
-c["24% Minion Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["24% Minion Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=24}}}},nil}
 c["24% Reduced Duration"]={{[1]={flags=0,keywordFlags=0,name="Duration",type="INC",value=-24}},nil}
 c["24% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=24}},nil}
 c["24% increased Armor While Transformed"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=24}},"  While Transformed "}
@@ -12034,7 +12034,7 @@ c["25% Increased Decay Rate for Dread Shade"]={{}," Decay Rate  "}
 c["25% Increased Elemental Damage with Elemental Arrow"]={{[1]={flags=0,keywordFlags=14,name="FireDamage",type="INC",value=25},[2]={flags=0,keywordFlags=14,name="ColdDamage",type="INC",value=25},[3]={flags=0,keywordFlags=14,name="LightningDamage",type="INC",value=25}},"  with  Arrow "}
 c["25% Increased Explosion Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=25}}," Explosion  "}
 c["25% Increased Gloves Shard Drop Rate"]={{}," Gloves Shard Drop Rate "}
-c["25% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["25% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=25}},nil}
 c["25% Increased Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=25}},nil}
 c["25% Increased Health Decay"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=25}},"  Decay "}
 c["25% Increased Leech Rate"]={{}," Leech Rate "}
@@ -12262,7 +12262,7 @@ c["28% Increased Damage while wielding a Bow"]={{[1]={[1]={type="Condition",var=
 c["28% Increased Damage while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="Damage",type="INC",value=28}},nil}
 c["28% Increased Damage while wielding a Sword"]={{[1]={[1]={type="Condition",var="UsingSword"},flags=0,keywordFlags=0,name="Damage",type="INC",value=28}},nil}
 c["28% Increased Frostbite Duration"]={{[1]={[1]={skillName="Frostbite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=28}},nil}
-c["28% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["28% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=28}},nil}
 c["28% Increased Poison Duration "]={{[1]={[1]={skillName="Poison",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=28}},nil}
 c["28% Increased Stun Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="INC",value=28}},nil}
 c["28% Increased Time Rot Duration "]={{[1]={[1]={skillName="Time Rot",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=28}},nil}
@@ -12611,7 +12611,7 @@ c["30% Companion Down Duration Healed"]={{[1]={flags=0,keywordFlags=0,name="Dura
 c["30% Crimson Shroud Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_CrimsonShroud",type="BASE",value=30}},nil}
 c["30% Dusk Shroud chance gained per second"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_DuskShroud",type="BASE",value=30}},"  gained per second "}
 c["30% Gladiator of Lagon Chance"]={{}," Gladiator of Lagon Chance "}
-c["30% Healing Effectiveness On Activation"]={{},"  Effectiveness On Activation "}
+c["30% Healing Effectiveness On Activation"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="BASE",value=30}},"  On Activation "}
 c["30% Ignite Chance -> Minion Ignite Chance per stack"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={skillName="Ignite",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Ignite",type="BASE",value=30}}}},"  ->   Chance per stack "}
 c["30% Increased Area"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=30}},nil}
 c["30% Increased Area (Every 3 Seconds)"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=30}},"  (Every 3 Seconds) "}
@@ -12710,7 +12710,7 @@ c["31% Increased Bleed Duration for Minions "]={{[1]={flags=0,keywordFlags=0,nam
 c["31% Increased Damage while wielding a Bow"]={{[1]={[1]={type="Condition",var="UsingBow"},flags=0,keywordFlags=0,name="Damage",type="INC",value=31}},nil}
 c["31% Increased Damage while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="Damage",type="INC",value=31}},nil}
 c["31% Increased Damage while wielding a Sword"]={{[1]={[1]={type="Condition",var="UsingSword"},flags=0,keywordFlags=0,name="Damage",type="INC",value=31}},nil}
-c["31% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["31% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=31}},nil}
 c["31% Increased Ignite Duration "]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=31}},nil}
 c["31% Increased Stun Chance"]={{}," Stun Chance "}
 c["31% Melee Hit"]={{},"   "}
@@ -12825,7 +12825,7 @@ c["33% Increased Damage while wielding a Bow"]={{[1]={[1]={type="Condition",var=
 c["33% Increased Damage while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="Damage",type="INC",value=33}},nil}
 c["33% Increased Damage while wielding a Sword"]={{[1]={[1]={type="Condition",var="UsingSword"},flags=0,keywordFlags=0,name="Damage",type="INC",value=33}},nil}
 c["33% Increased Gold Drop Rate"]={{}," Gold Drop Rate "}
-c["33% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["33% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=33}},nil}
 c["33% Increased Leech Rate"]={{}," Leech Rate "}
 c["33% Max Health Lost Per Second"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=33}}," Max  Lost Per Second "}
 c["33% Melee Hit"]={{},"   "}
@@ -12886,7 +12886,7 @@ c["34% Fire Aura Chance Per Second"]={{[1]={flags=8388608,keywordFlags=0,name="C
 c["34% Increased Area with Dive Bomb"]={{[1]={[1]={skillName="Dive Bomb",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=34}},"  with  "}
 c["34% Increased Bow Attack Speed for 3 seconds when you use a Bow Attack (10 second cooldown)"]={{[1]={[1]={skillName="Bow Attack",type="SkillName"},flags=3584,keywordFlags=2048,name="Speed",type="INC",value=34}},"    when you use a   "}
 c["34% Increased Fire Spell Stun Chance"]={{},"   Stun Chance "}
-c["34% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["34% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=34}},nil}
 c["34% Increased Physical Spell Stun Chance"]={{},"   Stun Chance "}
 c["34% Increased Stun Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="INC",value=34}},nil}
 c["34% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=34}},nil}
@@ -13042,7 +13042,7 @@ c["37% Increased Area with Detonating Arrow"]={{[1]={[1]={skillName="Detonating 
 c["37% Increased Bleed Duration "]={{[1]={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=37}},nil}
 c["37% Increased Bleed Duration for Minions "]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=37}}}},"   for s  "}
 c["37% Increased Chance To Find Potions"]={{}," Chance To Find Potions "}
-c["37% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["37% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=37}},nil}
 c["37% Increased Necrotic Damage if you have been Hit Recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="NecroticDamage",type="INC",value=37}},nil}
 c["37% Increased Volcanic Orb Speed"]={{},"  Speed "}
 c["37% Increased area with the first attack of Cinder Strike"]={{[1]={[1]={skillName="Cinder Strike",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=37}},"  with the first attack of  "}
@@ -13076,7 +13076,7 @@ c["38% Increased Dagger Drop Rate"]={{}," Dagger Drop Rate "}
 c["38% Increased Damage while wielding a Bow"]={{[1]={[1]={type="Condition",var="UsingBow"},flags=0,keywordFlags=0,name="Damage",type="INC",value=38}},nil}
 c["38% Increased Damage while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="Damage",type="INC",value=38}},nil}
 c["38% Increased Damage while wielding a Sword"]={{[1]={[1]={type="Condition",var="UsingSword"},flags=0,keywordFlags=0,name="Damage",type="INC",value=38}},nil}
-c["38% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["38% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=38}},nil}
 c["38% Increased One-Handed Axe Drop Rate"]={{}," One-Handed Axe Drop Rate "}
 c["38% Increased One-Handed Mace Drop Rate"]={{}," One-Handed Mace Drop Rate "}
 c["38% Increased One-Handed Sword Drop Rate"]={{}," One-Handed Sword Drop Rate "}
@@ -13267,8 +13267,8 @@ c["4% Increased Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",ty
 c["4% Increased Frenzy Effect "]={{},"  Effect  "}
 c["4% Increased Frostbite Duration "]={{[1]={[1]={skillName="Frostbite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=4}},nil}
 c["4% Increased Haste Effect"]={{},"  Effect "}
-c["4% Increased Healing Effectiveness per player Attunement"]={{},"  Effectiveness  "}
-c["4% Increased Healing Effectiveness per player Intelligence"]={{},"  Effectiveness  "}
+c["4% Increased Healing Effectiveness per player Attunement"]={{[1]={[1]={actor="parent",stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=4}},nil}
+c["4% Increased Healing Effectiveness per player Intelligence"]={{[1]={[1]={actor="parent",stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=4}},nil}
 c["4% Increased Healing Per Attunement"]={{},"   "}
 c["4% Increased Healing Per Point Of Attunement"]={{},"   "}
 c["4% Increased Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=4}},nil}
@@ -13295,7 +13295,7 @@ c["4% Kill Threshold"]={{}," Kill Threshold "}
 c["4% Less Damage Over Time Taken"]={{[1]={flags=0,keywordFlags=0,name="DamageTakenOverTime",type="MORE",value=-4}},nil}
 c["4% Less Damage Taken on Low Health"]={{[1]={flags=0,keywordFlags=0,name="DamageTaken",type="MORE",value=-4}},"  on Low Health "}
 c["4% Less Hit Damage Taken Per Stack"]={{[1]={flags=8388608,keywordFlags=0,name="DamageTaken",type="MORE",value=-4}},"   Per Stack "}
-c["4% Minion Increased Healing Effectiveness per player Attunement"]={{},"  Effectiveness  "}
+c["4% Minion Increased Healing Effectiveness per player Attunement"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={actor="parent",stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=4}}}},nil}
 c["4% Minion Physical Resistance"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="PhysicalResist",type="BASE",value=4}}}},nil}
 c["4% More Damage in Arena"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=4}},"  in Arena "}
 c["4% More Damage over Time to Cursed"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="MORE",value=4}},"  to Cursed "}
@@ -13330,7 +13330,7 @@ c["4% increased Elemental Damage Over Time"]={{[1]={flags=0,keywordFlags=0,name=
 c["4% increased Freeze Rate Multiplier per player Intelligence"]={{}," Freeze Rate Multiplier  "}
 c["4% increased Health"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=4}},nil}
 c["4% increased Health per Equipped Huge Idol"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=4}},"  per Equipped Huge Idol "}
-c["4% increased Increased Healing Effectiveness per player Attunement"]={{},"increased  Effectiveness  "}
+c["4% increased Increased Healing Effectiveness per player Attunement"]={{[1]={[1]={actor="parent",stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=4}},"increased   "}
 c["4% increased Lightning Spell Cast Speed"]={{[1]={flags=256,keywordFlags=258,name="Speed",type="INC",value=4}},nil}
 c["4% increased Mana"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="INC",value=4}},nil}
 c["4% increased Mana Regen"]={{[1]={flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=4}},nil}
@@ -13525,7 +13525,7 @@ c["42% Increased Aspect of the Shark Effect"]={{},"  Effect "}
 c["42% Increased Bow Attack Speed for 3 seconds when you use a Bow Attack (10 second cooldown)"]={{[1]={[1]={skillName="Bow Attack",type="SkillName"},flags=3584,keywordFlags=2048,name="Speed",type="INC",value=42}},"    when you use a   "}
 c["42% Increased Chill Duration with Necrotic Spells"]={{[1]={[1]={skillName="Chill",type="SkillName"},flags=0,keywordFlags=288,name="Duration",type="INC",value=42}},"   with  s "}
 c["42% Increased Damage with Shadow Cascade per Active Shadow"]={{[1]={[1]={skillName="Shadow Cascade",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=42}},"  with  per Active Shadow "}
-c["42% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["42% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=42}},nil}
 c["42% Increased Ring Shard Drop Rate"]={{}," Ring Shard Drop Rate "}
 c["42% Increased area of effect with Acid Flask"]={{[1]={[1]={skillName="Acid Flask",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=42}},"  with  "}
 c["42% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-42}},"  Cost of s "}
@@ -13549,7 +13549,7 @@ c["43% Increased Crit Chance per Equipped Dagger"]={{[1]={[1]={type="Multiplier"
 c["43% Increased Crit Chance per Equipped Sword"]={{[1]={[1]={type="Multiplier",var="SwordItem"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=43}},nil}
 c["43% Increased Critical Strike chance with Flurry"]={{[1]={[1]={skillName="Flurry",type="SkillName"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=43}},"  with  "}
 c["43% Increased Damage for skills used by Shadows"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=43}},"  for skills used by Shadows "}
-c["43% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["43% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=43}},nil}
 c["43% Increased Leech Rate"]={{}," Leech Rate "}
 c["43% Increased Spell Damage if you have an active Totem"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="INC",value=43}},"   if you have an active Totem "}
 c["43% chance to throw a Burning Dagger on hit (up to 2 times per second)"]={{}," to throw a   (up to 2 times per second) "}
@@ -13583,7 +13583,7 @@ c["44% Increased Damage while wielding a Bow"]={{[1]={[1]={type="Condition",var=
 c["44% Increased Damage while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="Damage",type="INC",value=44}},nil}
 c["44% Increased Damage while wielding a Sword"]={{[1]={[1]={type="Condition",var="UsingSword"},flags=0,keywordFlags=0,name="Damage",type="INC",value=44}},nil}
 c["44% Increased Damage with Dive Bomb"]={{[1]={[1]={skillName="Dive Bomb",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=44}},"  with  "}
-c["44% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["44% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=44}},nil}
 c["44% Increased Melee Stun Chance"]={{},"  Stun Chance "}
 c["44% Melee Hit"]={{},"   "}
 c["44% increased Bow Elemental Damage"]={{[1]={flags=0,keywordFlags=2048,name="FireDamage",type="INC",value=44},[2]={flags=0,keywordFlags=2048,name="ColdDamage",type="INC",value=44},[3]={flags=0,keywordFlags=2048,name="LightningDamage",type="INC",value=44}},nil}
@@ -13696,7 +13696,7 @@ c["46% increased Physical Damage"]={{[1]={flags=0,keywordFlags=0,name="PhysicalD
 c["46% increased Spell Damage"]={{[1]={flags=0,keywordFlags=256,name="Damage",type="INC",value=46}},nil}
 c["46% of Mana Spent Gained as Ward"]={{[1]={flags=0,keywordFlags=0,name="Mana",type="BASE",value=46}},"  Spent Gained as Ward "}
 c["47 Health Gained on Shadow Creation"]={{[1]={flags=0,keywordFlags=0,name="Life",type="BASE",value=47}},"  Gained on Shadow Creation "}
-c["47% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["47% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=47}},nil}
 c["47% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=257,name="ColdDamage",type="INC",value=47}},"  if you have directly cast a   recently "}
 c["47% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=260,name="PhysicalDamage",type="INC",value=47}},"  if you have directly cast a   recently "}
 c["47% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=47}},"  for Area Skills "}
@@ -13895,8 +13895,8 @@ c["5% Increased Fire Aura Area"]={{[1]={[1]={skillName="Fire Aura",type="SkillNa
 c["5% Increased Flat Damage Reflected to Attackers per Attunement"]={{[1]={[1]={stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="Damage",type="INC",value=5}}," Flat  Reflected to Attackers  "}
 c["5% Increased Frenzy Effect "]={{},"  Effect  "}
 c["5% Increased Global Damage Over Time"]={{[1]={[1]={type="Global"},flags=4096,keywordFlags=0,name="Damage",type="INC",value=5}},nil}
-c["5% Increased Healing Effectiveness"]={{},"  Effectiveness "}
-c["5% Increased Healing Effectiveness per player Attunement"]={{},"  Effectiveness  "}
+c["5% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=5}},nil}
+c["5% Increased Healing Effectiveness per player Attunement"]={{[1]={[1]={actor="parent",stat="Att",type="PerStat"},flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=5}},nil}
 c["5% Increased Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=5}},nil}
 c["5% Increased Health Regen Per Minion"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=5}}}},"  Per  "}
 c["5% Increased Health Regen per point of Strength"]={{[1]={[1]={stat="Str",type="PerStat"},flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=5}},nil}
@@ -14059,7 +14059,7 @@ c["50% Increased Damage With Buff"]={{[1]={flags=0,keywordFlags=0,name="Damage",
 c["50% Increased Effect From Health Regeneration"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=50}}," Effect From  "}
 c["50% Increased Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=50}},nil}
 c["50% Increased Fire Rate"]={{},"  Rate "}
-c["50% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["50% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=50}},nil}
 c["50% Increased Health Leech"]={{[1]={flags=0,keywordFlags=0,name="Life",type="INC",value=50}},"  Leech "}
 c["50% Increased Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=50}},nil}
 c["50% Increased Health Regen On Deactivate"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=50}},"  On Deactivate "}
@@ -14156,7 +14156,7 @@ c["51% increased Void Damage"]={{[1]={flags=0,keywordFlags=0,name="VoidDamage",t
 c["51% increased area for Melee Area Skills"]={{[1]={flags=0,keywordFlags=512,name="AreaOfEffect",type="INC",value=51}},"  for  Area Skills "}
 c["51% of Shurikens Base Damage converted to Lightning"]={{[1]={[1]={skillName="Shurikens",type="SkillName"},flags=0,keywordFlags=2,name="Damage",type="BASE",value=51}},"  Base  converted to  "}
 c["52 Ice Arrow Freeze Rate"]={{}," Ice Arrow Freeze Rate "}
-c["52% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["52% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=52}},nil}
 c["52% increased Effect of Skill Level modifiers on Legendary Affixes"]={{}," Effect of Skill Level modifiers on Legendary Affixes "}
 c["52% increased Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=52}},nil}
 c["52% increased Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=52}},nil}
@@ -14205,7 +14205,7 @@ c["54% Increased Damage while wielding a Bow"]={{[1]={[1]={type="Condition",var=
 c["54% Increased Damage while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="Damage",type="INC",value=54}},nil}
 c["54% Increased Damage while wielding a Sword"]={{[1]={[1]={type="Condition",var="UsingSword"},flags=0,keywordFlags=0,name="Damage",type="INC",value=54}},nil}
 c["54% Increased Damage with Shadow Cascade per Active Shadow"]={{[1]={[1]={skillName="Shadow Cascade",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=54}},"  with  per Active Shadow "}
-c["54% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["54% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=54}},nil}
 c["54% Increased Poison Duration "]={{[1]={[1]={skillName="Poison",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=54}},nil}
 c["54% Increased area of effect with Acid Flask"]={{[1]={[1]={skillName="Acid Flask",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=54}},"  with  "}
 c["54% Max Speed Increase"]={{}," Max Speed Increase "}
@@ -14282,7 +14282,7 @@ c["56% chance to gain Haste for 5 seconds after you Block"]={nil,"Haste  after y
 c["56% increased Critical Strike Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=56}},nil}
 c["56% reduced Block Chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="INC",value=-56}},nil}
 c["57% Increased Cooldown Recovery Speed for Volcanic Orb"]={{[1]={[1]={skillName="Volcanic Orb",type="SkillName"},flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=57}},nil}
-c["57% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["57% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=57}},nil}
 c["57% Increased Necrotic Damage if you have been Hit Recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="NecroticDamage",type="INC",value=57}},nil}
 c["57% increased Area for Area Skills"]={{[1]={flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=57}},"  for Area Skills "}
 c["57% increased Fire Damage Over Time"]={{[1]={flags=4104,keywordFlags=0,name="FireDamage",type="INC",value=57}},nil}
@@ -14363,7 +14363,7 @@ c["6% Dusk Shroud Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTri
 c["6% Flurry Swipes Chance on Attack"]={{},"  Swipes Chance on Attack "}
 c["6% Forged Weapon chance on Kill"]={{}," Forged Weapon chance  "}
 c["6% Glancing Blow Chance with 50 Dexterity"]={{[1]={flags=0,keywordFlags=0,name="Dex",type="BASE",value=6}}," Glancing Blow Chance with 50  "}
-c["6% Healing Effectiveness Per Intelligence"]={{},"  Effectiveness  "}
+c["6% Healing Effectiveness Per Intelligence"]={{[1]={[1]={stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="HealingEffectiveness",type="BASE",value=6}},nil}
 c["6% Increased Aegis Effect Per Attunement"]={{}," Aegis Effect  "}
 c["6% Increased Area for Infernal Shade per Active Dread Shade"]={{[1]={[1]={skillName="Infernal Shade",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=6}},"   per Active Dread Shade "}
 c["6% Increased Armor When Hit"]={{[1]={flags=8388608,keywordFlags=0,name="Armour",type="INC",value=6}},"  When  "}
@@ -14501,7 +14501,7 @@ c["60% Increased Area of mirage attacks with Lethal Mirage"]={{[1]={[1]={skillNa
 c["60% Increased Armor Shred Effect "]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=60}},"  Shred Effect  "}
 c["60% Increased Aspect of the Boar Duration"]={{[1]={[1]={skillName="Aspect of the Boar",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=60}},nil}
 c["60% Increased Chance To Find Potions"]={{}," Chance To Find Potions "}
-c["60% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["60% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=60}},nil}
 c["60% Increased Puncture Range With Spear"]={{},"  Range With Spear "}
 c["60% Increased Spell Stun Chance"]={{},"  Stun Chance "}
 c["60% Maximum "]={{}," Maximum  "}
@@ -14547,7 +14547,7 @@ c["61% increased Void Damage Over Time"]={{[1]={flags=4112,keywordFlags=0,name="
 c["62 Ward Gained on Potion Use per 10 Intelligence"]={{[1]={[1]={div=10,stat="Int",type="PerStat"},flags=0,keywordFlags=0,name="Ward",type="BASE",value=62}},"  Gained on Potion Use  "}
 c["62% Increased Armor Shred Effect "]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=62}},"  Shred Effect  "}
 c["62% Increased Damage Over Time while you have an Ailment Overload"]={{[1]={flags=4096,keywordFlags=0,name="Damage",type="INC",value=62}},"  while you have an Ailment Overload "}
-c["62% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["62% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=62}},nil}
 c["62% Increased critical strike chance with Shield Throw"]={{[1]={[1]={skillName="Shield Throw",type="SkillName"},flags=0,keywordFlags=0,name="CritChance",type="INC",value=62}},"  with  "}
 c["62% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=62}},nil}
 c["62% increased Critical Strike Chance for Totems"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=62}},"  for Totems "}
@@ -14612,7 +14612,7 @@ c["65% Chance to cast Decimate when you directly use a Lightning Spell (3 second
 c["65% Chance to cast Marrow Shards when you cast Transplant"]={{[1]={[1]={skillName="Transplant",type="SkillName"},flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_MarrowShards",type="BASE",value=65}},"  when you cast  "}
 c["65% Increased Damage for skills used by Shadows"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=65}},"  for skills used by Shadows "}
 c["65% Increased Fire Aura Damage"]={{[1]={[1]={skillName="Fire Aura",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=65}},nil}
-c["65% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["65% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=65}},nil}
 c["65% Increased Leech Rate"]={{}," Leech Rate "}
 c["65% Increased Melee Stun Chance"]={{},"  Stun Chance "}
 c["65% Increased Stun Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="INC",value=65}},nil}
@@ -14649,7 +14649,7 @@ c["68 Health Gain on Kill"]={{[1]={[1]={type="Condition",var="KilledRecently"},f
 c["68 Ward Gained on Potion Use"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=68}},"  Gained on Potion Use "}
 c["68 Ward gained when damage leaves you at low health"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=68}},"  gained when damage leaves you at low health "}
 c["68% Increased Damage with Dive Bomb"]={{[1]={[1]={skillName="Dive Bomb",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=68}},"  with  "}
-c["68% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["68% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=68}},nil}
 c["68% Increased Leech Rate"]={{}," Leech Rate "}
 c["68% chance to gain Haste for 5 seconds after you Block"]={nil,"Haste  after you Block "}
 c["68% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=68}},nil}
@@ -14733,7 +14733,7 @@ c["7% Increased Fire Aura Area"]={{[1]={[1]={skillName="Fire Aura",type="SkillNa
 c["7% Increased Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=7}},nil}
 c["7% Increased Frenzy Effect "]={{},"  Effect  "}
 c["7% Increased Healing"]={{},"  "}
-c["7% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["7% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=7}},nil}
 c["7% Increased Ignite Duration "]={{[1]={[1]={skillName="Ignite",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=7}},nil}
 c["7% Increased Leech Rate"]={{}," Leech Rate "}
 c["7% Increased Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="LightningDamage",type="INC",value=7}},nil}
@@ -14870,7 +14870,7 @@ c["71% of Sacrifice Mana Cost consumed to automatically Sacrifice Minions after 
 c["72 Health Gain on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="Life",type="BASE",value=72}},"  Gain  "}
 c["72% Increased Necrotic Damage if you have been Hit Recently"]={{[1]={[1]={type="Condition",var="BeenHitRecently"},flags=0,keywordFlags=0,name="NecroticDamage",type="INC",value=72}},nil}
 c["72% Increased Stun Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyStunDuration",type="INC",value=72}},nil}
-c["72% Minion Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["72% Minion Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=72}}}},nil}
 c["72% increased Armor"]={{[1]={flags=0,keywordFlags=0,name="Armour",type="INC",value=72}},nil}
 c["72% increased Critical Strike Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=72}},nil}
 c["72% increased Echo Damage when a skill is Echoed"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=72}}," Echo  when a skill is Echoed "}
@@ -14914,7 +14914,7 @@ c["75% Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=75
 c["75% Increased Chance To Find Potions"]={{}," Chance To Find Potions "}
 c["75% Increased Crit Chance"]={{[1]={flags=0,keywordFlags=0,name="CritChance",type="INC",value=75}},nil}
 c["75% Increased Damage for skills used by Shadows"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=75}},"  for skills used by Shadows "}
-c["75% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["75% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=75}},nil}
 c["75% Increased Leech Rate"]={{}," Leech Rate "}
 c["75% Increased Stun Chance"]={{}," Stun Chance "}
 c["75% Maximum Block Chance"]={{[1]={flags=0,keywordFlags=0,name="BlockChance",type="BASE",value=75}}," Maximum  "}
@@ -14973,7 +14973,7 @@ c["77% increased Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",t
 c["78 Ward Gained when you use a Traversal Skill"]={{[1]={flags=0,keywordFlags=0,name="Ward",type="BASE",value=78}},"  Gained when you use a Traversal Skill "}
 c["78% Increased Damage with Hammer Throw"]={{[1]={[1]={skillName="Hammer Throw",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=78}},"  with  "}
 c["78% Increased Fire Aura Area"]={{[1]={[1]={skillName="Fire Aura",type="SkillName"},flags=0,keywordFlags=0,name="AreaOfEffect",type="INC",value=78}},nil}
-c["78% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["78% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=78}},nil}
 c["78% Increased damage with Smelter's Wrath"]={{[1]={[1]={skillName="Smelter's Wrath",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=78}},"  with  "}
 c["78% Increased spell critical strike chance. This effect is doubled if you have 300 or more maximum mana."]={{[1]={[1]={mult=2,stat="Mana",threshold=300,type="StatThreshold"},flags=0,keywordFlags=256,name="CritChance",type="INC",value=78}},nil}
 c["78% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-78}},"  Cost of s "}
@@ -15055,7 +15055,7 @@ c["8% Increased Elemental Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamag
 c["8% Increased Evade cooldown Duration"]={{[1]={flags=0,keywordFlags=0,name="CooldownRecovery",type="INC",value=8}}," Evade  "}
 c["8% Increased Fire Damage"]={{[1]={flags=0,keywordFlags=0,name="FireDamage",type="INC",value=8}},nil}
 c["8% Increased Fire Damage Over Time"]={{[1]={flags=4104,keywordFlags=0,name="FireDamage",type="INC",value=8}},nil}
-c["8% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["8% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=8}},nil}
 c["8% Increased Health Regen"]={{[1]={flags=0,keywordFlags=0,name="LifeRegen",type="INC",value=8}},nil}
 c["8% Increased Lightning Damage"]={{[1]={flags=0,keywordFlags=0,name="LightningDamage",type="INC",value=8}},nil}
 c["8% Increased Mana regeneration while you control a minion"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="ManaRegen",type="INC",value=8}}}}," eration while you control a  "}
@@ -15232,7 +15232,7 @@ c["85% Increased Crit Chance per Equipped Sword"]={{[1]={[1]={type="Multiplier",
 c["85% Increased Damage while wielding a Bow"]={{[1]={[1]={type="Condition",var="UsingBow"},flags=0,keywordFlags=0,name="Damage",type="INC",value=85}},nil}
 c["85% Increased Damage while wielding a Dagger"]={{[1]={[1]={type="Condition",var="UsingDagger"},flags=0,keywordFlags=0,name="Damage",type="INC",value=85}},nil}
 c["85% Increased Damage while wielding a Sword"]={{[1]={[1]={type="Condition",var="UsingSword"},flags=0,keywordFlags=0,name="Damage",type="INC",value=85}},nil}
-c["85% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["85% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=85}},nil}
 c["85% Increased Mana Cost"]={{[1]={flags=0,keywordFlags=0,name="ManaCost",type="INC",value=85}},nil}
 c["85% More Companion Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="MORE",value=85}}," Companion  "}
 c["85% chance when one of your Skeletons dies to resummon a new one after 3 seconds"]={{}," when one of your Skeletons dies to resummon a new one after 3 seconds "}
@@ -15275,7 +15275,7 @@ c["88% Chance to Slow Attackers"]={{[1]={flags=8388608,keywordFlags=0,name="Chan
 c["88% Chance to cast Marrow Shards when you cast Transplant"]={{[1]={[1]={skillName="Transplant",type="SkillName"},flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_MarrowShards",type="BASE",value=88}},"  when you cast  "}
 c["88% Chance to gain a stack of Reen's Ire for 5 seconds when you crit with a melee attack, up to 30 times per 5 seconds"]={nil,"a stack of Reen's Ire  when you crit with a melee attack, up to 30 times per 5 seconds "}
 c["88% Increased Damage with Dive Bomb"]={{[1]={[1]={skillName="Dive Bomb",type="SkillName"},flags=0,keywordFlags=0,name="Damage",type="INC",value=88}},"  with  "}
-c["88% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["88% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=88}},nil}
 c["88% Increased Skeletal Mage Damage"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=88}}," Skeletal Mage  "}
 c["88% Reduced Health Cost of Spells"]={{[1]={flags=0,keywordFlags=256,name="Life",type="INC",value=-88}},"  Cost of s "}
 c["88% increased Cold Damage"]={{[1]={flags=0,keywordFlags=0,name="ColdDamage",type="INC",value=88}},nil}
@@ -15399,7 +15399,7 @@ c["90% Increased Bleed Duration "]={{[1]={[1]={skillName="Bleed",type="SkillName
 c["90% Increased Bleed Duration for Minions "]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={[1]={skillName="Bleed",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="INC",value=90}}}},"   for s  "}
 c["90% Increased Chance To Find Potions"]={{}," Chance To Find Potions "}
 c["90% Increased Damage for skills used by Shadows"]={{[1]={flags=0,keywordFlags=0,name="Damage",type="INC",value=90}},"  for skills used by Shadows "}
-c["90% Increased Healing Effectiveness"]={{},"  Effectiveness "}
+c["90% Increased Healing Effectiveness"]={{[1]={flags=0,keywordFlags=0,name="HealingEffectiveness",type="INC",value=90}},nil}
 c["90% Increased Melee Stun Chance"]={{},"  Stun Chance "}
 c["90% Increased cold spell damage if you have directly cast a physical spell recently"]={{[1]={flags=0,keywordFlags=257,name="ColdDamage",type="INC",value=90}},"  if you have directly cast a   recently "}
 c["90% Increased physical spell damage if you have directly cast a cold spell recently"]={{[1]={flags=0,keywordFlags=260,name="PhysicalDamage",type="INC",value=90}},"  if you have directly cast a   recently "}

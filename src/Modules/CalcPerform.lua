@@ -1124,7 +1124,7 @@ function calcs.perform(env, fullDPSSkipEHP)
 	end
 
 	-- Defence/offence calculations
-	for _, stat in ipairs({"WardRetention", "Endurance", "EnduranceThreshold", "WardPerSecond", "WardDecayThreshold", "BlockEffectiveness", "StunAvoidance"}) do
+	for _, stat in ipairs({"WardRetention", "Endurance", "EnduranceThreshold", "WardPerSecond", "WardDecayThreshold", "BlockEffectiveness", "StunAvoidance", "HealingEffectiveness"}) do
 		output[stat] = round(calcLib.val(modDB, stat))
 		if breakdown then
 			breakdown[stat] = breakdown.simple(nil, nil, output[stat], stat)

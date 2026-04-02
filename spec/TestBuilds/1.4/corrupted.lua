@@ -170,6 +170,7 @@ return {
     ["FrostShieldLife"] = 0,
     ["FullDPS"] = 54646.2185,
     ["FullLifePercentage"] = 100,
+    ["HealingEffectiveness"] = 108,
     ["HitChance"] = 100,
     ["IgniteAvoidChance"] = 0,
     ["Int"] = 98,
