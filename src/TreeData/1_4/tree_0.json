@@ -14714,9 +14714,6 @@
       ],
       "description": [
         "{Fire Breath}'s cooldown is reduced, and it deals more damage (multiplicative with other modifiers)."
-      ],
-      "reminderText": [
-        "Using a town portal will reset this buff even if you return to the same zone."
       ]
     },
     "srtor-11": {

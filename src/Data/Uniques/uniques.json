@@ -4282,7 +4282,7 @@
     },
     "mods": [
       "+30% Chance to cast stationary fire Tornado at a nearby enemy on hit (up to 2 times per 3 seconds)",
-      "+(50-150)% Chance to shred fire resistance each second with Tornado",
+      "+(50-150)% chance to shred fire resistance each second with Tornado",
       "{rounding:Integer}(40-60)% increased Fire Damage",
       "+(30-50)% Fire Resistance",
       "{rounding:Integer}(20-30)% increased Armor"

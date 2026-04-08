@@ -13017,6 +13017,9 @@
       ],
       "description": [
         "You now shoot arrows attached with Explosive Traps up into the air that then drop down around the target location.\n\nExplosive Trap now scales with your bow damage instead of throwing damage and your bow attack speed instead of throwing attack speed.\n\nThis requires wielding a bow."
+      ],
+      "reminderText": [
+        "When Explosive Trap is a bow skill, it cannot be imitated by shadows."
       ]
     },
     "ex4tp-27": {
