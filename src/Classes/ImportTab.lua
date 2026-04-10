@@ -251,12 +251,16 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
 
         self.importCodeDetail = colorCodes.NEGATIVE .. "Invalid input"
 
-        -- Check if the buffer contains a lastepochtools build
+        -- Check if the buffer contains a lastepochtools build (check if a line contains "fromSaveFile")
         local xmlText
-        if buf:find("window%[\"buildInfo\"%] = ") then
-            -- Change the buffer here to avoid matching url from other parts of the buffer
-            buf = buf:match("window%[\"buildInfo\"%] = (%b{})")
-            xmlText = buf
+        if buf:find("fromSaveFile") then
+            for line in buf:gmatch("([^\n]+)") do
+                if line:find("fromSaveFile") then
+                    -- Change the buffer here to avoid matching url from other parts of the buffer
+                    buf = line:match("%w* = (%b{})")
+                    xmlText = buf
+                end
+            end
         end
 
         local urlText = buf:gsub("^[%s?]+", ""):gsub("[%s?]+$", "") -- Quick Trim
@@ -292,8 +296,13 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
         end
 
         -- Check if the decoded buffer contains a lastepochtools build
-        if xmlText and xmlText:find("window%[\"buildInfo\"%] = ") then
-            xmlText = xmlText:match("window%[\"buildInfo\"%] = (%b{})")
+        if xmlText and xmlText:find("%w* = {\"data\":{\"fromSaveFile\"") then
+            for line in xmlText:gmatch("[^\n]+") do
+                if line:find("fromSaveFile") then
+                    xmlText = line:match("%w* = (%b{})")
+                    break
+                end
+            end
         end
 
         if not xmlText then
@@ -431,7 +440,22 @@ function ImportTabClass:DownloadCharacterListOnline()
             self.charImportMode = "GETACCOUNTNAME"
             return
         end
-        local jsonChars = response.body:match("let accountCharacters = (%b[])")
+        local jsonChars
+        local jsonAccountInfo
+        -- The variable name is random, first split on line, then split on ;
+        for line in response.body:gmatch("([^\n]+)") do
+            if line:find("%[{\"characterName\":\"") then
+                for linePart in line:gmatch("([^;]+)") do
+                    if linePart:find("%[{\"characterName\":\"") then
+                        jsonChars = linePart:match("let %w* = (%b[])")
+                    end
+                    if linePart:find("{\"accountName\":\"") then
+                        jsonAccountInfo = linePart:match("let %w* = (%b{})")
+                    end
+                end
+                break
+            end
+        end
         if not jsonChars then
             self.charImportStatus = colorCodes.NEGATIVE .. "Error processing character list, try again later"
             self.charImportMode = "GETACCOUNTNAME"
@@ -443,7 +467,6 @@ function ImportTabClass:DownloadCharacterListOnline()
             self.charImportMode = "GETACCOUNTNAME"
             return
         end
-        local jsonAccountInfo = response.body:match("let accountInfo = (%b{})")
         if not jsonAccountInfo then
             self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve account info, try again."
             return
@@ -629,7 +652,23 @@ function ImportTabClass:DownloadFromLETools()
             self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve character data, try again."
             return
         end
-        local jsonBuild = response.body:match("let buildInfo = (%b{})")
+        -- The variable name is random, first split on line (containing "fromSaveFile"), then split on ;
+        local jsonBuild
+        local jsonCharInfo
+        for line in response.body:gmatch("([^\n]+)") do
+            if line:find("fromSaveFile") then
+                for linePart in line:gmatch("([^;]+)") do
+                    if linePart:find("fromSaveFile") then
+                        jsonBuild = linePart:match("let %w* = (%b{})")
+                        break
+                    end
+                    if linePart:find("\"accountName\":\"%w*\",\"characterName\":\"%w*\"") then
+                        jsonCharInfo = linePart:match("let %w* = (%b{})")
+                    end
+                end
+                break
+            end
+        end
         if not jsonBuild then
             self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve character data, try again."
             return
@@ -639,7 +678,6 @@ function ImportTabClass:DownloadFromLETools()
             self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve character data, try again."
             return
         end
-        local jsonCharInfo = response.body:match("let charInfo = (%b{})")
         if not jsonCharInfo then
             self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve character info, try again."
             return
