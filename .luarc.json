@@ -18,7 +18,6 @@
     },
     "severity": {
       "need-check-nil": "Information",
-      "codestyle-check": "Information",
       "param-type-mismatch": "Information",
       "undefined-field": "Information",
       "undefined-doc-class": "Information",
@@ -27,9 +26,15 @@
       "inject-field": "Information",
       "assign-type-mismatch": "Information",
       "cast-local-type": "Information"
-    }
+    },
+    "disable": ["lowercase-global"]
   },
   "hint": {
     "enable": true
-  }
+  },
+  "Lua.format.defaultConfig": {
+    "indent_style": "tab",
+    "indent_size": "4"
+  },
+  "workspace.checkThirdParty": false
 }
