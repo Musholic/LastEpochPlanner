@@ -6,6 +6,27 @@ on:
     branches: [dev]
   workflow_dispatch:
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download LuaLS Addons
+        run: |
+          git clone --depth 1 https://github.com/LuaLS/LLS-Addons.git .lls-addons
+          cd .lls-addons
+          git submodule update --init --depth 1 addons/busted
+          git submodule update --init --depth 1 addons/luassert
+          git submodule update --init --depth 1 addons/luafilesystem
+
+      - name: Patch .luarc.json for CI + clean up
+        run: |
+          sed -i 's|${addons}|.lls-addons/addons|g' .luarc.json
+          # Delete the Lua 5.3 specific file so it doesn't break LuaJIT parsing
+          rm -f runtime/lua/sha1/lua53_ops.lua
+      - name: Type Check Code Base
+        uses: mrcjkb/lua-typecheck-action@v1
   run_tests:
     runs-on: ubuntu-latest
     container: ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
