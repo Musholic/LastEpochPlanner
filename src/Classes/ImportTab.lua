@@ -257,7 +257,7 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function(
             for line in buf:gmatch("([^\n]+)") do
                 if line:find("fromSaveFile") then
                     -- Change the buffer here to avoid matching url from other parts of the buffer
-                    buf = line:match("%w* = (%b{})")
+                    buf = line:match("%w* = (%b{})") or line
                     xmlText = buf
                 end
             end
