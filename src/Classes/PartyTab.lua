@@ -180,9 +180,11 @@ local PartyTabClass = newClass("PartyTab", "ControlHost", "Control", function(se
 		-- Parse the XML
 		local dbXML, errMsg = common.xml.ParseXML(self.importCodeXML)
 		if not dbXML then
+			---@diagnostic disable-next-line: undefined-global
 			launch:ShowErrMsg("^1Error loading '%s': %s", fileName, errMsg)
 			return
 		elseif dbXML[1].elem ~= "LastEpochPlanner" then
+			---@diagnostic disable-next-line: undefined-global
 			launch:ShowErrMsg("^1Error parsing '%s': 'LastEpochPlanner' root element missing", fileName)
 			return
 		end
@@ -834,13 +836,6 @@ function PartyTabClass:ParseBuffs(list, buf, buffType, label)
 				for aura, auraMod in pairs(list["AuraDebuff"] or {}) do
 					if not list["Aura"] or not list["Aura"][aura] then
 						if aura ~= "Vaal" then
-							t_insert(labelList, aura..": "..auraMod.effectMult.."%\n")
-						end
-					end
-				end
-				if list["AuraDebuff"] and list["AuraDebuff"]["Vaal"] then
-					if not list["Aura"] or not list["Aura"]["Vaal"] or not list["Aura"]["Vaal"][aura] then
-						for aura, auraMod in pairs(list["AuraDebuff"]["Vaal"]) do
 							t_insert(labelList, aura..": "..auraMod.effectMult.."%\n")
 						end
 					end

@@ -81,7 +81,7 @@ local function doActorLifeMana(actor)
 	local inc = modDB:Sum("INC", nil, "Mana")
 	local more = modDB:More(nil, "Mana")
 	if breakdown then
-		if inc ~= 0 or more ~= 1 or manaConv ~= 0 then
+		if inc ~= 0 or more ~= 1 then
 			breakdown.Mana = { }
 			breakdown.Mana[1] = s_format("%g ^8(base)", base)
 			if inc ~= 0 then
@@ -1088,18 +1088,11 @@ function calcs.perform(env, fullDPSSkipEHP)
 		end
 	end
 
-	-- Check for modifiers to apply to actors affected by player auras or curses
-	for _, value in ipairs(modDB:List(nil, "AffectedByAuraMod")) do
-		for actor in pairs(affectedByAura) do
-			actor.modDB:AddMod(value.mod)
-		end
-	end
-
 	-- Special handling for Dancing Dervish
 	if modDB:Flag(nil, "DisableWeapons") then
 		env.player.weaponData1 = copyTable(env.data.unarmedWeaponData[env.classId])
 		modDB.conditions["Unarmed"] = true
-		if not env.player.Gloves or env.player.Gloves == None then
+		if not env.player.Gloves then
 			modDB.conditions["Unencumbered"] = true
 		end
 	elseif env.weaponModList1 then

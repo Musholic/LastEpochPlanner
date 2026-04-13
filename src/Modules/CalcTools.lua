@@ -134,7 +134,7 @@ end
 --- Correct the tags on conversion with multipliers so they carry over correctly
 --- @param mod table
 --- @param multiplier number
---- @param minionMods bool @convert ActorConditions pointing at parent to normal Conditions
+--- @param minionMods boolean? @convert ActorConditions pointing at parent to normal Conditions
 --- @return table @converted multipliers
 function calcLib.getConvertedModTags(mod, multiplier, minionMods)
 	local modifiers = { }
@@ -151,34 +151,4 @@ function calcLib.getConvertedModTags(mod, multiplier, minionMods)
 		end
 	end
 	return modifiers
-end
-
---- Get the gameId from the gemName which will be the same as the base gem for transfigured gems
---- @param gemName string
---- @param dropVaal boolean
---- @return string
-function calcLib.getGameIdFromGemName(gemName, dropVaal)
-	if type(gemName) ~= "string" then
-		return
-	end
-	local gemId = data.gemForBaseName[gemName:lower()]
-	if not gemId then return end
-	local gameId 
-	if dropVaal and data.gems[gemId].vaalGem then
-		gameId = data.gems[data.gemVaalGemIdForBaseGemId[gemId]].gameId
-	else
-		gameId = data.gems[gemId].gameId
-	end
-	return gameId
-end
-
---- Use getGameIdFromGemName to get gameId from the gemName and passed in type. Return true if they're the same and not nil
---- @param gemName string
---- @param type string
---- @param dropVaal boolean 
---- @return boolean
-function calcLib.isGemIdSame(gemName, typeName, dropVaal)
-	local gemNameId = calcLib.getGameIdFromGemName(gemName, dropVaal)
-	local typeId = calcLib.getGameIdFromGemName(typeName, dropVaal)
-	return gemNameId and typeId and gemNameId == typeId
 end

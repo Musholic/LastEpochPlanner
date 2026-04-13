@@ -1401,7 +1401,7 @@ function ItemsTabClass:AddImplicitToDisplayItem()
 	local modList = { }
 	local modGroups = {}
 	---Mutates modList to contain mods from the specified source
-	---@param sourceId string @The crafting source id to build the list of mods for
+	---param sourceId string @The crafting source id to build the list of mods for
 	t_insert(sourceList, { label = "Custom", sourceId = "CUSTOM" })
 	local function addModifier()
 		local item = new("Item", self.displayItem:BuildRaw())
@@ -1424,7 +1424,8 @@ function ItemsTabClass:AddImplicitToDisplayItem()
 	controls.source = new("DropDownControl", {"TOPLEFT",nil,"TOPLEFT"}, 100, 20, 150, 18, sourceList, function(index, value)
 		if value.sourceId ~= "CUSTOM" then
 			controls.modSelectLabel.y = 70
-			buildMods(value.sourceId)
+			-- TODO: fix
+			-- buildMods(value.sourceId)
 			controls.modGroupSelect:SetSel(1)
 			controls.modSelect.list = modList[modGroups[1].modListIndex]
 			controls.modSelect:SetSel(1)

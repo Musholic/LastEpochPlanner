@@ -244,6 +244,7 @@ function ItemDBClass:ListBuilder()
 				end
 			end
 		end
+		return false
 	end)
 
 	self.list = list

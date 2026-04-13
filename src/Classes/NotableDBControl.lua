@@ -240,7 +240,7 @@ function NotableDBClass:GetRowValue(column, index, node)
 	end
 end
 
----@param tooltip Tooltip
+---@param tooltip tooltip
 ---@param index number
 ---@param node table
 function NotableDBClass:AddValueTooltip(tooltip, index, node)
@@ -291,5 +291,5 @@ end
 ---@param index number
 ---@param node table
 function NotableDBClass:OnSelCopy(index, node)
-	Copy(item.dn)
+	--Copy(item.dn)
 end

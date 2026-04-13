@@ -50,13 +50,6 @@ function calcs.buildModListForNode(env, node)
 		modList = scaledList
 	end
 
-	if modList:Flag(nil, "PassiveSkillHasOtherEffect") then
-		for i, mod in ipairs(modList:List(skillCfg, "NodeModifier")) do
-			if i == 1 then wipeTable(modList) end
-			modList:AddMod(mod.mod)
-		end
-	end
-
 	node.grantedSkills = { }
 	for _, skill in ipairs(modList:List(nil, "ExtraSkill")) do
 		if skill.name ~= "Unknown" then

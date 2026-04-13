@@ -680,7 +680,7 @@ function buildMode:ReadLeToolsSave(saveContent)
     		local affixTier = affixData.tier - 1
     		local modId = affixId .. "_" .. affixTier
     		local modData = data.itemMods.Item[modId]
-    		local range = (affixData.r or defaultItemAffixQuality)
+    		local range = (affixData.r or main.defaultItemAffixQuality)
             local itemAffix = { ["range"] = range, ["modId"] = modId }
 
             if attribute == "sealed" then

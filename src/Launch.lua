@@ -246,7 +246,7 @@ end
 ---Download the given page in the background, and calls the provided callback function when done:
 ---@param url string
 ---@param callback fun(response:table, errMsg:string) @ response = { header, body }
----@param params table @ params = { header, body }
+---@param params? table @ params = { header, body }
 function launch:DownloadPage(url, callback, params)
 	params = params or {}
 	local script = [[
@@ -357,7 +357,7 @@ end
 
 function launch:ShowErrMsg(fmt, ...)
 	if not self.promptMsg then
-		local version = self.versionNumber and 
+		local version = self.versionNumber and
 			"^8v"..self.versionNumber..(self.versionBranch and " "..self.versionBranch or "")
 			or ""
 		self:ShowPrompt(1, 0, 0, "^1Error:\n\n^0"..string.format(fmt, ...).."\n"..version.."\n^0Press Enter/Escape to dismiss, or F5 to restart the application.")

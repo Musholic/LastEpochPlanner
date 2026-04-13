@@ -79,7 +79,7 @@ local function calcDamage(activeSkill, output, cfg, breakdown, damageType, typeF
 	local baseDmg = output[damageType.."DamageBase"]
 	if baseDmg == 0 then
 		-- No base damage for this type, don't need to calculate modifiers
-		if breakdown and (addDmg ~= 0 or addMax ~= 0) then
+		if breakdown and addDmg ~= 0 then
 			t_insert(breakdown.damageTypes, {
 				source = damageType,
 				convSrc = (addDmg ~= 0) and (addDmg .. ""),
@@ -1099,7 +1099,7 @@ function calcs.offence(env, actor, activeSkill)
 		output.Cooldown = cooldown
 		if breakdown then
 			breakdown.Cooldown = {
-				s_format("%.2fs ^8(base)", skillData.cooldown or 0 + addedCooldown),
+				s_format("%.2fs ^8(base)", skillData.cooldown or (0 + addedCooldown)),
 				s_format("/ %.2f ^8(increased/reduced cooldown recovery)", 1 + skillModList:Sum("INC", skillCfg, "CooldownRecovery") / 100),
 			}
 			t_insert(breakdown.Cooldown, s_format("= %.3fs", output.Cooldown))
@@ -1687,9 +1687,6 @@ function calcs.offence(env, actor, activeSkill)
 		breakdown.SustainableTrauma = storedSustainedTraumaBreakdown
 	end
 	output.SustainableTrauma = skillModList:Flag(nil, "HasTrauma") and skillModList:Sum("BASE", skillCfg, "Multiplier:SustainableTraumaStacks")
-	--Mantra of Flames buff count
-	modDB.multipliers["BuffOnSelf"] = (modDB.multipliers["BuffOnSelf"] or 0) + skillModList:Sum("BASE", cfg, "Multiplier:TraumaStacks")
-	modDB.multipliers["BuffOnSelf"] = (modDB.multipliers["BuffOnSelf"] or 0) + skillModList:Sum("BASE", cfg, "Multiplier:VoltaxicWaitingStages")
 	if breakdown then
 		if skillData.hitTimeOverride and not skillData.triggeredOnDeath then
 			breakdown.HitSpeed = { }
@@ -2611,16 +2608,10 @@ function calcs.offence(env, actor, activeSkill)
 
 		-- Calculate average damage and final DPS
 		output.AverageHit = totalHitAvg * (1 - output.CritChance / 100) + totalCritAvg * output.CritChance / 100
-		if skillFlags.monsterExplode then
-			output.AverageHitToMonsterLifePercentage = output.AverageHit / monsterLife * 100
-			if skillData.hitChanceIsExplodeChance then
-				output.HitChance = output.ExplodeChance
-			end
-		end
 		output.AverageDamage = output.AverageHit * output.HitChance / 100
 		globalOutput.AverageBurstHits = output.AverageBurstHits or 1
 		local repeatPenalty = skillModList:Flag(nil, "HasSeals") and activeSkill.skillTypes[SkillType.CanRapidFire]  and not skillModList:Flag(nil, "NoRepeatBonuses") and calcLib.mod(skillModList, skillCfg, "SealRepeatPenalty") or 1
-		globalOutput.AverageBurstDamage = output.AverageDamage + output.AverageDamage * (globalOutput.AverageBurstHits - 1) * repeatPenalty or 0
+		globalOutput.AverageBurstDamage = output.AverageDamage + output.AverageDamage * (globalOutput.AverageBurstHits - 1) * repeatPenalty
 		globalOutput.ShowBurst = globalOutput.AverageBurstHits > 1
 
 		output.TotalDPS = output.AverageDamage * skillData.dpsMultiplier
@@ -3100,9 +3091,6 @@ function calcs.offence(env, actor, activeSkill)
 		end
 	else
 		output.WithIgniteDPS = baseDPS
-	end
-	if skillFlags.monsterExplode then
-		output.CombinedAvgToMonsterLife = output.CombinedAvg / monsterLife * 100
 	end
 	if skillFlags.bleed then
 		if skillData.showAverage then

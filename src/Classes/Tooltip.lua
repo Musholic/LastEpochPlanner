@@ -122,24 +122,6 @@ function TooltipClass:CalculateColumns(ttY, ttX, ttH, ttW, viewPort)
 	local drawStack = {}
 
 	for i, data in ipairs(self.lines) do
-		if self.recipe and i == 1 then
-			local title = self.lines[1]
-			local imageX = DrawStringWidth(title.size, "VAR", title.text) + title.size
-			local recipeTextSize = (title.size * 3) / 4
-			for _, recipeName in ipairs(self.recipe) do
-				-- Trim "Oil" from the recipe name, which normally looks like "GoldenOil"
-				local recipeNameShort = recipeName
-				if #recipeNameShort > 3 and recipeNameShort:sub(-3) == "Oil" then
-					recipeNameShort = recipeNameShort:sub(1, #recipeNameShort - 3)
-				end
-				-- Draw the name of the recipe component (oil)
-				t_insert(drawStack, {ttX + imageX, y + (title.size - recipeTextSize)/2, "LEFT", recipeTextSize, "VAR", recipeNameShort})
-				imageX = imageX + DrawStringWidth(recipeTextSize, "VAR", recipeNameShort)
-				-- Draw the image of the recipe component (oil)
-				t_insert(drawStack, {recipeImages[recipeName], ttX + imageX, y, title.size, title.size})
-				imageX = imageX + title.size * 1.25
-			end
-		end
 		if data.text then
 			-- if data + borders is going to go outside of the viewPort
 			if currentBlock ~= data.block and self.blocks[data.block].height + y > ttY + math.min(ttH, viewPort.height) then

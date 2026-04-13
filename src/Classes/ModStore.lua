@@ -529,7 +529,7 @@ function ModStoreClass:EvalMod(mod, cfg)
 				end
 			else
 				if tag.neg and allOneH and allOneH["Added"..tag.var] ~= nil then
-					if not allOneH["Added"..var] then
+					if not allOneH["Added"..tag.var] then
 						return
 					end
 				else

@@ -69,7 +69,7 @@ function GetAsyncCount()
 end
 
 -- Search Handles
-function NewFileSearch() end
+function NewFileSearch(path, dirOnly) end
 
 -- General Functions
 function SetWindowTitle(title) end
@@ -147,7 +147,7 @@ function SpawnProcess(cmdName, args) end
 function OpenURL(url) end
 function SetProfiling(isEnabled) end
 function Restart() end
-function Exit() end
+function Exit(errMsg) end
 
 local l_require = require
 function require(name)
@@ -167,6 +167,7 @@ runCallback("OnFrame") -- Need at least one frame for everything to initialise
 if mainObject.promptMsg then
 	-- Something went wrong during startup
 	print(mainObject.promptMsg)
+	---@diagnostic disable-next-line: discard-returns
 	io.read("*l")
 	return
 end

@@ -1,0 +1,35 @@
+{
+  "runtime": {
+    "version": "LuaJIT"
+  },
+  "workspace": {
+    "library": [
+      "runtime/lua",
+      "${addons}/busted/module/library",
+      "${addons}/luassert/module/library",
+      "${addons}/luafilesystem/module/library"
+    ],
+    "ignoreDir": ["runtime"]
+  },
+  "diagnostics": {
+    "globals": ["UpdateProgress"],
+    "neededFileStatus": {
+      "codestyle-check": "Opened"
+    },
+    "severity": {
+      "need-check-nil": "Information",
+      "codestyle-check": "Information",
+      "param-type-mismatch": "Information",
+      "undefined-field": "Information",
+      "undefined-doc-class": "Information",
+      "undefined-doc-name": "Information",
+      "missing-return": "Information",
+      "inject-field": "Information",
+      "assign-type-mismatch": "Information",
+      "cast-local-type": "Information"
+    }
+  },
+  "hint": {
+    "enable": true
+  }
+}

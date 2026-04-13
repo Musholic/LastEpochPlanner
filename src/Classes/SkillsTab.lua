@@ -73,65 +73,6 @@ local SkillsTabClass = newClass("SkillsTab", "UndoHandler", "ControlHost", "Cont
 		self:AddUndoState()
 		self.build.buildFlag = true
 	end)
-	self.controls.groupSlotLabel = new("LabelControl", { "TOPLEFT", self.anchorGroupDetail, "TOPLEFT" }, 0, 30, 0, 16, "^7Socketed in:")
-	self.controls.groupSlot = new("DropDownControl", { "TOPLEFT", self.anchorGroupDetail, "TOPLEFT" }, 85, 28, 130, 20, groupSlotDropList, function(index, value)
-		self.displayGroup.slot = value.slotName
-		self:AddUndoState()
-		self.build.buildFlag = true
-	end)
-	self.controls.groupSlot.tooltipFunc = function(tooltip, mode, index, value)
-		tooltip:Clear()
-		if mode == "OUT" or index == 1 then
-			tooltip:AddLine(16, "Select the item in which this skill is socketed.")
-			tooltip:AddLine(16, "This will allow the skill to benefit from modifiers on the item that affect socketed gems.")
-		else
-			local slot = self.build.itemsTab.slots[value.slotName]
-			local ttItem = self.build.itemsTab.items[slot.selItemId]
-			if ttItem then
-				self.build.itemsTab:AddItemTooltip(tooltip, ttItem, slot)
-			else
-				tooltip:AddLine(16, "No item is equipped in this slot.")
-			end
-		end
-	end
-	self.controls.groupSlot.enabled = function()
-		return self.displayGroup.source == nil
-	end
-	self.controls.sourceNote = new("LabelControl", { "TOPLEFT", self.controls.groupSlotLabel, "TOPLEFT" }, 0, 30, 0, 16)
-	self.controls.sourceNote.shown = function()
-		return self.displayGroup.source ~= nil
-	end
-	self.controls.sourceNote.label = function()
-		local label
-		if self.displayGroup.explodeSources then
-			label = [[^7This is a special group created for the enemy explosion effect,
-which comes from the following sources:]]
-			for _, source in ipairs(self.displayGroup.explodeSources) do
-				label = label .. "\n\t" .. colorCodes[source.rarity or "NORMAL"] .. (source.name or source.dn or "???")
-			end
-			label = label .. "^7\nYou cannot delete this group, but it will disappear if you lose the above sources."
-		else
-			local activeGem = self.displayGroup.gemList[1]
-			local sourceName
-			if self.displayGroup.sourceItem then
-				sourceName = "'" .. colorCodes[self.displayGroup.sourceItem.rarity] .. self.displayGroup.sourceItem.name
-			elseif self.displayGroup.sourceNode then
-				sourceName = "'" .. colorCodes["NORMAL"] .. self.displayGroup.sourceNode.name
-			else
-				sourceName = "'" .. colorCodes["NORMAL"] .. "?"
-			end
-			sourceName = sourceName .. "^7'"
-			label = [[^7This is a special group created for the ']] .. activeGem.color .. (activeGem.grantedEffect and activeGem.grantedEffect.name or activeGem.nameSpec) .. [[^7' skill,
-which is being provided by ]] .. sourceName .. [[.
-You cannot delete this group, but it will disappear if you ]] .. (self.displayGroup.sourceNode and [[un-allocate the node.]] or [[un-equip the item.]])
-			if not self.displayGroup.noSupports then
-				label = label .. "\n\n" .. [[You cannot add support gems to this group, but support gems in
-any other group socketed into ]] .. sourceName .. [[
-will automatically apply to the skill.]]
-			end
-		end
-		return label
-	end
 
 	-- Scroll bar
 	self.controls.scrollBarH = new("ScrollBarControl", nil, 0, 0, 0, 18, 100, "HORIZONTAL", true)
@@ -178,28 +119,6 @@ function SkillsTabClass:InitSkillControl(i)
 	if i > 5 then
 		self.controls['includeInFullDPS-'..i].enabled = false
 	end
-end
-
--- parse real gem name and quality by omitting the first word if alt qual is set
-function SkillsTabClass:GetBaseNameAndQuality(gemTypeLine, quality)
-	gemTypeLine = sanitiseText(gemTypeLine)
-	-- if quality is default or nil check the gem type line if we have alt qual by comparing to the existing list
-	if gemTypeLine and (quality == nil or quality == "" or quality == "Default") then
-		local firstword, otherwords = gemTypeLine:match("(%w+)%s(.+)")
-		if firstword and otherwords then
-			for _, entry in ipairs(alternateGemQualityList) do
-				if firstword == entry.label then
-					-- return the gem name minus <altqual> without a leading space and the new resolved type
-					if entry.type == nil or entry.type == "" then
-						entry.type = "Default"
-					end
-					return otherwords, entry.type
-				end
-			end
-		end
-	end
-	-- no alt qual found, return gemTypeLine as is and either existing quality or Default if none is set
-	return gemTypeLine, quality or "Default"
 end
 
 function SkillsTabClass:LoadSkill(node, skillSetId)
@@ -365,17 +284,6 @@ function SkillsTabClass:Draw(viewPort, inputEvents)
 	self:DrawControls(viewPort)
 end
 
-function SkillsTabClass:getGemAltQualityList(gemData)
-	local altQualList = { }
-
-	for indx, entry in ipairs(alternateGemQualityList) do
-		if gemData and (gemData.grantedEffect.qualityStats and gemData.grantedEffect.qualityStats[entry.type] or (gemData.secondaryGrantedEffect and gemData.secondaryGrantedEffect.qualityStats and gemData.secondaryGrantedEffect.qualityStats[entry.type])) then
-			t_insert(altQualList, entry)
-		end
-	end
-	return #altQualList > 0 and altQualList or {{ label = "Default", type = "Default" }}
-end
-
 -- Find the skill gem matching the given specification
 function SkillsTabClass:FindSkillGem(nameSpec)
 	-- Search for gem name using increasingly broad search patterns
@@ -439,7 +347,7 @@ function SkillsTabClass:ProcessSocketGroup(socketGroup)
 	gemInstance.color = "^8"
 	gemInstance.nameSpec = gemInstance.nameSpec or ""
 	local prevDefaultLevel = gemInstance.gemData and gemInstance.gemData.naturalMaxLevel or (gemInstance.new and 20)
-	gemInstance.gemData, gemInstance.grantedEffect = nil
+	gemInstance.gemData, gemInstance.grantedEffect = nil, nil
 	if gemInstance.gemId then
 		-- Specified by gem ID
 		-- Used for skills granted by skill gems
@@ -464,7 +372,7 @@ function SkillsTabClass:ProcessSocketGroup(socketGroup)
 			gemInstance.nameSpec = gemInstance.gemData.name
 		end
 	else
-		gemInstance.errMsg, gemInstance.gemData, gemInstance.skillId = nil
+		gemInstance.errMsg, gemInstance.gemData, gemInstance.skillId = nil, nil, nil
 	end
 	if gemInstance.gemData and gemInstance.gemData.grantedEffect.unsupported then
 		gemInstance.errMsg = gemInstance.nameSpec .. " is not supported yet"

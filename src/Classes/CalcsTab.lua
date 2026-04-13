@@ -141,7 +141,7 @@ function CalcsTabClass:Load(xml, dbFileName)
 		if type(node) == "table" then
 			if node.elem == "Input" then
 				if not node.attrib.name then
-					launch:ShowErrMsg("^1Error parsing '%s': 'Input' element missing name attribute", fileName)
+					launch:ShowErrMsg("^1Error parsing '%s': 'Input' element missing name attribute", dbFileName)
 					return true
 				end
 				if node.attrib.number then
@@ -151,12 +151,12 @@ function CalcsTabClass:Load(xml, dbFileName)
 				elseif node.attrib.boolean then
 					self.input[node.attrib.name] = node.attrib.boolean == "true"
 				else
-					launch:ShowErrMsg("^1Error parsing '%s': 'Input' element missing number, string or boolean attribute", fileName)
+					launch:ShowErrMsg("^1Error parsing '%s': 'Input' element missing number, string or boolean attribute", dbFileName)
 					return true
 				end
 			elseif node.elem == "Section" then
 				if not node.attrib.id then
-					launch:ShowErrMsg("^1Error parsing '%s': 'Section' element missing id attribute", fileName)
+					launch:ShowErrMsg("^1Error parsing '%s': 'Section' element missing id attribute", dbFileName)
 					return true
 				end
 				for _, section in ipairs(self.sectionList) do

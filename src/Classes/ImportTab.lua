@@ -691,7 +691,7 @@ function ImportTabClass:DownloadFromLETools()
         charSelect.list[charSelect.selIndex].char = self.build:ReadLeToolsSave(buildInfo.data)
         charSelect.list[charSelect.selIndex].char.name = charData.name
         self.charImportStatus = colorCodes.POSITIVE .. "Build info successfully downloaded. ".. colorCodes.NORMAL .. "Last update was on " .. lastFetched .. colorCodes.NEGATIVE .. "\n\tManually click on source link to trigger an update"
-    end, sessionID and { header = "Cookie: POESESSID=" .. sessionID })
+    end)
 end
 
 function ImportTabClass:DownloadPassiveTree()

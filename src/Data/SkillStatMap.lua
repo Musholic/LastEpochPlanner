@@ -1619,9 +1619,6 @@ local result = {
 ["mine_detonation_radius_+%"] = {
 	mod("MineDetonationAreaOfEffect", "INC", nil),
 },
-["mine_throwing_speed_+%_per_frenzy_charge"] = {
-	mod("MineLayingSpeed", "INC", nil, 0, 0, { type = "Multiplier", var = "FrenzyCharge" }),
-},
 ["remote_mined_by_support"] = {
 	flag("ManaCostGainAsReservation"),
 	flag("LifeCostGainAsReservation"),

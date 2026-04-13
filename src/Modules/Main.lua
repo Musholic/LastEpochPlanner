@@ -144,7 +144,7 @@ function main:Init()
 			if newItem.base then
 				self.uniqueDB.list[itemData.name] = newItem
 			elseif launch.devMode then
-				ConPrintf("Unique DB unrecognised item of type '%s':\n%s", type, raw)
+				ConPrintf("Unique DB unrecognised item of type '%s':\n%s", baseTypeID, itemData.name)
 			end
 		end
 

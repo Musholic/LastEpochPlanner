@@ -235,7 +235,7 @@ end
 ---@param text string
 ---@return string
 function sanitiseText(text)
-	if not text then return nil end
+	if not text then return "" end
 	-- Something something unicode support something grumble
 	-- Only do these replacements if a char from 128-255 or '<' is found first
 	return text:find("[\128-\255<]") and text
@@ -718,12 +718,6 @@ function formatNumSep(str)
 		end
 		return colour..minus..integer..fraction:gsub("%.", main.decimalSeparator)
 	end)
-end
-
-function getFormatNumSep(dec)
-	return function(val)
-		return formatNumSep(val, dec)
-	end
 end
 
 -- Formats 1234.56 -> "1234.6" [dec=1]
