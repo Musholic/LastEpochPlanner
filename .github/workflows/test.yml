@@ -29,7 +29,29 @@ jobs:
           # Delete the ModCache which slows down type checking
           rm -f src/Data/ModCache.lua
       - name: Type Check Code Base
-        run: lua-language-server --check .
+        run: lua-language-server --check . --check_format=json --logpath=.
+      - name: Annotate GitHub PR from check.json
+        if: always()
+        run: |
+          LOG_FILE="check.json"
+          if [ -f "$LOG_FILE" ]; then
+            cat $LOG_FILE | jq -r --arg ws "$GITHUB_WORKSPACE" '
+              to_entries[] |
+              # 1. Strip "file://..." prefix and convert to relative path
+              (.key | sub("file://"; "") | ltrimstr($ws) | ltrimstr("/")) as $file |
+
+              # 2. Iterate over issues
+              .value[] |
+              # 3. Map LSP severity (1:Error, 2:Warning) to GH format
+              (if .severity == 1 then "error" else "warning" end) as $sev |
+
+              # 4. Convert 0-indexed LSP (line 55, char 0) to 1-indexed GH (line 56, col 1)
+              # GitHub requires line and col. Optional: endLine, endColumn
+              "::\($sev) file=\($file),line=\(.range.start.line + 1),col=\(.range.start.character + 1),endLine=\(.range.end.line + 1),endColumn=\(.range.end.character + 1)::\($file): \(.message) (code: \(.code))"
+            '
+          else
+            echo "::warning::check.json not found, skipping annotations."
+          fi
   run_tests:
     runs-on: ubuntu-latest
     container: ghcr.io/musholic/lastepochplanner-tests:latest
