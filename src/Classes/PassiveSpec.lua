@@ -16,7 +16,7 @@ local b_rshift = bit.rshift
 local band = bit.band
 local bor = bit.bor
 
-local PassiveSpecClass = newClass("PassiveSpec", "UndoHandler", function(self, build, treeVersion, convert)
+local PassiveSpecClass = newClass("PassiveSpec", "UndoHandler", function (self, build, treeVersion, convert)
 	self.UndoHandler()
 
 	self.build = build
@@ -30,22 +30,19 @@ end)
 function PassiveSpecClass:Init(treeVersion, convert)
 	self.treeVersion = treeVersion
 	self.tree = main:LoadTree(treeVersion)
-	self.ignoredNodes = { }
+	self.ignoredNodes = {}
 	self.ignoreAllocatingSubgraph = false
-	local previousTreeNodes = { }
+	local previousTreeNodes = {}
 	if convert then
 		previousTreeNodes = self.build.spec.nodes
 	end
 
 	-- Make a local copy of the passive tree that we can modify
-	self.nodes = { }
+	self.nodes = {}
 	for _, treeNode in pairs(self.tree.nodes) do
 		-- Exclude proxy or groupless nodes
 		if not treeNode.isProxy then
-			self.nodes[treeNode.id] = setmetatable({
-				linked = { },
-				power = { }
-			}, treeNode)
+			self.nodes[treeNode.id] = setmetatable({ linked = {}, power = {} }, treeNode)
 		end
 	end
 	for id, node in pairs(self.nodes) do
@@ -60,10 +57,10 @@ function PassiveSpecClass:Init(treeVersion, convert)
 
 	-- List of currently allocated nodes
 	-- Keys are node IDs, values are nodes
-	self.allocNodes = { }
+	self.allocNodes = {}
 
 	-- Keys are node IDs, values are the replacement node
-	self.hashOverrides = { }
+	self.hashOverrides = {}
 end
 
 function PassiveSpecClass:Load(xml, dbFileName)
@@ -91,11 +88,11 @@ function PassiveSpecClass:Load(xml, dbFileName)
 			launch:ShowErrMsg("^1Error parsing '%s': 'Spec' element missing 'ascendClassId' attribute", dbFileName)
 			return true
 		end
-		local hashList = { }
+		local hashList = {}
 		for hash in xml.attrib.nodes:gmatch("[^,]+") do
 			t_insert(hashList, hash)
 		end
-		local masteryEffects = { }
+		local masteryEffects = {}
 		if xml.attrib.masteryEffects then
 			for mastery, effect in xml.attrib.masteryEffects:gmatch("{(%d+),(%d+)}") do
 				masteryEffects[tonumber(mastery)] = tonumber(effect)
@@ -106,13 +103,14 @@ function PassiveSpecClass:Load(xml, dbFileName)
 				if node.elem == "Overrides" then
 					for _, child in ipairs(node) do
 						if not child.attrib.nodeId then
-							launch:ShowErrMsg("^1Error parsing '%s': 'Override' element missing 'nodeId' attribute", dbFileName)
+							launch:ShowErrMsg("^1Error parsing '%s': 'Override' element missing 'nodeId' attribute",
+								dbFileName)
 							return true
 						end
 
 						local nodeId = child.attrib.nodeId
 						self.hashOverrides[nodeId] = {}
-						for _,stats in ipairs(child) do
+						for _, stats in ipairs(child) do
 							for line in stats:gmatch("([^\n]*)\n?") do
 								local strippedLine = StripEscapes(line):gsub("^[%s?]+", ""):gsub("[%s?]+$", "")
 								if strippedLine ~= "" then
@@ -124,7 +122,8 @@ function PassiveSpecClass:Load(xml, dbFileName)
 				end
 			end
 		end
-		self:ImportFromNodeList(tonumber(xml.attrib.classId), tonumber(xml.attrib.ascendClassId), nil, hashList, self.hashOverrides)
+		self:ImportFromNodeList(tonumber(xml.attrib.classId), tonumber(xml.attrib.ascendClassId), nil, hashList,
+			self.hashOverrides)
 	elseif url then
 		self:DecodeURL(url)
 	end
@@ -132,7 +131,7 @@ function PassiveSpecClass:Load(xml, dbFileName)
 end
 
 function PassiveSpecClass:Save(xml)
-	local allocNodeIdList = { }
+	local allocNodeIdList = {}
 	for nodeId in pairsSortByKey(self.allocNodes) do
 		t_insert(allocNodeIdList, nodeId .. "#" .. self.nodes[nodeId].alloc)
 	end
@@ -145,9 +144,7 @@ function PassiveSpecClass:Save(xml)
 		nodes = table.concat(allocNodeIdList, ","),
 	}
 
-	local overrides = {
-		elem = "Overrides"
-	}
+	local overrides = { elem = "Overrides" }
 	if self.hashOverrides then
 		for nodeId, node in pairs(self.hashOverrides) do
 			local override = { elem = "Override", attrib = { nodeId = tostring(nodeId) } }
@@ -158,7 +155,6 @@ function PassiveSpecClass:Save(xml)
 		end
 	end
 	t_insert(xml, overrides)
-
 end
 
 function PassiveSpecClass:PostLoad()
@@ -166,7 +162,7 @@ end
 
 -- Import passive spec from the provided class IDs and node hash list
 function PassiveSpecClass:ImportFromNodeList(classId, ascendClassId, abilities, hashList, hashOverrides, treeVersion)
-  if hashOverrides == nil then hashOverrides = {} end
+	if hashOverrides == nil then hashOverrides = {} end
 	if treeVersion and treeVersion ~= self.treeVersion then
 		self:Init(treeVersion)
 		self.build.treeTab.showConvert = self.treeVersion ~= latestTreeVersion
@@ -222,7 +218,7 @@ end
 function PassiveSpecClass:DecodePoePlannerURL(url, return_tree_version_only)
 	-- poeplanner uses little endian numbers (GGG using BIG).
 	-- If return_tree_version_only is True, then the return value will either be an error message or the tree version.
-	   -- both error messages begin with 'Invalid'
+	-- both error messages begin with 'Invalid'
 	local function byteToInt(bytes, start)
 		-- get a little endian number from two bytes
 		return bytes:byte(start) + bytes:byte(start + 1) * 256
@@ -232,8 +228,7 @@ function PassiveSpecClass:DecodePoePlannerURL(url, return_tree_version_only)
 		-- Translates internal tree version to GGG version.
 		-- Limit poeplanner tree imports to recent versions.
 		tree_versions = { -- poeplanner ID: GGG version
-			[27] = 22, [26] = 21, [25] = 20, [24] = 19, [23] = 18,
-			}
+			[27] = 22, [26] = 21, [25] = 20, [24] = 19, [23] = 18, }
 		if tree_versions[minor] then
 			return tree_versions[minor]
 		else
@@ -241,26 +236,26 @@ function PassiveSpecClass:DecodePoePlannerURL(url, return_tree_version_only)
 		end
 	end
 
-	local b = common.base64.decode(url:gsub("^.+/",""):gsub("-","+"):gsub("_","/"))
+	local b = common.base64.decode(url:gsub("^.+/", ""):gsub("-", "+"):gsub("_", "/"))
 	if not b or #b < 15 then
 		return "Invalid tree link (unrecognised format)."
 	end
 	-- Quick debug for when we change tree versions. Print the first 20 or so bytes
 	-- s = ""
 	-- for i = 1, 20 do
-		-- s = s..i..":"..string.format('%02X ', b:byte(i))
+	-- s = s..i..":"..string.format('%02X ', b:byte(i))
 	-- end
 	-- print(s)
 
 	-- 4-7 is tree version.version
-	major_version = byteToInt(b,4)
-	minor_version = translatePoepToGggTreeVersion(byteToInt(b,6))
+	major_version = byteToInt(b, 4)
+	minor_version = translatePoepToGggTreeVersion(byteToInt(b, 6))
 	-- If we only want the tree version, exit now
 	if minor_version < 0 then
 		return "Invalid tree version found in link."
 	end
 	if return_tree_version_only then
-		return major_version.."_"..minor_version
+		return major_version .. "_" .. minor_version
 	end
 
 	-- 8 is Class, 9 is Ascendancy
@@ -280,14 +275,14 @@ function PassiveSpecClass:DecodePoePlannerURL(url, return_tree_version_only)
 	idx = 11
 	local nodesCount = byteToInt(b, idx)
 	local nodesEnd = idx + 2 + (nodesCount * 2)
-	local nodes = b:sub(idx  + 2, nodesEnd - 1)
+	local nodes = b:sub(idx + 2, nodesEnd - 1)
 	-- print("idx + 2 , nodesEnd, nodesCount, len(nodes)", idx + 2, nodesEnd, nodesCount, #nodes)
 	self:AllocateDecodedNodes(nodes, false, "little")
 
 	idx = nodesEnd
 	local clusterCount = byteToInt(b, idx)
 	local clusterEnd = idx + 2 + (clusterCount * 2)
-	local clusterNodes = b:sub(idx  + 2, clusterEnd - 1)
+	local clusterNodes = b:sub(idx + 2, clusterEnd - 1)
 	-- print("idx + 2 , clusterEnd, clusterCount, len(clusterNodes)", idx + 2, clusterEnd, clusterCount, #clusterNodes)
 	self:AllocateDecodedNodes(clusterNodes, true, "little")
 
@@ -295,33 +290,33 @@ function PassiveSpecClass:DecodePoePlannerURL(url, return_tree_version_only)
 	idx = clusterEnd
 	local ascendancyCount = byteToInt(b, idx)
 	local ascendancyEnd = idx + 2 + (ascendancyCount * 2)
-	local ascendancyNodes = b:sub(idx  + 2, ascendancyEnd - 1)
+	local ascendancyNodes = b:sub(idx + 2, ascendancyEnd - 1)
 	-- print("idx + 2 , ascendancyEnd, ascendancyCount, len(ascendancyNodes)", idx + 2, ascendancyEnd, ascendancyCount, #ascendancyNodes)
 	self:AllocateDecodedNodes(ascendancyNodes, false, "little")
 
 	idx = ascendancyEnd
 	local masteryCount = byteToInt(b, idx)
 	local masteryEnd = idx + 2 + (masteryCount * 4)
-	local masteryEffects = b:sub(idx  + 2, masteryEnd - 1)
+	local masteryEffects = b:sub(idx + 2, masteryEnd - 1)
 	-- print("idx + 2 , masteryEnd, masteryCount, len(masteryEffects)", idx + 2, masteryEnd, masteryCount, #masteryEffects)
 	self:AllocateMasteryEffects(masteryEffects, "little")
 end
 
 -- Decode the given GGG passive tree URL
 function PassiveSpecClass:DecodeURL(url)
-	local b = common.base64.decode(url:gsub("^.+/",""):gsub("-","+"):gsub("_","/"))
+	local b = common.base64.decode(url:gsub("^.+/", ""):gsub("-", "+"):gsub("_", "/"))
 	if not b or #b < 6 then
 		return "Invalid tree link (unrecognised format)"
 	end
 	local ver = b:byte(1) * 16777216 + b:byte(2) * 65536 + b:byte(3) * 256 + b:byte(4)
 	if ver > 6 then
-		return "Invalid tree link (unknown version number '"..ver.."')"
+		return "Invalid tree link (unknown version number '" .. ver .. "')"
 	end
 	local classId = b:byte(5)
 	local ascendancyIds = (ver >= 4) and b:byte(6) or 0
 	local ascendClassId = band(ascendancyIds, 3)
 	if not self.tree.classes[classId] then
-		return "Invalid tree link (bad class ID '"..classId.."')"
+		return "Invalid tree link (bad class ID '" .. classId .. "')"
 	end
 	self:ResetNodes()
 	self:SelectClass(classId)
@@ -428,7 +423,7 @@ function PassiveSpecClass:IsClassConnected(classId)
 		if other.alloc > 0 then
 			-- If the node is allocated, try to find a path back to the current class's starting node
 			other.visited = true
-			local visited = { }
+			local visited = {}
 			local found = self:FindStartFromNode(other, visited, true)
 			for i, n in ipairs(visited) do
 				n.visited = false
@@ -525,9 +520,9 @@ function PassiveSpecClass:FindStartFromNode(node, visited, noAscend)
 		--  - there is a path to a start node through the other node which didn't pass through any nodes which have already been visited
 		local startIndex = #visited + 1
 		if other.alloc > 0 and
-		  (other.type == "ClassStart" or other.type == "AscendClassStart" or
-		    (not other.visited and node.type ~= "Mastery" and self:FindStartFromNode(other, visited, noAscend))
-		  ) then
+			(other.type == "ClassStart" or other.type == "AscendClassStart" or
+				(not other.visited and node.type ~= "Mastery" and self:FindStartFromNode(other, visited, noAscend))
+			) then
 			if node.ascendancyName and not other.ascendancyName then
 				-- Pathing out of Ascendant, un-visit the outside nodes
 				for i = startIndex, #visited do
@@ -544,7 +539,7 @@ end
 -- Perform a breadth-first search of the tree, starting from this node, and determine if it is the closest node to any other nodes
 function PassiveSpecClass:BuildPathFromNode(root)
 	root.pathDist = 0
-	root.path = { }
+	root.path = {}
 	local queue = { root }
 	local o, i = 1, 2 -- Out, in
 	while o < i do
@@ -569,7 +564,7 @@ function PassiveSpecClass:BuildPathFromNode(root)
 				other.path = wipeTable(other.path)
 				other.path[1] = other
 				for i, n in ipairs(node.path) do
-					other.path[i+1] = n
+					other.path[i + 1] = n
 				end
 				-- Add the other node to the end of the queue
 				queue[i] = other
@@ -590,7 +585,7 @@ function PassiveSpecClass:SetNodeDistanceToClassStart(root)
 	-- Stop once the current class' starting node is reached
 	local targetNodeId = self.curClass.startNodeId
 
-	local nodeDistanceToRoot = { }
+	local nodeDistanceToRoot = {}
 	nodeDistanceToRoot[root.id] = 0
 
 	local queue = { root }
@@ -642,7 +637,7 @@ end
 -- Rebuilds dependencies and paths for all nodes
 function PassiveSpecClass:BuildAllDependsAndPaths()
 	-- This table will keep track of which nodes have been visited during each path-finding attempt
-	local visited = { }
+	local visited = {}
 	self.visibleNodes = {}
 	for nodeId, node in pairs(self.nodes) do
 		if nodeId:match("^" .. self.curClassName) then
@@ -653,7 +648,7 @@ function PassiveSpecClass:BuildAllDependsAndPaths()
 				self.visibleNodes[nodeId] = node
 			end
 		end
-		for _,ability in pairs(self.build.skillsTab.socketGroupList) do
+		for _, ability in pairs(self.build.skillsTab.socketGroupList) do
 			if ability.grantedEffect.treeId and nodeId:match("^" .. ability.grantedEffect.treeId) then
 				self.visibleNodes[nodeId] = node
 			end
@@ -683,7 +678,7 @@ function PassiveSpecClass:BuildAllDependsAndPaths()
 					end
 				end
 			end
-			self:ReplaceNode(node,newNode)
+			self:ReplaceNode(node, newNode)
 		end
 
 		if node.alloc > 0 then
@@ -694,7 +689,7 @@ function PassiveSpecClass:BuildAllDependsAndPaths()
 	-- Add selected mastery effect mods to mastery nodes
 	self.allocatedMasteryCount = 0
 	self.allocatedNotableCount = 0
-	self.allocatedMasteryTypes = { }
+	self.allocatedMasteryTypes = {}
 	self.allocatedMasteryTypeCount = 0
 
 	for id, node in pairs(self.allocNodes) do
@@ -716,7 +711,7 @@ function PassiveSpecClass:BuildAllDependsAndPaths()
 				else
 					-- No path was found, so all the nodes visited while trying to find the path must be dependent on this node
 					-- except for mastery nodes that have linked allocated nodes that weren't visited
-					local depIds = { }
+					local depIds = {}
 					for _, n in ipairs(visited) do
 						if not n.dependsOnIntuitiveLeapLike then
 							depIds[n.id] = true
@@ -792,7 +787,7 @@ function PassiveSpecClass:ReplaceNode(old, newNode)
 	old.icon = newNode.icon
 	old.spriteId = newNode.spriteId
 	old.activeEffectImage = newNode.activeEffectImage
-	old.reminderText = newNode.reminderText or { }
+	old.reminderText = newNode.reminderText or {}
 	self.tree:ProcessStats(old)
 end
 
@@ -802,15 +797,15 @@ function PassiveSpecClass:ReconnectNodeToClassStart(node)
 	for _, linkedNodeId in ipairs(node.linkedId) do
 		for classId, class in pairs(self.tree.classes) do
 			if linkedNodeId == class.startNodeId and node.type == "Normal" then
-				node.modList:NewMod("Condition:ConnectedTo"..class.name.."Start", "FLAG", true, "Tree:"..linkedNodeId)
+				node.modList:NewMod("Condition:ConnectedTo" .. class.name .. "Start", "FLAG", true, "Tree:" ..
+					linkedNodeId)
 			end
 		end
 	end
 end
 
-
 function PassiveSpecClass:CreateUndoState()
-	local allocNodeIdList = { }
+	local allocNodeIdList = {}
 	for nodeId in pairs(self.allocNodes) do
 		t_insert(allocNodeIdList, nodeId)
 	end
@@ -824,22 +819,24 @@ function PassiveSpecClass:CreateUndoState()
 end
 
 function PassiveSpecClass:RestoreUndoState(state, treeVersion)
-	self:ImportFromNodeList(state.classId, state.ascendClassId, state.abilities, state.hashList, state.hashOverrides, treeVersion or state.treeVersion)
+	self:ImportFromNodeList(state.classId, state.ascendClassId, state.abilities, state.hashList, state.hashOverrides,
+		treeVersion or state.treeVersion)
 	self:SetWindowTitleWithBuildClass()
 end
 
 function PassiveSpecClass:SetWindowTitleWithBuildClass()
-	main:SetWindowTitleSubtext(string.format("%s (%s)", self.build.buildName, self.curAscendClassId == 0 and self.curClassName or self.curAscendClassName))
+	main:SetWindowTitleSubtext(string.format("%s (%s)", self.build.buildName,
+		self.curAscendClassId == 0 and self.curClassName or self.curAscendClassName))
 end
 
 --- Adds a line to or replaces a node given a line to add/replace with
 --- @param node table The node to replace/add to
 --- @param sd string The line being parsed and added
 --- @param replacement boolean true to replace the node with the new mod, false to simply add it
-function PassiveSpecClass:NodeAdditionOrReplacementFromString(node,sd,replacement)
+function PassiveSpecClass:NodeAdditionOrReplacementFromString(node, sd, replacement)
 	local addition = {}
-	addition.sd = {sd}
-	addition.mods = { }
+	addition.sd = { sd }
+	addition.mods = {}
 	addition.modList = new("ModList")
 	addition.modKey = ""
 	local i = 1
@@ -867,7 +864,7 @@ function PassiveSpecClass:NodeAdditionOrReplacementFromString(node,sd,replacemen
 				if parsedMod and not unrecognizedMod then
 					-- Success, add dummy mod lists to the other lines that were combined with this one
 					for ci = i + 1, endI do
-						addition.mods[ci] = { list = { } }
+						addition.mods[ci] = { list = {} }
 					end
 					break
 				end
@@ -882,7 +879,7 @@ function PassiveSpecClass:NodeAdditionOrReplacementFromString(node,sd,replacemen
 			addition.extra = true
 		else
 			for _, mod in ipairs(parsedMod) do
-				addition.modKey = addition.modKey.."["..modLib.formatMod(mod).."]"
+				addition.modKey = addition.modKey .. "[" .. modLib.formatMod(mod) .. "]"
 			end
 		end
 		addition.mods[i] = { list = parsedMod, extra = unrecognizedMod }
@@ -897,7 +894,7 @@ function PassiveSpecClass:NodeAdditionOrReplacementFromString(node,sd,replacemen
 	for _, mod in pairs(addition.mods) do
 		if mod.list and not mod.extra then
 			for i, mod in ipairs(mod.list) do
-				mod = modLib.setSource(mod, "Tree:"..node.id)
+				mod = modLib.setSource(mod, "Tree:" .. node.id)
 				addition.modList:AddMod(mod)
 			end
 		end

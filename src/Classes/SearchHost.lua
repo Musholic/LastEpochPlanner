@@ -4,7 +4,7 @@
 -- Search host
 --
 
-local SearchHostClass = newClass("SearchHost", function(self, listAccessor, valueAccessor)
+local SearchHostClass = newClass("SearchHost", function (self, listAccessor, valueAccessor)
 	self.searchListAccessor = listAccessor
 	self.valueAccessor = valueAccessor
 	self.searchTerm = ""
@@ -95,13 +95,13 @@ function SearchHostClass:OnSearchKeyDown(key)
 end
 
 function SearchHostClass:UpdateMatchCount()
-		local matchCount = 0
-		for _, info in ipairs(self.searchInfos) do
-			if (info and info.matches) then
-				matchCount = matchCount + 1
-			end
+	local matchCount = 0
+	for _, info in ipairs(self.searchInfos) do
+		if (info and info.matches) then
+			matchCount = matchCount + 1
 		end
-		self.matchCount = matchCount
+	end
+	self.matchCount = matchCount
 end
 
 function SearchHostClass:GetMatchCount()

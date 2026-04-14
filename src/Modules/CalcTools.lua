@@ -10,7 +10,7 @@ local m_floor = math.floor
 local m_min = math.min
 local m_max = math.max
 
-calcLib = { }
+calcLib = {}
 
 -- Calculate and combine INC/MORE modifiers for the given modifier names
 function calcLib.mod(modStore, cfg, ...)
@@ -40,7 +40,7 @@ end
 
 -- Evaluate a skill type postfix expression
 function calcLib.doesTypeExpressionMatch(checkTypes, skillTypes, minionTypes)
-	local stack = { }
+	local stack = {}
 	for _, skillType in pairs(checkTypes) do
 		if skillType == SkillType.OR then
 			local other = t_remove(stack)
@@ -78,21 +78,23 @@ function calcLib.canGrantedEffectSupportActiveSkill(grantedEffect, activeSkill)
 	if grantedEffect.isTrigger and (activeSkill.triggeredBy or activeSkill.actor.enemy.player ~= activeSkill.actor) then
 		return false
 	end
-	return not grantedEffect.requireSkillTypes[1] or calcLib.doesTypeExpressionMatch(grantedEffect.requireSkillTypes, activeSkill.skillTypes, not grantedEffect.ignoreMinionTypes and activeSkill.minionSkillTypes)
+	return not grantedEffect.requireSkillTypes[1] or
+		calcLib.doesTypeExpressionMatch(grantedEffect.requireSkillTypes, activeSkill.skillTypes,
+			not grantedEffect.ignoreMinionTypes and activeSkill.minionSkillTypes)
 end
 
 -- Check if given gem is of the given type ("all", "strength", "melee", etc)
 function calcLib.gemIsType(gem, type, includeTransfigured)
-	return (type == "all" or 
-			(type == "elemental" and (gem.tags.fire or gem.tags.cold or gem.tags.lightning)) or 
-			(type == "aoe" and gem.tags.area) or
-			(type == "trap or mine" and (gem.tags.trap or gem.tags.mine)) or
-			((type == "active skill" or type == "grants_active_skill" or type == "skill") and gem.tags.grants_active_skill and not gem.tags.support) or
-			(type == "non-vaal" and not gem.tags.vaal) or
-			(type == gem.name:lower()) or
-			(type == gem.name:lower():gsub("^vaal ", "")) or
-			(includeTransfigured and calcLib.isGemIdSame(gem.name, type, true)) or
-			((type ~= "active skill" and type ~= "grants_active_skill" and type ~= "skill") and gem.tags[type]))
+	return (type == "all" or
+		(type == "elemental" and (gem.tags.fire or gem.tags.cold or gem.tags.lightning)) or
+		(type == "aoe" and gem.tags.area) or
+		(type == "trap or mine" and (gem.tags.trap or gem.tags.mine)) or
+		((type == "active skill" or type == "grants_active_skill" or type == "skill") and gem.tags.grants_active_skill and not gem.tags.support) or
+		(type == "non-vaal" and not gem.tags.vaal) or
+		(type == gem.name:lower()) or
+		(type == gem.name:lower():gsub("^vaal ", "")) or
+		(includeTransfigured and calcLib.isGemIdSame(gem.name, type, true)) or
+		((type ~= "active skill" and type ~= "grants_active_skill" and type ~= "skill") and gem.tags[type]))
 end
 
 -- From PyPoE's formula.py
@@ -137,7 +139,7 @@ end
 --- @param minionMods boolean? @convert ActorConditions pointing at parent to normal Conditions
 --- @return table @converted multipliers
 function calcLib.getConvertedModTags(mod, multiplier, minionMods)
-	local modifiers = { }
+	local modifiers = {}
 	for k, value in ipairs(mod) do
 		if minionMods and value.type == "ActorCondition" and value.actor == "parent" then
 			modifiers[k] = { type = "Condition", var = value.var }

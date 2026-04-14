@@ -3,7 +3,7 @@
 -- Class: Tooltip Host
 -- Tooltip host
 --
-local TooltipHostClass = newClass("TooltipHost", function(self, tooltipText)
+local TooltipHostClass = newClass("TooltipHost", function (self, tooltipText)
 	self.tooltip = new("Tooltip")
 	self.tooltipText = tooltipText
 end)

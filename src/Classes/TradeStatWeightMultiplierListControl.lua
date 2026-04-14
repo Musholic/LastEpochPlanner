@@ -4,12 +4,13 @@
 -- Specialized UI element for listing and modifying Trade Stat Weight Multipliers.
 --
 
-local TradeStatWeightMultiplierListControlClass = newClass("TradeStatWeightMultiplierListControl", "ListControl", function(self, anchor, x, y, width, height, list, indexController)
-	self.list = list
-	self.indexController = indexController
-	self.ListControl(anchor, x, y, width, height, 16, true, false, self.list)
-	self.selIndex = nil
-end)
+local TradeStatWeightMultiplierListControlClass = newClass("TradeStatWeightMultiplierListControl", "ListControl",
+	function (self, anchor, x, y, width, height, list, indexController)
+		self.list = list
+		self.indexController = indexController
+		self.ListControl(anchor, x, y, width, height, 16, true, false, self.list)
+		self.selIndex = nil
+	end)
 
 function TradeStatWeightMultiplierListControlClass:Draw(viewPort, noTooltip)
 	self.noTooltip = noTooltip
@@ -33,6 +34,7 @@ function TradeStatWeightMultiplierListControlClass:OnSelClick(index, data, doubl
 	if self.indexController.index ~= index then
 		self.indexController.index = index
 		self.indexController.SliderLabel.label = self.list[index].stat.label
-		self.indexController.Slider:SetVal(self.list[index].stat.weightMult == 1 and 1 or self.list[index].stat.weightMult - 0.01)
+		self.indexController.Slider:SetVal(self.list[index].stat.weightMult == 1 and 1 or
+			self.list[index].stat.weightMult - 0.01)
 	end
 end

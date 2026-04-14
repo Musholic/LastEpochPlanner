@@ -1,10 +1,10 @@
-describe("Offline Item Import", function()
-    before_each(function()
-        newBuild()
-    end)
+describe("Offline Item Import", function ()
+	before_each(function ()
+		newBuild()
+	end)
 
-    it("should process the first blessing correctly", function()
-        local itemDataJson = [[
+	it("should process the first blessing correctly", function ()
+		local itemDataJson = [[
         {
           "itemData": null,
           "data": [5, 92, 13, 34, 112, 0, 0, 255, 255, 255, 0, 0, 0],
@@ -14,36 +14,31 @@ describe("Offline Item Import", function()
           "formatVersion": 2
         }
         ]]
-        local item = build.importTab:processItemData(processJson(itemDataJson))
+		local item = build.importTab:processItemData(processJson(itemDataJson))
 
-        local expected = {
-        	["affixes"] = {},
-            ["base"] = {
-                ["affixEffectModifier"] = 0,
-                ["baseTypeID"] = 34,
-                ["implicits"] = {
-                    [1] = '(16-22)% Increased Unique Drop Rate',
-                },
-                ["req"] = {
-                    ["level"] = 0 },
-                ["subTypeID"] = 112,
-                ["type"] = 'Blessing'
-            },
-            ["baseName"] = 'Grand Winds of Fortune',
-            ["explicitMods"] = {},
-            ["implicitMods"] = {
-                [1] = '{range: 255}(16-22)% Increased Unique Drop Rate',
-            },
-            ["name"] = 'Grand Winds of Fortune',
-            ["rarity"] = 'RARE',
-            ["rarityType"] = 'BASIC',
-            ["slotName"] = 'Blessing 1'
-        }
-        assert.are.same(expected, item)
-    end)
+		local expected = {
+			["affixes"] = {},
+			["base"] = {
+				["affixEffectModifier"] = 0,
+				["baseTypeID"] = 34,
+				["implicits"] = { [1] = '(16-22)% Increased Unique Drop Rate', },
+				["req"] = { ["level"] = 0 },
+				["subTypeID"] = 112,
+				["type"] = 'Blessing'
+			},
+			["baseName"] = 'Grand Winds of Fortune',
+			["explicitMods"] = {},
+			["implicitMods"] = { [1] = '{range: 255}(16-22)% Increased Unique Drop Rate', },
+			["name"] = 'Grand Winds of Fortune',
+			["rarity"] = 'RARE',
+			["rarityType"] = 'BASIC',
+			["slotName"] = 'Blessing 1'
+		}
+		assert.are.same(expected, item)
+	end)
 
-    it("should process the seventh blessing correctly", function()
-        local itemDataJson = [[
+	it("should process the seventh blessing correctly", function ()
+		local itemDataJson = [[
         {
           "itemData": null,
           "data": [5, 85, 66, 34, 149, 0, 0, 255, 255, 255, 0, 0, 0],
@@ -53,14 +48,14 @@ describe("Offline Item Import", function()
           "formatVersion": 2
         }
         ]]
-        local item = build.importTab:processItemData(processJson(itemDataJson))
+		local item = build.importTab:processItemData(processJson(itemDataJson))
 
-        assert.are.equals("Grand Resolve of Humanity", item.name)
-        assert.are.equals("Blessing 7", item.slotName)
-    end)
+		assert.are.equals("Grand Resolve of Humanity", item.name)
+		assert.are.equals("Blessing 7", item.slotName)
+	end)
 
-    it("should process the last blessing correctly", function()
-        local itemDataJson = [[
+	it("should process the last blessing correctly", function ()
+		local itemDataJson = [[
         {
           "itemData": null,
           "data": [5, 81, 74, 34, 209, 0, 0, 255, 255, 255, 0, 0, 0],
@@ -70,14 +65,14 @@ describe("Offline Item Import", function()
           "formatVersion": 2
         }
         ]]
-        local item = build.importTab:processItemData(processJson(itemDataJson))
+		local item = build.importTab:processItemData(processJson(itemDataJson))
 
-        assert.are.equals("Grand Embers of Immortality", item.name)
-        assert.are.equals("Blessing 10", item.slotName)
-    end)
+		assert.are.equals("Grand Embers of Immortality", item.name)
+		assert.are.equals("Blessing 10", item.slotName)
+	end)
 
-    it("should process last idol slot correctly", function()
-        local itemDataJson = [[
+	it("should process last idol slot correctly", function ()
+		local itemDataJson = [[
         {
           "itemData": null,
           "data": [
@@ -107,42 +102,34 @@ describe("Offline Item Import", function()
           "formatVersion": 2
         }
         ]]
-        local item = build.importTab:processItemData(processJson(itemDataJson))
+		local item = build.importTab:processItemData(processJson(itemDataJson))
 
-        local expected = {
-            ["affixes"] = {
-                [1] = {
-                    ["modId"] = '843_0',
-                    ["range"] = 255,
-                    ["suffix"] = true
-                },
-                [2] = {
-                    ["modId"] = '854_0',
-                    ["prefix"] = true,
-                    ["range"] = 255
-                }
-            },
-            ["base"] = {
-                ["affixEffectModifier"] = -0.83,
-                ["baseTypeID"] = 26,
-                ["implicits"] = { },
-                ["req"] = {
-                  ["level"] = 0 },
-                ["subTypeID"] = 1,
-                ["type"] = 'Minor Idol' },
-              ["baseName"] = 'Minor Weaver Idol',
-              ["explicitMods"] = { },
-              ["implicitMods"] = { },
-              ["name"] = 'Minor Weaver Idol',
-              ["rarity"] = 'IDOL',
-              ["rarityType"] = 'IDOL',
-              ["slotName"] = 'Idol 4,5'
-        }
-        assert.are.same(expected, item)
-    end)
+		local expected = {
+			["affixes"] = {
+				[1] = { ["modId"] = '843_0', ["range"] = 255, ["suffix"] = true },
+				[2] = { ["modId"] = '854_0', ["prefix"] = true, ["range"] = 255 }
+			},
+			["base"] = {
+				["affixEffectModifier"] = -0.83,
+				["baseTypeID"] = 26,
+				["implicits"] = {},
+				["req"] = { ["level"] = 0 },
+				["subTypeID"] = 1,
+				["type"] = 'Minor Idol'
+			},
+			["baseName"] = 'Minor Weaver Idol',
+			["explicitMods"] = {},
+			["implicitMods"] = {},
+			["name"] = 'Minor Weaver Idol',
+			["rarity"] = 'IDOL',
+			["rarityType"] = 'IDOL',
+			["slotName"] = 'Idol 4,5'
+		}
+		assert.are.same(expected, item)
+	end)
 
-    it("should process idol altar slot correctly", function()
-        local itemDataJson = [[
+	it("should process idol altar slot correctly", function ()
+		local itemDataJson = [[
         {
         "itemData": null,
         "data": [
@@ -178,53 +165,35 @@ describe("Offline Item Import", function()
         "formatVersion": 2
         }
         ]]
-        local item = build.importTab:processItemData(processJson(itemDataJson))
+		local item = build.importTab:processItemData(processJson(itemDataJson))
 
-        local expected = {
-        ["affixes"] = {
-            [1] = {
-              ["modId"] = '1105_2',
-              ["range"] = 10,
-              ["sealed"] = true
-            },
-            [2] = {
-              ["modId"] = '1097_2',
-              ["prefix"] = true,
-              ["range"] = 191
-            },
-            [3] = {
-              ["modId"] = '1094_0',
-              ["range"] = 51,
-              ["suffix"] = true
-            }
-        },
-        ["base"] = {
-            ["affixEffectModifier"] = 0,
-            ["baseTypeID"] = 41,
-            ["implicits"] = {
-              [1] = '{rounding:Integer}+(6-10) Health per Equipped Omen Idol'
-            },
-            ["req"] = {
-              ["level"] = 0
-            },
-            ["subTypeID"] = 5,
-            ["type"] = 'Idol Altar'
-          },
-          ["baseName"] = 'Visage Altar',
-          ["explicitMods"] = { },
-          ["implicitMods"] = {
-            [1] = '{range: 60}{rounding:Integer}+(6-10) Health per Equipped Omen Idol'
-          },
-          ["name"] = 'Visage Altar',
-          ["rarity"] = 'RARE',
-          ["rarityType"] = 'BASIC',
-          ["slotName"] = 'Idol Altar'
-        }
-        assert.are.same(expected, item)
-    end)
+		local expected = {
+			["affixes"] = {
+				[1] = { ["modId"] = '1105_2', ["range"] = 10, ["sealed"] = true },
+				[2] = { ["modId"] = '1097_2', ["prefix"] = true, ["range"] = 191 },
+				[3] = { ["modId"] = '1094_0', ["range"] = 51, ["suffix"] = true }
+			},
+			["base"] = {
+				["affixEffectModifier"] = 0,
+				["baseTypeID"] = 41,
+				["implicits"] = { [1] = '{rounding:Integer}+(6-10) Health per Equipped Omen Idol' },
+				["req"] = { ["level"] = 0 },
+				["subTypeID"] = 5,
+				["type"] = 'Idol Altar'
+			},
+			["baseName"] = 'Visage Altar',
+			["explicitMods"] = {},
+			["implicitMods"] = { [1] = '{range: 60}{rounding:Integer}+(6-10) Health per Equipped Omen Idol' },
+			["name"] = 'Visage Altar',
+			["rarity"] = 'RARE',
+			["rarityType"] = 'BASIC',
+			["slotName"] = 'Idol Altar'
+		}
+		assert.are.same(expected, item)
+	end)
 
-    it("should process shield with corrupted and sealed affixes", function()
-        local itemDataJson = [[
+	it("should process shield with corrupted and sealed affixes", function ()
+		local itemDataJson = [[
         {
 			"itemData": null,
 			"data": [
@@ -266,10 +235,10 @@ describe("Offline Item Import", function()
 			"formatVersion": 2
 		}
         ]]
-        local itemData = build.importTab:processItemData(processJson(itemDataJson))
-        local item = build.importTab:BuildItem(itemData)
-        local rawItem = item:BuildRaw()
-        local expected = [[Rarity: RARE
+		local itemData = build.importTab:processItemData(processJson(itemDataJson))
+		local item = build.importTab:BuildItem(itemData)
+		local rawItem = item:BuildRaw()
+		local expected = [[Rarity: RARE
 Cavalier Shield
 Cavalier Shield
 Prefix: {range:225}19_1
@@ -290,11 +259,11 @@ Implicits: 2
 {corrupted}{range:180}(54-58)% chance to gain Haste for 5 seconds after you Block
 {corrupted}11% increased Effect of Haste on You]]
 
-        assert.are.same(expected, rawItem)
-    end)
+		assert.are.same(expected, rawItem)
+	end)
 
-    it("should process axe with a missing affix but with corrupted and sealed affix", function()
-        local itemDataJson = [[
+	it("should process axe with a missing affix but with corrupted and sealed affix", function ()
+		local itemDataJson = [[
         {
 			"itemData": null,
 			"data": [
@@ -333,10 +302,10 @@ Implicits: 2
 			"formatVersion": 2
 		}
         ]]
-        local itemData = build.importTab:processItemData(processJson(itemDataJson))
-        local item = build.importTab:BuildItem(itemData)
-        local rawItem = item:BuildRaw()
-        local expected = [[Rarity: RARE
+		local itemData = build.importTab:processItemData(processJson(itemDataJson))
+		local item = build.importTab:BuildItem(itemData)
+		local rawItem = item:BuildRaw()
+		local expected = [[Rarity: RARE
 Battle Axe
 Battle Axe
 Prefix: {range:60}91_2
@@ -354,6 +323,6 @@ Implicits: 2
 {sealed}{range:53}{scalar:1.75}{rounding:Integer}(22-30)% increased Poison Damage
 {corrupted}{range:166}{rounding:Integer}+(21-26) Melee Fire Damage]]
 
-        assert.are.same(expected, rawItem)
-    end)
+		assert.are.same(expected, rawItem)
+	end)
 end)

@@ -16,15 +16,15 @@ local bor = bit.bor
 
 local mod_createMod = modLib.createMod
 
-local ModDBClass = newClass("ModDB", "ModStore", function(self, parent)
+local ModDBClass = newClass("ModDB", "ModStore", function (self, parent)
 	self.ModStore(parent)
-	self.mods = { }
+	self.mods = {}
 end)
 
 function ModDBClass:AddMod(mod)
 	local name = mod.name
 	if not self.mods[name] then
-		self.mods[name] = { }
+		self.mods[name] = {}
 	end
 	t_insert(self.mods[name], mod)
 end
@@ -37,7 +37,7 @@ end
 function ModDBClass:ReplaceModInternal(mod)
 	local name = mod.name
 	if not self.mods[name] then
-		self.mods[name] = { }
+		self.mods[name] = {}
 	end
 
 	-- Find the index of the existing mod, if it is in the table
@@ -60,7 +60,7 @@ function ModDBClass:ReplaceModInternal(mod)
 	if self.parent then
 		return self.parent:ReplaceModInternal(mod)
 	end
-	
+
 	return false
 end
 
@@ -69,7 +69,7 @@ function ModDBClass:AddList(modList)
 	for i, mod in ipairs(modList) do
 		local name = mod.name
 		if not mods[name] then
-			mods[name] = { }
+			mods[name] = {}
 		end
 		t_insert(mods[name], mod)
 	end
@@ -79,7 +79,7 @@ function ModDBClass:AddDB(modDB)
 	local mods = self.mods
 	for modName, modList in pairs(modDB.mods) do
 		if not mods[modName] then
-			mods[modName] = { }
+			mods[modName] = {}
 		end
 		local modsName = mods[modName]
 		for i = 1, #modList do
@@ -90,13 +90,13 @@ end
 
 function ModDBClass:SumInternal(context, modType, cfg, flags, keywordFlags, source, ...)
 	local result = 0
-	local globalLimits = { }
+	local globalLimits = {}
 	for i = 1, select('#', ...) do
 		local modList = self.mods[select(i, ...)]
 		if modList then
 			for i = 1, #modList do
 				local mod = modList[i]
-				if mod.type == modType and band(flags, mod.flags) == mod.flags and MatchKeywordFlags(keywordFlags, mod.keywordFlags) and (not source or ( mod.source and mod.source:match("[^:]+") == source )) then
+				if mod.type == modType and band(flags, mod.flags) == mod.flags and MatchKeywordFlags(keywordFlags, mod.keywordFlags) and (not source or (mod.source and mod.source:match("[^:]+") == source)) then
 					if mod[1] then
 						local value = context:EvalMod(mod, cfg) or 0
 						if mod[1].globalLimit and mod[1].globalLimitKey then
@@ -136,9 +136,12 @@ function ModDBClass:MoreInternal(context, cfg, flags, keywordFlags, source, ...)
 						modResult = modResult * (1 + mod.value / 100)
 					end
 					if modPrecision then
-						modPrecision = m_max(modPrecision, (data.highPrecisionMods[mod.name] and data.highPrecisionMods[mod.name][mod.type]) or modPrecision)
+						modPrecision = m_max(modPrecision,
+							(data.highPrecisionMods[mod.name] and data.highPrecisionMods[mod.name][mod.type]) or
+							modPrecision)
 					else
-						modPrecision = (data.highPrecisionMods[mod.name] and data.highPrecisionMods[mod.name][mod.type]) or nil
+						modPrecision = (data.highPrecisionMods[mod.name] and data.highPrecisionMods[mod.name][mod.type]) or
+							nil
 					end
 				end
 			end
@@ -229,7 +232,7 @@ function ModDBClass:ListInternal(context, result, cfg, flags, keywordFlags, sour
 end
 
 function ModDBClass:TabulateInternal(context, result, modType, cfg, flags, keywordFlags, source, ...)
-	local globalLimits = { }
+	local globalLimits = {}
 	for i = 1, select('#', ...) do
 		local modName = select(i, ...)
 		local modList = self.mods[modName]
@@ -292,7 +295,7 @@ end
 
 function ModDBClass:Print()
 	ConPrintf("=== Modifiers ===")
-	local modNames = { }
+	local modNames = {}
 	for modName in pairs(self.mods) do
 		t_insert(modNames, modName)
 	end
@@ -300,11 +303,13 @@ function ModDBClass:Print()
 	for _, modName in ipairs(modNames) do
 		ConPrintf("'%s':", modName)
 		for _, mod in ipairs(self.mods[modName]) do
-			ConPrintf("\t%s = %s|%s|%s|%s|%s", modLib.formatValue(mod.value), mod.type, modLib.formatFlags(mod.flags, ModFlag), modLib.formatFlags(mod.keywordFlags, KeywordFlag), modLib.formatTags(mod), mod.source or "?")
+			ConPrintf("\t%s = %s|%s|%s|%s|%s", modLib.formatValue(mod.value), mod.type,
+				modLib.formatFlags(mod.flags, ModFlag), modLib.formatFlags(mod.keywordFlags, KeywordFlag),
+				modLib.formatTags(mod), mod.source or "?")
 		end
 	end
 	ConPrintf("=== Conditions ===")
-	local nameList = { }
+	local nameList = {}
 	for name, value in pairs(self.conditions) do
 		if value then
 			t_insert(nameList, name)

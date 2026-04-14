@@ -15,7 +15,7 @@ local s_format = string.format
 local band = bit.band
 local bor = bit.bor
 
-modLib = { }
+modLib = {}
 
 function modLib.createMod(modName, modType, modVal, ...)
 	local flags = 0
@@ -61,7 +61,7 @@ function modLib.parseTags(line)
 					if tagName then
 						tagSet[tagName] = tagValue == "true" and true or tagValue
 					else
-						ConPrintf("Error tag invalid: "..tag)
+						ConPrintf("Error tag invalid: " .. tag)
 					end
 				end
 			end
@@ -108,7 +108,7 @@ function modLib.compareModParams(modA, modB)
 end
 
 function modLib.formatFlags(flags, src)
-	local flagNames = { }
+	local flagNames = {}
 	for name, val in pairs(src) do
 		if band(flags, val) == val then
 			t_insert(flagNames, name)
@@ -117,13 +117,13 @@ function modLib.formatFlags(flags, src)
 	t_sort(flagNames)
 	local ret
 	for i, name in ipairs(flagNames) do
-		ret = (ret and ret.."," or "") .. name
+		ret = (ret and ret .. "," or "") .. name
 	end
 	return ret or "-"
 end
 
 function modLib.formatTag(tag)
-	local paramNames = { }
+	local paramNames = {}
 	local haveType
 	for name, val in pairs(tag) do
 		if name == "type" then
@@ -152,7 +152,7 @@ function modLib.formatTag(tag)
 			else
 				val = modLib.formatTag(tag[paramName])
 			end
-			val = "{"..val.."}"
+			val = "{" .. val .. "}"
 		end
 		str = str .. s_format("%s=%s", paramName, tostring(val))
 	end
@@ -162,7 +162,7 @@ end
 function modLib.formatTags(tagList)
 	local ret
 	for _, tag in ipairs(tagList) do
-		ret = (ret and ret.."," or "") .. modLib.formatTag(tag)
+		ret = (ret and ret .. "," or "") .. modLib.formatTag(tag)
 	end
 	return ret or "-"
 end
@@ -171,7 +171,7 @@ function modLib.formatValue(value)
 	if type(value) ~= "table" then
 		return tostring(value)
 	end
-	local paramNames = { }
+	local paramNames = {}
 	local haveType
 	for name, val in pairs(value) do
 		if name == "type" then
@@ -195,11 +195,12 @@ function modLib.formatValue(value)
 			ret = ret .. s_format("%s=%s", paramName, modLib.formatValue(value[paramName]))
 		end
 	end
-	return "{"..ret.."}"
+	return "{" .. ret .. "}"
 end
 
 function modLib.formatModParams(mod)
-	return s_format("%s|%s|%s|%s|%s", mod.name, mod.type, modLib.formatFlags(mod.flags, ModFlag), modLib.formatFlags(mod.keywordFlags, KeywordFlag), modLib.formatTags(mod))
+	return s_format("%s|%s|%s|%s|%s", mod.name, mod.type, modLib.formatFlags(mod.flags, ModFlag),
+		modLib.formatFlags(mod.keywordFlags, KeywordFlag), modLib.formatTags(mod))
 end
 
 function modLib.formatMod(mod)
@@ -207,7 +208,7 @@ function modLib.formatMod(mod)
 end
 
 function modLib.formatSourceMod(mod)
-    return s_format("%s|%s|%s", modLib.formatValue(mod.value), mod.source, modLib.formatModParams(mod))
+	return s_format("%s|%s|%s", modLib.formatValue(mod.value), mod.source, modLib.formatModParams(mod))
 end
 
 function modLib.setSource(mod, source)

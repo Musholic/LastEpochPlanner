@@ -10,52 +10,66 @@ local m_max = math.max
 local m_floor = math.floor
 
 
-local ItemDBClass = newClass("ItemDBControl", "ListControl", function(self, anchor, x, y, width, height, itemsTab, db, dbType)
-	self.ListControl(anchor, x, y, width, height, 16, "VERTICAL", false)
-	self.itemsTab = itemsTab
-	self.db = db
-	self.dbType = dbType
-	self.dragTargetList = { }
-	self.sortControl = { 
-		NAME = { key = "name", dir = "ASCEND", func = function(a,b) return a:gsub("^The ","") < b:gsub("^The ","") end },
-		STAT = { key = "measuredPower", dir = "DESCEND" },
-	}
-	self.sortDropList = { }
-	self.sortOrder = { }
-	self.sortMode = "NAME"
-	self.leaguesAndTypesLoaded = false
-	self.leagueList = { "Any league", "No league" }
-	self.typeList = { "Any type", "Armour", "Jewellery", "One Handed Melee", "Two Handed Melee" }
-	self.slotList = { "Any slot", "Weapon 1", "Weapon 2", "Helmet", "Body Armor", "Gloves", "Boots", "Amulet", "Ring", "Belt", "Relic" }
-	local baseY = dbType == "RARE" and -22 or -42
-	self.controls.slot = new("DropDownControl", {"BOTTOMLEFT",self,"TOPLEFT"}, 0, baseY, 179, 18, self.slotList, function(index, value)
+local ItemDBClass = newClass("ItemDBControl", "ListControl",
+	function (self, anchor, x, y, width, height, itemsTab, db, dbType)
+		self.ListControl(anchor, x, y, width, height, 16, "VERTICAL", false)
+		self.itemsTab = itemsTab
+		self.db = db
+		self.dbType = dbType
+		self.dragTargetList = {}
+		self.sortControl = {
+			NAME = {
+				key = "name",
+				dir = "ASCEND",
+				func = function (a, b)
+					return a:gsub("^The ", "") <
+						b:gsub("^The ", "")
+				end
+			},
+			STAT = { key = "measuredPower", dir = "DESCEND" },
+		}
+		self.sortDropList = {}
+		self.sortOrder = {}
+		self.sortMode = "NAME"
+		self.leaguesAndTypesLoaded = false
+		self.leagueList = { "Any league", "No league" }
+		self.typeList = { "Any type", "Armour", "Jewellery", "One Handed Melee", "Two Handed Melee" }
+		self.slotList = { "Any slot", "Weapon 1", "Weapon 2", "Helmet", "Body Armor", "Gloves", "Boots", "Amulet", "Ring", "Belt", "Relic" }
+		local baseY = dbType == "RARE" and -22 or -42
+		self.controls.slot = new("DropDownControl", { "BOTTOMLEFT", self, "TOPLEFT" }, 0, baseY, 179, 18, self.slotList,
+			function (index, value)
+				self.listBuildFlag = true
+			end)
+		self.controls.type = new("DropDownControl", { "LEFT", self.controls.slot, "RIGHT" }, 2, 0, 179, 18, self
+			.typeList, function (index, value)
+				self.listBuildFlag = true
+			end)
+		if dbType == "UNIQUE" then
+			self.controls.sort = new("DropDownControl", { "BOTTOMLEFT", self, "TOPLEFT" }, 0, baseY + 20, 179, 18,
+				self.sortDropList, function (index, value)
+					self:SetSortMode(value.sortMode)
+					GlobalCache.useFullDPS = value.sortMode == "FullDPS"
+				end)
+			self.controls.requirement = new("DropDownControl", { "LEFT", self.controls.sort, "RIGHT" }, 2, 0, 179, 18,
+				{ "Any requirements", "Current level", "Current attributes", "Current useable" }, function (index, value)
+					self.listBuildFlag = true
+				end)
+		end
+		self.controls.search = new("EditControl", { "BOTTOMLEFT", self, "TOPLEFT" }, 0, -2, 258, 18, "", "Search", "%c",
+			100, function ()
+				self.listBuildFlag = true
+			end, nil, nil, true)
+		self.controls.searchMode = new("DropDownControl", { "LEFT", self.controls.search, "RIGHT" }, 2, 0, 100, 18,
+			{ "Anywhere", "Names", "Modifiers" }, function (index, value)
+				self.listBuildFlag = true
+			end)
+		self:BuildSortOrder()
 		self.listBuildFlag = true
 	end)
-	self.controls.type = new("DropDownControl", {"LEFT",self.controls.slot,"RIGHT"}, 2, 0, 179, 18, self.typeList, function(index, value)
-		self.listBuildFlag = true
-	end)
-	if dbType == "UNIQUE" then
-		self.controls.sort = new("DropDownControl", {"BOTTOMLEFT",self,"TOPLEFT"}, 0, baseY + 20, 179, 18, self.sortDropList, function(index, value)
-			self:SetSortMode(value.sortMode)
-			GlobalCache.useFullDPS = value.sortMode == "FullDPS"
-		end)
-		self.controls.requirement = new("DropDownControl", {"LEFT",self.controls.sort,"RIGHT"}, 2, 0, 179, 18, { "Any requirements", "Current level", "Current attributes", "Current useable" }, function(index, value)
-			self.listBuildFlag = true
-		end)
-	end
-	self.controls.search = new("EditControl", {"BOTTOMLEFT",self,"TOPLEFT"}, 0, -2, 258, 18, "", "Search", "%c", 100, function()
-		self.listBuildFlag = true
-	end, nil, nil, true)
-	self.controls.searchMode = new("DropDownControl", {"LEFT",self.controls.search,"RIGHT"}, 2, 0, 100, 18, { "Anywhere", "Names", "Modifiers" }, function(index, value)
-		self.listBuildFlag = true
-	end)
-	self:BuildSortOrder()
-	self.listBuildFlag = true
-end)
 
 function ItemDBClass:LoadLeaguesAndTypes()
-	local leagueFlag = { }
-	local typeFlag = { }
+	local leagueFlag = {}
+	local typeFlag = {}
 	for _, item in pairs(self.db.list) do
 		if item.league then
 			for leagueName in item.league:gmatch(" ?([%w ]+),?") do
@@ -76,7 +90,7 @@ end
 function ItemDBClass:DoesItemMatchFilters(item)
 	if self.controls.slot.selIndex > 1 then
 		local primarySlot = item:GetPrimarySlot()
-		if primarySlot ~= self.slotList[self.controls.slot.selIndex] and primarySlot:gsub(" %d","") ~= self.slotList[self.controls.slot.selIndex] then
+		if primarySlot ~= self.slotList[self.controls.slot.selIndex] and primarySlot:gsub(" %d", "") ~= self.slotList[self.controls.slot.selIndex] then
 			return false
 		end
 	end
@@ -92,7 +106,7 @@ function ItemDBClass:DoesItemMatchFilters(item)
 			end
 		elseif typeSel == 4 or typeSel == 5 then
 			local weaponInfo = self.itemsTab.build.data.weaponTypeInfo[item.type]
-			if not (weaponInfo and weaponInfo.melee and ((typeSel == 4 and weaponInfo.oneHand) or (typeSel == 5 and not weaponInfo.oneHand))) then 
+			if not (weaponInfo and weaponInfo.melee and ((typeSel == 4 and weaponInfo.oneHand) or (typeSel == 5 and not weaponInfo.oneHand))) then
 				return false
 			end
 		elseif item.type ~= self.typeList[typeSel] then
@@ -140,7 +154,7 @@ function ItemDBClass:DoesItemMatchFilters(item)
 				end
 			end
 			if not found then
-				searchStr = searchStr:gsub(" ","")
+				searchStr = searchStr:gsub(" ", "")
 				for i, mod in ipairs(item.baseModList) do
 					local err, match = PCall(string.matchOrPattern, mod.name:lower(), searchStr)
 					if not err and match then
@@ -165,14 +179,14 @@ end
 
 function ItemDBClass:BuildSortOrder()
 	wipeTable(self.sortDropList)
-	for id,stat in pairs(data.powerStatList) do
+	for id, stat in pairs(data.powerStatList) do
 		if not stat.ignoreForItems then
 			t_insert(self.sortDropList, {
-				label="Sort by "..stat.label,
-				sortMode=stat.itemField or stat.stat,
-				itemField=stat.itemField,
-				stat=stat.stat,
-				transform=stat.transform,
+				label = "Sort by " .. stat.label,
+				sortMode = stat.itemField or stat.stat,
+				itemField = stat.itemField,
+				stat = stat.stat,
+				transform = stat.transform,
 			})
 		end
 	end
@@ -190,7 +204,7 @@ function ItemDBClass:BuildSortOrder()
 end
 
 function ItemDBClass:ListBuilder()
-	local list = { }
+	local list = {}
 	for id, item in pairs(self.db.list) do
 		if self:DoesItemMatchFilters(item) then
 			t_insert(list, item)
@@ -206,7 +220,9 @@ function ItemDBClass:ListBuilder()
 			item.measuredPower = 0
 			for slotName, slot in pairs(self.itemsTab.slots) do
 				if self.itemsTab:IsItemValidForSlot(item, slotName) and not slot.inactive and (not slot.weaponSet or slot.weaponSet == (self.itemsTab.activeItemSet.useSecondWeaponSet and 2 or 1)) then
-					local output = calcFunc(item.base.flask and { toggleFlask = item } or { repSlotName = slotName, repItem = item }, { nodeAlloc = true, requirementsGems = true })
+					local output = calcFunc(
+						item.base.flask and { toggleFlask = item } or { repSlotName = slotName, repItem = item },
+						{ nodeAlloc = true, requirementsGems = true })
 					local measuredPower = output.Minion and output.Minion[self.sortMode] or output[self.sortMode] or 0
 					if self.sortDetail.transform then
 						measuredPower = self.sortDetail.transform(measuredPower)
@@ -216,7 +232,7 @@ function ItemDBClass:ListBuilder()
 			end
 			local now = GetTime()
 			if now - start > 50 then
-				self.defaultText = "^7Sorting... ("..m_floor(itemIndex/#list*100).."%)"
+				self.defaultText = "^7Sorting... (" .. m_floor(itemIndex / #list * 100) .. "%)"
 				coroutine.yield()
 				start = now
 			end
@@ -224,7 +240,7 @@ function ItemDBClass:ListBuilder()
 		GlobalCache.useFullDPS = storedGlobalCacheDPSView
 	end
 
-	table.sort(list, function(a, b)
+	table.sort(list, function (a, b)
 		for _, data in ipairs(self.sortOrder) do
 			local aVal = a[data.key]
 			local bVal = b[data.key]
@@ -314,7 +330,7 @@ function ItemDBClass:OnSelClick(index, item, doubleClick)
 			end
 			if IsKeyDown("SHIFT") then
 				-- Redirect to second slot if possible
-				local altSlot = slotName:gsub("1","2")
+				local altSlot = slotName:gsub("1", "2")
 				if self.itemsTab:IsItemValidForSlot(newItem, altSlot) then
 					slotName = altSlot
 				end
@@ -331,7 +347,7 @@ function ItemDBClass:OnSelClick(index, item, doubleClick)
 end
 
 function ItemDBClass:OnSelCopy(index, item)
-	Copy(item.raw:gsub("\n","\r\n"))
+	Copy(item.raw:gsub("\n", "\r\n"))
 end
 
 function ItemDBClass:OnHoverKeyUp(key)

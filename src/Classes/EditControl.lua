@@ -35,62 +35,68 @@ local function newlineCount(str)
 	end
 end
 
-local EditClass = newClass("EditControl", "ControlHost", "Control", "UndoHandler", "TooltipHost", function(self, anchor, x, y, width, height, init, prompt, filter, limit, changeFunc, lineHeight, allowZoom, clearable)
-	self.ControlHost()
-	self.Control(anchor, x, y, width, height)
-	self.UndoHandler()
-	self.TooltipHost()
-	self:SetText(init or "")
-	self.prompt = prompt
-	self.filter = filter or (main.unicode and "%c" or "^%w%p ")
-	self.filterPattern = "["..self.filter.."]"
-	self.limit = limit
-	self.changeFunc = changeFunc
-	self.lineHeight = lineHeight
-	self.defaultLineHeight = lineHeight
-	self.font = "VAR"
-	self.textCol = "^7"
-	self.inactiveCol = "^8"
-	self.disableCol = "^9"
-	self.selCol = "^0"
-	self.selBGCol = "^xBBBBBB"
-	self.blinkStart = GetTime()
-	self.allowZoom = allowZoom
-	local function buttonSize()
-		local _, height = self:GetSize()
-		return height - 4
-	end
-	if self.filter == "%D" or self.filter == "^%-%d" then
-		-- Add +/- buttons for integer number edits
-		self.isNumeric = true
-		self.controls.buttonDown = new("ButtonControl", {"RIGHT",self,"RIGHT"}, -2, 0, buttonSize, buttonSize, "-", function()
-			self:OnKeyUp("DOWN")
-		end)
-		self.controls.buttonUp = new("ButtonControl", {"RIGHT",self.controls.buttonDown,"LEFT"}, -1, 0, buttonSize, buttonSize, "+", function()
-			self:OnKeyUp("UP")
-		end)
-	elseif clearable then
-		self.controls.buttonClear = new("ButtonControl", {"RIGHT",self,"RIGHT"}, -2, 0, buttonSize, buttonSize, "x", function()
-			self:SetText("", true)
-		end)
-		self.controls.buttonClear.shown = function() return #self.buf > 0 and self:IsMouseInBounds() end
-	end
-	self.controls.scrollBarH = new("ScrollBarControl", {"BOTTOMLEFT",self,"BOTTOMLEFT"}, 1, -1, 0, 14, 60, "HORIZONTAL", true)
-	self.controls.scrollBarH.width = function()
-		local width, height = self:GetSize()
-		return width - (self.controls.scrollBarV.enabled and 16 or 2)
-	end
-	self.controls.scrollBarV = new("ScrollBarControl", {"TOPRIGHT",self,"TOPRIGHT"}, -1, 1, 14, 0, (lineHeight or 0) * 3, "VERTICAL", true)
-	self.controls.scrollBarV.height = function()
-		local width, height = self:GetSize()
-		return height - (self.controls.scrollBarH.enabled and 16 or 2)
-	end
-	if not lineHeight then
-		self.controls.scrollBarH.shown = false
-		self.controls.scrollBarV.shown = false
-	end
-	self.protected = false
-end)
+local EditClass = newClass("EditControl", "ControlHost", "Control", "UndoHandler", "TooltipHost",
+	function (self, anchor, x, y, width, height, init, prompt, filter, limit, changeFunc, lineHeight, allowZoom, clearable)
+		self.ControlHost()
+		self.Control(anchor, x, y, width, height)
+		self.UndoHandler()
+		self.TooltipHost()
+		self:SetText(init or "")
+		self.prompt = prompt
+		self.filter = filter or (main.unicode and "%c" or "^%w%p ")
+		self.filterPattern = "[" .. self.filter .. "]"
+		self.limit = limit
+		self.changeFunc = changeFunc
+		self.lineHeight = lineHeight
+		self.defaultLineHeight = lineHeight
+		self.font = "VAR"
+		self.textCol = "^7"
+		self.inactiveCol = "^8"
+		self.disableCol = "^9"
+		self.selCol = "^0"
+		self.selBGCol = "^xBBBBBB"
+		self.blinkStart = GetTime()
+		self.allowZoom = allowZoom
+		local function buttonSize()
+			local _, height = self:GetSize()
+			return height - 4
+		end
+		if self.filter == "%D" or self.filter == "^%-%d" then
+			-- Add +/- buttons for integer number edits
+			self.isNumeric = true
+			self.controls.buttonDown = new("ButtonControl", { "RIGHT", self, "RIGHT" }, -2, 0, buttonSize, buttonSize,
+				"-", function ()
+					self:OnKeyUp("DOWN")
+				end)
+			self.controls.buttonUp = new("ButtonControl", { "RIGHT", self.controls.buttonDown, "LEFT" }, -1, 0,
+				buttonSize, buttonSize, "+", function ()
+					self:OnKeyUp("UP")
+				end)
+		elseif clearable then
+			self.controls.buttonClear = new("ButtonControl", { "RIGHT", self, "RIGHT" }, -2, 0, buttonSize, buttonSize,
+				"x", function ()
+					self:SetText("", true)
+				end)
+			self.controls.buttonClear.shown = function () return #self.buf > 0 and self:IsMouseInBounds() end
+		end
+		self.controls.scrollBarH = new("ScrollBarControl", { "BOTTOMLEFT", self, "BOTTOMLEFT" }, 1, -1, 0, 14, 60,
+			"HORIZONTAL", true)
+		self.controls.scrollBarH.width = function ()
+			local width, height = self:GetSize()
+			return width - (self.controls.scrollBarV.enabled and 16 or 2)
+		end
+		self.controls.scrollBarV = new("ScrollBarControl", { "TOPRIGHT", self, "TOPRIGHT" }, -1, 1, 14, 0,
+			(lineHeight or 0) * 3, "VERTICAL", true)
+		self.controls.scrollBarV.height = function ()
+			local width, height = self:GetSize()
+			return height - (self.controls.scrollBarH.enabled and 16 or 2)
+		end
+		if not lineHeight then
+			self.controls.scrollBarH.shown = false
+			self.controls.scrollBarV.shown = false
+		end
+		self.protected = false
+	end)
 
 function EditClass:SetText(text, notify)
 	self.buf = tostring(text)
@@ -137,7 +143,7 @@ function EditClass:GetSelText()
 end
 
 function EditClass:ReplaceSel(text)
-	text = text:gsub("\r","")
+	text = text:gsub("\r", "")
 	if text:match(self.filterPattern) then
 		return
 	end
@@ -159,9 +165,9 @@ function EditClass:ReplaceSel(text)
 end
 
 function EditClass:Insert(text)
-	text = text:gsub("\r","")
+	text = text:gsub("\r", "")
 	-- Remove any illegal chars from the "text" variable, to stop resulting in no text when an illegal character is found.
-	text = text:gsub(self.filterPattern,"")
+	text = text:gsub(self.filterPattern, "")
 	if text == "" then
 		return
 	end
@@ -186,7 +192,7 @@ function EditClass:ZoomText(zoom)
 	end
 
 	local textHeight = self.lineHeight
-	if zoom == "+" then 
+	if zoom == "+" then
 		textHeight = textHeight + 1
 	elseif zoom == "-" then
 		textHeight = textHeight - 1
@@ -208,9 +214,11 @@ function EditClass:UpdateScrollBars()
 	local textHeight = self.lineHeight or (height - 4)
 	if self.lineHeight then
 		self.controls.scrollBarH:SetContentDimension(DrawStringWidth(textHeight, self.font, self.buf) + 2, width - 18)
-		self.controls.scrollBarV:SetContentDimension(newlineCount(self.buf.."\n") * textHeight, height - (self.controls.scrollBarH.enabled and 18 or 4))
+		self.controls.scrollBarV:SetContentDimension(newlineCount(self.buf .. "\n") * textHeight,
+			height - (self.controls.scrollBarH.enabled and 18 or 4))
 	else
-		self.controls.scrollBarH:SetContentDimension(DrawStringWidth(textHeight, self.font, self.buf) + 2, width - 4 - (self.prompt and DrawStringWidth(textHeight, self.font, self.prompt) + textHeight/2 or 0))
+		self.controls.scrollBarH:SetContentDimension(DrawStringWidth(textHeight, self.font, self.buf) + 2,
+			width - 4 - (self.prompt and DrawStringWidth(textHeight, self.font, self.prompt) + textHeight / 2 or 0))
 	end
 end
 
@@ -231,7 +239,8 @@ function EditClass:MoveCaretVertically(offset)
 	local pre = self.buf:sub(1, self.caret - 1)
 	local caretX = DrawStringWidth(self.lineHeight, self.font, lastLine(pre))
 	local caretY = newlineCount(pre) * self.lineHeight
-	self.caret = DrawStringCursorIndex(self.lineHeight, self.font, self.buf, caretX + 1, caretY + self.lineHeight/2 + offset)
+	self.caret = DrawStringCursorIndex(self.lineHeight, self.font, self.buf, caretX + 1,
+		caretY + self.lineHeight / 2 + offset)
 	self.lastUndoState.caret = self.caret
 	self:ScrollCaretIntoView()
 	self.blinkStart = GetTime()
@@ -270,11 +279,11 @@ function EditClass:Draw(viewPort, noTooltip)
 	local textHeight = self.lineHeight or (height - 4)
 	if self.prompt then
 		if not enabled then
-			DrawString(textX, textY, "LEFT", textHeight, self.font, self.disableCol..self.prompt)
+			DrawString(textX, textY, "LEFT", textHeight, self.font, self.disableCol .. self.prompt)
 		else
-			DrawString(textX, textY, "LEFT", textHeight, self.font, self.textCol..self.prompt..":")
+			DrawString(textX, textY, "LEFT", textHeight, self.font, self.textCol .. self.prompt .. ":")
 		end
-		textX = textX + DrawStringWidth(textHeight, self.font, self.prompt) + textHeight/2
+		textX = textX + DrawStringWidth(textHeight, self.font, self.prompt) + textHeight / 2
 	end
 	if not enabled then
 		return
@@ -292,16 +301,21 @@ function EditClass:Draw(viewPort, noTooltip)
 	if not self.hasFocus then
 		if self.buf == '' and self.placeholder then
 			SetDrawColor(self.disableCol)
-			DrawString(-self.controls.scrollBarH.offset, -self.controls.scrollBarV.offset, "LEFT", textHeight, self.font, self.placeholder)
+			DrawString(-self.controls.scrollBarH.offset, -self.controls.scrollBarV.offset, "LEFT", textHeight, self.font,
+				self.placeholder)
 		else
 			SetDrawColor(self.inactiveCol)
 			if self.inactiveText then
-				local inactiveText = type(self.inactiveText) == "string" and self.inactiveText or self.inactiveText(self.buf)
-				DrawString(-self.controls.scrollBarH.offset, -self.controls.scrollBarV.offset, "LEFT", textHeight, self.font, inactiveText)
+				local inactiveText = type(self.inactiveText) == "string" and self.inactiveText or
+					self.inactiveText(self.buf)
+				DrawString(-self.controls.scrollBarH.offset, -self.controls.scrollBarV.offset, "LEFT", textHeight,
+					self.font, inactiveText)
 			elseif self.protected then
-				DrawString(-self.controls.scrollBarH.offset, -self.controls.scrollBarV.offset, "LEFT", textHeight, self.font, string.rep(protected_replace, #self.buf))
+				DrawString(-self.controls.scrollBarH.offset, -self.controls.scrollBarV.offset, "LEFT", textHeight,
+					self.font, string.rep(protected_replace, #self.buf))
 			else
-				DrawString(-self.controls.scrollBarH.offset, -self.controls.scrollBarV.offset, "LEFT", textHeight, self.font, self.buf)
+				DrawString(-self.controls.scrollBarH.offset, -self.controls.scrollBarV.offset, "LEFT", textHeight,
+					self.font, self.buf)
 			end
 		end
 		SetViewport()
@@ -313,7 +327,8 @@ function EditClass:Draw(viewPort, noTooltip)
 	end
 	if self.drag then
 		local cursorX, cursorY = GetCursorPos()
-		self.caret = DrawStringCursorIndex(textHeight, self.font, self.buf, cursorX - textX + self.controls.scrollBarH.offset, cursorY - textY + self.controls.scrollBarV.offset)
+		self.caret = DrawStringCursorIndex(textHeight, self.font, self.buf,
+			cursorX - textX + self.controls.scrollBarH.offset, cursorY - textY + self.controls.scrollBarV.offset)
 		self.lastUndoState.caret = self.caret
 		self:ScrollCaretIntoView()
 	end
@@ -324,7 +339,7 @@ function EditClass:Draw(viewPort, noTooltip)
 		local right = m_max(self.caret, self.sel or self.caret)
 		local caretX
 		SetDrawColor(self.textCol)
-		for s, line, e in (self.buf.."\n"):gmatch("()([^\n]*)\n()") do
+		for s, line, e in (self.buf .. "\n"):gmatch("()([^\n]*)\n()") do
 			textX = -self.controls.scrollBarH.offset
 			if left >= e or right <= s then
 				DrawString(textX, textY, "LEFT", textHeight, self.font, line)
@@ -376,7 +391,8 @@ function EditClass:Draw(viewPort, noTooltip)
 		local sel = self.selCol .. StripEscapes(self.buf:sub(left, right - 1))
 		local post = self.textCol .. self.buf:sub(right)
 		if self.protected then
-			DrawString(textX, textY, "LEFT", textHeight, self.font, self.textCol .. string.rep(protected_replace, #pre-#self.textCol))
+			DrawString(textX, textY, "LEFT", textHeight, self.font,
+				self.textCol .. string.rep(protected_replace, #pre - #self.textCol))
 		else
 			DrawString(textX, textY, "LEFT", textHeight, self.font, pre)
 		end
@@ -385,12 +401,14 @@ function EditClass:Draw(viewPort, noTooltip)
 		SetDrawColor(self.selBGCol)
 		DrawImage(nil, textX, textY, selWidth, textHeight)
 		if self.protected then
-			DrawString(textX, textY, "LEFT", textHeight, self.font, self.selCol .. string.rep(protected_replace, #sel-#self.selCol))
+			DrawString(textX, textY, "LEFT", textHeight, self.font,
+				self.selCol .. string.rep(protected_replace, #sel - #self.selCol))
 		else
 			DrawString(textX, textY, "LEFT", textHeight, self.font, sel)
 		end
 		if self.protected and #post > 0 then
-			DrawString(textX + selWidth, textY, "LEFT", textHeight, self.font, self.textCol .. string.rep(protected_replace, #post-#self.textCol))
+			DrawString(textX + selWidth, textY, "LEFT", textHeight, self.font,
+				self.textCol .. string.rep(protected_replace, #post - #self.textCol))
 		else
 			DrawString(textX + selWidth, textY, "LEFT", textHeight, self.font, post)
 		end
@@ -403,7 +421,8 @@ function EditClass:Draw(viewPort, noTooltip)
 		local pre = self.textCol .. self.buf:sub(1, self.caret - 1)
 		local post = self.buf:sub(self.caret)
 		if self.protected then
-			DrawString(textX, textY, "LEFT", textHeight, self.font, self.textCol .. string.rep(protected_replace, #pre-#self.textCol))
+			DrawString(textX, textY, "LEFT", textHeight, self.font,
+				self.textCol .. string.rep(protected_replace, #pre - #self.textCol))
 		else
 			DrawString(textX, textY, "LEFT", textHeight, self.font, pre)
 		end
@@ -441,7 +460,7 @@ function EditClass:OnKeyDown(key, doubleClick)
 		self.selControl = nil
 	end
 	local shift = IsKeyDown("SHIFT")
-	local ctrl =  IsKeyDown("CTRL")
+	local ctrl = IsKeyDown("CTRL")
 	if key == "LEFTBUTTON" then
 		if not self.Object:IsMouseOver() then
 			return
@@ -488,10 +507,11 @@ function EditClass:OnKeyDown(key, doubleClick)
 			local textY = y + 2
 			local textHeight = self.lineHeight or (height - 4)
 			if self.prompt then
-				textX = textX + DrawStringWidth(textHeight, self.font, self.prompt) + textHeight/2
+				textX = textX + DrawStringWidth(textHeight, self.font, self.prompt) + textHeight / 2
 			end
 			local cursorX, cursorY = GetCursorPos()
-			self.caret = DrawStringCursorIndex(textHeight, self.font, self.buf, cursorX - textX + self.controls.scrollBarH.offset, cursorY - textY + self.controls.scrollBarV.offset)
+			self.caret = DrawStringCursorIndex(textHeight, self.font, self.buf,
+				cursorX - textX + self.controls.scrollBarH.offset, cursorY - textY + self.controls.scrollBarV.offset)
 			self.sel = self.caret
 			self.lastUndoState.caret = self.caret
 			self:ScrollCaretIntoView()
@@ -525,7 +545,7 @@ function EditClass:OnKeyDown(key, doubleClick)
 			if self.pasteFilter then
 				text = self.pasteFilter(text)
 			end
-			text = text:gsub("[\128-\255]","?")
+			text = text:gsub("[\128-\255]", "?")
 			if self.sel and self.sel ~= self.caret then
 				self:ReplaceSel(text)
 			else
@@ -540,13 +560,13 @@ function EditClass:OnKeyDown(key, doubleClick)
 		self.sel = shift and (self.sel or self.caret) or nil
 		if self.caret > 1 then
 			if ctrl then
-			-- Skip leading space, then jump word
-				while self.buf:sub(self.caret-1, self.caret-1):match("[%s%p]") do
+				-- Skip leading space, then jump word
+				while self.buf:sub(self.caret - 1, self.caret - 1):match("[%s%p]") do
 					if self.caret > 1 then
 						self.caret = self.caret - 1
 					end
 				end
-				while self.buf:sub(self.caret-1, self.caret-1):match("%w") do
+				while self.buf:sub(self.caret - 1, self.caret - 1):match("%w") do
 					if self.caret > 1 then
 						self.caret = self.caret - 1
 					end
@@ -562,7 +582,7 @@ function EditClass:OnKeyDown(key, doubleClick)
 		self.sel = shift and (self.sel or self.caret) or nil
 		if self.caret <= #self.buf then
 			if ctrl then
-			-- Jump word, then skip trailing space, 
+				-- Jump word, then skip trailing space,
 				while self.buf:sub(self.caret, self.caret):match("%w") do
 					if self.caret <= #self.buf then
 						self.caret = self.caret + 1
@@ -601,7 +621,7 @@ function EditClass:OnKeyDown(key, doubleClick)
 		if self.lineHeight and not ctrl then
 			self.caret = self.caret + #self.buf:sub(self.caret, -1):match("[^\n]*")
 		else
-			self.caret = #self.buf + 1			
+			self.caret = #self.buf + 1
 		end
 		self.lastUndoState.caret = self.caret
 		self:ScrollCaretIntoView()
@@ -701,7 +721,7 @@ function EditClass:OnKeyUp(key)
 				end
 			end
 		elseif key == "WHEELDOWN" or key == "DOWN" then
-			if cur and (self.filter ~= "%D" or cur > 0)then
+			if cur and (self.filter ~= "%D" or cur > 0) then
 				self:SetText(tostring(cur - (self.numberInc or 1)), true)
 			else
 				if self.placeholder then
@@ -746,10 +766,7 @@ function EditClass:OnChar(key)
 end
 
 function EditClass:CreateUndoState()
-	local state = {
-		buf = self.buf,
-		caret = self.caret,
-	}
+	local state = { buf = self.buf, caret = self.caret, }
 	self.lastUndoState = state
 	return state
 end

@@ -38,25 +38,25 @@ if arg and isValueInTable(arg, "--no-jit") then
 	ConPrintf("JIT Disabled")
 end
 
-local tempTable1 = { }
-local tempTable2 = { }
+local tempTable1 = {}
+local tempTable2 = {}
 
 main = new("ControlHost")
 
 function main:Init()
 	self:DetectUnicodeSupport()
-	self.modes = { }
+	self.modes = {}
 	self.modes["LIST"] = LoadModule("Modules/BuildList")
 	self.modes["BUILD"] = LoadModule("Modules/Build")
 
 	if launch.devMode or (GetScriptPath() == GetRuntimePath() and not launch.installedMode) then
 		-- If running in dev mode or standalone mode, put user data in the script path
-		self.userPath = GetScriptPath().."/"
+		self.userPath = GetScriptPath() .. "/"
 	else
-		self.userPath = GetUserPath().."/Last Epoch Planner/"
+		self.userPath = GetUserPath() .. "/Last Epoch Planner/"
 		MakeDir(self.userPath)
 	end
-	self.defaultBuildPath = self.userPath.."Builds/"
+	self.defaultBuildPath = self.userPath .. "Builds/"
 	self.buildPath = self.defaultBuildPath
 	MakeDir(self.buildPath)
 
@@ -76,11 +76,11 @@ function main:Init()
 	end
 
 
-	self.inputEvents = { }
-	self.popups = { }
-	self.tooltipLines = { }
+	self.inputEvents = {}
+	self.popups = {}
+	self.tooltipLines = {}
 
-	self.gameAccounts = { }
+	self.gameAccounts = {}
 
 	self.buildSortMode = "NAME"
 	self.connectionProtocol = 0
@@ -99,11 +99,11 @@ function main:Init()
 
 	local ignoreBuild
 	if arg[1] then
-		buildSites.DownloadBuild(arg[1], nil, function(isSuccess, data)
+		buildSites.DownloadBuild(arg[1], nil, function (isSuccess, data)
 			if not isSuccess then
 				self:SetMode("BUILD", false, data)
 			else
-				local xmlText = Inflate(common.base64.decode(data:gsub("-","+"):gsub("_","/")))
+				local xmlText = Inflate(common.base64.decode(data:gsub("-", "+"):gsub("_", "/")))
 				self:SetMode("BUILD", false, "Imported Build", xmlText)
 				self.newModeChangeToTree = true
 			end
@@ -117,11 +117,11 @@ function main:Init()
 	end
 	self:LoadSettings(ignoreBuild)
 
-	self.tree = { }
+	self.tree = {}
 	self:LoadTree(latestTreeVersion)
 
-	self.uniqueDB = { list = { }, loading = true }
-	self.rareDB = { list = { }, loading = true }
+	self.uniqueDB = { list = {}, loading = true }
+	self.rareDB = { list = {}, loading = true }
 
 	local function loadItemDBs()
 		for _, itemData in pairs(data.uniques) do
@@ -132,10 +132,10 @@ function main:Init()
 				if itemBase.baseTypeID == baseTypeID and itemBase.subTypeID == subTypeID then
 					newItem.title = itemData.name
 					newItem.baseName = itemBaseName
-					for _,mod in ipairs(itemBase.implicits) do
+					for _, mod in ipairs(itemBase.implicits) do
 						table.insert(newItem.implicitModLines, { line = mod })
 					end
-					for _,mod in ipairs(itemData.mods) do
+					for _, mod in ipairs(itemData.mods) do
 						table.insert(newItem.explicitModLines, { line = "{unique}" .. mod })
 					end
 					newItem:BuildAndParseRaw()
@@ -159,7 +159,12 @@ function main:Init()
 						-- Automatically add implicit
 						local implicitIndex = 1
 						for line in newItem.base.implicit:gmatch("[^\n]+") do
-							t_insert(newItem.implicitModLines, { line = line, modTags = newItem.base.implicitModTypes and newItem.base.implicitModTypes[implicitIndex] or { } })
+							t_insert(newItem.implicitModLines,
+								{
+									line = line,
+									modTags = newItem.base.implicitModTypes and
+										newItem.base.implicitModTypes[implicitIndex] or {}
+								})
 							implicitIndex = implicitIndex + 1
 						end
 					end
@@ -179,12 +184,12 @@ function main:Init()
 		local saved = self.defaultItemAffixQuality
 		self.defaultItemAffixQuality = 127.5
 		loadItemDBs()
-		
+
 		local function parseRangedMod(line)
-    		local rounding
-			line = line:gsub("{(%a*):?([^}]*)}", function(k,val)
+			local rounding
+			line = line:gsub("{(%a*):?([^}]*)}", function (k, val)
 				if k == "rounding" then
-				rounding = val
+					rounding = val
 				end
 
 				return ""
@@ -192,20 +197,20 @@ function main:Init()
 			local rangedLine = itemLib.applyRange(line, self.defaultItemAffixQuality, 1, rounding)
 			modLib.parseMod(rangedLine)
 		end
-		
+
 		-- Load all the not scaling stats
-		for _,node in pairs(self.tree[latestTreeVersion].nodes) do
-    		if node.notScalingStats then
-          		for _, line in ipairs(node.notScalingStats) do
-                    parseRangedMod(line)
-                end
-    		end
+		for _, node in pairs(self.tree[latestTreeVersion].nodes) do
+			if node.notScalingStats then
+				for _, line in ipairs(node.notScalingStats) do
+					parseRangedMod(line)
+				end
+			end
 		end
 
 		-- Load all affixes
-		for _,mod in pairs(data.itemMods.Item) do
+		for _, mod in pairs(data.itemMods.Item) do
 			for _, line in ipairs(mod) do
-                parseRangedMod(line)
+				parseRangedMod(line)
 			end
 		end
 
@@ -216,7 +221,7 @@ function main:Init()
 			newItem.baseName = baseName
 			newItem.base = base
 			newItem.rarity = "NORMAL"
-			for _,mod in ipairs(base.implicits) do
+			for _, mod in ipairs(base.implicits) do
 				table.insert(newItem.implicitModLines, { line = mod })
 			end
 			newItem:BuildAndParseRaw()
@@ -226,59 +231,67 @@ function main:Init()
 		self.defaultItemAffixQuality = saved
 	end
 
-	self.sharedItemList = { }
-	self.sharedItemSetList = { }
+	self.sharedItemList = {}
+	self.sharedItemSetList = {}
 
 	self.anchorMain = new("Control", nil, 4, 0, 0, 0)
-	self.anchorMain.y = function()
+	self.anchorMain.y = function ()
 		return self.screenH - 4
 	end
-	self.controls.options = new("ButtonControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 0, 0, 68, 20, "Options", function()
-		self:OpenOptionsPopup()
-	end)
-	self.controls.about = new("ButtonControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 72, 0, 68, 20, "About", function()
-		self:OpenAboutPopup()
-	end)
-	self.controls.applyUpdate = new("ButtonControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 0, -24, 140, 20, "^x50E050Update Ready", function()
-		self:OpenUpdatePopup()
-	end)
-	self.controls.applyUpdate.shown = function()
+	self.controls.options = new("ButtonControl", { "BOTTOMLEFT", self.anchorMain, "BOTTOMLEFT" }, 0, 0, 68, 20, "Options",
+		function ()
+			self:OpenOptionsPopup()
+		end)
+	self.controls.about = new("ButtonControl", { "BOTTOMLEFT", self.anchorMain, "BOTTOMLEFT" }, 72, 0, 68, 20, "About",
+		function ()
+			self:OpenAboutPopup()
+		end)
+	self.controls.applyUpdate = new("ButtonControl", { "BOTTOMLEFT", self.anchorMain, "BOTTOMLEFT" }, 0, -24, 140, 20,
+		"^x50E050Update Ready", function ()
+			self:OpenUpdatePopup()
+		end)
+	self.controls.applyUpdate.shown = function ()
 		return launch.updateAvailable and launch.updateAvailable ~= "none"
 	end
-	self.controls.checkUpdate = new("ButtonControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 0, -24, 140, 20, "", function()
-		launch:CheckForUpdate()
-	end)
-	self.controls.checkUpdate.shown = function()
+	self.controls.checkUpdate = new("ButtonControl", { "BOTTOMLEFT", self.anchorMain, "BOTTOMLEFT" }, 0, -24, 140, 20, "",
+		function ()
+			launch:CheckForUpdate()
+		end)
+	self.controls.checkUpdate.shown = function ()
 		return not launch.devMode and (not launch.updateAvailable or launch.updateAvailable == "none")
 	end
-	self.controls.checkUpdate.label = function()
+	self.controls.checkUpdate.label = function ()
 		return launch.updateCheckRunning and launch.updateProgress or "Check for Update"
 	end
-	self.controls.checkUpdate.enabled = function()
+	self.controls.checkUpdate.enabled = function ()
 		return not launch.updateCheckRunning
 	end
-	self.controls.forkLabel = new("LabelControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 148, -26, 0, 16, "")
-	self.controls.forkLabel.label = function()
+	self.controls.forkLabel = new("LabelControl", { "BOTTOMLEFT", self.anchorMain, "BOTTOMLEFT" }, 148, -26, 0, 16, "")
+	self.controls.forkLabel.label = function ()
 		return "^8Last Epoch Planner"
 	end
-	self.controls.versionLabel = new("LabelControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 148, -2, 0, 16, "")
-	self.controls.versionLabel.label = function()
-		return "^8Version: "..launch.versionNumber..(launch.versionBranch == "dev" and " (Dev)" or launch.versionBranch == "beta" and " (Beta)" or "")
+	self.controls.versionLabel = new("LabelControl", { "BOTTOMLEFT", self.anchorMain, "BOTTOMLEFT" }, 148, -2, 0, 16, "")
+	self.controls.versionLabel.label = function ()
+		return "^8Version: " ..
+			launch.versionNumber ..
+			(launch.versionBranch == "dev" and " (Dev)" or launch.versionBranch == "beta" and " (Beta)" or "")
 	end
-	self.controls.devMode = new("LabelControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 0, -26, 0, 20, colorCodes.NEGATIVE.."Dev Mode")
-	self.controls.devMode.shown = function()
+	self.controls.devMode = new("LabelControl", { "BOTTOMLEFT", self.anchorMain, "BOTTOMLEFT" }, 0, -26, 0, 20,
+		colorCodes.NEGATIVE .. "Dev Mode")
+	self.controls.devMode.shown = function ()
 		return launch.devMode
 	end
-	self.controls.dismissToast = new("ButtonControl", {"BOTTOMLEFT",self.anchorMain,"BOTTOMLEFT"}, 0, function() return -self.mainBarHeight + self.toastHeight end, 80, 20, "Dismiss", function()
-		self.toastMode = "HIDING"
-		self.toastStart = GetTime()
-	end)
-	self.controls.dismissToast.shown = function()
+	self.controls.dismissToast = new("ButtonControl", { "BOTTOMLEFT", self.anchorMain, "BOTTOMLEFT" }, 0,
+		function () return -self.mainBarHeight + self.toastHeight end, 80, 20, "Dismiss", function ()
+			self.toastMode = "HIDING"
+			self.toastStart = GetTime()
+		end)
+	self.controls.dismissToast.shown = function ()
 		return self.toastMode == "SHOWN"
 	end
 
 	self.mainBarHeight = 58
-	self.toastMessages = { }
+	self.toastMessages = {}
 
 	if launch.devMode and GetTime() >= 0 and GetTime() < 15000 then
 		t_insert(self.toastMessages, [[
@@ -295,7 +308,7 @@ the "Releases" section of the GitHub page.]])
 	self:LoadSharedItems()
 
 	self.onFrameFuncs = {
-		["FirstFrame"] = function()
+		["FirstFrame"] = function ()
 			self.onFrameFuncs["FirstFrame"] = nil
 			ConPrintf("Startup time: %d ms", GetTime() - launch.startTime)
 		end
@@ -304,7 +317,7 @@ the "Releases" section of the GitHub page.]])
 	if not self.saveNewModCache then
 		local itemsCoroutine = coroutine.create(loadItemDBs)
 
-		self.onFrameFuncs["LoadItems"] = function()
+		self.onFrameFuncs["LoadItems"] = function ()
 			local res, errMsg = coroutine.resume(itemsCoroutine)
 			if coroutine.status(itemsCoroutine) == "dead" then
 				self.onFrameFuncs["LoadItems"] = nil
@@ -329,14 +342,14 @@ function main:SaveModCache()
 	local out = io.open("Data/ModCache.lua", "w")
 	out:write('local c=...')
 	for line, dat in pairsSortByKey(modLib.parseModCache) do
-		out:write('c["', line:gsub("\n","\\n"), '"]={')
+		out:write('c["', line:gsub("\n", "\\n"), '"]={')
 		if dat[1] then
 			writeLuaTable(out, dat[1])
 		else
 			out:write('nil')
 		end
 		if dat[2] then
-			out:write(',"', dat[2]:gsub("\n","\\n"), '"}\n')
+			out:write(',"', dat[2]:gsub("\n", "\\n"), '"}\n')
 		else
 			out:write(',nil}\n')
 		end
@@ -420,7 +433,7 @@ function main:OnFrame()
 		if not self.toastMode then
 			self.toastMode = "SHOWING"
 			self.toastStart = GetTime()
-			self.toastHeight = #self.toastMessages[1]:gsub("[^\n]","") * 16 + 20 + 40
+			self.toastHeight = #self.toastMessages[1]:gsub("[^\n]", "") * 16 + 20 + 40
 		end
 		if self.toastMode == "SHOWING" then
 			local now = GetTime()
@@ -448,8 +461,10 @@ function main:OnFrame()
 			SetDrawColor(0.1, 0.1, 0.1)
 			DrawImage(nil, 0, self.screenH - self.mainBarHeight + 4, 308, self.mainBarHeight - 4)
 			SetDrawColor(1, 1, 1)
-			DrawString(4, self.screenH - self.mainBarHeight + 8, "LEFT", 20, "VAR", self.toastMessages[1]:gsub("\n.*",""))
-			DrawString(4, self.screenH - self.mainBarHeight + 28, "LEFT", 16, "VAR", self.toastMessages[1]:gsub("^[^\n]*\n?",""))
+			DrawString(4, self.screenH - self.mainBarHeight + 8, "LEFT", 20, "VAR",
+				self.toastMessages[1]:gsub("\n.*", ""))
+			DrawString(4, self.screenH - self.mainBarHeight + 28, "LEFT", 16, "VAR",
+				self.toastMessages[1]:gsub("^[^\n]*\n?", ""))
 		end
 	end
 
@@ -502,7 +517,8 @@ function main:OnFrame()
 	if self.inputEvents and not itemLib.wiki.triggered then
 		for _, event in ipairs(self.inputEvents) do
 			if event.type == "KeyUp" and event.key == "F1" then
-				local tabName = (self.modes[self.mode].viewMode and self.modes[self.mode].viewMode:lower() or "Build List") .. " tab"
+				local tabName = (self.modes[self.mode].viewMode and self.modes[self.mode].viewMode:lower() or "Build List") ..
+					" tab"
 				self:OpenAboutPopup(tabName or 1)
 				break
 			end
@@ -532,7 +548,7 @@ end
 
 function main:SetMode(newMode, ...)
 	self.newMode = newMode
-	self.newModeArgs = {...}
+	self.newModeArgs = { ... }
 end
 
 function main:CallMode(func, ...)
@@ -543,7 +559,7 @@ function main:CallMode(func, ...)
 end
 
 function main:LoadSettings(ignoreBuild)
-	local setXML, errMsg = common.xml.LoadXMLFile(self.userPath.."Settings.xml")
+	local setXML, errMsg = common.xml.LoadXMLFile(self.userPath .. "Settings.xml")
 	if not setXML then
 		return true
 	elseif setXML[1].elem ~= "LastEpochPlanner" then
@@ -557,7 +573,7 @@ function main:LoadSettings(ignoreBuild)
 					launch:ShowErrMsg("^1Error parsing 'Settings.xml': Invalid mode attribute in 'Mode' element")
 					return true
 				end
-				local args = { }
+				local args = {}
 				for _, child in ipairs(node) do
 					if type(child) == "table" then
 						if child.elem == "Arg" then
@@ -577,9 +593,7 @@ function main:LoadSettings(ignoreBuild)
 				self.lastRealm = node.attrib.lastRealm
 				for _, child in ipairs(node) do
 					if child.elem == "Account" then
-						self.gameAccounts[child.attrib.accountName] = {
-							sessionID = child.attrib.sessionID,
-						}
+						self.gameAccounts[child.attrib.accountName] = { sessionID = child.attrib.sessionID, }
 					end
 				end
 			elseif node.elem == "Misc" then
@@ -655,7 +669,7 @@ function main:LoadSettings(ignoreBuild)
 end
 
 function main:LoadSharedItems()
-	local setXML, errMsg = common.xml.LoadXMLFile(self.userPath.."Settings.xml")
+	local setXML, errMsg = common.xml.LoadXMLFile(self.userPath .. "Settings.xml")
 	if not setXML then
 		return true
 	elseif setXML[1].elem ~= "LastEpochPlanner" then
@@ -676,7 +690,7 @@ function main:LoadSharedItems()
 						local newItem = new("Item", rawItem.raw)
 						t_insert(self.sharedItemList, newItem)
 					elseif child.elem == "ItemSet" then
-						local sharedItemSet = { title = child.attrib.title, slots = { } }
+						local sharedItemSet = { title = child.attrib.title, slots = {} }
 						for _, grandChild in ipairs(child) do
 							if grandChild.elem == "Item" then
 								local rawItem = { raw = "" }
@@ -701,7 +715,7 @@ function main:SaveSettings()
 	local setXML = { elem = "LastEpochPlanner" }
 	local mode = { elem = "Mode", attrib = { mode = self.mode } }
 	for _, val in ipairs({ self:CallMode("GetArgs") }) do
-		local child = { elem = "Arg", attrib = { } }
+		local child = { elem = "Arg", attrib = {} }
 		if type(val) == "number" then
 			child.attrib.number = tostring(val)
 		elseif type(val) == "boolean" then
@@ -729,31 +743,34 @@ function main:SaveSettings()
 		t_insert(sharedItemList, set)
 	end
 	t_insert(setXML, sharedItemList)
-	t_insert(setXML, { elem = "Misc", attrib = {
-		buildSortMode = self.buildSortMode,
-		connectionProtocol = tostring(launch.connectionProtocol),
-		proxyURL = launch.proxyURL,
-		buildPath = (self.buildPath ~= self.defaultBuildPath and self.buildPath or nil),
-		nodePowerTheme = self.nodePowerTheme,
-		colorPositive = self.colorPositive,
-		colorNegative = self.colorNegative,
-		colorHighlight = self.colorHighlight,
-		showThousandsSeparators = tostring(self.showThousandsSeparators),
-		thousandsSeparator = self.thousandsSeparator,
-		decimalSeparator = self.decimalSeparator,
-		showTitlebarName = tostring(self.showTitlebarName),
-		betaTest = tostring(self.betaTest),
-		defaultGemQuality = tostring(self.defaultGemQuality or 0),
-		defaultCharLevel = tostring(self.defaultCharLevel or 1),
-		defaultItemAffixQuality = tostring(self.defaultItemAffixQuality or 127.5),
-		lastExportWebsite = self.lastExportWebsite,
-		showWarnings = tostring(self.showWarnings),
-		slotOnlyTooltips = tostring(self.slotOnlyTooltips),
-		POESESSID = self.POESESSID,
-		invertSliderScrollDirection = tostring(self.invertSliderScrollDirection),
-		disableDevAutoSave = tostring(self.disableDevAutoSave),
-	} })
-	local res, errMsg = common.xml.SaveXMLFile(setXML, self.userPath.."Settings.xml")
+	t_insert(setXML, {
+		elem = "Misc",
+		attrib = {
+			buildSortMode = self.buildSortMode,
+			connectionProtocol = tostring(launch.connectionProtocol),
+			proxyURL = launch.proxyURL,
+			buildPath = (self.buildPath ~= self.defaultBuildPath and self.buildPath or nil),
+			nodePowerTheme = self.nodePowerTheme,
+			colorPositive = self.colorPositive,
+			colorNegative = self.colorNegative,
+			colorHighlight = self.colorHighlight,
+			showThousandsSeparators = tostring(self.showThousandsSeparators),
+			thousandsSeparator = self.thousandsSeparator,
+			decimalSeparator = self.decimalSeparator,
+			showTitlebarName = tostring(self.showTitlebarName),
+			betaTest = tostring(self.betaTest),
+			defaultGemQuality = tostring(self.defaultGemQuality or 0),
+			defaultCharLevel = tostring(self.defaultCharLevel or 1),
+			defaultItemAffixQuality = tostring(self.defaultItemAffixQuality or 127.5),
+			lastExportWebsite = self.lastExportWebsite,
+			showWarnings = tostring(self.showWarnings),
+			slotOnlyTooltips = tostring(self.slotOnlyTooltips),
+			POESESSID = self.POESESSID,
+			invertSliderScrollDirection = tostring(self.invertSliderScrollDirection),
+			disableDevAutoSave = tostring(self.disableDevAutoSave),
+		}
+	})
+	local res, errMsg = common.xml.SaveXMLFile(setXML, self.userPath .. "Settings.xml")
 	if not res then
 		launch:ShowErrMsg("Error saving 'Settings.xml': %s", errMsg)
 		return true
@@ -761,7 +778,7 @@ function main:SaveSettings()
 end
 
 function main:OpenOptionsPopup()
-	local controls = { }
+	local controls = {}
 
 	local currentY = 20
 	local popupWidth = 600
@@ -775,10 +792,12 @@ function main:OpenOptionsPopup()
 
 	-- local func to make a new section header
 	local function drawSectionHeader(id, title, omitHorizontalLine)
-		local headerBGColor ={ .6, .6, .6}
-		controls["section-"..id .. "-bg"] = new("RectangleOutlineControl", { "TOPLEFT", nil, "TOPLEFT" }, 8, currentY, popupWidth - 17, 26, headerBGColor, 1)
+		local headerBGColor = { .6, .6, .6 }
+		controls["section-" .. id .. "-bg"] = new("RectangleOutlineControl", { "TOPLEFT", nil, "TOPLEFT" }, 8, currentY,
+			popupWidth - 17, 26, headerBGColor, 1)
 		nextRow(.2)
-		controls["section-"..id .. "-label"] = new("LabelControl", { "TOPLEFT", nil, "TOPLEFT" }, popupWidth / 2 - 60, currentY, 0, 16, "^7" .. title)
+		controls["section-" .. id .. "-label"] = new("LabelControl", { "TOPLEFT", nil, "TOPLEFT" }, popupWidth / 2 - 60,
+			currentY, 0, 16, "^7" .. title)
 		nextRow(1.5)
 	end
 
@@ -787,24 +806,22 @@ function main:OpenOptionsPopup()
 
 	drawSectionHeader("app", "Application options")
 
-	controls.connectionProtocol = new("DropDownControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 100, 18, {
-		{ label = "Auto", protocol = 0 },
-		{ label = "IPv4", protocol = 1 },
-		{ label = "IPv6", protocol = 2 },
-	}, function(index, value)
-		self.connectionProtocol = value.protocol
-	end)
-	controls.connectionProtocolLabel = new("LabelControl", { "RIGHT", controls.connectionProtocol, "LEFT" }, defaultLabelSpacingPx, 0, 0, 16, "^7Connection Protocol:")
-	controls.connectionProtocol.tooltipText = "Changes which protocol is used when downloading updates and importing builds."
+	controls.connectionProtocol = new("DropDownControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY,
+		100, 18, { { label = "Auto", protocol = 0 }, { label = "IPv4", protocol = 1 }, { label = "IPv6", protocol = 2 }, },
+		function (index, value)
+			self.connectionProtocol = value.protocol
+		end)
+	controls.connectionProtocolLabel = new("LabelControl", { "RIGHT", controls.connectionProtocol, "LEFT" },
+		defaultLabelSpacingPx, 0, 0, 16, "^7Connection Protocol:")
+	controls.connectionProtocol.tooltipText =
+	"Changes which protocol is used when downloading updates and importing builds."
 	controls.connectionProtocol:SelByValue(launch.connectionProtocol, "protocol")
 
 	nextRow()
-	controls.proxyType = new("DropDownControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 80, 18, {
-		{ label = "HTTP", scheme = "http" },
-		{ label = "SOCKS", scheme = "socks5" },
-		{ label = "SOCKS5H", scheme = "socks5h" },
-	})
-	controls.proxyLabel = new("LabelControl", { "RIGHT", controls.proxyType, "LEFT" }, defaultLabelSpacingPx, 0, 0, 16, "^7Proxy server:")
+	controls.proxyType = new("DropDownControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 80, 18,
+		{ { label = "HTTP", scheme = "http" }, { label = "SOCKS", scheme = "socks5" }, { label = "SOCKS5H", scheme = "socks5h" }, })
+	controls.proxyLabel = new("LabelControl", { "RIGHT", controls.proxyType, "LEFT" }, defaultLabelSpacingPx, 0, 0, 16,
+		"^7Proxy server:")
 	controls.proxyURL = new("EditControl", { "LEFT", controls.proxyType, "RIGHT" }, 4, 0, 206, 18)
 
 	if launch.proxyURL then
@@ -815,131 +832,170 @@ function main:OpenOptionsPopup()
 
 	nextRow()
 	controls.buildPath = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 290, 18)
-	controls.buildPathLabel = new("LabelControl", { "RIGHT", controls.buildPath, "LEFT" }, defaultLabelSpacingPx, 0, 0, 16, "^7Build save path:")
+	controls.buildPathLabel = new("LabelControl", { "RIGHT", controls.buildPath, "LEFT" }, defaultLabelSpacingPx, 0, 0,
+		16, "^7Build save path:")
 	if self.buildPath ~= self.defaultBuildPath then
 		controls.buildPath:SetText(self.buildPath)
 	end
-	controls.buildPath.tooltipText = "Overrides the default save location for builds.\nThe default location is: '"..self.defaultBuildPath.."'"
+	controls.buildPath.tooltipText = "Overrides the default save location for builds.\nThe default location is: '" ..
+		self.defaultBuildPath .. "'"
 
 	nextRow()
-	controls.nodePowerTheme = new("DropDownControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 100, 18, {
-		{ label = "Red & Blue", theme = "RED/BLUE" },
-		{ label = "Red & Green", theme = "RED/GREEN" },
-		{ label = "Green & Blue", theme = "GREEN/BLUE" },
-	}, function(index, value)
-		self.nodePowerTheme = value.theme
-	end)
-	controls.nodePowerThemeLabel = new("LabelControl", { "RIGHT", controls.nodePowerTheme, "LEFT" }, defaultLabelSpacingPx, 0, 0, 16, "^7Node Power colours:")
-	controls.nodePowerTheme.tooltipText = "Changes the colour scheme used for the node power display on the passive tree."
+	controls.nodePowerTheme = new("DropDownControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 100,
+		18, {
+			{ label = "Red & Blue", theme = "RED/BLUE" },
+			{ label = "Red & Green", theme = "RED/GREEN" },
+			{ label = "Green & Blue", theme = "GREEN/BLUE" },
+		}, function (index, value)
+			self.nodePowerTheme = value.theme
+		end)
+	controls.nodePowerThemeLabel = new("LabelControl", { "RIGHT", controls.nodePowerTheme, "LEFT" },
+		defaultLabelSpacingPx, 0, 0, 16, "^7Node Power colours:")
+	controls.nodePowerTheme.tooltipText =
+	"Changes the colour scheme used for the node power display on the passive tree."
 	controls.nodePowerTheme:SelByValue(self.nodePowerTheme, "theme")
 
 	nextRow()
-	controls.colorPositive = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 100, 18, tostring(self.colorPositive:gsub('^(^)', '0')), nil, nil, 8, function(buf)
-		local match = string.match(buf, "0x%x+")
-		if match and #match == 8 then
-			updateColorCode("POSITIVE", buf)
-			self.colorPositive = buf
-		end
-	end)
-	controls.colorPositiveLabel = new("LabelControl", { "RIGHT", controls.colorPositive, "LEFT" }, defaultLabelSpacingPx, 0, 0, 16, "^7Hex colour for positive values:")
-	controls.colorPositive.tooltipText = "Overrides the default hex colour for positive values in breakdowns. \nExpected format is 0x000000. " ..
-		"The default value is " .. tostring(defaultColorCodes.POSITIVE:gsub('^(^)', '0')) .. ".\nIf updating while inside a build, please re-load the build after saving."
+	controls.colorPositive = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 100, 18,
+		tostring(self.colorPositive:gsub('^(^)', '0')), nil, nil, 8, function (buf)
+			local match = string.match(buf, "0x%x+")
+			if match and #match == 8 then
+				updateColorCode("POSITIVE", buf)
+				self.colorPositive = buf
+			end
+		end)
+	controls.colorPositiveLabel = new("LabelControl", { "RIGHT", controls.colorPositive, "LEFT" }, defaultLabelSpacingPx,
+		0, 0, 16, "^7Hex colour for positive values:")
+	controls.colorPositive.tooltipText =
+		"Overrides the default hex colour for positive values in breakdowns. \nExpected format is 0x000000. " ..
+		"The default value is " ..
+		tostring(defaultColorCodes.POSITIVE:gsub('^(^)', '0')) ..
+		".\nIf updating while inside a build, please re-load the build after saving."
 
 	nextRow()
-	controls.colorNegative = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 100, 18, tostring(self.colorNegative:gsub('^(^)', '0')), nil, nil, 8, function(buf)
-		local match = string.match(buf, "0x%x+")
-		if match and #match == 8 then
-			updateColorCode("NEGATIVE", buf)
-			self.colorNegative = buf
-		end
-	end)
-	controls.colorNegativeLabel = new("LabelControl", { "RIGHT", controls.colorNegative, "LEFT" }, defaultLabelSpacingPx, 0, 0, 16, "^7Hex colour for negative values:")
-	controls.colorNegative.tooltipText = "Overrides the default hex colour for negative values in breakdowns. \nExpected format is 0x000000. " ..
-		"The default value is " .. tostring(defaultColorCodes.NEGATIVE:gsub('^(^)', '0')) .. ".\nIf updating while inside a build, please re-load the build after saving."
+	controls.colorNegative = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 100, 18,
+		tostring(self.colorNegative:gsub('^(^)', '0')), nil, nil, 8, function (buf)
+			local match = string.match(buf, "0x%x+")
+			if match and #match == 8 then
+				updateColorCode("NEGATIVE", buf)
+				self.colorNegative = buf
+			end
+		end)
+	controls.colorNegativeLabel = new("LabelControl", { "RIGHT", controls.colorNegative, "LEFT" }, defaultLabelSpacingPx,
+		0, 0, 16, "^7Hex colour for negative values:")
+	controls.colorNegative.tooltipText =
+		"Overrides the default hex colour for negative values in breakdowns. \nExpected format is 0x000000. " ..
+		"The default value is " ..
+		tostring(defaultColorCodes.NEGATIVE:gsub('^(^)', '0')) ..
+		".\nIf updating while inside a build, please re-load the build after saving."
 
 	nextRow()
-	controls.colorHighlight = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 100, 18, tostring(self.colorHighlight:gsub('^(^)', '0')), nil, nil, 8, function(buf)
-		local match = string.match(buf, "0x%x+")
-		if match and #match == 8 then
-			updateColorCode("HIGHLIGHT", buf)
-			self.colorHighlight = buf
-		end
-	end)
-	controls.colorHighlightLabel = new("LabelControl", { "RIGHT", controls.colorHighlight, "LEFT" }, defaultLabelSpacingPx, 0, 0, 16, "^7Hex colour for highlight nodes:")
-	controls.colorHighlight.tooltipText = "Overrides the default hex colour for highlighting nodes in passive tree search. \nExpected format is 0x000000. " ..
-		"The default value is " .. tostring(defaultColorCodes.HIGHLIGHT:gsub('^(^)', '0')) .."\nIf updating while inside a build, please re-load the build after saving."
+	controls.colorHighlight = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 100, 18,
+		tostring(self.colorHighlight:gsub('^(^)', '0')), nil, nil, 8, function (buf)
+			local match = string.match(buf, "0x%x+")
+			if match and #match == 8 then
+				updateColorCode("HIGHLIGHT", buf)
+				self.colorHighlight = buf
+			end
+		end)
+	controls.colorHighlightLabel = new("LabelControl", { "RIGHT", controls.colorHighlight, "LEFT" },
+		defaultLabelSpacingPx, 0, 0, 16, "^7Hex colour for highlight nodes:")
+	controls.colorHighlight.tooltipText =
+		"Overrides the default hex colour for highlighting nodes in passive tree search. \nExpected format is 0x000000. " ..
+		"The default value is " ..
+		tostring(defaultColorCodes.HIGHLIGHT:gsub('^(^)', '0')) ..
+		"\nIf updating while inside a build, please re-load the build after saving."
 
 	nextRow()
-	controls.betaTest = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 20, "^7Opt-in to weekly beta test builds:", function(state)
-		self.betaTest = state
-	end)
+	controls.betaTest = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 20,
+		"^7Opt-in to weekly beta test builds:", function (state)
+			self.betaTest = state
+		end)
 
 	nextRow()
 	drawSectionHeader("build", "Build-related options")
 
-	controls.showThousandsSeparators = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT"}, defaultLabelPlacementX, currentY, 20, "^7Show thousands separators:", function(state)
-	self.showThousandsSeparators = state
-	end)
+	controls.showThousandsSeparators = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX,
+		currentY, 20, "^7Show thousands separators:", function (state)
+			self.showThousandsSeparators = state
+		end)
 	controls.showThousandsSeparators.state = self.showThousandsSeparators
 
 	nextRow()
-	controls.thousandsSeparator = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 30, 20, self.thousandsSeparator, nil, "%w", 1, function(buf)
-		self.thousandsSeparator = buf
-	end)
-	controls.thousandsSeparatorLabel = new("LabelControl", { "RIGHT", controls.thousandsSeparator, "LEFT" }, defaultLabelSpacingPx, 0, 92, 16, "^7Thousands separator:")
+	controls.thousandsSeparator = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 30,
+		20, self.thousandsSeparator, nil, "%w", 1, function (buf)
+			self.thousandsSeparator = buf
+		end)
+	controls.thousandsSeparatorLabel = new("LabelControl", { "RIGHT", controls.thousandsSeparator, "LEFT" },
+		defaultLabelSpacingPx, 0, 92, 16, "^7Thousands separator:")
 
 	nextRow()
-	controls.decimalSeparator = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 30, 20, self.decimalSeparator, nil, "%w", 1, function(buf)
-		self.decimalSeparator = buf
-	end)
-	controls.decimalSeparatorLabel = new("LabelControl", { "RIGHT", controls.decimalSeparator, "LEFT" }, defaultLabelSpacingPx, 0, 92, 16, "^7Decimal separator:")
+	controls.decimalSeparator = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 30,
+		20, self.decimalSeparator, nil, "%w", 1, function (buf)
+			self.decimalSeparator = buf
+		end)
+	controls.decimalSeparatorLabel = new("LabelControl", { "RIGHT", controls.decimalSeparator, "LEFT" },
+		defaultLabelSpacingPx, 0, 92, 16, "^7Decimal separator:")
 
 	nextRow()
-	controls.titlebarName = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 20, "^7Show build name in window title:", function(state)
-		self.showTitlebarName = state
-	end)
+	controls.titlebarName = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 20,
+		"^7Show build name in window title:", function (state)
+			self.showTitlebarName = state
+		end)
 
 	nextRow()
-	controls.defaultCharLevel = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 80, 20, self.defaultCharLevel, nil, "%D", 3, function(charLevel)
-		self.defaultCharLevel = m_min(m_max(tonumber(charLevel) or 1, 1), 100)
-	end)
-	controls.defaultCharLevel.tooltipText = "Set the default level of your builds. If this is higher than 1, manual level mode will be enabled by default in new builds."
-	controls.defaultCharLevelLabel = new("LabelControl", { "RIGHT", controls.defaultCharLevel, "LEFT" }, defaultLabelSpacingPx, 0, 0, 16, "^7Default character level:")
+	controls.defaultCharLevel = new("EditControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 80,
+		20, self.defaultCharLevel, nil, "%D", 3, function (charLevel)
+			self.defaultCharLevel = m_min(m_max(tonumber(charLevel) or 1, 1), 100)
+		end)
+	controls.defaultCharLevel.tooltipText =
+	"Set the default level of your builds. If this is higher than 1, manual level mode will be enabled by default in new builds."
+	controls.defaultCharLevelLabel = new("LabelControl", { "RIGHT", controls.defaultCharLevel, "LEFT" },
+		defaultLabelSpacingPx, 0, 0, 16, "^7Default character level:")
 
 	nextRow()
-	controls.defaultItemAffixQualitySlider = new("SliderControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 200, 20, function(value)
-		self.defaultItemAffixQuality = round(value * 256, 2)
-		controls.defaultItemAffixQualityValue.label = round(self.defaultItemAffixQuality / 255 * 100, 1) .. "%"
-	end)
-	controls.defaultItemAffixQualityLabel = new("LabelControl", { "RIGHT", controls.defaultItemAffixQualitySlider, "LEFT" }, defaultLabelSpacingPx, 0, 92, 16, "^7Default item affix quality:")
-	controls.defaultItemAffixQualityValue = new("LabelControl", { "LEFT", controls.defaultItemAffixQualitySlider, "RIGHT" }, -defaultLabelSpacingPx, 0, 92, 16, "50%")
+	controls.defaultItemAffixQualitySlider = new("SliderControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX,
+		currentY, 200, 20, function (value)
+			self.defaultItemAffixQuality = round(value * 256, 2)
+			controls.defaultItemAffixQualityValue.label = round(self.defaultItemAffixQuality / 255 * 100, 1) .. "%"
+		end)
+	controls.defaultItemAffixQualityLabel = new("LabelControl",
+		{ "RIGHT", controls.defaultItemAffixQualitySlider, "LEFT" }, defaultLabelSpacingPx, 0, 92, 16,
+		"^7Default item affix quality:")
+	controls.defaultItemAffixQualityValue = new("LabelControl",
+		{ "LEFT", controls.defaultItemAffixQualitySlider, "RIGHT" }, -defaultLabelSpacingPx, 0, 92, 16, "50%")
 	controls.defaultItemAffixQualitySlider.val = self.defaultItemAffixQuality / 256
 	controls.defaultItemAffixQualityValue.label = round(self.defaultItemAffixQuality / 255 * 100, 1) .. "%"
 
 	nextRow()
-	controls.showWarnings = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 20, "^7Show build warnings:", function(state)
-		self.showWarnings = state
-	end)
+	controls.showWarnings = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 20,
+		"^7Show build warnings:", function (state)
+			self.showWarnings = state
+		end)
 	controls.showWarnings.state = self.showWarnings
 
 	nextRow()
-	controls.slotOnlyTooltips = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 20, "^7Show tooltips only for affected slots:", function(state)
-		self.slotOnlyTooltips = state
-	end)
+	controls.slotOnlyTooltips = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY,
+		20, "^7Show tooltips only for affected slots:", function (state)
+			self.slotOnlyTooltips = state
+		end)
 	controls.slotOnlyTooltips.state = self.slotOnlyTooltips
 
 	nextRow()
-	controls.invertSliderScrollDirection = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 20, "^7Invert slider scroll direction:", function(state)
-		self.invertSliderScrollDirection = state
-	end)
-	controls.invertSliderScrollDirection.tooltipText = "Default scroll direction is:\nScroll Up = Move right\nScroll Down = Move left"
+	controls.invertSliderScrollDirection = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX,
+		currentY, 20, "^7Invert slider scroll direction:", function (state)
+			self.invertSliderScrollDirection = state
+		end)
+	controls.invertSliderScrollDirection.tooltipText =
+	"Default scroll direction is:\nScroll Up = Move right\nScroll Down = Move left"
 	controls.invertSliderScrollDirection.state = self.invertSliderScrollDirection
 
 	if launch.devMode then
 		nextRow()
-		controls.disableDevAutoSave = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX, currentY, 20, "^7Disable Dev AutoSave:", function(state)
-			self.disableDevAutoSave = state
-		end)
+		controls.disableDevAutoSave = new("CheckBoxControl", { "TOPLEFT", nil, "TOPLEFT" }, defaultLabelPlacementX,
+			currentY, 20, "^7Disable Dev AutoSave:", function (state)
+				self.disableDevAutoSave = state
+			end)
 		controls.disableDevAutoSave.tooltipText = "Do not Autosave builds while on Dev branch"
 		controls.disableDevAutoSave.state = self.disableDevAutoSave
 	end
@@ -966,10 +1022,11 @@ function main:OpenOptionsPopup()
 	-- last line with buttons has more spacing
 	nextRow(1.5)
 
-	controls.save = new("ButtonControl", nil, -45, currentY, 80, 20, "Save", function()
+	controls.save = new("ButtonControl", nil, -45, currentY, 80, 20, "Save", function ()
 		launch.connectionProtocol = tonumber(self.connectionProtocol)
 		if controls.proxyURL.buf:match("%w") then
-			launch.proxyURL = controls.proxyType.list[controls.proxyType.selIndex].scheme .. "://" .. controls.proxyURL.buf
+			launch.proxyURL = controls.proxyType.list[controls.proxyType.selIndex].scheme ..
+				"://" .. controls.proxyURL.buf
 		else
 			launch.proxyURL = nil
 		end
@@ -990,7 +1047,7 @@ function main:OpenOptionsPopup()
 		main:ClosePopup()
 		main:SaveSettings()
 	end)
-	controls.cancel = new("ButtonControl", nil, 45, currentY, 80, 20, "Cancel", function()
+	controls.cancel = new("ButtonControl", nil, 45, currentY, 80, 20, "Cancel", function ()
 		self.nodePowerTheme = initialNodePowerTheme
 		self.colorPositive = initialColorPositive
 		updateColorCode("POSITIVE", self.colorPositive)
@@ -1037,7 +1094,7 @@ function main:SetManifestBranch(branchName)
 end
 
 function main:OpenUpdatePopup()
-	local changeList = { }
+	local changeList = {}
 	local changelogName = launch.devMode and "../changelog.txt" or "changelog.txt"
 	local changelogFile = io.open(changelogName, "r")
 	if changelogFile then
@@ -1051,22 +1108,22 @@ function main:OpenUpdatePopup()
 				if #changeList > 0 then
 					t_insert(changeList, { height = 12 })
 				end
-				t_insert(changeList, { height = 20, "^7Version "..ver.." ("..date..")" })
+				t_insert(changeList, { height = 20, "^7Version " .. ver .. " (" .. date .. ")" })
 			else
-				t_insert(changeList, { height = 14, "^7"..line })
+				t_insert(changeList, { height = 14, "^7" .. line })
 			end
 		end
 	end
-	local controls = { }
+	local controls = {}
 	controls.changeLog = new("TextListControl", nil, 0, 20, 780, 542, nil, changeList)
-	controls.update = new("ButtonControl", nil, -45, 570, 80, 20, "Update", function()
+	controls.update = new("ButtonControl", nil, -45, 570, 80, 20, "Update", function ()
 		self:ClosePopup()
 		local ret = self:CallMode("CanExit", "UPDATE")
 		if ret == nil or ret == true then
 			launch:ApplyUpdate(launch.updateAvailable)
 		end
 	end)
-	controls.cancel = new("ButtonControl", nil, 45, 570, 80, 20, "Cancel", function()
+	controls.cancel = new("ButtonControl", nil, 45, 570, 80, 20, "Cancel", function ()
 		self:ClosePopup()
 	end)
 	self:OpenPopup(800, 600, "Update Available", controls)
@@ -1074,8 +1131,8 @@ end
 
 function main:OpenAboutPopup(helpSectionIndex)
 	local textSize, titleSize, popupWidth = 16, 24, 810
-	local changeList = { }
-	local changeVersionHeights = { }
+	local changeList = {}
+	local changeVersionHeights = {}
 	local changelogName = launch.devMode and "../changelog.txt" or "changelog.txt"
 	local changelogFile = io.open(changelogName, "r")
 	if changelogFile then
@@ -1087,15 +1144,15 @@ function main:OpenAboutPopup(helpSectionIndex)
 					t_insert(changeList, { height = textSize / 2 })
 				end
 				t_insert(changeVersionHeights, #changeList * textSize)
-				t_insert(changeList, { height = titleSize, "^7Version "..ver.." ("..date..")" })
+				t_insert(changeList, { height = titleSize, "^7Version " .. ver .. " (" .. date .. ")" })
 			else
-				t_insert(changeList, { height = textSize, "^7"..line })
+				t_insert(changeList, { height = textSize, "^7" .. line })
 			end
 		end
 	end
-	local helpList = { }
-	local helpSections = { }
-	local helpSectionHeights = { }
+	local helpList = {}
+	local helpSections = {}
+	local helpSectionHeights = {}
 	do
 		local helpName = launch.devMode and "../help.txt" or "help.txt"
 		local helpFile = io.open(helpName, "r")
@@ -1108,25 +1165,28 @@ function main:OpenAboutPopup(helpSectionIndex)
 						t_insert(helpList, { height = textSize / 2 })
 					end
 					t_insert(helpSections, { title = title, height = #helpList })
-					t_insert(helpList, { height = titleSize, "^7"..title.." ("..#helpSections..")" })
+					t_insert(helpList, { height = titleSize, "^7" .. title .. " (" .. #helpSections .. ")" })
 				else
 					local dev = line:match("^DEV%[(.+)%]$")
-					if not ( dev and not launch.devMode ) then
+					if not (dev and not launch.devMode) then
 						line = (dev or line)
 						local outdent, indent = line:match("(.*)\t+(.*)")
 						if outdent then
 							local indentLines = self:WrapString(indent, textSize, popupWidth - 190)
 							if #indentLines > 1 then
 								for i, indentLine in ipairs(indentLines) do
-									t_insert(helpList, { height = textSize, (i == 1 and outdent or " "), (dev and "^x8888FF" or "^7")..indentLine })
+									t_insert(helpList,
+										{ height = textSize, (i == 1 and outdent or " "), (dev and "^x8888FF" or "^7") .. indentLine })
 								end
 							else
-								t_insert(helpList, { height = textSize, (dev and "^x8888FF" or "^7")..outdent, (dev and "^x8888FF" or "^7")..indent })
+								t_insert(helpList,
+									{ height = textSize, (dev and "^x8888FF" or "^7") .. outdent, (dev and "^x8888FF" or "^7") .. indent })
 							end
 						else
 							local Lines = self:WrapString(line, textSize, popupWidth - 135)
 							for i, line2 in ipairs(Lines) do
-								t_insert(helpList, { height = textSize, (dev and "^x8888FF" or "^7")..(i > 1 and "    " or "")..line2 })
+								t_insert(helpList,
+									{ height = textSize, (dev and "^x8888FF" or "^7") .. (i > 1 and "    " or "") .. line2 })
 							end
 						end
 					end
@@ -1135,12 +1195,14 @@ function main:OpenAboutPopup(helpSectionIndex)
 			local contentsDone = false
 			for sectionIndex, sectionValues in ipairs(helpSections) do
 				if sectionValues.title == "Contents" then
-					t_insert(helpList, (sectionValues.height + sectionIndex), { height = textSize, "^7 "})
+					t_insert(helpList, (sectionValues.height + sectionIndex), { height = textSize, "^7 " })
 					for i, sectionValuesInner in ipairs(helpSections) do
-						t_insert(helpList, (sectionValues.height + i + sectionIndex), { height = textSize, "^7"..tostring(i)..". "..sectionValuesInner.title })
+						t_insert(helpList, (sectionValues.height + i + sectionIndex),
+							{ height = textSize, "^7" .. tostring(i) .. ". " .. sectionValuesInner.title })
 					end
 				end
-				helpSections[sectionIndex].height = helpSections[sectionIndex].height + (contentsDone and (#helpSections + 1) or 0)
+				helpSections[sectionIndex].height = helpSections[sectionIndex].height +
+					(contentsDone and (#helpSections + 1) or 0)
 				helpSectionHeights[sectionIndex] = helpSections[sectionIndex].height * textSize
 				if sectionValues.title == "Contents" then
 					contentsDone = true
@@ -1159,24 +1221,28 @@ function main:OpenAboutPopup(helpSectionIndex)
 		end
 		helpSectionIndex = newIndex
 	end
-	local controls = { }
-	controls.close = new("ButtonControl", {"TOPRIGHT",nil,"TOPRIGHT"}, -10, 10, 50, 20, "Close", function()
+	local controls = {}
+	controls.close = new("ButtonControl", { "TOPRIGHT", nil, "TOPRIGHT" }, -10, 10, 50, 20, "Close", function ()
 		self:ClosePopup()
 	end)
-	controls.version = new("LabelControl", nil, 0, 18, 0, 18, "^7Last Epoch Planner v"..launch.versionNumber)
+	controls.version = new("LabelControl", nil, 0, 18, 0, 18, "^7Last Epoch Planner v" .. launch.versionNumber)
 	controls.forum = new("LabelControl", nil, 0, 36, 0, 18, "^7Based on Path of Building Community")
-	controls.github = new("ButtonControl", nil, 0, 62, 438, 18, "^7GitHub page: ^x4040FFhttps://github.com/Musholic/LastEpochPlanner", function(control)
-		OpenURL("https://github.com/Musholic/LastEpochPlanner")
-	end)
-	controls.verLabel = new("ButtonControl", { "TOPLEFT", nil, "TOPLEFT" }, 10, 85, 100, 18, "^7Version history:", function()
-		controls.changelog.list = changeList
-		controls.changelog.sectionHeights = changeVersionHeights
-	end)
-	controls.helpLabel = new("ButtonControl", { "TOPRIGHT", nil, "TOPRIGHT" }, -10, 85, 40, 18, "^7Help:", function()
+	controls.github = new("ButtonControl", nil, 0, 62, 438, 18,
+		"^7GitHub page: ^x4040FFhttps://github.com/Musholic/LastEpochPlanner", function (control)
+			OpenURL("https://github.com/Musholic/LastEpochPlanner")
+		end)
+	controls.verLabel = new("ButtonControl", { "TOPLEFT", nil, "TOPLEFT" }, 10, 85, 100, 18, "^7Version history:",
+		function ()
+			controls.changelog.list = changeList
+			controls.changelog.sectionHeights = changeVersionHeights
+		end)
+	controls.helpLabel = new("ButtonControl", { "TOPRIGHT", nil, "TOPRIGHT" }, -10, 85, 40, 18, "^7Help:", function ()
 		controls.changelog.list = helpList
 		controls.changelog.sectionHeights = helpSectionHeights
 	end)
-	controls.changelog = new("TextListControl", nil, 0, 103, popupWidth - 20, 515, {{ x = 1, align = "LEFT" }, { x = 135, align = "LEFT" }}, helpSectionIndex and helpList or changeList, helpSectionIndex and helpSectionHeights or changeVersionHeights)
+	controls.changelog = new("TextListControl", nil, 0, 103, popupWidth - 20, 515,
+		{ { x = 1, align = "LEFT" }, { x = 135, align = "LEFT" } }, helpSectionIndex and helpList or changeList,
+		helpSectionIndex and helpSectionHeights or changeVersionHeights)
 	if helpSectionIndex then
 		controls.changelog.controls.scrollBar.offset = helpSections[helpSectionIndex].height * textSize
 	end
@@ -1211,8 +1277,10 @@ function main:DrawCheckMark(x, y, size)
 	size = size / 0.8
 	x = x - size / 2
 	y = y - size / 2
-	DrawImageQuad(nil, x + size * 0.15, y + size * 0.50, x + size * 0.30, y + size * 0.45, x + size * 0.50, y + size * 0.80, x + size * 0.40, y + size * 0.90)
-	DrawImageQuad(nil, x + size * 0.40, y + size * 0.90, x + size * 0.35, y + size * 0.75, x + size * 0.80, y + size * 0.10, x + size * 0.90, y + size * 0.20)
+	DrawImageQuad(nil, x + size * 0.15, y + size * 0.50, x + size * 0.30, y + size * 0.45, x + size * 0.50,
+		y + size * 0.80, x + size * 0.40, y + size * 0.90)
+	DrawImageQuad(nil, x + size * 0.40, y + size * 0.90, x + size * 0.35, y + size * 0.75, x + size * 0.80,
+		y + size * 0.10, x + size * 0.90, y + size * 0.20)
 end
 
 do
@@ -1259,8 +1327,8 @@ function main:RenderRing(x, y, width, height, oX, oY, radius, size)
 	for d = 0, 360, 0.2 do
 		local r = d / 180 * m_pi
 		local px, py = main:WorldToScreen(oX + m_sin(r) * radius, oY + m_cos(r) * radius, 0, width, height)
-		if px >= -size/2 and px < width + size/2 and py >= -size/2 and py < height + size/2 and (px ~= lastX or py ~= lastY) then
-			DrawImage(nil, x + px - size/2, y + py, size, size)
+		if px >= -size / 2 and px < width + size / 2 and py >= -size / 2 and py < height + size / 2 and (px ~= lastX or py ~= lastY) then
+			DrawImage(nil, x + px - size / 2, y + py, size, size)
 			lastX, lastY = px, py
 		end
 	end
@@ -1278,30 +1346,30 @@ end
 
 function main:MoveFolder(name, srcPath, dstPath)
 	-- Create destination folder
-	local res, msg = MakeDir(dstPath..name)
+	local res, msg = MakeDir(dstPath .. name)
 	if not res then
-		self:OpenMessagePopup("Error", "Couldn't move '"..name.."' to '"..dstPath.."' : "..msg)
+		self:OpenMessagePopup("Error", "Couldn't move '" .. name .. "' to '" .. dstPath .. "' : " .. msg)
 		return
 	end
 
 	-- Move subfolders
-	local handle = NewFileSearch(srcPath..name.."/*", true)
+	local handle = NewFileSearch(srcPath .. name .. "/*", true)
 	while handle do
-		self:MoveFolder(handle:GetFileName(), srcPath..name.."/", dstPath..name.."/")
+		self:MoveFolder(handle:GetFileName(), srcPath .. name .. "/", dstPath .. name .. "/")
 		if not handle:NextFile() then
 			break
 		end
 	end
 
 	-- Move files
-	handle = NewFileSearch(srcPath..name.."/*")
+	handle = NewFileSearch(srcPath .. name .. "/*")
 	while handle do
 		local fileName = handle:GetFileName()
-		local srcName = srcPath..name.."/"..fileName
-		local dstName = dstPath..name.."/"..fileName
+		local srcName = srcPath .. name .. "/" .. fileName
+		local dstName = dstPath .. name .. "/" .. fileName
 		local res, msg = os.rename(srcName, dstName)
 		if not res then
-			self:OpenMessagePopup("Error", "Couldn't move '"..srcName.."' to '"..dstName.."': "..msg)
+			self:OpenMessagePopup("Error", "Couldn't move '" .. srcName .. "' to '" .. dstName .. "': " .. msg)
 			return
 		end
 		if not handle:NextFile() then
@@ -1310,9 +1378,9 @@ function main:MoveFolder(name, srcPath, dstPath)
 	end
 
 	-- Remove source folder
-	local res, msg = RemoveDir(srcPath..name)
+	local res, msg = RemoveDir(srcPath .. name)
 	if not res then
-		self:OpenMessagePopup("Error", "Couldn't delete '"..dstPath..name.."' : "..msg)
+		self:OpenMessagePopup("Error", "Couldn't delete '" .. dstPath .. name .. "' : " .. msg)
 		return
 	end
 end
@@ -1321,29 +1389,29 @@ function main:CopyFolder(srcName, dstName)
 	-- Create destination folder
 	local res, msg = MakeDir(dstName)
 	if not res then
-		self:OpenMessagePopup("Error", "Couldn't copy '"..srcName.."' to '"..dstName.."' : "..msg)
+		self:OpenMessagePopup("Error", "Couldn't copy '" .. srcName .. "' to '" .. dstName .. "' : " .. msg)
 		return
 	end
 
 	-- Copy subfolders
-	local handle = NewFileSearch(srcName.."/*", true)
+	local handle = NewFileSearch(srcName .. "/*", true)
 	while handle do
 		local fileName = handle:GetFileName()
-		self:CopyFolder(srcName.."/"..fileName, dstName.."/"..fileName)
+		self:CopyFolder(srcName .. "/" .. fileName, dstName .. "/" .. fileName)
 		if not handle:NextFile() then
 			break
 		end
 	end
 
 	-- Copy files
-	handle = NewFileSearch(srcName.."/*")
+	handle = NewFileSearch(srcName .. "/*")
 	while handle do
 		local fileName = handle:GetFileName()
-		local srcName = srcName.."/"..fileName
-		local dstName = dstName.."/"..fileName
+		local srcName = srcName .. "/" .. fileName
+		local dstName = dstName .. "/" .. fileName
 		local res, msg = copyFile(srcName, dstName)
 		if not res then
-			self:OpenMessagePopup("Error", "Couldn't copy '"..srcName.."' to '"..dstName.."': "..msg)
+			self:OpenMessagePopup("Error", "Couldn't copy '" .. srcName .. "' to '" .. dstName .. "': " .. msg)
 			return
 		end
 		if not handle:NextFile() then
@@ -1353,7 +1421,8 @@ function main:CopyFolder(srcName, dstName)
 end
 
 function main:OpenPopup(width, height, title, controls, enterControl, defaultControl, escapeControl, scrollBarFunc)
-	local popup = new("PopupDialog", width, height, title, controls, enterControl, defaultControl, escapeControl, scrollBarFunc)
+	local popup = new("PopupDialog", width, height, title, controls, enterControl, defaultControl, escapeControl,
+		scrollBarFunc)
 	t_insert(self.popups, 1, popup)
 	return popup
 end
@@ -1363,47 +1432,52 @@ function main:ClosePopup()
 end
 
 function main:OpenMessagePopup(title, msg)
-	local controls = { }
+	local controls = {}
 	local numMsgLines = 0
 	for line in string.gmatch(msg .. "\n", "([^\n]*)\n") do
 		t_insert(controls, new("LabelControl", nil, 0, 20 + numMsgLines * 16, 0, 16, line))
 		numMsgLines = numMsgLines + 1
 	end
-	controls.close = new("ButtonControl", nil, 0, 40 + numMsgLines * 16, 80, 20, "Ok", function()
+	controls.close = new("ButtonControl", nil, 0, 40 + numMsgLines * 16, 80, 20, "Ok", function ()
 		main:ClosePopup()
 	end)
-	return self:OpenPopup(m_max(DrawStringWidth(16, "VAR", msg) + 30, 190), 70 + numMsgLines * 16, title, controls, "close")
+	return self:OpenPopup(m_max(DrawStringWidth(16, "VAR", msg) + 30, 190), 70 + numMsgLines * 16, title, controls,
+		"close")
 end
 
 function main:OpenConfirmPopup(title, msg, confirmLabel, onConfirm)
-	local controls = { }
+	local controls = {}
 	local numMsgLines = 0
 	for line in string.gmatch(msg .. "\n", "([^\n]*)\n") do
 		t_insert(controls, new("LabelControl", nil, 0, 20 + numMsgLines * 16, 0, 16, line))
 		numMsgLines = numMsgLines + 1
 	end
 	local confirmWidth = m_max(80, DrawStringWidth(16, "VAR", confirmLabel) + 10)
-	controls.confirm = new("ButtonControl", nil, -5 - m_ceil(confirmWidth/2), 40 + numMsgLines * 16, confirmWidth, 20, confirmLabel, function()
-		main:ClosePopup()
-		onConfirm()
-	end)
-	t_insert(controls, new("ButtonControl", nil, 5 + m_ceil(confirmWidth/2), 40 + numMsgLines * 16, confirmWidth, 20, "Cancel", function()
-		main:ClosePopup()
-	end))
-	return self:OpenPopup(m_max(DrawStringWidth(16, "VAR", msg) + 30, 190), 70 + numMsgLines * 16, title, controls, "confirm")
+	controls.confirm = new("ButtonControl", nil, -5 - m_ceil(confirmWidth / 2), 40 + numMsgLines * 16, confirmWidth, 20,
+		confirmLabel, function ()
+			main:ClosePopup()
+			onConfirm()
+		end)
+	t_insert(controls,
+		new("ButtonControl", nil, 5 + m_ceil(confirmWidth / 2), 40 + numMsgLines * 16, confirmWidth, 20, "Cancel",
+			function ()
+				main:ClosePopup()
+			end))
+	return self:OpenPopup(m_max(DrawStringWidth(16, "VAR", msg) + 30, 190), 70 + numMsgLines * 16, title, controls,
+		"confirm")
 end
 
 function main:OpenNewFolderPopup(path, onClose)
-	local controls = { }
+	local controls = {}
 	controls.label = new("LabelControl", nil, 0, 20, 0, 16, "^7Enter folder name:")
-	controls.edit = new("EditControl", nil, 0, 40, 350, 20, nil, nil, "\\/:%*%?\"<>|%c", 100, function(buf)
+	controls.edit = new("EditControl", nil, 0, 40, 350, 20, nil, nil, "\\/:%*%?\"<>|%c", 100, function (buf)
 		controls.create.enabled = buf:match("%S")
 	end)
-	controls.create = new("ButtonControl", nil, -45, 70, 80, 20, "Create", function()
+	controls.create = new("ButtonControl", nil, -45, 70, 80, 20, "Create", function ()
 		local newFolderName = controls.edit.buf
-		local res, msg = MakeDir(path..newFolderName)
+		local res, msg = MakeDir(path .. newFolderName)
 		if not res then
-			main:OpenMessagePopup("Error", "Couldn't create '"..newFolderName.."': "..msg)
+			main:OpenMessagePopup("Error", "Couldn't create '" .. newFolderName .. "': " .. msg)
 			return
 		end
 		if onClose then
@@ -1412,7 +1486,7 @@ function main:OpenNewFolderPopup(path, onClose)
 		main:ClosePopup()
 	end)
 	controls.create.enabled = false
-	controls.cancel = new("ButtonControl", nil, 45, 70, 80, 20, "Cancel", function()
+	controls.cancel = new("ButtonControl", nil, 45, 70, 80, 20, "Cancel", function ()
 		if onClose then
 			onClose()
 		end
@@ -1425,12 +1499,12 @@ function main:SetWindowTitleSubtext(subtext)
 	if not subtext or not self.showTitlebarName then
 		SetWindowTitle(APP_NAME)
 	else
-		SetWindowTitle(subtext.." - "..APP_NAME)
+		SetWindowTitle(subtext .. " - " .. APP_NAME)
 	end
 end
 
 do
-	local wrapTable = { }
+	local wrapTable = {}
 	function main:WrapString(str, height, width)
 		wipeTable(wrapTable)
 		local lineStart = 1

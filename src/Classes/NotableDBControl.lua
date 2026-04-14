@@ -19,31 +19,35 @@ local function IsAnointableNode(node)
 end
 
 ---@class NotableDBControl : ListControl
-local NotableDBClass = newClass("NotableDBControl", "ListControl", function(self, anchor, x, y, width, height, itemsTab, db, dbType)
-	self.ListControl(anchor, x, y, width, height, 16, "VERTICAL", false)
-	self.itemsTab = itemsTab
-	self.db = db
-	self.dbType = dbType
-	self.dragTargetList = { }
-	self.sortControl = {
-		NAME = { key = "dn", dir = "ASCEND", func = function(a,b) return a < b end },
-		STAT = { key = "measuredPower", dir = "DESCEND" },
-	}
-	self.sortDropList = { }
-	self.sortOrder = { }
-	self.sortMode = "NAME"
-	self.controls.sort = new("DropDownControl", {"BOTTOMLEFT",self,"TOPLEFT"}, 0, -22, 360, 18, self.sortDropList, function(index, value)
-		self:SetSortMode(value.sortMode)
-	end)
-	self.controls.search = new("EditControl", {"BOTTOMLEFT",self,"TOPLEFT"}, 0, -2, 258, 18, "", "Search", "%c", 100, function()
+local NotableDBClass = newClass("NotableDBControl", "ListControl",
+	function (self, anchor, x, y, width, height, itemsTab, db, dbType)
+		self.ListControl(anchor, x, y, width, height, 16, "VERTICAL", false)
+		self.itemsTab = itemsTab
+		self.db = db
+		self.dbType = dbType
+		self.dragTargetList = {}
+		self.sortControl = {
+			NAME = { key = "dn", dir = "ASCEND", func = function (a, b) return a < b end },
+			STAT = { key = "measuredPower", dir = "DESCEND" },
+		}
+		self.sortDropList = {}
+		self.sortOrder = {}
+		self.sortMode = "NAME"
+		self.controls.sort = new("DropDownControl", { "BOTTOMLEFT", self, "TOPLEFT" }, 0, -22, 360, 18, self
+			.sortDropList, function (index, value)
+				self:SetSortMode(value.sortMode)
+			end)
+		self.controls.search = new("EditControl", { "BOTTOMLEFT", self, "TOPLEFT" }, 0, -2, 258, 18, "", "Search", "%c",
+			100, function ()
+				self.listBuildFlag = true
+			end, nil, nil, true)
+		self.controls.searchMode = new("DropDownControl", { "LEFT", self.controls.search, "RIGHT" }, 2, 0, 100, 18,
+			{ "Anywhere", "Names", "Modifiers" }, function (index, value)
+				self.listBuildFlag = true
+			end)
+		self:BuildSortOrder()
 		self.listBuildFlag = true
-	end, nil, nil, true)
-	self.controls.searchMode = new("DropDownControl", {"LEFT",self.controls.search,"RIGHT"}, 2, 0, 100, 18, { "Anywhere", "Names", "Modifiers" }, function(index, value)
-		self.listBuildFlag = true
 	end)
-	self:BuildSortOrder()
-	self.listBuildFlag = true
-end)
 
 ---@param node table @The notable node to check
 ---@return boolean @Whether the notable matches the type and search filters.
@@ -87,14 +91,14 @@ end
 
 function NotableDBClass:BuildSortOrder()
 	wipeTable(self.sortDropList)
-	for id,stat in pairs(data.powerStatList) do
+	for id, stat in pairs(data.powerStatList) do
 		if not stat.ignoreForItems then
 			t_insert(self.sortDropList, {
-				label="Sort by "..stat.label,
-				sortMode=stat.itemField or stat.stat,
-				itemField=stat.itemField,
-				stat=stat.stat,
-				transform=stat.transform,
+				label = "Sort by " .. stat.label,
+				sortMode = stat.itemField or stat.stat,
+				itemField = stat.itemField,
+				stat = stat.stat,
+				transform = stat.transform,
 			})
 		end
 	end
@@ -125,7 +129,7 @@ function NotableDBClass:CalculatePowerStat(selection, original, modified)
 end
 
 function NotableDBClass:ListBuilder()
-	local list = { }
+	local list = {}
 	for id, node in pairs(self.db) do
 		if self:DoesNotableMatchFilters(node) then
 			t_insert(list, node)
@@ -133,8 +137,8 @@ function NotableDBClass:ListBuilder()
 	end
 
 	if self.sortDetail and self.sortDetail.stat then -- stat-based
-		local cache = { }
-		local infinites = { }
+		local cache = {}
+		local infinites = {}
 		local start = GetTime()
 		local calcFunc = self.itemsTab.build.calcsTab:GetMiscCalculator()
 		local itemType = self.itemsTab.displayItem.base.type
@@ -155,13 +159,13 @@ function NotableDBClass:ListBuilder()
 			end
 			local now = GetTime()
 			if now - start > 50 then
-				self.defaultText = "^7Sorting... ("..m_floor(nodeIndex/#list*100).."%)"
+				self.defaultText = "^7Sorting... (" .. m_floor(nodeIndex / #list * 100) .. "%)"
 				coroutine.yield()
 				start = now
 			end
 		end
 		GlobalCache.useFullDPS = storedGlobalCacheDPSView
-		
+
 		if #infinites > 0 then
 			self.sortMaxPower = self.sortMaxPower * 2
 			for _, node in ipairs(infinites) do
@@ -170,7 +174,7 @@ function NotableDBClass:ListBuilder()
 		end
 	end
 
-	table.sort(list, function(a, b)
+	table.sort(list, function (a, b)
 		for _, data in ipairs(self.sortOrder) do
 			local aVal = a[data.key]
 			local bVal = b[data.key]
@@ -230,12 +234,12 @@ function NotableDBClass:GetRowValue(column, index, node)
 				local scaledPower = node.measuredPower / self.sortMaxPower
 				local powerRed = scaledPower * (0xFF - 0x80) + 0x80
 				local powerColor = s_format("^x%X8080", powerRed)
-				return powerColor..node.dn
+				return powerColor .. node.dn
 			else
-				return "^x808080"..node.dn
+				return "^x808080" .. node.dn
 			end
 		else
-			return colorCodes.CRAFTED..node.dn
+			return colorCodes.CRAFTED .. node.dn
 		end
 	end
 end
@@ -244,7 +248,8 @@ end
 ---@param index number
 ---@param node table
 function NotableDBClass:AddValueTooltip(tooltip, index, node)
-	local dropdownDropped = self.controls.type and self.controls.type.dropped or self.controls.sort.dropped or self.controls.searchMode.dropped
+	local dropdownDropped = self.controls.type and self.controls.type.dropped or self.controls.sort.dropped or
+		self.controls.searchMode.dropped
 	if dropdownDropped or (main.popups[1] and main.popups[1].title ~= "Anoint Item") then
 		tooltip:Clear()
 		return
@@ -257,7 +262,9 @@ function NotableDBClass:AddValueTooltip(tooltip, index, node)
 		if node.sd[1] then
 			tooltip:AddLine(16, "")
 			for i, line in ipairs(node.sd) do
-				tooltip:AddLine(16, ((node.mods[i].extra or not node.mods[i].list) and colorCodes.UNSUPPORTED or colorCodes.MAGIC)..line)
+				tooltip:AddLine(16,
+					((node.mods[i].extra or not node.mods[i].list) and colorCodes.UNSUPPORTED or colorCodes.MAGIC) ..
+					line)
 			end
 		end
 
@@ -265,7 +272,7 @@ function NotableDBClass:AddValueTooltip(tooltip, index, node)
 		if node.reminderText then
 			tooltip:AddSeparator(14)
 			for _, line in ipairs(node.reminderText) do
-				tooltip:AddLine(14, "^xA0A080"..line)
+				tooltip:AddLine(14, "^xA0A080" .. line)
 			end
 		end
 

@@ -18,20 +18,20 @@ local bor = bit.bor
 local mod_createMod = modLib.createMod
 
 -- Magic tables for caching multiplier/condition modifier names
-local multiplierName = setmetatable({ }, { __index = function(t, var)
-	t[var] = "Multiplier:"..var
+local multiplierName = setmetatable({}, { __index = function (t, var)
+	t[var] = "Multiplier:" .. var
 	return t[var]
 end })
-local conditionName = setmetatable({ }, { __index = function(t, var)
-	t[var] = "Condition:"..var
+local conditionName = setmetatable({}, { __index = function (t, var)
+	t[var] = "Condition:" .. var
 	return t[var]
 end })
 
-local ModStoreClass = newClass("ModStore", function(self, parent)
+local ModStoreClass = newClass("ModStore", function (self, parent)
 	self.parent = parent or false
-	self.actor = parent and parent.actor or { }
-	self.multipliers = { }
-	self.conditions = { }
+	self.actor = parent and parent.actor or {}
+	self.multipliers = {}
+	self.conditions = {}
 end)
 
 function ModStoreClass:ScaleAddMod(mod, scale)
@@ -52,11 +52,13 @@ function ModStoreClass:ScaleAddMod(mod, scale)
 			if scaledMod.value.mod then
 				subMod = scaledMod.value.mod
 			elseif scaledMod.value.keyOfScaledMod then
-				scaledMod.value[scaledMod.value.keyOfScaledMod] = round(scaledMod.value[scaledMod.value.keyOfScaledMod] * scale, 2)
+				scaledMod.value[scaledMod.value.keyOfScaledMod] = round(
+					scaledMod.value[scaledMod.value.keyOfScaledMod] * scale, 2)
 			end
 		end
 		if type(subMod.value) == "number" then
-			local precision = ((data.highPrecisionMods[subMod.name] and data.highPrecisionMods[subMod.name][subMod.type])) or ((m_floor(subMod.value) ~= subMod.value) and data.defaultHighPrecision) or nil
+			local precision = ((data.highPrecisionMods[subMod.name] and data.highPrecisionMods[subMod.name][subMod.type])) or
+				((m_floor(subMod.value) ~= subMod.value) and data.defaultHighPrecision) or nil
 			if precision then
 				local power = 10 ^ precision
 				subMod.value = math.floor(subMod.value * scale * power) / power
@@ -175,7 +177,7 @@ function ModStoreClass:List(cfg, ...)
 		keywordFlags = cfg.keywordFlags or 0
 		source = cfg.source
 	end
-	local result = { }
+	local result = {}
 	self:ListInternal(self, result, cfg, flags, keywordFlags, source, ...)
 	return result
 end
@@ -188,7 +190,7 @@ function ModStoreClass:Tabulate(modType, cfg, ...)
 		keywordFlags = cfg.keywordFlags or 0
 		source = cfg.source
 	end
-	local result = { }
+	local result = {}
 	self:TabulateInternal(self, result, modType, cfg, flags, keywordFlags, source, ...)
 	return result
 end
@@ -224,11 +226,13 @@ function ModStoreClass:HasMod(modType, cfg, ...)
 end
 
 function ModStoreClass:GetCondition(var, cfg, noMod)
-	return self.conditions[var] or (self.parent and self.parent:GetCondition(var, cfg, true)) or (not noMod and self:Flag(cfg, conditionName[var]))
+	return self.conditions[var] or (self.parent and self.parent:GetCondition(var, cfg, true)) or
+		(not noMod and self:Flag(cfg, conditionName[var]))
 end
 
 function ModStoreClass:GetMultiplier(var, cfg, noMod)
-	return (self.multipliers[var] or 0) + (self.parent and self.parent:GetMultiplier(var, cfg, true) or 0) + (not noMod and self:Sum("BASE", cfg, multiplierName[var]) or 0)
+	return (self.multipliers[var] or 0) + (self.parent and self.parent:GetMultiplier(var, cfg, true) or 0) +
+		(not noMod and self:Sum("BASE", cfg, multiplierName[var]) or 0)
 end
 
 function ModStoreClass:GetStat(stat, cfg)
@@ -236,7 +240,9 @@ function ModStoreClass:GetStat(stat, cfg)
 		local reservedPercentMana = 0
 		-- Check if mana is 0 (i.e. from Blood Magic) to avoid division by 0.
 		local totalMana = self.actor.output["Mana"]
-		if totalMana == 0 then return 0 else
+		if totalMana == 0 then
+			return 0
+		else
 			for _, activeSkill in ipairs(self.actor.activeSkillList) do
 				if (activeSkill.skillTypes[SkillType.Aura] and not activeSkill.skillFlags.disable and activeSkill.buffList and activeSkill.buffList[1] and activeSkill.buffList[1].name == cfg.skillName) then
 					local manaBase = activeSkill.skillData["ManaReservedBase"] or 0
@@ -253,7 +259,8 @@ function ModStoreClass:GetStat(stat, cfg)
 		return self.actor.output["Mana"]
 	elseif stat == "ManaUnreserved" and not self.actor.output[stat] == nil and self.actor.output[stat] < 0 then
 		-- This reverse engineers how much mana is unreserved before efficiency for accurate Arcane Cloak calcs
-		local reservedPercentBeforeEfficiency = (math.abs(self.actor.output["ManaUnreservedPercent"]) + 100) * ((100 + self.actor["ManaEfficiency"]) / 100)
+		local reservedPercentBeforeEfficiency = (math.abs(self.actor.output["ManaUnreservedPercent"]) + 100) *
+			((100 + self.actor["ManaEfficiency"]) / 100)
 		return self.actor.output["Mana"] * (math.ceil(reservedPercentBeforeEfficiency) / 100);
 	else
 		return (self.actor.output and self.actor.output[stat]) or (cfg and cfg.skillStats and cfg.skillStats[stat]) or 0
@@ -486,16 +493,16 @@ function ModStoreClass:EvalMod(mod, cfg)
 				value = value * tag.ramp[#tag.ramp][2]
 			else
 				for i, dat in ipairs(tag.ramp) do
-					local next = tag.ramp[i+1]
+					local next = tag.ramp[i + 1]
 					if cfg.skillDist <= next[1] then
 						value = value * (dat[2] + (next[2] - dat[2]) * (cfg.skillDist - dat[1]) / (next[1] - dat[1]))
 						break
 					end
 				end
 			end
-		-- Syntax: { type = "MeleeProximity", ramp = {MaxBonusPct,MinBonusPct} }
-		-- 			Both MaxBonusPct and MinBonusPct are percent in decimal form (1.0 = 100%)
-		-- Example: { type = "MeleeProximity", ramp = {1,0} }   ## Duelist-Slayer: Impact
+			-- Syntax: { type = "MeleeProximity", ramp = {MaxBonusPct,MinBonusPct} }
+			-- 			Both MaxBonusPct and MinBonusPct are percent in decimal form (1.0 = 100%)
+			-- Example: { type = "MeleeProximity", ramp = {1,0} }   ## Duelist-Slayer: Impact
 		elseif tag.type == "MeleeProximity" then
 			if not cfg or not cfg.skillDist then
 				return
@@ -503,7 +510,7 @@ function ModStoreClass:EvalMod(mod, cfg)
 			-- Max potency is 0-15 units of distance
 			if cfg.skillDist <= 15 then
 				value = value * tag.ramp[1]
-			-- Reduced potency (linear) until 40 units
+				-- Reduced potency (linear) until 40 units
 			elseif cfg.skillDist >= 16 and cfg.skillDist <= 39 then
 				value = value * (tag.ramp[1] - ((tag.ramp[1] / 25) * (cfg.skillDist - 15)))
 			elseif cfg.skillDist >= 40 then
@@ -513,13 +520,14 @@ function ModStoreClass:EvalMod(mod, cfg)
 			value = m_min(value, tag.limit or self:GetMultiplier(tag.limitVar, cfg))
 		elseif tag.type == "Condition" then
 			local match = false
-			local allOneH = ((self.actor.weaponData1 and self.actor.weaponData1.countsAsAll1H) and self.actor.weaponData1) or ((self.actor.weaponData2 and self.actor.weaponData2.countsAsAll1H) and self.actor.weaponData2)
+			local allOneH = ((self.actor.weaponData1 and self.actor.weaponData1.countsAsAll1H) and self.actor.weaponData1) or
+				((self.actor.weaponData2 and self.actor.weaponData2.countsAsAll1H) and self.actor.weaponData2)
 			if tag.varList then
 				for _, var in pairs(tag.varList) do
-					if tag.neg and allOneH and allOneH["Added"..var] ~= nil then
+					if tag.neg and allOneH and allOneH["Added" .. var] ~= nil then
 						-- Varunastra adds all using weapon conditions and that causes this condition to fail when it shouldn't
 						-- if the condition was added by Varunastra then ignore, otherwise return as the tag condition is not satisfied
-						if not allOneH["Added"..var] then
+						if not allOneH["Added" .. var] then
 							return
 						end
 					elseif self:GetCondition(var, cfg) or (cfg and cfg.skillCond and cfg.skillCond[var]) then
@@ -528,8 +536,8 @@ function ModStoreClass:EvalMod(mod, cfg)
 					end
 				end
 			else
-				if tag.neg and allOneH and allOneH["Added"..tag.var] ~= nil then
-					if not allOneH["Added"..tag.var] then
+				if tag.neg and allOneH and allOneH["Added" .. tag.var] ~= nil then
+					if not allOneH["Added" .. tag.var] then
 						return
 					end
 				else
@@ -570,7 +578,8 @@ function ModStoreClass:EvalMod(mod, cfg)
 			end
 		elseif tag.type == "ItemCondition" then
 			local matches = {}
-			local itemSlot = tag.itemSlot:lower():gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end):gsub('^%s*(.-)%s*$', '%1')
+			local itemSlot = tag.itemSlot:lower():gsub("(%l)(%w*)", function (a, b) return string.upper(a) .. b end)
+				:gsub('^%s*(.-)%s*$', '%1')
 			local items = {}
 			if tag.allSlots then
 				items = self.actor.itemList
@@ -581,12 +590,12 @@ function ModStoreClass:EvalMod(mod, cfg)
 					if itemSlot1 and itemSlot1.name:match("Kalandra's Touch") then itemSlot1 = itemSlot2 end
 					if itemSlot2 and itemSlot2.name:match("Kalandra's Touch") then itemSlot2 = itemSlot1 end
 					if itemSlot1 and itemSlot2 then
-						items = {[itemSlot .. " 1"] = itemSlot1, [itemSlot .. " 2"] = itemSlot2}
+						items = { [itemSlot .. " 1"] = itemSlot1, [itemSlot .. " 2"] = itemSlot2 }
 					end
 				else
 					local item = self.actor.itemList[itemSlot] or (cfg and cfg.item)
 					if item and item.name and item.name:match("Kalandra's Touch") then
-						item = self.actor.itemList[itemSlot:gsub("%d$", {["1"] = "2", ["2"] = "1"})]
+						item = self.actor.itemList[itemSlot:gsub("%d$", { ["1"] = "2", ["2"] = "1" })]
 					end
 					items = { [itemSlot] = (item or (cfg and cfg.item)) }
 				end
@@ -658,7 +667,8 @@ function ModStoreClass:EvalMod(mod, cfg)
 					match["socketColor"] = (tag.socketColor == cfg.socketColor) or false
 				end
 				if tag.sockets then
-					local targetAtrColor = tag.socketColor == "R" and "strengthGems" or tag.socketColor == "G" and "dexterityGems" or tag.socketColor == "B" and "intelligenceGems"
+					local targetAtrColor = tag.socketColor == "R" and "strengthGems" or
+						tag.socketColor == "G" and "dexterityGems" or tag.socketColor == "B" and "intelligenceGems"
 					local count = cfg[targetAtrColor] or 0
 					if tag.sockets == "all" then
 						local total = (cfg.intelligenceGems or 0) + (cfg.dexterityGems or 0) + (cfg.strengthGems or 0)
