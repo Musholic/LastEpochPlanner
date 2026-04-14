@@ -206,7 +206,7 @@ function CalcsTabClass:Load(xml, dbFileName)
 					self.input[node.attrib.name] = node.attrib.boolean == "true"
 				else
 					launch:ShowErrMsg(
-						"^1Error parsing '%s': 'Input' element missing number, string or boolean attribute", dbFileName)
+						"^1Error parsing '%s': 'Input' element missing number, string or boolean attribute", fileName)
 					return true
 				end
 			elseif node.elem == "Section" then

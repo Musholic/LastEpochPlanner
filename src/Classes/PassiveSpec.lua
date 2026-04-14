@@ -501,7 +501,7 @@ function PassiveSpecClass:CountAllocNodes()
 	local used = 0
 	for nodeId, node in pairs(self.allocNodes) do
 		if node.type ~= "ClassStart" and nodeId:match("^" .. self.curClassName) then
-			used = used + (node.alloc or 0)
+			used = used + node.alloc or 0
 		end
 	end
 	return used
