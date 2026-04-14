@@ -37,7 +37,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 
 	-- Load build file
 	self.xmlSectionList = {}
-	self.viewMode = "TREE"
+	self.viewMode ="TREE"
 	self.characterLevel = m_min(m_max(main.defaultCharLevel or 1, 1), 100)
 	self.targetVersion = liveTargetVersion
 	self.bandit = "None"
@@ -53,7 +53,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 	else
 		if self:LoadDBFile() then
 			self:CloseBuild()
-			return
+		return
 		end
 		self.modFlag = false
 	end
@@ -148,7 +148,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 	self.controls.pointDisplay.Draw = function (control)
 		local x, y = control:GetPos()
 		local width, height = control:GetSize()
-		SetDrawColor(1, 1, 1)
+        SetDrawColor(1, 1, 1)
 		DrawImage(nil, x, y, width, height)
 		SetDrawColor(0, 0, 0)
 		DrawImage(nil, x + 1, y + 1, width - 2, height - 2)
@@ -180,7 +180,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 			self.controls.levelScalingButton.label = "Manual"
 		end)
 	self.controls.characterLevel:SetText(self.characterLevel)
-	self.controls.classDrop = new("DropDownControl", { "LEFT", self.controls.characterLevel, "RIGHT" }, 8, 0, 100, 20,
+	self.controls.classDrop = new("DropDownControl",{"LEFT", self.controls.characterLevel, "RIGHT" }, 8, 0, 100, 20,
 		nil, function (index, value)
 			if value.classId ~= self.spec.curClassId then
 				if self.spec:CountAllocNodes() == 0 or self.spec:IsClassConnected(value.classId) then
