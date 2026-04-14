@@ -8,6 +8,7 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    container: ghcr.io/musholic/lastepochplanner-tests:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,10 +27,10 @@ jobs:
           # Delete the Lua 5.3 specific file so it doesn't break LuaJIT parsing
           rm -f runtime/lua/sha1/lua53_ops.lua
       - name: Type Check Code Base
-        uses: mrcjkb/lua-typecheck-action@v1
+        run: lua-language-server --check .
   run_tests:
     runs-on: ubuntu-latest
-    container: ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
+    container: ghcr.io/musholic/lastepochplanner-tests:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,7 +41,7 @@ jobs:
         run: cd src; luacov-coveralls --repo-token=${{ secrets.github_token }} -e TestData -e Data -e runtime
   run_build_tests:
     runs-on: ubuntu-latest
-    container: ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
+    container: ghcr.io/musholic/lastepochplanner-tests:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,10 +49,8 @@ jobs:
         run: busted --lua=luajit --exclude-tags="" -t builds
   check_generated_builds:
     runs-on: ubuntu-latest
-    container: ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
+    container: ghcr.io/musholic/lastepochplanner-tests:latest
     steps:
-      - name: Install xmllint and git dependency
-        run: apk add libxml2-utils git
       - name: Checkout
         uses: actions/checkout@v4
       - name: Generate Builds
@@ -61,10 +60,8 @@ jobs:
         run: git diff --exit-code spec
   check_modcache:
     runs-on: ubuntu-latest
-    container: ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
+    container: ghcr.io/musholic/lastepochplanner-tests:latest
     steps:
-      - name: Install git dependency
-        run: apk add git
       - name: Checkout
         uses: actions/checkout@v4
       - name: Regenerate ModCache
