@@ -26,6 +26,8 @@ jobs:
           sed -i 's|${addons}|.lls-addons/addons|g' .luarc.json
           # Delete the Lua 5.3 specific file so it doesn't break LuaJIT parsing
           rm -f runtime/lua/sha1/lua53_ops.lua
+          # Delete the ModCache which slows down type checking
+          rm -f src/Data/ModCache.lua
       - name: Type Check Code Base
         run: lua-language-server --check .
   run_tests:
