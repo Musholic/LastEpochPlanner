@@ -8,46 +8,49 @@ local t_remove = table.remove
 local m_max = math.max
 local s_format = string.format
 
-local ItemSetListClass = newClass("ItemSetListControl", "ListControl", function(self, anchor, x, y, width, height, itemsTab)
-	self.ListControl(anchor, x, y, width, height, 16, "VERTICAL", true, itemsTab.itemSetOrderList)
-	self.itemsTab = itemsTab
-	self.controls.copy = new("ButtonControl", {"BOTTOMLEFT",self,"TOP"}, 2, -4, 60, 18, "Copy", function()
-		local newSet = copyTable(itemsTab.itemSets[self.selValue])
-		newSet.id = 1
-		while itemsTab.itemSets[newSet.id] do
-			newSet.id = newSet.id + 1
+local ItemSetListClass = newClass("ItemSetListControl", "ListControl",
+	function (self, anchor, x, y, width, height, itemsTab)
+		self.ListControl(anchor, x, y, width, height, 16, "VERTICAL", true, itemsTab.itemSetOrderList)
+		self.itemsTab = itemsTab
+		self.controls.copy = new("ButtonControl", { "BOTTOMLEFT", self, "TOP" }, 2, -4, 60, 18, "Copy", function ()
+			local newSet = copyTable(itemsTab.itemSets[self.selValue])
+			newSet.id = 1
+			while itemsTab.itemSets[newSet.id] do
+				newSet.id = newSet.id + 1
+			end
+			itemsTab.itemSets[newSet.id] = newSet
+			self:RenameSet(newSet, true)
+		end)
+		self.controls.copy.enabled = function ()
+			return self.selValue ~= nil
 		end
-		itemsTab.itemSets[newSet.id] = newSet
-		self:RenameSet(newSet, true)
+		self.controls.delete = new("ButtonControl", { "LEFT", self.controls.copy, "RIGHT" }, 4, 0, 60, 18, "Delete",
+			function ()
+				self:OnSelDelete(self.selIndex, self.selValue)
+			end)
+		self.controls.delete.enabled = function ()
+			return self.selValue ~= nil and #self.list > 1
+		end
+		self.controls.rename = new("ButtonControl", { "BOTTOMRIGHT", self, "TOP" }, -2, -4, 60, 18, "Rename", function ()
+			self:RenameSet(itemsTab.itemSets[self.selValue])
+		end)
+		self.controls.rename.enabled = function ()
+			return self.selValue ~= nil
+		end
+		self.controls.new = new("ButtonControl", { "RIGHT", self.controls.rename, "LEFT" }, -4, 0, 60, 18, "New",
+			function ()
+				local newSet = itemsTab:NewItemSet()
+				self:RenameSet(newSet, true)
+			end)
 	end)
-	self.controls.copy.enabled = function()
-		return self.selValue ~= nil
-	end
-	self.controls.delete = new("ButtonControl", {"LEFT",self.controls.copy,"RIGHT"}, 4, 0, 60, 18, "Delete", function()
-		self:OnSelDelete(self.selIndex, self.selValue)
-	end)
-	self.controls.delete.enabled = function()
-		return self.selValue ~= nil and #self.list > 1
-	end
-	self.controls.rename = new("ButtonControl", {"BOTTOMRIGHT",self,"TOP"}, -2, -4, 60, 18, "Rename", function()
-		self:RenameSet(itemsTab.itemSets[self.selValue])
-	end)
-	self.controls.rename.enabled = function()
-		return self.selValue ~= nil
-	end
-	self.controls.new = new("ButtonControl", {"RIGHT",self.controls.rename,"LEFT"}, -4, 0, 60, 18, "New", function()
-		local newSet = itemsTab:NewItemSet()
-		self:RenameSet(newSet, true)
-	end)
-end)
 
 function ItemSetListClass:RenameSet(itemSet, addOnName)
-	local controls = { }
+	local controls = {}
 	controls.label = new("LabelControl", nil, 0, 20, 0, 16, "^7Enter name for this item set:")
-	controls.edit = new("EditControl", nil, 0, 40, 350, 20, itemSet.title, nil, nil, 100, function(buf)
+	controls.edit = new("EditControl", nil, 0, 40, 350, 20, itemSet.title, nil, nil, 100, function (buf)
 		controls.save.enabled = buf:match("%S")
 	end)
-	controls.save = new("ButtonControl", nil, -45, 70, 80, 20, "Save", function()
+	controls.save = new("ButtonControl", nil, -45, 70, 80, 20, "Save", function ()
 		itemSet.title = controls.edit.buf
 		self.itemsTab.modFlag = true
 		if addOnName then
@@ -59,7 +62,7 @@ function ItemSetListClass:RenameSet(itemSet, addOnName)
 		main:ClosePopup()
 	end)
 	controls.save.enabled = false
-	controls.cancel = new("ButtonControl", nil, 45, 70, 80, 20, "Cancel", function()
+	controls.cancel = new("ButtonControl", nil, 45, 70, 80, 20, "Cancel", function ()
 		if addOnName then
 			self.itemsTab.itemSets[itemSet.id] = nil
 		end
@@ -117,16 +120,18 @@ end
 function ItemSetListClass:OnSelDelete(index, itemSetId)
 	local itemSet = self.itemsTab.itemSets[itemSetId]
 	if #self.list > 1 then
-		main:OpenConfirmPopup("Delete Item Set", "Are you sure you want to delete '"..(itemSet.title or "Default").."'?\nThis will not delete any items used by the set.", "Delete", function()
-			t_remove(self.list, index)
-			self.itemsTab.itemSets[itemSetId] = nil
-			self.selIndex = nil
-			self.selValue = nil
-			if itemSetId == self.itemsTab.activeItemSetId then
-				self.itemsTab:SetActiveItemSet(self.list[m_max(1, index - 1)])
-			end
-			self.itemsTab:AddUndoState()
-		end)
+		main:OpenConfirmPopup("Delete Item Set",
+			"Are you sure you want to delete '" ..
+			(itemSet.title or "Default") .. "'?\nThis will not delete any items used by the set.", "Delete", function ()
+				t_remove(self.list, index)
+				self.itemsTab.itemSets[itemSetId] = nil
+				self.selIndex = nil
+				self.selValue = nil
+				if itemSetId == self.itemsTab.activeItemSetId then
+					self.itemsTab:SetActiveItemSet(self.list[m_max(1, index - 1)])
+				end
+				self.itemsTab:AddUndoState()
+			end)
 	end
 end
 

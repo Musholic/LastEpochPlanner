@@ -1,17 +1,17 @@
-describe("TestItemParse #itemParse", function()
-    it("Creating unique", function()
-        local item = new("Item", "", "UNIQUE")
-        item.title = "Calamity"
-        item.baseName = "Jewelled Circlet"
-        item.explicitModLines = { { line = "+(10-20) Armor" } }
-        item:BuildAndParseRaw()
-        --print(item:BuildRaw())
-        assert.are.equals("Calamity", item.name)
-    end)
+describe("TestItemParse #itemParse", function ()
+	it("Creating unique", function ()
+		local item = new("Item", "", "UNIQUE")
+		item.title = "Calamity"
+		item.baseName = "Jewelled Circlet"
+		item.explicitModLines = { { line = "+(10-20) Armor" } }
+		item:BuildAndParseRaw()
+		--print(item:BuildRaw())
+		assert.are.equals("Calamity", item.name)
+	end)
 
-    it("Test idol with multiline affixes + roundings", function()
-        newBuild()
-        build.itemsTab:CreateDisplayItemFromRaw([[ Rarity: RARE
+	it("Test idol with multiline affixes + roundings", function ()
+		newBuild()
+		build.itemsTab:CreateDisplayItemFromRaw([[ Rarity: RARE
         Stout Weaver Idol
         Stout Weaver Idol
         Unique ID: Idol 4
@@ -28,10 +28,10 @@ describe("TestItemParse #itemParse", function()
         {range:205}+(8-16)% Ward Retention
         {range:0}{rounding:Integer}(9-20) Health Gain on Kill
         {range:0}{rounding:Integer}(5-6)% increased Health]])
-        build.itemsTab:AddDisplayItem()
+		build.itemsTab:AddDisplayItem()
 
-        runCallback("OnFrame")
+		runCallback("OnFrame")
 
-        assert.are.equals(5, build.calcsTab.mainEnv.modDB:Sum("INC", nil, "Life"))
-    end)
+		assert.are.equals(5, build.calcsTab.mainEnv.modDB:Sum("INC", nil, "Life"))
+	end)
 end)

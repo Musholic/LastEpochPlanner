@@ -13,14 +13,7 @@ local t_insert = table.insert
 local t_concat = table.concat
 
 local function makeSkillMod(modName, modType, modVal, flags, keywordFlags, ...)
-	return {
-		name = modName,
-		type = modType,
-		value = modVal,
-		flags = flags or 0,
-		keywordFlags = keywordFlags or 0,
-		...
-	}
+	return { name = modName, type = modType, value = modVal, flags = flags or 0, keywordFlags = keywordFlags or 0, ... }
 end
 local function makeFlagMod(modName, ...)
 	return makeSkillMod(modName, "FLAG", true, 0, 0, ...)
@@ -41,13 +34,20 @@ end
 -- Remaining Item Data and uniques
 ----------------------------------------
 
-data = { }
+data = {}
 
 data.powerStatList = {
 	{ stat = nil, label = "Offence/Defence", combinedOffDef = true, ignoreForItems = true },
-	{ stat = nil, label = "Name", itemField = "Name", ignoreForNodes = true, reverseSort = true, transform = function(value)
-		return value:gsub("^The ", "")
-	end },
+	{
+		stat = nil,
+		label = "Name",
+		itemField = "Name",
+		ignoreForNodes = true,
+		reverseSort = true,
+		transform = function (value)
+			return value:gsub("^The ", "")
+		end
+	},
 	{ stat = "FullDPS", label = "Full DPS" },
 	{ stat = "CombinedDPS", label = "Combined DPS" },
 	{ stat = "TotalDPS", label = "Hit DPS" },
@@ -66,7 +66,7 @@ data.powerStatList = {
 }
 
 for i, attribute in ipairs(Attributes) do
-	t_insert(data.powerStatList, { stat=attribute, label=AttributesColored[i] })
+	t_insert(data.powerStatList, { stat = attribute, label = AttributesColored[i] })
 end
 
 tableInsertAll(data.powerStatList, {
@@ -76,14 +76,22 @@ tableInsertAll(data.powerStatList, {
 })
 
 for i, damageType in ipairs(DamageTypes) do
-	t_insert(data.powerStatList, { stat=damageType .. "TakenHit", label=DamageTypeColors[i] .. "Taken " .. damageType .. " dmg", transform=function(value) return -value end })
+	t_insert(data.powerStatList,
+		{
+			stat = damageType .. "TakenHit",
+			label = DamageTypeColors[i] .. "Taken " .. damageType .. " dmg",
+			transform = function (
+				value)
+				return -value
+			end
+		})
 end
 
-tableInsertAll(data.powerStatList,{
-	{ stat="CritChance", label="Crit Chance" },
-	{ stat="CritMultiplier", label="Crit Multiplier" },
-	{ stat="EffectiveMovementSpeedMod", label="Move speed" },
-	{ stat="BlockChance", label="Block Chance" },
+tableInsertAll(data.powerStatList, {
+	{ stat = "CritChance", label = "Crit Chance" },
+	{ stat = "CritMultiplier", label = "Crit Multiplier" },
+	{ stat = "EffectiveMovementSpeedMod", label = "Move speed" },
+	{ stat = "BlockChance", label = "Block Chance" },
 })
 
 data.misc = { -- magic numbers
@@ -166,114 +174,42 @@ data.nonDamagingAilment = {
 -- Used in ModStoreClass:ScaleAddMod(...) to identify high precision modifiers
 data.defaultHighPrecision = 1
 data.highPrecisionMods = {
-	["CritChance"] = {
-		["BASE"] = 2,
-	},
-	["SelfCritChance"] = {
-		["BASE"] = 2,
-	},
-	["LifeRegenPercent"] = {
-		["BASE"] = 2,
-	},
-	["ManaRegenPercent"] = {
-		["BASE"] = 2,
-	},
-	["EnergyShieldRegenPercent"] = {
-		["BASE"] = 2,
-	},
-	["LifeRegen"] = {
-		["BASE"] = 1,
-	},
-	["ManaRegen"] = {
-		["BASE"] = 1,
-	},
-	["EnergyShieldRegen"] = {
-		["BASE"] = 1,
-	},
-	["LifeDegenPercent"] = {
-		["BASE"] = 2,
-	},
-	["ManaDegenPercent"] = {
-		["BASE"] = 2,
-	},
-	["EnergyShieldDegenPercent"] = {
-		["BASE"] = 2,
-	},
-	["LifeDegen"] = {
-		["BASE"] = 1,
-	},
-	["ManaDegen"] = {
-		["BASE"] = 1,
-	},
-	["EnergyShieldDegen"] = {
-		["BASE"] = 1,
-	},
-	["DamageLifeLeech"] = {
-		["BASE"] = 2,
-	},
-	["PhysicalDamageLifeLeech"] = {
-		["BASE"] = 2,
-	},
-	["ElementalDamageLifeLeech"] = {
-		["BASE"] = 2,
-	},
-	["FireDamageLifeLeech"] = {
-		["BASE"] = 2,
-	},
-	["ColdDamageLifeLeech"] = {
-		["BASE"] = 2,
-	},
-	["LightningDamageLifeLeech"] = {
-		["BASE"] = 2,
-	},
-	["ChaosDamageLifeLeech"] = {
-		["BASE"] = 2,
-	},
-	["DamageManaLeech"] = {
-		["BASE"] = 2,
-	},
-	["PhysicalDamageManaLeech"] = {
-		["BASE"] = 2,
-	},
-	["ElementalDamageManaLeech"] = {
-		["BASE"] = 2,
-	},
-	["FireDamageManaLeech"] = {
-		["BASE"] = 2,
-	},
-	["ColdDamageManaLeech"] = {
-		["BASE"] = 2,
-	},
-	["LightningDamageManaLeech"] = {
-		["BASE"] = 2,
-	},
-	["ChaosDamageManaLeech"] = {
-		["BASE"] = 2,
-	},
-	["DamageEnergyShieldLeech"] = {
-		["BASE"] = 2,
-	},
-	["PhysicalDamageEnergyShieldLeech"] = {
-		["BASE"] = 2,
-	},
-	["ElementalDamageEnergyShieldLeech"] = {
-		["BASE"] = 2,
-	},
-	["FireDamageEnergyShieldLeech"] = {
-		["BASE"] = 2,
-	},
-	["ColdDamageEnergyShieldLeech"] = {
-		["BASE"] = 2,
-	},
-	["LightningDamageEnergyShieldLeech"] = {
-		["BASE"] = 2,
-	},
-	["ChaosDamageEnergyShieldLeech"] = {
-		["BASE"] = 2,
-	},
-	["SupportManaMultiplier"] = {
-		["MORE"] = 4,
-	}
+	["CritChance"] = { ["BASE"] = 2, },
+	["SelfCritChance"] = { ["BASE"] = 2, },
+	["LifeRegenPercent"] = { ["BASE"] = 2, },
+	["ManaRegenPercent"] = { ["BASE"] = 2, },
+	["EnergyShieldRegenPercent"] = { ["BASE"] = 2, },
+	["LifeRegen"] = { ["BASE"] = 1, },
+	["ManaRegen"] = { ["BASE"] = 1, },
+	["EnergyShieldRegen"] = { ["BASE"] = 1, },
+	["LifeDegenPercent"] = { ["BASE"] = 2, },
+	["ManaDegenPercent"] = { ["BASE"] = 2, },
+	["EnergyShieldDegenPercent"] = { ["BASE"] = 2, },
+	["LifeDegen"] = { ["BASE"] = 1, },
+	["ManaDegen"] = { ["BASE"] = 1, },
+	["EnergyShieldDegen"] = { ["BASE"] = 1, },
+	["DamageLifeLeech"] = { ["BASE"] = 2, },
+	["PhysicalDamageLifeLeech"] = { ["BASE"] = 2, },
+	["ElementalDamageLifeLeech"] = { ["BASE"] = 2, },
+	["FireDamageLifeLeech"] = { ["BASE"] = 2, },
+	["ColdDamageLifeLeech"] = { ["BASE"] = 2, },
+	["LightningDamageLifeLeech"] = { ["BASE"] = 2, },
+	["ChaosDamageLifeLeech"] = { ["BASE"] = 2, },
+	["DamageManaLeech"] = { ["BASE"] = 2, },
+	["PhysicalDamageManaLeech"] = { ["BASE"] = 2, },
+	["ElementalDamageManaLeech"] = { ["BASE"] = 2, },
+	["FireDamageManaLeech"] = { ["BASE"] = 2, },
+	["ColdDamageManaLeech"] = { ["BASE"] = 2, },
+	["LightningDamageManaLeech"] = { ["BASE"] = 2, },
+	["ChaosDamageManaLeech"] = { ["BASE"] = 2, },
+	["DamageEnergyShieldLeech"] = { ["BASE"] = 2, },
+	["PhysicalDamageEnergyShieldLeech"] = { ["BASE"] = 2, },
+	["ElementalDamageEnergyShieldLeech"] = { ["BASE"] = 2, },
+	["FireDamageEnergyShieldLeech"] = { ["BASE"] = 2, },
+	["ColdDamageEnergyShieldLeech"] = { ["BASE"] = 2, },
+	["LightningDamageEnergyShieldLeech"] = { ["BASE"] = 2, },
+	["ChaosDamageEnergyShieldLeech"] = { ["BASE"] = 2, },
+	["SupportManaMultiplier"] = { ["MORE"] = 4, }
 }
 
 data.weaponTypeInfo = {
@@ -321,9 +257,7 @@ LoadModule("Data/Misc", data)
 data.describeStats = LoadModule("Modules/StatDescriber")
 
 -- Load item modifiers
-data.itemMods = {
-	Item = readJsonFile("Data/ModItem.json"),
-}
+data.itemMods = { Item = readJsonFile("Data/ModItem.json"), }
 
 for modId, mod in pairs(data.itemMods.Item) do
 	if not mod.affix then
@@ -335,11 +269,11 @@ end
 
 data.costs = LoadModule("Data/Costs")
 do
-	local map = { }
+	local map = {}
 	for i, value in ipairs(data.costs) do
 		map[value.Resource] = i
 	end
-	setmetatable(data.costs, { __index = function(t, k) return t[map[k]] end })
+	setmetatable(data.costs, { __index = function (t, k) return t[map[k]] end })
 end
 
 -- Manually seeded modifier tag against item slot table for Mastery Item Condition based modifiers
@@ -359,14 +293,12 @@ data.itemTagSpecial = {
 			"^Cannot Leech$",
 		},
 	},
-	["evasion"] = {
-		["ring"] = {
-			-- Delve
-			"chance to Evade",
-			-- Unique
-			"Cannot Evade",
-		},
-	},
+	["evasion"] = { ["ring"] = {
+		-- Delve
+		"chance to Evade",
+		-- Unique
+		"Cannot Evade",
+	}, },
 }
 data.itemTagSpecialExclusionPattern = {
 	["life"] = {
@@ -380,26 +312,21 @@ data.itemTagSpecialExclusionPattern = {
 			"Life From You",
 			"^Socketed Gems are Supported by Level"
 		},
-		["boots"] = {
-			"Enemy's Life", -- Legacy of Fury
+		["boots"] = { "Enemy's Life",                 -- Legacy of Fury
 		},
-		["belt"] = {
-			"Life as Extra Maximum Energy Shield", -- Soul Tether
+		["belt"] = { "Life as Extra Maximum Energy Shield", -- Soul Tether
 		},
-		["helmet"] = {
-			"Recouped as Life", -- Flame Exarch
-			"Life when you Suppress", -- Elevore
+		["helmet"] = { "Recouped as Life",            -- Flame Exarch
+			"Life when you Suppress",                 -- Elevore
 		},
 	},
-	["evasion"] = {
-		["ring"] = {
-		},
-	},
+	["evasion"] = { ["ring"] = {
+	}, },
 }
 
 -- Load bosses
 do
-	data.bosses = { }
+	data.bosses = {}
 	LoadModule("Data/Bosses", data.bosses)
 
 	local count, uberCount = 0, 0
@@ -435,27 +362,27 @@ Bosses' armour and evasion multiplier are calculated using the average of the bo
 Standard Boss adds the following modifiers:
 	+40% to enemy Elemental Resistances
 	+25% to enemy ^xD02090Chaos Resistance
-	^7]]..tostring(m_floor(data.misc.stdBossDPSMult * 100))..[[% of monster Damage of each type
-	]]..tostring(m_floor(data.misc.stdBossDPSMult * 4.4 * 100))..[[% of monster Damage total
+	^7]] .. tostring(m_floor(data.misc.stdBossDPSMult * 100)) .. [[% of monster Damage of each type
+	]] .. tostring(m_floor(data.misc.stdBossDPSMult * 4.4 * 100)) .. [[% of monster Damage total
 
 Guardian / Pinnacle Boss adds the following modifiers:
 	+50% to enemy Elemental Resistances
 	+30% to enemy ^xD02090Chaos Resistance
-	^7]]..tostring(m_floor(data.bossStats.PinnacleArmourMean))..[[% of monster Armour
-	]]..tostring(m_floor(data.bossStats.PinnacleEvasionMean))..[[% of monster ^x33FF77Evasion
-	^7]]..tostring(m_floor(data.misc.pinnacleBossDPSMult * 100))..[[% of monster Damage of each type
-	]]..tostring(m_floor(data.misc.pinnacleBossDPSMult * 4.4 * 100))..[[% of monster Damage total
-	]]..tostring(data.misc.pinnacleBossPen)..[[% penetration
+	^7]] .. tostring(m_floor(data.bossStats.PinnacleArmourMean)) .. [[% of monster Armour
+	]] .. tostring(m_floor(data.bossStats.PinnacleEvasionMean)) .. [[% of monster ^x33FF77Evasion
+	^7]] .. tostring(m_floor(data.misc.pinnacleBossDPSMult * 100)) .. [[% of monster Damage of each type
+	]] .. tostring(m_floor(data.misc.pinnacleBossDPSMult * 4.4 * 100)) .. [[% of monster Damage total
+	]] .. tostring(data.misc.pinnacleBossPen) .. [[% penetration
 
 Uber Pinnacle Boss adds the following modifiers:
 	+50% to enemy Elemental Resistances
 	+30% to enemy ^xD02090Chaos Resistance
-	^7]]..tostring(m_floor(data.bossStats.UberArmourMean))..[[% of monster Armour
-	]]..tostring(m_floor(data.bossStats.UberEvasionMean))..[[% of monster ^x33FF77Evasion
+	^7]] .. tostring(m_floor(data.bossStats.UberArmourMean)) .. [[% of monster Armour
+	]] .. tostring(m_floor(data.bossStats.UberEvasionMean)) .. [[% of monster ^x33FF77Evasion
 	^770% less to enemy Damage taken
-	]]..tostring(m_floor(data.misc.uberBossDPSMult * 100))..[[% of monster Damage of each type
-	]]..tostring(m_floor(data.misc.uberBossDPSMult * 4.25 * 100))..[[% of monster Damage total
-	]]..tostring(data.misc.uberBossPen)..[[% penetration]]
+	]] .. tostring(m_floor(data.misc.uberBossDPSMult * 100)) .. [[% of monster Damage of each type
+	]] .. tostring(m_floor(data.misc.uberBossDPSMult * 4.25 * 100)) .. [[% of monster Damage total
+	]] .. tostring(data.misc.uberBossPen) .. [[% penetration]]
 end
 
 -- Load skills
@@ -470,12 +397,7 @@ for skillId, skill in pairs(data.skills) do
 end
 
 -- Add a default skill
-data.skills["Default"] = {
-	name = "Default",
-	skillTypeTags = 0,
-	baseFlags = {},
-	stats = {}
-}
+data.skills["Default"] = { name = "Default", skillTypeTags = 0, baseFlags = {}, stats = {} }
 
 -- Load minions
 data.minions = readJsonFile("Data/minions.json")
@@ -486,21 +408,21 @@ data.LETools_itemBases = readJsonFile("Data/LEToolsImport/bases.json")
 data.LETools_affixes = readJsonFile("Data/LEToolsImport/affixes.json")
 
 -- Build lists of item bases, separated by type
-data.itemBaseLists = { }
+data.itemBaseLists = {}
 for name, base in pairs(data.itemBases) do
 	if not base.hidden then
 		local type = base.type
 		if base.subType then
 			type = type .. ": " .. base.subType
 		end
-		data.itemBaseLists[type] = data.itemBaseLists[type] or { }
-		table.insert(data.itemBaseLists[type], { label = name:gsub(" %(.+%)",""), name = name, base = base })
+		data.itemBaseLists[type] = data.itemBaseLists[type] or {}
+		table.insert(data.itemBaseLists[type], { label = name:gsub(" %(.+%)", ""), name = name, base = base })
 	end
 end
-data.itemBaseTypeList = { }
+data.itemBaseTypeList = {}
 for type, list in pairs(data.itemBaseLists) do
 	table.insert(data.itemBaseTypeList, type)
-	table.sort(list, function(a, b)
+	table.sort(list, function (a, b)
 		if a.base.req and b.base.req then
 			if a.base.req.level == b.base.req.level then
 				return a.name < b.name
@@ -523,4 +445,4 @@ data.rares = {}
 
 -- Uniques (loaded after version-specific data because reasons)
 data.uniques = readJsonFile("Data/Uniques/uniques.json")
-data.uniqueMods = { }
+data.uniqueMods = {}

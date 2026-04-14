@@ -6,49 +6,48 @@
 local ipairs = ipairs
 local t_insert = table.insert
 
-local PathClass = newClass("PathControl", "Control", "ControlHost", "UndoHandler", function(self, anchor, x, y, width, height, basePath, subPath, onChange)
-	self.Control(anchor, x, y, width, height)
-	self.ControlHost()
-	self.UndoHandler()
-	self.basePath = basePath
-	self.baseName = basePath:match("([^/]+)/$") or "Base"
-	self:SetSubPath(subPath or "")
-	self:ResetUndo()
-	self.onChange = onChange
-end)
+local PathClass = newClass("PathControl", "Control", "ControlHost", "UndoHandler",
+	function (self, anchor, x, y, width, height, basePath, subPath, onChange)
+		self.Control(anchor, x, y, width, height)
+		self.ControlHost()
+		self.UndoHandler()
+		self.basePath = basePath
+		self.baseName = basePath:match("([^/]+)/$") or "Base"
+		self:SetSubPath(subPath or "")
+		self:ResetUndo()
+		self.onChange = onChange
+	end)
 
 function PathClass:SetSubPath(subPath, noUndo)
 	if subPath == self.subPath then
 		return
 	end
 	self.subPath = subPath
-	self.folderList = {
-		{ label = self.baseName, path = "" },
-	}
+	self.folderList = { { label = self.baseName, path = "" }, }
 	for folder, endIndex in subPath:gmatch("([^/]+)()") do
 		t_insert(self.folderList, { label = folder, path = subPath:sub(1, endIndex) })
 	end
 	local x = 2
 	local i = 1
 	for index, folder in ipairs(self.folderList) do
-		local button = self.controls["folder"..i]
+		local button = self.controls["folder" .. i]
 		if not button then
-			button = new("ButtonControl", {"LEFT",self,"LEFT"}, 0, 0, 0, self.height - 4)
-			self.controls["folder"..i] = button
+			button = new("ButtonControl", { "LEFT", self, "LEFT" }, 0, 0, 0, self.height - 4)
+			self.controls["folder" .. i] = button
 		end
 		button.shown = true
 		button.x = x
 		button.label = folder.label
 		button.width = DrawStringWidth(self.height - 8, "VAR", folder.label) + 10
-		button.onClick = function()
+		button.onClick = function ()
 			self:SetSubPath(folder.path)
 		end
 		folder.button = button
 		x = x + button.width + 12
 		i = i + 1
 	end
-	while self.controls["folder"..i] do
-		self.controls["folder"..i].shown = false
+	while self.controls["folder" .. i] do
+		self.controls["folder" .. i].shown = false
 		i = i + 1
 	end
 	if self.onChange then
@@ -78,7 +77,7 @@ function PathClass:Draw(viewPort)
 		local buttonX, buttonY = folder.button:GetPos()
 		local buttonW, buttonH = folder.button:GetSize()
 		SetDrawColor(1, 1, 1)
-		main:DrawArrow(buttonX + buttonW + 6, y + height/2, 8, 8, "RIGHT")
+		main:DrawArrow(buttonX + buttonW + 6, y + height / 2, 8, 8, "RIGHT")
 		if self.otherDragSource and index < #self.folderList then
 			SetDrawColor(0, 1, 0, 0.25)
 			DrawImage(nil, buttonX, buttonY, buttonW, buttonH)
@@ -103,4 +102,3 @@ end
 function PathClass:RestoreUndoState(state)
 	self:SetSubPath(state, true)
 end
-

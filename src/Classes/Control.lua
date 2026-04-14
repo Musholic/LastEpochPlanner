@@ -7,25 +7,25 @@ local t_insert = table.insert
 local m_floor = math.floor
 
 local anchorPos = {
-	    ["TOPLEFT"] = { 0  , 0   },
-	        ["TOP"] = { 0.5, 0   },
-	   ["TOPRIGHT"] = { 1  , 0   },
-	      ["RIGHT"] = { 1  , 0.5 },
-	["BOTTOMRIGHT"] = { 1  , 1   },
-	     ["BOTTOM"] = { 0.5, 1   },
-	 ["BOTTOMLEFT"] = { 0  , 1   },
-	       ["LEFT"] = { 0  , 0.5 },
-	     ["CENTER"] = { 0.5, 0.5 },
+	["TOPLEFT"] = { 0, 0 },
+	["TOP"] = { 0.5, 0 },
+	["TOPRIGHT"] = { 1, 0 },
+	["RIGHT"] = { 1, 0.5 },
+	["BOTTOMRIGHT"] = { 1, 1 },
+	["BOTTOM"] = { 0.5, 1 },
+	["BOTTOMLEFT"] = { 0, 1 },
+	["LEFT"] = { 0, 0.5 },
+	["CENTER"] = { 0.5, 0.5 },
 }
 
-local ControlClass = newClass("Control", function(self, anchor, x, y, width, height)
+local ControlClass = newClass("Control", function (self, anchor, x, y, width, height)
 	self.x = x or 0
 	self.y = y or 0
 	self.width = width or 0
 	self.height = height or 0
 	self.shown = true
 	self.enabled = true
-	self.anchor = { }
+	self.anchor = {}
 	if anchor then
 		self:SetAnchor(anchor[1], anchor[2], anchor[3], nil, nil, anchor[4])
 	end
@@ -61,12 +61,12 @@ function ControlClass:GetPos()
 		local otherW, otherH = 0, 0
 		local width, height = 0, 0
 		local otherPos = anchorPos[self.anchor.otherPoint]
-		assert(otherPos, "invalid anchor position '"..tostring(self.anchor.otherPoint).."'")
+		assert(otherPos, "invalid anchor position '" .. tostring(self.anchor.otherPoint) .. "'")
 		if self.anchor.otherPoint ~= "TOPLEFT" then
 			otherW, otherH = self.anchor.other:GetSize()
 		end
 		local pos = anchorPos[self.anchor.point]
-		assert(pos, "invalid anchor position '"..tostring(self.anchor.point).."'")
+		assert(pos, "invalid anchor position '" .. tostring(self.anchor.point) .. "'")
 		if self.anchor.point ~= "TOPLEFT" then
 			width, height = self:GetSize()
 		end

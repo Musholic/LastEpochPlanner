@@ -13,7 +13,7 @@ local m_cos = math.cos
 local m_pi = math.pi
 local band = bit.band
 
-local CalcBreakdownClass = newClass("CalcBreakdownControl", "Control", "ControlHost", function(self, calcsTab)
+local CalcBreakdownClass = newClass("CalcBreakdownControl", "Control", "ControlHost", function (self, calcsTab)
 	self.Control()
 	self.ControlHost()
 	self.calcsTab = calcsTab
@@ -24,7 +24,7 @@ local CalcBreakdownClass = newClass("CalcBreakdownControl", "Control", "ControlH
 	self.rangeGuide:Load("Assets/range_guide.png")
 	self.uiOverlay = NewImageHandle()
 	self.uiOverlay:Load("Assets/game_ui_small.png")
-	self.controls.scrollBar = new("ScrollBarControl", {"RIGHT",self,"RIGHT"}, -2, 0, 18, 0, 80, "VERTICAL", true)
+	self.controls.scrollBar = new("ScrollBarControl", { "RIGHT", self, "RIGHT" }, -2, 0, 18, 0, 80, "VERTICAL", true)
 end)
 
 function CalcBreakdownClass:IsMouseOver()
@@ -86,9 +86,11 @@ function CalcBreakdownClass:SetBreakdownData(displayData, pinned)
 					if row[col.key] then
 						local _, num = string.gsub(row[col.key], "%d%d%d%d", "") -- count how many commas will be added
 						if main.showThousandsSeparators and num > 0 then
-							col.width = m_max(col.width or 0, DrawStringWidth(16, "VAR", col.label) + 6, DrawStringWidth(12, "VAR", row[col.key]) + 6 + (4 * num))
+							col.width = m_max(col.width or 0, DrawStringWidth(16, "VAR", col.label) + 6,
+								DrawStringWidth(12, "VAR", row[col.key]) + 6 + (4 * num))
 						else
-							col.width = m_max(col.width or 0, DrawStringWidth(16, "VAR", col.label) + 6, DrawStringWidth(12, "VAR", row[col.key]) + 6)
+							col.width = m_max(col.width or 0, DrawStringWidth(16, "VAR", col.label) + 6,
+								DrawStringWidth(12, "VAR", row[col.key]) + 6)
 						end
 					end
 				end
@@ -98,7 +100,7 @@ function CalcBreakdownClass:SetBreakdownData(displayData, pinned)
 			end
 			section.height = #section.rowList * 14 + 20
 			if section.label then
-				self.contentWidth = m_max(self.contentWidth, 6 + DrawStringWidth(16, "VAR", section.label..":"))
+				self.contentWidth = m_max(self.contentWidth, 6 + DrawStringWidth(16, "VAR", section.label .. ":"))
 				section.height = section.height + 16
 			end
 			if section.footer then
@@ -130,28 +132,20 @@ function CalcBreakdownClass:AddBreakdownSection(sectionData)
 
 	if #breakdown > 0 then
 		-- Text lines
-		t_insert(self.sectionList, {
-			type = "TEXT",
-			lines = breakdown,
-			textSize = 16
-		})
+		t_insert(self.sectionList, { type = "TEXT", lines = breakdown, textSize = 16 })
 	end
 
 	if breakdown.radius then
 		-- Radius visualiser
-		t_insert(self.sectionList, {
-			type = "RADIUS",
-			radius = breakdown.radius,
-			width = 8 + 1920/4,
-			height = 4 + 1080/4,
-		})
+		t_insert(self.sectionList,
+			{ type = "RADIUS", radius = breakdown.radius, width = 8 + 1920 / 4, height = 4 + 1080 / 4, })
 	end
 
 	if breakdown.rowList and #breakdown.rowList > 0 then
 		-- sort by the first column (the value)
 		local rowList = copyTable(breakdown.rowList, true)
 		local colKey = breakdown.colList[1].key
-		table.sort(rowList, function(a, b)
+		table.sort(rowList, function (a, b)
 			if a.reqNum then
 				return a.reqNum > b.reqNum
 			end
@@ -235,20 +229,16 @@ function CalcBreakdownClass:AddBreakdownSection(sectionData)
 			rowList = breakdown.slots
 		end
 
-		table.sort(rowList, function(a, b)
+		table.sort(rowList, function (a, b)
 			return a['base'] > b['base']
 		end)
 
-		local section = {
-			type = "TABLE",
-			rowList = rowList,
-			colList = colList,
-		}
+		local section = { type = "TABLE", rowList = rowList, colList = colList, }
 		t_insert(self.sectionList, section)
 		for _, row in pairs(section.rowList) do
 			if row.item then
-				row.sourceLabel = colorCodes[row.item.rarity]..row.item.name
-				row.sourceLabelTooltip = function(tooltip)
+				row.sourceLabel = colorCodes[row.item.rarity] .. row.item.name
+				row.sourceLabelTooltip = function (tooltip)
 					self.calcsTab.build.itemsTab:AddItemTooltip(tooltip, row.item, row.source)
 				end
 			else
@@ -269,11 +259,13 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 	local build = self.calcsTab.build
 
 	-- Build list of modifiers to display
-	local cfg = (sectionData.cfg and actor.mainSkill[sectionData.cfg.."Cfg"] and copyTable(actor.mainSkill[sectionData.cfg.."Cfg"], true)) or { }
+	local cfg = (sectionData.cfg and actor.mainSkill[sectionData.cfg .. "Cfg"] and copyTable(actor.mainSkill[sectionData.cfg .. "Cfg"], true)) or
+		{}
 	cfg.source = sectionData.modSource
 	cfg.actor = sectionData.actor
 	local rowList
-	local modStore = (sectionData.enemy and actor.enemy.modDB) or (sectionData.cfg and actor.mainSkill.skillModList) or actor.modDB
+	local modStore = (sectionData.enemy and actor.enemy.modDB) or (sectionData.cfg and actor.mainSkill.skillModList) or
+		actor.modDB
 	local sectionDataModName = sectionData.modName
 	if modList then
 		rowList = copyTable(modList)
@@ -282,7 +274,8 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 			rowList = modStore:Tabulate(sectionData.modType, cfg, unpack(sectionData.modName))
 		else
 			if sectionData.modName and sectionData.modName:match("{skillId}") then
-				sectionDataModName = sectionData.modName:gsub("%{skillId%}", actor.mainSkill.activeEffect.grantedEffect.id)
+				sectionDataModName = sectionData.modName:gsub("%{skillId%}",
+					actor.mainSkill.activeEffect.grantedEffect.id)
 			end
 			rowList = modStore:Tabulate(sectionData.modType, cfg, sectionDataModName)
 		end
@@ -309,24 +302,28 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 
 	if not modList and not sectionData.modType then
 		-- Sort modifiers by type
-		table.sort(rowList, function(a, b)
+		table.sort(rowList, function (a, b)
 			if a.mod.type == b.mod.type then
-				return a.mod.name > b.mod.name or (a.mod.name == b.mod.name and type(a.value) == "number" and type(b.value) == "number") and a.value > b.value
+				return a.mod.name > b.mod.name or
+					(a.mod.name == b.mod.name and type(a.value) == "number" and type(b.value) == "number") and
+					a.value > b.value
 			else
 				return a.mod.type < b.mod.type
 			end
 		end)
 	else -- Sort modifiers by value
-		table.sort(rowList, function(a, b)
-			return a.mod.name > b.mod.name or (a.mod.name == b.mod.name and type(a.value) == "number" and type(b.value) == "number") and a.value > b.value
+		table.sort(rowList, function (a, b)
+			return a.mod.name > b.mod.name or
+				(a.mod.name == b.mod.name and type(a.value) == "number" and type(b.value) == "number") and
+				a.value > b.value
 		end)
 	end
 
-	local sourceTotals = { }
+	local sourceTotals = {}
 	if not modList and not sectionData.modSource then
 		-- Build list of totals from each modifier source
-		local types = { }
-		local typeList = { }
+		local types = {}
+		local typeList = {}
 		for i, row in ipairs(rowList) do
 			-- Find all the modifier types and source types that are present in the modifier list
 			if not types[row.mod.type] then
@@ -338,7 +335,7 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 			end
 			local sourceType = row.mod.source:match("[^:]+")
 			if not sourceTotals[sourceType] then
-				sourceTotals[sourceType] = { }
+				sourceTotals[sourceType] = {}
 			end
 		end
 		for sourceType, lines in pairs(sourceTotals) do
@@ -352,7 +349,8 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 							total = round((total - 1) * 100)
 						end
 						if total and total ~= 0 then
-							t_insert(lines, self:FormatModValue(total, modType) .. " " .. modName:gsub("(%l)(%u)","%1 %2"))
+							t_insert(lines,
+								self:FormatModValue(total, modType) .. " " .. modName:gsub("(%l)(%u)", "%1 %2"))
 						end
 					end
 				else
@@ -385,8 +383,8 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 		if not modList and not sectionData.modSource then
 			-- No modifier source specified, add the source type to the table
 			row.source = sourceType
-			row.sourceTooltip = function(tooltip)
-				tooltip:AddLine(16, "Total from "..sourceType..":")
+			row.sourceTooltip = function (tooltip)
+				tooltip:AddLine(16, "Total from " .. sourceType .. ":")
 				for _, line in ipairs(sourceTotals[sourceType]) do
 					tooltip:AddLine(14, line)
 				end
@@ -397,8 +395,8 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 			local itemId = row.mod.source:match("Item:(%d+):.+")
 			local item = build.itemsTab.items[tonumber(itemId)]
 			if item then
-				row.sourceName = colorCodes[item.rarity]..item.name
-				row.sourceNameTooltip = function(tooltip)
+				row.sourceName = colorCodes[item.rarity] .. item.name
+				row.sourceNameTooltip = function (tooltip)
 					build.itemsTab:AddItemTooltip(tooltip, item, row.mod.sourceSlot)
 				end
 			end
@@ -421,8 +419,8 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 
 		if row.mod.flags ~= 0 or row.mod.keywordFlags ~= 0 then
 			-- Combine, sort and format modifier flags
-			local flagNames = { }
-			for flags, src in pairs({[row.mod.flags] = ModFlag, [row.mod.keywordFlags] = KeywordFlag}) do
+			local flagNames = {}
+			for flags, src in pairs({ [row.mod.flags] = ModFlag, [row.mod.keywordFlags] = KeywordFlag }) do
 				for name, val in pairs(src) do
 					if band(flags, val) == val then
 						t_insert(flagNames, name)
@@ -439,48 +437,68 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 			for _, tag in ipairs(row.mod) do
 				local desc
 				if tag.type == "Condition" or tag.type == "ActorCondition" then
-					local cond = (tag.var or tag.varList) and ": "..(tag.neg and "Not " or "")..self:FormatVarNameOrList(tag.var, tag.varList) or ""
-					desc = (tag.actor and (tag.actor:sub(1,1):upper()..tag.actor:sub(2).." ") or "").."Condition"..cond
+					local cond = (tag.var or tag.varList) and
+						": " .. (tag.neg and "Not " or "") .. self:FormatVarNameOrList(tag.var, tag.varList) or ""
+					desc = (tag.actor and (tag.actor:sub(1, 1):upper() .. tag.actor:sub(2) .. " ") or "") ..
+						"Condition" .. cond
 				elseif tag.type == "Multiplier" then
-					local base = tag.base and (self:FormatModBase(row.mod, tag.base).." + "..math.abs(row.mod.value).." ") or baseVal
-					desc = base.."per "..(tag.div and (tag.div.." ") or "")..self:FormatVarNameOrList(tag.var, tag.varList)
+					local base = tag.base and
+						(self:FormatModBase(row.mod, tag.base) .. " + " .. math.abs(row.mod.value) .. " ") or baseVal
+					desc = base ..
+						"per " .. (tag.div and (tag.div .. " ") or "") .. self:FormatVarNameOrList(tag.var, tag.varList)
 					if tag.threshold then
-						desc = desc .. " above "..tag.threshold
+						desc = desc .. " above " .. tag.threshold
 					end
 					baseVal = ""
 				elseif tag.type == "PerStat" then
-					local base = tag.base and (self:FormatModBase(row.mod, tag.base).." + "..math.abs(row.mod.value).." ") or baseVal
-					desc = base.."per "..(tag.div or 1).." "..(tag.actor and (tag.actor.." ") or "")..self:FormatVarNameOrList(tag.stat, tag.statList)
+					local base = tag.base and
+						(self:FormatModBase(row.mod, tag.base) .. " + " .. math.abs(row.mod.value) .. " ") or baseVal
+					desc = base ..
+						"per " ..
+						(tag.div or 1) ..
+						" " ..
+						(tag.actor and (tag.actor .. " ") or "") .. self:FormatVarNameOrList(tag.stat, tag.statList)
 					baseVal = ""
 				elseif tag.type == "PercentStat" then
 					local finalPercent = (row.mod.value * ((tag.percent or 1) / 100)) * 100
-					local base = tag.base and (self:FormatModBase(row.mod, tag.base).." + "..math.abs(finalPercent).." ") or self:FormatModBase(row.mod, finalPercent)
-					desc = base.."% of "..(tag.actor and (tag.actor.." ") or "")..self:FormatVarNameOrList(tag.percentVar or tag.stat, tag.statList)
+					local base = tag.base and
+						(self:FormatModBase(row.mod, tag.base) .. " + " .. math.abs(finalPercent) .. " ") or
+						self:FormatModBase(row.mod, finalPercent)
+					desc = base ..
+						"% of " ..
+						(tag.actor and (tag.actor .. " ") or "") ..
+						self:FormatVarNameOrList(tag.percentVar or tag.stat, tag.statList)
 					baseVal = ""
 				elseif tag.type == "MultiplierThreshold" or tag.type == "StatThreshold" then
-					desc = "If "..self:FormatVarNameOrList(tag.var or tag.stat, tag.varList or tag.statList)..(tag.upper and " <= " or " >= ")..(tag.thresholdPercent and tag.thresholdPercent.."% " or "")..(tag.threshold or self:FormatModName(tag.thresholdVar or tag.thresholdStat))
+					desc = "If " ..
+						self:FormatVarNameOrList(tag.var or tag.stat, tag.varList or tag.statList) ..
+						(tag.upper and " <= " or " >= ") ..
+						(tag.thresholdPercent and tag.thresholdPercent .. "% " or "") ..
+						(tag.threshold or self:FormatModName(tag.thresholdVar or tag.thresholdStat))
 				elseif tag.type == "SkillName" then
-					desc = "Skill: "..(tag.skillNameList and table.concat(tag.skillNameList, "/") or tag.skillName)
+					desc = "Skill: " .. (tag.skillNameList and table.concat(tag.skillNameList, "/") or tag.skillName)
 				elseif tag.type == "SkillId" then
-					desc = "Skill: "..build.data.skills[tag.skillId].name
+					desc = "Skill: " .. build.data.skills[tag.skillId].name
 				elseif tag.type == "SkillType" then
 					for name, type in pairs(SkillType) do
 						if type == tag.skillType then
-							desc = "Skill type: "..(tag.neg and "Not " or "")..self:FormatModName(name)
+							desc = "Skill type: " .. (tag.neg and "Not " or "") .. self:FormatModName(name)
 							break
 						end
 					end
 					if not desc then
-						desc = "Skill type: "..(tag.neg and "Not " or "").."?"
+						desc = "Skill type: " .. (tag.neg and "Not " or "") .. "?"
 					end
 				elseif tag.type == "SlotNumber" then
-					desc = "When in slot #"..tag.num
+					desc = "When in slot #" .. tag.num
 				elseif tag.type == "GlobalEffect" then
 					desc = self:FormatModName(tag.effectType)
 				elseif tag.type == "Limit" then
-					desc = "Limited to "..(tag.limitVar and self:FormatModName(tag.limitVar) or self:FormatModBase(row.mod, tag.limit))
+					desc = "Limited to " ..
+						(tag.limitVar and self:FormatModName(tag.limitVar) or self:FormatModBase(row.mod, tag.limit))
 				elseif tag.type == "MonsterTag" then
-					desc = "Monster Tag: "..(tag.monsterTagList and table.concat(tag.monsterTagList, "/") or tag.monsterTag)
+					desc = "Monster Tag: " ..
+						(tag.monsterTagList and table.concat(tag.monsterTagList, "/") or tag.monsterTag)
 				else
 					desc = self:FormatModName(tag.type)
 				end
@@ -493,7 +511,7 @@ function CalcBreakdownClass:AddModSection(sectionData, modList)
 end
 
 function CalcBreakdownClass:FormatModName(modName)
-	return modName:gsub("([%l%d]:?)(%u)","%1 %2"):gsub("(%l)(%d)","%1 %2")
+	return modName:gsub("([%l%d]:?)(%u)", "%1 %2"):gsub("(%l)(%d)", "%1 %2")
 end
 
 function CalcBreakdownClass:FormatVarNameOrList(var, varList)
@@ -501,7 +519,7 @@ function CalcBreakdownClass:FormatVarNameOrList(var, varList)
 end
 
 function CalcBreakdownClass:FormatModBase(mod, base)
-	return mod.type == "BASE" and string.format("%+g", math.abs(base)) or math.abs(base).."%"
+	return mod.type == "BASE" and string.format("%+g", math.abs(base)) or math.abs(base) .. "%"
 end
 
 function CalcBreakdownClass:FormatModValue(value, modType)
@@ -509,23 +527,23 @@ function CalcBreakdownClass:FormatModValue(value, modType)
 		return string.format("%+g base", value)
 	elseif modType == "INC" then
 		if value >= 0 then
-			return value.."% increased"
+			return value .. "% increased"
 		else
-			return -value.."% reduced"
+			return -value .. "% reduced"
 		end
 	elseif modType == "MORE" then
 		if value >= 0 then
-			return value.."% more"
+			return value .. "% more"
 		else
-			return -value.."% less"
+			return -value .. "% less"
 		end
 	elseif modType == "OVERRIDE" then
-		return "Override: "..value
+		return "Override: " .. value
 	elseif modType == "FLAG" then
 		return value and "True" or "False"
 	elseif modType == "LIST" then
 		if value.mod then
-			return "Modifier: "..self:FormatModName(value.mod.name)
+			return "Modifier: " .. self:FormatModName(value.mod.name)
 		else
 			return "?"
 		end
@@ -538,7 +556,7 @@ function CalcBreakdownClass:DrawBreakdownTable(viewPort, x, y, section)
 	local cursorX, cursorY = GetCursorPos()
 	if section.label then
 		-- Draw table label if able
-		DrawString(x + 2, y, "LEFT", 16, "VAR", "^7"..section.label..":")
+		DrawString(x + 2, y, "LEFT", 16, "VAR", "^7" .. section.label .. ":")
 		y = y + 16
 	end
 	local colX = x + 4
@@ -549,7 +567,8 @@ function CalcBreakdownClass:DrawBreakdownTable(viewPort, x, y, section)
 			if index > 1 then
 				-- Skip the separator for the first column
 				SetDrawColor(0.5, 0.5, 0.5)
-				DrawImage(nil, colX - 2, y, 1, section.height - (section.label and 16 or 0) - (section.footer and 12 or 0))
+				DrawImage(nil, colX - 2, y, 1,
+					section.height - (section.label and 16 or 0) - (section.footer and 12 or 0))
 			end
 			SetDrawColor(1, 1, 1)
 			DrawString(colX, y + 2, "LEFT", 16, "VAR", col.label)
@@ -568,14 +587,15 @@ function CalcBreakdownClass:DrawBreakdownTable(viewPort, x, y, section)
 				local _, notes = string.gsub(row[col.key], " to ", " ") -- counts " to " in the string
 				local _, paren = string.gsub(row[col.key], "%b()", " ") -- counts parenthesis in the string
 				if (alpha == 0 or notes > 0 or paren > 0) and col.right then
-					DrawString(col.x + col.width - 4, rowY + 1, "RIGHT_X", 12, "VAR", "^7"..formatNumSep(tostring(row[col.key])))
+					DrawString(col.x + col.width - 4, rowY + 1, "RIGHT_X", 12, "VAR",
+						"^7" .. formatNumSep(tostring(row[col.key])))
 				elseif (alpha == 0 or notes > 0 or paren > 0) then
-					DrawString(col.x, rowY + 1, "LEFT", 12, "VAR", "^7"..formatNumSep(tostring(row[col.key])))
+					DrawString(col.x, rowY + 1, "LEFT", 12, "VAR", "^7" .. formatNumSep(tostring(row[col.key])))
 				else
-					DrawString(col.x, rowY + 1, "LEFT", 12, "VAR", "^7"..tostring(row[col.key]))
+					DrawString(col.x, rowY + 1, "LEFT", 12, "VAR", "^7" .. tostring(row[col.key]))
 				end
-				local ttFunc = row[col.key.."Tooltip"]
-				local ttNode = row[col.key.."Node"]
+				local ttFunc = row[col.key .. "Tooltip"]
+				local ttNode = row[col.key .. "Node"]
 				if (ttFunc or ttNode) and cursorY >= viewPort.y + 2 and cursorY < viewPort.y + viewPort.height - 2 and cursorX >= col.x and cursorY >= rowY and cursorX < col.x + col.width and cursorY < rowY + 14 then
 					-- Mouse is over the cell, draw highlighting lines and show the tooltip/node location
 					SetDrawLayer(nil, 15)
@@ -600,7 +620,7 @@ function CalcBreakdownClass:DrawBreakdownTable(viewPort, x, y, section)
 						viewer.zoomX = -ttNode.x / scale
 						viewer.zoomY = -ttNode.y / scale
 						SetViewport(viewerX + 2, viewerY + 2, 300, 300)
-						viewer:Draw(self.calcsTab.build, { x = 0, y = 0, width = 300, height = 300 }, { })
+						viewer:Draw(self.calcsTab.build, { x = 0, y = 0, width = 300, height = 300 }, {})
 						SetDrawLayer(nil, 30)
 						SetDrawColor(1, 0, 0)
 						DrawImage(viewer.highlightRing, 135, 135, 30, 30)
@@ -614,7 +634,7 @@ function CalcBreakdownClass:DrawBreakdownTable(viewPort, x, y, section)
 	end
 	if section.footer then
 		-- Draw table footer if able
-		DrawString(x + 2, rowY, "LEFT", 12, "VAR", "^7"..section.footer)
+		DrawString(x + 2, rowY, "LEFT", 12, "VAR", "^7" .. section.footer)
 	end
 end
 

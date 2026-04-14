@@ -12,7 +12,7 @@ SetWindowTitle(APP_NAME)
 ConExecute("set vid_mode 8")
 ConExecute("set vid_resizable 3")
 
-launch = { }
+launch = {}
 SetMainObject(launch)
 
 function launch:OnInit()
@@ -22,7 +22,7 @@ function launch:OnInit()
 	self.versionBranch = "?"
 	self.versionPlatform = "?"
 	self.lastUpdateCheck = GetTime()
-	self.subScripts = { }
+	self.subScripts = {}
 	self.startTime = startTime
 	local firstRunFile = io.open("first.run", "r")
 	if firstRunFile then
@@ -124,10 +124,10 @@ function launch:OnFrame()
 		SetDrawColor(0, 0, 0, 0.75)
 		DrawImage(nil, 0, 0, screenW, screenH)
 		SetDrawColor(1, 1, 1)
-		DrawString(0, screenH/2, "CENTER", 24, "FIXED", self.doRestart)
+		DrawString(0, screenH / 2, "CENTER", 24, "FIXED", self.doRestart)
 		Restart()
 	end
-	if not self.devMode and (GetTime() - self.lastUpdateCheck) > 1000*60*60*12 then
+	if not self.devMode and (GetTime() - self.lastUpdateCheck) > 1000 * 60 * 60 * 12 then
 		-- Do an update check every 12 hours if the user keeps the program open
 		self:CheckForUpdate(true)
 	end
@@ -236,17 +236,14 @@ end
 
 function launch:RegisterSubScript(id, callback)
 	if id then
-		self.subScripts[id] = {
-			type = "CUSTOM",
-			callback = callback,
-		}
+		self.subScripts[id] = { type = "CUSTOM", callback = callback, }
 	end
 end
 
 ---Download the given page in the background, and calls the provided callback function when done:
 ---@param url string
 ---@param callback fun(response:table, errMsg:string) @ response = { header, body }
----@param params table @ params = { header, body }
+---@param params? table @ params = { header, body }
 function launch:DownloadPage(url, callback, params)
 	params = params or {}
 	local script = [[
@@ -264,7 +261,7 @@ function launch:DownloadPage(url, callback, params)
 			easy:setopt(curl.OPT_HTTPHEADER, header)
 		end
 		easy:setopt_url(url)
-		easy:setopt(curl.OPT_USERAGENT, "Last Epoch Planner/]]..self.versionNumber..[[")
+		easy:setopt(curl.OPT_USERAGENT, "Last Epoch Planner/]] .. self.versionNumber .. [[")
 		easy:setopt(curl.OPT_ACCEPT_ENCODING, "")
 		if requestBody then
 			easy:setopt(curl.OPT_POST, true)
@@ -298,12 +295,13 @@ function launch:DownloadPage(url, callback, params)
 		ConPrintf("Download complete. Status: %s", errMsg or "OK")
 		return responseHeader, responseBody, errMsg
 	]]
-	local id = LaunchSubScript(script, "", "ConPrintf", url, params.header, params.body, self.connectionProtocol, self.proxyURL)
+	local id = LaunchSubScript(script, "", "ConPrintf", url, params.header, params.body, self.connectionProtocol,
+		self.proxyURL)
 	if id then
 		self.subScripts[id] = {
 			type = "DOWNLOAD",
-			callback = function(responseHeader, responseBody, errMsg)
-				callback({header=responseHeader, body=responseBody}, errMsg)
+			callback = function (responseHeader, responseBody, errMsg)
+				callback({ header = responseHeader, body = responseBody }, errMsg)
 			end
 		}
 	end
@@ -313,7 +311,7 @@ function launch:ApplyUpdate(mode)
 	if mode == "basic" then
 		-- Need to revert to the basic environment to fully apply the update
 		LoadModule("UpdateApply", "Update/opFile.txt")
-		SpawnProcess(GetRuntimePath()..'/Update', 'UpdateApply.lua Update/opFileRuntime.txt')
+		SpawnProcess(GetRuntimePath() .. '/Update', 'UpdateApply.lua Update/opFileRuntime.txt')
 		Exit()
 	elseif mode == "normal" then
 		-- Update can be applied while normal environment is running
@@ -332,11 +330,10 @@ function launch:CheckForUpdate(inBackground)
 	self.updateProgress = "Checking..."
 	self.lastUpdateCheck = GetTime()
 	local update = io.open("UpdateCheck.lua", "r")
-	local id = LaunchSubScript(update:read("*a"), "GetScriptPath,GetRuntimePath,GetWorkDir,MakeDir", "ConPrintf,UpdateProgress", self.connectionProtocol, self.proxyURL)
+	local id = LaunchSubScript(update:read("*a"), "GetScriptPath,GetRuntimePath,GetWorkDir,MakeDir",
+		"ConPrintf,UpdateProgress", self.connectionProtocol, self.proxyURL)
 	if id then
-		self.subScripts[id] = {
-			type = "UPDATE"
-		}
+		self.subScripts[id] = { type = "UPDATE" }
 		self.updateCheckRunning = true
 	end
 	update:close()
@@ -344,8 +341,8 @@ end
 
 function launch:ShowPrompt(r, g, b, str, func)
 	self.promptMsg = str
-	self.promptCol = {r, g, b}
-	self.promptFunc = func or function(key)
+	self.promptCol = { r, g, b }
+	self.promptFunc = func or function (key)
 		if key == "RETURN" or key == "ESCAPE" then
 			return true
 		elseif key == "F5" then
@@ -357,10 +354,13 @@ end
 
 function launch:ShowErrMsg(fmt, ...)
 	if not self.promptMsg then
-		local version = self.versionNumber and 
-			"^8v"..self.versionNumber..(self.versionBranch and " "..self.versionBranch or "")
+		local version = self.versionNumber and
+			"^8v" .. self.versionNumber .. (self.versionBranch and " " .. self.versionBranch or "")
 			or ""
-		self:ShowPrompt(1, 0, 0, "^1Error:\n\n^0"..string.format(fmt, ...).."\n"..version.."\n^0Press Enter/Escape to dismiss, or F5 to restart the application.")
+		self:ShowPrompt(1, 0, 0,
+			"^1Error:\n\n^0" ..
+			string.format(fmt, ...) ..
+			"\n" .. version .. "\n^0Press Enter/Escape to dismiss, or F5 to restart the application.")
 	end
 end
 
@@ -380,7 +380,7 @@ function launch:DrawPopup(r, g, b, fmt, ...)
 	DrawImage(nil, 0, 0, screenW, screenH)
 	local txt = string.format(fmt, ...)
 	local w = DrawStringWidth(20, "VAR", txt) + 20
-	local h = (#txt:gsub("[^\n]","") + 2) * 20
+	local h = (#txt:gsub("[^\n]", "") + 2) * 20
 	local ox = (screenW - w) / 2
 	local oy = (screenH - h) / 2
 	SetDrawColor(1, 1, 1)

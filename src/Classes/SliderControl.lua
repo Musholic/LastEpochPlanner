@@ -7,14 +7,16 @@ local m_min = math.min
 local m_max = math.max
 local m_ceil = math.ceil
 
-local SliderClass = newClass("SliderControl", "Control", "TooltipHost", function(self, anchor, x, y, width, height, changeFunc, scrollWheelSpeedTbl)
-	self.Control(anchor, x, y, width, height)
-	self.TooltipHost()
-	self.knobSize = height - 2
-	self.val = 0
-	self.changeFunc = changeFunc
-	self.scrollWheelSpeedTbl = scrollWheelSpeedTbl or { ["SHIFT"] = 16 / 256, ["CTRL"] = 0.5 / 256, ["DEFAULT"] = 4 / 256 }
-end)
+local SliderClass = newClass("SliderControl", "Control", "TooltipHost",
+	function (self, anchor, x, y, width, height, changeFunc, scrollWheelSpeedTbl)
+		self.Control(anchor, x, y, width, height)
+		self.TooltipHost()
+		self.knobSize = height - 2
+		self.val = 0
+		self.changeFunc = changeFunc
+		self.scrollWheelSpeedTbl = scrollWheelSpeedTbl or
+			{ ["SHIFT"] = 16 / 256, ["CTRL"] = 0.5 / 256, ["DEFAULT"] = 4 / 256 }
+	end)
 
 function SliderClass:IsMouseOver()
 	if not self:IsShown() then
@@ -98,7 +100,7 @@ function SliderClass:Draw(viewPort)
 		if self.divCount then
 			SetDrawColor(0.33, 0.33, 0.33)
 			for d = 0, knobTravel + 0.5, knobTravel / self.divCount do
-				DrawImage(nil, x + self.knobSize/2 + d, y + 1, 2, height - 2)
+				DrawImage(nil, x + self.knobSize / 2 + d, y + 1, 2, height - 2)
 			end
 		end
 		if self.dragging or mOverComp == "KNOB" then
@@ -108,9 +110,11 @@ function SliderClass:Draw(viewPort)
 		end
 		local knobX = self:GetKnobXForVal()
 		if self.divCount then
-			local arrowHeight = self.knobSize/2
-			main:DrawArrow(x + 1 + knobX + self.knobSize/2, y + height/2 - arrowHeight/2, self.knobSize, arrowHeight, "UP")
-			main:DrawArrow(x + 1 + knobX + self.knobSize/2, y + height/2 + arrowHeight/2, self.knobSize, arrowHeight, "DOWN")
+			local arrowHeight = self.knobSize / 2
+			main:DrawArrow(x + 1 + knobX + self.knobSize / 2, y + height / 2 - arrowHeight / 2, self.knobSize,
+				arrowHeight, "UP")
+			main:DrawArrow(x + 1 + knobX + self.knobSize / 2, y + height / 2 + arrowHeight / 2, self.knobSize,
+				arrowHeight, "DOWN")
 		else
 			DrawImage(nil, x + 2 + knobX, y + 2, self.knobSize - 2, self.knobSize - 2)
 		end
@@ -144,7 +148,7 @@ function SliderClass:OnKeyDown(key)
 			if mOverComp == "SLIDE" then
 				local x, y = self:GetPos()
 				self:SetValFromKnobX(cursorX - x - 1 - self.knobSize / 2)
-			end	
+			end
 			self.dragKnobX = self:GetKnobXForVal()
 		end
 	end
@@ -161,7 +165,7 @@ function SliderClass:OnKeyUp(key)
 			local cursorX, cursorY = GetCursorPos()
 			self:SetValFromKnobX((cursorX - self.dragCX) + self.dragKnobX)
 		end
-	elseif (not main.invertSliderScrollDirection and key == "WHEELDOWN") or (main.invertSliderScrollDirection and  key == "WHEELUP") or key == "DOWN" or key == "LEFT" then
+	elseif (not main.invertSliderScrollDirection and key == "WHEELDOWN") or (main.invertSliderScrollDirection and key == "WHEELUP") or key == "DOWN" or key == "LEFT" then
 		if IsKeyDown("SHIFT") then
 			self:SetVal(self.val - self.scrollWheelSpeedTbl["SHIFT"])
 		elseif IsKeyDown("CTRL") then

@@ -12,7 +12,7 @@ if not opFile then
 	print("No operations list present.\n")
 	return
 end
-local lines = { }
+local lines = {}
 for line in opFile:lines() do
 	table.insert(lines, line)
 end
@@ -23,9 +23,9 @@ for _, line in ipairs(lines) do
 	if op == "move" then
 		local src, dst = args:match('"(.*)" "(.*)"')
 		dst = dst:gsub("{space}", " ")
-		print("Updating '"..dst.."'")
+		print("Updating '" .. dst .. "'")
 		local srcFile = io.open(src, "rb")
-		assert(srcFile, "couldn't open "..src)
+		assert(srcFile, "couldn't open " .. src)
 		local dstFile
 		while not dstFile do
 			dstFile = io.open(dst, "w+b")
@@ -38,7 +38,7 @@ for _, line in ipairs(lines) do
 		os.remove(src)
 	elseif op == "delete" then
 		local file = args:match('"(.*)"')
-		print("Deleting '"..file.."'")
+		print("Deleting '" .. file .. "'")
 		os.remove(file)
 	elseif op == "start" then
 		local target = args:match('"(.*)"')

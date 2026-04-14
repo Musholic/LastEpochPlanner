@@ -12,7 +12,7 @@ local m_floor = math.floor
 
 local dmgTypeList = DamageTypes
 
-local ItemClass = newClass("Item", function(self, raw, rarity, highQuality)
+local ItemClass = newClass("Item", function (self, raw, rarity, highQuality)
 	if raw then
 		self:ParseRaw(sanitiseText(raw), rarity, highQuality)
 	end
@@ -36,11 +36,11 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.base = nil
 	self.rarity = rarity or "UNIQUE"
 	self.rarityType = nil
-	self.rawLines = { }
+	self.rawLines = {}
 	self.corrupted = false
 	-- Find non-blank lines and trim whitespace
 	for line in raw:gmatch("%s*([^\n]*%S)") do
-	 	t_insert(self.rawLines, line)
+		t_insert(self.rawLines, line)
 	end
 	local mode = rarity and "GAME" or "WIKI"
 	local l = 1
@@ -67,7 +67,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			elseif rarity == "LEGENDARY" then
 				self.rarityType = "UNIQUE"
 				self.rarity = "LEGENDARY"
-			-- A unique idol serializes as Rarity: UNIQUE; rarityType is fixed later by idol auto-detection
+				-- A unique idol serializes as Rarity: UNIQUE; rarityType is fixed later by idol auto-detection
 			else
 				self.rarityType = "UNIQUE"
 				self.rarity = "UNIQUE"
@@ -107,16 +107,16 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 		end
 	end
 	self.checkSection = false
-	self.implicitModLines = { }
-	self.explicitModLines = { }
+	self.implicitModLines = {}
+	self.explicitModLines = {}
 	local implicitLines = 0
 	self.variantList = nil
-	self.affixes = { }
-	for i = 1,6 do
-		self.affixes[i] = { }
+	self.affixes = {}
+	for i = 1, 6 do
+		self.affixes[i] = {}
 	end
-	self.requirements = { }
-	self.baseLines = { }
+	self.requirements = {}
+	self.baseLines = {}
 	local importedLevelReq
 	local gameModeStage = "FINDIMPLICIT"
 	local foundExplicit, foundImplicit
@@ -152,14 +152,11 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 				specName, specVal = line:match("^(Requires %a+) (.+)$")
 			end
 			local function parseAffix(specVal, attribute)
-    			local range, affix = specVal:match("{range:([%d.]+)}(.+)")
-    			range = range or main.defaultItemAffixQuality
-                local parsedAffix = {
-    				modId = affix or specVal,
-    				range = tonumber(range),
-                }
-                parsedAffix[attribute] = true
-                return parsedAffix
+				local range, affix = specVal:match("{range:([%d.]+)}(.+)")
+				range = range or main.defaultItemAffixQuality
+				local parsedAffix = { modId = affix or specVal, range = tonumber(range), }
+				parsedAffix[attribute] = true
+				return parsedAffix
 			end
 			if specName then
 				if specName == "Unique ID" then
@@ -199,7 +196,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 			end
 			if not specName or foundExplicit or foundImplicit then
 				local modLine = { modTags = {} }
-				line = line:gsub("{(%a*):?([^}]*)}", function(k,val)
+				line = line:gsub("{(%a*):?([^}]*)}", function (k, val)
 					if k == "range" then
 						modLine.range = tonumber(val)
 					elseif k == "scalar" then
@@ -213,7 +210,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					return ""
 				end)
 
-				line = line:gsub(" %((%l+)%)", function(k)
+				line = line:gsub(" %((%l+)%)", function (k)
 					if lineFlags[k] then
 						modLine[k] = true
 					end
@@ -226,13 +223,13 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					if data.itemBases[self.name] then
 						baseName = self.name
 					else
-						local bestMatch = {length = -1}
+						local bestMatch = { length = -1 }
 						-- Partial match (magic items with affixes)
 						for itemBaseName, baseData in pairs(data.itemBases) do
 							local s, e = self.name:find(itemBaseName, 1, true)
-							if s and e and (e-s > bestMatch.length) then
+							if s and e and (e - s > bestMatch.length) then
 								bestMatch.match = itemBaseName
-								bestMatch.length = e-s
+								bestMatch.length = e - s
 								bestMatch.e = e
 								bestMatch.s = s
 							end
@@ -243,7 +240,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 							baseName = bestMatch.match
 						end
 					end
-					self.name = self.name:gsub(" %(.+%)","")
+					self.name = self.name:gsub(" %(.+%)", "")
 				end
 				if not baseName then
 					baseName = line
@@ -257,9 +254,9 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.title = self.name
 					self.type = base.type
 					self.base = base
-					self.compatibleAffixes = (self.base.subType and data.itemMods[self.base.type..self.base.subType])
-							or data.itemMods[self.base.type]
-							or data.itemMods.Item
+					self.compatibleAffixes = (self.base.subType and data.itemMods[self.base.type .. self.base.subType])
+						or data.itemMods[self.base.type]
+						or data.itemMods.Item
 					-- Base lines don't need mod parsing, skip it
 					goto continue
 				end
@@ -299,14 +296,14 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					end
 				elseif mode == "GAME" then
 					if gameModeStage == "IMPLICIT" or gameModeStage == "EXPLICIT" or (gameModeStage == "FINDIMPLICIT" and (not data.itemBases[line]) and not (self.name == line) and not (self.base and (line == self.base.type or self.base.subType and line == self.base.subType .. " " .. self.base.type))) then
-						modLine.modList = { }
+						modLine.modList = {}
 						modLine.extra = line
 						t_insert(modLines, modLine)
 					elseif gameModeStage == "FINDEXPLICIT" then
 						gameModeStage = "DONE"
 					end
 				elseif foundExplicit then
-					modLine.modList = { }
+					modLine.modList = {}
 					modLine.extra = line
 					t_insert(modLines, modLine)
 				end
@@ -373,7 +370,7 @@ function ItemClass:UpdateDisplayRarity()
 end
 
 function ItemClass:BuildRaw()
-	local rawLines = { }
+	local rawLines = {}
 	t_insert(rawLines, "Rarity: " .. (self.rarity or "BASIC"))
 	if self.title then
 		t_insert(rawLines, self.title)
@@ -384,7 +381,7 @@ function ItemClass:BuildRaw()
 	if self.uniqueID then
 		t_insert(rawLines, "Unique ID: " .. self.uniqueID)
 	end
-	for i, affix in ipairs(self.affixes or { }) do
+	for i, affix in ipairs(self.affixes or {}) do
 		if affix.modId then
 			local line = ""
 			if affix.prefix then
@@ -397,7 +394,7 @@ function ItemClass:BuildRaw()
 				line = "Corrupted: "
 			end
 			if affix.range then
-				line = line .. "{range:" .. round(affix.range,3) .. "}"
+				line = line .. "{range:" .. round(affix.range, 3) .. "}"
 			end
 			line = line .. affix.modId
 			t_insert(rawLines, line)
@@ -538,7 +535,7 @@ local function calcLocal(modList, name, type, flags)
 		if mod.name == name and mod.type == type and mod.flags == flags and mod.keywordFlags == 0 and (not mod[1] or mod[1].type == "InSlot") then
 			if type == "FLAG" then
 				result = result or mod.value
-			-- convert MORE to times multiplier, e.g. 50% more = 1.5x, result = 1.5
+				-- convert MORE to times multiplier, e.g. 50% more = 1.5x, result = 1.5
 			elseif type == "MORE" then
 				result = result * ((100 + mod.value) / 100)
 			else
@@ -572,8 +569,8 @@ function ItemClass:BuildModListForSlotNum(baseList, slotNum)
 			for k, v in pairs(tag) do
 				if type(v) == "string" then
 					tag[k] = v:gsub("{SlotName}", slotName)
-							  :gsub("{Hand}", (slotNum == 1) and "MainHand" or "OffHand")
-							  :gsub("{OtherSlotNum}", slotNum == 1 and "2" or "1")
+						:gsub("{Hand}", (slotNum == 1) and "MainHand" or "OffHand")
+						:gsub("{OtherSlotNum}", slotNum == 1 and "2" or "1")
 				end
 			end
 		end
@@ -584,10 +581,10 @@ function ItemClass:BuildModListForSlotNum(baseList, slotNum)
 	end
 	if #self.sockets > 0 then
 		local multiName = {
-			R = "Multiplier:RedSocketIn"..slotName,
-			G = "Multiplier:GreenSocketIn"..slotName,
-			B = "Multiplier:BlueSocketIn"..slotName,
-			W = "Multiplier:WhiteSocketIn"..slotName,
+			R = "Multiplier:RedSocketIn" .. slotName,
+			G = "Multiplier:GreenSocketIn" .. slotName,
+			B = "Multiplier:BlueSocketIn" .. slotName,
+			W = "Multiplier:WhiteSocketIn" .. slotName,
 		}
 		for _, socket in ipairs(self.sockets) do
 			if multiName[socket.color] then
@@ -596,13 +593,15 @@ function ItemClass:BuildModListForSlotNum(baseList, slotNum)
 		end
 	end
 	if self.base.weapon then
-		local weaponData = { }
+		local weaponData = {}
 		self.weaponData[slotNum] = weaponData
 		weaponData.type = self.base.type
 		weaponData.name = self.name
 		weaponData.AttackSpeedInc = calcLocal(modList, "Speed", "INC", ModFlag.Attack)
 		weaponData.AttackRate = round(self.base.weapon.AttackRateBase * (1 + weaponData.AttackSpeedInc / 100), 2)
-		weaponData.rangeBonus = calcLocal(modList, "WeaponRange", "BASE", 0) + 10 * calcLocal(modList, "WeaponRangeMetre", "BASE", 0) + m_floor(self.quality / 10 * calcLocal(modList, "AlternateQualityLocalWeaponRangePer10Quality", "BASE", 0))
+		weaponData.rangeBonus = calcLocal(modList, "WeaponRange", "BASE", 0) +
+			10 * calcLocal(modList, "WeaponRangeMetre", "BASE", 0) +
+			m_floor(self.quality / 10 * calcLocal(modList, "AlternateQualityLocalWeaponRangePer10Quality", "BASE", 0))
 		weaponData.range = self.base.weapon.Range + weaponData.rangeBonus
 	end
 	return { unpack(modList) }
@@ -615,11 +614,11 @@ function ItemClass:BuildModList()
 	end
 	local baseList = new("ModList")
 	if self.base.weapon then
-		self.weaponData = { }
+		self.weaponData = {}
 	end
 	self.baseModList = baseList
-	self.rangeLineList = { }
-	self.modSource = "Item:"..(self.id or -1)..":"..self.name
+	self.rangeLineList = {}
+	self.modSource = "Item:" .. (self.id or -1) .. ":" .. self.name
 	local function processModLine(modLine)
 		if modLine.range ~= nil and itemLib.hasRange(modLine.line) then
 			t_insert(self.rangeLineList, modLine)
@@ -637,7 +636,7 @@ function ItemClass:BuildModList()
 	for _, modLine in ipairs(self.explicitModLines) do
 		processModLine(modLine)
 	end
-	self.grantedSkills = { }
+	self.grantedSkills = {}
 	for _, skill in ipairs(baseList:List(nil, "ExtraSkill")) do
 		if skill.name ~= "Unknown" then
 			t_insert(self.grantedSkills, {

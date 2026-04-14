@@ -1,10 +1,10 @@
 services:
   busted-tests:
     #build: .
-    image: ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
+    image: ghcr.io/musholic/lastepochplanner-tests:latest
     environment:
       HOME: /tmp
-    container_name: pathofbuilding-tests
+    container_name: lastepochplanner-tests
     command: busted --lua=luajit
     security_opt:
       - no-new-privileges:true

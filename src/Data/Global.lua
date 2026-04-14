@@ -31,7 +31,7 @@ colorCodes = {
 	CHAOS = "^x2dbf9c",
 	POSITIVE = "^x33FF77",
 	NEGATIVE = "^xDD0022",
-	HIGHLIGHT ="^xFF0000",
+	HIGHLIGHT = "^xFF0000",
 	OFFENCE = "^xE07030",
 	DEFENCE = "^x8080E0",
 	SCION = "^xFFF0F0",
@@ -80,7 +80,7 @@ colorCodes.PHYS = colorCodes.NORMAL
 
 defaultColorCodes = copyTable(colorCodes)
 function updateColorCode(code, color)
- 	if colorCodes[code] then
+	if colorCodes[code] then
 		colorCodes[code] = color:gsub("^0", "^")
 		if code == "HIGHLIGHT" then
 			rgbColor = hexToRGB(color)
@@ -90,44 +90,36 @@ end
 
 function hexToRGB(hex)
 	hex = hex:gsub("0x", "") -- Remove "0x" prefix
-	hex = hex:gsub("#","") -- Remove '#' if present
+	hex = hex:gsub("#", "") -- Remove '#' if present
 	if #hex ~= 6 then
 		return nil
 	end
 	local r = (tonumber(hex:sub(1, 2), 16)) / 255
 	local g = (tonumber(hex:sub(3, 4), 16)) / 255
 	local b = (tonumber(hex:sub(5, 6), 16)) / 255
-	return {r, g, b}
+	return { r, g, b }
 end
 
-DamageTypes = {
-	"Fire",
-	"Lightning",
-	"Cold",
-	"Physical",
-	"Poison",
-	"Necrotic",
-	"Void"
-}
+DamageTypes = { "Fire", "Lightning", "Cold", "Physical", "Poison", "Necrotic", "Void" }
 
-Attributes = {"Vit","Str","Dex","Int","Att"}
-LongAttributes = {"Vitality","Strength","Dexterity","Intelligence","Attunement"}
+Attributes = { "Vit", "Str", "Dex", "Int", "Att" }
+LongAttributes = { "Vitality", "Strength", "Dexterity", "Intelligence", "Attunement" }
 AttributesColored = {
-    colorCodes.VITALITY.."Vitality",
-    colorCodes.STRENGTH.."Strength",
-    colorCodes.DEXTERITY.."Dexterity",
-    colorCodes.INTELLIGENCE.."Intelligence",
-    colorCodes.ATTUNEMENT.."Attunement"
+	colorCodes.VITALITY .. "Vitality",
+	colorCodes.STRENGTH .. "Strength",
+	colorCodes.DEXTERITY .. "Dexterity",
+	colorCodes.INTELLIGENCE .. "Intelligence",
+	colorCodes.ATTUNEMENT .. "Attunement"
 }
 
 DamageTypesColored = {
-	colorCodes.FIRE.."Fire",
+	colorCodes.FIRE .. "Fire",
 	colorCodes.LIGHTNING .. "Lightning",
 	colorCodes.COLD .. "Cold",
-	colorCodes.PHYSICAL.."Physical",
-	colorCodes.POISON.."Poison",
-	colorCodes.NECROTIC.."Necrotic",
-	colorCodes.VOID.."Void"
+	colorCodes.PHYSICAL .. "Physical",
+	colorCodes.POISON .. "Poison",
+	colorCodes.NECROTIC .. "Necrotic",
+	colorCodes.VOID .. "Void"
 }
 
 DamageTypeColors = {
@@ -140,7 +132,7 @@ DamageTypeColors = {
 	colorCodes.VOID
 }
 
-DamageSourceTypes = { "Spell", "Melee", "Throwing", "Bow", "Dot"}
+DamageSourceTypes = { "Spell", "Melee", "Throwing", "Bow", "Dot" }
 DamageSourceWeapons = { "Wand", "Bow", "Axe", "Sceptre", "Staff", "Dagger", "Sword" }
 
 -- Active skill types
@@ -225,8 +217,8 @@ end
 
 GlobalCache = {
 	cachedData = { MAIN = {}, CALCS = {}, CALCULATOR = {}, CACHE = {}, },
-	deleteGroup = { },
-	excludeFullDpsList = { },
+	deleteGroup = {},
+	excludeFullDpsList = {},
 	useFullDPS = false,
 	numActiveSkillInFullDPS = 0
 }

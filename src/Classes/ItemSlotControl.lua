@@ -7,41 +7,42 @@ local pairs = pairs
 local t_insert = table.insert
 local m_min = math.min
 
-local ItemSlotClass = newClass("ItemSlotControl", "DropDownControl", function(self, anchor, x, y, itemsTab, slotName, slotLabel, nodeId)
-	self.DropDownControl(anchor, x, y, 310, 20, { }, function(index, value)
-		if self.items[index] ~= self.selItemId then
-			self:SetSelItemId(self.items[index])
-			itemsTab:PopulateSlots()
-			itemsTab:AddUndoState()
-			itemsTab.build.buildFlag = true
+local ItemSlotClass = newClass("ItemSlotControl", "DropDownControl",
+	function (self, anchor, x, y, itemsTab, slotName, slotLabel, nodeId)
+		self.DropDownControl(anchor, x, y, 310, 20, {}, function (index, value)
+			if self.items[index] ~= self.selItemId then
+				self:SetSelItemId(self.items[index])
+				itemsTab:PopulateSlots()
+				itemsTab:AddUndoState()
+				itemsTab.build.buildFlag = true
+			end
+		end)
+		self.anchor.collapse = true
+		self.enabled = function ()
+			return #self.items > 1
 		end
+		self.shown = function ()
+			return not self.inactive
+		end
+		self.itemsTab = itemsTab
+		self.items = {}
+		self.selItemId = 0
+		self.slotName = slotName
+		self.slotNum = tonumber(slotName:match("%d+$") or slotName:match("%d+"))
+		self.tooltipFunc = function (tooltip, mode, index, itemId)
+			local item = itemsTab.items[self.items[index]]
+			if main.popups[1] or mode == "OUT" or not item or (not self.dropped and itemsTab.selControl and itemsTab.selControl ~= self.controls.activate) then
+				tooltip:Clear()
+			elseif tooltip:CheckForUpdate(item, launch.devModeAlt, itemsTab.build.outputRevision) then
+				itemsTab:AddItemTooltip(tooltip, item, self)
+			end
+		end
+		self.label = slotLabel or slotName
+		self.nodeId = nodeId
 	end)
-	self.anchor.collapse = true
-	self.enabled = function()
-		return #self.items > 1
-	end
-	self.shown = function()
-		return not self.inactive
-	end
-	self.itemsTab = itemsTab
-	self.items = { }
-	self.selItemId = 0
-	self.slotName = slotName
-	self.slotNum = tonumber(slotName:match("%d+$") or slotName:match("%d+"))
-	self.tooltipFunc = function(tooltip, mode, index, itemId)
-		local item = itemsTab.items[self.items[index]]
-		if main.popups[1] or mode == "OUT" or not item or (not self.dropped and itemsTab.selControl and itemsTab.selControl ~= self.controls.activate) then
-			tooltip:Clear()
-		elseif tooltip:CheckForUpdate(item, launch.devModeAlt, itemsTab.build.outputRevision) then
-			itemsTab:AddItemTooltip(tooltip, item, self)
-		end
-	end
-	self.label = slotLabel or slotName
-	self.nodeId = nodeId
-end)
 
 function ItemSlotClass:SetSelItemId(selItemId)
-    self.itemsTab.activeItemSet[self.slotName].selItemId = selItemId
+	self.itemsTab.activeItemSet[self.slotName].selItemId = selItemId
 	self.selItemId = selItemId
 end
 
@@ -54,7 +55,7 @@ function ItemSlotClass:Populate()
 	for _, item in pairs(self.itemsTab.items) do
 		if self.itemsTab:IsItemValidForSlot(item, self.slotName) then
 			t_insert(self.items, item.id)
-			t_insert(self.list, colorCodes[item.rarity]..item.name)
+			t_insert(self.list, colorCodes[item.rarity] .. item.name)
 			if item.id == self.selItemId then
 				self.selIndex = #self.list
 			end
@@ -85,7 +86,7 @@ end
 function ItemSlotClass:Draw(viewPort)
 	local x, y = self:GetPos()
 	local width, height = self:GetSize()
-	DrawString(x - 2, y + 2, "RIGHT_X", height - 4, "VAR", "^7"..self.label..":")
+	DrawString(x - 2, y + 2, "RIGHT_X", height - 4, "VAR", "^7" .. self.label .. ":")
 	self.DropDownControl:Draw(viewPort)
 	self:DrawControls(viewPort)
 	if not main.popups[1] and self.nodeId and (self.dropped or (self:IsMouseOver() and (self.otherDragSource or not self.itemsTab.selControl))) then
@@ -106,7 +107,7 @@ function ItemSlotClass:Draw(viewPort)
 		viewer.zoomX = -node.x / scale
 		viewer.zoomY = -node.y / scale
 		SetViewport(viewerX + 2, viewerY + 2, 300, 300)
-		viewer:Draw(self.itemsTab.build, { x = 0, y = 0, width = 300, height = 300 }, { })
+		viewer:Draw(self.itemsTab.build, { x = 0, y = 0, width = 300, height = 300 }, {})
 		SetDrawLayer(nil, 30)
 		SetDrawColor(1, 1, 1, 0.2)
 		DrawImage(nil, 149, 0, 2, 300)

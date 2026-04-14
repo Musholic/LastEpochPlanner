@@ -5,34 +5,35 @@
 --
 local m_floor = math.floor
 
-local PopupDialogClass = newClass("PopupDialog", "ControlHost", "Control", function(self, width, height, title, controls, enterControl, defaultControl, escapeControl, scrollBarFunc)
-	self.ControlHost()
-	self.Control(nil, 0, 0, width, height)
-	self.x = function()
-		return m_floor((main.screenW - width) / 2)
-	end
-	self.y = function()
-		return m_floor((main.screenH - height) / 2)
-	end
-	self.title = title
-	self.controls = controls
-	self.enterControl = enterControl
-	self.escapeControl = escapeControl
-	for id, control in pairs(self.controls) do
-		if not control.anchor.point then
-			control:SetAnchor("TOP", self, "TOP")
-		elseif not control.anchor.other then
-			control.anchor.other = self
-		elseif type(control.anchor.other) ~= "table" then
-			control.anchor.other = self.controls[control.anchor.other]
+local PopupDialogClass = newClass("PopupDialog", "ControlHost", "Control",
+	function (self, width, height, title, controls, enterControl, defaultControl, escapeControl, scrollBarFunc)
+		self.ControlHost()
+		self.Control(nil, 0, 0, width, height)
+		self.x = function ()
+			return m_floor((main.screenW - width) / 2)
 		end
-	end
-	if defaultControl then
-		self:SelectControl(self.controls[defaultControl])
-	end
-	-- allow scrollbar functionality inside of popups
-	self.scrollBarFunc = scrollBarFunc
-end)
+		self.y = function ()
+			return m_floor((main.screenH - height) / 2)
+		end
+		self.title = title
+		self.controls = controls
+		self.enterControl = enterControl
+		self.escapeControl = escapeControl
+		for id, control in pairs(self.controls) do
+			if not control.anchor.point then
+				control:SetAnchor("TOP", self, "TOP")
+			elseif not control.anchor.other then
+				control.anchor.other = self
+			elseif type(control.anchor.other) ~= "table" then
+				control.anchor.other = self.controls[control.anchor.other]
+			end
+		end
+		if defaultControl then
+			self:SelectControl(self.controls[defaultControl])
+		end
+		-- allow scrollbar functionality inside of popups
+		self.scrollBarFunc = scrollBarFunc
+	end)
 
 function PopupDialogClass:Draw(viewPort)
 	local x, y = self:GetPos()

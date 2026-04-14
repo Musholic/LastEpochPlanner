@@ -5,54 +5,57 @@
 --
 local t_insert = table.insert
 
-local CalcSectionClass = newClass("CalcSectionControl", "Control", "ControlHost", function(self, calcsTab, width, id, group, colour, subSection, updateFunc)
-	self.Control(nil, 0, 0, width, 0)
-	self.ControlHost()
-	self.calcsTab = calcsTab
-	self.id = id
-	self.group = group
-	self.colour = colour
-	self.width = width
-	self.subSection = subSection
-	self.flag = subSection[1].data.flag
-	self.notFlag = subSection[1].data.notFlag
-	self.updateFunc = updateFunc
+local CalcSectionClass = newClass("CalcSectionControl", "Control", "ControlHost",
+	function (self, calcsTab, width, id, group, colour, subSection, updateFunc)
+		self.Control(nil, 0, 0, width, 0)
+		self.ControlHost()
+		self.calcsTab = calcsTab
+		self.id = id
+		self.group = group
+		self.colour = colour
+		self.width = width
+		self.subSection = subSection
+		self.flag = subSection[1].data.flag
+		self.notFlag = subSection[1].data.notFlag
+		self.updateFunc = updateFunc
 
-	for i, subSec in ipairs(self.subSection) do
-		subSec.id = subSec.label:gsub("%W", "")
+		for i, subSec in ipairs(self.subSection) do
+			subSec.id = subSec.label:gsub("%W", "")
 
-		for _, data in ipairs(subSec.data) do
-			for _, colData in ipairs(data) do
-				if colData.control then
-					-- Add control to the section's control list and set show/hide function
-					self.controls[colData.controlName] = colData.control
-					colData.control.shown = function()
-						return self.enabled and not self.subSection[1].collapsed and not subSec.collapsed and data.enabled
+			for _, data in ipairs(subSec.data) do
+				for _, colData in ipairs(data) do
+					if colData.control then
+						-- Add control to the section's control list and set show/hide function
+						self.controls[colData.controlName] = colData.control
+						colData.control.shown = function ()
+							return self.enabled and not self.subSection[1].collapsed and not subSec.collapsed and
+								data.enabled
+						end
 					end
 				end
 			end
-		end
-		subSec.collapsed = subSec.defaultCollapsed
-		self.controls["toggle"..i] = new("ButtonControl", {"TOPRIGHT",self,"TOPRIGHT"}, -3, -13 + (16 * i), 16, 16, function()
-			return subSec.collapsed and "+" or "-"
-		end, function()
-			subSec.collapsed = not subSec.collapsed
-			self.calcsTab.modFlag = true
-		end)
-		if i == 1 then
-			self.controls["toggle"..i].shown = function()
-				return self.enabled
+			subSec.collapsed = subSec.defaultCollapsed
+			self.controls["toggle" .. i] = new("ButtonControl", { "TOPRIGHT", self, "TOPRIGHT" }, -3, -13 + (16 * i), 16,
+				16, function ()
+					return subSec.collapsed and "+" or "-"
+				end, function ()
+					subSec.collapsed = not subSec.collapsed
+					self.calcsTab.modFlag = true
+				end)
+			if i == 1 then
+				self.controls["toggle" .. i].shown = function ()
+					return self.enabled
+				end
+			else
+				self.controls["toggle" .. i].shown = function ()
+					return self.enabled and not self.subSection[1].collapsed
+				end
 			end
-		else
-			self.controls["toggle"..i].shown = function()
-				return self.enabled and not self.subSection[1].collapsed
-			end
 		end
-	end
-	self.shown = function()
-		return self.enabled
-	end
-end)
+		self.shown = function ()
+			return self.enabled
+		end
+	end)
 
 function CalcSectionClass:IsMouseOver()
 	if not self:IsShown() then
@@ -70,13 +73,13 @@ function CalcSectionClass:IsMouseOver()
 				if data.enabled then
 					for _, colData in ipairs(data) do
 						if colData.control then
-						if colData.control:IsMouseOver() then
+							if colData.control:IsMouseOver() then
+								return mOver, colData
+							end
+						elseif cursorX >= colData.x and cursorY >= colData.y and cursorX < colData.x + colData.width and cursorY < colData.y + colData.height then
 							return mOver, colData
 						end
-					elseif cursorX >= colData.x and cursorY >= colData.y and cursorX < colData.x + colData.width and cursorY < colData.y + colData.height then
-						return mOver, colData
 					end
-				end
 				end
 			end
 		end
@@ -96,7 +99,7 @@ function CalcSectionClass:UpdateSize()
 	self.enabled = false
 	local yOffset = 0
 	for i, subSec in ipairs(self.subSection) do
-		self.controls["toggle"..i].y = yOffset + 3
+		self.controls["toggle" .. i].y = yOffset + 3
 		local tempHeight = 0
 		yOffset = yOffset + 22
 		for _, rowData in ipairs(subSec.data) do
@@ -147,11 +150,11 @@ function CalcSectionClass:UpdatePos()
 					-- Update the real coordinates of this cell
 					colData.x = x + colData.xOffset
 					colData.y = y + colData.yOffset
-				if colData.control then
-					colData.control.x = colData.x + 4
-					colData.control.y = colData.y + 9 - colData.control.height/2
+					if colData.control then
+						colData.control.x = colData.x + 4
+						colData.control.y = colData.y + 9 - colData.control.height / 2
+					end
 				end
-			end
 			end
 		end
 	end
@@ -162,7 +165,7 @@ function CalcSectionClass:FormatVal(val, p)
 end
 
 function CalcSectionClass:FormatStr(str, actor, colData)
-	str = str:gsub("{output:([%a%.:]+)}", function(c) 
+	str = str:gsub("{output:([%a%.:]+)}", function (c)
 		local ns, var = c:match("^(%a+)%.(%a+)$")
 		if ns then
 			return actor.output[ns] and actor.output[ns][var] or ""
@@ -170,7 +173,7 @@ function CalcSectionClass:FormatStr(str, actor, colData)
 			return actor.output[c] or ""
 		end
 	end)
-	str = str:gsub("{(%d+):output:([%a%.:]+)}", function(p, c) 
+	str = str:gsub("{(%d+):output:([%a%.:]+)}", function (p, c)
 		local ns, var = c:match("^(%a+)%.(%a+)$")
 		if ns then
 			return self:FormatVal(actor.output[ns] and actor.output[ns][var] or 0, tonumber(p))
@@ -178,8 +181,8 @@ function CalcSectionClass:FormatStr(str, actor, colData)
 			return self:FormatVal(actor.output[c] or 0, tonumber(p))
 		end
 	end)
-	str = str:gsub("{(%d+):mod:([%d,]+)}", function(p, n)
-		local numList = { }
+	str = str:gsub("{(%d+):mod:([%d,]+)}", function (p, n)
+		local numList = {}
 		for num in n:gmatch("%d+") do
 			t_insert(numList, tonumber(num))
 		end
@@ -187,7 +190,7 @@ function CalcSectionClass:FormatStr(str, actor, colData)
 		local modTotal = modType == "MORE" and 1 or 0
 		for _, num in ipairs(numList) do
 			local sectionData = colData[num]
-			local modCfg = (sectionData.cfg and actor.mainSkill[sectionData.cfg.."Cfg"]) or { }
+			local modCfg = (sectionData.cfg and actor.mainSkill[sectionData.cfg .. "Cfg"]) or {}
 			if sectionData.modSource then
 				modCfg.source = sectionData.modSource
 			end
@@ -195,7 +198,8 @@ function CalcSectionClass:FormatStr(str, actor, colData)
 				modCfg.actor = sectionData.actor
 			end
 			local modVal
-			local modStore = (sectionData.enemy and actor.enemy.modDB) or (sectionData.cfg and actor.mainSkill.skillModList) or actor.modDB
+			local modStore = (sectionData.enemy and actor.enemy.modDB) or
+				(sectionData.cfg and actor.mainSkill.skillModList) or actor.modDB
 			if type(sectionData.modName) == "table" then
 				modVal = modStore:Combine(sectionData.modType, modCfg, unpack(sectionData.modName))
 			else
@@ -210,7 +214,7 @@ function CalcSectionClass:FormatStr(str, actor, colData)
 		if modType == "MORE" then
 			modTotal = (modTotal - 1) * 100
 		end
-		return self:FormatVal(modTotal, tonumber(p)) 
+		return self:FormatVal(modTotal, tonumber(p))
 	end)
 	return str
 end
@@ -226,7 +230,7 @@ function CalcSectionClass:Draw(viewPort, noTooltip)
 	DrawImage(nil, x, y, width, height)
 	SetDrawColor(0.10, 0.10, 0.10)
 	DrawImage(nil, x + 2, y + 2, width - 4, height - 4)
-	
+
 	local primary = true
 	local lineY = y
 	for _, subSec in ipairs(self.subSection) do
@@ -236,9 +240,9 @@ function CalcSectionClass:Draw(viewPort, noTooltip)
 		SetDrawColor(0.10, 0.10, 0.10)
 		-- Draw label
 		if not self.enabled then
-			DrawString(x + 3, lineY + 3, "LEFT", 16, "VAR BOLD", "^8"..subSec.label)
+			DrawString(x + 3, lineY + 3, "LEFT", 16, "VAR BOLD", "^8" .. subSec.label)
 		else
-			DrawString(x + 3, lineY + 3, "LEFT", 16, "VAR BOLD", "^7"..subSec.label..":")
+			DrawString(x + 3, lineY + 3, "LEFT", 16, "VAR BOLD", "^7" .. subSec.label .. ":")
 			if subSec.data.extra then
 				local x = x + 3 + DrawStringWidth(16, "VAR BOLD", subSec.label) + 10
 				DrawString(x, lineY + 3, "LEFT", 16, "VAR", self:FormatStr(subSec.data.extra, actor))
@@ -270,7 +274,7 @@ function CalcSectionClass:Draw(viewPort, noTooltip)
 						-- Draw row label with background
 						SetDrawColor(rowData.bgCol or "^0")
 						DrawImage(nil, x + 2, lineY, 130, 18)
-						DrawString(x + 132, lineY + 1, "RIGHT_X", 16, "VAR", textColor..rowData.label.."^7:")
+						DrawString(x + 132, lineY + 1, "RIGHT_X", 16, "VAR", textColor .. rowData.label .. "^7:")
 					end
 					for colour, colData in ipairs(rowData) do
 						-- Draw column separator at the left end of the cell
@@ -278,25 +282,26 @@ function CalcSectionClass:Draw(viewPort, noTooltip)
 						DrawImage(nil, colData.x, lineY, 2, colData.height)
 						if colData.format and self.calcsTab:CheckFlag(colData) then
 							if cursorY >= viewPort.y and cursorY < viewPort.y + viewPort.height and cursorX >= colData.x and cursorY >= colData.y and cursorX < colData.x + colData.width and cursorY < colData.y + colData.height then
-						self.calcsTab:SetDisplayStat(colData)
+								self.calcsTab:SetDisplayStat(colData)
+							end
+							if self.calcsTab.displayData == colData then
+								-- This is the display stat, draw a green border around this cell
+								SetDrawColor(0.25, 1, 0.25)
+								DrawImage(nil, colData.x + 2, colData.y, colData.width - 2, colData.height)
+								SetDrawColor(rowData.bgCol or "^0")
+								DrawImage(nil, colData.x + 3, colData.y + 1, colData.width - 4, colData.height - 2)
+							else
+								SetDrawColor(rowData.bgCol or "^0")
+								DrawImage(nil, colData.x + 2, colData.y, colData.width - 2, colData.height)
+							end
+							local textSize = rowData.textSize or 14
+							SetViewport(colData.x + 3, colData.y, colData.width - 4, colData.height)
+							DrawString(1, 9 - textSize / 2, "LEFT", textSize, "VAR",
+								"^7" .. self:FormatStr(colData.format, actor, colData))
+							SetViewport()
+						end
 					end
-					if self.calcsTab.displayData == colData then
-						-- This is the display stat, draw a green border around this cell
-						SetDrawColor(0.25, 1, 0.25)
-						DrawImage(nil, colData.x + 2, colData.y, colData.width - 2, colData.height)
-						SetDrawColor(rowData.bgCol or "^0")
-						DrawImage(nil, colData.x + 3, colData.y + 1, colData.width - 4, colData.height - 2)
-					else
-						SetDrawColor(rowData.bgCol or "^0")
-						DrawImage(nil, colData.x + 2, colData.y, colData.width - 2, colData.height)
-					end
-					local textSize = rowData.textSize or 14
-					SetViewport(colData.x + 3, colData.y, colData.width - 4, colData.height)
-					DrawString(1, 9 - textSize/2, "LEFT", textSize, "VAR", "^7"..self:FormatStr(colData.format, actor, colData))
-					SetViewport()
-				end
-			end
-			lineY = lineY + 18
+					lineY = lineY + 18
 				end
 			end
 		end

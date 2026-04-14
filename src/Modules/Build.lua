@@ -17,7 +17,7 @@ local buildMode = new("ControlHost")
 
 local function InsertIfNew(t, val)
 	if (not t) then return end
-	for i,v in ipairs(t) do
+	for i, v in ipairs(t) do
 		if v == val then return end
 	end
 	table.insert(t, val)
@@ -27,7 +27,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 	self.dbFileName = dbFileName
 	self.buildName = buildName
 	if dbFileName then
-		self.dbFileSubPath = self.dbFileName:sub(#main.buildPath + 1, -#self.buildName - 5)
+		self.dbFileSubPath = self.dbFileName:sub(#main.buildPath + 1, - #self.buildName - 5)
 	else
 		self.dbFileSubPath = main.modes.LIST.subPath or ""
 	end
@@ -36,7 +36,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 	end
 
 	-- Load build file
-	self.xmlSectionList = { }
+	self.xmlSectionList = {}
 	self.viewMode = "TREE"
 	self.characterLevel = m_min(m_max(main.defaultCharLevel or 1, 1), 100)
 	self.targetVersion = liveTargetVersion
@@ -75,22 +75,24 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 
 	-- Controls: top bar, left side
 	self.anchorTopBarLeft = new("Control", nil, 4, 4, 0, 20)
-	self.controls.back = new("ButtonControl", {"LEFT",self.anchorTopBarLeft,"RIGHT"}, 0, 0, 60, 20, "<< Back", function()
-		if self.unsaved then
-			self:OpenSavePopup("LIST")
-		else
-			self:CloseBuild()
-		end
-	end)
-	self.controls.buildName = new("Control", {"LEFT",self.controls.back,"RIGHT"}, 8, 0, 0, 20)
-	self.controls.buildName.width = function(control)
-		local limit = self.anchorTopBarRight:GetPos() - 98 - 40 - self.controls.back:GetSize() - self.controls.save:GetSize() - self.controls.saveAs:GetSize()
+	self.controls.back = new("ButtonControl", { "LEFT", self.anchorTopBarLeft, "RIGHT" }, 0, 0, 60, 20, "<< Back",
+		function ()
+			if self.unsaved then
+				self:OpenSavePopup("LIST")
+			else
+				self:CloseBuild()
+			end
+		end)
+	self.controls.buildName = new("Control", { "LEFT", self.controls.back, "RIGHT" }, 8, 0, 0, 20)
+	self.controls.buildName.width = function (control)
+		local limit = self.anchorTopBarRight:GetPos() - 98 - 40 - self.controls.back:GetSize() -
+			self.controls.save:GetSize() - self.controls.saveAs:GetSize()
 		local bnw = DrawStringWidth(16, "VAR", self.buildName)
 		self.strWidth = m_min(bnw, limit)
 		self.strLimited = bnw > limit
 		return self.strWidth + 98
 	end
-	self.controls.buildName.Draw = function(control)
+	self.controls.buildName.Draw = function (control)
 		local x, y = control:GetPos()
 		local width, height = control:GetSize()
 		SetDrawColor(0.5, 0.5, 0.5)
@@ -99,13 +101,13 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 		DrawImage(nil, x + 92, y + 1, self.strWidth + 4, 18)
 		SetDrawColor(1, 1, 1)
 		SetViewport(x, y + 2, self.strWidth + 94, 16)
-		DrawString(0, 0, "LEFT", 16, "VAR", "Current build:  "..self.buildName)
+		DrawString(0, 0, "LEFT", 16, "VAR", "Current build:  " .. self.buildName)
 		SetViewport()
 		if control:IsMouseInBounds() then
 			SetDrawLayer(nil, 10)
 			miscTooltip:Clear()
 			if self.dbFileSubPath and self.dbFileSubPath ~= "" then
-				miscTooltip:AddLine(16, self.dbFileSubPath..self.buildName)
+				miscTooltip:AddLine(16, self.dbFileSubPath .. self.buildName)
 			elseif self.strLimited then
 				miscTooltip:AddLine(16, self.buildName)
 			end
@@ -113,23 +115,25 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 			SetDrawLayer(nil, 0)
 		end
 	end
-	self.controls.save = new("ButtonControl", {"LEFT",self.controls.buildName,"RIGHT"}, 8, 0, 50, 20, "Save", function()
-		self:SaveDBFile()
-	end)
-	self.controls.save.enabled = function()
+	self.controls.save = new("ButtonControl", { "LEFT", self.controls.buildName, "RIGHT" }, 8, 0, 50, 20, "Save",
+		function ()
+			self:SaveDBFile()
+		end)
+	self.controls.save.enabled = function ()
 		return not self.dbFileName or self.unsaved
 	end
-	self.controls.saveAs = new("ButtonControl", {"LEFT",self.controls.save,"RIGHT"}, 8, 0, 70, 20, "Save As", function()
-		self:OpenSaveAsPopup()
-	end)
-	self.controls.saveAs.enabled = function()
+	self.controls.saveAs = new("ButtonControl", { "LEFT", self.controls.save, "RIGHT" }, 8, 0, 70, 20, "Save As",
+		function ()
+			self:OpenSaveAsPopup()
+		end)
+	self.controls.saveAs.enabled = function ()
 		return self.dbFileName
 	end
 
 	-- Controls: top bar, right side
-	self.anchorTopBarRight = new("Control", nil, function() return main.screenW / 2 + 6 end, 4, 0, 20)
-	self.controls.pointDisplay = new("Control", {"LEFT",self.anchorTopBarRight,"RIGHT"}, -12, 0, 0, 20)
-	self.controls.pointDisplay.x = function(control)
+	self.anchorTopBarRight = new("Control", nil, function () return main.screenW / 2 + 6 end, 4, 0, 20)
+	self.controls.pointDisplay = new("Control", { "LEFT", self.anchorTopBarRight, "RIGHT" }, -12, 0, 0, 20)
+	self.controls.pointDisplay.x = function (control)
 		local width, height = control:GetSize()
 		if self.controls.saveAs:GetPos() + self.controls.saveAs:GetSize() < self.anchorTopBarRight:GetPos() - width - 16 then
 			return -12 - width
@@ -137,11 +141,11 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 			return 0
 		end
 	end
-	self.controls.pointDisplay.width = function(control)
+	self.controls.pointDisplay.width = function (control)
 		control.str, control.req = self:EstimatePlayerProgress()
 		return DrawStringWidth(16, "FIXED", control.str) + 8
 	end
-	self.controls.pointDisplay.Draw = function(control)
+	self.controls.pointDisplay.Draw = function (control)
 		local x, y = control:GetPos()
 		local width, height = control:GetSize()
 		SetDrawColor(1, 1, 1)
@@ -158,45 +162,53 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 			SetDrawLayer(nil, 0)
 		end
 	end
-	self.controls.levelScalingButton = new("ButtonControl", {"LEFT",self.controls.pointDisplay,"RIGHT"}, 12, 0, 50, 20, self.characterLevelAutoMode and "Auto" or "Manual", function()
-		self.characterLevelAutoMode = not self.characterLevelAutoMode
-		self.controls.levelScalingButton.label = self.characterLevelAutoMode and "Auto" or "Manual"
-		self.configTab:BuildModList()
-		self.modFlag = true
-		self.buildFlag = true
-	end)
-	self.controls.characterLevel = new("EditControl", {"LEFT",self.controls.levelScalingButton,"RIGHT"}, 8, 0, 106, 20, "", "Level", "%D", 3, function(buf)
-		self.characterLevel = m_min(m_max(tonumber(buf) or 1, 1), 100)
-		self.configTab:BuildModList()
-		self.modFlag = true
-		self.buildFlag = true
-		self.characterLevelAutoMode = false
-		self.controls.levelScalingButton.label = "Manual"
-	end)
+	self.controls.levelScalingButton = new("ButtonControl", { "LEFT", self.controls.pointDisplay, "RIGHT" }, 12, 0, 50,
+		20, self.characterLevelAutoMode and "Auto" or "Manual", function ()
+			self.characterLevelAutoMode = not self.characterLevelAutoMode
+			self.controls.levelScalingButton.label = self.characterLevelAutoMode and "Auto" or "Manual"
+			self.configTab:BuildModList()
+			self.modFlag = true
+			self.buildFlag = true
+		end)
+	self.controls.characterLevel = new("EditControl", { "LEFT", self.controls.levelScalingButton, "RIGHT" }, 8, 0, 106,
+		20, "", "Level", "%D", 3, function (buf)
+			self.characterLevel = m_min(m_max(tonumber(buf) or 1, 1), 100)
+			self.configTab:BuildModList()
+			self.modFlag = true
+			self.buildFlag = true
+			self.characterLevelAutoMode = false
+			self.controls.levelScalingButton.label = "Manual"
+		end)
 	self.controls.characterLevel:SetText(self.characterLevel)
-	self.controls.classDrop = new("DropDownControl", {"LEFT",self.controls.characterLevel,"RIGHT"}, 8, 0, 100, 20, nil, function(index, value)
-		if value.classId ~= self.spec.curClassId then
-			if self.spec:CountAllocNodes() == 0 or self.spec:IsClassConnected(value.classId) then
-				self.spec:SelectClass(value.classId)
-				self.spec:AddUndoState()
-				self.spec:SetWindowTitleWithBuildClass()
-				self.buildFlag = true
-			else
-				main:OpenConfirmPopup("Class Change", "Changing class to "..value.label.." will reset your passive tree.\nThis can be avoided by connecting one of the "..value.label.." starting nodes to your tree.", "Continue", function()
+	self.controls.classDrop = new("DropDownControl", { "LEFT", self.controls.characterLevel, "RIGHT" }, 8, 0, 100, 20,
+		nil, function (index, value)
+			if value.classId ~= self.spec.curClassId then
+				if self.spec:CountAllocNodes() == 0 or self.spec:IsClassConnected(value.classId) then
 					self.spec:SelectClass(value.classId)
 					self.spec:AddUndoState()
 					self.spec:SetWindowTitleWithBuildClass()
 					self.buildFlag = true
-				end)
+				else
+					main:OpenConfirmPopup("Class Change",
+						"Changing class to " ..
+						value.label ..
+						" will reset your passive tree.\nThis can be avoided by connecting one of the " ..
+						value.label .. " starting nodes to your tree.", "Continue", function ()
+							self.spec:SelectClass(value.classId)
+							self.spec:AddUndoState()
+							self.spec:SetWindowTitleWithBuildClass()
+							self.buildFlag = true
+						end)
+				end
 			end
-		end
-	end)
-	self.controls.ascendDrop = new("DropDownControl", {"LEFT",self.controls.classDrop,"RIGHT"}, 8, 0, 120, 20, nil, function(index, value)
-		self.spec:SelectAscendClass(value.ascendClassId)
-		self.spec:AddUndoState()
-		self.spec:SetWindowTitleWithBuildClass()
-		self.buildFlag = true
-	end)
+		end)
+	self.controls.ascendDrop = new("DropDownControl", { "LEFT", self.controls.classDrop, "RIGHT" }, 8, 0, 120, 20, nil,
+		function (index, value)
+			self.spec:SelectAscendClass(value.ascendClassId)
+			self.spec:AddUndoState()
+			self.spec:SetWindowTitleWithBuildClass()
+			self.buildFlag = true
+		end)
 
 	-- List of display stats
 	-- This defines the stats in the side bar, and also which stats show in node/item comparisons
@@ -205,137 +217,553 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 		{ stat = "ActiveMinionLimit", label = "Active Minion Limit", fmt = "d" },
 		{ stat = "AverageHit", label = "Average Hit", fmt = ".1f", compPercent = true },
 		{ stat = "AverageDamage", label = "Average Damage", fmt = ".1f", compPercent = true, flag = "attack" },
-		{ stat = "AverageDamage", label = "Average Damage", fmt = ".1f", compPercent = true, flag = "monsterExplode", condFunc = function(v,o) return o.HitChance ~= 100 end },
-		{ stat = "AverageBurstDamage", label = "Average Burst Damage", fmt = ".1f", compPercent = true, condFunc = function(v,o) return o.AverageBurstHits and o.AverageBurstHits > 1 and v > 0 end },
-		{ stat = "Speed", label = "Attack Rate", fmt = ".2f", compPercent = true, flag = "attack", condFunc = function(v,o) return v > 0 and (o.TriggerTime or 0) == 0 end },
-		{ stat = "Speed", label = "Cast Rate", fmt = ".2f", compPercent = true, flag = "spell", condFunc = function(v,o) return v > 0 and (o.TriggerTime or 0) == 0 end },
-		{ stat = "Speed", label = "Effective Trigger Rate", fmt = ".2f", compPercent = true, condFunc = function(v,o) return (o.TriggerTime or 0) ~= 0 end },
-		{ stat = "HitSpeed", label = "Hit Rate", fmt = ".2f", compPercent = true, condFunc = function(v,o) return not o.TriggerTime end },
-		{ stat = "HitTime", label = "Channel Time", fmt = ".2fs", compPercent = true, flag = "channelRelease", lowerIsBetter = true, condFunc = function(v,o) return not o.TriggerTime end },
+		{
+			stat = "AverageDamage",
+			label = "Average Damage",
+			fmt = ".1f",
+			compPercent = true,
+			flag = "monsterExplode",
+			condFunc = function (v, o)
+				return o.HitChance ~= 100
+			end
+		},
+		{
+			stat = "AverageBurstDamage",
+			label = "Average Burst Damage",
+			fmt = ".1f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return o.AverageBurstHits and o.AverageBurstHits > 1 and v > 0
+			end
+		},
+		{
+			stat = "Speed",
+			label = "Attack Rate",
+			fmt = ".2f",
+			compPercent = true,
+			flag = "attack",
+			condFunc = function (v, o)
+				return
+					v > 0 and (o.TriggerTime or 0) == 0
+			end
+		},
+		{
+			stat = "Speed",
+			label = "Cast Rate",
+			fmt = ".2f",
+			compPercent = true,
+			flag = "spell",
+			condFunc = function (v, o)
+				return
+					v > 0 and (o.TriggerTime or 0) == 0
+			end
+		},
+		{
+			stat = "Speed",
+			label = "Effective Trigger Rate",
+			fmt = ".2f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return (o.TriggerTime or 0) ~=
+					0
+			end
+		},
+		{
+			stat = "HitSpeed",
+			label = "Hit Rate",
+			fmt = ".2f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return not o
+					.TriggerTime
+			end
+		},
+		{
+			stat = "HitTime",
+			label = "Channel Time",
+			fmt = ".2fs",
+			compPercent = true,
+			flag = "channelRelease",
+			lowerIsBetter = true,
+			condFunc = function (v, o)
+				return not o.TriggerTime
+			end
+		},
 		{ stat = "ChannelTimeToTrigger", label = "Channel Time", fmt = ".2fs", compPercent = true, lowerIsBetter = true, },
 		{ stat = "PreEffectiveCritChance", label = "Crit Chance", fmt = ".2f%%" },
-		{ stat = "CritChance", label = "Effective Crit Chance", fmt = ".2f%%", condFunc = function(v,o) return v ~= o.PreEffectiveCritChance end },
-		{ stat = "CritMultiplier", label = "Crit Multiplier", fmt = "d%%", pc = true, condFunc = function(v,o) return (o.CritChance or 0) > 0 end },
+		{
+			stat = "CritChance",
+			label = "Effective Crit Chance",
+			fmt = ".2f%%",
+			condFunc = function (v, o)
+				return v ~=
+					o.PreEffectiveCritChance
+			end
+		},
+		{
+			stat = "CritMultiplier",
+			label = "Crit Multiplier",
+			fmt = "d%%",
+			pc = true,
+			condFunc = function (v, o)
+				return (o.CritChance or 0) >
+					0
+			end
+		},
 		{ stat = "HitChance", label = "Hit Chance", fmt = ".0f%%", flag = "attack" },
 		{ stat = "TotalDPS", label = "Hit DPS", fmt = ".1f", compPercent = true, flag = "notAverage" },
 		{ stat = "PvpTotalDPS", label = "PvP Hit DPS", fmt = ".1f", compPercent = true, flag = "notAveragePvP" },
-		{ stat = "TotalDPS", label = "Hit DPS", fmt = ".1f", compPercent = true, flag = "showAverage", condFunc = function(v,o) return (o.TriggerTime or 0) ~= 0 end },
-		{ stat = "CombinedDPS", label = "Combined DPS", fmt = ".1f", compPercent = true, flag = "notAverage", condFunc = function(v,o) return v ~= ((o.TotalDPS or 0) + (o.TotalDot or 0)) and v ~= o.WithImpaleDPS and ( o.showTotalDotDPS or ( v ~= o.WithPoisonDPS and v ~= o.WithIgniteDPS and v ~= o.WithBleedDPS ) ) end },
-		{ stat = "CombinedAvg", label = "Combined Total Damage", fmt = ".1f", compPercent = true, flag = "showAverage", condFunc = function(v,o) return (v ~= o.AverageDamage and (o.TotalDot or 0) == 0) and (v ~= o.WithPoisonDPS or v ~= o.WithIgniteDPS or v ~= o.WithBleedDPS) end },
+		{
+			stat = "TotalDPS",
+			label = "Hit DPS",
+			fmt = ".1f",
+			compPercent = true,
+			flag = "showAverage",
+			condFunc = function (v, o)
+				return (o.TriggerTime or 0) ~=
+					0
+			end
+		},
+		{
+			stat = "CombinedDPS",
+			label = "Combined DPS",
+			fmt = ".1f",
+			compPercent = true,
+			flag = "notAverage",
+			condFunc = function (v, o)
+				return v ~= ((o.TotalDPS or 0) + (o.TotalDot or 0)) and v ~= o.WithImpaleDPS and
+					(o.showTotalDotDPS or (v ~= o.WithPoisonDPS and v ~= o.WithIgniteDPS and v ~= o.WithBleedDPS))
+			end
+		},
+		{
+			stat = "CombinedAvg",
+			label = "Combined Total Damage",
+			fmt = ".1f",
+			compPercent = true,
+			flag = "showAverage",
+			condFunc = function (v, o)
+				return (v ~= o.AverageDamage and (o.TotalDot or 0) == 0) and
+					(v ~= o.WithPoisonDPS or v ~= o.WithIgniteDPS or v ~= o.WithBleedDPS)
+			end
+		},
 		{ stat = "Cooldown", label = "Skill Cooldown", fmt = ".3fs", lowerIsBetter = true },
 		{ stat = "AreaOfEffectRadiusMetres", label = "AoE Radius", fmt = ".1fm" },
-		{ stat = "ManaCost", label = "Mana Cost", fmt = "d", color = colorCodes.MANA, pool = "ManaUnreserved", compPercent = true, lowerIsBetter = true, condFunc = function(v,o) return o.ManaHasCost end },
-		{ stat = "ManaPercentCost", label = "Mana Cost", fmt = "d%%", color = colorCodes.MANA, pool = "ManaUnreservedPercent", compPercent = true, lowerIsBetter = true, condFunc = function(v,o) return o.ManaPercentHasCost end },
-		{ stat = "ManaPerSecondCost", label = "Mana Cost per second", fmt = ".2f", color = colorCodes.MANA, pool = "ManaUnreserved", compPercent = true, lowerIsBetter = true, condFunc = function(v,o) return o.ManaPerSecondHasCost end },
-		{ stat = "ManaPercentPerSecondCost", label = "Mana Cost per second", fmt = ".2f%%", color = colorCodes.MANA, pool = "ManaUnreservedPercent", compPercent = true, lowerIsBetter = true, condFunc = function(v,o) return o.ManaPercentPerSecondHasCost end },
-		{ },
+		{
+			stat = "ManaCost",
+			label = "Mana Cost",
+			fmt = "d",
+			color = colorCodes.MANA,
+			pool = "ManaUnreserved",
+			compPercent = true,
+			lowerIsBetter = true,
+			condFunc = function (v, o)
+				return o.ManaHasCost
+			end
+		},
+		{
+			stat = "ManaPercentCost",
+			label = "Mana Cost",
+			fmt = "d%%",
+			color = colorCodes.MANA,
+			pool = "ManaUnreservedPercent",
+			compPercent = true,
+			lowerIsBetter = true,
+			condFunc = function (v, o)
+				return o.ManaPercentHasCost
+			end
+		},
+		{
+			stat = "ManaPerSecondCost",
+			label = "Mana Cost per second",
+			fmt = ".2f",
+			color = colorCodes.MANA,
+			pool = "ManaUnreserved",
+			compPercent = true,
+			lowerIsBetter = true,
+			condFunc = function (v, o)
+				return o.ManaPerSecondHasCost
+			end
+		},
+		{
+			stat = "ManaPercentPerSecondCost",
+			label = "Mana Cost per second",
+			fmt = ".2f%%",
+			color = colorCodes.MANA,
+			pool = "ManaUnreservedPercent",
+			compPercent = true,
+			lowerIsBetter = true,
+			condFunc = function (v, o)
+				return o.ManaPercentPerSecondHasCost
+			end
+		},
+		{},
 	}
 
-	for i,stat in ipairs(Attributes) do
+	for i, stat in ipairs(Attributes) do
 		local statLabel = AttributesColored[i]
 		t_insert(self.displayStats, { stat = stat, label = statLabel, fmt = "d" })
-		t_insert(self.displayStats, { stat = "Req" .. stat, label = statLabel .. " Required", fmt = "d", lowerIsBetter = true, condFunc = function(v,o) return v > o[stat] end, warnFunc = function(v) return "You do not meet the " .. statLabel .. " requirement" end })
+		t_insert(self.displayStats,
+			{
+				stat = "Req" .. stat,
+				label = statLabel .. " Required",
+				fmt = "d",
+				lowerIsBetter = true,
+				condFunc = function (v, o)
+					return v > o[stat]
+				end,
+				warnFunc = function (v)
+					return "You do not meet the " ..
+						statLabel .. " requirement"
+				end
+			})
 	end
 
 	tableInsertAll(self.displayStats, {
-		{ },
+		{},
 		{ stat = "TotalEHP", label = "Effective Hit Pool", fmt = ".0f", compPercent = true },
 	})
 
-	for i,damageType in ipairs(DamageTypes) do
-		t_insert(self.displayStats, { stat = damageType .. "MaximumHitTaken", label = damageType .. " Max Hit", fmt = ".0f", color = DamageTypeColors[i], compPercent = true })
+	for i, damageType in ipairs(DamageTypes) do
+		t_insert(self.displayStats,
+			{
+				stat = damageType .. "MaximumHitTaken",
+				label = damageType .. " Max Hit",
+				fmt = ".0f",
+				color =
+					DamageTypeColors[i],
+				compPercent = true
+			})
 	end
 
 	tableInsertAll(self.displayStats, {
-		{ },
-		{ stat = "MainHand", childStat = "Accuracy", label = "MH Accuracy", fmt = "d", condFunc = function(v,o) return o.PreciseTechnique end, warnFunc = function(v,o) return v < o.Life and "You do not have enough Accuracy for Precise Technique" end, warnColor = true },
-		{ stat = "OffHand", childStat = "Accuracy", label = "OH Accuracy", fmt = "d", condFunc = function(v,o) return o.PreciseTechnique end, warnFunc = function(v,o) return v < o.Life and "You do not have enough Accuracy for Precise Technique" end, warnColor = true },
+		{},
+		{
+			stat = "MainHand",
+			childStat = "Accuracy",
+			label = "MH Accuracy",
+			fmt = "d",
+			condFunc = function (v, o)
+				return
+					o.PreciseTechnique
+			end,
+			warnFunc = function (v, o)
+				return v < o.Life and
+					"You do not have enough Accuracy for Precise Technique"
+			end,
+			warnColor = true
+		},
+		{
+			stat = "OffHand",
+			childStat = "Accuracy",
+			label = "OH Accuracy",
+			fmt = "d",
+			condFunc = function (v, o)
+				return o
+					.PreciseTechnique
+			end,
+			warnFunc = function (v, o)
+				return v < o.Life and
+					"You do not have enough Accuracy for Precise Technique"
+			end,
+			warnColor = true
+		},
 		{ stat = "Life", label = "Total Health", fmt = "d", color = colorCodes.LIFE, compPercent = true },
-		{ stat = "Spec:LifeInc", label = "%Inc Life from Tree", fmt = "d%%", color = colorCodes.LIFE, condFunc = function(v,o) return v > 0 and o.Life > 1 end },
-		{ stat = "LifeRegenRecovery", label = "Life Regen", fmt = ".1f", color = colorCodes.LIFE, condFunc = function(v,o) return o.LifeRecovery <= 0 and o.LifeRegenRecovery ~= 0 end },
-		{ stat = "LifeRegenRecovery", label = "Life Recovery", fmt = ".1f", color = colorCodes.LIFE, condFunc = function(v,o) return o.LifeRecovery > 0 and o.LifeRegenRecovery ~= 0 end },
+		{
+			stat = "Spec:LifeInc",
+			label = "%Inc Life from Tree",
+			fmt = "d%%",
+			color = colorCodes.LIFE,
+			condFunc = function (v, o)
+				return
+					v > 0 and o.Life > 1
+			end
+		},
+		{
+			stat = "LifeRegenRecovery",
+			label = "Life Regen",
+			fmt = ".1f",
+			color = colorCodes.LIFE,
+			condFunc = function (v, o)
+				return
+					o.LifeRecovery <= 0 and o.LifeRegenRecovery ~= 0
+			end
+		},
+		{
+			stat = "LifeRegenRecovery",
+			label = "Life Recovery",
+			fmt = ".1f",
+			color = colorCodes.LIFE,
+			condFunc = function (v, o)
+				return
+					o.LifeRecovery > 0 and o.LifeRegenRecovery ~= 0
+			end
+		},
 		{ stat = "LifeLeechGainRate", label = "Life Leech/On Hit Rate", fmt = ".1f", color = colorCodes.LIFE, compPercent = true },
 		{ stat = "LifeLeechGainPerHit", label = "Life Leech/Gain per Hit", fmt = ".1f", color = colorCodes.LIFE, compPercent = true },
-		{ },
+		{},
 		{ stat = "Mana", label = "Total Mana", fmt = "d", color = colorCodes.MANA, compPercent = true },
 		{ stat = "Spec:ManaInc", label = "%Inc Mana from Tree", color = colorCodes.MANA, fmt = "d%%" },
-		{ stat = "ManaRegenRecovery", label = "Mana Regen", fmt = ".1f", color = colorCodes.MANA, condFunc = function(v,o) return o.ManaRecovery <= 0 and o.ManaRegenRecovery ~= 0 end },
-		{ stat = "ManaRegenRecovery", label = "Mana Recovery", fmt = ".1f", color = colorCodes.MANA, condFunc = function(v,o) return o.ManaRecovery > 0 and o.ManaRegenRecovery ~= 0 end },
+		{
+			stat = "ManaRegenRecovery",
+			label = "Mana Regen",
+			fmt = ".1f",
+			color = colorCodes.MANA,
+			condFunc = function (v, o)
+				return
+					o.ManaRecovery <= 0 and o.ManaRegenRecovery ~= 0
+			end
+		},
+		{
+			stat = "ManaRegenRecovery",
+			label = "Mana Recovery",
+			fmt = ".1f",
+			color = colorCodes.MANA,
+			condFunc = function (v, o)
+				return
+					o.ManaRecovery > 0 and o.ManaRegenRecovery ~= 0
+			end
+		},
 		{ stat = "ManaLeechGainRate", label = "Mana Leech/On Hit Rate", fmt = ".1f", color = colorCodes.MANA, compPercent = true },
 		{ stat = "ManaLeechGainPerHit", label = "Mana Leech/Gain per Hit", fmt = ".1f", color = colorCodes.MANA, compPercent = true },
-		{ },
+		{},
 		{ stat = "Ward", label = "Ward", fmt = "d", color = colorCodes.WARD, compPercent = true },
-		{ stat = "WardRetention", label = "Ward Retention", fmt = "d%%", color = colorCodes.WARD},
-		{ },
+		{ stat = "WardRetention", label = "Ward Retention", fmt = "d%%", color = colorCodes.WARD },
+		{},
 		{ stat = "TotalDegen", label = "Total Degen", fmt = ".1f", lowerIsBetter = true },
 		{ stat = "TotalNetRegen", label = "Total Net Recovery", fmt = "+.1f" },
 		{ stat = "NetLifeRegen", label = "Net Life Recovery", fmt = "+.1f", color = colorCodes.LIFE },
 		{ stat = "NetManaRegen", label = "Net Mana Recovery", fmt = "+.1f", color = colorCodes.MANA },
 		{ stat = "NetEnergyShieldRegen", label = "Net ES Recovery", fmt = "+.1f", color = colorCodes.ES },
-		{ },
+		{},
 		{ stat = "Evasion", label = "Evasion rating", fmt = "d", color = colorCodes.EVASION, compPercent = true },
 		{ stat = "Spec:EvasionInc", label = "%Inc Evasion from Tree", color = colorCodes.EVASION, fmt = "d%%" },
-		{ stat = "MeleeEvadeChance", label = "Evade Chance", fmt = "d%%", color = colorCodes.EVASION, condFunc = function(v,o) return v > 0 and o.MeleeEvadeChance == o.ProjectileEvadeChance end },
-		{ stat = "MeleeEvadeChance", label = "Melee Evade Chance", fmt = "d%%", color = colorCodes.EVASION, condFunc = function(v,o) return v > 0 and o.MeleeEvadeChance ~= o.ProjectileEvadeChance end },
-		{ stat = "ProjectileEvadeChance", label = "Projectile Evade Chance", fmt = "d%%", color = colorCodes.EVASION, condFunc = function(v,o) return v > 0 and o.MeleeEvadeChance ~= o.ProjectileEvadeChance end },
-		{ },
+		{
+			stat = "MeleeEvadeChance",
+			label = "Evade Chance",
+			fmt = "d%%",
+			color = colorCodes.EVASION,
+			condFunc = function (v, o)
+				return
+					v > 0 and o.MeleeEvadeChance == o.ProjectileEvadeChance
+			end
+		},
+		{
+			stat = "MeleeEvadeChance",
+			label = "Melee Evade Chance",
+			fmt = "d%%",
+			color = colorCodes.EVASION,
+			condFunc = function (v, o)
+				return v > 0 and o.MeleeEvadeChance ~= o.ProjectileEvadeChance
+			end
+		},
+		{
+			stat = "ProjectileEvadeChance",
+			label = "Projectile Evade Chance",
+			fmt = "d%%",
+			color = colorCodes.EVASION,
+			condFunc = function (v, o)
+				return v > 0 and o.MeleeEvadeChance ~= o.ProjectileEvadeChance
+			end
+		},
+		{},
 		{ stat = "Armour", label = "Armor", fmt = "d", compPercent = true },
 		{ stat = "Spec:ArmourInc", label = "%Inc Armour from Tree", fmt = "d%%" },
-		{ stat = "PhysicalDamageReduction", label = "Phys. Damage Reduction", fmt = "d%%", condFunc = function() return true end },
-		{ },
+		{ stat = "PhysicalDamageReduction", label = "Phys. Damage Reduction", fmt = "d%%", condFunc = function () return true end },
+		{},
 		{ stat = "BlockChance", label = "Block Chance", fmt = "d%%", overCapStat = "BlockChanceOverCap" },
-		{ stat = "BlockEffectiveness", label = "Block Effectiveness", fmt = "d"},
+		{ stat = "BlockEffectiveness", label = "Block Effectiveness", fmt = "d" },
 		{ stat = "SpellBlockChance", label = "Spell Block Chance", fmt = "d%%", overCapStat = "SpellBlockChanceOverCap" },
 		{ stat = "AttackDodgeChance", label = "Attack Dodge Chance", fmt = "d%%", overCapStat = "AttackDodgeChanceOverCap" },
 		{ stat = "SpellDodgeChance", label = "Spell Dodge Chance", fmt = "d%%", overCapStat = "SpellDodgeChanceOverCap" },
-		{ },
+		{},
 	})
 
 	for i, damageType in ipairs(DamageTypes) do
-		t_insert(self.displayStats, { stat = damageType .. "Resist", label = damageType .. " Resistance", fmt = "d%%",
-									  color = DamageTypeColors[i], overCapStat = damageType .. "ResistOverCap" })
-		t_insert(self.displayStats, { stat = damageType .. "ResistOverCap", label = damageType .. " Res. Over Max", fmt = "d%%", hideStat = true })
+		t_insert(self.displayStats, {
+			stat = damageType .. "Resist",
+			label = damageType .. " Resistance",
+			fmt = "d%%",
+			color = DamageTypeColors[i],
+			overCapStat = damageType .. "ResistOverCap"
+		})
+		t_insert(self.displayStats,
+			{ stat = damageType .. "ResistOverCap", label = damageType .. " Res. Over Max", fmt = "d%%", hideStat = true })
 	end
 
 	tableInsertAll(self.displayStats, {
-		{ },
-		{ stat = "EffectiveMovementSpeedMod", label = "Movement Speed Modifier", fmt = "+d%%", mod = true, condFunc = function() return true end },
-		{ },
+		{},
+		{ stat = "EffectiveMovementSpeedMod", label = "Movement Speed Modifier", fmt = "+d%%", mod = true, condFunc = function () return true end },
+		{},
 		{ stat = "FullDPS", label = "Full DPS", fmt = ".1f", color = colorCodes.CURRENCY, compPercent = true },
-		{ },
-		{ stat = "SkillDPS", label = "Skill DPS", condFunc = function() return true end },
+		{},
+		{ stat = "SkillDPS", label = "Skill DPS", condFunc = function () return true end },
 	})
 	self.minionDisplayStats = {
 		{ stat = "AverageDamage", label = "Average Damage", fmt = ".1f", compPercent = true },
-		{ stat = "Speed", label = "Attack/Cast Rate", fmt = ".2f", compPercent = true, condFunc = function(v,o) return v > 0 and (o.TriggerTime or 0) == 0 end },
+		{
+			stat = "Speed",
+			label = "Attack/Cast Rate",
+			fmt = ".2f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return
+					v > 0 and (o.TriggerTime or 0) == 0
+			end
+		},
 		{ stat = "HitSpeed", label = "Hit Rate", fmt = ".2f" },
-		{ stat = "Speed", label = "Effective Trigger Rate", fmt = ".2f", compPercent = true, condFunc = function(v,o) return (o.TriggerTime or 0) ~= 0 end },
+		{
+			stat = "Speed",
+			label = "Effective Trigger Rate",
+			fmt = ".2f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return (o.TriggerTime or 0) ~=
+					0
+			end
+		},
 		{ stat = "TotalDPS", label = "Hit DPS", fmt = ".1f", compPercent = true },
 		{ stat = "TotalDot", label = "DoT DPS", fmt = ".1f", compPercent = true },
-		{ stat = "WithDotDPS", label = "Total DPS inc. DoT", fmt = ".1f", compPercent = true, condFunc = function(v,o) return v ~= o.TotalDPS and (o.PoisonDPS or 0) == 0 and (o.IgniteDPS or 0) == 0 and (o.ImpaleDPS or 0) == 0 and (o.BleedDPS or 0) == 0 end },
-		{ stat = "BleedDPS", label = "Bleed DPS", fmt = ".1f", compPercent = true, warnFunc = function(v) return v >= data.misc.DotDpsCap and "Minion Bleed DPS exceeds in game limit" end },
-		{ stat = "WithBleedDPS", label = "Total DPS inc. Bleed", fmt = ".1f", compPercent = true, condFunc = function(v,o) return v ~= o.TotalDPS and (o.TotalDot or 0) == 0 and (o.PoisonDPS or 0) == 0 and (o.ImpaleDPS or 0) == 0 and (o.IgniteDPS or 0) == 0 end },
-		{ stat = "IgniteDPS", label = "Ignite DPS", fmt = ".1f", compPercent = true, warnFunc = function(v) return v >= data.misc.DotDpsCap and "Minion Ignite DPS exceeds in game limit" end },
-		{ stat = "WithIgniteDPS", label = "Total DPS inc. Ignite", fmt = ".1f", compPercent = true, condFunc = function(v,o) return v ~= o.TotalDPS and (o.TotalDot or 0) == 0 and (o.PoisonDPS or 0) == 0 and (o.ImpaleDPS or 0) == 0 and (o.BleedDPS or 0) == 0 end },
-		{ stat = "PoisonDPS", label = "Poison DPS", fmt = ".1f", compPercent = true, warnFunc = function(v) return v >= data.misc.DotDpsCap and "Minion Poison dps exceeds in game limit" end },
+		{
+			stat = "WithDotDPS",
+			label = "Total DPS inc. DoT",
+			fmt = ".1f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return
+					v ~= o.TotalDPS and (o.PoisonDPS or 0) == 0 and (o.IgniteDPS or 0) == 0 and (o.ImpaleDPS or 0) == 0 and
+					(o.BleedDPS or 0) == 0
+			end
+		},
+		{
+			stat = "BleedDPS",
+			label = "Bleed DPS",
+			fmt = ".1f",
+			compPercent = true,
+			warnFunc = function (v)
+				return v >=
+					data.misc.DotDpsCap and "Minion Bleed DPS exceeds in game limit"
+			end
+		},
+		{
+			stat = "WithBleedDPS",
+			label = "Total DPS inc. Bleed",
+			fmt = ".1f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return
+					v ~= o.TotalDPS and (o.TotalDot or 0) == 0 and (o.PoisonDPS or 0) == 0 and (o.ImpaleDPS or 0) == 0 and
+					(o.IgniteDPS or 0) == 0
+			end
+		},
+		{
+			stat = "IgniteDPS",
+			label = "Ignite DPS",
+			fmt = ".1f",
+			compPercent = true,
+			warnFunc = function (v)
+				return v >=
+					data.misc.DotDpsCap and "Minion Ignite DPS exceeds in game limit"
+			end
+		},
+		{
+			stat = "WithIgniteDPS",
+			label = "Total DPS inc. Ignite",
+			fmt = ".1f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return
+					v ~= o.TotalDPS and (o.TotalDot or 0) == 0 and (o.PoisonDPS or 0) == 0 and (o.ImpaleDPS or 0) == 0 and
+					(o.BleedDPS or 0) == 0
+			end
+		},
+		{
+			stat = "PoisonDPS",
+			label = "Poison DPS",
+			fmt = ".1f",
+			compPercent = true,
+			warnFunc = function (v)
+				return v >=
+					data.misc.DotDpsCap and "Minion Poison dps exceeds in game limit"
+			end
+		},
 		{ stat = "PoisonDamage", label = "Total Damage per Poison", fmt = ".1f", compPercent = true },
-		{ stat = "WithPoisonDPS", label = "Total DPS inc. Poison", fmt = ".1f", compPercent = true, condFunc = function(v,o) return v ~= o.TotalDPS and (o.TotalDot or 0) == 0 and (o.IgniteDPS or 0) == 0 and (o.ImpaleDPS or 0) == 0 and (o.BleedDPS or 0) == 0 end },
+		{
+			stat = "WithPoisonDPS",
+			label = "Total DPS inc. Poison",
+			fmt = ".1f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return
+					v ~= o.TotalDPS and (o.TotalDot or 0) == 0 and (o.IgniteDPS or 0) == 0 and (o.ImpaleDPS or 0) == 0 and
+					(o.BleedDPS or 0) == 0
+			end
+		},
 		{ stat = "DecayDPS", label = "Decay DPS", fmt = ".1f", compPercent = true },
-		{ stat = "TotalDotDPS", label = "Total DoT DPS", fmt = ".1f", compPercent = true, condFunc = function(v,o) return v ~= o.TotalDot and v ~= o.ImpaleDPS and v ~= o.TotalPoisonDPS and v ~= (o.TotalIgniteDPS or o.IgniteDPS) and v ~= o.BleedDPS end, warnFunc = function(v) return v >= data.misc.DotDpsCap and "Minion DoT DPS exceeds in game limit" end },
+		{
+			stat = "TotalDotDPS",
+			label = "Total DoT DPS",
+			fmt = ".1f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return
+					v ~= o.TotalDot and v ~= o.ImpaleDPS and v ~= o.TotalPoisonDPS and
+					v ~= (o.TotalIgniteDPS or o.IgniteDPS) and
+					v ~= o.BleedDPS
+			end,
+			warnFunc = function (v)
+				return v >= data.misc.DotDpsCap and
+					"Minion DoT DPS exceeds in game limit"
+			end
+		},
 		{ stat = "ImpaleDPS", label = "Impale DPS", fmt = ".1f", compPercent = true, flag = "impale" },
-		{ stat = "WithImpaleDPS", label = "Total DPS inc. Impale", fmt = ".1f", compPercent = true, flag = "impale", condFunc = function(v,o) return v ~= o.TotalDPS and (o.TotalDot or 0) == 0 and (o.IgniteDPS or 0) == 0 and (o.PoisonDPS or 0) == 0 and (o.BleedDPS or 0) == 0 end },
-		{ stat = "CullingDPS", label = "Culling DPS", fmt = ".1f", compPercent = true, condFunc = function(v,o) return (o.CullingDPS or 0) > 0 end },
-		{ stat = "ReservationDPS", label = "Reservation DPS", fmt = ".1f", compPercent = true, condFunc = function(v,o) return (o.ReservationDPS or 0) > 0 end },
-		{ stat = "CombinedDPS", label = "Combined DPS", fmt = ".1f", compPercent = true, condFunc = function(v,o) return v ~= ((o.TotalDPS or 0) + (o.TotalDot or 0)) and v ~= o.WithImpaleDPS and v ~= o.WithPoisonDPS and v ~= o.WithIgniteDPS and v ~= o.WithBleedDPS end},
+		{
+			stat = "WithImpaleDPS",
+			label = "Total DPS inc. Impale",
+			fmt = ".1f",
+			compPercent = true,
+			flag = "impale",
+			condFunc = function (v, o)
+				return v ~= o.TotalDPS and (o.TotalDot or 0) == 0 and (o.IgniteDPS or 0) == 0 and
+					(o.PoisonDPS or 0) == 0 and (o.BleedDPS or 0) == 0
+			end
+		},
+		{
+			stat = "CullingDPS",
+			label = "Culling DPS",
+			fmt = ".1f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return (o.CullingDPS or 0) >
+					0
+			end
+		},
+		{
+			stat = "ReservationDPS",
+			label = "Reservation DPS",
+			fmt = ".1f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return (o.ReservationDPS or 0) >
+					0
+			end
+		},
+		{
+			stat = "CombinedDPS",
+			label = "Combined DPS",
+			fmt = ".1f",
+			compPercent = true,
+			condFunc = function (v, o)
+				return
+					v ~= ((o.TotalDPS or 0) + (o.TotalDot or 0)) and v ~= o.WithImpaleDPS and v ~= o.WithPoisonDPS and
+					v ~= o.WithIgniteDPS and v ~= o.WithBleedDPS
+			end
+		},
 		{ stat = "Cooldown", label = "Skill Cooldown", fmt = ".3fs", lowerIsBetter = true },
 		{ stat = "Life", label = "Total Life", fmt = ".1f", color = colorCodes.LIFE, compPercent = true },
 		{ stat = "LifeRegenRecovery", label = "Life Recovery", fmt = ".1f", color = colorCodes.LIFE },
 		{ stat = "LifeLeechGainRate", label = "Life Leech/On Hit Rate", fmt = ".1f", color = colorCodes.LIFE, compPercent = true },
 	}
-	self.extraSaveStats = {
-		"ActiveTotemLimit",
-		"ActiveMinionLimit",
-	}
+	self.extraSaveStats = { "ActiveTotemLimit", "ActiveMinionLimit", }
 	if buildName == "~~temp~~" then
 		-- Remove temporary build file
 		os.remove(self.dbFileName)
@@ -347,140 +775,174 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 
 	-- Controls: Side bar
 	self.anchorSideBar = new("Control", nil, 4, 36, 0, 0)
-	self.controls.modeImport = new("ButtonControl", {"TOPLEFT",self.anchorSideBar,"TOPLEFT"}, 0, 0, 134, 20, "Import/Export Build", function()
-		self.viewMode = "IMPORT"
-	end)
-	self.controls.modeImport.locked = function() return self.viewMode == "IMPORT" end
-	self.controls.modeNotes = new("ButtonControl", {"LEFT",self.controls.modeImport,"RIGHT"}, 4, 0, 58, 20, "Notes", function()
-		self.viewMode = "NOTES"
-	end)
-	self.controls.modeNotes.locked = function() return self.viewMode == "NOTES" end
-	self.controls.modeConfig = new("ButtonControl", {"TOPRIGHT",self.anchorSideBar,"TOPLEFT"}, 300, 0, 100, 20, "Configuration", function()
-		self.viewMode = "CONFIG"
-	end)
-	self.controls.modeConfig.locked = function() return self.viewMode == "CONFIG" end
-	self.controls.modeTree = new("ButtonControl", {"TOPLEFT",self.anchorSideBar,"TOPLEFT"}, 0, 26, 72, 20, "Tree", function()
-		self.viewMode = "TREE"
-	end)
-	self.controls.modeTree.locked = function() return self.viewMode == "TREE" end
-	self.controls.modeSkills = new("ButtonControl", {"LEFT",self.controls.modeTree,"RIGHT"}, 4, 0, 72, 20, "Skills", function()
-		self.viewMode = "SKILLS"
-	end)
-	self.controls.modeSkills.locked = function() return self.viewMode == "SKILLS" end
-	self.controls.modeItems = new("ButtonControl", {"LEFT",self.controls.modeSkills,"RIGHT"}, 4, 0, 72, 20, "Items", function()
-		self.viewMode = "ITEMS"
-	end)
-	self.controls.modeItems.locked = function() return self.viewMode == "ITEMS" end
-	self.controls.modeCalcs = new("ButtonControl", {"LEFT",self.controls.modeItems,"RIGHT"}, 4, 0, 72, 20, "Calcs", function()
-		self.viewMode = "CALCS"
-	end)
-	self.controls.modeCalcs.locked = function() return self.viewMode == "CALCS" end
-	self.controls.modeParty = new("ButtonControl", {"TOPLEFT",self.anchorSideBar,"TOPLEFT"}, 0, 52, 72, 20, "Party", function()
-		self.viewMode = "PARTY"
-	end)
-	self.controls.modeParty.locked = function() return self.viewMode == "PARTY" end
+	self.controls.modeImport = new("ButtonControl", { "TOPLEFT", self.anchorSideBar, "TOPLEFT" }, 0, 0, 134, 20,
+		"Import/Export Build", function ()
+			self.viewMode = "IMPORT"
+		end)
+	self.controls.modeImport.locked = function () return self.viewMode == "IMPORT" end
+	self.controls.modeNotes = new("ButtonControl", { "LEFT", self.controls.modeImport, "RIGHT" }, 4, 0, 58, 20, "Notes",
+		function ()
+			self.viewMode = "NOTES"
+		end)
+	self.controls.modeNotes.locked = function () return self.viewMode == "NOTES" end
+	self.controls.modeConfig = new("ButtonControl", { "TOPRIGHT", self.anchorSideBar, "TOPLEFT" }, 300, 0, 100, 20,
+		"Configuration", function ()
+			self.viewMode = "CONFIG"
+		end)
+	self.controls.modeConfig.locked = function () return self.viewMode == "CONFIG" end
+	self.controls.modeTree = new("ButtonControl", { "TOPLEFT", self.anchorSideBar, "TOPLEFT" }, 0, 26, 72, 20, "Tree",
+		function ()
+			self.viewMode = "TREE"
+		end)
+	self.controls.modeTree.locked = function () return self.viewMode == "TREE" end
+	self.controls.modeSkills = new("ButtonControl", { "LEFT", self.controls.modeTree, "RIGHT" }, 4, 0, 72, 20, "Skills",
+		function ()
+			self.viewMode = "SKILLS"
+		end)
+	self.controls.modeSkills.locked = function () return self.viewMode == "SKILLS" end
+	self.controls.modeItems = new("ButtonControl", { "LEFT", self.controls.modeSkills, "RIGHT" }, 4, 0, 72, 20, "Items",
+		function ()
+			self.viewMode = "ITEMS"
+		end)
+	self.controls.modeItems.locked = function () return self.viewMode == "ITEMS" end
+	self.controls.modeCalcs = new("ButtonControl", { "LEFT", self.controls.modeItems, "RIGHT" }, 4, 0, 72, 20, "Calcs",
+		function ()
+			self.viewMode = "CALCS"
+		end)
+	self.controls.modeCalcs.locked = function () return self.viewMode == "CALCS" end
+	self.controls.modeParty = new("ButtonControl", { "TOPLEFT", self.anchorSideBar, "TOPLEFT" }, 0, 52, 72, 20, "Party",
+		function ()
+			self.viewMode = "PARTY"
+		end)
+	self.controls.modeParty.locked = function () return self.viewMode == "PARTY" end
 	-- Skills
-	self.controls.mainSkillLabel = new("LabelControl", {"TOPLEFT",self.anchorSideBar,"TOPLEFT"}, 0, 80, 300, 16, "^7Main Skill:")
-	self.controls.mainSocketGroup = new("DropDownControl", {"TOPLEFT",self.controls.mainSkillLabel,"BOTTOMLEFT"}, 0, 2, 300, 18, nil, function(index, value)
-		self.mainSocketGroup = value.val
-		self.modFlag = true
-		self.buildFlag = true
-	end)
+	self.controls.mainSkillLabel = new("LabelControl", { "TOPLEFT", self.anchorSideBar, "TOPLEFT" }, 0, 80, 300, 16,
+		"^7Main Skill:")
+	self.controls.mainSocketGroup = new("DropDownControl", { "TOPLEFT", self.controls.mainSkillLabel, "BOTTOMLEFT" }, 0,
+		2, 300, 18, nil, function (index, value)
+			self.mainSocketGroup = value.val
+			self.modFlag = true
+			self.buildFlag = true
+		end)
 	self.controls.mainSocketGroup.maxDroppedWidth = 500
-	self.controls.mainSkillPart = new("DropDownControl", {"TOPLEFT",self.controls.mainSocketGroup,"BOTTOMLEFT",true}, 0, 2, 300, 18, nil, function(index, value)
-		local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
-		local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect.srcInstance
-		srcInstance.skillPart = index
-		self.modFlag = true
-		self.buildFlag = true
-	end)
-	self.controls.mainSkillStageCountLabel = new("LabelControl", {"TOPLEFT",self.controls.mainSkillPart,"BOTTOMLEFT",true}, 0, 3, 0, 16, "^7Stages:") {
-		shown = function()
+	self.controls.mainSkillPart = new("DropDownControl", { "TOPLEFT", self.controls.mainSocketGroup, "BOTTOMLEFT", true },
+		0, 2, 300, 18, nil, function (index, value)
+			local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
+			local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect
+				.srcInstance
+			srcInstance.skillPart = index
+			self.modFlag = true
+			self.buildFlag = true
+		end)
+	self.controls.mainSkillStageCountLabel = new("LabelControl",
+		{ "TOPLEFT", self.controls.mainSkillPart, "BOTTOMLEFT", true }, 0, 3, 0, 16, "^7Stages:") {
+		shown = function ()
 			return self.controls.mainSkillStageCount:IsShown()
 		end,
 	}
-	self.controls.mainSkillStageCount = new("EditControl", {"LEFT",self.controls.mainSkillStageCountLabel,"RIGHT",true}, 2, 0, 60, 18, nil, nil, "%D", nil, function(buf)
-		local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
-		local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect.srcInstance
-		srcInstance.skillStageCount = tonumber(buf)
-		self.modFlag = true
-		self.buildFlag = true
-	end)
-	self.controls.mainSkillMineCountLabel = new("LabelControl", {"TOPLEFT",self.controls.mainSkillStageCountLabel,"BOTTOMLEFT",true}, 0, 3, 0, 16, "^7Active Mines:") {
-		shown = function()
+	self.controls.mainSkillStageCount = new("EditControl",
+		{ "LEFT", self.controls.mainSkillStageCountLabel, "RIGHT", true },
+		2, 0, 60, 18, nil, nil, "%D", nil, function (buf)
+			local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
+			local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect
+				.srcInstance
+			srcInstance.skillStageCount = tonumber(buf)
+			self.modFlag = true
+			self.buildFlag = true
+		end)
+	self.controls.mainSkillMineCountLabel = new("LabelControl",
+		{ "TOPLEFT", self.controls.mainSkillStageCountLabel, "BOTTOMLEFT", true }, 0, 3, 0, 16, "^7Active Mines:") {
+		shown = function ()
 			return self.controls.mainSkillMineCount:IsShown()
 		end,
 	}
-	self.controls.mainSkillMineCount = new("EditControl", {"LEFT",self.controls.mainSkillMineCountLabel,"RIGHT",true}, 2, 0, 60, 18, nil, nil, "%D", nil, function(buf)
-		local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
-		local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect.srcInstance
-		srcInstance.skillMineCount = tonumber(buf)
-		self.modFlag = true
-		self.buildFlag = true
-	end)
-	self.controls.mainSkillMinion = new("DropDownControl", {"TOPLEFT",self.controls.mainSkillMineCountLabel,"BOTTOMLEFT",true}, 0, 3, 178, 18, nil, function(index, value)
-		local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
-		local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect.srcInstance
-		if value.itemSetId then
-			srcInstance.skillMinionItemSet = value.itemSetId
-		else
-			srcInstance.skillMinion = value.minionId
-		end
-		self.modFlag = true
-		self.buildFlag = true
-	end)
+	self.controls.mainSkillMineCount = new("EditControl",
+		{ "LEFT", self.controls.mainSkillMineCountLabel, "RIGHT", true },
+		2, 0, 60, 18, nil, nil, "%D", nil, function (buf)
+			local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
+			local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect
+				.srcInstance
+			srcInstance.skillMineCount = tonumber(buf)
+			self.modFlag = true
+			self.buildFlag = true
+		end)
+	self.controls.mainSkillMinion = new("DropDownControl",
+		{ "TOPLEFT", self.controls.mainSkillMineCountLabel, "BOTTOMLEFT", true }, 0, 3, 178, 18, nil,
+		function (index, value)
+			local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
+			local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect
+				.srcInstance
+			if value.itemSetId then
+				srcInstance.skillMinionItemSet = value.itemSetId
+			else
+				srcInstance.skillMinion = value.minionId
+			end
+			self.modFlag = true
+			self.buildFlag = true
+		end)
 	function self.controls.mainSkillMinion.CanReceiveDrag(control, type, value)
 		if type == "Item" and control.list[control.selIndex] and control.list[control.selIndex].itemSetId then
 			local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
-			local minionUses = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect.grantedEffect.minionUses
+			local minionUses = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect
+				.grantedEffect.minionUses
 			return minionUses and minionUses[value:GetPrimarySlot()] -- O_O
 		end
 	end
+
 	function self.controls.mainSkillMinion.ReceiveDrag(control, type, value, source)
 		self.itemsTab:EquipItemInSet(value, control.list[control.selIndex].itemSetId)
 	end
+
 	function self.controls.mainSkillMinion.tooltipFunc(tooltip, mode, index, value)
 		tooltip:Clear()
 		if value.itemSetId then
 			self.itemsTab:AddItemSetTooltip(tooltip, self.itemsTab.itemSets[value.itemSetId])
 			tooltip:AddSeparator(14)
-			tooltip:AddLine(14, colorCodes.TIP.."Tip: You can drag items from the Items tab onto this dropdown to equip them onto the minion.")
+			tooltip:AddLine(14,
+				colorCodes.TIP ..
+				"Tip: You can drag items from the Items tab onto this dropdown to equip them onto the minion.")
 		end
 	end
-	self.controls.mainSkillMinionLibrary = new("ButtonControl", {"LEFT",self.controls.mainSkillMinion,"RIGHT"}, 2, 0, 120, 18, "Manage Spectres...", function()
-		self:OpenSpectreLibrary()
-	end)
-	self.controls.mainSkillMinionSkill = new("DropDownControl", {"TOPLEFT",self.controls.mainSkillMinion,"BOTTOMLEFT",true}, 0, 2, 200, 16, nil, function(index, value)
-		local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
-		local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect.srcInstance
-		srcInstance.skillMinionSkill = index
-		self.modFlag = true
-		self.buildFlag = true
-	end)
-	self.controls.statBoxAnchor = new("Control", {"TOPLEFT",self.controls.mainSkillMinionSkill,"BOTTOMLEFT",true}, 0, 2, 0, 0)
-	self.controls.statBox = new("TextListControl", {"TOPLEFT",self.controls.statBoxAnchor,"BOTTOMLEFT"}, 0, 2, 300, 0, {{x=170,align="RIGHT_X"},{x=174,align="LEFT"}})
-	self.controls.statBox.height = function(control)
+
+	self.controls.mainSkillMinionLibrary = new("ButtonControl", { "LEFT", self.controls.mainSkillMinion, "RIGHT" }, 2, 0,
+		120, 18, "Manage Spectres...", function ()
+			self:OpenSpectreLibrary()
+		end)
+	self.controls.mainSkillMinionSkill = new("DropDownControl",
+		{ "TOPLEFT", self.controls.mainSkillMinion, "BOTTOMLEFT", true }, 0, 2, 200, 16, nil, function (index, value)
+			local mainSocketGroup = self.skillsTab.socketGroupList[self.mainSocketGroup]
+			local srcInstance = mainSocketGroup.displaySkillList[mainSocketGroup.mainActiveSkill].activeEffect
+				.srcInstance
+			srcInstance.skillMinionSkill = index
+			self.modFlag = true
+			self.buildFlag = true
+		end)
+	self.controls.statBoxAnchor = new("Control", { "TOPLEFT", self.controls.mainSkillMinionSkill, "BOTTOMLEFT", true }, 0,
+		2, 0, 0)
+	self.controls.statBox = new("TextListControl", { "TOPLEFT", self.controls.statBoxAnchor, "BOTTOMLEFT" }, 0, 2, 300, 0,
+		{ { x = 170, align = "RIGHT_X" }, { x = 174, align = "LEFT" } })
+	self.controls.statBox.height = function (control)
 		local x, y = control:GetPos()
 		local warnHeight = main.showWarnings and #self.controls.warnings.lines > 0 and 18 or 0
 		return main.screenH - main.mainBarHeight - 4 - y - warnHeight
 	end
-	self.controls.warnings = new("Control",{"TOPLEFT",self.controls.statBox,"BOTTOMLEFT",true}, 0, 0, 0, 18)
+	self.controls.warnings = new("Control", { "TOPLEFT", self.controls.statBox, "BOTTOMLEFT", true }, 0, 0, 0, 18)
 	self.controls.warnings.lines = {}
-	self.controls.warnings.width = function(control)
+	self.controls.warnings.width = function (control)
 		return control.str and DrawStringWidth(16, "FIXED", control.str) + 8 or 0
 	end
-	self.controls.warnings.Draw = function(control)
+	self.controls.warnings.Draw = function (control)
 		if #self.controls.warnings.lines > 0 then
 			local count = 0
 			for _ in pairs(self.controls.warnings.lines) do count = count + 1 end
-			control.str = string.format(colorCodes.NEGATIVE.."%d Warnings", count)
+			control.str = string.format(colorCodes.NEGATIVE .. "%d Warnings", count)
 			local x, y = control:GetPos()
 			local width, height = control:GetSize()
 			DrawString(x, y + 2, "LEFT", 16, "FIXED", control.str)
 			if control:IsMouseInBounds() then
 				SetDrawLayer(nil, 10)
 				miscTooltip:Clear()
-				for k,v in pairs(self.controls.warnings.lines) do miscTooltip:AddLine(16, v) end
+				for k, v in pairs(self.controls.warnings.lines) do miscTooltip:AddLine(16, v) end
 				miscTooltip:Draw(x, y, width, height, main.viewPort)
 				SetDrawLayer(nil, 0)
 			end
@@ -514,8 +976,7 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 		["Import"] = self.importTab,
 	}
 	self.legacyLoaders = { -- Special loaders for legacy sections
-		["Spec"] = self.treeTab,
-	}
+		["Spec"] = self.treeTab, }
 
 	--special rebuild to properly initialise boss placeholders
 	self.configTab:BuildModList()
@@ -526,18 +987,11 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 		-- Initialise ascendancy dropdown
 		for i = 0, #class.classes do
 			local ascendClass = class.classes[i]
-			t_insert(ascendancies, {
-				label = ascendClass.name,
-				ascendClassId = i,
-			})
+			t_insert(ascendancies, { label = ascendClass.name, ascendClassId = i, })
 		end
-		t_insert(self.controls.classDrop.list, {
-			label = class.name,
-			classId = classId,
-			ascendancies = ascendancies,
-		})
+		t_insert(self.controls.classDrop.list, { label = class.name, classId = classId, ascendancies = ascendancies, })
 	end
-	table.sort(self.controls.classDrop.list, function(a, b) return a.label < b.label end)
+	table.sort(self.controls.classDrop.list, function (a, b) return a.label < b.label end)
 
 	-- Load legacy bandit and pantheon choices from build section
 	for _, control in ipairs({ "bandit", "pantheonMajorGod", "pantheonMinorGod" }) do
@@ -547,13 +1001,13 @@ function buildMode:Init(dbFileName, buildName, buildXML, convertBuild)
 	-- so we ran into problems with converted trees, trying to check passive tree routes and also consider thread jewels
 	-- but we can't check jewel info because items have not been loaded yet, and they come after passives in the xml.
 	-- the simplest solution seems to be making sure passive trees (which contain jewel sockets) are loaded last.
-	local deferredPassiveTrees = { }
+	local deferredPassiveTrees = {}
 	for _, node in ipairs(self.xmlSectionList) do
 		-- Check if there is a saver that can load this section
 		local saver = self.savers[node.elem] or self.legacyLoaders[node.elem]
 		if saver then
 			-- if the saver is treeTab, defer it until everything is loaded
-			if saver == self.treeTab  then
+			if saver == self.treeTab then
 				t_insert(deferredPassiveTrees, node)
 			else
 				if saver:Load(node, self.dbFileName) then
@@ -636,7 +1090,7 @@ function buildMode:ReadLeToolsSave(saveContent)
 		["classId"] = classId,
 		["abilities"] = {},
 		["items"] = {},
-		["hashes"] = { }
+		["hashes"] = {}
 	}
 	for passive, nbPoints in pairs(saveContent["charTree"]["selected"]) do
 		table.insert(char["hashes"], className .. "-" .. passive .. "#" .. nbPoints)
@@ -675,31 +1129,29 @@ function buildMode:ReadLeToolsSave(saveContent)
 	end
 
 	function proccessItemAffix(affixData, attribute)
-    	local affixId = data.LETools_affixes[affixData.id]
-    	if affixId then
-    		local affixTier = affixData.tier - 1
-    		local modId = affixId .. "_" .. affixTier
-    		local modData = data.itemMods.Item[modId]
-    		local range = (affixData.r or defaultItemAffixQuality)
-            local itemAffix = { ["range"] = range, ["modId"] = modId }
+		local affixId = data.LETools_affixes[affixData.id]
+		if affixId then
+			local affixTier = affixData.tier - 1
+			local modId = affixId .. "_" .. affixTier
+			local modData = data.itemMods.Item[modId]
+			local range = (affixData.r or main.defaultItemAffixQuality)
+			local itemAffix = { ["range"] = range, ["modId"] = modId }
 
-            if attribute == "sealed" then
-                itemAffix.sealed = true
-            elseif attribute == "corrupted" then
-                itemAffix.corrupted = true
-            elseif modData.type == "Prefix" then
-    			itemAffix.prefix = true
-    		else
-    			itemAffix.suffix = true
-            end
-            return itemAffix
-    	end
+			if attribute == "sealed" then
+				itemAffix.sealed = true
+			elseif attribute == "corrupted" then
+				itemAffix.corrupted = true
+			elseif modData.type == "Prefix" then
+				itemAffix.prefix = true
+			else
+				itemAffix.suffix = true
+			end
+			return itemAffix
+		end
 	end
 
 	function processItemData(slotName, itemData)
-		local item = {
-			["slotName"] = onlineImportSlotMap[slotName]
-		}
+		local item = { ["slotName"] = onlineImportSlotMap[slotName] }
 		if slotName == "idol" then
 			local posX = itemData["x"]
 			local posY = itemData["y"]
@@ -712,11 +1164,11 @@ function buildMode:ReadLeToolsSave(saveContent)
 		local uniqueId = data.LETools_itemBases[itemData.id].uniqueId
 
 		for itemBaseName, itemBase in pairs(self.data.itemBases) do
-            if itemBase.baseTypeID == baseTypeID and itemBase.subTypeID == subTypeID then
-                item.base = itemBase
-          		item.name = itemBaseName
-          		item.baseName = itemBaseName
-            end
+			if itemBase.baseTypeID == baseTypeID and itemBase.subTypeID == subTypeID then
+				item.base = itemBase
+				item.name = itemBaseName
+				item.baseName = itemBaseName
+			end
 		end
 
 		item["rarity"] = item["rarity"] or "RARE"
@@ -738,7 +1190,7 @@ function buildMode:ReadLeToolsSave(saveContent)
 		if uniqueId then
 			local uniqueBase = data.uniques[uniqueId]
 			if uniqueBase then
-			    item.name = uniqueBase.name
+				item.name = uniqueBase.name
 				item["rarityType"] = item["rarityType"] or "UNIQUE"
 				-- Unique with crafted affixes becomes Legendary
 				if #item.affixes > 0 then
@@ -747,44 +1199,45 @@ function buildMode:ReadLeToolsSave(saveContent)
 					item["rarity"] = "UNIQUE"
 				end
 				for i, modLine in ipairs(uniqueBase.mods) do
-                    if itemLib.hasRange(modLine) then
-                        local range = main.defaultItemAffixQuality
-                        if itemData['ur'] and #itemData['ur'] > 0 then
-                            range = itemData["ur"][uniqueBase.rollIds[i] + 1]
-                        end
-                        table.insert(item.explicitMods, "{unique}{range: " .. range .. "}" .. modLine)
-                    else
-                        table.insert(item.explicitMods, "{unique}" .. modLine)
-                    end
+					if itemLib.hasRange(modLine) then
+						local range = main.defaultItemAffixQuality
+						if itemData['ur'] and #itemData['ur'] > 0 then
+							range = itemData["ur"][uniqueBase.rollIds[i] + 1]
+						end
+						table.insert(item.explicitMods, "{unique}{range: " .. range .. "}" .. modLine)
+					else
+						table.insert(item.explicitMods, "{unique}" .. modLine)
+					end
 				end
 			end
 		end
 
 		if item.base then
-			item.implicitMods= {}
-			for i,implicit in ipairs(item.base.implicits) do
+			item.implicitMods = {}
+			for i, implicit in ipairs(item.base.implicits) do
 				local range = main.defaultItemAffixQuality
 				if itemData['ir'] then
 					range = itemData["ir"][i]
 				end
-				table.insert(item.implicitMods, "{range: " .. range .. "}".. implicit)
+				table.insert(item.implicitMods, "{range: " .. range .. "}" .. implicit)
 			end
 			return item
 		end
 	end
-	for slotName,itemData in pairsSortByKey(saveContent["equipment"]) do
+
+	for slotName, itemData in pairsSortByKey(saveContent["equipment"]) do
 		local item = processItemData(slotName, itemData)
 		if item then
 			table.insert(char["items"], item)
 		end
 	end
-	for _,itemData in pairs(saveContent["idols"]) do
+	for _, itemData in pairs(saveContent["idols"]) do
 		local item = processItemData("idol", itemData)
 		if item then
 			table.insert(char["items"], item)
 		end
 	end
-	for i = 1,10 do
+	for i = 1, 10 do
 		local blessingData = saveContent["blessings"][i]
 		if blessingData then
 			local item = processItemData("Blessing " .. i, blessingData)
@@ -831,7 +1284,7 @@ function buildMode:EstimatePlayerProgress()
 	if PointsUsed > usedMax then InsertIfNew(self.controls.warnings.lines, "You have too many passive points allocated") end
 
 	return string.format("%s%3d / %3d", PointsUsed > usedMax and colorCodes.NEGATIVE or "^7", PointsUsed, usedMax),
-		"Required Level: "..level.."\nQuestpoints: ".. 15
+		"Required Level: " .. level .. "\nQuestpoints: " .. 15
 end
 
 function buildMode:CanExit(mode)
@@ -847,7 +1300,7 @@ function buildMode:Shutdown()
 		if self.dbFileName then
 			self:SaveDBFile()
 		elseif self.unsaved then
-			self.dbFileName = main.buildPath.."~~temp~~.xml"
+			self.dbFileName = main.buildPath .. "~~temp~~.xml"
 			self.buildName = "~~temp~~"
 			self.dbFileSubPath = ""
 			self:SaveDBFile()
@@ -893,10 +1346,10 @@ function buildMode:Save(xml)
 		mainSocketGroup = tostring(self.mainSocketGroup),
 		characterLevelAutoMode = tostring(self.characterLevelAutoMode)
 	}
-	local addedStatNames = { }
+	local addedStatNames = {}
 	for index, statData in ipairs(self.displayStats) do
 		if not statData.flag or self.calcsTab.mainEnv.player.mainSkill.skillFlags[statData.flag] then
-			local statName = statData.stat and statData.stat..(statData.childStat or "")
+			local statName = statData.stat and statData.stat .. (statData.childStat or "")
 			if statName and not addedStatNames[statName] then
 				if statData.stat == "SkillDPS" then
 					local statVal = self.calcsTab.mainOutput[statData.stat]
@@ -907,9 +1360,10 @@ function buildMode:Save(xml)
 						end
 						local lhsString = skillData.name
 						if skillData.count >= 2 then
-							lhsString = tostring(skillData.count).."x "..skillData.name
+							lhsString = tostring(skillData.count) .. "x " .. skillData.name
 						end
-						t_insert(xml, { elem = "FullDPSSkill", attrib = { stat = lhsString, value = tostring(skillData.dps * skillData.count), skillPart = skillData.skillPart or "", source = skillData.source or skillData.trigger or "" } })
+						t_insert(xml,
+							{ elem = "FullDPSSkill", attrib = { stat = lhsString, value = tostring(skillData.dps * skillData.count), skillPart = skillData.skillPart or "", source = skillData.source or skillData.trigger or "" } })
 					end
 					addedStatNames[statName] = true
 				else
@@ -975,9 +1429,9 @@ function buildMode:OnFrame(inputEvents)
 				else
 					self:CloseBuild()
 				end
-		elseif IsKeyDown("CTRL") then
+			elseif IsKeyDown("CTRL") then
 				if event.key == "i" then
-						self.viewMode = "IMPORT"
+					self.viewMode = "IMPORT"
 					self.importTab:SelectControl(self.importTab.controls.importCodeIn)
 				elseif event.key == "s" then
 					self:SaveDBFile()
@@ -1040,12 +1494,7 @@ function buildMode:OnFrame(inputEvents)
 
 	-- Draw contents of current tab
 	local sideBarWidth = 312
-	local tabViewPort = {
-		x = sideBarWidth,
-		y = 32,
-		width = main.screenW - sideBarWidth,
-		height = main.screenH - 32
-	}
+	local tabViewPort = { x = sideBarWidth, y = 32, width = main.screenW - sideBarWidth, height = main.screenH - 32 }
 	if self.viewMode == "IMPORT" then
 		self.importTab:Draw(tabViewPort, inputEvents)
 	elseif self.viewMode == "NOTES" then
@@ -1064,7 +1513,9 @@ function buildMode:OnFrame(inputEvents)
 		self.calcsTab:Draw(tabViewPort, inputEvents)
 	end
 
-	self.unsaved = self.modFlag or self.notesTab.modFlag or self.partyTab.modFlag or self.configTab.modFlag or self.treeTab.modFlag or self.treeTab.searchFlag or self.spec.modFlag or self.skillsTab.modFlag or self.itemsTab.modFlag or self.calcsTab.modFlag
+	self.unsaved = self.modFlag or self.notesTab.modFlag or self.partyTab.modFlag or self.configTab.modFlag or
+		self.treeTab.modFlag or self.treeTab.searchFlag or self.spec.modFlag or self.skillsTab.modFlag or
+		self.itemsTab.modFlag or self.calcsTab.modFlag
 
 	SetDrawLayer(5)
 
@@ -1073,7 +1524,7 @@ function buildMode:OnFrame(inputEvents)
 	DrawImage(nil, 0, 0, main.screenW, 28)
 	SetDrawColor(0.85, 0.85, 0.85)
 	DrawImage(nil, 0, 28, main.screenW, 4)
-	DrawImage(nil, main.screenW/2 - 2, 0, 4, 28)
+	DrawImage(nil, main.screenW / 2 - 2, 0, 4, 28)
 
 	-- Draw side bar background
 	SetDrawColor(0.1, 0.1, 0.1)
@@ -1086,26 +1537,26 @@ end
 
 -- Opens the game version conversion popup
 function buildMode:OpenConversionPopup(buildXML)
-	local controls = { }
+	local controls = {}
 	local currentVersion = treeVersions[latestTreeVersion].display
-	controls.note = new("LabelControl", nil, 0, 20, 0, 16, colorCodes.TIP..[[
+	controls.note = new("LabelControl", nil, 0, 20, 0, 16, colorCodes.TIP .. [[
 Info:^7 You are trying to load a build created for a version of Last Epoch that is
 not supported by us. You will have to convert it to the current game version to load it.
 To use a build newer than the current supported game version, you may have to update.
 To use a build older than the current supported game version, we recommend loading it
 in an older version of Last Epoch Planner instead.
 ]])
-	controls.label = new("LabelControl", nil, 0, 110, 0, 16, colorCodes.WARNING..[[
+	controls.label = new("LabelControl", nil, 0, 110, 0, 16, colorCodes.WARNING .. [[
 Warning:^7 Converting a build to a different game version may have side effects.
 For example, if the passive tree has changed, then some passives may be deallocated.
 You should create a backup copy of the build before proceeding.
 ]])
-	controls.convert = new("ButtonControl", nil, -40, 170, 120, 20, "Convert to ".. currentVersion, function()
+	controls.convert = new("ButtonControl", nil, -40, 170, 120, 20, "Convert to " .. currentVersion, function ()
 		main:ClosePopup()
 		self:Shutdown()
 		self:Init(self.dbFileName, self.buildName, buildXML, true)
 	end)
-	controls.cancel = new("ButtonControl", nil, 60, 170, 70, 20, "Cancel", function()
+	controls.cancel = new("ButtonControl", nil, 60, 170, 70, 20, "Cancel", function ()
 		main:ClosePopup()
 		self:CloseBuild()
 	end)
@@ -1113,19 +1564,16 @@ You should create a backup copy of the build before proceeding.
 end
 
 function buildMode:OpenSavePopup(mode)
-	local modeDesc = {
-		["LIST"] = "now?",
-		["EXIT"] = "before exiting?",
-		["UPDATE"] = "before updating?",
-	}
-	local controls = { }
-	controls.label = new("LabelControl", nil, 0, 20, 0, 16, "^7This build has unsaved changes.\nDo you want to save them "..modeDesc[mode])
-	controls.save = new("ButtonControl", nil, -90, 70, 80, 20, "Save", function()
+	local modeDesc = { ["LIST"] = "now?", ["EXIT"] = "before exiting?", ["UPDATE"] = "before updating?", }
+	local controls = {}
+	controls.label = new("LabelControl", nil, 0, 20, 0, 16,
+		"^7This build has unsaved changes.\nDo you want to save them " .. modeDesc[mode])
+	controls.save = new("ButtonControl", nil, -90, 70, 80, 20, "Save", function ()
 		main:ClosePopup()
 		self.actionOnSave = mode
 		self:SaveDBFile()
 	end)
-	controls.noSave = new("ButtonControl", nil, 0, 70, 80, 20, "Don't Save", function()
+	controls.noSave = new("ButtonControl", nil, 0, 70, 80, 20, "Don't Save", function ()
 		main:ClosePopup()
 		if mode == "LIST" then
 			self:CloseBuild()
@@ -1135,7 +1583,7 @@ function buildMode:OpenSavePopup(mode)
 			launch:ApplyUpdate(launch.updateAvailable)
 		end
 	end)
-	controls.close = new("ButtonControl", nil, 90, 70, 80, 20, "Cancel", function()
+	controls.close = new("ButtonControl", nil, 90, 70, 80, 20, "Cancel", function ()
 		main:ClosePopup()
 	end)
 	main:OpenPopup(300, 100, "Save Changes", controls)
@@ -1143,10 +1591,10 @@ end
 
 function buildMode:OpenSaveAsPopup()
 	local newFileName, newBuildName
-	local controls = { }
+	local controls = {}
 	local function updateBuildName()
 		local buf = controls.edit.buf
-		newFileName = main.buildPath..controls.folder.subPath..buf..".xml"
+		newFileName = main.buildPath .. controls.folder.subPath .. buf .. ".xml"
 		newBuildName = buf
 		controls.save.enabled = false
 		if buf:match("%S") then
@@ -1159,21 +1607,23 @@ function buildMode:OpenSaveAsPopup()
 		end
 	end
 	controls.label = new("LabelControl", nil, 0, 20, 0, 16, "^7Enter new build name:")
-	controls.edit = new("EditControl", nil, 0, 40, 450, 20, self.dbFileName and self.buildName, nil, "\\/:%*%?\"<>|%c", 100, function(buf)
-		updateBuildName()
-	end)
-	controls.folderLabel = new("LabelControl", {"TOPLEFT",nil,"TOPLEFT"}, 10, 70, 0, 16, "^7Folder:")
-	controls.newFolder = new("ButtonControl", {"TOPLEFT",nil,"TOPLEFT"}, 100, 67, 94, 20, "New Folder...", function()
-		main:OpenNewFolderPopup(main.buildPath..controls.folder.subPath, function(newFolderName)
-			if newFolderName then
-				controls.folder:OpenFolder(newFolderName)
-			end
+	controls.edit = new("EditControl", nil, 0, 40, 450, 20, self.dbFileName and self.buildName, nil, "\\/:%*%?\"<>|%c",
+		100, function (buf)
+			updateBuildName()
 		end)
-	end)
-	controls.folder = new("FolderListControl", nil, 0, 115, 450, 100, self.dbFileSubPath, function(subPath)
+	controls.folderLabel = new("LabelControl", { "TOPLEFT", nil, "TOPLEFT" }, 10, 70, 0, 16, "^7Folder:")
+	controls.newFolder = new("ButtonControl", { "TOPLEFT", nil, "TOPLEFT" }, 100, 67, 94, 20, "New Folder...",
+		function ()
+			main:OpenNewFolderPopup(main.buildPath .. controls.folder.subPath, function (newFolderName)
+				if newFolderName then
+					controls.folder:OpenFolder(newFolderName)
+				end
+			end)
+		end)
+	controls.folder = new("FolderListControl", nil, 0, 115, 450, 100, self.dbFileSubPath, function (subPath)
 		updateBuildName()
 	end)
-	controls.save = new("ButtonControl", nil, -45, 225, 80, 20, "Save", function()
+	controls.save = new("ButtonControl", nil, -45, 225, 80, 20, "Save", function ()
 		main:ClosePopup()
 		self.dbFileName = newFileName
 		self.buildName = newBuildName
@@ -1182,7 +1632,7 @@ function buildMode:OpenSaveAsPopup()
 		self.spec:SetWindowTitleWithBuildClass()
 	end)
 	controls.save.enabled = false
-	controls.close = new("ButtonControl", nil, 45, 225, 80, 20, "Cancel", function()
+	controls.close = new("ButtonControl", nil, 45, 225, 80, 20, "Cancel", function ()
 		main:ClosePopup()
 		self.actionOnSave = nil
 	end)
@@ -1192,31 +1642,33 @@ end
 -- Open the spectre library popup
 function buildMode:OpenSpectreLibrary()
 	local destList = copyTable(self.spectreList)
-	local sourceList = { }
+	local sourceList = {}
 	for id in pairs(self.data.spectres) do
 		t_insert(sourceList, id)
 	end
-	table.sort(sourceList, function(a,b)
+	table.sort(sourceList, function (a, b)
 		if self.data.minions[a].name == self.data.minions[b].name then
 			return a < b
 		else
 			return self.data.minions[a].name < self.data.minions[b].name
 		end
 	end)
-	local controls = { }
+	local controls = {}
 	controls.list = new("MinionListControl", nil, -100, 40, 190, 250, self.data, destList)
 	controls.source = new("MinionListControl", nil, 100, 40, 190, 250, self.data, sourceList, controls.list)
-	controls.save = new("ButtonControl", nil, -45, 330, 80, 20, "Save", function()
+	controls.save = new("ButtonControl", nil, -45, 330, 80, 20, "Save", function ()
 		self.spectreList = destList
 		self.modFlag = true
 		self.buildFlag = true
 		main:ClosePopup()
 	end)
-	controls.cancel = new("ButtonControl", nil, 45, 330, 80, 20, "Cancel", function()
+	controls.cancel = new("ButtonControl", nil, 45, 330, 80, 20, "Cancel", function ()
 		main:ClosePopup()
 	end)
-	controls.noteLine1 = new("LabelControl", {"TOPLEFT",controls.list,"BOTTOMLEFT"}, 24, 2, 0, 16, "Spectres in your Library must be assigned to an active")
-	controls.noteLine2 = new("LabelControl", {"TOPLEFT",controls.list,"BOTTOMLEFT"}, 20, 18, 0, 16, "Raise Spectre gem for their buffs and curses to activate")
+	controls.noteLine1 = new("LabelControl", { "TOPLEFT", controls.list, "BOTTOMLEFT" }, 24, 2, 0, 16,
+		"Spectres in your Library must be assigned to an active")
+	controls.noteLine2 = new("LabelControl", { "TOPLEFT", controls.list, "BOTTOMLEFT" }, 20, 18, 0, 16,
+		"Raise Spectre gem for their buffs and curses to activate")
 	main:OpenPopup(410, 360, "Spectre Library", controls)
 end
 
@@ -1244,8 +1696,8 @@ function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 			mainGroup = controls.mainSocketGroup.list[1].val
 		end
 		local mainSocketGroup = self.skillsTab.socketGroupList[mainGroup]
-		local displaySkillList = mainSocketGroup["displaySkillList"..suffix]
-		local mainActiveSkill = mainSocketGroup["mainActiveSkill"..suffix] or 1
+		local displaySkillList = mainSocketGroup["displaySkillList" .. suffix]
+		local mainActiveSkill = mainSocketGroup["mainActiveSkill" .. suffix] or 1
 		controls.mainSkillPart.shown = false
 		controls.mainSkillMineCount.shown = false
 		controls.mainSkillStageCount.shown = false
@@ -1262,40 +1714,43 @@ function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 					for i, part in ipairs(activeEffect.grantedEffect.parts) do
 						t_insert(controls.mainSkillPart.list, { val = i, label = part.name })
 					end
-					controls.mainSkillPart.selIndex = activeEffect.srcInstance["skillPart"..suffix] or 1
+					controls.mainSkillPart.selIndex = activeEffect.srcInstance["skillPart" .. suffix] or 1
 					if activeEffect.grantedEffect.parts[controls.mainSkillPart.selIndex].stages then
 						controls.mainSkillStageCount.shown = true
-						controls.mainSkillStageCount.buf = tostring(activeEffect.srcInstance["skillStageCount"..suffix] or activeEffect.grantedEffect.parts[controls.mainSkillPart.selIndex].stagesMin or 1)
+						controls.mainSkillStageCount.buf = tostring(activeEffect.srcInstance
+							["skillStageCount" .. suffix] or
+							activeEffect.grantedEffect.parts[controls.mainSkillPart.selIndex].stagesMin or 1)
 					end
 				end
 				if activeSkill.skillFlags.mine then
 					controls.mainSkillMineCount.shown = true
-					controls.mainSkillMineCount.buf = tostring(activeEffect.srcInstance["skillMineCount"..suffix] or "")
+					controls.mainSkillMineCount.buf = tostring(activeEffect.srcInstance["skillMineCount" .. suffix] or "")
 				end
 				if activeSkill.skillFlags.multiStage and not (activeEffect.grantedEffect.parts and #activeEffect.grantedEffect.parts > 1) then
 					controls.mainSkillStageCount.shown = true
-					controls.mainSkillStageCount.buf = tostring(activeEffect.srcInstance["skillStageCount"..suffix] or activeSkill.skillData.stagesMin or 1)
+					controls.mainSkillStageCount.buf = tostring(activeEffect.srcInstance["skillStageCount" .. suffix] or
+						activeSkill.skillData.stagesMin or 1)
 				end
 				if not activeSkill.skillFlags.disable and (activeEffect.grantedEffect.minionList or activeSkill.minionList[1]) then
 					wipeTable(controls.mainSkillMinion.list)
 					if activeEffect.grantedEffect.minionHasItemSet then
 						for _, itemSetId in ipairs(self.itemsTab.itemSetOrderList) do
 							local itemSet = self.itemsTab.itemSets[itemSetId]
-							t_insert(controls.mainSkillMinion.list, {
-								label = itemSet.title or "Default Item Set",
-								itemSetId = itemSetId,
-							})
+							t_insert(controls.mainSkillMinion.list,
+								{ label = itemSet.title or "Default Item Set", itemSetId = itemSetId, })
 						end
-						controls.mainSkillMinion:SelByValue(activeEffect.srcInstance["skillMinionItemSet"..suffix] or 1, "itemSetId")
+						controls.mainSkillMinion:SelByValue(
+							activeEffect.srcInstance["skillMinionItemSet" .. suffix] or 1,
+							"itemSetId")
 					else
 						controls.mainSkillMinionLibrary.shown = (activeEffect.grantedEffect.minionList and not activeEffect.grantedEffect.minionList[1])
 						for _, minionId in ipairs(activeSkill.minionList) do
-							t_insert(controls.mainSkillMinion.list, {
-								label = self.data.minions[minionId].name,
-								minionId = minionId,
-							})
+							t_insert(controls.mainSkillMinion.list,
+								{ label = self.data.minions[minionId].name, minionId = minionId, })
 						end
-						controls.mainSkillMinion:SelByValue(activeEffect.srcInstance["skillMinion"..suffix] or controls.mainSkillMinion.list[1], "minionId")
+						controls.mainSkillMinion:SelByValue(
+							activeEffect.srcInstance["skillMinion" .. suffix] or controls.mainSkillMinion.list[1],
+							"minionId")
 					end
 					controls.mainSkillMinion.enabled = #controls.mainSkillMinion.list > 1
 					controls.mainSkillMinion.shown = true
@@ -1304,7 +1759,8 @@ function buildMode:RefreshSkillSelectControls(controls, mainGroup, suffix)
 						for _, minionSkill in ipairs(activeSkill.minion.activeSkillList) do
 							t_insert(controls.mainSkillMinionSkill.list, minionSkill.activeEffect.grantedEffect.name)
 						end
-						controls.mainSkillMinionSkill.selIndex = activeEffect.srcInstance["skillMinionSkill"..suffix] or 1
+						controls.mainSkillMinionSkill.selIndex = activeEffect.srcInstance["skillMinionSkill" .. suffix] or
+							1
 						controls.mainSkillMinionSkill.shown = true
 						controls.mainSkillMinionSkill.enabled = #controls.mainSkillMinionSkill.list > 1
 					else
@@ -1324,7 +1780,7 @@ function buildMode:FormatStat(statData, statVal, overCapStatVal, colorOverride)
 		color = colorCodes.NEGATIVE
 	end
 
-	local valStr = s_format("%"..statData.fmt, val)
+	local valStr = s_format("%" .. statData.fmt, val)
 	valStr:gsub("%.", main.decimalSeparator)
 	valStr = color .. formatNumSep(valStr)
 
@@ -1353,38 +1809,34 @@ function buildMode:AddDisplayStatList(statList, actor)
 				if statVal and statData.childStat then
 					statVal = statVal[statData.childStat]
 				end
-				if statVal and ((statData.condFunc and statData.condFunc(statVal,actor.output)) or (not statData.condFunc and statVal ~= 0)) then
+				if statVal and ((statData.condFunc and statData.condFunc(statVal, actor.output)) or (not statData.condFunc and statVal ~= 0)) then
 					local overCapStatVal = actor.output[statData.overCapStat] or nil
 					if statData.stat == "SkillDPS" then
 						labelColor = colorCodes.CUSTOM
-						table.sort(actor.output.SkillDPS, function(a,b) return (a.dps * a.count) > (b.dps * b.count) end)
+						table.sort(actor.output.SkillDPS,
+							function (a, b) return (a.dps * a.count) > (b.dps * b.count) end)
 						for _, skillData in ipairs(actor.output.SkillDPS) do
 							local triggerStr = ""
 							if skillData.trigger and skillData.trigger ~= "" then
-								triggerStr = colorCodes.WARNING.." ("..skillData.trigger..")"..labelColor
+								triggerStr = colorCodes.WARNING .. " (" .. skillData.trigger .. ")" .. labelColor
 							end
-							local lhsString = labelColor..skillData.name..triggerStr..":"
+							local lhsString = labelColor .. skillData.name .. triggerStr .. ":"
 							if skillData.count >= 2 then
-								lhsString = labelColor..tostring(skillData.count).."x "..skillData.name..triggerStr..":"
+								lhsString = labelColor ..
+									tostring(skillData.count) .. "x " .. skillData.name .. triggerStr .. ":"
 							end
 							t_insert(statBoxList, {
 								height = 16,
 								lhsString,
-								self:FormatStat({fmt = "1.f"}, skillData.dps * skillData.count, overCapStatVal),
+								self:FormatStat({ fmt = "1.f" }, skillData.dps * skillData.count, overCapStatVal),
 							})
 							if skillData.skillPart then
-								t_insert(statBoxList, {
-									height = 14,
-									align = "CENTER_X", x = 140,
-									"^8"..skillData.skillPart,
-								})
+								t_insert(statBoxList,
+									{ height = 14, align = "CENTER_X", x = 140, "^8" .. skillData.skillPart, })
 							end
 							if skillData.source then
-								t_insert(statBoxList, {
-									height = 14,
-									align = "CENTER_X", x = 140,
-									colorCodes.WARNING.."from " ..skillData.source,
-								})
+								t_insert(statBoxList,
+									{ height = 14, align = "CENTER_X", x = 140, colorCodes.WARNING .. "from " .. skillData.source, })
 							end
 						end
 					elseif not (statData.hideStat) then
@@ -1406,7 +1858,7 @@ function buildMode:AddDisplayStatList(statList, actor)
 						end
 						t_insert(statBoxList, {
 							height = 16,
-							labelColor..statData.label..":",
+							labelColor .. statData.label .. ":",
 							self:FormatStat(statData, statVal, overCapStatVal, colorOverride),
 						})
 					end
@@ -1419,38 +1871,44 @@ function buildMode:AddDisplayStatList(statList, actor)
 				end
 			elseif statData.label and statData.condFunc and statData.condFunc(actor.output) then
 				t_insert(statBoxList, {
-					height = 16, labelColor..statData.label..":",
-					"^7"..actor.output[statData.labelStat].."%^x808080" .. " (" .. statData.val  .. ")",})
+					height = 16,
+					labelColor .. statData.label .. ":",
+					"^7" .. actor.output[statData.labelStat] .. "%^x808080" .. " (" .. statData.val .. ")",
+				})
 			elseif not statBoxList[#statBoxList] or statBoxList[#statBoxList][1] then
 				t_insert(statBoxList, { height = 6 })
 			end
 		end
 	end
-	for pool, warningFlag in pairs({["Life"] = "LifeCostWarning", ["Mana"] = "ManaCostWarning", ["Rage"] = "RageCostWarning", ["Energy Shield"] = "ESCostWarning"}) do
+	for pool, warningFlag in pairs({ ["Life"] = "LifeCostWarning", ["Mana"] = "ManaCostWarning", ["Rage"] = "RageCostWarning", ["Energy Shield"] = "ESCostWarning" }) do
 		if actor.output[warningFlag] then
-			local line = "You do not have enough "..(actor.output.EnergyShieldProtectsMana and pool == "Mana" and "Energy Shield and Mana" or pool).." to use: "
+			local line = "You do not have enough " ..
+				(actor.output.EnergyShieldProtectsMana and pool == "Mana" and "Energy Shield and Mana" or pool) ..
+				" to use: "
 			for _, skill in ipairs(actor.output[warningFlag]) do
-				line = line..skill..", "
+				line = line .. skill .. ", "
 			end
 			line = line:sub(1, -3)
 			InsertIfNew(self.controls.warnings.lines, line)
 		end
 	end
-	for pool, warningFlag in pairs({["Unreserved life"] = "LifePercentCostPercentCostWarning", ["Unreserved Mana"] = "ManaPercentCostPercentCostWarning"}) do
+	for pool, warningFlag in pairs({ ["Unreserved life"] = "LifePercentCostPercentCostWarning", ["Unreserved Mana"] = "ManaPercentCostPercentCostWarning" }) do
 		if actor.output[warningFlag] then
-			local line = "You do not have enough ".. pool .."% to use: "
+			local line = "You do not have enough " .. pool .. "% to use: "
 			for _, skill in ipairs(actor.output[warningFlag]) do
-				line = line..skill..", "
+				line = line .. skill .. ", "
 			end
 			line = line:sub(1, -3)
 			InsertIfNew(self.controls.warnings.lines, line)
 		end
 	end
 	if actor.output.VixensTooMuchCastSpeedWarn then
-		InsertIfNew(self.controls.warnings.lines, "You may have too much cast speed or too little cooldown reduction to effectively use Vixen's Curse replacement")
+		InsertIfNew(self.controls.warnings.lines,
+			"You may have too much cast speed or too little cooldown reduction to effectively use Vixen's Curse replacement")
 	end
 	if actor.output.VixenModeNoVixenGlovesWarn then
-		InsertIfNew(self.controls.warnings.lines, "Vixen's calculation mode for Doom Blast is selected but you do not have Vixen's Entrapment Embroidered Gloves equipped")
+		InsertIfNew(self.controls.warnings.lines,
+			"Vixen's calculation mode for Doom Blast is selected but you do not have Vixen's Entrapment Embroidered Gloves equipped")
 	end
 end
 
@@ -1462,17 +1920,24 @@ function buildMode:RefreshStatList()
 	self.controls.warnings.lines = {}
 	local statBoxList = wipeTable(self.controls.statBox.list)
 	if self.calcsTab.mainEnv.player.mainSkill.infoMessage then
-		t_insert(statBoxList, { height = 14, align = "CENTER_X", x = 140, colorCodes.CUSTOM .. self.calcsTab.mainEnv.player.mainSkill.infoMessage})
+		t_insert(statBoxList,
+			{ height = 14, align = "CENTER_X", x = 140, colorCodes.CUSTOM ..
+			self.calcsTab.mainEnv.player.mainSkill.infoMessage })
 		if self.calcsTab.mainEnv.player.mainSkill.infoMessage2 then
-			t_insert(statBoxList, { height = 14, align = "CENTER_X", x = 140, "^8" .. self.calcsTab.mainEnv.player.mainSkill.infoMessage2})
+			t_insert(statBoxList,
+				{ height = 14, align = "CENTER_X", x = 140, "^8" .. self.calcsTab.mainEnv.player.mainSkill.infoMessage2 })
 		end
 	end
 	if self.calcsTab.mainEnv.minion then
 		t_insert(statBoxList, { height = 18, "^7Minion:" })
 		if self.calcsTab.mainEnv.minion.mainSkill.infoMessage then
-			t_insert(statBoxList, { height = 14, align = "CENTER_X", x = 140, colorCodes.CUSTOM .. self.calcsTab.mainEnv.minion.mainSkill.infoMessage})
+			t_insert(statBoxList,
+				{ height = 14, align = "CENTER_X", x = 140, colorCodes.CUSTOM ..
+				self.calcsTab.mainEnv.minion.mainSkill.infoMessage })
 			if self.calcsTab.mainEnv.minion.mainSkill.infoMessage2 then
-				t_insert(statBoxList, { height = 14, align = "CENTER_X", x = 140, "^8" .. self.calcsTab.mainEnv.minion.mainSkill.infoMessage2})
+				t_insert(statBoxList,
+					{ height = 14, align = "CENTER_X", x = 140, "^8" ..
+					self.calcsTab.mainEnv.minion.mainSkill.infoMessage2 })
 			end
 		end
 		self:AddDisplayStatList(self.minionDisplayStats, self.calcsTab.mainEnv.minion)
@@ -1481,7 +1946,8 @@ function buildMode:RefreshStatList()
 	end
 	if self.calcsTab.mainEnv.player.mainSkill.skillFlags.disable then
 		t_insert(statBoxList, { height = 16, "^7Skill disabled:" })
-		t_insert(statBoxList, { height = 14, align = "CENTER_X", x = 140, self.calcsTab.mainEnv.player.mainSkill.disableReason })
+		t_insert(statBoxList,
+			{ height = 14, align = "CENTER_X", x = 140, self.calcsTab.mainEnv.player.mainSkill.disableReason })
 	end
 	self:AddDisplayStatList(self.displayStats, self.calcsTab.mainEnv.player)
 	self:InsertItemWarnings()
@@ -1497,13 +1963,14 @@ function buildMode:CompareStatList(tooltip, statList, actor, baseOutput, compare
 			if statData.stat == "FullDPS" and not GlobalCache.useFullDPS and not self.viewMode == "TREE" then
 				diff = 0
 			end
-			if (diff > 0.001 or diff < -0.001) and (not statData.condFunc or statData.condFunc(statVal1,compareOutput) or statData.condFunc(statVal2,baseOutput)) then
+			if (diff > 0.001 or diff < -0.001) and (not statData.condFunc or statData.condFunc(statVal1, compareOutput) or statData.condFunc(statVal2, baseOutput)) then
 				if count == 0 then
 					tooltip:AddLine(14, header)
 				end
-				local color = ((statData.lowerIsBetter and diff < 0) or (not statData.lowerIsBetter and diff > 0)) and colorCodes.POSITIVE or colorCodes.NEGATIVE
+				local color = ((statData.lowerIsBetter and diff < 0) or (not statData.lowerIsBetter and diff > 0)) and
+					colorCodes.POSITIVE or colorCodes.NEGATIVE
 				local val = diff * ((statData.pc or statData.mod) and 100 or 1)
-				local valStr = s_format("%+"..statData.fmt, val) -- Can't use self:FormatStat, because it doesn't have %+. Adding that would have complicated a simple function
+				local valStr = s_format("%+" .. statData.fmt, val) -- Can't use self:FormatStat, because it doesn't have %+. Adding that would have complicated a simple function
 
 				valStr = formatNumSep(valStr)
 
@@ -1517,7 +1984,9 @@ function buildMode:CompareStatList(tooltip, statList, actor, baseOutput, compare
 					end
 				end
 				if nodeCount then
-					line = line .. s_format(" ^8[%+"..statData.fmt.."%s per point]", diff * ((statData.pc or statData.mod) and 100 or 1) / nodeCount, pcPerPt)
+					line = line ..
+						s_format(" ^8[%+" .. statData.fmt .. "%s per point]",
+							diff * ((statData.pc or statData.mod) and 100 or 1) / nodeCount, pcPerPt)
 				end
 				tooltip:AddLine(14, line)
 				count = count + 1
@@ -1533,26 +2002,30 @@ end
 function buildMode:AddStatComparesToTooltip(tooltip, baseOutput, compareOutput, header, nodeCount)
 	local count = 0
 	if self.calcsTab.mainEnv.player.mainSkill.minion and baseOutput.Minion and compareOutput.Minion then
-		count = count + self:CompareStatList(tooltip, self.minionDisplayStats, self.calcsTab.mainEnv.minion, baseOutput.Minion, compareOutput.Minion, header.."\n^7Minion:", nodeCount)
+		count = count +
+			self:CompareStatList(tooltip, self.minionDisplayStats, self.calcsTab.mainEnv.minion, baseOutput.Minion,
+				compareOutput.Minion, header .. "\n^7Minion:", nodeCount)
 		if count > 0 then
 			header = "^7Player:"
 		else
-			header = header.."\n^7Player:"
+			header = header .. "\n^7Player:"
 		end
 	end
-	count = count + self:CompareStatList(tooltip, self.displayStats, self.calcsTab.mainEnv.player, baseOutput, compareOutput, header, nodeCount)
+	count = count +
+		self:CompareStatList(tooltip, self.displayStats, self.calcsTab.mainEnv.player, baseOutput, compareOutput, header,
+			nodeCount)
 	return count
 end
 
 -- Add requirements to tooltip
 do
-	local req = { }
+	local req = {}
 	function buildMode:AddRequirementsToTooltip(tooltip, level)
 		if level and level > 0 then
 			t_insert(req, s_format("^x7F7F7FLevel %s%d", main:StatColor(level, nil, self.characterLevel), level))
 		end
 		if req[1] then
-			tooltip:AddLine(16, "^x7F7F7FRequires "..table.concat(req, "^x7F7F7F, "))
+			tooltip:AddLine(16, "^x7F7F7FRequires " .. table.concat(req, "^x7F7F7F, "))
 			tooltip:AddSeparator(10)
 		end
 		wipeTable(req)
@@ -1631,7 +2104,6 @@ function buildMode:SaveDB(fileName)
 	end
 end
 
-
 function buildMode:SaveDBFile()
 	if not self.dbFileName then
 		self:OpenSaveAsPopup()
@@ -1643,7 +2115,8 @@ function buildMode:SaveDBFile()
 	end
 	local file = io.open(self.dbFileName, "w+")
 	if not file then
-		main:OpenMessagePopup("Error", "Couldn't save the build file:\n"..self.dbFileName.."\nMake sure the save folder exists and is writable.")
+		main:OpenMessagePopup("Error",
+			"Couldn't save the build file:\n" .. self.dbFileName .. "\nMake sure the save folder exists and is writable.")
 		return true
 	end
 	file:write(xmlText)

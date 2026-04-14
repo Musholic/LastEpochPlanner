@@ -8,18 +8,19 @@ local m_max = math.max
 local m_ceil = math.ceil
 local m_floor = math.floor
 
-local ScrollBarClass = newClass("ScrollBarControl", "Control", function(self, anchor, x, y, width, height, step, dir, autoHide)
-	self.Control(anchor, x, y, width, height)
-	self.step = step or width * 2
-	self.dir = dir or "VERTICAL"
-	self.offset = 0
-	self.enabled = false
-	if autoHide then
-		self.shown = function()
-			return self.enabled
+local ScrollBarClass = newClass("ScrollBarControl", "Control",
+	function (self, anchor, x, y, width, height, step, dir, autoHide)
+		self.Control(anchor, x, y, width, height)
+		self.step = step or width * 2
+		self.dir = dir or "VERTICAL"
+		self.offset = 0
+		self.enabled = false
+		if autoHide then
+			self.shown = function ()
+				return self.enabled
+			end
 		end
-	end
-end)
+	end)
 
 function ScrollBarClass:SetContentDimension(conDim, viewDim)
 	self.conDim = conDim
@@ -179,9 +180,9 @@ function ScrollBarClass:Draw()
 		SetDrawColor(0.5, 0.5, 0.5)
 	end
 	if dir == "HORIZONTAL" then
-		main:DrawArrow(x + height/2, y + height/2, height/2, height/2, "LEFT")
+		main:DrawArrow(x + height / 2, y + height / 2, height / 2, height / 2, "LEFT")
 	else
-		main:DrawArrow(x + width/2, y + width/2, width/2, width/2, "UP")
+		main:DrawArrow(x + width / 2, y + width / 2, width / 2, width / 2, "UP")
 	end
 	-- Draw down/right button background
 	if not enabled then
@@ -215,9 +216,9 @@ function ScrollBarClass:Draw()
 		SetDrawColor(0.5, 0.5, 0.5)
 	end
 	if dir == "HORIZONTAL" then
-		main:DrawArrow(x + width - height/2, y + height/2, height/2, height/2, "RIGHT")
+		main:DrawArrow(x + width - height / 2, y + height / 2, height / 2, height / 2, "RIGHT")
 	else
-		main:DrawArrow(x + width/2, y + height - width/2, width/2, width/2, "DOWN")
+		main:DrawArrow(x + width / 2, y + height - width / 2, width / 2, width / 2, "DOWN")
 	end
 	-- Draw slide background
 	if not enabled then
@@ -306,7 +307,6 @@ function ScrollBarClass:OnKeyUp(key)
 			self.holdRepeating = nil
 			self.holdPauseTime = nil
 		end
-
 	elseif self:IsScrollDownKey(key) then
 		self:Scroll(1)
 	elseif self:IsScrollUpKey(key) then
@@ -316,8 +316,9 @@ end
 
 -- Centralize inputs allowed to keep consistent scroll behavior for all scrollBars
 function ScrollBarClass:IsScrollDownKey(key)
-	return isValueInTable({"WHEELDOWN", "PAGEDOWN"}, key)
+	return isValueInTable({ "WHEELDOWN", "PAGEDOWN" }, key)
 end
+
 function ScrollBarClass:IsScrollUpKey(key)
-	return isValueInTable({"WHEELUP", "PAGEUP"}, key)
+	return isValueInTable({ "WHEELUP", "PAGEUP" }, key)
 end

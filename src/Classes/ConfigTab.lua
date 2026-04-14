@@ -11,36 +11,38 @@ local s_upper = string.upper
 
 local varList = LoadModule("Modules/ConfigOptions")
 
-local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Control", function(self, build)
+local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Control", function (self, build)
 	self.UndoHandler()
 	self.ControlHost()
 	self.Control()
 
 	self.build = build
 
-	self.input = { }
-	self.placeholder = { }
-	self.defaultState = { }
-	
+	self.input = {}
+	self.placeholder = {}
+	self.defaultState = {}
+
 	self.enemyLevel = 1
 
-	self.sectionList = { }
-	self.varControls = { }
-	
+	self.sectionList = {}
+	self.varControls = {}
+
 	self:BuildModList()
-	
+
 	self.toggleConfigs = false
 
 	self.controls.sectionAnchor = new("LabelControl", { "TOPLEFT", self, "TOPLEFT" }, 0, 20, 0, 0, "")
-	self.controls.search = new("EditControl", { "TOPLEFT", self.controls.sectionAnchor, "TOPLEFT" }, 8, -15, 360, 20, "", "Search", "%c", 100, function()
-		self:UpdateControls()
-	end, nil, nil, true)
-	self.controls.toggleConfigs = new("ButtonControl", { "LEFT", self.controls.search, "RIGHT" }, 10, 0, 200, 20, function()
-		-- dynamic text
-		return self.toggleConfigs and "Hide Ineligible Configurations" or "Show All Configurations"
-	end, function()
-		self.toggleConfigs = not self.toggleConfigs
-	end)
+	self.controls.search = new("EditControl", { "TOPLEFT", self.controls.sectionAnchor, "TOPLEFT" }, 8, -15, 360, 20, "",
+		"Search", "%c", 100, function ()
+			self:UpdateControls()
+		end, nil, nil, true)
+	self.controls.toggleConfigs = new("ButtonControl", { "LEFT", self.controls.search, "RIGHT" }, 10, 0, 200, 20,
+		function ()
+			-- dynamic text
+			return self.toggleConfigs and "Hide Ineligible Configurations" or "Show All Configurations"
+		end, function ()
+			self.toggleConfigs = not self.toggleConfigs
+		end)
 
 	local function searchMatch(varData)
 		local searchStr = self.controls.search.buf:lower():gsub("[%-%.%+%[%]%$%^%%%?%*]", "%%%0")
@@ -84,8 +86,8 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 				end
 			end
 			if (varData.implyCond and mainEnv.conditionsUsed[varData.implyCond]) or
-			   (varData.implyMinionCond and mainEnv.minionConditionsUsed[varData.implyMinionCond]) or
-			   (varData.implyEnemyCond and mainEnv.enemyConditionsUsed[varData.implyEnemyCond]) then
+				(varData.implyMinionCond and mainEnv.minionConditionsUsed[varData.implyMinionCond]) or
+				(varData.implyEnemyCond and mainEnv.enemyConditionsUsed[varData.implyEnemyCond]) then
 				return true
 			end
 		end
@@ -94,7 +96,7 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 	end
 
 	local function listOrSingleIfOption(ifOption, ifFunc)
-		return function()
+		return function ()
 			if type(ifOption) == "table" then
 				for _, ifOpt in ipairs(ifOption) do
 					if ifFunc(ifOpt) then
@@ -107,13 +109,13 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 	end
 
 	local function listOrSingleIfTooltip(ifOption, ifFunc)
-		return function()
+		return function ()
 			if type(ifOption) == "table" then
 				local out
 				for _, ifOpt in ipairs(ifOption) do
 					local curTooltipText = ifFunc(ifOpt)
 					if curTooltipText then
-						out = (out and out .. "\n" or "").. curTooltipText
+						out = (out and out .. "\n" or "") .. curTooltipText
 					end
 				end
 				return out
@@ -125,10 +127,11 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 	local lastSection
 	for _, varData in ipairs(varList) do
 		if varData.section then
-			lastSection = new("SectionControl", {"TOPLEFT",self.controls.sectionAnchor,"TOPLEFT"}, 0, 0, 360, 0, varData.section)
-			lastSection.varControlList = { }
+			lastSection = new("SectionControl", { "TOPLEFT", self.controls.sectionAnchor, "TOPLEFT" }, 0, 0, 360, 0,
+				varData.section)
+			lastSection.varControlList = {}
 			lastSection.col = varData.col
-			lastSection.height = function(self)
+			lastSection.height = function (self)
 				local height = 20
 				for _, varControl in pairs(self.varControlList) do
 					if varControl:IsShown() then
@@ -142,43 +145,48 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 		else
 			local control
 			if varData.type == "check" then
-				control = new("CheckBoxControl", {"TOPLEFT",lastSection,"TOPLEFT"}, 234, 0, 18, varData.label, function(state)
-					self.input[varData.var] = state
-					self:AddUndoState()
-					self:BuildModList()
-					self.build.buildFlag = true
-				end)
+				control = new("CheckBoxControl", { "TOPLEFT", lastSection, "TOPLEFT" }, 234, 0, 18, varData.label,
+					function (state)
+						self.input[varData.var] = state
+						self:AddUndoState()
+						self:BuildModList()
+						self.build.buildFlag = true
+					end)
 			elseif varData.type == "count" or varData.type == "integer" or varData.type == "countAllowZero" or varData.type == "float" then
-				control = new("EditControl", {"TOPLEFT",lastSection,"TOPLEFT"}, 234, 0, 90, 18, "", nil, (varData.type == "integer" and "^%-%d") or (varData.type == "float" and "^%d.") or "%D", 7, function(buf, placeholder)
-					if placeholder then
-						self.placeholder[varData.var] = tonumber(buf)
-					else
-						self.input[varData.var] = tonumber(buf)
-						self:AddUndoState()
-						self:BuildModList()
-					end
-					self.build.buildFlag = true
-				end)
+				control = new("EditControl", { "TOPLEFT", lastSection, "TOPLEFT" }, 234, 0, 90, 18, "", nil,
+					(varData.type == "integer" and "^%-%d") or (varData.type == "float" and "^%d.") or "%D", 7,
+					function (buf, placeholder)
+						if placeholder then
+							self.placeholder[varData.var] = tonumber(buf)
+						else
+							self.input[varData.var] = tonumber(buf)
+							self:AddUndoState()
+							self:BuildModList()
+						end
+						self.build.buildFlag = true
+					end)
 			elseif varData.type == "list" then
-				control = new("DropDownControl", {"TOPLEFT",lastSection,"TOPLEFT"}, 234, 0, 118, 16, varData.list, function(index, value)
-					self.input[varData.var] = value.val
-					self:AddUndoState()
-					self:BuildModList()
-					self.build.buildFlag = true
-				end)
-			elseif varData.type == "text" then
-				control = new("EditControl", {"TOPLEFT",lastSection,"TOPLEFT"}, 8, 0, 344, 118, "", nil, "^%C\t\n", nil, function(buf, placeholder)
-					if placeholder then
-						self.placeholder[varData.var] = tostring(buf)
-					else
-						self.input[varData.var] = tostring(buf)
+				control = new("DropDownControl", { "TOPLEFT", lastSection, "TOPLEFT" }, 234, 0, 118, 16, varData.list,
+					function (index, value)
+						self.input[varData.var] = value.val
 						self:AddUndoState()
 						self:BuildModList()
-					end
-					self.build.buildFlag = true
-				end, 16)
+						self.build.buildFlag = true
+					end)
+			elseif varData.type == "text" then
+				control = new("EditControl", { "TOPLEFT", lastSection, "TOPLEFT" }, 8, 0, 344, 118, "", nil, "^%C\t\n",
+					nil, function (buf, placeholder)
+						if placeholder then
+							self.placeholder[varData.var] = tostring(buf)
+						else
+							self.input[varData.var] = tostring(buf)
+							self:AddUndoState()
+							self:BuildModList()
+						end
+						self.build.buildFlag = true
+					end, 16)
 			else
-				control = new("Control", {"TOPLEFT",lastSection,"TOPLEFT"}, 234, 0, 16, 16)
+				control = new("Control", { "TOPLEFT", lastSection, "TOPLEFT" }, 234, 0, 16, 16)
 			end
 
 			if varData.inactiveText then
@@ -186,7 +194,7 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 			end
 
 			local shownFuncs = {}
-			control.shown = function()
+			control.shown = function ()
 				if not searchMatch(varData) then
 					return false
 				end
@@ -200,10 +208,11 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 			end
 
 			local tooltipFuncs = {}
-			control.tooltipText = function()
+			control.tooltipText = function ()
 				local out
 				for i, tooltipFunc in ipairs(tooltipFuncs) do
-					local curTooltipText = type(tooltipFunc) == "string" and tooltipFunc or tooltipFunc(self.modList, self.build)
+					local curTooltipText = type(tooltipFunc) == "string" and tooltipFunc or
+						tooltipFunc(self.modList, self.build)
 					if curTooltipText then
 						out = (out and out .. "\n" or "") .. curTooltipText
 					end
@@ -216,7 +225,7 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 			end
 
 			if varData.ifNode then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifNode, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifNode, function (ifOption)
 					if self.build.spec.allocNodes[ifOption] then
 						return true
 					end
@@ -225,23 +234,23 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 						return self.build.calcsTab.mainEnv.keystonesAdded[node.dn]
 					end
 				end))
-				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifNode, function(ifOption)
-					return "This option is specific to '"..self.build.spec.nodes[ifOption].dn.."'."
+				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifNode, function (ifOption)
+					return "This option is specific to '" .. self.build.spec.nodes[ifOption].dn .. "'."
 				end))
 			end
 			if varData.ifOption then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifOption, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifOption, function (ifOption)
 					return self.input[ifOption]
 				end))
 			end
 			if varData.ifCond then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifCond, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifCond, function (ifOption)
 					if implyCond(varData) then
 						return true
 					end
 					return self.build.calcsTab.mainEnv.conditionsUsed[ifOption]
 				end))
-				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifCond, function(ifOption)
+				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifCond, function (ifOption)
 					if not launch.devModeAlt then
 						return
 					end
@@ -251,19 +260,19 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 						return out
 					end
 					for _, mod in ipairs(mods) do
-						out = (out and out.."\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
+						out = (out and out .. "\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
 					end
 					return out
 				end))
 			end
 			if varData.ifMinionCond then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifMinionCond, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifMinionCond, function (ifOption)
 					if implyCond(varData) then
 						return true
 					end
 					return self.build.calcsTab.mainEnv.minionConditionsUsed[ifOption]
 				end))
-				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifMinionCond, function(ifOption)
+				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifMinionCond, function (ifOption)
 					if not launch.devModeAlt then
 						return
 					end
@@ -273,19 +282,19 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 						return out
 					end
 					for _, mod in ipairs(mods) do
-						out = (out and out.."\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
+						out = (out and out .. "\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
 					end
 					return out
 				end))
 			end
 			if varData.ifEnemyCond then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifEnemyCond, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifEnemyCond, function (ifOption)
 					if implyCond(varData) then
 						return true
 					end
 					return self.build.calcsTab.mainEnv.enemyConditionsUsed[ifOption]
 				end))
-				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifEnemyCond, function(ifOption)
+				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifEnemyCond, function (ifOption)
 					if not launch.devModeAlt then
 						return
 					end
@@ -295,19 +304,19 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 						return out
 					end
 					for _, mod in ipairs(mods) do
-						out = (out and out.."\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
+						out = (out and out .. "\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
 					end
 					return out
 				end))
 			end
 			if varData.ifMult then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifMult, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifMult, function (ifOption)
 					if implyCond(varData) then
 						return true
 					end
 					return self.build.calcsTab.mainEnv.multipliersUsed[ifOption]
 				end))
-				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifMult, function(ifOption)
+				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifMult, function (ifOption)
 					if not launch.devModeAlt then
 						return
 					end
@@ -317,19 +326,19 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 						return out
 					end
 					for _, mod in ipairs(mods) do
-						out = (out and out.."\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
+						out = (out and out .. "\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
 					end
 					return out
 				end))
 			end
 			if varData.ifEnemyMult then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifEnemyMult, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifEnemyMult, function (ifOption)
 					if implyCond(varData) then
 						return true
 					end
 					return self.build.calcsTab.mainEnv.enemyMultipliersUsed[ifOption]
 				end))
-				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifEnemyMult, function(ifOption)
+				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifEnemyMult, function (ifOption)
 					if not launch.devModeAlt then
 						return
 					end
@@ -339,19 +348,20 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 						return out
 					end
 					for _, mod in ipairs(mods) do
-						out = (out and out.."\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
+						out = (out and out .. "\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
 					end
 					return out
 				end))
 			end
 			if varData.ifStat then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifStat, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifStat, function (ifOption)
 					if implyCond(varData) then
 						return true
 					end
-					return self.build.calcsTab.mainEnv.perStatsUsed[ifOption] or self.build.calcsTab.mainEnv.enemyMultipliersUsed[ifOption]
+					return self.build.calcsTab.mainEnv.perStatsUsed[ifOption] or
+						self.build.calcsTab.mainEnv.enemyMultipliersUsed[ifOption]
 				end))
-				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifStat, function(ifOption)
+				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifStat, function (ifOption)
 					if not launch.devModeAlt then
 						return
 					end
@@ -359,26 +369,26 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 					local mods = self.build.calcsTab.mainEnv.perStatsUsed[ifOption]
 					if mods then
 						for _, mod in ipairs(mods) do
-							out = (out and out.."\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
+							out = (out and out .. "\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
 						end
 					end
 					local mods2 = self.build.calcsTab.mainEnv.enemyMultipliersUsed[ifOption]
 					if mods2 then
 						for _, mod in ipairs(mods2) do
-							out = (out and out.."\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
+							out = (out and out .. "\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
 						end
 					end
 					return out
 				end))
 			end
 			if varData.ifEnemyStat then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifEnemyStat, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifEnemyStat, function (ifOption)
 					if implyCond(varData) then
 						return true
 					end
 					return self.build.calcsTab.mainEnv.enemyPerStatsUsed[ifOption]
 				end))
-				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifEnemyStat, function(ifOption)
+				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifEnemyStat, function (ifOption)
 					if not launch.devModeAlt then
 						return
 					end
@@ -388,19 +398,19 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 						return out
 					end
 					for _, mod in ipairs(mods) do
-						out = (out and out.."\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
+						out = (out and out .. "\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
 					end
 					return out
 				end))
 			end
 			if varData.ifTagType then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifTagType, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifTagType, function (ifOption)
 					if implyCond(varData) then
 						return true
 					end
 					return self.build.calcsTab.mainEnv.tagTypesUsed[ifOption]
 				end))
-				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifTagType, function(ifOption)
+				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifTagType, function (ifOption)
 					if not launch.devModeAlt then
 						return
 					end
@@ -410,13 +420,13 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 						return out
 					end
 					for _, mod in ipairs(mods) do
-						out = (out and out.."\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
+						out = (out and out .. "\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
 					end
 					return out
 				end))
 			end
 			if varData.ifFlag then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifFlag, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifFlag, function (ifOption)
 					local skillModList = self.build.calcsTab.mainEnv.player.mainSkill.skillModList
 					local skillFlags = self.build.calcsTab.mainEnv.player.mainSkill.skillFlags
 					-- Check both the skill mods for flags and flags that are set via calcPerform
@@ -424,13 +434,13 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 				end))
 			end
 			if varData.ifMod then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifMod, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifMod, function (ifOption)
 					if implyCond(varData) then
 						return true
 					end
 					return self.build.calcsTab.mainEnv.modsUsed[ifOption]
 				end))
-				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifMod, function(ifOption)
+				t_insert(tooltipFuncs, listOrSingleIfTooltip(varData.ifMod, function (ifOption)
 					if not launch.devModeAlt then
 						return
 					end
@@ -440,32 +450,18 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 						return out
 					end
 					for _, mod in ipairs(mods) do
-						out = (out and out.."\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
+						out = (out and out .. "\n" or "") .. modLib.formatMod(mod) .. "|" .. mod.source
 					end
 					return out
 				end))
 			end
 			if varData.ifSkill then
-				if varData.includeTransfigured then
-					t_insert(shownFuncs, listOrSingleIfOption(varData.ifSkill, function(ifOption)
-						if not calcLib.getGameIdFromGemName(ifOption, true) then
-							return false
-						end
-						for skill,_ in pairs(self.build.calcsTab.mainEnv.skillsUsed) do
-							if calcLib.isGemIdSame(skill, ifOption, true) then
-								return true
-							end
-						end
-						return false
-					end))
-				else
-					t_insert(shownFuncs, listOrSingleIfOption(varData.ifSkill, function(ifOption)
-						return self.build.calcsTab.mainEnv.skillsUsed[ifOption]
-					end))
-				end
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifSkill, function (ifOption)
+					return self.build.calcsTab.mainEnv.skillsUsed[ifOption]
+				end))
 			end
 			if varData.ifSkillFlag then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifSkillFlag, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifSkillFlag, function (ifOption)
 					for _, activeSkill in ipairs(self.build.calcsTab.mainEnv.player.activeSkillList) do
 						if activeSkill.skillFlags[ifOption] then
 							return true
@@ -475,7 +471,7 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 				end))
 			end
 			if varData.ifSkillData then
-				t_insert(shownFuncs, listOrSingleIfOption(varData.ifSkillData, function(ifOption)
+				t_insert(shownFuncs, listOrSingleIfOption(varData.ifSkillData, function (ifOption)
 					for _, activeSkill in ipairs(self.build.calcsTab.mainEnv.player.activeSkillList) do
 						if activeSkill.skillData[ifOption] then
 							return true
@@ -490,7 +486,8 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 			end
 			local labelControl = control
 			if varData.label and varData.type ~= "check" then
-				labelControl = new("LabelControl", {"RIGHT",control,"LEFT"}, -4, 0, 0, DrawStringWidth(14, "VAR", varData.label) > 228 and 12 or 14, "^7"..varData.label)
+				labelControl = new("LabelControl", { "RIGHT", control, "LEFT" }, -4, 0, 0,
+					DrawStringWidth(14, "VAR", varData.label) > 228 and 12 or 14, "^7" .. varData.label)
 				t_insert(self.controls, labelControl)
 			end
 			if varData.var then
@@ -518,22 +515,22 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 
 			local innerShown = control.shown
 			if not varData.doNotHighlight then
-				control.borderFunc = function()
+				control.borderFunc = function ()
 					local shown = type(innerShown) == "boolean" and innerShown or innerShown()
 					local cur = self.input[varData.var]
 					local def = self:GetDefaultState(varData.var, type(cur))
 					if cur ~= nil and cur ~= def then
 						if not shown then
-							return 	0.753, 0.502, 0.502
+							return 0.753, 0.502, 0.502
 						end
-						return 	0.451, 0.576, 0.702
+						return 0.451, 0.576, 0.702
 					end
 					return 0.5, 0.5, 0.5
 				end
 			end
 
 			if not varData.hideIfInvalid then
-				control.shown = function()
+				control.shown = function ()
 					if not searchMatch(varData) then
 						return false
 					end
@@ -543,12 +540,12 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 					return not shown and cur ~= nil and cur ~= def or shown
 				end
 				local innerLabel = labelControl.label
-				labelControl.label = function()
+				labelControl.label = function ()
 					local shown = type(innerShown) == "boolean" and innerShown or innerShown()
 					local cur = self.input[varData.var]
 					local def = self:GetDefaultState(varData.var, type(cur))
 					if not shown and cur ~= nil and cur ~= def then
-						return colorCodes.NEGATIVE..StripEscapes(innerLabel)
+						return colorCodes.NEGATIVE .. StripEscapes(innerLabel)
 					end
 					return innerLabel
 				end
@@ -569,7 +566,9 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 					local cur = self.input[varData.var]
 					local def = self:GetDefaultState(varData.var, type(cur))
 					if not shown and cur ~= nil and cur ~= def then
-						tooltip:AddLine(14, colorCodes.NEGATIVE.."This config option is conditional with missing source and is invalid.")
+						tooltip:AddLine(14,
+							colorCodes.NEGATIVE ..
+							"This config option is conditional with missing source and is invalid.")
 					end
 				end
 			end
@@ -578,7 +577,7 @@ local ConfigTabClass = newClass("ConfigTab", "UndoHandler", "ControlHost", "Cont
 			t_insert(lastSection.varControlList, control)
 		end
 	end
-	self.controls.scrollBar = new("ScrollBarControl", {"TOPRIGHT",self,"TOPRIGHT"}, 0, 0, 18, 0, 50, "VERTICAL", true)
+	self.controls.scrollBar = new("ScrollBarControl", { "TOPRIGHT", self, "TOPRIGHT" }, 0, 0, 18, 0, 50, "VERTICAL", true)
 end)
 
 function ConfigTabClass:Load(xml, fileName)
@@ -592,9 +591,10 @@ function ConfigTabClass:Load(xml, fileName)
 				self.input[node.attrib.name] = tonumber(node.attrib.number)
 			elseif node.attrib.string then
 				if node.attrib.name == "enemyIsBoss" then
-					self.input[node.attrib.name] = node.attrib.string:lower():gsub("(%l)(%w*)", function(a,b) return s_upper(a)..b end)
-					:gsub("Uber Atziri", "Boss"):gsub("Shaper", "Pinnacle"):gsub("Sirus", "Pinnacle")
-				-- backwards compat <=3.20, Uber Atziri Flameblast -> Atziri Flameblast
+					self.input[node.attrib.name] = node.attrib.string:lower():gsub("(%l)(%w*)",
+							function (a, b) return s_upper(a) .. b end)
+						:gsub("Uber Atziri", "Boss"):gsub("Shaper", "Pinnacle"):gsub("Sirus", "Pinnacle")
+					-- backwards compat <=3.20, Uber Atziri Flameblast -> Atziri Flameblast
 				elseif node.attrib.name == "presetBossSkills" then
 					self.input[node.attrib.name] = node.attrib.string:gsub("^Uber ", "")
 				else
@@ -603,7 +603,8 @@ function ConfigTabClass:Load(xml, fileName)
 			elseif node.attrib.boolean then
 				self.input[node.attrib.name] = node.attrib.boolean == "true"
 			else
-				launch:ShowErrMsg("^1Error parsing '%s': 'Input' element missing number, string or boolean attribute", fileName)
+				launch:ShowErrMsg("^1Error parsing '%s': 'Input' element missing number, string or boolean attribute",
+					fileName)
 				return true
 			end
 		elseif node.elem == "Placeholder" then
@@ -647,7 +648,7 @@ function ConfigTabClass:GetDefaultState(var, varType)
 end
 
 function ConfigTabClass:Save(xml)
-    for k, v in pairsSortByKey(self.input) do
+	for k, v in pairsSortByKey(self.input) do
 		if v ~= self:GetDefaultState(k, type(v)) then
 			local child = { elem = "Input", attrib = { name = k } }
 			if type(v) == "number" then
@@ -693,7 +694,7 @@ function ConfigTabClass:Draw(viewPort, inputEvents)
 	self.height = viewPort.height
 
 	for _, event in ipairs(inputEvents) do
-		if event.type == "KeyDown" then	
+		if event.type == "KeyDown" then
 			if event.key == "z" and IsKeyDown("CTRL") then
 				self:Undo()
 				self.build.buildFlag = true

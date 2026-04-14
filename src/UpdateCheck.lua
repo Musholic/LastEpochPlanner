@@ -19,7 +19,7 @@ local function downloadFileText(source, file)
 		end
 		local text = ""
 		local easy = curl.easy()
-		local escapedUrl = source..easy:escape(file)
+		local escapedUrl = source .. easy:escape(file)
 		easy:setopt_url(escapedUrl)
 		easy:setopt(curl.OPT_ACCEPT_ENCODING, "")
 		if connectionProtocol then
@@ -28,8 +28,8 @@ local function downloadFileText(source, file)
 		if proxyURL then
 			easy:setopt(curl.OPT_PROXY, proxyURL)
 		end
-		easy:setopt_writefunction(function(data)
-			text = text..data 
+		easy:setopt_writefunction(function (data)
+			text = text .. data
 			return true
 		end)
 		local _, error = easy:perform()
@@ -50,7 +50,7 @@ local function downloadFile(source, file, outName)
 			ConPrintf("Retrying... (%d of 5)", i)
 		end
 		local easy = curl.easy()
-		local escapedUrl = source..easy:escape(file)
+		local escapedUrl = source .. easy:escape(file)
 		easy:setopt_url(escapedUrl)
 		easy:setopt(curl.OPT_ACCEPT_ENCODING, "")
 		if connectionProtocol then
@@ -84,8 +84,8 @@ local runtimePath = GetRuntimePath()
 -- Load and process local manifest
 local localVer
 local localPlatform, localBranch
-local localFiles = { }
-local localManXML = xml.LoadXMLFile(scriptPath.."/manifest.xml")
+local localFiles = {}
+local localManXML = xml.LoadXMLFile(scriptPath .. "/manifest.xml")
 local localSource
 local runtimeExecutable
 if localManXML and localManXML[1].elem == "LEPVersion" then
@@ -107,7 +107,13 @@ if localManXML and localManXML[1].elem == "LEPVersion" then
 				else
 					fullPath = scriptPath .. "/" .. node.attrib.name
 				end
-				localFiles[node.attrib.name] = { sha1 = node.attrib.sha1, part = node.attrib.part, platform = node.attrib.platform, fullPath = fullPath }
+				localFiles[node.attrib.name] = {
+					sha1 = node.attrib.sha1,
+					part = node.attrib.part,
+					platform = node
+						.attrib.platform,
+					fullPath = fullPath
+				}
 				if node.attrib.part == "runtime" and node.attrib.name:match("Last Epoch Planner") then
 					runtimeExecutable = fullPath
 				end
@@ -123,12 +129,14 @@ localSource = localSource:gsub("{branch}", localBranch)
 
 -- Download and process remote manifest
 local remoteVer
-local remoteFiles = { }
-local remoteSources = { }
+local remoteFiles = {}
+local remoteSources = {}
 local remoteManText, errMsg = downloadFileText(localSource, "manifest.xml")
 if not remoteManText then
 	ConPrintf("Update check failed: couldn't download version manifest")
-	return nil, "Couldn't download version manifest.\nReason: "..errMsg.."\nCheck your internet connectivity.\nIf you are using a proxy, specify it in Options."
+	return nil,
+		"Couldn't download version manifest.\nReason: " ..
+		errMsg .. "\nCheck your internet connectivity.\nIf you are using a proxy, specify it in Options."
 end
 local remoteManXML = xml.ParseXML(remoteManText)
 if remoteManXML and remoteManXML[1].elem == "LEPVersion" then
@@ -138,7 +146,7 @@ if remoteManXML and remoteManXML[1].elem == "LEPVersion" then
 				remoteVer = node.attrib.number
 			elseif node.elem == "Source" then
 				if not remoteSources[node.attrib.part] then
-					remoteSources[node.attrib.part] = { }
+					remoteSources[node.attrib.part] = {}
 				end
 				remoteSources[node.attrib.part][node.attrib.platform or "any"] = node.attrib.url
 			elseif node.elem == "File" then
@@ -149,7 +157,13 @@ if remoteManXML and remoteManXML[1].elem == "LEPVersion" then
 					else
 						fullPath = scriptPath .. "/" .. node.attrib.name
 					end
-					remoteFiles[node.attrib.name] = { sha1 = node.attrib.sha1, part = node.attrib.part, platform = node.attrib.platform, fullPath = fullPath }
+					remoteFiles[node.attrib.name] = {
+						sha1 = node.attrib.sha1,
+						part = node.attrib.part,
+						platform = node
+							.attrib.platform,
+						fullPath = fullPath
+					}
 				end
 			end
 		end
@@ -161,7 +175,7 @@ if not remoteVer or not next(remoteSources) or not next(remoteFiles) then
 end
 
 -- Build lists of files to be updated or deleted
-local updateFiles = { }
+local updateFiles = {}
 for name, data in pairs(remoteFiles) do
 	data.name = name
 	local sanitizedName = name:gsub("{space}", " ")
@@ -182,7 +196,7 @@ for name, data in pairs(remoteFiles) do
 		end
 	end
 end
-local deleteFiles = { }
+local deleteFiles = {}
 for name, data in pairs(localFiles) do
 	data.name = name
 	local unSanitizedName = name:gsub(" ", "{space}")
@@ -190,7 +204,7 @@ for name, data in pairs(localFiles) do
 		table.insert(deleteFiles, data)
 	end
 end
-	
+
 if #updateFiles == 0 and #deleteFiles == 0 then
 	ConPrintf("No update available.")
 	return "none"
@@ -200,11 +214,11 @@ MakeDir("Update")
 ConPrintf("Downloading update...")
 
 -- Download changelog
-downloadFile(localSource, "changelog.txt", scriptPath.."/changelog.txt")
+downloadFile(localSource, "changelog.txt", scriptPath .. "/changelog.txt")
 
 -- Download files that need updating
 local failedFile = false
-local zipFiles = { }
+local zipFiles = {}
 for index, data in ipairs(updateFiles) do
 	if UpdateProgress then
 		UpdateProgress("Downloading %d/%d", index, #updateFiles)
@@ -212,14 +226,14 @@ for index, data in ipairs(updateFiles) do
 	local partSources = remoteSources[data.part]
 	local source = partSources[localPlatform] or partSources["any"]
 	source = source:gsub("{branch}", localBranch)
-	local fileName = scriptPath.."/Update/"..data.name:gsub("[\\/]","{slash}")
+	local fileName = scriptPath .. "/Update/" .. data.name:gsub("[\\/]", "{slash}")
 	data.updateFileName = fileName
 	local content
 	local zipName = source:match("/([^/]+%.zip)$")
 	if zipName then
 		if not zipFiles[zipName] then
 			ConPrintf("Downloading %s...", zipName)
-			local zipFileName = scriptPath.."/Update/"..zipName
+			local zipFileName = scriptPath .. "/Update/" .. zipName
 			downloadFile(source, "", zipFileName)
 			zipFiles[zipName] = lzip.open(zipFileName)
 		end
@@ -255,7 +269,7 @@ for index, data in ipairs(updateFiles) do
 end
 for name, zip in pairs(zipFiles) do
 	zip:Close()
-	os.remove(scriptPath.."/Update/"..name)
+	os.remove(scriptPath .. "/Update/" .. name)
 end
 if failedFile then
 	ConPrintf("Update failed: one or more files couldn't be downloaded")
@@ -264,21 +278,24 @@ end
 
 -- Create new manifest
 localManXML = { elem = "LEPVersion" }
-table.insert(localManXML, { elem = "Version", attrib = { number = remoteVer, platform = localPlatform, branch = localBranch } })
+table.insert(localManXML,
+	{ elem = "Version", attrib = { number = remoteVer, platform = localPlatform, branch = localBranch } })
 for part, platforms in pairs(remoteSources) do
 	for platform, url in pairs(platforms) do
-		table.insert(localManXML, { elem = "Source", attrib = { part = part, platform = platform ~= "any" and platform, url = url } })
+		table.insert(localManXML,
+			{ elem = "Source", attrib = { part = part, platform = platform ~= "any" and platform, url = url } })
 	end
 end
 for name, data in pairs(remoteFiles) do
-	table.insert(localManXML, { elem = "File", attrib = { name = data.name, sha1 = data.sha1, part = data.part, platform = data.platform } })
-end 
-xml.SaveXMLFile(localManXML, scriptPath.."/Update/manifest.xml")
+	table.insert(localManXML,
+		{ elem = "File", attrib = { name = data.name, sha1 = data.sha1, part = data.part, platform = data.platform } })
+end
+xml.SaveXMLFile(localManXML, scriptPath .. "/Update/manifest.xml")
 
 -- Build list of operations to apply the update
 local updateMode = "normal"
-local ops = { }
-local opsRuntime = { }
+local ops = {}
+local opsRuntime = {}
 for _, data in pairs(updateFiles) do
 	-- Ensure that the destination path of this file exists
 	local dirStr = ""
@@ -290,25 +307,25 @@ for _, data in pairs(updateFiles) do
 		-- Core runtime file, will need to update from the basic environment
 		-- These files will be updated on the second pass of the update script, with the first pass being run within the normal environment
 		updateMode = "basic"
-		table.insert(opsRuntime, 'move "'..data.updateFileName..'" "'..data.fullPath..'"')
+		table.insert(opsRuntime, 'move "' .. data.updateFileName .. '" "' .. data.fullPath .. '"')
 	else
-		table.insert(ops, 'move "'..data.updateFileName..'" "'..data.fullPath..'"')
+		table.insert(ops, 'move "' .. data.updateFileName .. '" "' .. data.fullPath .. '"')
 	end
 end
 for _, data in pairs(deleteFiles) do
-	table.insert(ops, 'delete "'..data.fullPath..'"')
+	table.insert(ops, 'delete "' .. data.fullPath .. '"')
 end
-table.insert(ops, 'move "'..scriptPath..'/Update/manifest.xml" "'..scriptPath..'/manifest.xml"')
+table.insert(ops, 'move "' .. scriptPath .. '/Update/manifest.xml" "' .. scriptPath .. '/manifest.xml"')
 if updateMode == "basic" then
 	-- Update script will need to relaunch the normal environment after updating
-	table.insert(opsRuntime, 'start "'..runtimeExecutable..'"')
-	local opRuntimeFile = io.open(scriptPath.."/Update/opFileRuntime.txt", "w+")
+	table.insert(opsRuntime, 'start "' .. runtimeExecutable .. '"')
+	local opRuntimeFile = io.open(scriptPath .. "/Update/opFileRuntime.txt", "w+")
 	opRuntimeFile:write(table.concat(opsRuntime, "\n"))
 	opRuntimeFile:close()
 end
 
 -- Write operations file
-local opFile = io.open(scriptPath.."/Update/opFile.txt", "w+")
+local opFile = io.open(scriptPath .. "/Update/opFile.txt", "w+")
 opFile:write(table.concat(ops, "\n"))
 opFile:close()
 

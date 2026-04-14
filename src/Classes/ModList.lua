@@ -16,7 +16,7 @@ local bor = bit.bor
 
 local mod_createMod = modLib.createMod
 
-local ModListClass = newClass("ModList", "ModStore", function(self, parent)
+local ModListClass = newClass("ModList", "ModStore", function (self, parent)
 	self.ModStore(parent)
 end)
 
@@ -41,7 +41,7 @@ function ModListClass:ReplaceModInternal(mod)
 	if self.parent then
 		return self.parent:ReplaceModInternal(mod)
 	end
-	
+
 	return false
 end
 
@@ -69,7 +69,6 @@ end
 function ModListClass:MergeNewMod(...)
 	self:MergeMod(mod_createMod(...))
 end
-
 
 function ModListClass:SumInternal(context, modType, cfg, flags, keywordFlags, source, ...)
 	local result = 0
@@ -107,9 +106,11 @@ function ModListClass:MoreInternal(context, cfg, flags, keywordFlags, source, ..
 					modResult = modResult * (1 + mod.value / 100)
 				end
 				if modPrecision then
-					modPrecision = m_max(modPrecision, (data.highPrecisionMods[mod.name] and data.highPrecisionMods[mod.name][mod.type]) or modPrecision)
+					modPrecision = m_max(modPrecision,
+						(data.highPrecisionMods[mod.name] and data.highPrecisionMods[mod.name][mod.type]) or modPrecision)
 				else
-					modPrecision = (data.highPrecisionMods[mod.name] and data.highPrecisionMods[mod.name][mod.type]) or nil
+					modPrecision = (data.highPrecisionMods[mod.name] and data.highPrecisionMods[mod.name][mod.type]) or
+						nil
 				end
 			end
 		end
@@ -177,7 +178,7 @@ function ModListClass:ListInternal(context, result, cfg, flags, keywordFlags, so
 			if mod.name == modName and mod.type == "LIST" and band(flags, mod.flags) == mod.flags and MatchKeywordFlags(keywordFlags, mod.keywordFlags) and (not source or mod.source:match("[^:]+") == source) then
 				local value
 				if mod[1] then
-					local value = context:EvalMod(mod, cfg) or nullValue
+					local value = context:EvalMod(mod, cfg) or nil
 					if value then
 						t_insert(result, value)
 					end

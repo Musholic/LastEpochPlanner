@@ -3,14 +3,15 @@
 -- Class: Button Control
 -- Basic button control.
 --
-local ButtonClass = newClass("ButtonControl", "Control", "TooltipHost", function(self, anchor, x, y, width, height, label, onClick, onHover, forceTooltip)
-	self.Control(anchor, x, y, width, height)
-	self.TooltipHost()
-	self.label = label
-	self.onClick = onClick
-	self.onHover = onHover
-	self.forceTooltip = forceTooltip
-end)
+local ButtonClass = newClass("ButtonControl", "Control", "TooltipHost",
+	function (self, anchor, x, y, width, height, label, onClick, onHover, forceTooltip)
+		self.Control(anchor, x, y, width, height)
+		self.TooltipHost()
+		self.label = label
+		self.onClick = onClick
+		self.onHover = onHover
+		self.forceTooltip = forceTooltip
+	end)
 
 function ButtonClass:Click()
 	if self:IsShown() and self:IsEnabled() then
@@ -82,8 +83,10 @@ function ButtonClass:Draw(viewPort, noTooltip)
 	elseif label == "-" then
 		DrawImage(nil, x + width * 0.2, y + height * 0.45, width * 0.6, height * 0.1)
 	elseif label == "x" then
-		DrawImageQuad(nil, x + width * 0.2, y + height * 0.3, x + width * 0.3, y + height * 0.2, x + width * 0.8, y + height * 0.7, x + width * 0.7, y + height * 0.8)
-		DrawImageQuad(nil, x + width * 0.7, y + height * 0.2, x + width * 0.8, y + height * 0.3, x + width * 0.3, y + height * 0.8, x + width * 0.2, y + height * 0.7)
+		DrawImageQuad(nil, x + width * 0.2, y + height * 0.3, x + width * 0.3, y + height * 0.2, x + width * 0.8,
+			y + height * 0.7, x + width * 0.7, y + height * 0.8)
+		DrawImageQuad(nil, x + width * 0.7, y + height * 0.2, x + width * 0.8, y + height * 0.3, x + width * 0.3,
+			y + height * 0.8, x + width * 0.2, y + height * 0.7)
 	else
 		local overSize = self.overSizeText or 0
 		DrawString(x + width / 2, y + 2 - overSize, "CENTER_X", height - 4 + overSize * 2, "VAR", label)

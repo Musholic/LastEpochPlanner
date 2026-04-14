@@ -109,7 +109,7 @@ local modNameList = {
 	["projectiles"] = "ProjectileCount",
 	["projectile speed"] = "ProjectileSpeed",
 	-- Explicitly cast (non-triggered) extra instances
-	["number of (%a[%a ]*) for direct casts"] = function(cap1)
+	["number of (%a[%a ]*) for direct casts"] = function (cap1)
 		-- Using a static "number of .* for direct casts" pattern would consume the entire phrase (including the skill name) from `line`, because scan() removes matched text.
 		-- The subsequent skillNameList scan would then find nothing and attach no SkillName tag.
 		-- Instead, we capture the skill name here via regex and attach the tag ourselves.
@@ -137,7 +137,7 @@ local modNameList = {
 	["to deal double damage"] = "DoubleDamageChance",
 	-- Basic damage types
 	["damage"] = "Damage",
-	["elemental damage"] = {"FireDamage", "ColdDamage", "LightningDamage"},
+	["elemental damage"] = { "FireDamage", "ColdDamage", "LightningDamage" },
 	["damage over time"] = { "Damage", flags = ModFlag.Dot },
 	-- Crit/speed modifiers
 	["crit chance"] = "CritChance",
@@ -152,29 +152,29 @@ local modNameList = {
 	-- Misc modifiers
 	["movespeed"] = "MovementSpeed",
 	["movement speed"] = "MovementSpeed",
-	["(%w+) and (%w+) resistance"] = function(d1, d2) return { d1:capitalize() .. "Resist", d2:capitalize() .. "Resist" } end
+	["(%w+) and (%w+) resistance"] = function (d1, d2) return { d1:capitalize() .. "Resist", d2:capitalize() .. "Resist" } end
 }
 
-for i,stat in ipairs(LongAttributes) do
+for i, stat in ipairs(LongAttributes) do
 	modNameList[stat:lower()] = Attributes[i]
 end
 
 for skillId, skill in pairs(data.skills) do
-    -- The player cannot trigger a minion skill and cannot trigger "Stacking" variants of skills
-    if not skill.fromMinion and not skillId:find("Stacking") then
-      modNameList["to " .. skill.name:lower()] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-      modNameList[skill.name:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-      if skill.altName then
-        modNameList[skill.altName:lower() .. " chance"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit}
-      end
-      modNameList["to cast " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
-      if skill.baseFlags.ailment then
-        modNameList["to apply " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
-        modNameList["to inflict " .. skill.name:lower()] = "ChanceToTriggerOnHit_"..skillId
-      end
-      modNameList[skill.name:lower() .. " stacks"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit, mult = 100}
-      modNameList[skill.name:lower() .. " stacks applied"] = {"ChanceToTriggerOnHit_"..skillId, flags = ModFlag.Hit, mult = 100}
-    end
+	-- The player cannot trigger a minion skill and cannot trigger "Stacking" variants of skills
+	if not skill.fromMinion and not skillId:find("Stacking") then
+		modNameList["to " .. skill.name:lower()] = { "ChanceToTriggerOnHit_" .. skillId, flags = ModFlag.Hit }
+		modNameList[skill.name:lower() .. " chance"] = { "ChanceToTriggerOnHit_" .. skillId, flags = ModFlag.Hit }
+		if skill.altName then
+			modNameList[skill.altName:lower() .. " chance"] = { "ChanceToTriggerOnHit_" .. skillId, flags = ModFlag.Hit }
+		end
+		modNameList["to cast " .. skill.name:lower()] = "ChanceToTriggerOnHit_" .. skillId
+		if skill.baseFlags.ailment then
+			modNameList["to apply " .. skill.name:lower()] = "ChanceToTriggerOnHit_" .. skillId
+			modNameList["to inflict " .. skill.name:lower()] = "ChanceToTriggerOnHit_" .. skillId
+		end
+		modNameList[skill.name:lower() .. " stacks"] = { "ChanceToTriggerOnHit_" .. skillId, flags = ModFlag.Hit, mult = 100 }
+		modNameList[skill.name:lower() .. " stacks applied"] = { "ChanceToTriggerOnHit_" .. skillId, flags = ModFlag.Hit, mult = 100 }
+	end
 end
 
 for _, damageType in ipairs(DamageTypes) do
@@ -183,9 +183,17 @@ for _, damageType in ipairs(DamageTypes) do
 	modNameList[damageType:lower() .. " resistance"] = damageType .. "Resist"
 	modNameList[damageType:lower() .. " damage taken"] = damageType .. "DamageTaken"
 	modNameList[damageType:lower() .. " damage over time taken"] = damageType .. "DamageTakenOverTime"
-	modNameList[damageType:lower() .. " damage over time"] = { damageType .. "Damage", flags = ModFlag.Dot + ModFlag[damageType] }
+	modNameList[damageType:lower() .. " damage over time"] = {
+		damageType .. "Damage",
+		flags = ModFlag.Dot +
+			ModFlag[damageType]
+	}
 	for _, damageSourceType in ipairs(DamageSourceTypes) do
-	   modNameList[damageType:lower() .. " " .. damageSourceType:lower() .. " damage"] = {damageType .. "Damage", keywordFlags = KeywordFlag.Spell}
+		modNameList[damageType:lower() .. " " .. damageSourceType:lower() .. " damage"] = {
+			damageType .. "Damage",
+			keywordFlags =
+				KeywordFlag.Spell
+		}
 	end
 end
 
@@ -216,7 +224,11 @@ end
 
 for _, damageSourceType in ipairs(DamageSourceTypes) do
 	modFlagList[damageSourceType:lower()] = { keywordFlags = ModFlag[damageSourceType] }
-	modFlagList["with " .. damageSourceType:lower() .. " attacks"] = { keywordFlags = ModFlag[damageSourceType], flags = ModFlag.Hit }
+	modFlagList["with " .. damageSourceType:lower() .. " attacks"] = {
+		keywordFlags = ModFlag[damageSourceType],
+		flags =
+			ModFlag.Hit
+	}
 end
 
 for _, damageType in ipairs(DamageTypes) do
@@ -224,21 +236,20 @@ for _, damageType in ipairs(DamageTypes) do
 end
 
 -- List of modifier flags/tags that appear at the start of a line
-local preFlagList = {
-}
+local preFlagList = {}
 
 -- List of modifier tags
 local modTagList = {
-	[". this effect is doubled if you have (%d+) or more maximum mana."] = function(num) return { tag = { type = "StatThreshold", stat = "Mana", threshold = num, mult = 2 } } end,
-	["for (%d+) seconds"] = { },
+	[". this effect is doubled if you have (%d+) or more maximum mana."] = function (num) return { tag = { type = "StatThreshold", stat = "Mana", threshold = num, mult = 2 } } end,
+	["for (%d+) seconds"] = {},
 	[" on critical strike"] = { tag = { type = "Condition", var = "CriticalStrike" } },
 	["from critical strikes"] = { tag = { type = "Condition", var = "CriticalStrike" } },
 	-- Multipliers
 	["per level"] = { tag = { type = "Multiplier", var = "Level" } },
 	-- Per stat
-	["per (%d+) total attributes"] = function(num) return { tag = { type = "PerStat", statList = Attributes, div = num } } end,
-	["per (%d+) maximum mana"] = function(num) return { tag = { type = "PerStat", stat = "Mana", div = num } } end,
-	["per (%d+)%% block chance"] = function(num) return { tag = { type = "PerStat", stat = "BlockChance", div = num } } end,
+	["per (%d+) total attributes"] = function (num) return { tag = { type = "PerStat", statList = Attributes, div = num } } end,
+	["per (%d+) maximum mana"] = function (num) return { tag = { type = "PerStat", stat = "Mana", div = num } } end,
+	["per (%d+)%% block chance"] = function (num) return { tag = { type = "PerStat", stat = "BlockChance", div = num } } end,
 	["per totem"] = { tag = { type = "PerStat", stat = "TotemsSummoned" } },
 	-- Slot conditions
 	["while dual wielding"] = { tag = { type = "Condition", var = "DualWielding" } },
@@ -269,16 +280,16 @@ local modTagList = {
 	["to frozen enemies"] = { tag = { type = "ActorCondition", actor = "enemy", var = "Frozen" } },
 	["against chilled enemies"] = { tag = { type = "ActorCondition", actor = "enemy", var = "Chilled" } },
 	["to chilled enemies"] = { tag = { type = "ActorCondition", actor = "enemy", var = "Chilled" } },
-	["against chilled or frozen enemies"] = { tag = { type = "ActorCondition", actor = "enemy", varList = { "Chilled","Frozen" } } },
+	["against chilled or frozen enemies"] = { tag = { type = "ActorCondition", actor = "enemy", varList = { "Chilled", "Frozen" } } },
 }
 
-for i,stat in ipairs(LongAttributes) do
+for i, stat in ipairs(LongAttributes) do
 	modTagList["per " .. stat:lower()] = { tag = { type = "PerStat", stat = Attributes[i] } }
 	modTagList["per point of " .. stat:lower()] = { tag = { type = "PerStat", stat = Attributes[i] } }
 	modTagList["per player " .. stat:lower()] = { tag = { type = "PerStat", stat = Attributes[i], actor = "parent" } }
-	modTagList["per (%d+) " .. stat:lower()] = function(num) return { tag = { type = "PerStat", stat = Attributes[i], div = num } } end
-	modTagList["per (%d+) " .. Attributes[i]:lower()] = function(num) return { tag = { type = "PerStat", stat = Attributes[i], div = num } } end
-	modTagList["w?h?i[lf]e? you have at least (%d+) " .. stat:lower()] = function(num) return { tag = { type = "StatThreshold", stat = Attributes[i], threshold = num } } end
+	modTagList["per (%d+) " .. stat:lower()] = function (num) return { tag = { type = "PerStat", stat = Attributes[i], div = num } } end
+	modTagList["per (%d+) " .. Attributes[i]:lower()] = function (num) return { tag = { type = "PerStat", stat = Attributes[i], div = num } } end
+	modTagList["w?h?i[lf]e? you have at least (%d+) " .. stat:lower()] = function (num) return { tag = { type = "StatThreshold", stat = Attributes[i], threshold = num } } end
 end
 for _, weapon in ipairs(DamageSourceWeapons) do
 	modTagList["with an? " .. weapon:lower()] = { tag = { type = "Condition", var = "Using" .. weapon } }
@@ -292,7 +303,7 @@ local function flag(name, ...)
 	return mod(name, "FLAG", true, ...)
 end
 
-local explodeFunc = function(chance, amount, type, ...)
+local explodeFunc = function (chance, amount, type, ...)
 	local amountNumber = tonumber(amount) or (amount == "tenth" and 10) or (amount == "quarter" and 25)
 	if not amountNumber then
 		return
@@ -300,7 +311,8 @@ local explodeFunc = function(chance, amount, type, ...)
 	local amounts = {}
 	amounts[type] = amountNumber
 	return {
-		mod("ExplodeMod", "LIST", { type = firstToUpper(type), chance = chance / 100, amount = amountNumber, keyOfScaledMod = "chance" }, ...),
+		mod("ExplodeMod", "LIST",
+			{ type = firstToUpper(type), chance = chance / 100, amount = amountNumber, keyOfScaledMod = "chance" }, ...),
 		flag("CanExplode")
 	}
 end
@@ -320,59 +332,54 @@ end
 
 local specialModList = {
 	["no cooldown"] = { flag("NoCooldown") },
-	[" ?always crits?.* above (%d+) mana"] = function(num)
-		return {
-			mod("CritChance", "OVERRIDE", 100, { type = "StatThreshold", stat = "Mana", threshold = num })
-		}
+	[" ?always crits?.* above (%d+) mana"] = function (num)
+		return { mod("CritChance", "OVERRIDE", 100, { type = "StatThreshold", stat = "Mana", threshold = num }) }
 	end,
 	-- The actual text that they can hit the same target is in the flavour text, not mods, so we detect it via shurikens in line instead
-	["^ ?shurikens in line$"] = { flag("SequentialProjectiles", { type = "SkillName", skillName = "Shurikens" })},
+	["^ ?shurikens in line$"] = { flag("SequentialProjectiles", { type = "SkillName", skillName = "Shurikens" }) },
 }
 
 for _, skillId in ipairs(data.treeSkills) do
 	local skill = data.skills[skillId]
-	specialModList["^+(%d+) to " .. skill.name:lower() .. "$"] = function (num) return { mod(skill.id .. "Level", "BASE", num) } end
+	specialModList["^+(%d+) to " .. skill.name:lower() .. "$"] = function (num)
+		return { mod(skill.id .. "Level", "BASE",
+			num) }
+	end
 end
 
 -- Modifiers that are recognised but unsupported
-local unsupportedModList = {
-}
+local unsupportedModList = {}
 
 -- Special lookups used for various modifier forms
-local suffixTypes = {
-	["as fire"] = "AsFire",
-}
+local suffixTypes = { ["as fire"] = "AsFire", }
 for _, damageType in ipairs(DamageTypes) do
 	suffixTypes["converted to " .. damageType:lower()] = "ConvertTo" .. damageType
 end
 local function appendMod(inputTable, string)
-	local table = { }
+	local table = {}
 	for subLine, mods in pairs(inputTable) do
 		if type(mods) == "string" then
-			table[subLine] = mods..string
+			table[subLine] = mods .. string
 		else
-			table[subLine] = { }
+			table[subLine] = {}
 			for _, mod in ipairs(mods) do
-				t_insert(table[subLine], mod..string)
+				t_insert(table[subLine], mod .. string)
 			end
 		end
 	end
 	return table
 end
-local flagTypes = {
-	["frenzy"] = "Condition:Frenzy",
-}
+local flagTypes = { ["frenzy"] = "Condition:Frenzy", }
 
 -- Build active skill name lookup
-local skillNameList = {
-}
+local skillNameList = {}
 
 for _, skill in pairs(data.skills) do
 	skillNameList[skill.name:lower()] = { tag = { type = "SkillName", skillName = skill.name } }
 	skillNameList["for " .. skill.name:lower()] = { tag = { type = "SkillName", skillName = skill.name } }
 end
 
-local preSkillNameList = { }
+local preSkillNameList = {}
 
 -- Scan a line for the earliest and longest match from the pattern list
 -- If a match is found, returns the corresponding value from the pattern list, plus the remainder of the line and a table of captures
@@ -404,7 +411,7 @@ local function scan(line, patternList, plain, matchAll)
 		end
 	else
 		if matchAll then
-			return {nil}, line
+			return { nil }, line
 		else
 			return nil, line
 		end
@@ -415,7 +422,7 @@ local function parseMod(line, order)
 	-- Check if this is a special modifier
 	local lineLower = line:lower()
 	if unsupportedModList[lineLower] then
-		return { }, line
+		return {}, line
 	end
 	local specialMod, specialLine, cap = scan(line, specialModList)
 	if specialMod and #specialLine == 0 then
@@ -546,7 +553,7 @@ local function parseMod(line, order)
 		modType = "OVERRIDE"
 	end
 	if not modName then
-		return { }, line
+		return {}, line
 	end
 
 	-- differentiate when a % should be more vs base. e.g. +30% fire resist = base, but +30% damage = more
@@ -562,8 +569,8 @@ local function parseMod(line, order)
 	-- Combine flags and tags
 	local flags = 0
 	local baseKeywordFlags = 0
-	local tagList = { }
-	local misc = { }
+	local tagList = {}
+	local misc = {}
 	local dataList = { modName, preFlag, modTag, modTag2, skillTag, modExtraTags }
 	tableInsertAll(dataList, modFlags)
 	for _, data in pairs(dataList) do
@@ -585,7 +592,7 @@ local function parseMod(line, order)
 
 	-- Generate modifier list
 	local nameList = modName
-	local modList = { }
+	local modList = {}
 	for i, name in ipairs(type(nameList) == "table" and nameList or { nameList }) do
 		local value = type(modValue) == "table" and modValue[i] or modValue
 		if modName.mult then
@@ -610,18 +617,19 @@ local function parseMod(line, order)
 		elseif misc.newAura then
 			-- Modifiers that add extra auras
 			for i, effectMod in ipairs(modList) do
-				local tagList = { }
+				local tagList = {}
 				for i, tag in ipairs(effectMod) do
 					tagList[i] = tag
 					effectMod[i] = nil
 				end
-				modList[i] = mod("ExtraAura", "LIST", { mod = effectMod, onlyAllies = misc.newAuraOnlyAllies }, unpack(tagList))
+				modList[i] = mod("ExtraAura", "LIST", { mod = effectMod, onlyAllies = misc.newAuraOnlyAllies },
+					unpack(tagList))
 			end
 		elseif misc.addToMinion then
 			-- Minion modifiers
-			local newModList = { }
+			local newModList = {}
 			for i, effectMod in ipairs(modList) do
-				local tagList = { }
+				local tagList = {}
 				local modTagList = copyTable(effectMod)
 				if misc.playerTag then t_insert(tagList, misc.playerTag) end
 				if misc.addToMinionTag then t_insert(tagList, misc.addToMinionTag) end
@@ -653,7 +661,7 @@ local function parseMod(line, order)
 			end
 		elseif misc.applyToEnemy then
 			for i, effectMod in ipairs(modList) do
-				local tagList = { }
+				local tagList = {}
 				if misc.playerTag then t_insert(tagList, misc.playerTag) end
 				if misc.playerTagList then
 					for _, tag in ipairs(misc.playerTagList) do
@@ -672,12 +680,12 @@ local function parseMod(line, order)
 	return modList, line:match("%S") and line
 end
 
-local cache = { }
-local unsupported = { }
+local cache = {}
+local unsupported = {}
 local count = 0
 --local foo = io.open("../unsupported.txt", "w")
 --foo:close()
-return function(line, isComb)
+return function (line, isComb)
 	if not cache[line] then
 		local modList, extra = parseMod(line, 1)
 		if modList and extra then
@@ -686,12 +694,13 @@ return function(line, isComb)
 		end
 		cache[line] = { modList, extra }
 		if foo and not isComb and not cache[line][1] then
-			local form = line:gsub("[%+%-]?%d+%.?%d*","{num}")
+			local form = line:gsub("[%+%-]?%d+%.?%d*", "{num}")
 			if not unsupported[form] then
 				unsupported[form] = true
 				count = count + 1
 				foo = io.open("../unsupported.txt", "a+")
-				foo:write(count, ': ', form, (cache[line][2] and #cache[line][2] < #line and ('    {' .. cache[line][2]).. '}') or "", '\n')
+				foo:write(count, ': ', form,
+					(cache[line][2] and #cache[line][2] < #line and ('    {' .. cache[line][2]) .. '}') or "", '\n')
 				foo:close()
 			end
 		end

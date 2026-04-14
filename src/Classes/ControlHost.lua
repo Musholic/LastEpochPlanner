@@ -4,8 +4,8 @@
 -- Host for UI controls
 --
 
-local ControlHostClass = newClass("ControlHost", function(self)
-	self.controls = { }
+local ControlHostClass = newClass("ControlHost", function (self)
+	self.controls = {}
 end)
 
 function ControlHostClass:SelectControl(newSelControl)
@@ -56,11 +56,11 @@ function ControlHostClass:ProcessControlsInput(inputEvents, viewPort)
 				if selControl.OnKeyUp then
 					self:SelectControl(selControl:OnKeyUp(event.key))
 				end
-				
+
 				inputEvents[id] = nil
 			end
 
-			local mOverControl = self:GetMouseOverControl(viewPort)
+			local mOverControl = self:GetMouseOverControl()
 
 			-- Avoid calculating isMouseInRegion as much as possible as it's expensive
 			if mOverControl and (not selControl or mOverControl.OnHoverKeyUp) then
@@ -68,7 +68,7 @@ function ControlHostClass:ProcessControlsInput(inputEvents, viewPort)
 					if not selControl and mOverControl.OnKeyUp and mOverControl:OnKeyUp(event.key) then
 						inputEvents[id] = nil
 					end
-	
+
 					if mOverControl.OnHoverKeyUp then
 						mOverControl:OnHoverKeyUp(event.key)
 					end
@@ -82,13 +82,15 @@ function ControlHostClass:ProcessControlsInput(inputEvents, viewPort)
 				inputEvents[id] = nil
 			end
 		end
-	end	
+	end
 end
 
 function ControlHostClass:DrawControls(viewPort, selControl)
 	for _, control in pairs(self.controls) do
 		if control:IsShown() and control.Draw then
-			control:Draw(viewPort, (self.selControl and self.selControl.hasFocus and self.selControl ~= control) or (selControl and selControl.hasFocus and selControl ~= control))
+			control:Draw(viewPort,
+				(self.selControl and self.selControl.hasFocus and self.selControl ~= control) or
+				(selControl and selControl.hasFocus and selControl ~= control))
 		end
 	end
 end

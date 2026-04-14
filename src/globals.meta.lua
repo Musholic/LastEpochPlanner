@@ -1,0 +1,3 @@
+---@meta
+
+lfs = require("lfs")

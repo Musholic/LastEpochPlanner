@@ -12,7 +12,7 @@ local m_floor = math.floor
 local m_sqrt = math.sqrt
 local s_format = string.format
 
-local breakdown = { }
+local breakdown = {}
 
 function breakdown.multiChain(out, chain)
 	local base = (chain.base and chain.base[2]) or nil
@@ -28,7 +28,7 @@ function breakdown.multiChain(out, chain)
 		for _, mult in ipairs(chain) do
 			if mult[2] and mult[2] ~= 1 then
 				multiplier = multiplier * mult[2]
-				t_insert(out, "x "..s_format(unpack(mult)))
+				t_insert(out, "x " .. s_format(unpack(mult)))
 				lines = lines + 1
 			end
 		end
@@ -48,14 +48,14 @@ function breakdown.simple(extraBase, cfg, total, ...)
 		local inc = modDB:Sum("INC", cfg, ...)
 		local more = modDB:More(cfg, ...)
 		if inc ~= 0 or more ~= 1 or (base ~= 0 and extraBase ~= 0) then
-			local out = { }
+			local out = {}
 			if base ~= 0 and extraBase ~= 0 then
 				out[1] = s_format("(%g + %g) ^8(base)", extraBase, base)
 			else
 				out[1] = s_format("%g ^8(base)", base + extraBase)
 			end
 			if inc ~= 0 then
-				t_insert(out, s_format("x %.2f ^8(increased/reduced)", 1 + inc/100))
+				t_insert(out, s_format("x %.2f ^8(increased/reduced)", 1 + inc / 100))
 			end
 			if more ~= 1 then
 				t_insert(out, s_format("x %.2f ^8(more/less)", more))
@@ -70,10 +70,10 @@ function breakdown.mod(modList, cfg, ...)
 	local inc = modList:Sum("INC", cfg, ...)
 	local more = modList:More(cfg, ...)
 	if inc ~= 0 and more ~= 1 then
-		return { 
-			s_format("%.2f ^8(increased/reduced)", 1 + inc/100),
+		return {
+			s_format("%.2f ^8(increased/reduced)", 1 + inc / 100),
 			s_format("x %.2f ^8(more/less)", more),
-			s_format("= %.2f", (1 + inc/100) * more),
+			s_format("= %.2f", (1 + inc / 100) * more),
 		}
 	end
 end
@@ -83,7 +83,7 @@ function breakdown.slot(source, sourceName, cfg, base, total, ...)
 	local more = modDB:More(cfg, ...)
 	t_insert(breakdown[...].slots, {
 		base = base,
-		inc = (inc ~= 0) and s_format(" x %.2f", 1 + inc/100),
+		inc = (inc ~= 0) and s_format(" x %.2f", 1 + inc / 100),
 		more = (more ~= 1) and s_format(" x %.2f", more),
 		total = s_format("%.2f", total or (base * (1 + inc / 100) * more)),
 		source = source,
@@ -101,20 +101,24 @@ function breakdown.area(base, areaMod, total, incBreakpoint, moreBreakpoint, red
 		t_insert(out, s_format("= %.1fm", total / 10))
 	end
 	if incBreakpoint and moreBreakpoint and redBreakpoint and lessBreakpoint then
-		t_insert(out, s_format("^8Next 0.1m breakpoint: %d%% increased AoE / a %d%% more AoE multiplier", incBreakpoint, moreBreakpoint))
-		t_insert(out, s_format("^8Previous 0.1m breakpoint: %d%% reduced AoE / a %d%% less AoE multiplier", redBreakpoint, lessBreakpoint))
+		t_insert(out,
+			s_format("^8Next 0.1m breakpoint: %d%% increased AoE / a %d%% more AoE multiplier", incBreakpoint,
+				moreBreakpoint))
+		t_insert(out,
+			s_format("^8Previous 0.1m breakpoint: %d%% reduced AoE / a %d%% less AoE multiplier", redBreakpoint,
+				lessBreakpoint))
 	end
 	out.radius = total
 	return out
 end
 
 function breakdown.effMult(damageType, resist, pen, taken, mult, takenMore, sourceRes, useRes, invertChance)
-	local out = { }
+	local out = {}
 	local resistForm = "resistance"
 	local resistLabel = resistForm
 
 	if invertChance and invertChance ~= 0 then
-		resistLabel = "average inverted "..resistForm
+		resistLabel = "average inverted " .. resistForm
 	end
 	if sourceRes and sourceRes ~= damageType then
 		t_insert(out, s_format("Enemy %s: %d%% ^8(%s)", resistLabel, resist, sourceRes))
@@ -132,7 +136,7 @@ function breakdown.effMult(damageType, resist, pen, taken, mult, takenMore, sour
 		if not useRes then
 			t_insert(out, s_format("x %d%% ^8(resistance ignored)", 0))
 			t_insert(out, s_format("= %d%%", (0)))
-		else 
+		else
 			t_insert(out, s_format("= %d%%", (resist - pen)))
 		end
 	end
@@ -153,10 +157,10 @@ end
 
 function breakdown.dot(out, baseVal, inc, more, mult, rate, aura, effMult, total)
 	breakdown.multiChain(out, {
-		base = { "%.1f ^8(base damage per second)", baseVal }, 
-		{ "%.2f ^8(increased/reduced)", 1 + inc/100 },
+		base = { "%.1f ^8(base damage per second)", baseVal },
+		{ "%.2f ^8(increased/reduced)", 1 + inc / 100 },
 		{ "%.2f ^8(more/less)", more },
-		{ "%.2f ^8(multiplier)", 1 + (mult or 0)/100 },
+		{ "%.2f ^8(multiplier)", 1 + (mult or 0) / 100 },
 		{ "%.2f ^8(rate modifier)", rate },
 		{ "%.3f ^8(aura effect modifier)", aura },
 		{ "%.3f ^8(effective DPS modifier)", effMult },
@@ -166,7 +170,7 @@ end
 
 function breakdown.critDot(dotMulti, critMulti, dotChance, critChance)
 	local combined = (dotMulti * dotChance) + (critMulti * critChance)
-	local out = { }
+	local out = {}
 	if dotChance > 0 then
 		t_insert(out, s_format("Contribution from Non-crits:"))
 		t_insert(out, s_format("%.2f ^8(dot multiplier for non-crits)", dotMulti))
@@ -179,20 +183,22 @@ function breakdown.critDot(dotMulti, critMulti, dotChance, critChance)
 		t_insert(out, s_format("x %.4f ^8(portion of instances created by crits)", critChance))
 		t_insert(out, s_format("= %.2f", critMulti * critChance))
 	end
-	if (dotChance > 0 and critChance > 0) and (dotMulti ~= critMulti)then
+	if (dotChance > 0 and critChance > 0) and (dotMulti ~= critMulti) then
 		t_insert(out, s_format("Effective DoT Multiplier:"))
 		t_insert(out, s_format("%.2f + %.2f", dotMulti * dotChance, critMulti * critChance))
 		t_insert(out, s_format("= %.2f", combined))
 	end
 	return out
-end		
-		
+end
+
 function breakdown.leech(instant, instantRate, instances, pool, rate, max, dur, instantLeechProportion, hitRate)
-	local out = { }
+	local out = {}
 	if actor.mainSkill.skillData.showAverage then
 		if instant > 0 then
-			if instantLeechProportion ~= 1 then 
-				t_insert(out, s_format("Instant Leech: %.1f ^8(%d%% x %.1f)", instant, instantLeechProportion * 100, dur * pool * data.misc.LeechRateBase / (1-instantLeechProportion)))
+			if instantLeechProportion ~= 1 then
+				t_insert(out,
+					s_format("Instant Leech: %.1f ^8(%d%% x %.1f)", instant, instantLeechProportion * 100,
+						dur * pool * data.misc.LeechRateBase / (1 - instantLeechProportion)))
 			else
 				t_insert(out, s_format("Instant Leech: %.1f", instant))
 			end
@@ -200,8 +206,10 @@ function breakdown.leech(instant, instantRate, instances, pool, rate, max, dur, 
 		if instances > 0 then
 			t_insert(out, "Total leeched per instance:")
 			t_insert(out, s_format("%d ^8(size of leech destination pool)", pool))
-			t_insert(out, s_format("x %.2f ^8(base leech rate is %d%% per second)", data.misc.LeechRateBase, 100 * data.misc.LeechRateBase))
-			local rateMod = calcLib.mod(modDB, skillCfg, rate)
+			t_insert(out,
+				s_format("x %.2f ^8(base leech rate is %d%% per second)", data.misc.LeechRateBase,
+					100 * data.misc.LeechRateBase))
+			local rateMod = calcLib.mod(modDB, nil, rate)
 			if rateMod ~= 1 then
 				t_insert(out, s_format("x %.2f ^8(leech rate modifier)", rateMod))
 			end
@@ -210,8 +218,10 @@ function breakdown.leech(instant, instantRate, instances, pool, rate, max, dur, 
 		end
 	else
 		if instantRate > 0 then
-			if instantLeechProportion ~= 1 then 
-				t_insert(out, s_format("Instant Leech: %.1f ^8(%d%% x %.1f)", instant, instantLeechProportion * 100, dur * pool * data.misc.LeechRateBase / (1-instantLeechProportion)))
+			if instantLeechProportion ~= 1 then
+				t_insert(out,
+					s_format("Instant Leech: %.1f ^8(%d%% x %.1f)", instant, instantLeechProportion * 100,
+						dur * pool * data.misc.LeechRateBase / (1 - instantLeechProportion)))
 			else
 				t_insert(out, s_format("Instant Leech: %.1f", instant))
 			end
@@ -220,8 +230,10 @@ function breakdown.leech(instant, instantRate, instances, pool, rate, max, dur, 
 		if instances > 0 then
 			t_insert(out, "Rate per instance:")
 			t_insert(out, s_format("%d ^8(size of leech destination pool)", pool))
-			t_insert(out, s_format("x %.2f ^8(base leech rate is %d%% per second)", data.misc.LeechRateBase, 100 * data.misc.LeechRateBase))
-			local rateMod = calcLib.mod(modDB, skillCfg, rate)
+			t_insert(out,
+				s_format("x %.2f ^8(base leech rate is %d%% per second)", data.misc.LeechRateBase,
+					100 * data.misc.LeechRateBase))
+			local rateMod = calcLib.mod(modDB, nil, rate)
 			if rateMod ~= 1 then
 				t_insert(out, s_format("x %.2f ^8(leech rate modifier)", rateMod))
 			end

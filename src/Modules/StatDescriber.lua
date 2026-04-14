@@ -8,17 +8,17 @@ local ipairs = ipairs
 local t_insert = table.insert
 local s_format = string.format
 
-local scopes = { }
+local scopes = {}
 
 local function getScope(scopeName)
 	if not scopes[scopeName] then
-		local scope = LoadModule("Data/StatDescriptions/"..scopeName)
+		local scope = LoadModule("Data/StatDescriptions/" .. scopeName)
 		scope.name = scopeName
 		if scope.parent then
 			local parentScope = getScope(scope.parent)
 			scope.scopeList = copyTable(parentScope.scopeList, true)
 		else
-			scope.scopeList = { }
+			scope.scopeList = {}
 		end
 		t_insert(scope.scopeList, 1, scope)
 		scopes[scopeName] = scope
@@ -28,7 +28,7 @@ local function getScope(scopeName)
 	end
 end
 
-local function matchLimit(lang, val) 
+local function matchLimit(lang, val)
 	for _, desc in ipairs(lang) do
 		local match = true
 		for i, limit in ipairs(desc.limit) do
@@ -140,11 +140,11 @@ local function applySpecial(val, spec)
 	elseif spec.k == "milliseconds_to_seconds_2dp" then
 		val[spec.v].min = round(val[spec.v].min / 1000, 2)
 		val[spec.v].max = round(val[spec.v].max / 1000, 2)
-		val[spec.v].fmt = "g"					
+		val[spec.v].fmt = "g"
 	elseif spec.k == "milliseconds_to_seconds_2dp_if_required" then
 		val[spec.v].min = round(val[spec.v].min / 1000, 2)
 		val[spec.v].max = round(val[spec.v].max / 1000, 2)
-		val[spec.v].fmt = "g"					
+		val[spec.v].fmt = "g"
 	elseif spec.k == "deciseconds_to_seconds" then
 		val[spec.v].min = val[spec.v].min / 10
 		val[spec.v].max = val[spec.v].max / 10
@@ -184,13 +184,13 @@ local function applySpecial(val, spec)
 	end
 end
 
-return function(stats, scopeName)
+return function (stats, scopeName)
 	local rootScope = getScope(scopeName)
 
 	-- Figure out which descriptions we need, and identify them by the first stat that they describe
-	local describeStats = { }
+	local describeStats = {}
 	for s, v in pairs(stats) do
-		if (type(v) == "number" and v ~= 0) or (type(v) == "table" and (v.min ~= 0 or v.max ~= 0)) then	
+		if (type(v) == "number" and v ~= 0) or (type(v) == "table" and (v.min ~= 0 or v.max ~= 0)) then
 			for depth, scope in ipairs(rootScope.scopeList) do
 				if scope[s] then
 					local descriptor = scope[scope[s]]
@@ -204,17 +204,18 @@ return function(stats, scopeName)
 	end
 
 	-- Sort them by depth/order
-	local descOrdered = { }
+	local descOrdered = {}
 	for s, descriptor in pairs(describeStats) do
 		t_insert(descOrdered, descriptor)
 	end
-	table.sort(descOrdered, function(a, b) if a.depth ~= b.depth then return a.depth > b.depth else return a.order < b.order end end)
+	table.sort(descOrdered,
+		function (a, b) if a.depth ~= b.depth then return a.depth > b.depth else return a.order < b.order end end)
 
 	-- Describe the stats
-	local out = { }
-	local lineMap = { }
+	local out = {}
+	local lineMap = {}
 	for _, descriptor in ipairs(descOrdered) do
-		local val = { }
+		local val = {}
 		local stat
 		for i, s in ipairs(descriptor.description.stats) do
 			if stats[s] then
@@ -234,31 +235,31 @@ return function(stats, scopeName)
 			for _, spec in ipairs(desc) do
 				applySpecial(val, spec)
 			end
-			local statDesc = desc.text:gsub("{(%d)}", function(n) 
-				local v = val[tonumber(n)+1]
+			local statDesc = desc.text:gsub("{(%d)}", function (n)
+				local v = val[tonumber(n) + 1]
 				if v.min == v.max then
-					return s_format("%"..v.fmt, v.min)
+					return s_format("%" .. v.fmt, v.min)
 				else
-					return s_format("(%"..v.fmt.."-%"..v.fmt..")", v.min, v.max)
+					return s_format("(%" .. v.fmt .. "-%" .. v.fmt .. ")", v.min, v.max)
 				end
-			end):gsub("{}", function() 
+			end):gsub("{}", function ()
 				local v = val[1]
 				if v.min == v.max then
-					return s_format("%"..v.fmt, v.min)
+					return s_format("%" .. v.fmt, v.min)
 				else
-					return s_format("(%"..v.fmt.."-%"..v.fmt..")", v.min, v.max)
+					return s_format("(%" .. v.fmt .. "-%" .. v.fmt .. ")", v.min, v.max)
 				end
-			end):gsub("{:%+?d}", function() 
+			end):gsub("{:%+?d}", function ()
 				local v = val[1]
 				if v.min == v.max then
-					return s_format("%"..v.fmt, v.min)
+					return s_format("%" .. v.fmt, v.min)
 				else
-					return s_format("(%"..v.fmt.."-%"..v.fmt..")", v.min, v.max)
+					return s_format("(%" .. v.fmt .. "-%" .. v.fmt .. ")", v.min, v.max)
 				end
-			end):gsub("{(%d):(%+?)d}", function(n, fmt)
-				local v = val[tonumber(n)+1]
+			end):gsub("{(%d):(%+?)d}", function (n, fmt)
+				local v = val[tonumber(n) + 1]
 				if v.min == v.max then
-					return s_format("%"..fmt..v.fmt, v.min)
+					return s_format("%" .. fmt .. v.fmt, v.min)
 				elseif fmt == "+" then
 					if v.max < 0 then
 						return s_format("-(%d-%d)", -v.min, -v.max)
@@ -266,10 +267,10 @@ return function(stats, scopeName)
 						return s_format("+(%d-%d)", v.min, v.max)
 					end
 				else
-					return s_format("(%"..fmt..v.fmt.."-%"..fmt..v.fmt..")", v.min, v.max)
+					return s_format("(%" .. fmt .. v.fmt .. "-%" .. fmt .. v.fmt .. ")", v.min, v.max)
 				end
-			end):gsub("%%%%","%%")
-			for line in (statDesc.."\\n"):gmatch("([^\\]+)\\n") do
+			end):gsub("%%%%", "%%")
+			for line in (statDesc .. "\\n"):gmatch("([^\\]+)\\n") do
 				t_insert(out, line)
 				lineMap[line] = stat
 			end

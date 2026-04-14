@@ -62,27 +62,32 @@ function calcs.mirages(env)
 	if env.player.mainSkill.skillData.triggeredByMirageArcher then
 		config = {
 			calcMainSkillOffence = true,
-			compareFunc = function(skill, env, config, mirageSkill)
+			compareFunc = function (skill, env, config, mirageSkill)
 				if not env.player.mainSkill.skillCfg.skillCond["usedByMirage"] and env.player.weaponData1.type == "Bow" then
 					return env.player.mainSkill
 				end
 			end,
-			preCalcFunc = function(env, newSkill, newEnv)
-				local moreDamage =  newSkill.skillModList:Sum("BASE", newSkill.skillCfg, "MirageArcherLessDamage")
-				local moreAttackSpeed = newSkill.skillModList:Sum("BASE", newSkill.skillCfg, "MirageArcherLessAttackSpeed")
-				local mirageCount = newSkill.skillModList:Sum("BASE", env.player.mainSkill.skillCfg, "MirageArcherMaxCount")
+			preCalcFunc = function (env, newSkill, newEnv)
+				local moreDamage = newSkill.skillModList:Sum("BASE", newSkill.skillCfg, "MirageArcherLessDamage")
+				local moreAttackSpeed = newSkill.skillModList:Sum("BASE", newSkill.skillCfg,
+					"MirageArcherLessAttackSpeed")
+				local mirageCount = newSkill.skillModList:Sum("BASE", env.player.mainSkill.skillCfg,
+					"MirageArcherMaxCount")
 
-				env.player.mainSkill.mirage = { }
+				env.player.mainSkill.mirage = {}
 				env.player.mainSkill.mirage.name = newSkill.activeEffect.grantedEffect.name
 				env.player.mainSkill.mirage.count = mirageCount
 
 				if not env.player.mainSkill.infoMessage then
-					env.player.mainSkill.infoMessage = tostring(mirageCount) .. " Mirage Archers using " .. newSkill.activeEffect.grantedEffect.name
+					env.player.mainSkill.infoMessage = tostring(mirageCount) ..
+						" Mirage Archers using " .. newSkill.activeEffect.grantedEffect.name
 				end
 
 				-- Add new modifiers to new skill (which already has all the old skill's modifiers)
-				newSkill.skillModList:NewMod("Damage", "MORE", moreDamage, "Mirage Archer", env.player.mainSkill.ModFlags, env.player.mainSkill.KeywordFlags)
-				newSkill.skillModList:NewMod("Speed", "MORE", moreAttackSpeed, "Mirage Archer", env.player.mainSkill.ModFlags, env.player.mainSkill.KeywordFlags)
+				newSkill.skillModList:NewMod("Damage", "MORE", moreDamage, "Mirage Archer", env.player.mainSkill
+					.ModFlags, env.player.mainSkill.KeywordFlags)
+				newSkill.skillModList:NewMod("Speed", "MORE", moreAttackSpeed, "Mirage Archer",
+					env.player.mainSkill.ModFlags, env.player.mainSkill.KeywordFlags)
 
 				-- Does not use player resources
 				newSkill.skillModList:NewMod("HasNoCost", "FLAG", true, "Used by mirage")
@@ -95,7 +100,7 @@ function calcs.mirages(env)
 					env.player.mainSkill.mirage.skillPartName = nil
 				end
 			end,
-			postCalcFunc = function(env, newSkill, newEnv)
+			postCalcFunc = function (env, newSkill, newEnv)
 				env.player.mainSkill.mirage.output = newEnv.player.output
 				if newSkill.minion then
 					env.player.mainSkill.mirage.minion = {}
@@ -109,7 +114,7 @@ function calcs.mirages(env)
 					end
 				end
 			end,
-			mirageSkillNotFoundFunc = function(env, config)
+			mirageSkillNotFoundFunc = function (env, config)
 				if not env.player.mainSkill.infoMessage2 then
 					env.player.mainSkill.infoMessage2 = "No Mirage Archer active skill found"
 				end
@@ -117,9 +122,10 @@ function calcs.mirages(env)
 		}
 	elseif env.player.mainSkill.activeEffect.grantedEffect.name == "Reflection" then
 		local usedSkillBestDps
-		local maxMirageWarriors = env.player.mainSkill.skillModList:Sum("BASE", env.player.mainSkill.skillCfg, "SaviourMirageWarriorMaxCount")
+		local maxMirageWarriors = env.player.mainSkill.skillModList:Sum("BASE", env.player.mainSkill.skillCfg,
+			"SaviourMirageWarriorMaxCount")
 		config = {
-			compareFunc = function(skill, env, config, mirageSkill)
+			compareFunc = function (skill, env, config, mirageSkill)
 				if skill ~= env.player.mainSkill and skill.skillTypes[SkillType.Attack] and not skill.skillTypes[SkillType.Totem] and not skill.skillTypes[SkillType.SummonsTotem] and band(skill.skillCfg.flags, bor(ModFlag.Sword, ModFlag.Weapon1H)) == bor(ModFlag.Sword, ModFlag.Weapon1H) and not skill.skillCfg.skillCond["usedByMirage"] then
 					local uuid = cacheSkillUUID(skill, env)
 					if not GlobalCache.cachedData["CACHE"][uuid] then
@@ -138,20 +144,24 @@ function calcs.mirages(env)
 				end
 				return mirageSkill
 			end,
-			preCalcFunc = function(env, newSkill, newEnv)
-				local moreDamage = env.player.mainSkill.skillModList:Sum("BASE", env.player.mainSkill.skillCfg, "SaviourMirageWarriorLessDamage")
+			preCalcFunc = function (env, newSkill, newEnv)
+				local moreDamage = env.player.mainSkill.skillModList:Sum("BASE", env.player.mainSkill.skillCfg,
+					"SaviourMirageWarriorLessDamage")
 				-- Add new modifiers to new skill (which already has all the old skill's modifiers)
-				newSkill.skillModList:NewMod("Damage", "MORE", moreDamage, "The Saviour", env.player.mainSkill.ModFlags, env.player.mainSkill.KeywordFlags)
+				newSkill.skillModList:NewMod("Damage", "MORE", moreDamage, "The Saviour", env.player.mainSkill.ModFlags,
+					env.player.mainSkill.KeywordFlags)
 				if env.player.itemList["Weapon 1"] and env.player.itemList["Weapon 2"] and env.player.itemList["Weapon 1"].name == env.player.itemList["Weapon 2"].name then
 					maxMirageWarriors = maxMirageWarriors / 2
 				end
-				newSkill.skillModList:NewMod("QuantityMultiplier", "BASE", maxMirageWarriors, "The Saviour Mirage Warriors", env.player.mainSkill.ModFlags, env.player.mainSkill.KeywordFlags)
+				newSkill.skillModList:NewMod("QuantityMultiplier", "BASE", maxMirageWarriors,
+					"The Saviour Mirage Warriors", env.player.mainSkill.ModFlags, env.player.mainSkill.KeywordFlags)
 				-- Does not use player resources
 				newSkill.skillModList:NewMod("HasNoCost", "FLAG", true, "Used by mirage")
 			end,
-			postCalcFunc = function(env, newSkill, newEnv)
+			postCalcFunc = function (env, newSkill, newEnv)
 				env.player.mainSkill = newSkill
-				env.player.mainSkill.infoMessage = tostring(maxMirageWarriors) .. " Mirage Warriors using " .. newSkill.activeEffect.grantedEffect.name
+				env.player.mainSkill.infoMessage = tostring(maxMirageWarriors) ..
+					" Mirage Warriors using " .. newSkill.activeEffect.grantedEffect.name
 
 				-- Re-link over the output
 				env.player.output = newEnv.player.output
@@ -168,7 +178,7 @@ function calcs.mirages(env)
 					end
 				end
 			end,
-			mirageSkillNotFoundFunc = function(env, config)
+			mirageSkillNotFoundFunc = function (env, config)
 				env.player.mainSkill.disableReason = "No Saviour active skill found"
 				env.player.mainSkill.skillFlags.disable = true
 			end
@@ -187,7 +197,7 @@ function calcs.mirages(env)
 		local SkillTriggerRate
 
 		config = {
-			compareFunc = function(skill, env, config, mirageSkill)
+			compareFunc = function (skill, env, config, mirageSkill)
 				local isDisabled = skill.skillFlags and skill.skillFlags.disable
 				if skill ~= env.player.mainSkill and (skill.skillTypes[SkillType.Slam] or skill.skillTypes[SkillType.Melee]) and skill.skillTypes[SkillType.Attack] and not skill.skillTypes[SkillType.Vaal] and not isTriggered(skill) and not isDisabled and not skill.skillTypes[SkillType.Totem] and not skill.skillTypes[SkillType.SummonsTotem] and not skill.skillCfg.skillCond["usedByMirage"] then
 					local uuid = cacheSkillUUID(skill, env)
@@ -199,8 +209,7 @@ function calcs.mirages(env)
 						if not mirageSkill then
 							usedSkillBestDps = GlobalCache.cachedData["CACHE"][uuid].TotalDPS
 							EffectiveSourceRate = GlobalCache.cachedData["CACHE"][uuid].Speed
-							return  GlobalCache.cachedData["CACHE"][uuid].ActiveSkill
-
+							return GlobalCache.cachedData["CACHE"][uuid].ActiveSkill
 						else
 							if GlobalCache.cachedData["CACHE"][uuid].TotalDPS > usedSkillBestDps then
 								usedSkillBestDps = GlobalCache.cachedData["CACHE"][uuid].TotalDPS
@@ -212,18 +221,21 @@ function calcs.mirages(env)
 				end
 				return mirageSkill
 			end,
-			preCalcFunc = function(env, newSkill, newEnv)
+			preCalcFunc = function (env, newSkill, newEnv)
 				triggeredCD = newSkill.skillData.cooldown
 				icdrSkill = calcLib.mod(newSkill.skillModList, newSkill.skillCfg, "CooldownRecovery")
 
 				effectiveTriggerCD = triggerCD / icdrSkill
-				modActionCooldown = m_max( triggeredCD or 0, effectiveTriggerCD or 0 ) / icdrSkill
+				modActionCooldown = m_max(triggeredCD or 0, effectiveTriggerCD or 0) / icdrSkill
 				rateCapAdjusted = m_ceil(modActionCooldown * data.misc.ServerTickRate) / data.misc.ServerTickRate
 				if modActionCooldown ~= 0 then
 					triggerRateCap = 1 / modActionCooldown
 				end
 
-				SkillTriggerRate = EffectiveSourceRate ~= 0 and calcMultiSpellRotationImpact(env, {{ uuid = cacheSkillUUID(env.player.mainSkill, env), cd = triggeredCD }}, EffectiveSourceRate, effectiveTriggerCD) or 0
+				SkillTriggerRate = EffectiveSourceRate ~= 0 and
+					calcMultiSpellRotationImpact(env,
+						{ { uuid = cacheSkillUUID(env.player.mainSkill, env), cd = triggeredCD } }, EffectiveSourceRate,
+						effectiveTriggerCD) or 0
 
 				-- Override attack speed with trigger rate
 				newSkill.skillData.triggerRate = SkillTriggerRate
@@ -231,11 +243,13 @@ function calcs.mirages(env)
 				-- Does not use player resources
 				newSkill.skillModList:NewMod("HasNoCost", "FLAG", true, "Used by mirage")
 
-				local moreDamage = env.player.mainSkill.skillModList:Sum("BASE", env.player.mainSkill.skillCfg, "ChieftainMirageChieftainMoreDamage")
+				local moreDamage = env.player.mainSkill.skillModList:Sum("BASE", env.player.mainSkill.skillCfg,
+					"ChieftainMirageChieftainMoreDamage")
 				-- Add new modifiers to new skill (which already has all the old skill's modifiers)
-				newSkill.skillModList:NewMod("Damage", "MORE", moreDamage, "Tawhoa's Chosen", env.player.mainSkill.ModFlags, env.player.mainSkill.KeywordFlags)
+				newSkill.skillModList:NewMod("Damage", "MORE", moreDamage, "Tawhoa's Chosen",
+					env.player.mainSkill.ModFlags, env.player.mainSkill.KeywordFlags)
 			end,
-			postCalcFunc = function(env, newSkill, newEnv)
+			postCalcFunc = function (env, newSkill, newEnv)
 				env.player.mainSkill = newSkill
 				env.player.mainSkill.infoMessage = "Tawhoa's Chosen using " .. newSkill.activeEffect.grantedEffect.name
 
@@ -258,7 +272,8 @@ function calcs.mirages(env)
 							s_format("/ %.2f ^8(increased/reduced cooldown recovery)", icdrSkill),
 							s_format("= %.2f ^8(effective trigger cooldown)", effectiveTriggerCD),
 							"",
-							s_format("%.2f ^8(biggest of trigger cooldown and triggered skill cooldown)", modActionCooldown),
+							s_format("%.2f ^8(biggest of trigger cooldown and triggered skill cooldown)",
+								modActionCooldown),
 							"",
 							s_format("%.2f ^8(adjusted for server tick rate)", rateCapAdjusted),
 							"",
@@ -286,7 +301,7 @@ function calcs.mirages(env)
 					env.player.mainSkill.skillData.triggered = true
 				end
 			end,
-			mirageSkillNotFoundFunc = function(env, config)
+			mirageSkillNotFoundFunc = function (env, config)
 				env.player.mainSkill.disableReason = "No Tawhoa's Chosen active skill found"
 				env.player.mainSkill.skillFlags.disable = true
 			end
@@ -307,7 +322,8 @@ function calcs.mirages(env)
 		end
 
 		-- Scale dps with GC's cooldown
-		env.player.mainSkill.skillData.dpsMultiplier = (env.player.mainSkill.skillData.dpsMultiplier or 1) * (1 / cooldown)
+		env.player.mainSkill.skillData.dpsMultiplier = (env.player.mainSkill.skillData.dpsMultiplier or 1) *
+			(1 / cooldown)
 
 		-- Does not use player resources
 		env.player.mainSkill.skillModList:NewMod("HasNoCost", "FLAG", true, "Used by mirage")
@@ -320,28 +336,34 @@ function calcs.mirages(env)
 		-- Supported Attacks Count as Exerted
 		for _, value in ipairs(env.modDB:Tabulate("INC", env.player.mainSkill.skillCfg, "ExertIncrease")) do
 			local mod = value.mod
-			env.player.mainSkill.skillModList:NewMod("Damage", mod.type, mod.value, mod.source, mod.flags, mod.keywordFlags)
+			env.player.mainSkill.skillModList:NewMod("Damage", mod.type, mod.value, mod.source, mod.flags,
+				mod.keywordFlags)
 		end
 		for _, value in ipairs(env.modDB:Tabulate("MORE", env.player.mainSkill.skillCfg, "ExertIncrease")) do
 			local mod = value.mod
-			env.player.mainSkill. skillModList:NewMod("Damage", mod.type, mod.value, mod.source, mod.flags, mod.keywordFlags)
+			env.player.mainSkill.skillModList:NewMod("Damage", mod.type, mod.value, mod.source, mod.flags,
+				mod.keywordFlags)
 		end
 		for _, value in ipairs(env.modDB:Tabulate("MORE", env.player.mainSkill.skillCfg, "ExertAttackIncrease")) do
 			local mod = value.mod
-			env.player.mainSkill.skillModList:NewMod("Damage", mod.type, mod.value, mod.source, mod.flags, mod.keywordFlags)
+			env.player.mainSkill.skillModList:NewMod("Damage", mod.type, mod.value, mod.source, mod.flags,
+				mod.keywordFlags)
 		end
 		for _, value in ipairs(env.modDB:Tabulate("BASE", env.player.mainSkill.skillCfg, "ExertDoubleDamageChance")) do
 			local mod = value.mod
-			env.player.mainSkill.skillModList:NewMod("DoubleDamageChance", mod.type, mod.value, mod.source, mod.flags, mod.keywordFlags)
+			env.player.mainSkill.skillModList:NewMod("DoubleDamageChance", mod.type, mod.value, mod.source, mod.flags,
+				mod.keywordFlags)
 		end
 
 		-- Scale dps with mirage quantity
 		for _, value in ipairs(generalsCryActiveSkill.skillModList:Tabulate("BASE", generalsCryActiveSkill.skillCfg, "GeneralsCryDoubleMaxCount")) do
 			local mod = value.mod
-			env.player.mainSkill.skillModList:NewMod("QuantityMultiplier", mod.type, mod.value, mod.source, mod.flags, mod.keywordFlags)
+			env.player.mainSkill.skillModList:NewMod("QuantityMultiplier", mod.type, mod.value, mod.source, mod.flags,
+				mod.keywordFlags)
 			maxMirageWarriors = maxMirageWarriors + mod.value
 		end
-		env.player.mainSkill.infoMessage = tostring(maxMirageWarriors) .. " GC Mirage Warriors using " .. env.player.mainSkill.activeEffect.grantedEffect.name
+		env.player.mainSkill.infoMessage = tostring(maxMirageWarriors) ..
+			" GC Mirage Warriors using " .. env.player.mainSkill.activeEffect.grantedEffect.name
 	end
 
 	return calculateMirage(env, config)
