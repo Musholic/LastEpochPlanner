@@ -6,6 +6,7 @@
     <option name="PORT" value="9966" />
     <option name="PIPE" value="emmy" />
     <option name="WIN_ARCH" value="1" />
+    <option name="SOURCE_ROOTS" value="$PROJECT_DIR$/src;$PROJECT_DIR$/spec" />
     <method v="2" />
   </configuration>
 </component>
