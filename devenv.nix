@@ -6,6 +6,7 @@
     luajitPackages.busted
     luajitPackages.luacov
     libxml2
+    rusty-path-of-building
   ];
 
   languages.lua = {
@@ -34,7 +35,14 @@
     fi
 
     ln -sf "$EMMY_DIR/emmy_core.dll" "$DEVENV_ROOT/runtime/emmy_core.dll"
-    export LUA_CPATH="$EMMY_DIR/emmy_core.so;"
+    ln -sf "$EMMY_DIR/emmy_core.so" "$DEVENV_ROOT/src/emmy_core.so"
+    if [ ! -d "$DEVENV_ROOT/src/lua" ]; then
+      ln -sf "$DEVENV_ROOT/runtime/lua" "$DEVENV_ROOT/src/lua"
+    fi
+  '';
+
+  scripts.lep.exec = ''
+    rusty-path-of-building poe1
   '';
 
   # See full reference at https://devenv.sh/reference/options/

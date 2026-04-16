@@ -29,5 +29,9 @@ devenv.lock
 runtime/imgui.ini
 runtime/emmy_core.dll
 
+# For easy compatibility with rusty-path-of-building
+src/lua
+src/emmy_core.so
+
 # Devenv
 .devenv*
