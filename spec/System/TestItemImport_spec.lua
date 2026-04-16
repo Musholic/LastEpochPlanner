@@ -112,10 +112,12 @@ describe("Offline Item Import", function ()
 			["base"] = {
 				["affixEffectModifier"] = -0.83,
 				["baseTypeID"] = 26,
+				["height"] = 1,
 				["implicits"] = {},
 				["req"] = { ["level"] = 0 },
 				["subTypeID"] = 1,
-				["type"] = 'Minor Idol'
+				["type"] = 'Minor Idol',
+				["width"] = 1
 			},
 			["baseName"] = 'Minor Weaver Idol',
 			["explicitMods"] = {},
@@ -176,6 +178,14 @@ describe("Offline Item Import", function ()
 			["base"] = {
 				["affixEffectModifier"] = 0,
 				["baseTypeID"] = 41,
+				["blockedCells"] = {
+					[1] = { [1] = 0, [2] = 0 },
+					[2] = { [1] = 0, [2] = 4 },
+					[3] = { [1] = 1, [2] = 2 },
+					[4] = { [1] = 3, [2] = 2 },
+					[5] = { [1] = 4, [2] = 0 },
+					[6] = { [1] = 4, [2] = 4 }
+				},
 				["implicits"] = { [1] = '{rounding:Integer}+(6-10) Health per Equipped Omen Idol' },
 				["req"] = { ["level"] = 0 },
 				["subTypeID"] = 5,

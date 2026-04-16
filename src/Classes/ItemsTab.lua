@@ -904,6 +904,8 @@ function ItemsTabClass:AddItem(item, noAutoEquip, index)
 			t_insert(self.itemOrderList, item.id)
 		end
 
+		self.items[item.id] = item
+
 		if not noAutoEquip then
 			-- Autoequip it
 			for _, slot in ipairs(self.orderedSlots) do
@@ -916,7 +918,6 @@ function ItemsTabClass:AddItem(item, noAutoEquip, index)
 	end
 
 	-- Add it to the list
-	local replacing = self.items[item.id]
 	self.items[item.id] = item
 	item:BuildModList()
 end
