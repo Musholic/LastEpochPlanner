@@ -1,4 +1,6 @@
-local c=...c[" 0.5s Delay Before Casting"]={nil," 0.5s Delay Before Casting "}
+---@diagnostic disable
+local c=...
+c[" 0.5s Delay Before Casting"]={nil," 0.5s Delay Before Casting "}
 c[" 1 Vine Per Summon"]={nil," 1 Vine Per Summon "}
 c[" 100% Armor -> Minion Healing"]={nil," 100% Armor -> Minion Healing "}
 c[" 100% Base Damage -> Fire Damage"]={nil," 100% Base Damage -> Fire Damage "}
@@ -2365,7 +2367,6 @@ c["+100% Chance to gain a Storm Stack when you directly use a melee attack and h
 c["+100% Chance to inflict Bleed on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=100}},nil}
 c["+100% Chance to inflict Bleed on Melee Hit"]={{[1]={flags=8389120,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Bleed",type="BASE",value=100}},nil}
 c["+100% Chance to inflict Plague on Hit"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Plague",type="BASE",value=100}},nil}
-c["+100% Chance to shred fire resistance each second with Tornado"]={{[1]={[1]={skillName="Tornado",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_FireResistanceShred",type="BASE",value=100}},"  each second with  "}
 c["+100% Chance to taunt nearby enemies for 2 seconds when you stun an enemy"]={{}," to taunt nearby enemies  when you stun an enemy "}
 c["+100% Charge Speed"]={{}," Charge Speed "}
 c["+100% Chill Chance"]={{[1]={flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_Chill",type="BASE",value=100}},nil}
@@ -2465,6 +2466,7 @@ c["+100% You can only control one Shade"]={{}," You can only control one Shade "
 c["+100% You have Haste"]={{}," You have  "}
 c["+100% chance to cast Glacier along Evade path"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_Glacier",type="BASE",value=100}},"  along Evade path "}
 c["+100% chance to cast Static Orb when you Evade for 90% of its mana cost"]={{[1]={flags=0,keywordFlags=0,name="ChanceToTriggerOnHit_StaticOrb",type="BASE",value=100}},"  when you Evade for 90% of its mana cost "}
+c["+100% chance to shred fire resistance each second with Tornado"]={{[1]={[1]={skillName="Tornado",type="SkillName"},flags=8388608,keywordFlags=0,name="ChanceToTriggerOnHit_Ailment_FireResistanceShred",type="BASE",value=100}},"  each second with  "}
 c["+1000 Minion Armor"]={{[1]={flags=0,keywordFlags=0,name="MinionModifier",type="LIST",value={mod={flags=0,keywordFlags=0,name="Armour",type="BASE",value=1000}}}},nil}
 c["+1000% Spell Lightning Damage for 4 seconds when you use Javelin"]={{[1]={[1]={skillName="Javelin",type="SkillName"},flags=0,keywordFlags=256,name="LightningDamage",type="MORE",value=1000}},"    when you use  "}
 c["+101 Dodge Rating while using Evade"]={{[1]={flags=0,keywordFlags=0,name="Evasion",type="BASE",value=101}},"  while using Evade "}
@@ -9231,6 +9233,7 @@ c["1 Freeze Duration"]={{[1]={flags=0,keywordFlags=0,name="EnemyFreezeDuration",
 c["1 Frenzy Duration (Seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Frenzy Duration (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Frenzy Duration On Exit (seconds)"]={{[1]={[1]={skillName="Frenzy",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   On Exit (seconds) "}
+c["1 Frost Claws"]={{}," s "}
 c["1 Ghost Blades Stacks Gained"]={{}," Ghost Blades Stacks Gained "}
 c["1 Haste Duration"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},nil}
 c["1 Haste Duration (Double For Companions)"]={{[1]={[1]={skillName="Haste",type="SkillName"},flags=0,keywordFlags=0,name="Duration",type="BASE",value=1}},"   (Double For Companions) "}
