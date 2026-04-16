@@ -11,7 +11,10 @@ local band = bit.band
 
 local influenceInfo = itemLib.influenceInfo
 
+---@class ImportTab : ControlHost
 local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function (self, build)
+	---@cast self ImportTab
+	---@cast build Build
 	self.ControlHost()
 	self.Control()
 
@@ -564,6 +567,7 @@ function ImportTabClass:DownloadCharacterList()
 
 	local saveFolderSuffix = "\\AppData\\LocalLow\\Eleventh Hour Games\\Last Epoch\\Saves\\"
 	local localSaveFolders = {}
+	local fileSeparator = package.config:sub(1, 1)
 	if os.getenv("UserProfile") then
 		-- For Windows
 		t_insert(localSaveFolders, os.getenv('UserProfile') .. saveFolderSuffix)
@@ -572,7 +576,7 @@ function ImportTabClass:DownloadCharacterList()
 		-- For Linux
 		t_insert(localSaveFolders, "/home/" .. os.getenv("USER")
 			.. "/.local/share/Steam/steamapps/compatdata/899770/pfx/drive_c/users/steamuser/"
-			.. saveFolderSuffix)
+			.. saveFolderSuffix:gsub("\\", "/"))
 	end
 	local saves = {}
 	for _, localSaveFolder in ipairs(localSaveFolders) do
@@ -584,7 +588,7 @@ function ImportTabClass:DownloadCharacterList()
 			-- (avoid .bak or .zip files)
 			if not fileName:match("%.") then
 				if fileName:match("%d+$") then
-					table.insert(saves, localSaveFolder .. "\\" .. fileName)
+					table.insert(saves, localSaveFolder .. fileSeparator .. fileName)
 				end
 			end
 

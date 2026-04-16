@@ -18,6 +18,7 @@ local anchorPos = {
 	["CENTER"] = { 0.5, 0.5 },
 }
 
+---@class Control
 local ControlClass = newClass("Control", function (self, anchor, x, y, width, height)
 	self.x = x or 0
 	self.y = y or 0
