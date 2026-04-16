@@ -25,12 +25,6 @@ local rarityDropList = {
 local baseSlots = { "Weapon 1", "Weapon 2", "Helmet", "Body Armor", "Gloves", "Boots", "Amulet", "Ring 1", "Ring 2",
 	"Belt", "Relic", "Idol Altar" }
 
-for i = 1, 5 do
-	for j = 1, 5 do
-		table.insert(baseSlots, "Idol " .. i .. "," .. j)
-	end
-end
-
 for i = 1, 10 do
 	table.insert(baseSlots, "Blessing " .. i)
 end
@@ -103,6 +97,19 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 				return self.activeItemSet.useSecondWeaponSet
 			end
 		end
+		if slotName:match("Idol Altar") then
+			local idolGridAnchor = prevSlot
+			-- Put a 5x5 grid of idol slots below
+			for j = 1, 5 do
+				for i = 1, 5 do
+					local slotName = "Idol " .. i .. "," .. (6 - j)
+					local slot = new("ItemSlotControl", { "TOPLEFT", idolGridAnchor, "BOTTOMLEFT" }, -90 + 80 * (i - 1),
+						2 + (j - 1) * 20, self, slotName)
+					addSlot(slot)
+				end
+			end
+			prevSlot = new("Control", { "TOPLEFT", idolGridAnchor, "BOTTOMLEFT" }, 0, 20 * 5)
+		end
 	end
 
 	-- Passive tree dropdown controls
@@ -121,9 +128,6 @@ local ItemsTabClass = newClass("ItemsTab", "UndoHandler", "ControlHost", "Contro
 		self.build.treeTab:OpenSpecManagePopup()
 	end)
 	self.controls.specLabel = new("LabelControl", { "RIGHT", prevSlot, "LEFT" }, -2, 0, 0, 16, "^7Passive tree:")
-
-	self.controls.idolPositionsLabel = new("LabelControl", { "TOPLEFT", self.controls.specLabel, "BOTTOMLEFT" }, 0, 16, 0,
-		16, "Idol positions start from bottom left (position 1,1) then left to right. Bottom right is position 5,1")
 
 	self.controls.slotHeader = new("LabelControl", { "BOTTOMLEFT", self.slotAnchor, "TOPLEFT" }, 0, -4, 0, 16,
 		"^7Equipped items:")
@@ -622,7 +626,7 @@ function ItemsTabClass:Draw(viewPort, inputEvents)
 	self.controls.scrollBarV.x = viewPort.x + viewPort.width - 18
 	self.controls.scrollBarV.y = viewPort.y
 	do
-		local maxY = select(2, self.controls.idolPositionsLabel:GetPos()) + 24
+		local maxY = select(2, self.lastSlot:GetPos()) + 24
 		local maxX = self.anchorDisplayItem:GetPos() + 462
 		if self.displayItem then
 			local x, y = self.controls.displayItemTooltipAnchor:GetPos()
@@ -807,6 +811,10 @@ function ItemsTabClass:EquipItemInSet(item, itemSetId)
 	self.build.buildFlag = true
 end
 
+function ItemsTabClass:GetItemForSlot(slotName)
+	return self.items[self.slots[slotName].selItemId]
+end
+
 function ItemsTabClass:UpdateAllItemRangeLabel()
 	local range = self.controls.allItemRangeSlider.val * 256
 	if range > 127.2 and range < 127.8 then
@@ -819,8 +827,64 @@ end
 
 -- Update the item lists for all the slot controls
 function ItemsTabClass:PopulateSlots()
+	self:UpdateIdolSlots()
 	for _, slot in pairs(self.slots) do
 		slot:Populate()
+	end
+end
+
+function ItemsTabClass:UpdateIdolSlots()
+	-- First activate all slots
+	for x = 1, 5 do
+		for y = 1, 5 do
+			local slot = self.slots["Idol " .. x .. "," .. y]
+			slot.inactive = false
+			slot.disabledBy = nil
+		end
+	end
+	local disabledSlots = { { 0, 0 }, { 4, 0 }, { 0, 4 }, { 4, 4 } }
+	local idolAltarItem = self:GetItemForSlot("Idol Altar")
+	if idolAltarItem then
+		disabledSlots = idolAltarItem.base.blockedCells
+	end
+	for x = 1, 5 do
+		for y = 1, 5 do
+			local slotName = "Idol " .. x .. "," .. y
+			local slot = self.slots[slotName]
+			local isDisabled = false
+			for _, slot in ipairs(disabledSlots) do
+				if x == slot[1] + 1 and y == 5 - slot[2] then
+					isDisabled = true
+					break
+				end
+			end
+			if isDisabled then
+				slot:SetSelItemId(0)
+				slot.inactive = true
+			end
+
+			-- Disable idol neighboring slots for all populated idol slots with large sizes
+			local item = self.items[slot.selItemId]
+			if item ~= nil then
+				for i = 1, item.base.width do
+					for j = 1, item.base.height do
+						if i > 1 or j > 1 then
+							local neighborSlot = self.slots["Idol " .. (x + i - 1) .. "," .. (y + j - 1)]
+							if neighborSlot then
+								if neighborSlot.inactive then
+									-- Already inactive, it means there is already an idol overlaping this slot
+									slot:SetSelItemId(0)
+									self:PopulateSlots()
+									return
+								end
+								neighborSlot.inactive = true
+								neighborSlot.disabledBy = slotName
+							end
+						end
+					end
+				end
+			end
+		end
 	end
 end
 
@@ -1191,7 +1255,30 @@ function ItemsTabClass:IsItemValidForSlot(item, slotName, itemSet)
 	if item.type == slotType then
 		return true
 	elseif slotType == "Idol" then
-		return item.type:match("Idol$")
+		if not item.type:match("Idol$") then
+			return false
+		end
+		-- Only if the idol has enough space in neighboring slots
+		local width = item.base.width
+		local height = item.base.height
+		local valid = true
+		local x, y = slotName:match("Idol (%d+),(%d+)$")
+		for i = 1, width do
+			for j = 1, height do
+				if i > 1 or j > 1 then
+					local neighborSlot = self.slots["Idol " .. (x + i - 1) .. "," .. (y + j - 1)]
+					if not neighborSlot then
+						valid = false
+						break
+					end
+					local disabledByUs = neighborSlot.disabledBy == slotName
+					if neighborSlot.selItemId > 0 or (neighborSlot.inactive and not disabledByUs) then
+						valid = false
+					end
+				end
+			end
+		end
+		return valid
 	elseif slotName == "Weapon 1" or slotName == "Weapon 1 Swap" or slotName == "Weapon" then
 		return item.base.weapon ~= nil
 	elseif slotName == "Weapon 2" or slotName == "Weapon 2 Swap" then
@@ -1595,6 +1682,11 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode)
 		tooltip:AddLine(16, s_format("^x7F7F7F%s", self.build.data.weaponTypeInfo[base.type].label or base.type))
 		tooltip:AddLine(16, s_format("^x7F7F7FAttacks per Second: %s%.2f", "^7", base.weapon.AttackRateBase))
 		tooltip:AddLine(16, s_format("^x7F7F7FWeapon Range: %s%.1f ^x7F7F7Fmetres", "^7", base.weapon.Range))
+	end
+
+	if base.width and base.height then
+		-- Add idols width/height
+		tooltip:AddLine(16, s_format("^x7F7F7FSize: ^7%dx%d", base.width, base.height))
 	end
 
 	tooltip:AddSeparator(10)
