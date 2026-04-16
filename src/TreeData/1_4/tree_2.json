@@ -20879,7 +20879,7 @@
         "st31io-11"
       ],
       "description": [
-        "Whenever Shield Throw ricochets on an enemy it casts {Lava Burst,} a spell dealing fire damage to all enemies near the impact."
+        "Whenever Shield Throw ricochets on an enemy or ally, it casts {Lava Burst}, a spell dealing fire damage to all enemies near the impact."
       ]
     },
     "st31io-8": {

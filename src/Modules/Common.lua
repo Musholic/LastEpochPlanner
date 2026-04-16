@@ -555,7 +555,7 @@ function prettyPrintTable(tbl, pre, outFile)
 	pre = pre or ""
 	local outNames = {}
 	for name in pairs(tbl) do
-		t_insert(outNames, tostring(name))
+		t_insert(outNames, name)
 	end
 	table.sort(outNames)
 	for _, name in ipairs(outNames) do

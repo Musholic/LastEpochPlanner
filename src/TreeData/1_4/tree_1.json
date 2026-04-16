@@ -16714,7 +16714,8 @@
         1
       ],
       "out": [
-        "me27-12"
+        "me27-12",
+        "me27-27"
       ],
       "description": [
         "Meteor falls faster."
@@ -17099,6 +17100,31 @@
       "out": [],
       "description": [
         "Directly casting Fireball while you have {Craterborn} grants ward and restores your mana."
+      ]
+    },
+    "me27-27": {
+      "skill": "me27-27",
+      "name": "Heat Flux",
+      "icon": "rune-wall-orange",
+      "x": 151.04001,
+      "y": 265.6,
+      "maxPoints": 3,
+      "mastery": 0,
+      "masteryRequirement": 0,
+      "stats": [
+        "1 Frost Claws"
+      ],
+      "notScalingStats": [],
+      "noScalingPointThreshold": 0,
+      "in": [
+        "me27-11"
+      ],
+      "reqPoints": [
+        1
+      ],
+      "out": [],
+      "description": [
+        "Meteors cast {Frost Claw} towards a nearby enemy on impact, consuming 120% of Frost Claw's mana cost."
       ]
     },
     "ms26-0": {
@@ -18331,6 +18357,9 @@
       "out": [],
       "description": [
         "While you have 3 runes and your combination of runes changes without casting an invocation, you gain {Runic Energy}."
+      ],
+      "reminderText": [
+        "A {Rune} combination only considers the number and type of runes, and not the order.\nFor example, Rah-Rah-Heo is the same combination as Heo-Rah-Rah"
       ]
     },
     "rn7iv-18": {
@@ -18530,6 +18559,9 @@
       "out": [],
       "description": [
         "While you have 3 {Runes} and your combination of {Runes} changes without casting an {Invocation}, Runic Invocation's remaining cooldown is reduced."
+      ],
+      "reminderText": [
+        "A {Rune} combination only considers the number and type of runes, and not the order.\nFor example, Rah-Rah-Heo is the same combination as Heo-Rah-Rah"
       ]
     },
     "rn7iv-25": {

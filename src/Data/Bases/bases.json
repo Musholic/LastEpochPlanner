@@ -7926,7 +7926,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.83,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 1
   },
   "Small Orobyss Idol": {
     "type": "Small Idol",
@@ -7936,7 +7938,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.83,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 1
   },
   "Small Weaver Idol": {
     "type": "Small Idol",
@@ -7946,7 +7950,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.83,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 1
   },
   "Minor Lagonian Idol": {
     "type": "Minor Idol",
@@ -7956,7 +7962,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.83,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 1
   },
   "Minor Weaver Idol": {
     "type": "Minor Idol",
@@ -7966,7 +7974,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.83,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 1
   },
   "Humble Eterran Idol": {
     "type": "Humble Idol",
@@ -7976,7 +7986,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.62,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 1
   },
   "Humble Weaver Idol": {
     "type": "Humble Idol",
@@ -7986,7 +7998,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.62,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 1
   },
   "Stout Lagonian Idol": {
     "type": "Stout Idol",
@@ -7996,7 +8010,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.62,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 2
   },
   "Stout Weaver Idol": {
     "type": "Stout Idol",
@@ -8006,7 +8022,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.62,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 2
   },
   "Grand Heorot Idol": {
     "type": "Grand Idol",
@@ -8016,7 +8034,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Grand Glass Idol": {
     "type": "Grand Idol",
@@ -8026,7 +8046,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Grand Solar Idol": {
     "type": "Grand Idol",
@@ -8036,7 +8058,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Grand Bone Idol": {
     "type": "Grand Idol",
@@ -8046,7 +8070,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Grand Majasan Idol": {
     "type": "Grand Idol",
@@ -8056,7 +8082,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Heretical Grand Heorot Idol": {
     "type": "Grand Idol",
@@ -8066,7 +8094,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Heretical Grand Glass Idol": {
     "type": "Grand Idol",
@@ -8076,7 +8106,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Heretical Grand Solar Idol": {
     "type": "Grand Idol",
@@ -8086,7 +8118,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Heretical Grand Bone Idol": {
     "type": "Grand Idol",
@@ -8096,7 +8130,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Heretical Grand Majasan Idol": {
     "type": "Grand Idol",
@@ -8106,7 +8142,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Grand Primal Omen Idol": {
     "type": "Grand Idol",
@@ -8116,7 +8154,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Grand Arcane Omen Idol": {
     "type": "Grand Idol",
@@ -8126,7 +8166,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Grand Iron Omen Idol": {
     "type": "Grand Idol",
@@ -8136,7 +8178,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Grand Spectral Omen Idol": {
     "type": "Grand Idol",
@@ -8146,7 +8190,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Grand Umbral Omen Idol": {
     "type": "Grand Idol",
@@ -8156,7 +8202,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 3,
+    "height": 1
   },
   "Large Nomad Idol": {
     "type": "Large Idol",
@@ -8166,7 +8214,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Large Arcane Idol": {
     "type": "Large Idol",
@@ -8176,7 +8226,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Large Rahyeh Idol": {
     "type": "Large Idol",
@@ -8186,7 +8238,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Large Immortal Idol": {
     "type": "Large Idol",
@@ -8196,7 +8250,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Large Shadow Idol": {
     "type": "Large Idol",
@@ -8206,7 +8262,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Heretical Large Nomad Idol": {
     "type": "Large Idol",
@@ -8216,7 +8274,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Heretical Large Arcane Idol": {
     "type": "Large Idol",
@@ -8226,7 +8286,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Heretical Large Rahyeh Idol": {
     "type": "Large Idol",
@@ -8236,7 +8298,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Heretical Large Immortal Idol": {
     "type": "Large Idol",
@@ -8246,7 +8310,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Heretical Large Shadow Idol": {
     "type": "Large Idol",
@@ -8256,7 +8322,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Large Primal Omen Idol": {
     "type": "Large Idol",
@@ -8266,7 +8334,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Large Arcane Omen Idol": {
     "type": "Large Idol",
@@ -8276,7 +8346,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Large Iron Omen Idol": {
     "type": "Large Idol",
@@ -8286,7 +8358,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Large Spectral Omen Idol": {
     "type": "Large Idol",
@@ -8296,7 +8370,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Large Umbral Omen Idol": {
     "type": "Large Idol",
@@ -8306,7 +8382,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.33,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 3
   },
   "Ornate Heorot Idol": {
     "type": "Ornate Idol",
@@ -8316,7 +8394,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 4,
+    "height": 1
   },
   "Ornate Glass Idol": {
     "type": "Ornate Idol",
@@ -8326,7 +8406,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 4,
+    "height": 1
   },
   "Ornate Solar Idol": {
     "type": "Ornate Idol",
@@ -8336,7 +8418,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 4,
+    "height": 1
   },
   "Ornate Bone Idol": {
     "type": "Ornate Idol",
@@ -8346,7 +8430,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 4,
+    "height": 1
   },
   "Ornate Majasan Idol": {
     "type": "Ornate Idol",
@@ -8356,7 +8442,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 4,
+    "height": 1
   },
   "Heretical Ornate Heorot Idol": {
     "type": "Ornate Idol",
@@ -8366,7 +8454,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 4,
+    "height": 1
   },
   "Heretical Ornate Glass Idol": {
     "type": "Ornate Idol",
@@ -8376,7 +8466,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 4,
+    "height": 1
   },
   "Heretical Ornate Solar Idol": {
     "type": "Ornate Idol",
@@ -8386,7 +8478,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 4,
+    "height": 1
   },
   "Heretical Ornate Bone Idol": {
     "type": "Ornate Idol",
@@ -8396,7 +8490,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 4,
+    "height": 1
   },
   "Heretical Ornate Majasan Idol": {
     "type": "Ornate Idol",
@@ -8406,7 +8502,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 4,
+    "height": 1
   },
   "Huge Nomad Idol": {
     "type": "Huge Idol",
@@ -8416,7 +8514,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 4
   },
   "Huge Arcane Idol": {
     "type": "Huge Idol",
@@ -8426,7 +8526,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 4
   },
   "Huge Rahyeh Idol": {
     "type": "Huge Idol",
@@ -8436,7 +8538,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 4
   },
   "Huge Immortal Idol": {
     "type": "Huge Idol",
@@ -8446,7 +8550,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 4
   },
   "Huge Shadow Idol": {
     "type": "Huge Idol",
@@ -8456,7 +8562,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 4
   },
   "Heretical Huge Nomad Idol": {
     "type": "Huge Idol",
@@ -8466,7 +8574,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 4
   },
   "Heretical Huge Arcane Idol": {
     "type": "Huge Idol",
@@ -8476,7 +8586,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 4
   },
   "Heretical Huge Rahyeh Idol": {
     "type": "Huge Idol",
@@ -8486,7 +8598,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 4
   },
   "Heretical Huge Immortal Idol": {
     "type": "Huge Idol",
@@ -8496,7 +8610,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 4
   },
   "Heretical Huge Shadow Idol": {
     "type": "Huge Idol",
@@ -8506,7 +8622,9 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "width": 1,
+    "height": 4
   },
   "Adorned Heorot Idol": {
     "type": "Adorned Idol",
@@ -8516,7 +8634,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Adorned Arcane Idol": {
     "type": "Adorned Idol",
@@ -8526,7 +8646,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Adorned Rahyeh Idol": {
     "type": "Adorned Idol",
@@ -8536,7 +8658,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Adorned Immortal Idol": {
     "type": "Adorned Idol",
@@ -8546,7 +8670,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Adorned Majasan Idol": {
     "type": "Adorned Idol",
@@ -8556,7 +8682,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Adorned Silver Idol": {
     "type": "Adorned Idol",
@@ -8566,7 +8694,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Adorned Volcano Idol": {
     "type": "Adorned Idol",
@@ -8576,7 +8706,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Heretical Adorned Heorot Idol": {
     "type": "Adorned Idol",
@@ -8586,7 +8718,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Heretical Adorned Arcane Idol": {
     "type": "Adorned Idol",
@@ -8596,7 +8730,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Heretical Adorned Rahyeh Idol": {
     "type": "Adorned Idol",
@@ -8606,7 +8742,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Heretical Adorned Immortal Idol": {
     "type": "Adorned Idol",
@@ -8616,7 +8754,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Heretical Adorned Majasan Idol": {
     "type": "Adorned Idol",
@@ -8626,7 +8766,9 @@
       "level": 0
     },
     "affixEffectModifier": -0.05,
-    "implicits": []
+    "implicits": [],
+    "width": 2,
+    "height": 2
   },
   "Pride of Rebellion": {
     "type": "Blessing",
@@ -11898,7 +12040,37 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "blockedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        4
+      ]
+    ]
   },
   "Jagged Altar": {
     "type": "Idol Altar",
@@ -11910,6 +12082,32 @@
     "affixEffectModifier": 0,
     "implicits": [
       "2 Weaver Idols equipped at Maximum"
+    ],
+    "blockedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        4
+      ]
     ]
   },
   "Skyward Altar": {
@@ -11920,7 +12118,37 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "blockedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ]
+    ]
   },
   "Spire Altar": {
     "type": "Idol Altar",
@@ -11932,6 +12160,32 @@
     "affixEffectModifier": 0,
     "implicits": [
       "{rounding:Integer}+(7-24) Mana per Idol in a Refracted Slot"
+    ],
+    "blockedCells": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
     ]
   },
   "Carcinised Altar": {
@@ -11944,6 +12198,32 @@
     "affixEffectModifier": 0,
     "implicits": [
       "{rounding:Integer}+(64-256) Armor per Idol in a Refracted Slot"
+    ],
+    "blockedCells": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        3
+      ]
     ]
   },
   "Visage Altar": {
@@ -11956,6 +12236,32 @@
     "affixEffectModifier": 0,
     "implicits": [
       "{rounding:Integer}+(6-10) Health per Equipped Omen Idol"
+    ],
+    "blockedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        4
+      ]
     ]
   },
   "Lunar Altar": {
@@ -11966,7 +12272,33 @@
       "level": 0
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "blockedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ]
+    ]
   },
   "Ocular Altar": {
     "type": "Idol Altar",
@@ -11978,6 +12310,28 @@
     "affixEffectModifier": 0,
     "implicits": [
       "2 Adorned Idols equipped at Maximum"
+    ],
+    "blockedCells": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
     ]
   },
   "Archaic Altar": {
@@ -11988,7 +12342,29 @@
       "level": 50
     },
     "affixEffectModifier": 0,
-    "implicits": []
+    "implicits": [],
+    "blockedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        4
+      ]
+    ]
   },
   "Impervious Altar": {
     "type": "Idol Altar",
@@ -12001,6 +12377,28 @@
     "implicits": [
       "{rounding:Integer}+(15-35) Ward Decay Threshold per Equipped Corrupted Idol",
       "2 Weaver Idols equipped at Maximum"
+    ],
+    "blockedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ]
     ]
   },
   "Prophesied Altar": {
@@ -12013,6 +12411,24 @@
     "affixEffectModifier": 0,
     "implicits": [
       "(10-40)% increased Effect of Suffixes for Idols in Refracted Slots"
+    ],
+    "blockedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        4
+      ]
     ]
   },
   "Pyramidal Altar": {
@@ -12026,6 +12442,32 @@
     "implicits": [
       "10% Increased Cooldown Recovery Speed if there are no larger idols above smaller ones in the grid",
       "2 Weaver Idols equipped at Maximum"
+    ],
+    "blockedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ]
     ]
   },
   "Auric Altar": {
@@ -12038,6 +12480,24 @@
     "affixEffectModifier": 0,
     "implicits": [
       "2% more Damage to Bosses per Equipped Unique or Legendary Idol"
+    ],
+    "blockedCells": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        2
+      ]
     ]
   }
 }

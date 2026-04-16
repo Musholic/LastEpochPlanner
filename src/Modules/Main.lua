@@ -340,7 +340,9 @@ end
 function main:SaveModCache()
 	-- Update mod cache
 	local out = io.open("Data/ModCache.lua", "w")
-	out:write('local c=...')
+	-- Disable diagnostics to avoid warnings about the generated code
+	out:write('---@diagnostic disable\n')
+	out:write('local c=...\n')
 	for line, dat in pairsSortByKey(modLib.parseModCache) do
 		out:write('c["', line:gsub("\n", "\\n"), '"]={')
 		if dat[1] then

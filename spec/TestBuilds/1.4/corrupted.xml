@@ -538,29 +538,29 @@ Implicits: 1
 			<Slot itemId="3" name="Boots"></Slot>
 			<Slot itemId="4" name="Gloves"></Slot>
 			<Slot itemId="5" name="Helmet"></Slot>
-			<Slot itemId="14" name="Idol 1,1"></Slot>
+			<Slot itemId="18" name="Idol 1,1"></Slot>
 			<Slot itemId="0" name="Idol 1,2"></Slot>
 			<Slot itemId="20" name="Idol 1,3"></Slot>
-			<Slot itemId="0" name="Idol 1,4"></Slot>
-			<Slot itemId="18" name="Idol 1,5"></Slot>
-			<Slot itemId="17" name="Idol 2,1"></Slot>
+			<Slot itemId="14" name="Idol 1,4"></Slot>
+			<Slot itemId="0" name="Idol 1,5"></Slot>
+			<Slot itemId="16" name="Idol 2,1"></Slot>
 			<Slot itemId="0" name="Idol 2,2"></Slot>
 			<Slot itemId="0" name="Idol 2,3"></Slot>
-			<Slot itemId="16" name="Idol 2,4"></Slot>
-			<Slot itemId="0" name="Idol 2,5"></Slot>
+			<Slot itemId="0" name="Idol 2,4"></Slot>
+			<Slot itemId="17" name="Idol 2,5"></Slot>
 			<Slot itemId="0" name="Idol 3,1"></Slot>
 			<Slot itemId="0" name="Idol 3,2"></Slot>
 			<Slot itemId="0" name="Idol 3,3"></Slot>
 			<Slot itemId="0" name="Idol 3,4"></Slot>
 			<Slot itemId="0" name="Idol 3,5"></Slot>
-			<Slot itemId="13" name="Idol 4,1"></Slot>
-			<Slot itemId="0" name="Idol 4,2"></Slot>
-			<Slot itemId="12" name="Idol 4,3"></Slot>
+			<Slot itemId="15" name="Idol 4,1"></Slot>
+			<Slot itemId="12" name="Idol 4,2"></Slot>
+			<Slot itemId="0" name="Idol 4,3"></Slot>
 			<Slot itemId="0" name="Idol 4,4"></Slot>
-			<Slot itemId="15" name="Idol 4,5"></Slot>
-			<Slot itemId="19" name="Idol 5,1"></Slot>
+			<Slot itemId="13" name="Idol 4,5"></Slot>
+			<Slot itemId="0" name="Idol 5,1"></Slot>
 			<Slot itemId="0" name="Idol 5,2"></Slot>
-			<Slot itemId="0" name="Idol 5,3"></Slot>
+			<Slot itemId="19" name="Idol 5,3"></Slot>
 			<Slot itemId="0" name="Idol 5,4"></Slot>
 			<Slot itemId="0" name="Idol 5,5"></Slot>
 			<Slot itemId="6" name="Idol Altar"></Slot>

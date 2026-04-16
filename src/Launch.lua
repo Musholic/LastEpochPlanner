@@ -16,6 +16,13 @@ launch = {}
 SetMainObject(launch)
 
 function launch:OnInit()
+	if os.getenv("START_WITH_DEBUGGER") == "1" or os.getenv("START_WITH_DEBUGGER_WAIT") == "1" then
+		local dbg = require("emmy_core")
+		dbg.tcpListen("localhost", 9966)
+		if os.getenv("START_WITH_DEBUGGER_WAIT") == "1" then
+			dbg.waitIDE()
+		end
+	end
 	self.devMode = false
 	self.installedMode = false
 	self.versionNumber = "?"

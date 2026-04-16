@@ -198,6 +198,9 @@ function DropDownClass:Draw(viewPort, noTooltip)
 	local enabled = self:IsEnabled()
 	local scrollBar = self.controls.scrollBar
 	local lineHeight = height - 4
+	if self.isIdol then
+		lineHeight = 16
+	end
 	self.dropHeight = lineHeight * m_min(#self.list, 20)
 	scrollBar.y = height + 1
 	if y + height + self.dropHeight + 4 <= viewPort.y + viewPort.height then
@@ -265,7 +268,9 @@ function DropDownClass:Draw(viewPort, noTooltip)
 	else
 		SetDrawColor(0.5, 0.5, 0.5)
 	end
-	main:DrawArrow(x + width - height / 2, y + height / 2, height / 2, height / 2, "DOWN")
+	if not self.isIdol then
+		main:DrawArrow(x + width - height / 2, y + height / 2, height / 2, height / 2, "DOWN")
+	end
 	if self.dropped then
 		SetDrawLayer(nil, 5)
 		SetDrawColor(0, 0, 0)
@@ -302,7 +307,12 @@ function DropDownClass:Draw(viewPort, noTooltip)
 			selLabel = selLabel.label
 		end
 	end
-	SetViewport(x + 2, y + 2, width - height, lineHeight)
+	if self.isIdol then
+		SetViewport(x + 2, y + 2, width - 4, lineHeight)
+	else
+		SetViewport(x + 2, y + 2, width - height, lineHeight)
+	end
+
 	DrawString(0, 0, "LEFT", lineHeight, "VAR", selLabel or "")
 	SetViewport()
 
@@ -424,6 +434,11 @@ function DropDownClass:OnKeyUp(key)
 		elseif mOverComp == "DROP" then
 			local x, y = self:GetPos()
 			local width, height = self:GetSize()
+			if self.isIdol then
+				-- The idol slots are of varying size but the dropdown height is fixed
+				y = y + height - 20
+				height = 20
+			end
 			local cursorX, cursorY = GetCursorPos()
 			local dropExtra = self.dropHeight + 4
 			local dropY = self.dropUp and y - dropExtra or y + height

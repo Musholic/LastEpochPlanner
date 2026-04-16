@@ -20456,7 +20456,7 @@
         "sm4g-6"
       ],
       "description": [
-        "Adds {Cryomancers} to the pool of Skeletal Mages that can be summoned. Cryomancers deal cold damage and cast {Ice Shard}.\n\nAll poison chance gained from this tree is converted to chill chance for Cryomancers."
+        "Adds {Cryomancers} to the pool of Skeletal Mages that can be summoned. Cryomancers deal cold damage and cast {Ice Shard}.\n\nPoison chance from all sources is converted to chill chance for Cryomancers."
       ],
       "reminderText": [
         "Cyromancers count as Skeletal Mages and receive all of the bonuses they do."
@@ -20601,7 +20601,7 @@
         "sm4g-13"
       ],
       "description": [
-        "Adds Pyromancers to the summon pool of Skeletal Mages that can be summoned. Pyromancers deal fire damage and cast {Fireball}.\r\n \r\nAll poison chance gained from this tree is converted to ignite chance for Pyromancers.\r"
+        "Adds Pyromancers to the summon pool of Skeletal Mages that can be summoned. Pyromancers deal fire damage and cast {Fireball}.\r\n \r\nPoison chance from all sources is converted to ignite chance for Pyromancers.\r"
       ],
       "reminderText": [
         "Pyromancers count as Skeletal Mages and receive all of the bonuses they do."

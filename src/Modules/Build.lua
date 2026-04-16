@@ -1152,13 +1152,6 @@ function buildMode:ReadLeToolsSave(saveContent)
 
 	function processItemData(slotName, itemData)
 		local item = { ["slotName"] = onlineImportSlotMap[slotName] }
-		if slotName == "idol" then
-			local posX = itemData["x"]
-			local posY = itemData["y"]
-			item["slotName"] = "Idol " .. posX .. "," .. posY
-			item["rarityType"] = "IDOL"
-			item["rarity"] = "IDOL"
-		end
 		local baseTypeID = data.LETools_itemBases[itemData.id].baseTypeId
 		local subTypeID = data.LETools_itemBases[itemData.id].subTypeId
 		local uniqueId = data.LETools_itemBases[itemData.id].uniqueId
@@ -1168,6 +1161,13 @@ function buildMode:ReadLeToolsSave(saveContent)
 				item.base = itemBase
 				item.name = itemBaseName
 				item.baseName = itemBaseName
+				if slotName == "idol" then
+					item["rarityType"] = "IDOL"
+					item["rarity"] = "IDOL"
+					local posX = itemData["x"]
+					local posY = 6 - itemData["y"] - (itemBase.height - 1)
+					item["slotName"] = "Idol " .. posX .. "," .. posY
+				end
 			end
 		end
 

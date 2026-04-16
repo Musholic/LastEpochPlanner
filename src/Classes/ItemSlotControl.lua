@@ -9,7 +9,10 @@ local m_min = math.min
 
 local ItemSlotClass = newClass("ItemSlotControl", "DropDownControl",
 	function (self, anchor, x, y, itemsTab, slotName, slotLabel, nodeId)
-		self.DropDownControl(anchor, x, y, 310, 20, {}, function (index, value)
+		self.isIdol = slotName:match("Idol %d,%d") ~= nil
+		local width = self.isIdol and 80 or 310
+		self.initialY = y
+		self.DropDownControl(anchor, x, y, width, 20, {}, function (index, value)
 			if self.items[index] ~= self.selItemId then
 				self:SetSelItemId(self.items[index])
 				itemsTab:PopulateSlots()
@@ -44,6 +47,24 @@ local ItemSlotClass = newClass("ItemSlotControl", "DropDownControl",
 function ItemSlotClass:SetSelItemId(selItemId)
 	self.itemsTab.activeItemSet[self.slotName].selItemId = selItemId
 	self.selItemId = selItemId
+	if self.isIdol then
+		self:UpdateIdolSlot()
+	end
+end
+
+function ItemSlotClass:UpdateIdolSlot()
+	-- Update the height and width for idol slots
+	if self.selItemId > 0 then
+		local item = self.itemsTab.items[self.selItemId]
+		self.width = 80 * item.base.width
+		self.height = 20 + 20 * (item.base.height - 1)
+		self.y = self.initialY - 20 * (item.base.height - 1)
+	else
+		self.width = 80
+		self.height = 20
+		self.y = self.initialY
+	end
+	self.droppedWidth = self.width
 end
 
 function ItemSlotClass:Populate()
@@ -63,6 +84,9 @@ function ItemSlotClass:Populate()
 	end
 	if not self.selItemId or not self.itemsTab.items[self.selItemId] or not self.itemsTab:IsItemValidForSlot(self.itemsTab.items[self.selItemId], self.slotName) then
 		self:SetSelItemId(0)
+	end
+	if self.isIdol then
+		self:UpdateIdolSlot()
 	end
 end
 
@@ -86,7 +110,9 @@ end
 function ItemSlotClass:Draw(viewPort)
 	local x, y = self:GetPos()
 	local width, height = self:GetSize()
-	DrawString(x - 2, y + 2, "RIGHT_X", height - 4, "VAR", "^7" .. self.label .. ":")
+	if not self.isIdol then
+		DrawString(x - 2, y + 2, "RIGHT_X", height - 4, "VAR", "^7" .. self.label .. ":")
+	end
 	self.DropDownControl:Draw(viewPort)
 	self:DrawControls(viewPort)
 	if not main.popups[1] and self.nodeId and (self.dropped or (self:IsMouseOver() and (self.otherDragSource or not self.itemsTab.selControl))) then
