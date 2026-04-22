@@ -221,52 +221,18 @@ function calcs.defence(env, actor)
 		output.BlockChance = m_min(totalBlockChance, output.BlockChanceMax)
 		output.BlockChanceOverCap = m_max(0, totalBlockChance - output.BlockChanceMax)
 	end
-	output.ProjectileBlockChance = m_min(
-		output.BlockChance + modDB:Sum("BASE", nil, "ProjectileBlockChance") * calcLib.mod(modDB, nil, "BlockChance"),
-		output.BlockChanceMax)
-	if modDB:Flag(nil, "SpellBlockChanceMaxIsBlockChanceMax") then
-		output.SpellBlockChanceMax = output.BlockChanceMax
-	else
-		output.SpellBlockChanceMax = modDB:Sum("BASE", nil, "SpellBlockChanceMax")
-	end
-	if modDB:Flag(nil, "MaxSpellBlockIfNotBlockedRecently") then
-		output.SpellBlockChance = output.SpellBlockChanceMax
-		output.SpellProjectileBlockChance = output.SpellBlockChanceMax
-	elseif modDB:Flag(nil, "SpellBlockChanceIsBlockChance") then
-		output.SpellBlockChance = output.BlockChance
-		output.SpellProjectileBlockChance = output.ProjectileBlockChance
-		output.SpellBlockChanceOverCap = output.BlockChanceOverCap
-	else
-		local totalSpellBlockChance = modDB:Sum("BASE", nil, "SpellBlockChance") *
-			calcLib.mod(modDB, nil, "SpellBlockChance")
-		output.SpellBlockChance = m_min(totalSpellBlockChance, output.SpellBlockChanceMax)
-		output.SpellBlockChanceOverCap = m_max(0, totalSpellBlockChance - output.SpellBlockChanceMax)
-		output.SpellProjectileBlockChance = m_max(
-			m_min(
-				output.SpellBlockChance +
-				modDB:Sum("BASE", nil, "ProjectileSpellBlockChance") * calcLib.mod(modDB, nil, "SpellBlockChance"),
-				output.SpellBlockChanceMax), 0)
-	end
+	
 	if breakdown then
 		breakdown.BlockChance = {
-			"Base: " .. baseBlockChance .. "%",
+			"Base: " .. output.ShieldBlockChance .. "%",
 			"Max: " .. output.BlockChanceMax .. "%",
 			"Total: " .. output.BlockChance + output.BlockChanceOverCap .. "%",
-		}
-		breakdown.SpellBlockChance = {
-			"Max: " .. output.SpellBlockChanceMax .. "%",
-			"Total: " .. output.SpellBlockChance + output.SpellBlockChanceOverCap .. "%",
 		}
 	end
 	if modDB:Flag(nil, "CannotBlockAttacks") or enemyDB:Flag(nil, "CannotBeBlocked") then
 		output.BlockChance = 0
-		output.ProjectileBlockChance = 0
 	end
-	if modDB:Flag(nil, "CannotBlockSpells") or enemyDB:Flag(nil, "CannotBeBlocked") then
-		output.SpellBlockChance = 0
-		output.SpellProjectileBlockChance = 0
-	end
-	output.AverageBlockChance = (output.BlockChance + output.ProjectileBlockChance + output.SpellBlockChance + output.SpellProjectileBlockChance) /
+	output.AverageBlockChance = (output.BlockChance) /
 		4
 	output.BlockEffect = m_max(100 - modDB:Sum("BASE", nil, "BlockEffect"), 0)
 	if output.BlockEffect == 0 or output.BlockEffect == 100 then

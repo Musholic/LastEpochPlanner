@@ -1720,9 +1720,6 @@ function calcs.offence(env, actor, activeSkill)
 		end
 
 		output.HitChance = output.AccuracyHitChance * (1 - output.enemyBlockChance / 100)
-		if output.enemyBlockChance > 0 and not isAttack then
-			globalOutput.enemyHasSpellBlock = true
-		end
 		if breakdown and output.enemyBlockChance > 0 then
 			if output.AccuracyHitChance < 100 then
 				breakdown.HitChance = {

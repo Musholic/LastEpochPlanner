@@ -67,21 +67,6 @@ return {
 					{ label = "PvP Multiplier", cfg = "skill", modName = "PvpDamageMultiplier" },
 				},
 			},
-			{
-				label = "Chance to Hit",
-				haveOutput = "enemyHasSpellBlock",
-				{
-					format = "{0:output:HitChance}%",
-					{ breakdown = "HitChance" },
-					{ label = "Enemy Block", modName = { "BlockChance" }, enemy = true },
-					{ label = "Block Chance Reduction", cfg = "skill", modName = { "reduceEnemyBlock" } },
-				},
-			},
-			{
-				label = "Average Damage",
-				haveOutput = "enemyHasSpellBlock",
-				{ format = "{1:output:AverageDamage}", { breakdown = "AverageDamage" }, },
-			},
 			{ label = "Chance to Explode", haveOutput = "ExplodeChance", { format = "{0:output:ExplodeChance}%" }, },
 			{
 				label = "Average Damage",
@@ -654,7 +639,7 @@ return {
 		defaultCollapsed = false,
 		label = "Block",
 		data = {
-			extra = "{0:output:BlockChance}%/{0:output:SpellBlockChance}%",
+			extra = "{0:output:BlockChance}%",
 			{
 				label = "Block Chance",
 				{
