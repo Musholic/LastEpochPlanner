@@ -21,7 +21,26 @@ end
 local function makeSkillDataMod(dataKey, dataValue, ...)
 	return makeSkillMod("SkillData", "LIST", { key = dataKey, value = dataValue }, 0, 0, ...)
 end
+local function itemBasesWithTypeComboIndex(original)
+	local basetype_subtype_index = setmetatable({}, {__mode = "v"})
 
+	for name, data in pairs(original) do
+		data.name = name -- replicate name inside the data block so you can find it through the new index
+		local basetype_subtype_key = data.baseTypeID .. "_" .. data.subTypeID
+		basetype_subtype_index[basetype_subtype_key] = data
+	end
+
+	setmetatable(original, {
+		__index = function(table, key)
+			if type(key) == "string" and key:match("^%d+_%d+$") then
+				return basetype_subtype_index[key]
+			end
+			return rawget(table, key)
+		end
+	})
+	
+	return original
+end
 -----------------
 -- Common Data --
 -----------------
@@ -403,7 +422,7 @@ data.skills["Default"] = { name = "Default", skillTypeTags = 0, baseFlags = {}, 
 data.minions = readJsonFile("Data/minions.json")
 
 -- Item bases
-data.itemBases = readJsonFile("Data/Bases/bases.json")
+data.itemBases = itemBasesWithTypeComboIndex(readJsonFile("Data/Bases/bases.json"))
 data.LETools_itemBases = readJsonFile("Data/LEToolsImport/bases.json")
 data.LETools_affixes = readJsonFile("Data/LEToolsImport/affixes.json")
 
