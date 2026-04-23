@@ -46,7 +46,6 @@
 		<PlayerStat stat="PhysicalDamageReduction" value="20.605547822588"></PlayerStat>
 		<PlayerStat stat="BlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="BlockEffectiveness" value="0"></PlayerStat>
-		<PlayerStat stat="SpellBlockChance" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="FireResist" value="75"></PlayerStat>

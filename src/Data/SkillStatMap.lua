@@ -203,7 +203,6 @@ local result = {
 	["base_chance_to_dodge_spells_%"] = { mod("SpellDodgeChance", "BASE", nil), },
 	["base_movement_velocity_+%"] = { mod("MovementSpeed", "INC", nil), },
 	["monster_base_block_%"] = { mod("BlockChance", "BASE", nil), },
-	["base_spell_block_%"] = { mod("SpellBlockChance", "BASE", nil), },
 	["base_block_%_damage_taken"] = { mod("BlockEffect", "BASE", nil) },
 	["life_leech_from_any_damage_permyriad"] = { mod("DamageLifeLeech", "BASE", nil), div = 100, },
 	["mana_leech_from_any_damage_permyriad"] = { mod("DamageManaLeech", "BASE", nil), div = 100, },
