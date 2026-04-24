@@ -771,10 +771,7 @@ for i = 1, 3 do
 end
 
 function ImportTabClass:processItemData(itemData)
-	if itemData["containerID"] > 1 and itemData["containerID"] <= 12 or itemData["containerID"] == 29 or
-		itemData["containerID"] >= 33 and itemData["containerID"] <= 39 or
-		itemData["containerID"] >= 43 and itemData["containerID"] <= 45 or
-		itemData["containerID"] == 123 then
+	if offlineImportSlotMap[itemData["containerID"]] ~= nil then
 		local item = {}
 		local baseTypeID = itemData["data"][4]
 		local subTypeID = itemData["data"][5]
