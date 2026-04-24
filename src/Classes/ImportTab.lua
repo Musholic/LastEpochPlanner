@@ -760,6 +760,7 @@ local offlineImportSlotMap = {
 	[10] = "Ring 2",
 	[7] = "Belt",
 	[12] = "Relic",
+	[29] = "Idols",
 	[123] = "Idol Altar"
 }
 
