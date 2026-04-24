@@ -770,6 +770,17 @@ for i = 1, 3 do
 	offlineImportSlotMap[42 + i] = "Blessing " .. (7 + i)
 end
 
+local itemRarityMap = {
+	[0] = "COMMON",
+	[1] = "MAGIC",
+	[2] = "IDOL",
+	[3] = "RARE",
+	[4] = "EXALTED",
+	[7] = "UNIQUE",
+	[8] = "SET",
+	[9] = "LEGENDARY",
+}
+
 function ImportTabClass:processItemData(itemData)
 	if offlineImportSlotMap[itemData["containerID"]] ~= nil then
 		local item = {}
