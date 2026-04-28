@@ -1741,7 +1741,7 @@
     },
     "Rogue-61": {
       "skill": "Rogue-61",
-      "name": "Apostacy",
+      "name": "Apostasy",
       "icon": "rebuke-hex2",
       "x": -51.88799,
       "y": -147.648,
@@ -1970,7 +1970,7 @@
         "You have increased critical strike chance and you have a chance to inflict {Critical Vulnerability} on hit."
       ],
       "reminderText": [
-        "Critical Vulnerability is a stacking ailment that adds a 5% additional chance to be crit and reduces critical strike avoidance by 10%."
+        "Critical Vulnerability is a stacking ailment that adds a 2% additional chance to be crit and reduces critical strike avoidance by 10%."
       ]
     },
     "Rogue-69": {
@@ -4561,7 +4561,7 @@
       ],
       "out": [],
       "description": [
-        "Acid Flask has increased citical strike chance and critical strikes deal more damage."
+        "Acid Flask has increased critical strike chance and critical strikes deal more damage."
       ]
     },
     "aacfl-25": {
@@ -12475,7 +12475,7 @@
     },
     "ex4tp-9": {
       "skill": "ex4tp-9",
-      "name": "Trapas",
+      "name": "Traps",
       "icon": "runic-invocation",
       "x": -296.73602,
       "y": 153.6,
@@ -22490,7 +22490,7 @@
         "srk21-7"
       ],
       "description": [
-        "Shurikens has a chance to poison enemies."
+        "Shurikens have a chance to poison enemies."
       ]
     },
     "srk21-3": {
@@ -22550,7 +22550,7 @@
         "srk21-7"
       ],
       "description": [
-        "Shurikens has a chance to cause enemies to bleed."
+        "Shurikens have a chance to cause enemies to bleed."
       ]
     },
     "srk21-6": {
@@ -22639,7 +22639,7 @@
       ],
       "out": [],
       "description": [
-        "Shurikens are now be thrown at enemies all around you rather than in a cone in front of you."
+        "Shurikens are now thrown at enemies all around you rather than in a cone in front of you."
       ]
     },
     "srk21-9": {
@@ -22720,7 +22720,7 @@
         "srk21-14"
       ],
       "description": [
-        "Shurikens has a chance to {Blind} enemies."
+        "Shurikens have a chance to {Blind} enemies."
       ]
     },
     "srk21-12": {
@@ -22775,7 +22775,7 @@
       ],
       "out": [],
       "description": [
-        "Shurikens has a shorter cooldown and you gain {Haste} for a short duration if it hits at least one enemy."
+        "Shurikens have a shorter cooldown and you gain {Haste} for a short duration if it hits at least one enemy."
       ]
     },
     "srk21-14": {
@@ -22830,7 +22830,7 @@
         "srk21-27"
       ],
       "description": [
-        "Shurikens has increased attack speed."
+        "Shurikens have increased attack speed."
       ]
     },
     "srk21-16": {
@@ -22889,7 +22889,7 @@
       ],
       "out": [],
       "description": [
-        "Shurikens shocks enemies on hit."
+        "Shurikens shock enemies on hit."
       ]
     },
     "srk21-18": {
@@ -22917,7 +22917,7 @@
         "srk21-19"
       ],
       "description": [
-        "Shurikens has a chance to shred enemy physical and poison resistance."
+        "Shurikens have a chance to shred enemy physical and poison resistance."
       ]
     },
     "srk21-19": {
@@ -23149,7 +23149,7 @@
         "srk21-30"
       ],
       "description": [
-        "Shurikens has a chance to pierce enemies (continue through targets they hit)."
+        "Shurikens have a chance to pierce enemies (continue through targets they hit)."
       ]
     },
     "srk21-28": {

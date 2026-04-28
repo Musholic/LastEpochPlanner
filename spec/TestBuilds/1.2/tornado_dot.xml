@@ -17,11 +17,11 @@
 		<PlayerStat stat="Dex" value="14"></PlayerStat>
 		<PlayerStat stat="Int" value="31"></PlayerStat>
 		<PlayerStat stat="Att" value="35"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="20990.96876986"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="18045.568691701"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="22707.533118736"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="23820.150673045"></PlayerStat>
 		<PlayerStat stat="LightningMaximumHitTaken" value="23820.150673045"></PlayerStat>
 		<PlayerStat stat="ColdMaximumHitTaken" value="23820.150673045"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="23214.818445103"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="31572.153085341"></PlayerStat>
 		<PlayerStat stat="PoisonMaximumHitTaken" value="23820.150673045"></PlayerStat>
 		<PlayerStat stat="NecroticMaximumHitTaken" value="19850.125560871"></PlayerStat>
 		<PlayerStat stat="VoidMaximumHitTaken" value="18609.492713317"></PlayerStat>
@@ -46,14 +46,14 @@
 		<PlayerStat stat="BlockEffectiveness" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
-		<PlayerStat stat="FireResist" value="67"></PlayerStat>
-		<PlayerStat stat="FireResistOverCap" value="0"></PlayerStat>
+		<PlayerStat stat="FireResist" value="75"></PlayerStat>
+		<PlayerStat stat="FireResistOverCap" value="2"></PlayerStat>
 		<PlayerStat stat="LightningResist" value="75"></PlayerStat>
 		<PlayerStat stat="LightningResistOverCap" value="10"></PlayerStat>
 		<PlayerStat stat="ColdResist" value="75"></PlayerStat>
 		<PlayerStat stat="ColdResistOverCap" value="47"></PlayerStat>
-		<PlayerStat stat="PhysicalResist" value="66"></PlayerStat>
-		<PlayerStat stat="PhysicalResistOverCap" value="0"></PlayerStat>
+		<PlayerStat stat="PhysicalResist" value="75"></PlayerStat>
+		<PlayerStat stat="PhysicalResistOverCap" value="9"></PlayerStat>
 		<PlayerStat stat="PoisonResist" value="75"></PlayerStat>
 		<PlayerStat stat="PoisonResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="NecroticResist" value="70"></PlayerStat>
@@ -115,7 +115,7 @@
 			Rarity: LEGENDARY
 Nihilis
 Unbound Locket
-Suffix: {range:215}6_6
+Prefix: {range:215}6_6
 LevelReq: 80
 Implicits: 3
 {range:221}{rounding:Integer}(1-12)% increased Health
@@ -133,26 +133,26 @@ Implicits: 3
 			Rarity: EXALTED
 Meruna Carapace
 Meruna Carapace
-Prefix: {range:251}52_4
-Prefix: {range:214}25_4
-Suffix: {range:129}501_6
-Suffix: {range:84}95_1
+Prefix: {range:129}501_6
+Prefix: {range:84}95_1
+Suffix: {range:251}52_4
+Suffix: {range:214}25_4
 Sealed: {range:162}10_0
 LevelReq: 52
 Implicits: 2
 +372 Armor
 {range:37}{rounding:Integer}+(72-372) Stun Avoidance
-{range:251}{scalar:1.5}{rounding:Integer}(10-12)% increased Health
-{range:214}{scalar:1.5}{rounding:Integer}+(61-90) Health
 {range:129}{scalar:1.5}{rounding:Integer}+(14-16) Strength
 {range:84}{scalar:1.5}{rounding:Integer}(20-30) Damage Reflected to Attackers
+{range:251}{scalar:1.5}{rounding:Integer}(10-12)% increased Health
+{range:214}{scalar:1.5}{rounding:Integer}+(61-90) Health
 {sealed}{range:162}{scalar:1.5}+(5-9)% Necrotic Resistance
 		</Item>
 		<Item id="3">
 			Rarity: LEGENDARY
 Blood of the Exile
 Iron Greaves
-Suffix: {range:219}28_6
+Prefix: {range:219}28_6
 LevelReq: 16
 Implicits: 2
 +35 Armor
@@ -169,58 +169,58 @@ Implicits: 2
 			Rarity: EXALTED
 Arcane Bracers
 Arcane Bracers
-Prefix: {range:102}25_4
-Prefix: {range:217}36_6
-Suffix: {range:249}4_4
-Suffix: {range:190}501_4
+Prefix: {range:249}4_4
+Prefix: {range:190}501_4
+Suffix: {range:102}25_4
+Suffix: {range:217}36_6
 LevelReq: 54
 Implicits: 3
 +36 Armor
 {range:30}{rounding:Integer}+(20-36) Mana
 {range:181}{rounding:Integer}(12-24)% increased Mana Regen
+{range:249}(12-15)% increased Cast Speed
+{range:190}{rounding:Integer}+(7-8) Strength
 {range:102}{rounding:Integer}+(61-90) Health
 {range:217}{rounding:Integer}+(106-135) Health
 {range:217}{rounding:Integer}(8-10)% increased Health
-{range:249}(12-15)% increased Cast Speed
-{range:190}{rounding:Integer}+(7-8) Strength
 		</Item>
 		<Item id="5">
 			Rarity: EXALTED
 Raptor Helm
 Raptor Helm
-Prefix: {range:226}25_4
-Prefix: {range:130}52_4
-Suffix: {range:42}73_4
-Suffix: {range:179}501_6
+Prefix: {range:42}73_4
+Prefix: {range:179}501_6
+Suffix: {range:226}25_4
+Suffix: {range:130}52_4
 Sealed: {range:93}45_1
 LevelReq: 30
 Implicits: 3
 +65 Armor
 {range:226}+(2-3)% Critical Strike Chance
 {range:239}+(2-3)% Minion Critical Strike Chance
-{range:226}{rounding:Integer}+(61-90) Health
-{range:130}{rounding:Integer}(10-12)% increased Health
 {range:42}{rounding:Integer}+(61-90) Minion Health Regen
 {range:179}{rounding:Integer}+(14-16) Strength
+{range:226}{rounding:Integer}+(61-90) Health
+{range:130}{rounding:Integer}(10-12)% increased Health
 {sealed}{range:93}+(10-14)% Physical Resistance
 		</Item>
 		<Item id="6">
 			Rarity: LEGENDARY
 Ucenui's Sphere
 Navigation Orb
-Prefix: {range:98}25_5
-Prefix: {range:91}825_5
-Suffix: {range:116}43_4
-Suffix: {range:196}6_6
+Prefix: {range:116}43_4
+Prefix: {range:196}6_6
+Suffix: {range:98}25_5
+Suffix: {range:91}825_5
 LevelReq: 61
 Implicits: 2
 {range:67}{rounding:Integer}(20-40)% increased Cold Damage
 {range:15}{rounding:Integer}(20-40)% increased Lightning Damage
+{range:116}(48-60)% Increased Healing Effectiveness
+{range:196}+(41-50)% Critical Strike Multiplier
 {range:98}{rounding:Integer}+(100-130) Health
 {range:91}{rounding:Integer}+(85-105) Health
 {range:91}{rounding:Integer}+(15-19) Health Regen
-{range:116}(48-60)% Increased Healing Effectiveness
-{range:196}+(41-50)% Critical Strike Multiplier
 {unique}{range:231}{rounding:Integer}+(20-40) Mana
 {unique}{range:101}+(20-40)% Cold Resistance
 {unique}{range:101}+(20-40)% Lightning Resistance
@@ -230,13 +230,13 @@ Implicits: 2
 			Rarity: LEGENDARY
 Flames of Midnight
 Celestial Ring
-Prefix: {range:4}25_4
-Suffix: {range:219}502_6
+Prefix: {range:219}502_6
+Suffix: {range:4}25_4
 LevelReq: 52
 Implicits: 1
 {range:99}{rounding:Integer}+(42-110) Ward Decay Threshold
-{range:4}{rounding:Integer}+(61-90) Health
 {range:219}{rounding:Integer}+(14-16) Intelligence
+{range:4}{rounding:Integer}+(61-90) Health
 {unique}100% Evade is replaced by Spirit Step
 {unique}100% Swiftness
 {unique}100% of Wandering Spirits Base Damage Converted to Fire
@@ -250,7 +250,7 @@ Implicits: 1
 			Rarity: LEGENDARY
 Red Ring of Atlaria
 Silver Ring
-Suffix: {range:199}501_6
+Prefix: {range:199}501_6
 LevelReq: 0
 Implicits: 1
 {range:52}(3-8)% increased Movement Speed
@@ -266,18 +266,18 @@ Implicits: 1
 			Rarity: LEGENDARY
 Elecoe's Innovation
 Spidersilk Sash
-Prefix: {range:230}52_6
-Prefix: {range:43}27_4
-Suffix: {range:9}75_4
+Prefix: {range:9}75_4
+Suffix: {range:230}52_6
+Suffix: {range:43}27_4
 LevelReq: 58
 Implicits: 3
 {range:35}+(33-47)% Poison Resistance
 {range:72}+(33-47)% Cold Resistance
 +4 Potion Slots
-{range:230}{rounding:Integer}(21-26)% increased Health
-{range:43}(16-20)% Increased Cooldown Recovery Speed
 {range:9}{rounding:Integer}(76-100) Ward Gained on Potion Use
 100% chance to Cleanse All Ailments on Potion Use
+{range:230}{rounding:Integer}(21-26)% increased Health
+{range:43}(16-20)% Increased Cooldown Recovery Speed
 {unique}{range:175}{rounding:Integer}(144-216) Ward Gained on Potion Use
 {unique}{range:254}{rounding:Integer}(144-216) Health Gained on Potion Use
 {unique}{range:233}(12-24)% increased Critical Strike Chance
@@ -289,8 +289,8 @@ Implicits: 3
 			Rarity: LEGENDARY
 Wrongwarp
 Crystal Wand
-Suffix: {range:219}4_6
-Suffix: {range:216}6_4
+Prefix: {range:219}4_6
+Prefix: {range:216}6_4
 LevelReq: 60
 Implicits: 3
 {range:238}{rounding:Integer}+(50-60) Spell Damage
@@ -306,17 +306,17 @@ Implicits: 3
 			Rarity: LEGENDARY
 Tempest Maw
 Crescent Axe
-Prefix: {range:197}86_3
-Suffix: {range:242}5_6
-Suffix: {range:71}6_6
+Prefix: {range:242}5_6
+Prefix: {range:71}6_6
+Suffix: {range:197}86_3
 LevelReq: 51
 Implicits: 3
 +28 Melee Damage
 {range:216}{rounding:Integer}+(14-28) Melee Lightning Damage
 {range:243}+(7-14)% Lightning Penetration
-{range:197}{scalar:1.75}+(56-70)% Chance to Shred Armor on Hit
 {range:242}{scalar:1.75}(76-100)% increased Critical Strike Chance
 {range:71}{scalar:1.75}+(41-50)% Critical Strike Multiplier
+{range:197}{scalar:1.75}+(56-70)% Chance to Shred Armor on Hit
 {unique}{range:41}{rounding:Integer}+(17-21) Melee Lightning Damage
 {unique}{range:161}{rounding:Integer}+(17-21) Spell Lightning Damage
 {unique}-6 to -3 Totem Mana Cost
@@ -328,152 +328,152 @@ Implicits: 3
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Prefix: {range:190}111_0
-Suffix: {range:151}880_0
+Prefix: {range:151}880_0
+Suffix: {range:190}111_0
 LevelReq: 0
 Implicits: 0
-{range:190}{scalar:0.38}+(20-45)% Fire Resistance
 {range:151}{rounding:Integer}(9-20) Health Gain on Kill
 {range:151}{rounding:Integer}(5-6)% increased Health
+{range:190}{scalar:0.38}+(20-45)% Fire Resistance
 		</Item>
 		<Item id="13">
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Prefix: {range:101}887_0
-Suffix: {range:220}878_0
+Prefix: {range:220}878_0
+Suffix: {range:101}887_0
 LevelReq: 0
 Implicits: 0
-{range:101}+(9-12)% Fire Resistance
-{range:101}+(9-12)% Minion Fire Resistance
 {range:220}(22-30)% increased Critical Strike Chance
 {range:220}+(3-6)% Critical Strike Multiplier
+{range:101}+(18-24)% Fire Resistance
+{range:101}+(18-24)% Minion Fire Resistance
 		</Item>
 		<Item id="14">
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Prefix: {range:26}111_0
-Suffix: {range:91}878_0
+Prefix: {range:91}878_0
+Suffix: {range:26}111_0
 LevelReq: 0
 Implicits: 0
-{range:26}{scalar:0.38}+(20-45)% Fire Resistance
 {range:91}(22-30)% increased Critical Strike Chance
 {range:91}+(3-6)% Critical Strike Multiplier
+{range:26}{scalar:0.38}+(20-45)% Fire Resistance
 		</Item>
 		<Item id="15">
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Prefix: {range:23}870_0
-Suffix: {range:154}863_0
+Prefix: {range:154}863_0
+Suffix: {range:23}870_0
 LevelReq: 0
 Implicits: 0
-{range:23}+(9-12)% Physical Resistance
-{range:23}+(9-12)% Minion Physical Resistance
-{range:154}+(1-2)% Necrotic Penetration
-{range:154}+(1-2)% Minion Necrotic Penetration
+{range:154}+(3-4)% Necrotic Penetration
+{range:154}+(3-4)% Minion Necrotic Penetration
+{range:23}+(18-24)% Physical Resistance
+{range:23}+(18-24)% Minion Physical Resistance
 		</Item>
 		<Item id="16">
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Prefix: {range:25}870_0
-Suffix: {range:56}138_0
+Prefix: {range:56}138_0
+Suffix: {range:25}870_0
 LevelReq: 0
 Implicits: 0
-{range:25}+(9-12)% Physical Resistance
-{range:25}+(9-12)% Minion Physical Resistance
 {range:56}{scalar:0.38}+(13-36)% Chance to inflict Bleed on Hit
+{range:25}+(18-24)% Physical Resistance
+{range:25}+(18-24)% Minion Physical Resistance
 		</Item>
 		<Item id="17">
 			Rarity: IDOL
 Heretical Huge Nomad Idol
 Heretical Huge Nomad Idol
-Prefix: {range:222}162_0
-Prefix: {range:18}925_0
-Suffix: {range:207}154_0
+Prefix: {range:207}154_0
+Suffix: {range:222}162_0
+Suffix: {range:18}925_0
 LevelReq: 0
 Implicits: 0
+{range:207}+(1-2)% Minion Melee Critical Strike Chance
 {range:222}+(15-40)% Critical Strike Avoidance
 {range:222}+(15-40)% Minion Critical Strike Avoidance
 1% increased Minion Melee Attack Speed
 +2 Minion Melee Damage
-{range:207}+(1-2)% Minion Melee Critical Strike Chance
 		</Item>
 		<Item id="18">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:54}430_0
-Suffix: {range:179}829_0
+Prefix: {range:179}829_0
+Suffix: {range:54}430_0
 LevelReq: 0
 Implicits: 0
-{range:54}{scalar:0.17}+(20-45)% Physical Resistance
 {range:179}(5-10)% Increased Healing Effectiveness
 {range:179}{rounding:Integer}+(14-18) Health
+{range:54}{scalar:0.17}+(20-45)% Physical Resistance
 		</Item>
 		<Item id="19">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:146}835_0
-Suffix: {range:25}832_0
+Prefix: {range:25}832_0
+Suffix: {range:146}835_0
 LevelReq: 0
 Implicits: 0
-{range:146}+(9-12)% Void Resistance
-{range:146}+(9-12)% Minion Void Resistance
 {range:25}+(1-2)% Poison Penetration
 {range:25}+(1-2)% Minion Poison Penetration
+{range:146}+(9-12)% Void Resistance
+{range:146}+(9-12)% Minion Void Resistance
 		</Item>
 		<Item id="20">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:246}835_0
-Suffix: {range:111}831_0
+Prefix: {range:111}831_0
+Suffix: {range:246}835_0
 LevelReq: 0
 Implicits: 0
-{range:246}+(9-12)% Void Resistance
-{range:246}+(9-12)% Minion Void Resistance
 {range:111}+(1-2)% Void Penetration
 {range:111}+(1-2)% Minion Void Penetration
+{range:246}+(9-12)% Void Resistance
+{range:246}+(9-12)% Minion Void Resistance
 		</Item>
 		<Item id="21">
 			Rarity: IDOL
 Small Eterran Idol
 Small Eterran Idol
-Prefix: {range:226}114_0
-Suffix: {range:180}135_0
+Prefix: {range:180}135_0
+Suffix: {range:226}114_0
 LevelReq: 0
 Implicits: 0
-{range:226}{scalar:0.17}+(20-45)% Necrotic Resistance
 {range:180}{scalar:0.17}(37-70)% Increased Healing Effectiveness
+{range:226}{scalar:0.17}+(20-45)% Necrotic Resistance
 		</Item>
 		<Item id="22">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:230}835_0
-Suffix: {range:112}135_0
+Prefix: {range:112}135_0
+Suffix: {range:230}835_0
 LevelReq: 0
 Implicits: 0
+{range:112}{scalar:0.17}(37-70)% Increased Healing Effectiveness
 {range:230}+(9-12)% Void Resistance
 {range:230}+(9-12)% Minion Void Resistance
-{range:112}{scalar:0.17}(37-70)% Increased Healing Effectiveness
 		</Item>
 		<Item id="23">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:81}838_0
-Suffix: {range:236}834_0
+Prefix: {range:236}834_0
+Suffix: {range:81}838_0
 LevelReq: 0
 Implicits: 0
-{range:81}+(9-12)% Necrotic Resistance
-{range:81}+(9-12)% Minion Necrotic Resistance
 {range:236}+(1-2)% Necrotic Penetration
 {range:236}+(1-2)% Minion Necrotic Penetration
+{range:81}+(9-12)% Necrotic Resistance
+{range:81}+(9-12)% Minion Necrotic Resistance
 		</Item>
 		<Item id="24">
 			Rarity: NORMAL

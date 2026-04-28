@@ -19,8 +19,8 @@
 		<PlayerStat stat="Dex" value="22"></PlayerStat>
 		<PlayerStat stat="Int" value="25"></PlayerStat>
 		<PlayerStat stat="Att" value="14"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="3391.5130991723"></PlayerStat>
-		<PlayerStat stat="FireMaximumHitTaken" value="2865.7916776649"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="3478.0096063125"></PlayerStat>
+		<PlayerStat stat="FireMaximumHitTaken" value="3351.519080659"></PlayerStat>
 		<PlayerStat stat="LightningMaximumHitTaken" value="2996.0549357406"></PlayerStat>
 		<PlayerStat stat="ColdMaximumHitTaken" value="2672.1571048497"></PlayerStat>
 		<PlayerStat stat="PhysicalMaximumHitTaken" value="5731.8704318329"></PlayerStat>
@@ -48,7 +48,7 @@
 		<PlayerStat stat="BlockEffectiveness" value="0"></PlayerStat>
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
-		<PlayerStat stat="FireResist" value="31"></PlayerStat>
+		<PlayerStat stat="FireResist" value="41"></PlayerStat>
 		<PlayerStat stat="FireResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="LightningResist" value="34"></PlayerStat>
 		<PlayerStat stat="LightningResistOverCap" value="0"></PlayerStat>
@@ -120,38 +120,38 @@
 			Rarity: EXALTED
 Skull Cage
 Skull Cage
-Prefix: {range:201}25_1
-Prefix: {range:248}24_1
-Suffix: {range:197}503_1
-Suffix: {range:76}502_1
+Prefix: {range:197}503_1
+Prefix: {range:76}502_1
+Suffix: {range:201}25_1
+Suffix: {range:248}24_1
 Corrupted: {range:96}505_5
 LevelReq: 6
 Implicits: 2
 +9 Armor
 {range:158}{rounding:Integer}+(2-3) Spell Damage
-{range:201}{rounding:Integer}+(16-25) Health
-{range:248}+(10-14)% Lightning Resistance
 +2 Dexterity
 +2 Intelligence
+{range:201}{rounding:Integer}+(16-25) Health
+{range:248}+(10-14)% Lightning Resistance
 {corrupted}{range:96}{rounding:Integer}+(11-13) Vitality
 		</Item>
 		<Item id="2">
 			Rarity: EXALTED
 Initiate Robes
 Initiate Robes
-Prefix: {range:130}31_0
-Prefix: {range:110}80_1
-Suffix: {range:49}502_0
-Suffix: {range:4}505_1
+Prefix: {range:49}502_0
+Prefix: {range:4}505_1
+Suffix: {range:130}31_0
+Suffix: {range:110}80_1
 Corrupted: {range:248}52_5
 LevelReq: 4
 Implicits: 2
 +26 Armor
 {range:108}{rounding:Integer}+(13-26) Mana
-{range:130}{scalar:1.5}{rounding:Integer}+(6-20) Armor
-{range:110}{scalar:1.5}+(6-8)% Elemental Resistance
 {scalar:1.5}+1 Intelligence
 {scalar:1.5}+2 Vitality
+{range:130}{scalar:1.5}{rounding:Integer}+(6-20) Armor
+{range:110}{scalar:1.5}+(6-8)% Elemental Resistance
 {corrupted}{range:248}{scalar:1.5}{rounding:Integer}(15-20)% increased Health
 		</Item>
 		<Item id="3">
@@ -172,7 +172,7 @@ Implicits: 2
 			Rarity: LEGENDARY
 Taste of Blood
 Rusted Cleaver
-Prefix: {range:60}86_2
+Suffix: {range:60}86_2
 LevelReq: 12
 Implicits: 2
 +19 Melee Damage
@@ -187,7 +187,7 @@ Implicits: 2
 			Rarity: LEGENDARY
 Swaddling of the Erased
 Leather Gloves
-Prefix: {range:231}92_1
+Suffix: {range:231}92_1
 LevelReq: 6
 Implicits: 2
 +10 Armor
@@ -231,34 +231,34 @@ Implicits: 2
 			Rarity: RARE
 Jade Ring
 Jade Ring
-Prefix: {range:206}51_0
-Prefix: {range:98}97_0
-Suffix: {range:205}504_0
-Suffix: {range:215}83_0
+Prefix: {range:205}504_0
+Prefix: {range:215}83_0
+Suffix: {range:206}51_0
+Suffix: {range:98}97_0
 LevelReq: 0
 Implicits: 1
 {range:207}{rounding:Integer}+(10-25) Dodge Rating
++1 Attunement
+{range:215}(10-14)% of Potion Health Converted to Ward
 {range:206}{rounding:Integer}+(45-75) Stun Avoidance
 {range:98}+(5-9)% Critical Strike Avoidance
 {range:98}{rounding:Integer}+(15-24) Dodge Rating
-+1 Attunement
-{range:215}(10-14)% of Potion Health Converted to Ward
 		</Item>
 		<Item id="9">
 			Rarity: RARE
 Copper Ring
 Copper Ring
-Prefix: {range:216}51_1
-Prefix: {range:151}45_1
-Suffix: {range:54}5_0
-Suffix: {range:34}30_0
+Prefix: {range:54}5_0
+Prefix: {range:34}30_0
+Suffix: {range:216}51_1
+Suffix: {range:151}45_1
 LevelReq: 14
 Implicits: 1
 {range:102}(25-50)% increased Critical Strike Chance
-{range:216}{rounding:Integer}+(76-135) Stun Avoidance
-{range:151}+(10-14)% Physical Resistance
 {range:54}(15-20)% increased Critical Strike Chance
 {range:34}{rounding:Integer}(6-12)% increased Physical Damage
+{range:216}{rounding:Integer}+(76-135) Stun Avoidance
+{range:151}+(10-14)% Physical Resistance
 		</Item>
 		<Item id="10">
 			Rarity: UNIQUE
@@ -277,19 +277,19 @@ Implicits: 3
 			Rarity: LEGENDARY
 Ambitions of an Erased Acolyte
 Caged Souls
-Prefix: {range:73}104_2
-Prefix: {range:116}45_0
-Suffix: {range:26}70_2
-Suffix: {range:17}633_2
+Prefix: {range:26}70_2
+Prefix: {range:17}633_2
+Suffix: {range:73}104_2
+Suffix: {range:116}45_0
 LevelReq: 5
 Implicits: 2
 {range:14}{rounding:Integer}(9-29) Ward Gained on Potion Use
 {range:232}+(9-29)% Ward Retention
-{range:73}+(9-12)% to All Resistances While Channelling
-{range:116}+(5-9)% Physical Resistance
 {range:26}{rounding:Integer}(56-75)% increased Minion Health
 +1 to Assemble Abomination
 {range:17}{rounding:Integer}(41-60)% increased Minion Health
+{range:73}+(9-12)% to All Resistances While Channelling
+{range:116}+(5-9)% Physical Resistance
 {unique}+1 to Acolyte Skills
 {unique}{range:178}+(6-14)% Endurance
 {unique}2% Minimum percentage of health to gain when a nearby enemy or ally dies (2 second cooldown)
@@ -299,120 +299,120 @@ Implicits: 2
 			Rarity: IDOL
 Humble Eterran Idol
 Humble Eterran Idol
-Prefix: {range:1}430_0
-Suffix: {range:60}106_0
+Prefix: {range:60}106_0
+Suffix: {range:1}430_0
 LevelReq: 0
 Implicits: 0
-{range:1}{scalar:0.38}+(20-45)% Physical Resistance
 {range:60}{scalar:0.38}{rounding:Integer}(10-20) Health Gain on Kill
+{range:1}{scalar:0.38}+(20-45)% Physical Resistance
 		</Item>
 		<Item id="13">
 			Rarity: IDOL
 Minor Lagonian Idol
 Minor Lagonian Idol
-Prefix: {range:169}112_0
-Suffix: {range:226}142_0
+Prefix: {range:226}142_0
+Suffix: {range:169}112_0
 LevelReq: 0
 Implicits: 0
-{range:169}{scalar:0.17}+(20-45)% Cold Resistance
 {range:226}{scalar:0.17}+(13-30)% Ward Retention
+{range:169}{scalar:0.17}+(20-45)% Cold Resistance
 		</Item>
 		<Item id="14">
 			Rarity: IDOL
 Small Eterran Idol
 Small Eterran Idol
-Prefix: {range:233}116_0
-Suffix: {range:37}135_0
+Prefix: {range:37}135_0
+Suffix: {range:233}116_0
 LevelReq: 0
 Implicits: 0
-{range:233}{scalar:0.17}+(20-45)% Poison Resistance
 {range:37}{scalar:0.17}(37-70)% Increased Healing Effectiveness
+{range:233}{scalar:0.17}+(20-45)% Poison Resistance
 		</Item>
 		<Item id="15">
 			Rarity: IDOL
 Humble Eterran Idol
 Humble Eterran Idol
-Prefix: {range:45}430_0
-Suffix: {range:191}106_0
+Prefix: {range:191}106_0
+Suffix: {range:45}430_0
 LevelReq: 0
 Implicits: 0
-{range:45}{scalar:0.38}+(20-45)% Physical Resistance
 {range:191}{scalar:0.38}{rounding:Integer}(10-20) Health Gain on Kill
+{range:45}{scalar:0.38}+(20-45)% Physical Resistance
 		</Item>
 		<Item id="16">
 			Rarity: IDOL
 Humble Eterran Idol
 Humble Eterran Idol
-Prefix: {range:16}430_0
-Suffix: {range:234}106_0
+Prefix: {range:234}106_0
+Suffix: {range:16}430_0
 LevelReq: 0
 Implicits: 0
-{range:16}{scalar:0.38}+(20-45)% Physical Resistance
 {range:234}{scalar:0.38}{rounding:Integer}(10-20) Health Gain on Kill
+{range:16}{scalar:0.38}+(20-45)% Physical Resistance
 		</Item>
 		<Item id="17">
 			Rarity: IDOL
 Small Eterran Idol
 Small Eterran Idol
-Prefix: {range:161}116_0
-Suffix: {range:173}119_0
+Prefix: {range:173}119_0
+Suffix: {range:161}116_0
 LevelReq: 0
 Implicits: 0
-{range:161}{scalar:0.17}+(20-45)% Poison Resistance
 {range:173}{scalar:0.17}{rounding:Integer}(22-60)% increased Damage Over Time
+{range:161}{scalar:0.17}+(20-45)% Poison Resistance
 		</Item>
 		<Item id="18">
 			Rarity: IDOL
 Heretical Adorned Immortal Idol
 Heretical Adorned Immortal Idol
-Prefix: {range:148}286_0
-Prefix: {range:18}930_2
-Suffix: {range:214}259_0
+Prefix: {range:214}259_0
+Suffix: {range:148}286_0
+Suffix: {range:18}930_2
 LevelReq: 0
 Implicits: 0
+{range:214}{scalar:0.95}{rounding:Integer}(26-70)% increased Damage Over Time while at Low Health
 {range:148}{scalar:0.95}(12-35)% increased Minion Cooldown Recovery Speed
 {scalar:0.95}+3% Increased Cooldown Recovery Speed of Reap
 {range:18}{scalar:0.95}+(6-7)% Chance to cast Harvest at 3 nearby enemies when you use Reap
-{range:214}{scalar:0.95}{rounding:Integer}(26-70)% increased Damage Over Time while at Low Health
 		</Item>
 		<Item id="19">
 			Rarity: IDOL
 Heretical Ornate Bone Idol
 Heretical Ornate Bone Idol
-Prefix: {range:100}290_0
-Prefix: {range:67}927_0
-Suffix: {range:111}261_0
+Prefix: {range:111}261_0
+Suffix: {range:100}290_0
+Suffix: {range:67}927_0
 LevelReq: 0
 Implicits: 0
+{range:111}{rounding:Integer}(26-70)% increased Damage While Transformed
 {range:100}+(22-60)% Chance to inflict Bleed on Physical Spell Hit
 1% increased Minion Bow Attack Speed
 +1 Minion Bow Damage
-{range:111}{rounding:Integer}(26-70)% increased Damage While Transformed
 		</Item>
 		<Item id="20">
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Prefix: {range:130}887_0
-Suffix: {range:46}139_0
+Prefix: {range:46}139_0
+Suffix: {range:130}887_0
 LevelReq: 0
 Implicits: 0
-{range:130}+(9-12)% Fire Resistance
-{range:130}+(9-12)% Minion Fire Resistance
 {range:46}{scalar:0.38}+(13-30)% Chance to Ignite on Hit
+{range:130}+(18-24)% Fire Resistance
+{range:130}+(18-24)% Minion Fire Resistance
 		</Item>
 		<Item id="21">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:18}325_0
-Suffix: {range:8}826_0
+Prefix: {range:8}826_0
+Suffix: {range:18}325_0
 LevelReq: 0
 Implicits: 0
-{range:18}{scalar:0.17}{rounding:Integer}(17-45)% increased Poison Damage
-{range:18}{scalar:0.17}{rounding:Integer}(17-45)% increased Minion Poison Damage
 {range:8}{rounding:Integer}(11-15)% increased Damage Over Time
 1% less Damage Over Time Taken
+{range:18}{scalar:0.17}{rounding:Integer}(17-45)% increased Poison Damage
+{range:18}{scalar:0.17}{rounding:Integer}(17-45)% increased Minion Poison Damage
 		</Item>
 		<ItemSet id="1" useSecondWeaponSet="nil">
 			<Slot itemId="10" name="Amulet"></Slot>

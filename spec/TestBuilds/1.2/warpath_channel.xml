@@ -122,7 +122,7 @@
 			Rarity: LEGENDARY
 Nihilis
 Unbound Locket
-Suffix: {range:33}103_5
+Prefix: {range:33}103_5
 LevelReq: 80
 Implicits: 3
 {range:218}{rounding:Integer}(1-12)% increased Health
@@ -140,7 +140,7 @@ Implicits: 3
 			Rarity: LEGENDARY
 Wings of Argentus
 Gladiator Armor
-Prefix: {range:230}52_3
+Suffix: {range:230}52_3
 LevelReq: 60
 Implicits: 1
 +220 Armor
@@ -156,25 +156,25 @@ Implicits: 1
 			Rarity: EXALTED
 Citadel Boots
 Citadel Boots
-Prefix: {range:79}25_3
-Prefix: {range:215}19_5
-Suffix: {range:34}505_0
-Suffix: {range:146}28_6
+Prefix: {range:34}505_0
+Prefix: {range:146}28_6
+Suffix: {range:79}25_3
+Suffix: {range:215}19_5
 LevelReq: 85
 Implicits: 3
 +185 Armor
 {range:190}(15-18)% increased Movement Speed
 {range:162}(35-50)% reduced Bonus Damage Taken from Critical Strikes
-{range:79}{rounding:Integer}+(41-60) Health
-{range:215}+(50-60)% Poison Resistance
 +1 Vitality
 {range:146}(26-30)% increased Movement Speed
+{range:79}{rounding:Integer}+(41-60) Health
+{range:215}+(50-60)% Poison Resistance
 		</Item>
 		<Item id="4">
 			Rarity: LEGENDARY
 Immortal Vise
 Eternal Gauntlets
-Prefix: {range:220}25_4
+Suffix: {range:220}25_4
 LevelReq: 86
 Implicits: 2
 +211 Armor
@@ -191,7 +191,7 @@ Implicits: 2
 			Rarity: LEGENDARY
 Seed of Ekkidrasil
 Gladiator Helmet
-Prefix: {range:74}52_5
+Suffix: {range:74}52_5
 LevelReq: 65
 Implicits: 1
 +130 Armor
@@ -208,17 +208,17 @@ Implicits: 1
 			Rarity: LEGENDARY
 Vortex Pennant
 Mournful Pennant
-Prefix: {range:236}429_4
-Suffix: {range:148}603_5
-Suffix: {range:112}12_4
+Prefix: {range:148}603_5
+Prefix: {range:112}12_4
+Suffix: {range:236}429_4
 LevelReq: 12
 Implicits: 2
 {range:75}{rounding:Integer}+(15-25) Health
 {range:33}{rounding:Integer}(3-5) Health Gain on Melee Hit
-{range:236}+(28-35)% Chance to apply Frailty on Hit
 +3 to Smite
 {range:148}{rounding:Integer}(71-80)% increased Spell Damage
 {range:112}{rounding:Integer}(40-60)% increased Fire Damage
+{range:236}+(28-35)% Chance to apply Frailty on Hit
 {unique}+1 Axe Throw every second while channelling Warpath
 {unique}2% increased Axe Throw Frequency per 10% increased physical damage
 {unique}+1 to Warpath
@@ -230,7 +230,7 @@ Implicits: 2
 			Rarity: LEGENDARY
 Orian's Sun Seal
 Gold Ring
-Prefix: {range:54}25_5
+Suffix: {range:54}25_5
 LevelReq: 25
 Implicits: 1
 {range:227}+(5-18)% Elemental Resistance
@@ -245,13 +245,13 @@ Implicits: 1
 			Rarity: LEGENDARY
 Siphon of Anguish
 Gold Ring
-Prefix: {range:79}25_5
-Suffix: {range:232}504_4
+Prefix: {range:232}504_4
+Suffix: {range:79}25_5
 LevelReq: 25
 Implicits: 1
 {range:98}+(5-18)% Elemental Resistance
-{range:79}{rounding:Integer}+(100-130) Health
 {range:232}{rounding:Integer}+(7-8) Attunement
+{range:79}{rounding:Integer}+(100-130) Health
 {unique}{range:165}(1-3)% of Melee Damage Leeched as Health
 {unique}{range:36}(1-3)% of Void Damage Leeched as Health
 {unique}{range:143}+(10-30)% Chance to apply Doom on Hit
@@ -263,7 +263,7 @@ Implicits: 1
 			Rarity: LEGENDARY
 Orian's Descent
 Plated Belt
-Prefix: {range:244}52_3
+Suffix: {range:244}52_3
 LevelReq: 19
 Implicits: 2
 {range:38}{rounding:Integer}+(35-65) Armor
@@ -280,31 +280,31 @@ Implicits: 2
 			Rarity: EXALTED
 Obsidian Sceptre
 Obsidian Sceptre
-Prefix: {range:223}85_4
-Prefix: {range:214}720_4
-Suffix: {range:51}89_4
-Suffix: {range:42}12_6
+Prefix: {range:51}89_4
+Prefix: {range:42}12_6
+Suffix: {range:223}85_4
+Suffix: {range:214}720_4
 LevelReq: 75
 Implicits: 2
 +55 Melee Damage
 {range:129}{rounding:Integer}+(55-65) Spell Damage
+{range:51}{rounding:Integer}(60-85)% increased Melee Damage
+{range:42}{scalar:1.75}{rounding:Integer}(96-120)% increased Fire Damage
 {range:223}{scalar:1.75}+(24-30)% Chance to Shock on Hit
 {range:214}+(9-12)% Fire Penetration
 {range:214}+(9-12)% Minion Fire Penetration
-{range:51}{rounding:Integer}(60-85)% increased Melee Damage
-{range:42}{scalar:1.75}{rounding:Integer}(96-120)% increased Fire Damage
 		</Item>
 		<Item id="11">
 			Rarity: LEGENDARY
 Palarus's Sacred Light
 Broadsword
-Prefix: {range:88}86_3
-Suffix: {range:88}49_3
+Prefix: {range:88}49_3
+Suffix: {range:88}86_3
 LevelReq: 20
 Implicits: 1
 +22 Melee Damage
-{range:88}{scalar:1.75}+(56-70)% Chance to Shred Armor on Hit
 {range:88}{rounding:Integer}+(12-14) Spell Damage
+{range:88}{scalar:1.75}+(56-70)% Chance to Shred Armor on Hit
 {unique}+1 Melee Damage per 2 Attunement
 {unique}+1 Spell Damage per 2 Strength
 {unique}{range:44}+(32-46)% chance to cast Smite on Melee hit (up to 3 times per second)
@@ -315,15 +315,15 @@ Implicits: 1
 			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Prefix: {range:129}206_0
-Prefix: {range:251}899_5
-Suffix: {range:240}276_0
+Prefix: {range:240}276_0
+Suffix: {range:129}206_0
+Suffix: {range:251}899_5
 LevelReq: 0
 Implicits: 0
+{range:240}+(10-25)% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)
 {range:129}{scalar:0.95}+(30-80)% Chance to Shred Armor on Fire Hit
 {range:251}{scalar:1.28}{rounding:Integer}(6-7)% increased Damage Over Time
 {scalar:1.28}+4% Endurance
-{range:240}+(10-25)% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)
 		</Item>
 		<Item id="13">
 			Rarity: UNIQUE
@@ -337,80 +337,80 @@ Implicits: 0
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:224}836_0
-Suffix: {range:44}828_0
+Prefix: {range:44}828_0
+Suffix: {range:224}836_0
 LevelReq: 0
 Implicits: 0
-{range:224}+(9-12)% Poison Resistance
-{range:224}+(9-12)% Minion Poison Resistance
 {range:44}{rounding:Integer}(5-8)% increased Health Regen
 {range:44}{rounding:Integer}+(14-18) Health
+{range:224}+(9-12)% Poison Resistance
+{range:224}+(9-12)% Minion Poison Resistance
 		</Item>
 		<Item id="15">
 			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Prefix: {range:150}206_0
-Prefix: {range:79}921_5
-Suffix: {range:228}276_0
+Prefix: {range:228}276_0
+Suffix: {range:150}206_0
+Suffix: {range:79}921_5
 LevelReq: 0
 Implicits: 0
+{range:228}+(10-25)% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)
 {range:150}{scalar:0.95}+(30-80)% Chance to Shred Armor on Fire Hit
 {range:79}{scalar:1.28}{rounding:Integer}(5-6)% increased Armor
 {scalar:1.28}3% of Armor Mitigation also applies to Damage over Time
-{range:228}+(10-25)% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)
 		</Item>
 		<Item id="16">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:190}835_0
-Suffix: {range:97}829_0
+Prefix: {range:97}829_0
+Suffix: {range:190}835_0
 LevelReq: 0
 Implicits: 0
-{range:190}+(9-12)% Void Resistance
-{range:190}+(9-12)% Minion Void Resistance
 {range:97}(5-10)% Increased Healing Effectiveness
 {range:97}{rounding:Integer}+(14-18) Health
+{range:190}+(9-12)% Void Resistance
+{range:190}+(9-12)% Minion Void Resistance
 		</Item>
 		<Item id="17">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:68}114_0
-Suffix: {range:247}828_0
+Prefix: {range:247}828_0
+Suffix: {range:68}114_0
 LevelReq: 0
 Implicits: 0
-{range:68}{scalar:0.17}+(20-45)% Necrotic Resistance
 {range:247}{rounding:Integer}(5-8)% increased Health Regen
 {range:247}{rounding:Integer}+(14-18) Health
+{range:68}{scalar:0.17}+(20-45)% Necrotic Resistance
 		</Item>
 		<Item id="18">
 			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Prefix: {range:186}206_0
-Prefix: {range:107}921_5
-Suffix: {range:198}276_0
+Prefix: {range:198}276_0
+Suffix: {range:186}206_0
+Suffix: {range:107}921_5
 LevelReq: 0
 Implicits: 0
+{range:198}+(10-25)% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)
 {range:186}{scalar:0.95}+(30-80)% Chance to Shred Armor on Fire Hit
 {range:107}{scalar:1.28}{rounding:Integer}(5-6)% increased Armor
 {scalar:1.28}3% of Armor Mitigation also applies to Damage over Time
-{range:198}+(10-25)% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)
 		</Item>
 		<Item id="19">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:195}838_0
-Suffix: {range:249}829_0
+Prefix: {range:249}829_0
+Suffix: {range:195}838_0
 LevelReq: 0
 Implicits: 0
-{range:195}+(9-12)% Necrotic Resistance
-{range:195}+(9-12)% Minion Necrotic Resistance
 {range:249}(5-10)% Increased Healing Effectiveness
 {range:249}{rounding:Integer}+(14-18) Health
+{range:195}+(9-12)% Necrotic Resistance
+{range:195}+(9-12)% Minion Necrotic Resistance
 		</Item>
 		<Item id="20">
 			Rarity: NORMAL
