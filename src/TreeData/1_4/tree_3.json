@@ -2391,7 +2391,7 @@
         "Acolyte-92"
       ],
       "description": [
-        "You gain additional ward decay threshold and you gain ward on kill. \n\nYou also gain ward per 2 points of Intelligence while channeling a skill."
+        "You gain additional ward decay threshold and you gain ward on kill. \n\nYou also gain ward per 3 points of Intelligence while channeling a skill."
       ]
     },
     "Acolyte-90": {
@@ -3960,7 +3960,7 @@
         "aa710-19"
       ],
       "description": [
-        "{Stomp} has a reduced cooldown.\n\nFor each {Bone Golem} absorbed,  Stomp deals more damage (multiplicative with other modifiers) and has increased area of effect."
+        "{Stomp} has a reduced cooldown.\n\nFor each {Bone Golem} absorbed, Stomp deals more damage (multiplicative with other modifiers) and has increased area of effect."
       ]
     },
     "aa710-34": {

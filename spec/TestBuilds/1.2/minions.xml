@@ -17,10 +17,10 @@
 		<PlayerStat stat="Dex" value="14"></PlayerStat>
 		<PlayerStat stat="Int" value="97"></PlayerStat>
 		<PlayerStat stat="Att" value="1"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="15901.742185618"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="16270.383092844"></PlayerStat>
 		<PlayerStat stat="FireMaximumHitTaken" value="17501.503750211"></PlayerStat>
 		<PlayerStat stat="LightningMaximumHitTaken" value="30802.646600371"></PlayerStat>
-		<PlayerStat stat="ColdMaximumHitTaken" value="12032.28382827"></PlayerStat>
+		<PlayerStat stat="ColdMaximumHitTaken" value="14529.550283194"></PlayerStat>
 		<PlayerStat stat="PhysicalMaximumHitTaken" value="34040.468957092"></PlayerStat>
 		<PlayerStat stat="PoisonMaximumHitTaken" value="11000.945214418"></PlayerStat>
 		<PlayerStat stat="NecroticMaximumHitTaken" value="30802.646600371"></PlayerStat>
@@ -50,7 +50,7 @@
 		<PlayerStat stat="FireResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="LightningResist" value="75"></PlayerStat>
 		<PlayerStat stat="LightningResistOverCap" value="25"></PlayerStat>
-		<PlayerStat stat="ColdResist" value="36"></PlayerStat>
+		<PlayerStat stat="ColdResist" value="47"></PlayerStat>
 		<PlayerStat stat="ColdResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="PhysicalResist" value="75"></PlayerStat>
 		<PlayerStat stat="PhysicalResistOverCap" value="8"></PlayerStat>
@@ -115,35 +115,35 @@
 			Rarity: EXALTED
 Bone Amulet
 Bone Amulet
-Prefix: {range:178}24_4
-Prefix: {range:163}824_6
-Suffix: {range:153}70_5
-Suffix: {range:227}26_4
+Prefix: {range:153}70_5
+Prefix: {range:227}26_4
+Suffix: {range:178}24_4
+Suffix: {range:163}824_6
 Sealed: {range:113}330_2
 LevelReq: 58
 Implicits: 2
 {range:41}+(13-40)% Physical Resistance
 {range:213}+(13-40)% Necrotic Resistance
+{range:153}{scalar:1.17}{rounding:Integer}(190-230)% increased Minion Health
+{range:227}{scalar:1.17}{rounding:Integer}(40-60)% increased Minion Damage
 {range:178}{scalar:1.17}+(30-45)% Lightning Resistance
 {range:163}{scalar:1.17}{rounding:Integer}+(31-40) Ward per Second
 {range:163}{scalar:1.17}{rounding:Integer}+(181-230) Ward Decay Threshold
-{range:153}{scalar:1.17}{rounding:Integer}(190-230)% increased Minion Health
-{range:227}{scalar:1.17}{rounding:Integer}(40-60)% increased Minion Damage
 {sealed}{range:113}{scalar:1.17}{rounding:Integer}(20-24)% increased Mana Regen
 		</Item>
 		<Item id="2">
 			Rarity: LEGENDARY
 Exsanguinous
 Noble Raiment
-Prefix: {range:236}52_6
-Suffix: {range:206}579_4
+Prefix: {range:206}579_4
+Suffix: {range:236}52_6
 LevelReq: 23
 Implicits: 2
 +32 Armor
 {range:121}{rounding:Integer}+(2-7) Spell Damage
-{range:236}{scalar:1.5}{rounding:Integer}(21-26)% increased Health
 +2 to Summon Wraith
 {range:206}{rounding:Integer}(61-90)% increased Minion Damage
+{range:236}{scalar:1.5}{rounding:Integer}(21-26)% increased Health
 {unique}{range:230}(15-30)% increased Attack Speed for 4 seconds when you use a Potion
 {unique}{range:230}(15-30)% increased Spell Cast Speed for 4 seconds when you use a Potion
 {unique}{range:230}(15-30)% increased Movement Speed for 4 seconds when you use a Potion
@@ -155,16 +155,16 @@ Implicits: 2
 			Rarity: LEGENDARY
 Last Steps of the Living
 Arcane Boots
-Prefix: {range:206}36_4
-Suffix: {range:182}28_6
+Prefix: {range:182}28_6
+Suffix: {range:206}36_4
 LevelReq: 60
 Implicits: 3
 +8 Armor
 {range:163}(15-18)% increased Movement Speed
 {range:145}{rounding:Integer}+(120-230) Ward Decay Threshold
+{range:182}(26-30)% increased Movement Speed
 {range:206}{rounding:Integer}+(46-68) Health
 5% increased Health
-{range:182}(26-30)% increased Movement Speed
 {unique}{range:200}(11-15)% of Current Health Lost per second
 {unique}{range:200}(11-15)% of Missing Health gained as Ward per second
 {unique}{range:200}(30-36)% increased Movement Speed
@@ -175,34 +175,34 @@ Implicits: 3
 			Rarity: EXALTED
 Plated Gauntlets
 Plated Gauntlets
-Prefix: {range:35}45_3
-Prefix: {range:77}36_4
-Suffix: {range:188}675_5
-Suffix: {range:17}502_3
+Prefix: {range:188}675_5
+Prefix: {range:17}502_3
+Suffix: {range:35}45_3
+Suffix: {range:77}36_4
 Sealed: {range:151}88_1
 LevelReq: 45
 Implicits: 2
 +75 Armor
 {range:78}+(5-15)% Endurance
-{range:35}+(22-29)% Physical Resistance
-{range:77}{rounding:Integer}+(46-68) Health
-5% increased Health
 {range:188}(14-16)% of Current Health Lost per second
 {range:188}(14-16)% of Missing Health gained as Ward per second
 {range:17}{rounding:Integer}+(5-6) Intelligence
+{range:35}+(22-29)% Physical Resistance
+{range:77}{rounding:Integer}+(46-68) Health
+5% increased Health
 {sealed}{range:151}{rounding:Integer}+(5-7) Throwing Damage
 		</Item>
 		<Item id="5">
 			Rarity: LEGENDARY
 Boneclamor Barbute
 Gladiator Helmet
-Prefix: {range:189}382_6
-Suffix: {range:64}502_4
+Prefix: {range:64}502_4
+Suffix: {range:189}382_6
 LevelReq: 65
 Implicits: 1
 +130 Armor
-{range:189}{rounding:Integer}+(43-56) Ward per Second
 {range:64}{rounding:Integer}+(7-8) Intelligence
+{range:189}{rounding:Integer}+(43-56) Ward per Second
 {unique}+150 Armor
 {unique}{range:235}{rounding:Integer}+(6-13) Dexterity
 {unique}{range:235}{rounding:Integer}+(6-13) Intelligence
@@ -213,37 +213,37 @@ Implicits: 1
 			Rarity: EXALTED
 Decaying Homunculus
 Decaying Homunculus
-Prefix: {range:84}24_5
-Prefix: {range:214}25_4
-Suffix: {range:225}26_6
-Suffix: {range:247}502_4
+Prefix: {range:225}26_6
+Prefix: {range:247}502_4
+Suffix: {range:84}24_5
+Suffix: {range:214}25_4
 LevelReq: 59
 Implicits: 2
 {range:220}{rounding:Integer}(31-61)% increased Necrotic Damage
 {range:210}{rounding:Integer}(31-61)% increased Minion Necrotic Damage
-{range:84}+(50-60)% Lightning Resistance
-{range:214}{rounding:Integer}+(61-90) Health
 {range:225}{rounding:Integer}(96-120)% increased Minion Damage
 {range:247}{rounding:Integer}+(7-8) Intelligence
+{range:84}+(50-60)% Lightning Resistance
+{range:214}{rounding:Integer}+(61-90) Health
 		</Item>
 		<Item id="7">
 			Rarity: EXALTED
 Ivory Ring
 Ivory Ring
-Prefix: {range:211}45_4
-Prefix: {range:178}824_4
-Suffix: {range:121}70_4
-Suffix: {range:186}502_6
+Prefix: {range:121}70_4
+Prefix: {range:186}502_6
+Suffix: {range:211}45_4
+Suffix: {range:178}824_4
 Sealed: {range:63}769_2
 LevelReq: 66
 Implicits: 2
 {range:127}+(33-46)% Necrotic Resistance
 {range:165}{rounding:Integer}+(46-130) Ward Decay Threshold
+{range:121}{rounding:Integer}(101-150)% increased Minion Health
+{range:186}{rounding:Integer}+(14-16) Intelligence
 {range:211}+(30-45)% Physical Resistance
 {range:178}{rounding:Integer}+(15-20) Ward per Second
 {range:178}{rounding:Integer}+(96-114) Ward Decay Threshold
-{range:121}{rounding:Integer}(101-150)% increased Minion Health
-{range:186}{rounding:Integer}+(14-16) Intelligence
 {sealed}{range:63}{rounding:Integer}(22-27)% increased Minion Damage
 {sealed}3 Minions teleported around you after you use a Traversal Skill
 		</Item>
@@ -251,17 +251,17 @@ Implicits: 2
 			Rarity: LEGENDARY
 Ribbons of Blood
 Ruby Ring
-Prefix: {range:217}824_4
-Prefix: {range:52}25_4
-Suffix: {range:230}502_6
+Prefix: {range:230}502_6
+Suffix: {range:217}824_4
+Suffix: {range:52}25_4
 LevelReq: 62
 Implicits: 2
 {range:140}+(28-45)% Fire Resistance
 {range:52}{rounding:Integer}(28-45)% increased Fire Damage
+{range:230}{rounding:Integer}+(14-16) Intelligence
 {range:217}{rounding:Integer}+(15-20) Ward per Second
 {range:217}{rounding:Integer}+(96-114) Ward Decay Threshold
 {range:52}{rounding:Integer}+(61-90) Health
-{range:230}{rounding:Integer}+(14-16) Intelligence
 {unique}{range:144}{rounding:Integer}(7-10)% increased Health
 {unique}{range:60}{rounding:Integer}+(4-7) Minion Melee Physical Damage
 {unique}{range:112}(2-4)% of Minion Melee Damage Leeched as Health on Hit
@@ -272,7 +272,7 @@ Implicits: 2
 			Rarity: LEGENDARY
 Strands of Souls
 Leather Belt
-Suffix: {range:245}26_6
+Prefix: {range:245}26_6
 LevelReq: 9
 Implicits: 1
 +4 Potion Slots
@@ -287,7 +287,7 @@ Implicits: 1
 			Rarity: LEGENDARY
 Lethal Concentration
 Jadebone Javelin
-Prefix: {range:188}98_6
+Suffix: {range:188}98_6
 LevelReq: 58
 Implicits: 2
 +78 Melee Damage
@@ -295,155 +295,155 @@ Implicits: 2
 {range:188}{scalar:3.2}{rounding:Integer}(111-140)% increased Minion Damage Over Time
 {unique}{range:49}{rounding:Integer}(150-209)% increased Melee Damage
 {unique}{range:238}{rounding:Integer}(150-209)% increased Minion Damage
-{unique}+25% Chance to cast Jade Dust on Hit with Harvest
+{unique}25% chance to cast Jade Dust on Hit with Harvest
 {unique}{range:213}(150-209)% of Player Poison Damage Applies to Skeleton Rogues
 {unique}8% of Minion Poison Damage Leeched as Health
-{unique}{range:213}(150-209)% of Player Poison Damage Applies to your Falcon
+{unique}{range:213}(150-209)% of your Poison Damage Applies to your Falcon
 {unique}{range:34}{rounding:Integer}+(1-3) to Throwing Minion Skills
 		</Item>
 		<Item id="11">
 			Rarity: IDOL
 Heretical Large Immortal Idol
 Heretical Large Immortal Idol
-Prefix: {range:224}285_0
-Prefix: {range:68}895_2
-Suffix: {range:163}941_0
+Prefix: {range:163}941_0
+Suffix: {range:224}285_0
+Suffix: {range:68}895_2
 LevelReq: 0
 Implicits: 0
+{range:163}{rounding:Integer}+(3-6) Ward per Second
+{range:163}{rounding:Integer}(3-9)% increased Health
 {range:224}{scalar:0.67}+(13-30)% Ward Retention
 2% increased Armor
 3% reduced Bonus Damage Taken from Critical Strikes
-{range:163}{rounding:Integer}+(3-6) Ward per Second
-{range:163}{rounding:Integer}(3-9)% increased Health
 		</Item>
 		<Item id="12">
 			Rarity: IDOL
 Heretical Large Immortal Idol
 Heretical Large Immortal Idol
-Prefix: {range:76}295_0
-Prefix: {range:91}900_0
-Suffix: {range:240}941_0
+Prefix: {range:240}941_0
+Suffix: {range:76}295_0
+Suffix: {range:91}900_0
 LevelReq: 0
 Implicits: 0
+{range:240}{rounding:Integer}+(3-6) Ward per Second
+{range:240}{rounding:Integer}(3-9)% increased Health
 {range:76}{scalar:0.67}(24-65)% increased Physical Spell Critical Strike Chance
 +1 Spell Damage while weilding a Staff
 {range:91}{rounding:Integer}(1-2) Ward gained per second while wielding a Staff
-{range:240}{rounding:Integer}+(3-6) Ward per Second
-{range:240}{rounding:Integer}(3-9)% increased Health
 		</Item>
 		<Item id="13">
 			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
-Prefix: {range:145}851_0
-Suffix: {range:239}846_0
+Prefix: {range:239}846_0
+Suffix: {range:145}851_0
 LevelReq: 0
 Implicits: 0
-{range:145}+(4-6)% Elemental Resistance
-{range:145}+(4-6)% Minion Elemental Resistance
 {range:239}+(5-7)% Ward Retention
 {range:239}{rounding:Integer}+(5-8) Ward per Second
+{range:145}+(4-6)% Elemental Resistance
+{range:145}+(4-6)% Minion Elemental Resistance
 		</Item>
 		<Item id="14">
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Prefix: {range:112}885_0
-Suffix: {range:237}107_0
+Prefix: {range:237}107_0
+Suffix: {range:112}885_0
 LevelReq: 0
 Implicits: 0
-{range:112}+(9-12)% Cold Resistance
-{range:112}+(9-12)% Minion Cold Resistance
 {range:237}{scalar:0.38}{rounding:Integer}(5-11)% increased Health
+{range:112}+(18-24)% Cold Resistance
+{range:112}+(18-24)% Minion Cold Resistance
 		</Item>
 		<Item id="15">
 			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
-Prefix: {range:22}850_0
-Suffix: {range:136}846_0
+Prefix: {range:136}846_0
+Suffix: {range:22}850_0
 LevelReq: 0
 Implicits: 0
-{range:22}+(9-12)% Cold Resistance
-{range:22}+(9-12)% Minion Cold Resistance
 {range:136}+(5-7)% Ward Retention
 {range:136}{rounding:Integer}+(5-8) Ward per Second
+{range:22}+(9-12)% Cold Resistance
+{range:22}+(9-12)% Minion Cold Resistance
 		</Item>
 		<Item id="16">
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Prefix: {range:194}112_0
-Suffix: {range:152}880_0
+Prefix: {range:152}880_0
+Suffix: {range:194}112_0
 LevelReq: 0
 Implicits: 0
-{range:194}{scalar:0.38}+(20-45)% Cold Resistance
 {range:152}{rounding:Integer}(9-20) Health Gain on Kill
 {range:152}{rounding:Integer}(5-6)% increased Health
+{range:194}{scalar:0.38}+(20-45)% Cold Resistance
 		</Item>
 		<Item id="17">
 			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
-Prefix: {range:41}852_0
-Suffix: {range:175}846_0
+Prefix: {range:175}846_0
+Suffix: {range:41}852_0
 LevelReq: 0
 Implicits: 0
-{range:41}+(9-12)% Fire Resistance
-{range:41}+(9-12)% Minion Fire Resistance
 {range:175}+(5-7)% Ward Retention
 {range:175}{rounding:Integer}+(5-8) Ward per Second
+{range:41}+(9-12)% Fire Resistance
+{range:41}+(9-12)% Minion Fire Resistance
 		</Item>
 		<Item id="18">
 			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
-Prefix: {range:189}852_0
-Suffix: {range:108}846_0
+Prefix: {range:108}846_0
+Suffix: {range:189}852_0
 LevelReq: 0
 Implicits: 0
-{range:189}+(9-12)% Fire Resistance
-{range:189}+(9-12)% Minion Fire Resistance
 {range:108}+(5-7)% Ward Retention
 {range:108}{rounding:Integer}+(5-8) Ward per Second
+{range:189}+(9-12)% Fire Resistance
+{range:189}+(9-12)% Minion Fire Resistance
 		</Item>
 		<Item id="19">
 			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
-Prefix: {range:25}112_0
-Suffix: {range:241}846_0
+Prefix: {range:241}846_0
+Suffix: {range:25}112_0
 LevelReq: 0
 Implicits: 0
-{range:25}{scalar:0.17}+(20-45)% Cold Resistance
 {range:241}+(5-7)% Ward Retention
 {range:241}{rounding:Integer}+(5-8) Ward per Second
+{range:25}{scalar:0.17}+(20-45)% Cold Resistance
 		</Item>
 		<Item id="20">
 			Rarity: IDOL
 Heretical Huge Immortal Idol
 Heretical Huge Immortal Idol
-Prefix: {range:97}285_0
-Prefix: {range:154}897_2
-Suffix: {range:158}266_0
+Prefix: {range:158}266_0
+Suffix: {range:97}285_0
+Suffix: {range:154}897_2
 LevelReq: 0
 Implicits: 0
+{range:158}+(10-30)% Increased Aura of Decay Area
 {range:97}+(13-30)% Ward Retention
 {range:154}{scalar:1.33}{rounding:Integer}+(5-6) Ward Decay Threshold
 {range:154}{scalar:1.33}{rounding:Integer}+(5-6) Ward per Second
-{range:158}+(10-30)% Increased Aura of Decay Area
 		</Item>
 		<Item id="21">
 			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
-Prefix: {range:151}117_0
-Suffix: {range:249}846_0
+Prefix: {range:249}846_0
+Suffix: {range:151}117_0
 LevelReq: 0
 Implicits: 0
-{range:151}{scalar:0.17}+(8-20)% Elemental Resistance
 {range:249}+(5-7)% Ward Retention
 {range:249}{rounding:Integer}+(5-8) Ward per Second
+{range:151}{scalar:0.17}+(8-20)% Elemental Resistance
 		</Item>
 		<Item id="22">
 			Rarity: NORMAL

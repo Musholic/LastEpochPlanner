@@ -19,13 +19,13 @@
 		<PlayerStat stat="Dex" value="5"></PlayerStat>
 		<PlayerStat stat="Int" value="98"></PlayerStat>
 		<PlayerStat stat="Att" value="4"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="15085.322056512"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="16016.545589476"></PlayerStat>
 		<PlayerStat stat="FireMaximumHitTaken" value="16553.513099105"></PlayerStat>
 		<PlayerStat stat="LightningMaximumHitTaken" value="16553.513099105"></PlayerStat>
 		<PlayerStat stat="ColdMaximumHitTaken" value="16553.513099105"></PlayerStat>
 		<PlayerStat stat="PhysicalMaximumHitTaken" value="17842.372193566"></PlayerStat>
 		<PlayerStat stat="PoisonMaximumHitTaken" value="16553.513099105"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="10093.605548235"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="13794.594249254"></PlayerStat>
 		<PlayerStat stat="VoidMaximumHitTaken" value="16553.513099105"></PlayerStat>
 		<PlayerStat stat="Life" value="1763"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="0"></PlayerStat>
@@ -49,7 +49,7 @@
 		<PlayerStat stat="AttackDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="SpellDodgeChance" value="0"></PlayerStat>
 		<PlayerStat stat="FireResist" value="75"></PlayerStat>
-		<PlayerStat stat="FireResistOverCap" value="335"></PlayerStat>
+		<PlayerStat stat="FireResistOverCap" value="346"></PlayerStat>
 		<PlayerStat stat="LightningResist" value="75"></PlayerStat>
 		<PlayerStat stat="LightningResistOverCap" value="79"></PlayerStat>
 		<PlayerStat stat="ColdResist" value="75"></PlayerStat>
@@ -58,7 +58,7 @@
 		<PlayerStat stat="PhysicalResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="PoisonResist" value="75"></PlayerStat>
 		<PlayerStat stat="PoisonResistOverCap" value="30"></PlayerStat>
-		<PlayerStat stat="NecroticResist" value="59"></PlayerStat>
+		<PlayerStat stat="NecroticResist" value="70"></PlayerStat>
 		<PlayerStat stat="NecroticResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="VoidResist" value="75"></PlayerStat>
 		<PlayerStat stat="VoidResistOverCap" value="5"></PlayerStat>
@@ -119,18 +119,18 @@
 			Rarity: EXALTED
 Jade Amulet
 Jade Amulet
-Prefix: {range:0}59_2
-Suffix: {range:8}12_2
-Suffix: {range:140}38_5
+Prefix: {range:8}12_2
+Prefix: {range:140}38_5
+Suffix: {range:0}59_2
 Sealed: {range:95}6_1
 Corrupted: {range:13}1014_1
 LevelReq: 4
 Implicits: 2
 {range:165}(5-15)% increased Melee Attack Speed
 {range:92}(5-15)% increased Throwing Attack Speed
-{range:0}{scalar:1.17}{rounding:Integer}(20-24)% increased Dodge Rating
 {range:8}{scalar:1.17}{rounding:Integer}(22-30)% increased Fire Damage
 {range:140}{scalar:1.17}{rounding:Integer}(75-95)% increased Spell Damage
+{range:0}{scalar:1.17}{rounding:Integer}(20-24)% increased Dodge Rating
 {sealed}{range:95}{scalar:1.17}+(10-12)% Critical Strike Multiplier
 {corrupted}+1 to All Skills
 {corrupted}{range:13}{rounding:Integer}+(24-27) Mana
@@ -139,46 +139,46 @@ Implicits: 2
 			Rarity: EXALTED
 Mystic Plate
 Mystic Plate
-Prefix: {range:252}13_4
-Prefix: {range:144}25_5
-Suffix: {range:126}502_4
-Suffix: {range:194}394_4
+Prefix: {range:126}502_4
+Prefix: {range:194}394_4
+Suffix: {range:252}13_4
+Suffix: {range:144}25_5
 Sealed: {range:130}393_0
 LevelReq: 52
 Implicits: 2
 +324 Armor
 {range:181}+(20-40)% Critical Strike Avoidance
-{range:252}{scalar:1.5}+(30-45)% Fire Resistance
-{range:144}{scalar:1.5}{rounding:Integer}+(100-130) Health
 {range:126}{scalar:1.5}{rounding:Integer}+(7-8) Intelligence
 {range:194}{scalar:1.5}(112-125)% Increased Fire Aura Damage
+{range:252}{scalar:1.5}+(30-45)% Fire Resistance
+{range:144}{scalar:1.5}{rounding:Integer}+(100-130) Health
 {sealed}{scalar:1.5}+6% Chance to cast Fire Aura on Crit (up to 3 times per second)
 		</Item>
 		<Item id="3">
 			Rarity: EXALTED
 Solarum Greaves
 Solarum Greaves
-Prefix: {range:217}80_3
-Prefix: {range:163}13_4
-Suffix: {range:100}28_5
-Suffix: {range:227}502_3
+Prefix: {range:100}28_5
+Prefix: {range:227}502_3
+Suffix: {range:217}80_3
+Suffix: {range:163}13_4
 Sealed: {range:59}17_0
 LevelReq: 67
 Implicits: 3
 +90 Armor
 {range:157}(15-18)% increased Movement Speed
 {range:6}+(30-45)% Fire Resistance
-{range:217}+(12-15)% Elemental Resistance
-{range:163}+(30-45)% Fire Resistance
 {range:100}(22-25)% increased Movement Speed
 {range:227}{rounding:Integer}+(5-6) Intelligence
+{range:217}+(12-15)% Elemental Resistance
+{range:163}+(30-45)% Fire Resistance
 {sealed}{range:59}+(5-9)% Cold Resistance
 		</Item>
 		<Item id="4">
 			Rarity: LEGENDARY
 Fingers of the Phantom Mire
 Noble Gloves
-Suffix: {range:219}2_5
+Prefix: {range:219}2_5
 LevelReq: 31
 Implicits: 2
 +28 Armor
@@ -196,10 +196,10 @@ Implicits: 2
 			Rarity: EXALTED
 Arcane Visage
 Arcane Visage
-Prefix: {range:23}382_5
-Prefix: {range:237}13_4
-Suffix: {range:196}394_4
-Suffix: {range:4}502_4
+Prefix: {range:196}394_4
+Prefix: {range:4}502_4
+Suffix: {range:23}382_5
+Suffix: {range:237}13_4
 Sealed: {range:88}8_0
 Corrupted: {range:95}385_2
 LevelReq: 84
@@ -207,10 +207,10 @@ Implicits: 3
 +117 Armor
 {range:47}(7-15)% Increased Cooldown Recovery Speed
 {range:19}{rounding:Integer}(7-15)% increased Mana
-{range:23}{rounding:Integer}+(33-42) Ward per Second
-{range:237}+(30-45)% Fire Resistance
 {range:196}(112-125)% Increased Fire Aura Damage
 {range:4}{rounding:Integer}+(7-8) Intelligence
+{range:23}{rounding:Integer}+(33-42) Ward per Second
+{range:237}+(30-45)% Fire Resistance
 {sealed}{range:88}{rounding:Integer}+(20-29) Dodge Rating
 {corrupted}{range:95}+(20-21)% Lightning Critical Strike Multiplier
 		</Item>
@@ -218,60 +218,60 @@ Implicits: 3
 			Rarity: EXALTED
 Carcinised Altar
 Carcinised Altar
-Prefix: {range:239}1099_2
-Suffix: {range:140}1093_2
-Suffix: {range:18}1094_1
+Prefix: {range:140}1093_2
+Prefix: {range:18}1094_1
+Suffix: {range:239}1099_2
 Corrupted: {range:37}1097_5
 LevelReq: 32
 Implicits: 1
 {range:207}{rounding:Integer}+(64-256) Armor per Idol in a Refracted Slot
-3% increased Health per Equipped Huge Idol
 {range:140}(16-20)% increased Effect of Prefixes for Idols in Refracted Slots
 {range:18}(13-15)% increased Effect of Suffixes for Idols in Refracted Slots
+3% increased Health per Equipped Huge Idol
 {corrupted}{range:37}(9-10)% Reduced Bonus Damage Taken from Critical Strikes per Equipped Heretical Idol
 		</Item>
 		<Item id="7">
 			Rarity: EXALTED
 Rune Quill
 Rune Quill
-Prefix: {range:183}80_5
-Prefix: {range:127}10_4
-Suffix: {range:249}502_4
-Suffix: {range:30}100_3
+Prefix: {range:249}502_4
+Prefix: {range:30}100_3
+Suffix: {range:183}80_5
+Suffix: {range:127}10_4
 Sealed: {range:242}330_0
 LevelReq: 72
 Implicits: 1
 {range:81}{rounding:Integer}(40-84)% increased Elemental Damage Over Time
-{range:183}+(24-30)% Elemental Resistance
-{range:127}+(30-45)% Necrotic Resistance
 {range:249}{rounding:Integer}+(7-8) Intelligence
 {range:30}{rounding:Integer}(51-70)% increased Elemental Damage Over Time
+{range:183}+(24-30)% Elemental Resistance
+{range:127}+(30-45)% Necrotic Resistance
 {sealed}{range:242}{rounding:Integer}(10-14)% increased Mana Regen
 		</Item>
 		<Item id="8">
 			Rarity: EXALTED
 Opal Ring
 Opal Ring
-Prefix: {range:213}80_5
-Prefix: {range:158}25_4
-Suffix: {range:128}502_4
-Suffix: {range:83}100_3
+Prefix: {range:128}502_4
+Prefix: {range:83}100_3
+Suffix: {range:213}80_5
+Suffix: {range:158}25_4
 Sealed: {range:32}12_0
 LevelReq: 52
 Implicits: 2
 {range:211}(6-10)% Increased Cooldown Recovery Speed
 {range:55}{rounding:Integer}+(1-2) to All Attributes
-{range:213}+(24-30)% Elemental Resistance
-{range:158}{rounding:Integer}+(61-90) Health
 {range:128}{rounding:Integer}+(7-8) Intelligence
 {range:83}{rounding:Integer}(51-70)% increased Elemental Damage Over Time
+{range:213}+(24-30)% Elemental Resistance
+{range:158}{rounding:Integer}+(61-90) Health
 {sealed}{range:32}{rounding:Integer}(6-12)% increased Fire Damage
 		</Item>
 		<Item id="9">
 			Rarity: LEGENDARY
 Legends Entwined
 Opal Ring
-Suffix: {range:184}502_6
+Prefix: {range:184}502_6
 LevelReq: 52
 Implicits: 2
 {range:110}(6-10)% Increased Cooldown Recovery Speed
@@ -287,21 +287,21 @@ Implicits: 2
 			Rarity: EXALTED
 Spidersilk Sash
 Spidersilk Sash
-Prefix: {range:187}80_6
-Prefix: {range:189}27_4
-Suffix: {range:175}61_4
-Suffix: {range:253}75_0
+Prefix: {range:175}61_4
+Prefix: {range:253}75_0
+Suffix: {range:187}80_6
+Suffix: {range:189}27_4
 Corrupted: {range:22}711_6
 LevelReq: 58
 Implicits: 3
 {range:22}+(33-47)% Poison Resistance
 {range:112}+(33-47)% Cold Resistance
 +4 Potion Slots
-{range:187}+(31-40)% Elemental Resistance
-{range:189}(16-20)% Increased Cooldown Recovery Speed
 {range:175}{rounding:Integer}(40-60)% increased Poison Damage
 {range:253}{rounding:Integer}(20-30) Ward Gained on Potion Use
 100% chance to Cleanse All Ailments on Potion Use
+{range:187}+(31-40)% Elemental Resistance
+{range:189}(16-20)% Increased Cooldown Recovery Speed
 {corrupted}{range:22}{rounding:Integer}+(246-310) Ward Decay Threshold
 {corrupted}{range:22}{rounding:Integer}(35-45) Ward Gained on Potion Use per 10 Intelligence
 		</Item>
@@ -309,7 +309,7 @@ Implicits: 3
 			Rarity: LEGENDARY
 Volcanus
 Flamberge
-Suffix: {range:195}77_5
+Prefix: {range:195}77_5
 LevelReq: 70
 Implicits: 1
 +90 Melee Damage
@@ -323,27 +323,27 @@ Implicits: 1
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Prefix: {range:255}322_0
-Suffix: {range:255}880_0
+Prefix: {range:255}880_0
+Suffix: {range:255}322_0
 LevelReq: 0
 Implicits: 0
-{range:255}{scalar:0.38}{rounding:Integer}(17-45)% increased Fire Damage
-{range:255}{scalar:0.38}{rounding:Integer}(17-45)% increased Minion Fire Damage
 {range:255}{rounding:Integer}(9-20) Health Gain on Kill
 {range:255}{rounding:Integer}(5-6)% increased Health
+{range:255}{scalar:0.38}{rounding:Integer}(17-45)% increased Fire Damage
+{range:255}{scalar:0.38}{rounding:Integer}(17-45)% increased Minion Fire Damage
 		</Item>
 		<Item id="13">
 			Rarity: IDOL
 Minor Weaver Idol
 Minor Weaver Idol
-Prefix: {range:235}852_0
-Suffix: {range:188}142_0
+Prefix: {range:188}142_0
+Suffix: {range:235}852_0
 Corrupted: {range:192}1070_0
 LevelReq: 0
 Implicits: 0
+{range:188}{scalar:0.17}+(13-30)% Ward Retention
 {range:235}+(9-12)% Fire Resistance
 {range:235}+(9-12)% Minion Fire Resistance
-{range:188}{scalar:0.17}+(13-30)% Ward Retention
 {corrupted}+1% to All Resistances
 {corrupted}+1% to Minion All Resistances
 		</Item>
@@ -351,37 +351,37 @@ Implicits: 0
 			Rarity: IDOL
 Stout Weaver Idol
 Stout Weaver Idol
-Prefix: {range:215}887_0
-Suffix: {range:209}880_0
+Prefix: {range:209}880_0
+Suffix: {range:215}887_0
 Corrupted: {range:98}1057_0
 LevelReq: 0
 Implicits: 0
-{range:215}+(9-12)% Fire Resistance
-{range:215}+(9-12)% Minion Fire Resistance
 {range:209}{rounding:Integer}(9-20) Health Gain on Kill
 {range:209}{rounding:Integer}(5-6)% increased Health
+{range:215}+(18-24)% Fire Resistance
+{range:215}+(18-24)% Minion Fire Resistance
 {corrupted}{range:98}(4-8)% increased Critical Strike Chance
 		</Item>
 		<Item id="15">
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Prefix: {range:197}867_0
-Suffix: {range:222}862_0
+Prefix: {range:222}862_0
+Suffix: {range:197}867_0
 Corrupted: {range:174}1060_0
 LevelReq: 0
 Implicits: 0
-{range:197}+(9-12)% Necrotic Resistance
-{range:197}+(9-12)% Minion Necrotic Resistance
 {range:222}{rounding:Integer}+(4-5) Vitality
 {range:222}{rounding:Integer}+(2-4) Health Regen
+{range:197}+(18-24)% Necrotic Resistance
+{range:197}+(18-24)% Minion Necrotic Resistance
 {corrupted}{range:174}+(4-10)% Minion Void Resistance
 		</Item>
 		<Item id="16">
 			Rarity: IDOL
 Throne of Ambition
 Adorned Silver Idol
-Suffix: {range:172}1043_0
+Prefix: {range:172}1043_0
 LevelReq: 0
 Implicits: 0
 100% Slow Immunity
@@ -391,53 +391,53 @@ Implicits: 0
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:248}835_0
-Suffix: {range:99}135_0
+Prefix: {range:99}135_0
+Suffix: {range:248}835_0
 Corrupted: {range:51}1065_0
 LevelReq: 0
 Implicits: 0
+{range:99}{scalar:0.17}(37-70)% Increased Healing Effectiveness
 {range:248}+(9-12)% Void Resistance
 {range:248}+(9-12)% Minion Void Resistance
-{range:99}{scalar:0.17}(37-70)% Increased Healing Effectiveness
 {corrupted}{range:51}+(3-5)% Chance to Slow on Hit
 		</Item>
 		<Item id="18">
 			Rarity: IDOL
 Small Weaver Idol
 Small Weaver Idol
-Prefix: {range:125}837_0
-Suffix: {range:138}828_0
+Prefix: {range:138}828_0
+Suffix: {range:125}837_0
 Corrupted: {range:179}1064_0
 LevelReq: 0
 Implicits: 0
-{range:125}+(9-12)% Physical Resistance
-{range:125}+(9-12)% Minion Physical Resistance
 {range:138}{rounding:Integer}(5-8)% increased Health Regen
 {range:138}{rounding:Integer}+(14-18) Health
+{range:125}+(9-12)% Physical Resistance
+{range:125}+(9-12)% Minion Physical Resistance
 {corrupted}{range:179}+(2-5)% Minion Poison Resistance
 		</Item>
 		<Item id="19">
 			Rarity: IDOL
 Large Arcane Idol
 Large Arcane Idol
-Prefix: {range:255}111_0
-Suffix: {range:255}240_0
+Prefix: {range:255}240_0
+Suffix: {range:255}111_0
 LevelReq: 0
 Implicits: 0
-{range:255}{scalar:0.67}+(20-45)% Fire Resistance
 {range:255}{scalar:0.67}(30-100)% Increased Fire Aura Damage
+{range:255}{scalar:0.67}+(20-45)% Fire Resistance
 		</Item>
 		<Item id="20">
 			Rarity: IDOL
 Grand Arcane Omen Idol
 Grand Arcane Omen Idol
-Prefix: {range:8}177_0
-Suffix: {range:231}651_0
+Prefix: {range:231}651_0
+Suffix: {range:8}177_0
 Corrupted: {range:55}1112_0
 LevelReq: 0
 Implicits: 0
-{range:8}{scalar:0.67}{rounding:Integer}(22-60)% increased Fire Damage Over Time
 {range:231}{scalar:0.67}(6-18)% Increased Cooldown Recovery Speed for Surge
+{range:8}{scalar:0.67}{rounding:Integer}(22-60)% increased Fire Damage Over Time
 {corrupted}{range:55}{scalar:0.72}{rounding:Tenth}(1-4) Seconds of Frenzy after you use Evade
 		</Item>
 		<Item id="21">

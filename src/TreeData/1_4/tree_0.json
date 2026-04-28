@@ -14449,7 +14449,7 @@
       ],
       "out": [],
       "description": [
-        "Your Spriggan's {Healing Aura} grants additional effects based on your active companions.\nWith a {Bear}, it grants a percentage of max health gained as endurance threshold.\nWith a {Sabertooth},  it grants increased dodge rating.\nWith a {Scorpion}, it grants increased area of effect."
+        "Your Spriggan's {Healing Aura} grants additional effects based on your active companions.\nWith a {Bear}, it grants a percentage of max health gained as endurance threshold.\nWith a {Sabertooth}, it grants increased dodge rating.\nWith a {Scorpion}, it grants increased area of effect."
       ],
       "reminderText": [
         "Your spriggan's {Healing Aura} is a constantly active aura that affects all allies within a 20 meter radius of your spriggan."

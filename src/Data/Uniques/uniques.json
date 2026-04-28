@@ -1440,7 +1440,7 @@
       "(6-10)% more Spell Damage to Ignited Enemies",
       "+(100-160)% Chance to Ignite on Fire Hit",
       "+(100-160)% Chance to Ignite on Necrotic Hit",
-      "100% of Hungering Souls Base Damage Converted to Fire"
+      "of Hungering Souls Base Damage Converted to Fire"
     ],
     "rollIds": [
       0,
@@ -2992,7 +2992,7 @@
       "{rounding:Integer}+(40-50) Bow Physical Damage",
       "(40-50)% Increased Bow Stun Chance",
       "-4 Bow Attack Mana Cost",
-      "+4 Arrows with Multishot"
+      "+4 extra arrows with Multishot"
     ],
     "rollIds": [
       0,
@@ -3255,8 +3255,8 @@
     "mods": [
       "+(33-45)% Cold Resistance",
       "+(33-45)% Lightning Resistance",
-      "+100% Chance to cast Maelstrom every 3 seconds",
-      "(6-15)% Increased Lightning Damage per Active Maelstrom",
+      "100% chance to cast Maelstrom every 3 seconds",
+      "(6-15)% increased Lightning Damage per active Maelstrom",
       "{rounding:Integer}+(10-18) Melee Lightning Damage"
     ],
     "rollIds": [
@@ -3384,7 +3384,7 @@
     },
     "mods": [
       "{rounding:Integer}+(1-4) to Warcry",
-      "+100% Warcry Converted To Cold",
+      "Warcry Converted To Cold",
       "{rounding:Integer}+(80-100) Health",
       "{rounding:Integer}+(10-18) Health Regen",
       "{rounding:Integer}(10-18) Health Gain on Freeze",
@@ -3430,8 +3430,8 @@
     },
     "mods": [
       "{rounding:Integer}+(65-90) Melee Fire Damage",
-      "100% Chance to use Earthquake after using a Non-Channelled Movement Ability, up to 2 times every 5 seconds",
-      "+1 Earthquake Converted To Fire",
+      "100% chance to use Earthquake after using a non-channelled movement ability(up to 2 times per 5 seconds)",
+      "Earthquake converted to Fire",
       "+(200-400)% Chance to Shred Armor on Hit"
     ],
     "rollIds": [
@@ -3585,7 +3585,7 @@
     "mods": [
       "(10-20)% of Current Mana gained as Ward when you cast a Fire Spell",
       "{rounding:Integer}+(1-2) to Flame Ward",
-      "{rounding:Integer}+(100-750) Ward gained when you cast Flame Ward",
+      "{rounding:Integer}(100-750) Ward gained when you cast Flame Ward",
       "{rounding:Integer}+(10-20) Intelligence",
       "+75% Fire Resistance",
       "10% less Damage Taken if you have at least 1000 Ward"
@@ -3871,7 +3871,7 @@
       "{rounding:Integer}(100-160)% increased Spell Damage",
       "(12-20)% increased Cast Speed",
       "10% reduced Health",
-      "+20% Necrotic Penetration with Possess per stack of Damned on You (up to 7)",
+      "+20% Necrotic Penetration with Possess per stack of Damned on You (up to 7 stacks)",
       "+1 You are Damned when you cast a spell"
     ],
     "rollIds": [
@@ -3937,10 +3937,10 @@
     "mods": [
       "{rounding:Integer}(150-209)% increased Melee Damage",
       "{rounding:Integer}(150-209)% increased Minion Damage",
-      "+25% Chance to cast Jade Dust on Hit with Harvest\n",
+      "25% chance to cast Jade Dust on Hit with Harvest",
       "(150-209)% of Player Poison Damage Applies to Skeleton Rogues",
       "8% of Minion Poison Damage Leeched as Health",
-      "(150-209)% of Player Poison Damage Applies to your Falcon",
+      "(150-209)% of your Poison Damage Applies to your Falcon",
       "{rounding:Integer}+(1-3) to Throwing Minion Skills"
     ],
     "rollIds": [
@@ -4168,7 +4168,7 @@
       "+(17-35)% Physical Penetration with Bleed ",
       "{rounding:Integer}(17-35)% increased Block Effectiveness",
       "(17-35)% Increased Bleed Duration ",
-      "(35-85)% Increased Area of mirage attacks with Lethal Mirage",
+      "(35-85)% increased area of Mirage attacks with Lethal Mirage",
       "(35-85)% Increased Chance To Find Potions"
     ],
     "rollIds": [
@@ -4282,7 +4282,7 @@
     },
     "mods": [
       "+30% Chance to cast stationary fire Tornado at a nearby enemy on hit (up to 2 times per 3 seconds)",
-      "+(50-150)% chance to shred fire resistance each second with Tornado",
+      "(50-150)% chance to shred fire resistance each second with Tornado",
       "{rounding:Integer}(40-60)% increased Fire Damage",
       "+(30-50)% Fire Resistance",
       "{rounding:Integer}(20-30)% increased Armor"
@@ -4425,10 +4425,10 @@
     "mods": [
       "{rounding:Integer}(13-63)% increased Necrotic Damage",
       "+1 to Necrotic Spells",
-      "+1 Hungering Souls projectiles are fired in sequence and can all hit the same target",
+      "Hungering Souls projectiles are fired in sequence and can all hit the same target",
       "{rounding:Integer}+(63-73) Health",
       "1% of Necrotic Damage Leeched as Health",
-      "63% less Hungering Souls Damage"
+      "63% less damage for Hungering Souls"
     ],
     "rollIds": [
       0,
@@ -4663,7 +4663,7 @@
       "(100-154)% Increased Blind Duration ",
       "{rounding:Integer}+(54-84) Bow Void Damage while at Low Health",
       "(10-14)% increased Bow Attack Speed while at Low Health",
-      "(10-18)% more hit damage to Blinded Enemies with Multishot"
+      "(10-18)% hit damage to Blinded Enemies with Multishot"
     ],
     "rollIds": [
       0,
@@ -4730,7 +4730,7 @@
       "+(10-40)% Necrotic Resistance",
       "+(11-14)% Endurance",
       "(14-18)% increased Movement Speed",
-      "100% of Maelstrom base damage converted to Necrotic",
+      "of Maelstrom�s base damage is converted to Necrotic",
       "{rounding:Integer}+(2-4) Melee Necrotic Damage for Minions when you cast Maelstrom"
     ],
     "rollIds": [
@@ -4773,7 +4773,7 @@
       "+(50-90)% Melee Critical Strike Multiplier",
       "+1 Gain Harvest big hit stacks when you hit an enemy",
       "{rounding:Integer}(12-24) Mana consumed by Grim Harvest",
-      "(18-36)% of Current Health consumed by Grim Harvest",
+      "(18-36)% of current health consumed by Grim Harvest",
       "(60-78)% reduced Bonus Damage Taken from Critical Strikes"
     ],
     "rollIds": [
@@ -4794,7 +4794,7 @@
     },
     "mods": [
       "-40% to -31% Increased Cooldown Recovery Speed for Lunge",
-      "+1 Lunge Does Not Require a Target",
+      "Lunge does not require a target",
       "{rounding:Integer}(33-71)% increased Void Damage",
       "+(16-37)% Critical Strike Avoidance",
       "{rounding:Integer}+(1-3) to Lunge",
@@ -4863,7 +4863,7 @@
       "+2 to Javelin",
       "(60-120)% Increased Healing Effectiveness",
       "(20-26)% chance to cast Smite at a nearby enemy on Kill",
-      "(20-26)% Increased Cooldown Recovery Speed for Judgement",
+      "(20-26)% increased Cooldown Recovery Speed for Judgement",
       "(20-26)% Increased Cooldown Recovery Speed for Javelin"
     ],
     "rollIds": [
@@ -4891,7 +4891,7 @@
       "{rounding:Integer}+(1-2) to Multistrike",
       "{rounding:Integer}+(1-2) to Smite",
       "+(34-64)% Lightning Penetration with Electrify ",
-      "100% Chance to cast Smite after you use Multistrike and hit a Boss or Rare enemy"
+      "100% chance to cast Smite after you use Multistrike and hit a boss or rare enemy"
     ],
     "rollIds": [
       0,
@@ -4911,7 +4911,7 @@
       "level": 48
     },
     "mods": [
-      "100% of Javelin Damage Converted To Lightning",
+      "100% of Javelin damage converted to Lightning",
       "{rounding:Integer}+(16-22) Lightning Throwing Damage with Javelin",
       "+(800-1200)% Spell Lightning Damage for 4 seconds when you use Javelin",
       "+(80-130)% Lightning Penetration with Electrify ",
@@ -4981,7 +4981,7 @@
       "(100-160)% Increased damage while in Spriggan Form",
       "{rounding:Integer}+(20-26) Health Regen per stack of Germination",
       "+1 Projectiles with Spirit Thorns per stack of Germination",
-      "+1 [DNT] Can gain Germination Stacks"
+      "[DNT] Gain Germination Stacks while in Spriggan Form"
     ],
     "rollIds": [
       0,
@@ -5024,8 +5024,8 @@
       "{rounding:Integer}+(4-10) Bow Fire Damage",
       "{rounding:Integer}+(4-10) Bow Cold Damage",
       "{rounding:Integer}+(4-10) Bow Lightning Damage",
-      "+1 Puncture cannot be dodged",
-      "40% More Hit Damage to Distant Enemies with Puncture",
+      "Puncture cannot be dodged",
+      "40% hit damage to distant dnemies with Puncture",
       "+40 Bow Physical Damage if you have at least 40 Dexterity"
     ],
     "rollIds": [
@@ -5119,11 +5119,11 @@
       "level": 44
     },
     "mods": [
-      "+1 When you directly cast Summon Vines you teleport to the target location",
-      "+6 Seconds Cooldown Duration for Summon Vines",
-      "(20-30)% Increased Attack and Cast Speed for Summoned Vines",
-      "+1 Summoned Vines are Immune to Poison",
-      "100% Increased Vines Summoned when you directly cast Summon Vines"
+      "When you directly cast Summon Vines you teleport to the target location",
+      "+6 seconds cooldown for Summon Vines",
+      "(20-30)% increased attack speed and cast speed for Summoned Vines",
+      "Summoned Vines are Immune to Poison",
+      "100% increased number of Vines Summoned when you directly cast Summon Vines"
     ],
     "rollIds": [
       null,
@@ -5268,9 +5268,9 @@
     },
     "mods": [
       "(111-210)% increased Critical Strike Chance",
-      "{rounding:Integer}+(11-111) Ward gained when you use Shift",
-      "+1 Charge for Shift",
-      "+1 Charge for Smoke Bomb",
+      "{rounding:Integer}(11-111) Ward gained when you use Shift",
+      "+1 Charges for Shift",
+      "+1 Charges for Smoke Bomb",
       "{rounding:Integer}(11-111) Ward gained when you use Smoke Bomb"
     ],
     "rollIds": [
@@ -5342,7 +5342,7 @@
     },
     "mods": [
       "{rounding:Integer}+(3-5) to Vengeance",
-      "(35-52)% more hit damage with Vengeance against bosses and rare enemies (multiplicative with other modifiers)",
+      "(35-52)% hit damage with Vengeance against bosses and rare enemies (multiplicative with other modifiers)",
       "(35-52)% increased Melee Attack Speed",
       "+5 to All Attributes",
       "5% increased Movement Speed"
@@ -5383,7 +5383,7 @@
     "mods": [
       "+1 to Wandering Spirits",
       "+1 to Hungering Souls",
-      "(11-16)% Chance to inflict Damned on Hit with Hungering Souls per Active Wandering Spirit",
+      "(11-16)% chance to inflict Damned on hit with Hungering Souls per active Wandering Spirit",
       "{rounding:Integer}+(6-11) Ward gained each second per Active Wandering Spirit",
       "(16-26)% Chance to Reveal a Wandering Spirit on Kill (1 Second Cooldown)"
     ],
@@ -5719,7 +5719,7 @@
     "mods": [
       "(65-115)% Increased Damage for skills used by Shadows",
       "+(10-15)% Physical Penetration with Shadow Daggers ",
-      "50% Chance to apply a Shadow Dagger on Hit with Lethal Mirage",
+      "50% chance to apply a Shadow Dagger on hit with Lethal Mirage",
       "+(15-25)% Critical Strike Multiplier",
       "{rounding:Integer}(5-10) Health Gain on Crit"
     ],
@@ -6007,7 +6007,7 @@
       "{rounding:Integer}+(80-90) Spell Damage",
       "+2 to Cold Skills",
       "+40000% Ward Gain on Transform",
-      "{rounding:Integer}+(3-4) Ward per second per Active Maelstrom",
+      "{rounding:Integer}(3-4) Ward per second per active Maelstrom",
       "+(150-220)% Ward Retention on Transform"
     ],
     "rollIds": [
@@ -6056,7 +6056,7 @@
       "50% of Fireball Base Damage Converted to Lightning",
       "{rounding:Integer}(45-75)% increased Lightning Damage",
       "+2 to Fireball",
-      "+(20-28)% Chance to apply a Spark Charge on Hit with Fireball",
+      "(20-28)% Chance to apply a Spark Charge on Hit with Fireball",
       "{rounding:Integer}+(20-28) Ward per Second",
       "100% of Ignite Chance Converted to Shock Chance for Fireball"
     ],
@@ -6103,7 +6103,7 @@
     "mods": [
       "(4-8)% increased Movement Speed While Transformed",
       "{rounding:Integer}(16-32)% increased Armor While Transformed",
-      "2 Rage Gained per Second per Summoned Vine",
+      "2 Rage Gained per second per Summoned Vine",
       "{rounding:Integer}+(32-64) Mana",
       "+1 to Spriggan Form",
       "+1 to Summon Spriggan"
@@ -6278,7 +6278,7 @@
       "{rounding:Integer}+(48-65) Melee Damage for directly used Detonating Arrow",
       "+3 to Detonating Arrow",
       "{rounding:Integer}-6 to -3 Mana Cost for Detonating Arrow",
-      "1 Detonating Arrow Converted to a Melee Attack"
+      "Detonating Arrow Converted to a Melee Attack"
     ],
     "rollIds": [
       0,
@@ -6300,7 +6300,7 @@
       "(150-175)% Increased Spark Charge Effect with Melee Attacks",
       "+(10-12)% Chance to apply a Spark Charge on Hit",
       "+1 Lightning Damage for Spark Charge per Intelligence",
-      "+1 Spark Charge to all targets around the destination when you Teleport"
+      "Teleport applies one stack of Spark Charge to all targets around the destination"
     ],
     "rollIds": [
       null,
@@ -6319,10 +6319,10 @@
       "level": 24
     },
     "mods": [
-      "(16-64)% Increased Cooldown Recovery Speed for Judgement",
+      "(16-64)% increased Cooldown Recovery Speed for Judgement",
       "+3 Melee Damage per Attunement for Judgement while Unarmed",
       "2% increased Area per Attunement for Judgement while Unarmed",
-      "{rounding:Integer}-12 to -8 Judgement Mana Cost while Unarmed",
+      "{rounding:Integer}-12 to -8 Mana cost for Judgement while Unarmed",
       "+(8-24)% Fire Penetration",
       "{rounding:Integer}+(4-16) Attunement"
     ],
@@ -6690,8 +6690,8 @@
       "(21-45)% Chance to Shock Attackers",
       "(104-175)% more Armor against Shocked Enemies",
       "(7-15)% more Lightning Damage to Shocked Enemies",
-      "(21-45)% Chance to gain 15 Static Charges when Hit",
-      "(7-15)% Chance to cast Static when Hit"
+      "(21-45)% chance to gain 15 Static Charges when Hit",
+      "(7-15)% chance to cast Static when Hit"
     ],
     "rollIds": [
       0,
@@ -6713,7 +6713,7 @@
       "{rounding:Integer}+(12-18) Spell Damage per Active Rune",
       "{rounding:Integer}+(30-36) Armor per Rah Rune",
       "{rounding:Integer}+(48-54) Dodge Rating per Heo Rune",
-      "{rounding:Integer}+(12-18) Ward per Second per Gon Rune",
+      "{rounding:Integer}(12-18) Ward per Second per Gon Rune",
       "+1 Spell Damage with Runic Invocation per 10 Armor, Dodge Rating, or Ward, whichever is lowest",
       "{rounding:Integer}+(1-3) to Runic Invocation"
     ],
@@ -6873,7 +6873,7 @@
       "(9-18)% chance to Invoke Hydrahedron on kill with fire skills (9 second cooldown)",
       "{rounding:Integer}+(9-18) Ward Gained on Hit with Hydrahedron",
       "+(9-18)% Fire Penetration with Fire Invocations",
-      "(9-63)% increased Hydrahedron Area",
+      "(9-63)% increased Area for Hydrahedron",
       "(9-36)% increased Hydrahedron Cast Rate",
       "{rounding:Integer}+(18-108) Ward Decay Threshold"
     ],
@@ -6896,12 +6896,12 @@
     },
     "mods": [
       "{rounding:Integer}+(1-3) to Runic Invocation",
-      "(18-36)% more Damage while using a Wand for Invocations with Heo as their first Rune",
-      "(18-36)% more Damage while using a Staff for Invocations with Gon as their first Rune",
-      "(18-36)% more Damage while using a Sceptre for Invocations with Rah as their first Rune",
-      "3% more Damage per Strength for Invocations with Heo as their second Rune",
-      "3% more Damage per Dexterity for Invocations with Gon as their second Rune",
-      "3% more Damage per Attunement for Invocations with Rah as their second Rune"
+      "(18-36)% more damage while using a Wand for Invocations with Heo as their first Rune",
+      "(18-36)% more damage while using a Staff for Invocations with Gon as their first Rune",
+      "(18-36)% more damage while using a Sceptre for Invocations with Rah as their first Rune",
+      "3% more damage per Strength for Invocations with Heo as their second Rune",
+      "3% more damage per Dexterity for Invocations with Gon as their second Rune",
+      "3% more damage per Attunement for Invocations with Rah as their second Rune"
     ],
     "rollIds": [
       0,
@@ -6941,7 +6941,7 @@
       "level": 37
     },
     "mods": [
-      "(37-47)% Chance to Cast Lightning Blast on Crit with Frost Claw (up to 3 casts per second)",
+      "(37-47)% chance to cast Lightning Blast on Crit with Frost Claw (up to 3 casts per second)",
       "{rounding:Integer}(7-17) Ward Gained on Crit with Frost Claw",
       "+(7-17)% to All Resistances",
       "+(37-47)% Spell Critical Strike Multiplier"
@@ -6995,7 +6995,7 @@
     "mods": [
       "{rounding:Integer}+(1-4) to Frost Wall",
       "(16-40)% increased Frost Wall Duration",
-      "+1 When you directly cast Frost Wall it is cast directly in front of you and you leap backwards a short distance and invoke Revik's Blizzard at the wall.",
+      "When you directly cast Frost Wall it is cast directly in front of you and you leap backwards a short distance then invoke Revik's Blizzard at the wall.",
       "{rounding:Integer}(48-108)% increased Cold Damage Over Time",
       "(16-24)% more Cold Damage Over Time to Frozen Enemies"
     ],
@@ -7015,7 +7015,7 @@
       "level": 72
     },
     "mods": [
-      "+1 Gain Dawn to Dusk and Dusk to Midnight with Runic Invocation",
+      "Gain Dawn to Dusk and Dusk to Midnight with Runic Invocation",
       "{rounding:Integer}+(1-2) to Runic Invocation",
       "(24-36)% increased Cast Speed",
       "{rounding:Integer}(24-36)% increased Mana Regen"
@@ -7057,7 +7057,7 @@
     "mods": [
       "+(12-36)% Physical Penetration",
       "{rounding:Integer}+(60-84) Melee Physical Damage",
-      "+1 Javelin splits on hit into 2 piercing spears plus 1 additional spear per 12 dexterity",
+      "Javelin splits on hit into 2 piercing spears plus 1 additional spear per 12 dexterity",
       "1% increased Area for Area Skills per 3 Dexterity",
       "{rounding:Integer}+(3-12) Dexterity"
     ],
@@ -7130,10 +7130,10 @@
       "{rounding:Integer}+(1-3) to Acolyte Spells",
       "(45-63)% increased Effect of Haste on You ",
       "{rounding:Integer}+(9-15) Intelligence",
-      "1 Enemies per 10 Intelligence to Torment when you directly cast Soul Feast",
-      "+1 You inflict Torment on yourself when you directly cast Soul Feast",
-      "3 Seconds of Haste when you directly cast Soul Feast",
-      "(15-21)% Chance to cast Chthonic Fissure when you hit a boss or rare enemy with Soul Feast and don't have an active Fissure",
+      "1 Enemies per 10 Intelligence are inflicted with Torment when you directly cast Soul Feast",
+      "You inflict Torment on yourself when you directly cast Soul Feast",
+      "3 seconds of Haste granted when you directly cast Soul Feast",
+      "(15-21)% chance to cast Chthonic Fissure when you hit a boss or rare enemy with Soul Feast and don't have an active Fissure",
       "+(15-90)% Necrotic Penetration with Torment "
     ],
     "rollIds": [
@@ -7155,8 +7155,8 @@
       "level": 31
     },
     "mods": [
-      "+1 Once you have one Rune for Runic Invocation your runes cannot change until they are consumed",
-      "1% Chance per Intelligence for 11% more Elemental Damage with One Rune Invocations"
+      "Once you have one Rune for Runic Invocation your runes cannot change until they are consumed",
+      "1% chance per Intelligence for 11% more Elemental Damage with One Rune Invocations"
     ],
     "rollIds": [
       null,
@@ -7171,8 +7171,8 @@
       "level": 32
     },
     "mods": [
-      "+1 Once you have two Runes for Runic Invocation your runes cannot change until they are consumed",
-      "2% Chance per Intelligence for +22% Elemental Penetration with Two Rune Invocations"
+      "Once you have two Runes for Runic Invocation your runes cannot change until they are consumed",
+      "2% chance per Intelligence for +22% Elemental Penetration with Two Rune Invocations"
     ],
     "rollIds": [
       null,
@@ -7187,8 +7187,8 @@
       "level": 33
     },
     "mods": [
-      "+1 Once you have three Runes for Runic Invocation your runes cannot change until they are consumed",
-      "3% Chance per Intelligence for 33% increased Elemental Damage with Three Rune Invocations"
+      "Once you have three Runes for Runic Invocation your runes cannot change until they are consumed",
+      "3% chance per Intelligence for 33% increased Elemental Damage with Three Rune Invocations"
     ],
     "rollIds": [
       null,
@@ -7226,9 +7226,9 @@
     },
     "mods": [
       "{rounding:Integer}+(6-84) Ward per Second While Channelling",
-      "+1 Drain Life casts Stygian Beams instead",
-      "1% increased Stygian Beam frequency per Intelligence",
-      "3% more Stygian Beam Damage per 10 Current Mana",
+      "Drain Life casts Stygian Beams instead",
+      "increased Stygian Beam frequency per point of Intelligence",
+      "3% more Stygian Beam Damage per 10 current Mana",
       "+(6-84)% Chance to Ignite on Hit While Channelling",
       "+(6-84)% Chance to apply Damned on Hit While Channelling"
     ],
@@ -7453,7 +7453,7 @@
     "mods": [
       "(13-20)% increased Movement Speed",
       "{rounding:Integer}+(1-2) to Throwing Attacks",
-      "+1 Umbral Blades per 20 Dexterity thrown with Aerial Assault's Burst of Feathers",
+      "1 Umbral Blades per 20 Dexterity thrown with Aerial Assault's Burst of Feathers",
       "(12-30)% increased Throwing Attack Speed for 2 seconds after using Aerial Assault",
       "(13-20)% chance to recover 8% of Aerial Assault's remaining cooldown on Throwing Hit (up to 3 times)",
       "2 seconds of Haste after using Aerial Assault",
@@ -7503,7 +7503,7 @@
       "level": 72
     },
     "mods": [
-      "+1 Lethal Mirage is a quick attack with no invulnerability",
+      "Lethal Mirage is a quick attack with no invulnerability",
       "{rounding:Integer}+(24-56) Melee Lightning Damage",
       "{rounding:Integer}+(2-12) Dexterity",
       "+(2-4)% Lightning Penetration per 5 Dexterity",
@@ -8253,8 +8253,8 @@
       "level": 40
     },
     "mods": [
-      "+(40-72)% Vengeance Range",
-      "(5-9)% more Damage with Vengeance per 10% Block Chance",
+      "(40-72)% increased range for Vengeance",
+      "(5-9)% Damage with Vengeance per 10% Block Chance",
       "100% Chance to use Javelin when you Riposte",
       "+(20-36)% Block Chance while preparing to Riposte",
       "{rounding:Integer}+(400-720) Block Effectiveness while preparing to Riposte",
@@ -8319,7 +8319,7 @@
       "level": 0
     },
     "mods": [
-      "+100% Bone Curse also inflicts Decrepify",
+      "Bone Curse also inflicts Decrepify",
       "{rounding:Integer}(113-166) Ward per Second for each Curse affecting you",
       "{rounding:Integer}(31-55)% increased Physical Damage",
       "{rounding:Integer}+(5-9) Vitality",
@@ -8343,7 +8343,7 @@
       "level": 0
     },
     "mods": [
-      "+100% Bone Curse also inflicts Penance",
+      "Bone Curse also inflicts Penance",
       "{rounding:Integer}(113-166) Ward per Second for each Curse affecting you",
       "{rounding:Integer}(31-55)% increased Fire Damage",
       "{rounding:Integer}+(5-9) Vitality",
@@ -8367,7 +8367,7 @@
       "level": 0
     },
     "mods": [
-      "+100% Bone Curse also inflicts Acid Skin",
+      "Bone Curse also inflicts Acid Skin",
       "{rounding:Integer}(113-166) Ward per Second for each Curse affecting you",
       "{rounding:Integer}(31-55)% increased Poison Damage",
       "{rounding:Integer}+(5-9) Vitality",
@@ -8393,10 +8393,10 @@
     "mods": [
       "{rounding:Integer}(35-60)% increased Elemental Damage",
       "{rounding:Integer}+(60-120) Ward Decay Threshold",
-      "+(50-65)% Ailment Chance per Rune with Grand Nova Prism\t",
-      "+100% Grand Nova Prism's base damage is converted by runes",
-      "10% Chance to not consume Runes when Invoking per Unique Rune",
-      "+100% Three Rune Invocations always cast Grand Nova Prism instead"
+      "+(50-65)% Ignite, Shock, or Chill chance per Rune with Grand Nova Prism",
+      "Grand Nova Prism's base damage is converted by Runes",
+      "10% chance to not consume Runes when Invoking per unique Rune",
+      "Three Rune Invocations always cast Grand Nova Prism instead"
     ],
     "rollIds": [
       0,
@@ -9008,8 +9008,8 @@
       "{rounding:Integer}+(60-80) Melee Damage",
       "{rounding:Integer}+(3-10) Strength",
       "{rounding:Integer}+(3-10) Dexterity",
-      "20% Increased range with Firebrand",
-      "20% Increased range with Puncture",
+      "20% increased range with Firebrand",
+      "20% increased range with Puncture",
       "+(15-22)% Melee Critical Strike Multiplier per meter from the target (up to 5 meters)",
       "+1 Block Chance converted to Parry Chance while not wielding a shield"
     ],
@@ -9079,9 +9079,9 @@
     "mods": [
       "+(3-4)% Critical Strike Chance",
       "50% of added melee damage on equipped weapons applied as added spell damage for Chaos Bolts",
-      "1 Converts Harvest to Great Harvest which has a 5 second cooldown, deals 150% more damage, and has 50% more area of effect",
-      "(2-4)% more your maximum mana restored when Great Harvest kills an enemy",
-      "(20-30)% more your maximum mana restored when Great Harvest hits a rare or boss enemy",
+      "Converts Harvest to Great Harvest which has a 5 second cooldown, deals 150% more damage, and has 50% more area of effect",
+      "(2-4)% more your maximum Mana restored when Great Harvest kills an enemy",
+      "(20-30)% more your maximum Mana restored when Great Harvest hits a rare or boss enemy",
       "(2-4)% more Increased Mana per stack of Spirit Battery",
       "+1 Spirit Battery stacks gained when triggered"
     ],
@@ -10036,7 +10036,7 @@
       "+(10-25)% Physical Resistance",
       "+1 Charges for Fury Leap",
       "+100% Directly casting Fury Leap or Warcry summons up to your maximum Thorn Totems and grants them 100% more cast speed for 1 second",
-      "1 Bleeds Inflicted on you for each Thorn Totem summoned"
+      "1 stacks of Bleed Inflicted on you for each Thorn Totem summoned"
     ],
     "rollIds": [
       0,
@@ -10081,9 +10081,9 @@
       "level": 0
     },
     "mods": [
-      "+1 Earthquake is converted to lightning",
-      "+1 Upheaval is converted to lightning",
-      "+1 Upheaval can consume 20 Storm Stacks on hit to cast Earthquake with at least 30 Storm Stacks"
+      "Earthquake is converted to Lightning",
+      "Upheaval is converted to lightning",
+      "hitting with Upheaval while having at least 30 storms stacks expends 20 Storm Stacks to cast Earthquake"
     ],
     "rollIds": [
       null,

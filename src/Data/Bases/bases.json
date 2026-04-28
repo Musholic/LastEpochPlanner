@@ -7178,7 +7178,7 @@
     "affixEffectModifier": 0,
     "implicits": [
       "{rounding:Integer}+(4-8) Spell Cold Damage",
-      "+(10-24)% Chance to cast Maelstrom every 3 seconds"
+      "(10-24)% chance to cast Maelstrom every 3 seconds"
     ]
   },
   "Spirit Catcher": {
