@@ -4,6 +4,8 @@
 -- Host for UI controls
 --
 
+---@class ControlHost
+---@field controls table<string, Control>
 local ControlHostClass = newClass("ControlHost", function (self)
 	self.controls = {}
 end)

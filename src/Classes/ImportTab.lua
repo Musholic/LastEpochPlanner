@@ -11,7 +11,10 @@ local band = bit.band
 
 local influenceInfo = itemLib.influenceInfo
 
+---@class ImportTab : ControlHost
 local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function (self, build)
+	---@cast self ImportTab
+	---@cast build Build
 	self.ControlHost()
 	self.Control()
 
@@ -26,10 +29,16 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function 
 		6, 14, 200, 16, function ()
 			return "^7Character import status: " .. self.charImportStatus
 		end)
+	self.controls.source = new("ButtonControl", { "TOPLEFT", self.controls.charImportStatusLabel, "TOPLEFT" }, 6, 34,
+		438, 18,
+		"^7Source: ^x4040FFhttps://lastepochtools.com")
+	self.controls.source.shown = function ()
+		return self.isOnlineMode
+	end
 
 	-- Stage: input account name
 	self.controls.accountNameHeaderOffline = new("LabelControl",
-		{ "TOPLEFT", self.controls.sectionCharImport, "TOPLEFT" }, 6, 40, 200, 16,
+		{ "TOPLEFT", self.controls.sectionCharImport, "TOPLEFT" }, 6, 70, 200, 16,
 		"^7To start importing an **offline** character, click Start Offline:")
 	self.controls.accountNameHeaderOffline.shown = function ()
 		return self.charImportMode == "GETACCOUNTNAME"
@@ -41,7 +50,8 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function 
 		end)
 	-- Stage: input account name (Online)
 	self.controls.accountNameHeader = new("LabelControl", { "TOPLEFT", self.controls.accountNameGoOffline, "BOTTOMLEFT" },
-		0, 4, 200, 16, "^7To start importing an Online character, click Start Online:")
+		0, 4, 200, 16,
+		"^7To start importing an Online character (via lastepochtools.com), click Start Online:")
 	self.controls.accountNameHeader.shown = function ()
 		return self.charImportMode == "GETACCOUNTNAME"
 	end
@@ -97,14 +107,6 @@ local ImportTabClass = newClass("ImportTab", "ControlHost", "Control", function 
 	end
 
 	-- Stage: select character and import data
-	self.controls.source = new("ButtonControl", { "TOPLEFT", self.controls.sectionCharImport, "TOPLEFT" }, 6, 50, 438, 18,
-		"^7Source: ^x4040FFhttps://lastepochtools.com")
-	self.controls.source.shown = function ()
-		if self.charImportMode == "SELECTCHAR" then
-			return self.isOnlineMode
-		end
-		return false
-	end
 	self.controls.charSelectHeader = new("LabelControl", { "TOPLEFT", self.controls.sectionCharImport, "TOPLEFT" }, 6, 70,
 		200, 16, "^7Choose character to import data from:")
 	self.controls.charSelectHeader.shown = function ()
@@ -467,9 +469,15 @@ end
 function ImportTabClass:DownloadCharacterListOnline()
 	self.charImportMode = "DOWNLOADCHARLIST"
 	self.charImportStatus = "Retrieving character list..."
-	-- Trim Trailing/Leading spaces
+
 	local accountName = self.controls.accountName.buf:gsub('%s+', '')
-	launch:DownloadPage("https://www.lastepochtools.com/profile/" .. accountName, function (response, errMsg)
+	self.controls.source.label = "^7Source: ^x4040FFhttps://www.lastepochtools.com/profile/" .. accountName
+	self.controls.source.onClick = function ()
+		OpenURL("https://www.lastepochtools.com/profile/" .. accountName)
+	end
+	-- Trim Trailing/Leading spaces
+	launch:DownloadPage("https://www.lastepochtools.com/api/public/account/" .. accountName, function (response, errMsg)
+		self.charImportMode = "GETACCOUNTNAME"
 		if errMsg == "Response code: 401" then
 			self.charImportStatus = colorCodes.NEGATIVE .. "Sign-in is required."
 			self.charImportMode = "GETSESSIONID"
@@ -488,62 +496,40 @@ function ImportTabClass:DownloadCharacterListOnline()
 			self.charImportMode = "GETACCOUNTNAME"
 			return
 		end
-		local jsonChars
-		local jsonAccountInfo
-		-- The variable name is random, first split on line, then split on ;
-		for line in response.body:gmatch("([^\n]+)") do
-			if line:find("%[{\"characterName\":\"") then
-				for linePart in line:gmatch("([^;]+)") do
-					if linePart:find("%[{\"characterName\":\"") then
-						jsonChars = linePart:match("let %w* = (%b[])")
-					end
-					if linePart:find("{\"accountName\":\"") then
-						jsonAccountInfo = linePart:match("let %w* = (%b{})")
-					end
-				end
-				break
+		local jsonBody = response.body
+		if not jsonBody then
+			self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve account info, try again."
+			return
+		end
+		local body, errMsg = processJson(jsonBody)
+		local charList = body and body.accountChars;
+		if errMsg or not charList then
+			self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve account info, try again."
+			if body and body.error then
+				self.charImportStatus = colorCodes.NEGATIVE ..
+					body.error .. ", manually click on source link to trigger an update"
 			end
-		end
-		if not jsonChars then
-			self.charImportStatus = colorCodes.NEGATIVE .. "Error processing character list, try again later"
-			self.charImportMode = "GETACCOUNTNAME"
 			return
 		end
-		local charList, errMsg = processJson(jsonChars)
-		if errMsg then
-			self.charImportStatus = colorCodes.NEGATIVE .. "Error processing character list, try again later"
-			self.charImportMode = "GETACCOUNTNAME"
-			return
-		end
-		if not jsonAccountInfo then
-			self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve account info, try again."
-			return
-		end
-		local accountInfo, errMsg = processJson(jsonAccountInfo)
-		if errMsg then
-			self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve account info, try again."
-			return
-		end
-		local lastFetched = "";
-		if accountInfo.lastFetched then
-			lastFetched = " Last update was on " .. os.date("%c", accountInfo.lastFetched / 1000)
-		else
-			lastFetched = " Never fetched"
-		end
+		local lastFetched = " Never fetched";
 		--ConPrintTable(charList)
 		if #charList == 0 then
 			self.charImportStatus = colorCodes.NEGATIVE .. "The account has no characters to import."
 		else
 			self.charImportStatus = "Character list successfully retrieved."
+			-- find the min lastFetched value in charList
+			local minLastFetched = charList[1].lastFetched
+			for i = 2, #charList do
+				if charList[i].lastFetched < minLastFetched then
+					minLastFetched = charList[i].lastFetched
+				end
+			end
+			lastFetched = " Last update was on " .. os.date("%c", minLastFetched / 1000)
 		end
 		self.charImportStatus = self.charImportStatus ..
 			colorCodes.NORMAL ..
 			lastFetched .. colorCodes.NEGATIVE .. "\n\tManually click on source link to trigger an update"
 		self.charImportMode = "SELECTCHAR"
-		self.controls.source.label = "^7Source: ^x4040FFhttps://www.lastepochtools.com/profile/" .. accountName
-		self.controls.source.onClick = function ()
-			OpenURL("https://www.lastepochtools.com/profile/" .. accountName)
-		end
 		self.lastAccountHash = common.sha1(accountName)
 		main.lastAccountName = accountName
 		main.gameAccounts[accountName] = main.gameAccounts[accountName] or {}
@@ -581,6 +567,7 @@ function ImportTabClass:DownloadCharacterList()
 
 	local saveFolderSuffix = "\\AppData\\LocalLow\\Eleventh Hour Games\\Last Epoch\\Saves\\"
 	local localSaveFolders = {}
+	local fileSeparator = package.config:sub(1, 1)
 	if os.getenv("UserProfile") then
 		-- For Windows
 		t_insert(localSaveFolders, os.getenv('UserProfile') .. saveFolderSuffix)
@@ -589,7 +576,7 @@ function ImportTabClass:DownloadCharacterList()
 		-- For Linux
 		t_insert(localSaveFolders, "/home/" .. os.getenv("USER")
 			.. "/.local/share/Steam/steamapps/compatdata/899770/pfx/drive_c/users/steamuser/"
-			.. saveFolderSuffix)
+			.. saveFolderSuffix:gsub("\\", "/"))
 	end
 	local saves = {}
 	for _, localSaveFolder in ipairs(localSaveFolders) do
@@ -601,7 +588,7 @@ function ImportTabClass:DownloadCharacterList()
 			-- (avoid .bak or .zip files)
 			if not fileName:match("%.") then
 				if fileName:match("%d+$") then
-					table.insert(saves, localSaveFolder .. "\\" .. fileName)
+					table.insert(saves, localSaveFolder .. fileSeparator .. fileName)
 				end
 			end
 
@@ -684,7 +671,8 @@ function ImportTabClass:DownloadFromLETools()
 	local charSelect = self.controls.charSelect
 	local charData = charSelect.list[charSelect.selIndex].char
 	local accountName = self.controls.accountName.buf
-	launch:DownloadPage("https://www.lastepochtools.com/profile/" .. accountName .. "/character/" .. charData.name,
+	launch:DownloadPage(
+		"https://www.lastepochtools.com/api/public/account/" .. accountName .. "/character/" .. charData.name,
 		function (response, errMsg)
 			self.charImportMode = "SELECTCHAR"
 			if errMsg then
@@ -695,41 +683,18 @@ function ImportTabClass:DownloadFromLETools()
 				self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve character data, try again."
 				return
 			end
-			-- The variable name is random, first split on line (containing "fromSaveFile"), then split on ;
-			local jsonBuild
-			local jsonCharInfo
-			for line in response.body:gmatch("([^\n]+)") do
-				if line:find("fromSaveFile") then
-					for linePart in line:gmatch("([^;]+)") do
-						if linePart:find("fromSaveFile") then
-							jsonBuild = linePart:match("let %w* = (%b{})")
-							break
-						end
-						if linePart:find("\"accountName\":\"%w*\",\"characterName\":\"%w*\"") then
-							jsonCharInfo = linePart:match("let %w* = (%b{})")
-						end
-					end
-					break
-				end
-			end
-			if not jsonBuild then
+			local jsonBody = response.body
+			if not jsonBody then
 				self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve character data, try again."
 				return
 			end
-			local buildInfo, errMsg = processJson(jsonBuild)
+			local body, errMsg = processJson(jsonBody)
 			if errMsg then
 				self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve character data, try again."
 				return
 			end
-			if not jsonCharInfo then
-				self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve character info, try again."
-				return
-			end
-			local charInfo, errMsg = processJson(jsonCharInfo)
-			if errMsg then
-				self.charImportStatus = colorCodes.NEGATIVE .. "Failed to retrieve character info, try again."
-				return
-			end
+			local charInfo = body.charInfo
+			local buildInfo = body.buildInfo
 			local lastFetched = os.date("%c", charInfo.lastFetched / 1000)
 			charSelect.list[charSelect.selIndex].char = self.build:ReadLeToolsSave(buildInfo.data)
 			charSelect.list[charSelect.selIndex].char.name = charData.name

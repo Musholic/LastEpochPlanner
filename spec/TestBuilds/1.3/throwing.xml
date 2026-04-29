@@ -19,13 +19,13 @@
 		<PlayerStat stat="Dex" value="11"></PlayerStat>
 		<PlayerStat stat="Int" value="11"></PlayerStat>
 		<PlayerStat stat="Att" value="4"></PlayerStat>
-		<PlayerStat stat="TotalEHP" value="13892.143133397"></PlayerStat>
+		<PlayerStat stat="TotalEHP" value="14429.798062978"></PlayerStat>
 		<PlayerStat stat="FireMaximumHitTaken" value="13988.662162194"></PlayerStat>
 		<PlayerStat stat="LightningMaximumHitTaken" value="9069.5721710926"></PlayerStat>
 		<PlayerStat stat="ColdMaximumHitTaken" value="9069.5721710926"></PlayerStat>
-		<PlayerStat stat="PhysicalMaximumHitTaken" value="37992.433715537"></PlayerStat>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="50150.012504509"></PlayerStat>
 		<PlayerStat stat="PoisonMaximumHitTaken" value="11305.905035198"></PlayerStat>
-		<PlayerStat stat="NecroticMaximumHitTaken" value="23580.887644841"></PlayerStat>
+		<PlayerStat stat="NecroticMaximumHitTaken" value="33013.242702777"></PlayerStat>
 		<PlayerStat stat="VoidMaximumHitTaken" value="21162.335065883"></PlayerStat>
 		<PlayerStat stat="Life" value="4592"></PlayerStat>
 		<PlayerStat stat="Spec:LifeInc" value="12"></PlayerStat>
@@ -54,11 +54,11 @@
 		<PlayerStat stat="LightningResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="ColdResist" value="9"></PlayerStat>
 		<PlayerStat stat="ColdResistOverCap" value="0"></PlayerStat>
-		<PlayerStat stat="PhysicalResist" value="67"></PlayerStat>
-		<PlayerStat stat="PhysicalResistOverCap" value="0"></PlayerStat>
+		<PlayerStat stat="PhysicalResist" value="75"></PlayerStat>
+		<PlayerStat stat="PhysicalResistOverCap" value="2"></PlayerStat>
 		<PlayerStat stat="PoisonResist" value="27"></PlayerStat>
 		<PlayerStat stat="PoisonResistOverCap" value="0"></PlayerStat>
-		<PlayerStat stat="NecroticResist" value="65"></PlayerStat>
+		<PlayerStat stat="NecroticResist" value="75"></PlayerStat>
 		<PlayerStat stat="NecroticResistOverCap" value="0"></PlayerStat>
 		<PlayerStat stat="VoidResist" value="61"></PlayerStat>
 		<PlayerStat stat="VoidResistOverCap" value="0"></PlayerStat>
@@ -119,15 +119,15 @@
 			Rarity: LEGENDARY
 Pearls of the Swine
 Bone Amulet
-Prefix: {range:127.5}25_6
-Suffix: {range:127.5}30_4
+Prefix: {range:127.5}30_4
+Suffix: {range:127.5}25_6
 LevelReq: 58
 Implicits: 2
 {range:127.5}+(13-40)% Physical Resistance
 {range:127.5}+(13-40)% Necrotic Resistance
-{range:127.5}{scalar:1.17}{rounding:Integer}+(131-180) Health
 {range:127.5}{scalar:1.17}{rounding:Integer}(40-60)% increased Physical Damage
-{unique}+100% Bone Curse also inflicts Decrepify
+{range:127.5}{scalar:1.17}{rounding:Integer}+(131-180) Health
+{unique}Bone Curse also inflicts Decrepify
 {unique}{range:127.5}{rounding:Integer}(113-166) Ward per Second for each Curse affecting you
 {unique}{range:127.5}{rounding:Integer}(31-55)% increased Physical Damage
 {unique}{range:127.5}{rounding:Integer}+(5-9) Vitality
@@ -138,32 +138,32 @@ Implicits: 2
 			Rarity: EXALTED
 Champion Regalia
 Champion Regalia
-Prefix: {range:127.5}52_6
-Prefix: {range:127.5}25_4
-Suffix: {range:127.5}358_4
-Suffix: {range:127.5}363_4
+Prefix: {range:127.5}358_4
+Prefix: {range:127.5}363_4
+Suffix: {range:127.5}52_6
+Suffix: {range:127.5}25_4
 LevelReq: 86
 Implicits: 2
 +700 Armor
 {range:127.5}(10-17)% of Armor Mitigation also applies to Damage over Time
-{range:127.5}{scalar:1.5}{rounding:Integer}(21-26)% increased Health
-{range:127.5}{scalar:1.5}{rounding:Integer}+(61-90) Health
 {range:127.5}{scalar:1.5}+(37-45)% Physical Penetration with Bleed
 {range:127.5}{scalar:1.5}+(36-43)% Chance to Inflict Bleed on Hit if wielding an Axe
+{range:127.5}{scalar:1.5}{rounding:Integer}(21-26)% increased Health
+{range:127.5}{scalar:1.5}{rounding:Integer}+(61-90) Health
 		</Item>
 		<Item id="3">
 			Rarity: LEGENDARY
 Blood of the Exile
 Iron Greaves
-Prefix: {range:127.5}36_4
-Suffix: {range:127.5}28_6
+Prefix: {range:127.5}28_6
+Suffix: {range:127.5}36_4
 LevelReq: 16
 Implicits: 2
 +35 Armor
 {range:127.5}(8-10)% increased Movement Speed
+{range:127.5}(26-30)% increased Movement Speed
 {range:127.5}{rounding:Integer}+(46-68) Health
 5% increased Health
-{range:127.5}(26-30)% increased Movement Speed
 {unique}30% increased Movement Speed
 {unique}{range:127.5}(30-67)% Increased Bleed Duration
 {unique}{range:127.5}(30-40)% more Physical Ailment Damage to Moving Enemies
@@ -175,7 +175,7 @@ Implicits: 2
 			Rarity: LEGENDARY
 Carrion of Creation
 Eternal Gauntlets
-Prefix: {range:127.5}36_6
+Suffix: {range:127.5}36_6
 LevelReq: 86
 Implicits: 2
 +211 Armor
@@ -196,25 +196,25 @@ Implicits: 2
 			Rarity: EXALTED
 Leonine Greathelm
 Leonine Greathelm
-Prefix: {range:127.5}52_6
-Prefix: {range:127.5}715_4
-Suffix: {range:127.5}363_4
-Suffix: {range:127.5}358_4
+Prefix: {range:127.5}363_4
+Prefix: {range:127.5}358_4
+Suffix: {range:127.5}52_6
+Suffix: {range:127.5}715_4
 LevelReq: 85
 Implicits: 2
 +550 Armor
 {range:127.5}(50-85)% reduced Bonus Damage Taken from Critical Strikes
+{range:127.5}+(36-43)% Chance to Inflict Bleed on Hit if wielding an Axe
+{range:127.5}+(37-45)% Physical Penetration with Bleed
 {range:127.5}{rounding:Integer}(21-26)% increased Health
 {range:127.5}{rounding:Integer}+(71-95) Armor
 {range:127.5}(25-30)% reduced Bonus Damage Taken from Critical Strikes
-{range:127.5}+(36-43)% Chance to Inflict Bleed on Hit if wielding an Axe
-{range:127.5}+(37-45)% Physical Penetration with Bleed
 		</Item>
 		<Item id="6">
 			Rarity: LEGENDARY
 Valdyr's Chalice
 Silver Grail
-Prefix: {range:127.5}25_6
+Suffix: {range:127.5}25_6
 LevelReq: 15
 Implicits: 1
 {range:127.5}{rounding:Integer}+(10-25) Mana
@@ -229,19 +229,19 @@ Implicits: 1
 			Rarity: EXALTED
 Silver Ring
 Silver Ring
-Prefix: {range:127.5}25_4
-Prefix: {range:127.5}825_4
-Suffix: {range:127.5}87_6
-Suffix: {range:127.5}72_4
+Prefix: {range:127.5}87_6
+Prefix: {range:127.5}72_4
+Suffix: {range:127.5}25_4
+Suffix: {range:127.5}825_4
 Sealed: {range:127.5}507_0
 LevelReq: 0
 Implicits: 1
 {range:127.5}(3-8)% increased Movement Speed
+{range:127.5}(31-36)% increased Throwing Attack Speed
+{range:127.5}{rounding:Integer}(40-60)% increased Damage Over Time
 {range:127.5}{rounding:Integer}+(61-90) Health
 {range:127.5}{rounding:Integer}+(46-68) Health
 {range:127.5}{rounding:Integer}+(10-12) Health Regen
-{range:127.5}(31-36)% increased Throwing Attack Speed
-{range:127.5}{rounding:Integer}(40-60)% increased Damage Over Time
 {sealed}{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
 {sealed}-3 Throwing Attack Mana Cost
 		</Item>
@@ -249,19 +249,19 @@ Implicits: 1
 			Rarity: EXALTED
 Silver Ring
 Silver Ring
-Prefix: {range:127.5}25_4
-Prefix: {range:127.5}825_4
-Suffix: {range:127.5}87_6
-Suffix: {range:127.5}30_4
+Prefix: {range:127.5}87_6
+Prefix: {range:127.5}30_4
+Suffix: {range:127.5}25_4
+Suffix: {range:127.5}825_4
 Sealed: {range:127.5}507_0
 LevelReq: 0
 Implicits: 1
 {range:127.5}(3-8)% increased Movement Speed
+{range:127.5}(31-36)% increased Throwing Attack Speed
+{range:127.5}{rounding:Integer}(40-60)% increased Physical Damage
 {range:127.5}{rounding:Integer}+(61-90) Health
 {range:127.5}{rounding:Integer}+(46-68) Health
 {range:127.5}{rounding:Integer}+(10-12) Health Regen
-{range:127.5}(31-36)% increased Throwing Attack Speed
-{range:127.5}{rounding:Integer}(40-60)% increased Physical Damage
 {sealed}{range:127.5}{rounding:Integer}+(3-4) Throwing Damage
 {sealed}-3 Throwing Attack Mana Cost
 		</Item>
@@ -269,16 +269,16 @@ Implicits: 1
 			Rarity: LEGENDARY
 Thorn Slinger
 Leather Belt
-Prefix: {range:127.5}52_6
-Suffix: {range:127.5}30_4
-Suffix: {range:127.5}75_0
+Prefix: {range:127.5}30_4
+Prefix: {range:127.5}75_0
+Suffix: {range:127.5}52_6
 LevelReq: 9
 Implicits: 1
 +4 Potion Slots
-{range:127.5}{rounding:Integer}(21-26)% increased Health
 {range:127.5}{rounding:Integer}(40-60)% increased Physical Damage
 {range:127.5}{rounding:Integer}(20-30) Ward Gained on Potion Use
 100% chance to Cleanse All Ailments on Potion Use
+{range:127.5}{rounding:Integer}(21-26)% increased Health
 {unique}+1 to Physical Skills
 {unique}{range:127.5}+(24-48)% Chance to inflict Bleed on Hit
 {unique}6% increased Movement Speed
@@ -289,26 +289,26 @@ Implicits: 1
 			Rarity: EXALTED
 Dragonbone Axe
 Dragonbone Axe
-Prefix: {range:127.5}68_4
-Prefix: {range:127.5}55_4
-Suffix: {range:127.5}30_6
-Suffix: {range:127.5}72_4
+Prefix: {range:127.5}30_6
+Prefix: {range:127.5}72_4
+Suffix: {range:127.5}68_4
+Suffix: {range:127.5}55_4
 LevelReq: 80
 Implicits: 3
 +51 Melee Damage
 {range:127.5}{rounding:Integer}+(10-14) Minion Melee Damage
 {range:127.5}+(70-100)% Chance to inflict Bleed on Hit
-{range:127.5}{scalar:1.75}+(24-30)% Chance to inflict Bleed on Hit
-{range:127.5}{scalar:1.75}+(24-30)% Chance to Ignite on Hit
 {range:127.5}{scalar:1.75}{rounding:Integer}(96-120)% increased Physical Damage
 {range:127.5}{scalar:1.75}{rounding:Integer}(40-60)% increased Damage Over Time
+{range:127.5}{scalar:1.75}+(24-30)% Chance to inflict Bleed on Hit
+{range:127.5}{scalar:1.75}+(24-30)% Chance to Ignite on Hit
 		</Item>
 		<Item id="11">
 			Rarity: LEGENDARY
 Countenance of Majasa
 Ironglass Shield
-Suffix: {range:127.5}3_6
-Suffix: {range:127.5}81_4
+Prefix: {range:127.5}3_6
+Prefix: {range:127.5}81_4
 LevelReq: 72
 Implicits: 2
 +35% Block Chance
@@ -324,97 +324,97 @@ Implicits: 2
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Prefix: {range:127.5}193_0
-Prefix: {range:127.5}899_6
-Suffix: {range:127.5}128_0
+Prefix: {range:127.5}128_0
+Suffix: {range:127.5}193_0
+Suffix: {range:127.5}899_6
 LevelReq: 0
 Implicits: 0
+{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
 {range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
 +5% Endurance
-{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
 		</Item>
 		<Item id="13">
 			Rarity: IDOL
 Heretical Adorned Rahyeh Idol
 Heretical Adorned Rahyeh Idol
-Prefix: {range:127.5}197_0
-Prefix: {range:127.5}921_6
-Suffix: {range:127.5}276_0
+Prefix: {range:127.5}276_0
+Suffix: {range:127.5}197_0
+Suffix: {range:127.5}921_6
 LevelReq: 0
 Implicits: 0
+{range:127.5}+(10-25)% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)
 {range:127.5}{scalar:0.95}{rounding:Integer}+(185-400) Block Effectiveness
 {range:127.5}{scalar:1.28}{rounding:Integer}(7-8)% increased Armor
 {scalar:1.28}4% of Armor Mitigation also applies to Damage over Time
-{range:127.5}+(10-25)% Chance to cast Smite on hit with throwing attacks (up to 10 times per 2 seconds)
 		</Item>
 		<Item id="14">
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Prefix: {range:127.5}193_0
-Prefix: {range:127.5}899_6
-Suffix: {range:127.5}128_0
+Prefix: {range:127.5}128_0
+Suffix: {range:127.5}193_0
+Suffix: {range:127.5}899_6
 LevelReq: 0
 Implicits: 0
+{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
 {range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
 +5% Endurance
-{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
 		</Item>
 		<Item id="15">
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Prefix: {range:127.5}193_0
-Prefix: {range:127.5}899_6
-Suffix: {range:127.5}128_0
+Prefix: {range:127.5}128_0
+Suffix: {range:127.5}193_0
+Suffix: {range:127.5}899_6
 LevelReq: 0
 Implicits: 0
+{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
 {range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
 +5% Endurance
-{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
 		</Item>
 		<Item id="16">
 			Rarity: IDOL
 Heretical Large Rahyeh Idol
 Heretical Large Rahyeh Idol
-Prefix: {range:127.5}193_0
-Prefix: {range:127.5}899_6
-Suffix: {range:127.5}128_0
+Prefix: {range:127.5}128_0
+Suffix: {range:127.5}193_0
+Suffix: {range:127.5}899_6
 LevelReq: 0
 Implicits: 0
+{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
 {range:127.5}{scalar:0.67}{rounding:Integer}(33-90)% increased Physical Damage Over Time
 {range:127.5}{rounding:Integer}(8-10)% increased Damage Over Time
 +5% Endurance
-{range:127.5}{scalar:0.67}(10-40)% Increased Bleed Duration
 		</Item>
 		<Item id="17">
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Prefix: {range:127.5}870_0
-Suffix: {range:127.5}858_0
+Prefix: {range:127.5}858_0
+Suffix: {range:127.5}870_0
 LevelReq: 0
 Implicits: 0
-{range:127.5}+(9-12)% Physical Resistance
-{range:127.5}+(9-12)% Minion Physical Resistance
 {range:127.5}+(15-20)% Chance to inflict Bleed on Hit
 {range:127.5}+(1-2)% Physical Penetration with Bleed
+{range:127.5}+(18-24)% Physical Resistance
+{range:127.5}+(18-24)% Minion Physical Resistance
 		</Item>
 		<Item id="18">
 			Rarity: IDOL
 Humble Weaver Idol
 Humble Weaver Idol
-Prefix: {range:127.5}867_0
-Suffix: {range:127.5}858_0
+Prefix: {range:127.5}858_0
+Suffix: {range:127.5}867_0
 LevelReq: 0
 Implicits: 0
-{range:127.5}+(9-12)% Necrotic Resistance
-{range:127.5}+(9-12)% Minion Necrotic Resistance
 {range:127.5}+(15-20)% Chance to inflict Bleed on Hit
 {range:127.5}+(1-2)% Physical Penetration with Bleed
+{range:127.5}+(18-24)% Necrotic Resistance
+{range:127.5}+(18-24)% Minion Necrotic Resistance
 		</Item>
 		<Item id="19">
 			Rarity: NORMAL
