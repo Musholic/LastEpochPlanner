@@ -16,6 +16,8 @@ local b_rshift = bit.rshift
 local band = bit.band
 local bor = bit.bor
 
+---@class PassiveSpec : UndoHandler
+---@field build Build
 local PassiveSpecClass = newClass("PassiveSpec", "UndoHandler", function (self, build, treeVersion, convert)
 	self.UndoHandler()
 

@@ -99,6 +99,9 @@ function newClass(className, ...)
 	return class
 end
 
+---@generic T
+---@param className `T`
+---@return T
 function new(className, ...)
 	local class = getClass(className)
 	local object = setmetatable({}, class)

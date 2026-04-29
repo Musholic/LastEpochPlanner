@@ -99,6 +99,30 @@ describe("TestSkills #skills", function ()
 		-- The Full DPS value should not be affected by the removed mod
 		assert.are.equals(48.048, round(build.calcsTab.mainOutput.FullDPS, 4))
 	end)
+
+	it("Test skill damage conversion", function ()
+		-- Use skill Harvest and includes it in full DPS
+		build.spec:SelectClass(3)
+		build.skillsTab:SelSkill(1, "Harvest")
+		build.spec:BuildAllDependsAndPaths()
+		-- Add a bit of dexterity to test added damage of harvest skill
+		build.configTab.input.customMods = "+10 Dexterity"
+		build.configTab:BuildModList()
+		build.skillsTab.socketGroupList[1].includeInFullDPS = true
+		runCallback("OnFrame")
+		-- The original Full DPS
+		assert.are.equals(43.91, round(build.calcsTab.mainOutput.FullDPS, 2))
+
+		-- Select the skill node that convert Necrotic damage to Cold
+		local node = build.spec.nodes["ha84-29"]
+		build.spec:AllocNode(node)
+		build.buildFlag = true
+		runCallback("OnFrame")
+
+		assert.are.equals(0, round(build.calcsTab.mainOutput.NecroticDamageBase, 2))
+		assert.are.equals(22, round(build.calcsTab.mainOutput.ColdDamageBase, 2))
+		assert.are.equals(54.01, round(build.calcsTab.mainOutput.FullDPS, 2))
+	end)
 end)
 
 -- Check that at least all skills can load without crash

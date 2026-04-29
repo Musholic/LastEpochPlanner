@@ -14,6 +14,7 @@ local m_abs = math.abs
 local s_format = string.format
 
 ---@class Build
+---@field spec PassiveSpec
 local buildMode = new("ControlHost")
 
 local function InsertIfNew(t, val)

@@ -191,8 +191,7 @@ for _, damageType in ipairs(DamageTypes) do
 	for _, damageSourceType in ipairs(DamageSourceTypes) do
 		modNameList[damageType:lower() .. " " .. damageSourceType:lower() .. " damage"] = {
 			damageType .. "Damage",
-			keywordFlags =
-				KeywordFlag.Spell
+			keywordFlags = KeywordFlag[damageSourceType]
 		}
 	end
 end
@@ -333,15 +332,20 @@ end
 local specialModList = {
 	["no cooldown"] = { flag("NoCooldown") },
 	[" ?always crits?.* above (%d+) mana"] = function (num)
+		num = tonumber(num)
 		return { mod("CritChance", "OVERRIDE", 100, { type = "StatThreshold", stat = "Mana", threshold = num }) }
 	end,
 	-- The actual text that they can hit the same target is in the flavour text, not mods, so we detect it via shurikens in line instead
 	["^ ?shurikens in line$"] = { flag("SequentialProjectiles", { type = "SkillName", skillName = "Shurikens" }) },
+	["^ base (%a+) damage %-> (%a+)$"] = function (fromType, toType)
+		return { mod(fromType:capitalize() .. "BaseDamageConvertTo" .. toType:capitalize(), "BASE", 100) }
+	end,
 }
 
 for _, skillId in ipairs(data.treeSkills) do
 	local skill = data.skills[skillId]
 	specialModList["^+(%d+) to " .. skill.name:lower() .. "$"] = function (num)
+		num = tonumber(num)
 		return { mod(skill.id .. "Level", "BASE",
 			num) }
 	end
@@ -425,9 +429,9 @@ local function parseMod(line, order)
 		return {}, line
 	end
 	local specialMod, specialLine, cap = scan(line, specialModList)
-	if specialMod and #specialLine == 0 then
+	if specialMod and not specialLine:match("%S") then
 		if type(specialMod) == "function" then
-			return specialMod(tonumber(cap[1]), unpack(cap))
+			return specialMod(unpack(cap))
 		else
 			return copyTable(specialMod)
 		end

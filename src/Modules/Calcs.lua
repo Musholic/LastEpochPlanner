@@ -9,6 +9,7 @@ local t_insert = table.insert
 local s_format = string.format
 local m_min = math.min
 
+---@class Calcs
 local calcs = {}
 calcs.breakdownModule = "Modules/CalcBreakdown"
 LoadModule("Modules/CalcSetup", calcs)

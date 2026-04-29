@@ -5,6 +5,7 @@
 
 -- Callbacks
 local callbackTable = {}
+---@type Launch
 local mainObject
 function runCallback(name, ...)
 	if callbackTable[name] then
