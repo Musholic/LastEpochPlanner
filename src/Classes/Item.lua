@@ -61,6 +61,120 @@ local function specToNumber(s)
 	return n and tonumber(n)
 end
 
+local function parseAffix(specVal, attribute)
+	local range, affix = specVal:match("{range:([%d.]+)}(.+)")
+	range = range or main.defaultItemAffixQuality
+	local parsedAffix = { modId = affix or specVal, range = tonumber(range), }
+	parsedAffix[attribute] = true
+	return parsedAffix
+end
+
+-- Parse raw item data (rework)
+function ItemClass:NewParseRaw(raw, rarity)
+	-- Init rarity and name first since it seems to be the bare minimum that this should have
+	-- Lua shouldn't need to init empty properties for the most part, so I'll skip those for now
+	self.name = "?"
+	self.rarity = rarity or "UNIQUE"
+	if raw == '' then -- No point running the rest of the parse if it is just an init call
+		return
+	end
+	for line in raw:gmatch("%s*([^\n]*%S)") do
+		t_insert(self.rawLines, line)
+	end
+	local lineIndex = 1
+	if self.rawLines[lineIndex] then
+		local itemRarity = self.rawLines[lineIndex]:match("^Rarity: (%a+)")
+		if itemRarity then
+			self:DetermineRarity()
+		end
+		lineIndex = lineIndex + 1
+	end
+	if self.rawLines[lineIndex] then
+		self.name = self.rawLines[lineIndex]
+		lineIndex = lineIndex + 1
+		self.baseName = self.rawLines[lineIndex]
+		lineIndex = lineIndex + 1
+	end
+	while self.rawLines[lineIndex] do
+		local specName, specVal = line:match("^([%a ]+:?): (.+)$")
+		if specName then
+			if specName == "LevelReq" then
+				self.requirements.level = specToNumber(specVal)
+			elseif specName == "Implicits" then
+				for implicitIndex=1, specVal do
+					self.implicits[implicitIndex] = self.rawLines[lineIndex+implicitIndex]
+				end
+			elseif specName == "Prefix" then
+				if not self.affixes[1].modId then
+					self.affixes[1] = parseAffix(specVal, "prefix")
+				else
+					self.affixes[2] = parseAffix(specVal, "prefix")
+				end
+			elseif specName == "Suffix" then
+				if not self.affixes[3].modId then
+					self.affixes[3] = parseAffix(specVal, "suffix")
+				else
+					self.affixes[4] = parseAffix(specVal, "suffix")
+				end
+			elseif specName == "Sealed" then
+				self.affixes[5] = parseAffix(specVal, "sealed")
+			elseif specName == "Corrupted" then
+				self.affixes[6] = parseAffix(specVal, "corrupted")
+			end
+		end
+	end
+	--if self.rawLines[lineIndex] then
+	--	local levelReq = self.rawLines[lineIndex]:match("^LevelReq: ([%d.]+)")
+	--	if levelReq then
+	--		self.requirements.level = tonumber(leveReq)
+	--		lineIndex = lineIndex + 1
+	--	end
+	--end
+	--if self.rawLines[lineIndex] then
+	--	local implicitCount = self.rawLines[lineIndex]:match("^Implicits: ([%d.]+)")
+	--	for implicitIndex=0,implicitCount do
+	--		self.implicitModLines = {}
+	--		self.implicitModLines[implicitIndex] = ItemClass.ParseAffix()
+	--	end
+	--end
+end
+
+function ItemClass:DetermineRarity(itemRarity)
+	itemRarity = itemRarity:upper()
+	-- Map raw rarity to rarityType (BASIC/UNIQUE/SET/IDOL)
+	if itemRarity == "BASIC" or itemRarity == "NORMAL" or itemRarity == "MAGIC" or itemRarity == "RARE" or itemRarity == "EXALTED" then
+		self.rarityType = "BASIC"
+		self.rarity = itemRarity -- keep raw value for name parsing; UpdateDisplayRarity recomputes later
+	elseif itemRarity == "SET" then
+		self.rarityType = "SET"
+		self.rarity = "SET"
+	elseif itemRarity == "IDOL" then
+		self.rarityType = "IDOL"
+		self.rarity = "IDOL"
+	elseif itemRarity == "LEGENDARY" then
+		self.rarityType = "UNIQUE"
+		self.rarity = "LEGENDARY"
+		-- A unique idol serializes as Rarity: UNIQUE; rarityType is fixed later by idol auto-detection
+	else
+		self.rarityType = "UNIQUE"
+		self.rarity = "UNIQUE"
+	end
+	if not self.rarityType then
+		local r = self.rarity
+		if r == "NORMAL" or r == "MAGIC" or r == "RARE" or r == "EXALTED" or r == "BASIC" then
+			self.rarityType = "BASIC"
+		elseif r == "SET" then
+			self.rarityType = "SET"
+		elseif r == "IDOL" then
+			self.rarityType = "IDOL"
+		elseif r == "LEGENDARY" then
+			self.rarityType = "UNIQUE"
+		else
+			self.rarityType = "UNIQUE"
+		end
+	end
+end
+
 -- Parse raw item data and extract item name, base type, quality, and modifiers
 function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.raw = raw
