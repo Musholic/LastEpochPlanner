@@ -1,3 +1,16 @@
+VERSION[0.12.0][2026/04/29]
+
+--- New to Last Epoch Planner ---
+- Display Idols in a grid (Musholic)
+- Support for base damage conversion (Musholic)
+
+--- Fixed Bugs ---
+- Fix online import using letools API (Musholic)
+- Update extracted data (v1.4.5) with fix to prefix/suffix swap on affixes (Musholic)
+
+--- Other changes ---
+- Remove block variants (Mamotromico)
+
 VERSION[0.11.0][2026/04/02]
 
 --- New to Last Epoch Planner ---
