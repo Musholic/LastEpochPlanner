@@ -736,6 +736,15 @@ for i = 1, 3 do
 	offlineImportSlotMap[42 + i] = "Blessing " .. (7 + i)
 end
 
+local itemDataFields = {
+	BASETYPE_ID = 4,
+	SUBTYPE_ID = 5,
+	RARITY = 6,
+	IMPLICIT = 7,
+	UNIQUE_ID = 11,
+	UNIQUE_MOD_VALUES = 13
+}
+
 local itemRarityMap = {
 	[0] = "COMMON",
 	[1] = "MAGIC",
