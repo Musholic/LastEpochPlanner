@@ -152,7 +152,10 @@ local modNameList = {
 	-- Misc modifiers
 	["movespeed"] = "MovementSpeed",
 	["movement speed"] = "MovementSpeed",
-	["(%w+) and (%w+) resistance"] = function (d1, d2) return { d1:capitalize() .. "Resist", d2:capitalize() .. "Resist" } end
+	["(%w+) and (%w+) resistance"] = function (d1, d2) return { d1:capitalize() .. "Resist", d2:capitalize() .. "Resist" } end,
+	["base damage converted to (%a+)"] = function (damageType)
+		return "BaseDamageConvertTo" .. damageType:capitalize()
+	end,
 }
 
 for i, stat in ipairs(LongAttributes) do
@@ -339,6 +342,18 @@ local specialModList = {
 	["^ ?shurikens in line$"] = { flag("SequentialProjectiles", { type = "SkillName", skillName = "Shurikens" }) },
 	["^ base (%a+) damage %-> (%a+)$"] = function (fromType, toType)
 		return { mod(fromType:capitalize() .. "BaseDamageConvertTo" .. toType:capitalize(), "BASE", 100) }
+	end,
+	["^ base (%a+) damage converted to (%a+)$"] = function (fromType, toType)
+		return { mod(fromType:capitalize() .. "BaseDamageConvertTo" .. toType:capitalize(), "BASE", 100) }
+	end,
+	["^ base damage %-> (%a+)$"] = function (damageType)
+		return { mod("BaseDamageConvertTo" .. damageType:capitalize(), "BASE", 100) }
+	end,
+	["^ base damage converted to (%a+)$"] = function (damageType)
+		return { mod("BaseDamageConvertTo" .. damageType:capitalize(), "BASE", 100) }
+	end,
+	["^ (%a+) conversion$"] = function (damageType)
+		return { mod("BaseDamageConvertTo" .. damageType:capitalize(), "BASE", 100) }
 	end,
 }
 

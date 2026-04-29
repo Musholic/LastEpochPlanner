@@ -2562,7 +2562,7 @@ function calcs.offence(env, actor, activeSkill)
 		-- Apply base damage conversion
 		for _, damageType in ipairs(dmgTypeList) do
 			for _, otherType in ipairs(dmgTypeList) do
-				if skillModList:Sum("BASE", cfg, otherType .. "BaseDamageConvertTo" .. damageType) == 100 then
+				if skillModList:Sum("BASE", cfg, otherType .. "BaseDamageConvertTo" .. damageType) == 100 or skillModList:Sum("BASE", cfg, "BaseDamageConvertTo" .. damageType) == 100 then
 					local baseDamage = source[otherType .. "Damage"] or 0
 					if baseDamage > 0 then
 						source[otherType .. "Damage"] = nil
