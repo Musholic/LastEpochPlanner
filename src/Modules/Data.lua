@@ -113,7 +113,16 @@ tableInsertAll(data.powerStatList, {
 	{ stat = "BlockChance", label = "Block Chance" },
 })
 
+-- TODO cleanup
 data.misc = { -- magic numbers
+	-- Last Epoch
+	-- Item Affixes
+	MaxUniqueAffixes = 8,
+	MaxImplicitAffixes = 3,
+	BasicItemAffixDataOffset = 12,
+	UniqueItemAffixDataOffset = 21,
+	AffixSizeOffset = 3,
+	-- PoE
 	AccuracyPerDexBase = 2,
 	LowPoolThreshold = 0.5,
 	TemporalChainsEffectCap = 75,
