@@ -12,6 +12,8 @@ SetWindowTitle(APP_NAME)
 ConExecute("set vid_mode 8")
 ConExecute("set vid_resizable 3")
 
+---@class Launch
+---@field main Main
 launch = {}
 SetMainObject(launch)
 

@@ -41,6 +41,9 @@ end
 local tempTable1 = {}
 local tempTable2 = {}
 
+---@class Main : ControlHost
+---@field modes { LIST: BuildList, BUILD: Build }
+---@field tree PassiveTree[]
 main = new("ControlHost")
 
 function main:Init()

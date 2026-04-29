@@ -60,6 +60,7 @@ function PassiveTreeViewClass:Save(xml)
 end
 
 function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
+	---@cast build Build
 	local spec = build.spec
 	local tree = spec.tree
 
