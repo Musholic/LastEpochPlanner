@@ -1,3 +1,9 @@
+VERSION[beta][2026/04/29]
+
+--- Fixed Bugs ---
+- Fix search filter in unique item list (Musholic)
+
+
 VERSION[0.12.0][2026/04/29]
 
 --- New to Last Epoch Planner ---

@@ -1,5 +1,16 @@
 # Changelog
 
+## [beta](https://github.com/Musholic/LastEpochPlanner/tree/beta) (2026/04/29)
+
+[Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.12.0...beta)
+
+
+## What's Changed
+### Fixed Bugs
+- Fix search filter in unique item list [\#119](https://github.com/Musholic/LastEpochPlanner/pull/119) ([Musholic](https://github.com/Musholic))
+
+
+
 ## [v0.12.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.12.0) (2026/04/29)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.11.0...v0.12.0)
