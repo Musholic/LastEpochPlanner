@@ -16,6 +16,9 @@ local buffModeDropList = {
 	{ label = "Effective DPS", buffMode = "EFFECTIVE" }
 }
 
+---@class CalcsTab : UndoHandler
+---@field build Build
+---@field calcs Calcs
 local CalcsTabClass = newClass("CalcsTab", "UndoHandler", "ControlHost", "Control", function (self, build)
 	self.UndoHandler()
 	self.ControlHost()

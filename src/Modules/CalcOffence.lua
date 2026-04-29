@@ -63,10 +63,6 @@ local function calcDamage(activeSkill, output, cfg, breakdown, damageType, typeF
 	local addDmg = 0
 	local conversionTable = activeSkill.conversionTable
 	for _, otherType in ipairs(dmgTypeList) do
-		if otherType == damageType then
-			-- Damage can only be converted from damage types that precede this one in the conversion sequence, so stop here
-			break
-		end
 		local convMult = conversionTable[otherType][damageType]
 		if convMult > 0 then
 			-- Damage is being converted/gained from the other damage type
@@ -943,43 +939,6 @@ function calcs.offence(env, actor, activeSkill)
 					mod.keywordFlags, unpack(mod))
 			end
 		end
-		for i, value in ipairs(skillModList:Tabulate("BASE", skillCfg, "PhysicalDamageConvertToRandom")) do
-			local mod = value.mod
-			local effVal = mod.value / 3
-			if physMode == "AVERAGE" then
-				skillModList:NewMod("PhysicalDamageConvertToFire", "BASE", effVal, mod.source, mod.flags,
-					mod.keywordFlags, unpack(mod))
-				skillModList:NewMod("PhysicalDamageConvertToCold", "BASE", effVal, mod.source, mod.flags,
-					mod.keywordFlags, unpack(mod))
-				skillModList:NewMod("PhysicalDamageConvertToLightning", "BASE", effVal, mod.source, mod.flags,
-					mod.keywordFlags, unpack(mod))
-			elseif physMode == "FIRE" then
-				skillModList:NewMod("PhysicalDamageConvertToFire", "BASE", mod.value, mod.source, mod.flags,
-					mod.keywordFlags, unpack(mod))
-			elseif physMode == "COLD" then
-				skillModList:NewMod("PhysicalDamageConvertToCold", "BASE", mod.value, mod.source, mod.flags,
-					mod.keywordFlags, unpack(mod))
-			elseif physMode == "LIGHTNING" then
-				skillModList:NewMod("PhysicalDamageConvertToLightning", "BASE", mod.value, mod.source, mod.flags,
-					mod.keywordFlags, unpack(mod))
-			end
-		end
-		for i, value in ipairs(skillModList:Tabulate("BASE", skillCfg, "PhysicalDamageGainAsColdOrLightning")) do
-			local mod = value.mod
-			local effVal = mod.value / 2
-			if physMode == "AVERAGE" or physMode == "FIRE" then
-				skillModList:NewMod("PhysicalDamageGainAsCold", "BASE", effVal, mod.source, mod.flags, mod.keywordFlags,
-					unpack(mod))
-				skillModList:NewMod("PhysicalDamageGainAsLightning", "BASE", effVal, mod.source, mod.flags,
-					mod.keywordFlags, unpack(mod))
-			elseif physMode == "COLD" then
-				skillModList:NewMod("PhysicalDamageGainAsCold", "BASE", mod.value, mod.source, mod.flags,
-					mod.keywordFlags, unpack(mod))
-			elseif physMode == "LIGHTNING" then
-				skillModList:NewMod("PhysicalDamageGainAsLightning", "BASE", mod.value, mod.source, mod.flags,
-					mod.keywordFlags, unpack(mod))
-			end
-		end
 	end
 	-- momentum stacks
 	if skillModList:Flag(nil, "SupportedByMomentum") then
@@ -1644,13 +1603,13 @@ function calcs.offence(env, actor, activeSkill)
 
 	-- Calculate damage conversion percentages
 	activeSkill.conversionTable = wipeTable(activeSkill.conversionTable)
-	for damageTypeIndex = 1, #dmgTypeList - 1 do
+	for damageTypeIndex = 1, #dmgTypeList do
 		local damageType = dmgTypeList[damageTypeIndex]
 		local globalConv = wipeTable(tempTable1)
 		local skillConv = wipeTable(tempTable2)
 		local add = wipeTable(tempTable3)
 		local globalTotal, skillTotal = 0, 0
-		for otherTypeIndex = damageTypeIndex + 1, #dmgTypeList do
+		for otherTypeIndex = 1, #dmgTypeList do
 			-- For all possible destination types, check for global and skill conversions
 			otherType = dmgTypeList[otherTypeIndex]
 			globalConv[otherType] = m_max(
@@ -1691,7 +1650,6 @@ function calcs.offence(env, actor, activeSkill)
 		dmgTable.mult = 1 - m_min((globalTotal + skillTotal) / 100, 1)
 		activeSkill.conversionTable[damageType] = dmgTable
 	end
-	activeSkill.conversionTable[dmgTypeList[#dmgTypeList]] = { mult = 1 }
 
 	-- Configure damage passes
 	local passList = {}
@@ -2601,6 +2559,19 @@ function calcs.offence(env, actor, activeSkill)
 		--Calculate reservation DPS
 		globalOutput.ReservationDpsMultiplier = 100 / (100 - enemyDB:Sum("BASE", nil, "LifeReservationPercent"))
 
+		-- Apply base damage conversion
+		for _, damageType in ipairs(dmgTypeList) do
+			for _, otherType in ipairs(dmgTypeList) do
+				if skillModList:Sum("BASE", cfg, otherType .. "BaseDamageConvertTo" .. damageType) == 100 or skillModList:Sum("BASE", cfg, "BaseDamageConvertTo" .. damageType) == 100 then
+					local baseDamage = source[otherType .. "Damage"] or 0
+					if baseDamage > 0 then
+						source[otherType .. "Damage"] = nil
+						source[damageType .. "Damage"] = baseDamage
+					end
+				end
+			end
+		end
+
 		-- Calculate base hit damage
 		for _, damageType in ipairs(dmgTypeList) do
 			local damageTypeMod = damageType .. "Damage"
@@ -2611,8 +2582,8 @@ function calcs.offence(env, actor, activeSkill)
 			if skillFlags.ailment then
 				damageEffectiveness = 0
 			end
-			local typeAddedDmg = skillModList:Sum("BASE", cfg, damageTypeMod) +
-				enemyDB:Sum("BASE", cfg, "Self" .. damageTypeMod)
+			local typeAddedDmg = source[damageTypeMod] and (skillModList:Sum("BASE", cfg, damageTypeMod) +
+				enemyDB:Sum("BASE", cfg, "Self" .. damageTypeMod)) or 0
 			local allAddedDmg = source[damageTypeMod] and skillModList:Sum("BASE", cfg, "Damage") or 0
 			local addedDmg = typeAddedDmg + allAddedDmg
 			local addedMult = calcLib.mod(skillModList, cfg, "Added" .. damageType .. "Damage", "AddedDamage")

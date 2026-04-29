@@ -22,6 +22,8 @@ local sortGemTypeList = {
 	{ label = "Effective Hit Pool", type = "TotalEHP" },
 }
 
+---@class SkillsTab : UndoHandler
+---@field build Build
 local SkillsTabClass = newClass("SkillsTab", "UndoHandler", "ControlHost", "Control", function (self, build)
 	self.UndoHandler()
 	self.ControlHost()
