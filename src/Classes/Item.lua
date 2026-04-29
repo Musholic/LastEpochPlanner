@@ -3,6 +3,40 @@
 -- Class: Item
 -- Equippable item class
 --
+-- Observed structure so far:
+--	item = {
+--		affixLimit = 0, -- usually 4 (most items) or 2 (idols). Is this useful? Should this be part of baseItem?
+--		affixes = {}, -- affix text with type and value identification. Ex: "{prefix}{range:31}{rounding:Integer}(6-17)% increased Health Regen". Extra entries or metamethods to get affix by type might be useful. Ex: item.affixes.suffixes
+--		base = {}, -- base item data reference
+--		classRequirementModLines = {}, -- unsure, shouldn't this be on requirements?
+--		compatibleAffixes = {}, -- table of compatible modId for crafting (and validation?)
+--		corrupted = false, -- corrupted flag
+--		crafted = false, -- unsure, seems like leftover from PoB
+--		enchantedModLines = {}, -- list of enchanted mods texts, possibly with parsed results. Are these for enchanted idols or leftovers?
+--		grantedSkills = {}, -- leftover from PoB, but might be useful
+--		id = 0, -- item id? where does this come from?
+--		modList = {}, -- all parsed mods on the item
+--		modSource = "", -- string id to tag parsed mods with
+--		name = "", -- item name
+--		namePrefix = "", -- prefix part of the item name
+--		nameSuffix = "", -- suffix part of the item name
+--		potential = 0, -- Forging or Legendary potential
+--		rarity = "", -- rarity string. Unique Idols can be identified as Idols by their type or baseType, if needed we could fill a shorthand flag for it
+--		raw = "", -- full string representation of the item data, useful for direct edit
+--		requirements = {}, -- requirements to use the item {level = int} only saw level, but there should be class too
+--		title = "", -- unsure whats the difference from name
+--		type = "", -- item type string. Examples: "One-Handed Axe", "Shield", "Helmet", etc. Maybe should be a constant reference?
+--	}
+--		baseLines = {}, -- remove || item name? seems superfluous
+--		baseModList = {}, -- remove || parsed base mods, overlaps with modList
+--		baseName = "", -- remove || item base name, possibly redundant
+--		checkSection = "", -- remove || used during parsing, seems unnecessary
+--		explicitModLines = {}, -- remove || list of explicit mods texts including parsed results
+--		implicitModLines = {}, -- remove || list of implicit mods texts including parsed results. Should hybrid 
+--		rangeLineList = {}, -- remove || list of mods that have a range component? Also includes parse results. Superfluous?
+--		rarityType = "", -- remove || rarityType seems unnecessary, we can use basetype to identify an idol if needed, or just add a flag like corrupted
+--		rawLines = {}, -- remove || separated list of text lines, superfluous with new affixes
+
 local ipairs = ipairs
 local t_insert = table.insert
 local t_remove = table.remove
