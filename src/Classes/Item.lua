@@ -3,6 +3,40 @@
 -- Class: Item
 -- Equippable item class
 --
+-- Observed structure so far:
+--	item = {
+--		affixLimit = 0, -- usually 4 (most items) or 2 (idols). Add to baseItem instead.
+--		affixes = {}, -- affix text with type and value identification. Ex: "{prefix}{range:31}{rounding:Integer}(6-17)% increased Health Regen". Extra entries or metamethods to get affix by type might be useful. Ex: item.affixes.suffixes
+--		base = {}, -- base item data reference
+--		compatibleAffixes = {}, -- table of compatible modId for crafting (and validation?)
+--		corrupted = false, -- corrupted flag
+--		crafted = false, -- unsure, seems like leftover from PoB
+--		id = 0, -- UI/Build Item ID. Identifies the item for equipment/build purposes
+--		modList = {}, -- all parsed mods on the item
+--		modSource = "", -- string id to tag parsed mods with
+--		name = "", -- item name
+--		namePrefix = "", -- prefix part of the item name
+--		nameSuffix = "", -- suffix part of the item name
+--		potential = 0, -- Forging or Legendary potential
+--		rarity = "", -- rarity string. Unique Idols can be identified as Idols by their type or baseType, if needed we could fill a shorthand flag for it
+--		raw = "", -- full string representation of the item data, useful for direct edit
+--		requirements = {}, -- requirements to use the item {level = int} only saw level, but there should be class too
+--		title = "", -- unsure whats the difference from name
+--		type = "", -- item type string. Examples: "One-Handed Axe", "Shield", "Helmet", etc. Maybe should be a constant reference?
+--	}
+--		baseLines = {}, -- remove, superfluous || item name? seems superfluous
+--		baseModList = {}, -- remove, redundant || parsed base mods, overlaps with modList
+--		baseName = "", -- remove, redundant || item base name, possibly redundant
+--		checkSection = "", -- remove, should be a function variable || used during parsing, seems unnecessary
+--		classRequirementModLines = {}, -- remove, leftovers || unsure, shouldn't this be on requirements?
+--		enchantedModLines = {}, -- remove, leftovers || list of enchanted mods texts, possibly with parsed results. Are these for enchanted idols or leftovers?
+--		explicitModLines = {}, -- remove, redundant || list of explicit mods texts including parsed results
+--		implicitModLines = {}, --remove, redundant || list of implicit mods texts including parsed results. Should hybrid 
+--		grantedSkills = {}, -- remove, leftovers || leftover from PoB, but might be useful
+--		rangeLineList = {}, -- remove, redundant || list of mods that have a range component? Also includes parse results. Superfluous?
+--		rarityType = "", -- remove, redundant || rarityType seems unnecessary, we can use basetype to identify an idol if needed, or just add a flag like corrupted
+--		rawLines = {}, -- remove, redundant || separated list of text lines, superfluous with new affixes
+
 local ipairs = ipairs
 local t_insert = table.insert
 local t_remove = table.remove
@@ -25,6 +59,120 @@ local lineFlags = {
 local function specToNumber(s)
 	local n = s:match("^([%+%-]?[%d%.]+)")
 	return n and tonumber(n)
+end
+
+local function parseAffix(specVal, attribute)
+	local range, affix = specVal:match("{range:([%d.]+)}(.+)")
+	range = range or main.defaultItemAffixQuality
+	local parsedAffix = { modId = affix or specVal, range = tonumber(range), }
+	parsedAffix[attribute] = true
+	return parsedAffix
+end
+
+-- Parse raw item data (rework)
+function ItemClass:NewParseRaw(raw, rarity)
+	-- Init rarity and name first since it seems to be the bare minimum that this should have
+	-- Lua shouldn't need to init empty properties for the most part, so I'll skip those for now
+	self.name = "?"
+	self.rarity = rarity or "UNIQUE"
+	if raw == '' then -- No point running the rest of the parse if it is just an init call
+		return
+	end
+	for line in raw:gmatch("%s*([^\n]*%S)") do
+		t_insert(self.rawLines, line)
+	end
+	local lineIndex = 1
+	if self.rawLines[lineIndex] then
+		local itemRarity = self.rawLines[lineIndex]:match("^Rarity: (%a+)")
+		if itemRarity then
+			self:DetermineRarity()
+		end
+		lineIndex = lineIndex + 1
+	end
+	if self.rawLines[lineIndex] then
+		self.name = self.rawLines[lineIndex]
+		lineIndex = lineIndex + 1
+		self.baseName = self.rawLines[lineIndex]
+		lineIndex = lineIndex + 1
+	end
+	while self.rawLines[lineIndex] do
+		local specName, specVal = line:match("^([%a ]+:?): (.+)$")
+		if specName then
+			if specName == "LevelReq" then
+				self.requirements.level = specToNumber(specVal)
+			elseif specName == "Implicits" then
+				for implicitIndex=1, specVal do
+					self.implicits[implicitIndex] = self.rawLines[lineIndex+implicitIndex]
+				end
+			elseif specName == "Prefix" then
+				if not self.affixes[1].modId then
+					self.affixes[1] = parseAffix(specVal, "prefix")
+				else
+					self.affixes[2] = parseAffix(specVal, "prefix")
+				end
+			elseif specName == "Suffix" then
+				if not self.affixes[3].modId then
+					self.affixes[3] = parseAffix(specVal, "suffix")
+				else
+					self.affixes[4] = parseAffix(specVal, "suffix")
+				end
+			elseif specName == "Sealed" then
+				self.affixes[5] = parseAffix(specVal, "sealed")
+			elseif specName == "Corrupted" then
+				self.affixes[6] = parseAffix(specVal, "corrupted")
+			end
+		end
+	end
+	--if self.rawLines[lineIndex] then
+	--	local levelReq = self.rawLines[lineIndex]:match("^LevelReq: ([%d.]+)")
+	--	if levelReq then
+	--		self.requirements.level = tonumber(leveReq)
+	--		lineIndex = lineIndex + 1
+	--	end
+	--end
+	--if self.rawLines[lineIndex] then
+	--	local implicitCount = self.rawLines[lineIndex]:match("^Implicits: ([%d.]+)")
+	--	for implicitIndex=0,implicitCount do
+	--		self.implicitModLines = {}
+	--		self.implicitModLines[implicitIndex] = ItemClass.ParseAffix()
+	--	end
+	--end
+end
+
+function ItemClass:DetermineRarity(itemRarity)
+	itemRarity = itemRarity:upper()
+	-- Map raw rarity to rarityType (BASIC/UNIQUE/SET/IDOL)
+	if itemRarity == "BASIC" or itemRarity == "NORMAL" or itemRarity == "MAGIC" or itemRarity == "RARE" or itemRarity == "EXALTED" then
+		self.rarityType = "BASIC"
+		self.rarity = itemRarity -- keep raw value for name parsing; UpdateDisplayRarity recomputes later
+	elseif itemRarity == "SET" then
+		self.rarityType = "SET"
+		self.rarity = "SET"
+	elseif itemRarity == "IDOL" then
+		self.rarityType = "IDOL"
+		self.rarity = "IDOL"
+	elseif itemRarity == "LEGENDARY" then
+		self.rarityType = "UNIQUE"
+		self.rarity = "LEGENDARY"
+		-- A unique idol serializes as Rarity: UNIQUE; rarityType is fixed later by idol auto-detection
+	else
+		self.rarityType = "UNIQUE"
+		self.rarity = "UNIQUE"
+	end
+	if not self.rarityType then
+		local r = self.rarity
+		if r == "NORMAL" or r == "MAGIC" or r == "RARE" or r == "EXALTED" or r == "BASIC" then
+			self.rarityType = "BASIC"
+		elseif r == "SET" then
+			self.rarityType = "SET"
+		elseif r == "IDOL" then
+			self.rarityType = "IDOL"
+		elseif r == "LEGENDARY" then
+			self.rarityType = "UNIQUE"
+		else
+			self.rarityType = "UNIQUE"
+		end
+	end
 end
 
 -- Parse raw item data and extract item name, base type, quality, and modifiers

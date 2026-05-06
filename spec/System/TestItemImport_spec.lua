@@ -22,9 +22,10 @@ describe("Offline Item Import", function ()
 				["affixEffectModifier"] = 0,
 				["baseTypeID"] = 34,
 				["implicits"] = { [1] = '(16-22)% Increased Unique Drop Rate', },
+				["name"] = 'Grand Winds of Fortune',
 				["req"] = { ["level"] = 0 },
 				["subTypeID"] = 112,
-				["type"] = 'Blessing'
+				["type"] = 'Blessing',
 			},
 			["baseName"] = 'Grand Winds of Fortune',
 			["explicitMods"] = {},
@@ -114,10 +115,11 @@ describe("Offline Item Import", function ()
 				["baseTypeID"] = 26,
 				["height"] = 1,
 				["implicits"] = {},
+				["name"] = 'Minor Weaver Idol',
 				["req"] = { ["level"] = 0 },
 				["subTypeID"] = 1,
 				["type"] = 'Minor Idol',
-				["width"] = 1
+				["width"] = 1,
 			},
 			["baseName"] = 'Minor Weaver Idol',
 			["explicitMods"] = {},
@@ -187,9 +189,10 @@ describe("Offline Item Import", function ()
 					[6] = { [1] = 4, [2] = 4 }
 				},
 				["implicits"] = { [1] = '{rounding:Integer}+(6-10) Health per Equipped Omen Idol' },
+				["name"] = 'Visage Altar',
 				["req"] = { ["level"] = 0 },
 				["subTypeID"] = 5,
-				["type"] = 'Idol Altar'
+				["type"] = 'Idol Altar',
 			},
 			["baseName"] = 'Visage Altar',
 			["explicitMods"] = {},
