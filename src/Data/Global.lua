@@ -100,6 +100,17 @@ function hexToRGB(hex)
 	return { r, g, b }
 end
 
+DisplayRarityColors = {
+	COMMON = colorCodes.NORMAL,
+	MAGIC = colorCodes.MAGIC,
+	RARE = colorCodes.RARE,
+	EXALTED = colorCodes.EXALTED,
+	UNIQUE = colorCodes.UNIQUE,
+	SET = colorCodes.SET,
+	LEGENDARY = colorCodes.LEGENDARY,
+	IDOL = colorCodes.IDOL,
+}
+
 DamageTypes = { "Fire", "Lightning", "Cold", "Physical", "Poison", "Necrotic", "Void" }
 
 Attributes = { "Vit", "Str", "Dex", "Int", "Att" }

@@ -725,6 +725,7 @@ local offlineImportSlotMap = {
 	[10] = "Ring 2",
 	[7] = "Belt",
 	[12] = "Relic",
+	[29] = "Idols",
 	[123] = "Idol Altar"
 }
 
@@ -735,96 +736,132 @@ for i = 1, 3 do
 	offlineImportSlotMap[42 + i] = "Blessing " .. (7 + i)
 end
 
+local itemDataFields = {
+	BASETYPE_ID = 4,
+	SUBTYPE_ID = 5,
+	RARITY = 6,
+	IMPLICIT = 7,
+	UNIQUE_ID = 11,
+	UNIQUE_MOD_VALUES = 13
+}
+
+local itemRarityMap = {
+	[0] = "COMMON",
+	[1] = "MAGIC",
+	[2] = "IDOL",
+	[3] = "RARE",
+	[4] = "EXALTED",
+	[7] = "UNIQUE",
+	[8] = "SET",
+	[9] = "LEGENDARY",
+}
+
 function ImportTabClass:processItemData(itemData)
-	if itemData["containerID"] <= 12 or itemData["containerID"] == 29 or
-		itemData["containerID"] >= 33 and itemData["containerID"] <= 39 or
-		itemData["containerID"] >= 43 and itemData["containerID"] <= 45 or
-		itemData["containerID"] == 123 then
+	local misc = self.build.data.misc -- shorter magic numbers access
+	local itemBasesDB = self.build.data.itemBases -- shorter item bases db access
+	local uniquesDB = self.build.data.uniques -- shorter unique db access
+	local container = itemData["containerID"]
+	local data = itemData["data"]
+	if offlineImportSlotMap[container] ~= nil then
 		local item = {}
-		local baseTypeID = itemData["data"][4]
-		local subTypeID = itemData["data"][5]
-		if itemData["containerID"] == 29 then
+		local baseTypeID = data[itemDataFields.BASETYPE_ID]
+		local subTypeID = data[itemDataFields.SUBTYPE_ID]
+		local rarity = data[itemDataFields.RARITY]
+		local itemBase = itemBasesDB[baseTypeID .. "_" .. subTypeID]
+		local affixDataOffset = misc.BasicItemAffixDataOffset
+
+		item.affixes = {}
+		
+		-- Base item info
+		if itemBase then
+			item.base = itemBase
+			for impIndex, impText in ipairs(itemBase.implicits) do
+				local affixText = "{implicit}"
+				if itemLib.hasRange(impText) then
+					local range = data[itemDataFields.IMPLICIT+ impIndex]
+					affixText = affixText .. "{range:" .. range .. "}"
+				end
+				affixText = affixText .. impText
+				table.insert(item.affixes, { text = affixText })
+			end
+		end
+
+		-- Item rarity
+		item.rarity = itemRarityMap[rarity]
+		
+		-- Unique/Set/Legendary Items
+		if rarity >= 7 and rarity <= 9 then
+			local uniqueID = data[itemDataFields.UNIQUE_ID] * 256 + data[itemDataFields.UNIQUE_ID + 1] -- Two bytes for ID
+			local uniqueData = self.build.data.uniques[uniqueID] -- uniques[uniqueID]
+			item["name"] = uniqueData.name
+			for i, modLine in ipairs(uniqueData.mods) do
+				local modText = modLine
+				if itemLib.hasRange(modLine) then
+					local rollId = uniqueData.rollIds[i]
+					local range = data[itemDataFields.UNIQUE_MOD_VALUES + rollId]
+					modText = "{range:" ..range.. "}" .. modText
+				end
+				modText = "{unique}" .. modText
+				table.insert(item.affixes, { text = modText })
+			end
+			affixDataOffset = misc.UniqueItemAffixDataOffset
+		end
+
+		-- Common affixes
+		local affixCountComposite = data[affixDataOffset]
+		if affixCountComposite then
+			local affixCount = affixCountComposite % 8
+			local hasCorruptedAffix = math.floor(affixCountComposite / 64) % 2
+			local hasSealedAffix = math.floor(affixCountComposite / 128) % 2
+			local affixBlockPosition = affixDataOffset + 1 -- base affix offset for iteration
+			for i = 0, affixCount - 1 do
+				local currentAffixOffset = affixBlockPosition + misc.AffixSizeOffset * i 
+				if data[currentAffixOffset] ~= nil and data[currentAffixOffset + 1] ~= nil then
+					local affixId = (data[currentAffixOffset] % 16) * 256 + data[currentAffixOffset + 1] -- Two bytes for ID
+					local affixTier = math.floor(data[currentAffixOffset] / 16)
+					local modId = affixId .. "_" .. affixTier
+					local modData = self.build.data.itemMods.Item[modId]
+					local range = data[currentAffixOffset + 2]
+					local modText = modData[1]
+					if itemLib.hasRange(modText) then
+						modText = "{range:"..range.."}"..modText
+					end
+					local affix = { modId = modId, text = modText }
+
+					if modData then
+						-- Add affix type tags
+						if modData.type == "Prefix" then
+							affix.text = "{prefix}" .. affix.text
+						elseif modData.type == "Suffix" then
+							affix.text = "{suffix}" .. affix.text
+						end
+						
+						-- Add sealed/corrupted tags
+						if hasSealedAffix == 1 then
+							item.sealed = true
+							affix.text = "{sealed}" .. affix.text
+							hasSealedAffix = 0
+						elseif hasCorruptedAffix == 1 then
+							item.corrupted = true
+							affix.text = "{corrupted}" .. affix.text
+							hasCorruptedAffix = 0
+						end
+						table.insert(item.affixes, affix)
+					end
+				end
+			end
+		end
+		
+		-- Slot name
+		if container == tableKeys(offlineImportSlotMap)["Idols"] then
 			local posX = itemData["inventoryPosition"]["x"] + 1
 			local posY = itemData["inventoryPosition"]["y"] + 1
 			item["slotName"] = "Idol " .. posX .. "," .. posY
-			item["rarityType"] = "IDOL"
-			item["rarity"] = "IDOL"
 		else
-			item["slotName"] = offlineImportSlotMap[itemData["containerID"]]
+			item["slotName"] = offlineImportSlotMap[container]
 		end
-
-		for itemBaseName, itemBase in pairs(self.build.data.itemBases) do
-			if itemBase.baseTypeID == baseTypeID and itemBase.subTypeID == subTypeID then
-				item.baseName = itemBaseName
-				item.base = itemBase
-				item.implicitMods = {}
-				for i, implicit in ipairs(itemBase.implicits) do
-					local range = itemData["data"][7 + i]
-					table.insert(item.implicitMods, "{range: " .. range .. "}" .. implicit)
-				end
-				local rarity = itemData["data"][6]
-				item["explicitMods"] = {}
-				item["affixes"] = {}
-				local nbAffixesIndex = 12
-				if rarity >= 7 and rarity <= 9 then
-					item["rarity"] = "UNIQUE"
-					item["rarityType"] = item["rarityType"] or "UNIQUE"
-					local uniqueIDIndex = 8 + 3 -- 3 is the maximum amount of implicits
-					local uniqueID = itemData["data"][uniqueIDIndex] * 256 + itemData["data"][uniqueIDIndex + 1]
-					local uniqueBase = self.build.data.uniques[uniqueID]
-					item["name"] = uniqueBase.name
-					for i, modLine in ipairs(uniqueBase.mods) do
-						if itemLib.hasRange(modLine) then
-							local rollId = uniqueBase.rollIds[i]
-							local range = itemData["data"][uniqueIDIndex + 2 + rollId]
-							table.insert(item.explicitMods, "{unique}{range: " .. range .. "}" .. modLine)
-						else
-							table.insert(item.explicitMods, "{unique}" .. modLine)
-						end
-					end
-					if rarity == 9 then
-						item["rarity"] = "LEGENDARY"
-					end
-					nbAffixesIndex = uniqueIDIndex + 2 + 8 -- 8 is the maximum amount of unique mods
-				else
-					item["name"] = itemBaseName
-					item["rarity"] = item["rarity"] or "RARE"
-					item["rarityType"] = item["rarityType"] or "BASIC"
-				end
-				if itemData["data"][nbAffixesIndex] then
-					local nbMods = itemData["data"][nbAffixesIndex] % 8
-					local nbSealedAffix = math.floor(itemData["data"][nbAffixesIndex] / 64) % 2
-					local nbCorruptedAffix = math.floor(itemData["data"][nbAffixesIndex] / 128) % 2
-					for i = 0, nbMods - 1 do
-						local dataId = nbAffixesIndex + 1 + 3 * i
-						if itemData["data"][dataId] ~= nil and itemData["data"][dataId + 1] ~= nil then
-							local affixId = itemData["data"][dataId + 1] + (itemData["data"][dataId] % 16) * 256
-							local affixTier = math.floor(itemData["data"][dataId] / 16)
-							local modId = affixId .. "_" .. affixTier
-							local modData = data.itemMods.Item[modId]
-							local range = itemData["data"][dataId + 2]
-							local affix = { ["range"] = range, ["modId"] = modId }
-
-							if modData then
-								if nbSealedAffix == 1 then
-									affix.sealed = true
-									nbSealedAffix = 0
-								elseif nbCorruptedAffix == 1 then
-									affix.corrupted = true
-									nbCorruptedAffix = 0
-								elseif modData.type == "Prefix" then
-									affix.prefix = true
-								else
-									affix.suffix = true
-								end
-								table.insert(item.affixes, affix)
-							end
-						end
-					end
-				end
-				return item
-			end
-		end
+		
+		return item
 	end
 end
 
