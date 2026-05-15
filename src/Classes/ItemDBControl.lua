@@ -132,13 +132,6 @@ function ItemDBClass:DoesItemMatchFilters(item)
 			end
 		end
 		if mode == 1 or mode == 3 then
-			for _, line in pairs(item.enchantModLines) do
-				local err, match = PCall(string.matchOrPattern, line.line:lower(), searchStr)
-				if not err and match then
-					found = true
-					break
-				end
-			end
 			for _, line in pairs(item.implicitModLines) do
 				local err, match = PCall(string.matchOrPattern, line.line:lower(), searchStr)
 				if not err and match then

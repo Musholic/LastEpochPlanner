@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.12.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.12.0) (2026/04/29)
+
+[Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.11.0...v0.12.0)
+
+
+## What's Changed
+### New to Last Epoch Planner
+- Display Idols in a grid [\#107](https://github.com/Musholic/LastEpochPlanner/pull/107) ([Musholic](https://github.com/Musholic))
+- Support for base damage conversion [\#117](https://github.com/Musholic/LastEpochPlanner/pull/117) ([Musholic](https://github.com/Musholic))
+### Fixed Bugs
+- Fix online import using letools API [\#114](https://github.com/Musholic/LastEpochPlanner/pull/114) ([Musholic](https://github.com/Musholic))
+- Update extracted data (v1.4.5) with fix to prefix/suffix swap on affixes [\#115](https://github.com/Musholic/LastEpochPlanner/pull/115) ([Musholic](https://github.com/Musholic))
+### Other changes
+- Remove block variants [\#113](https://github.com/Musholic/LastEpochPlanner/pull/113) ([Mamotromico](https://github.com/Mamotromico))
+
+
 ## [v0.11.0](https://github.com/Musholic/LastEpochPlanner/tree/v0.11.0) (2026/04/02)
 
 [Full Changelog](https://github.com/Musholic/LastEpochPlanner/compare/v0.10.0...v0.11.0)
